@@ -2,20 +2,62 @@
 
 ## Repo
 
-`/home/tobias/Projects/generalrelativity` — git, `master` branch.
+`/home/tobiasosborne/Projects/generalrelativity` — git, `master` branch.
 Public: https://github.com/tobiasosborne/generalrelativity (Apache 2.0)
 
 ## Status
 
-3 of 24 lectures converted (+ 1 supplementary note). 14 pages total.
+11 of 23 lectures converted (+ 1 supplementary note). 52 pages total.
 Julia simulation pipeline operational: 3 scripts generating data-driven pgfplots figures.
+Build tool: `./build.sh` with `--cmfonts`, `--draft`, `--simdata`, `--full`, `--clean`, `--watch` options.
 
 | Done | Next |
 |------|------|
-| Lec 1: Prerelativity gravitation + Lagrange point figure | Lec 4: Tangent space |
-| Lec 2: Equivalence principle & Mach + geodesic bump figure | Lec 5: Flows and tensors |
-| Lec 3: Manifolds + ellipsoid geodesics figure | Lec 6: Tensors continued |
+| Lec 1: Prerelativity gravitation + Lagrange point figure | Lec 12: Lie derivatives & Newtonian limit |
+| Lec 2: Equivalence principle & Mach + geodesic bump figure | Lec 13: Einstein's field equations, linearised solutions |
+| Lec 3: Manifolds + ellipsoid geodesics figure | Lec 14: Gravitational radiation |
+| Lec 4: Tangent space | Lec 15–18: Schwarzschild solution & geodesics |
+| Lec 5: Flows and tensors | Lec 19–23: Cosmology (homogeneity, isotropy, FLRW) |
+| Lec 6: Tensors continued (cotangent, transformation laws, metric, AIN) | |
+| Lec 7: Derivative operators (affine connections, C tensor, Christoffel) | |
+| Lec 8: Parallel transport (Levi-Civita, metric compatibility, geodesics) | |
+| Lec 9: Abstract index notation review, curvature intro | |
+| Lec 10: Geodesics as extremal curves, Riemann tensor, loops | |
+| Lec 11: Riemann symmetries, Bianchi, Ricci, Einstein tensor, geodesic deviation | |
 | Note: ∂_a as covariant derivative | |
+
+## Lecture-to-PDF mapping
+
+The 23 lecture PDFs in `Lecture Notes/` map as follows:
+| Lec | PDF filename (after "Introduction to general relativity") |
+|-----|----------------------------------------------------------|
+| 1 | prerelativity gravitation |
+| 2 | The equivalence principle and Mach's principle |
+| 3 | manifolds |
+| 4 | tangent space |
+| 5 | flows and tensors |
+| 6 | tensors continued |
+| 7 | abstract index notation curvature (pages 1–8, AIN + curvature motivation) |
+| 8 | derivative operators and parallel transport |
+| 9 | parallel transport continued |
+| 10 | Geodesics cont. curvature |
+| 11 | curvature cont. |
+| 12 | lie derivatives & Newtonian limit |
+| 13 | Einstein's field equations, linearised solutions |
+| 14 | gravitational radiation |
+| 15 | the Schwarzschild solution |
+| 16 | the Schwarzschild solution cont |
+| 17 | geodesics in Schwarzschild |
+| 18 | trajectories of null geodesics in Schwarzschild |
+| 19 | homogeneity and isotropy cont |
+| 20 | homogeneity and isotropy cont 2 |
+| 21 | FLRW cont |
+| 22 | FLRW cont 2 |
+| 23 | General relativity.pdf |
+
+**NOTE**: The lecture numbering in the .tex files does NOT correspond 1:1 with the PDF numbering above. The content was reorganized for pedagogical flow. For example, AIN content from PDF "abstract index notation curvature" was split across lec06 (AIN basics), lec07 (derivative operators from the "derivative operators" PDF), and lec09 (AIN review + curvature motivation). Always read the PDF content carefully before converting.
+
+Transcripts are available in `transcripts/lec##_transcript.txt` for all 23 lectures.
 
 ## Canonical references
 
@@ -33,9 +75,7 @@ latex/
   gr-tikz-templates.sty       # pgfplots styles, colormaps, standard dims, \pic defs
   references.bib              # Bibliography (Wald, MTW, Weinberg, TLL73)
   lectures/
-    lec01.tex                 # Prerelativity gravitation
-    lec02.tex                 # Equivalence principle & Mach
-    lec03.tex                 # Manifolds
+    lec01.tex – lec11.tex     # Converted lectures
   notes/
     note_da_covariant_derivative.tex
   figures/
@@ -49,63 +89,39 @@ scripts/
   sim_lec03.jl                # Ellipsoid geodesics + parallel transport
   tikz-preview.sh             # Standalone TikZ snippet → PNG preview
   Project.toml                # Julia env (DifferentialEquations, StaticArrays)
+build.sh                      # Build tool (--cmfonts, --draft, --simdata, --full, --clean, --watch)
 Literature/                   # Copyrighted books (gitignored)
-Lecture Notes/                # 24 source PDFs (handwritten, gitignored)
+Lecture Notes/                # 23 source PDFs (handwritten, gitignored)
+transcripts/                  # Auto-generated lecture transcripts (lec01–lec23)
 ```
 
 ## Build
 
 ```bash
-cd latex
-xelatex GeneralRelativity.tex
-bibtex GeneralRelativity
-xelatex GeneralRelativity.tex
-xelatex GeneralRelativity.tex
+./build.sh              # Full build (3 passes + bibtex)
+./build.sh --draft      # Single pass (fast)
+./build.sh --cmfonts    # Computer Modern fonts (no proprietary fonts)
+./build.sh --simdata    # Regenerate Julia simulation data only
+./build.sh --full       # Regenerate data + build PDF
+./build.sh --clean      # Remove generated files
+./build.sh --watch      # Continuous build on file change
 ```
 
 Requires: xelatex, Times LT Std, Whitney, mtpro2 (all installed locally).
-Portable build (no proprietary fonts): pass `[cmfonts]` option to gr-style.
+Whitney fonts symlinked to `~/texmf/fonts/opentype/whitney/`.
 
-## Regenerating simulation data
+## Infrastructure fixes applied
 
-```bash
-julia --project=scripts scripts/sim_lec01.jl   # → latex/data/lec01_*.dat
-julia --project=scripts scripts/sim_lec02.jl   # → latex/data/lec02_*.dat
-julia --project=scripts scripts/sim_lec03.jl   # → latex/data/lec03_*.dat
-```
-
-Requires: Julia 1.11+, DifferentialEquations.jl, StaticArrays.jl (installed via `scripts/Project.toml`).
-
-## Infrastructure
-
-- **gr-style.sty**: amsart + mathspec fonts (with `[cmfonts]` fallback), color palette, section formatting, theorem environments, tcolorbox environments (`intuition`, `historical`, `keyresult`), `\eqbox{}`.
-- **gr-macros.sty**: `\pd`, `\vb`, `\uv`, `\covd`, `\chris`, `\Riem`, `\Ric`, `\metric`, `\M`, `\R`, `\Rn`, `\norm`, `\dd`, `\dt`, `\ddt`, `\lap`, `\dalem`, `\supp`, `\diag`, plus TikZ styles.
-- **gr-tikz-templates.sty**: pgfplots styles (`grplot`, `grplotwide`, `gr3d`, `grcontour`), colormaps (`grpotential`, `grsurface`), color cycle matching palette, `\pic` definitions for manifold blobs/chart regions/tangent planes.
-
-## Simulation details
-
-Each Julia script is self-contained, includes analytic Christoffel symbol verification (agrees with finite-difference to ~10⁻¹¹), and verifies conservation laws (unit speed, inner product preservation).
-
-- **sim_lec01.jl**: Circular restricted 3-body problem (μ=0.01). Effective potential on 60×60 grid, L1–L5 via Newton's method, tadpole orbit near L4 via Tsit5 integrator.
-- **sim_lec02.jl**: Gaussian bump surface z=exp(−r²/2). Induced metric g_ij = δ_ij + ∂h/∂x^i ∂h/∂x^j, analytic Christoffel symbols, 4 geodesics + Euclidean straight-line comparisons.
-- **sim_lec03.jl**: Triaxial ellipsoid (a=1.5, b=1.0, c=0.7). 6-component ODE: geodesic + parallel transport. Tangent and parallel-transported vectors converted to ℝ³ via Jacobian.
-
-## pgfplots notes
-
-- Max surf grid ~60×60 (TeX memory limit exceeded at ~100×100)
-- Data files use `# header` comments — access columns by index (`x index=0` etc.)
-- `tikz-preview.sh` compiles standalone TikZ snippets to PNG for visual feedback
+- **gr-macros.sty**: `\pd` macro braces `{#3}` to prevent double-superscript errors
+- **gr-style.sty**: Package load order fixed (amsmath/mathtools/tcolorbox loaded before mathspec to avoid conflicts). Added `mathrsfs` for `\mathscr`. Added `notation` theorem environment.
 
 ## Workflow per lecture
 
-1. **Draft**: read handwritten PDF → create `lectures/lec##.tex`
-2. **Review**: check content, errors, notation consistency against Wald/Warner
-3. **Enhance**: intuition boxes, historical boxes, TikZ diagrams
-4. **Simulate**: write `scripts/sim_lec##.jl` → `latex/data/` → `latex/figures/fig_lec##_*.tex`
-
-## Lecture order (by date)
-
-See memory file `lecture-order.md` for full list with status.
+1. **Draft**: read handwritten PDF + transcript → create `lectures/lec##.tex`
+2. **Build test**: `./build.sh --draft` — verify zero errors from new lecture
+3. **Review**: check content, notation consistency against Wald/Warner
+4. **Enhance**: intuition boxes, historical boxes, TikZ diagrams
+5. **Simulate** (optional): write `scripts/sim_lec##.jl` → `latex/data/` → `latex/figures/fig_lec##_*.tex`
 
 ## Future integration
 
