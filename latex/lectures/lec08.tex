@@ -1,0 +1,616 @@
+%!TEX root = ../GeneralRelativity.tex
+% ──────────────────────────────────────────────────────────────
+%  Lecture 8 — Parallel transport continued
+% ──────────────────────────────────────────────────────────────
+
+\section{Parallel transport continued}\label{sec:parallel-transport-contd}
+
+In the previous lecture we introduced derivative operators
+(covariant derivatives) on a manifold~$\M$.  We now use them to
+define \emph{parallel transport}---the notion of moving a vector
+(or tensor) along a curve ``without rotating it.''  When a metric
+is present, requiring that parallel transport preserves inner
+products singles out a unique derivative operator: the
+\emph{Levi-Civita connection}.  We derive its explicit form in
+coordinates (the Christoffel symbols) and conclude with the
+geodesic equation.
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Parallel transport}\label{sec:parallel-transport-def}
+
+Let $\M$ be a manifold equipped with a derivative operator
+$\covd_a$.  Let $C$ be a smooth curve in~$\M$ with tangent
+vector~$t^a$.
+
+% Diagram: curve C from p to q with tangent and transported vectors
+\begin{center}
+\begin{tikzpicture}[scale=0.9]
+  % Manifold blob
+  \draw[thick, spacecadet, rounded corners=14pt]
+    (0,0.3) to[out=25,in=160] (6.5,0.6)
+    to[out=-20,in=50] (7.0,-1.0)
+    to[out=230,in=-10] (0.5,-1.2)
+    to[out=170,in=250] cycle;
+  \node[font=\sf\small, text=cgblue] at (6.8,0.9) {$\M$};
+  % Curve
+  \draw[thick, munsell]
+    (1.0,-0.3) to[out=15,in=200] (3.0,0.1)
+    to[out=20,in=190] (5.5,-0.1);
+  \node[font=\scriptsize, munsell, below] at (3.0,-0.2) {$C$};
+  % Point p
+  \node[circle, fill=banana, inner sep=1.8pt] (P) at (1.0,-0.3) {};
+  \node[font=\small, below left] at (P) {$p$};
+  % Point q
+  \node[circle, fill=banana, inner sep=1.8pt] (Q) at (5.5,-0.1) {};
+  \node[font=\small, below right] at (Q) {$q$};
+  % Tangent vector at midpoint
+  \node[circle, fill=banana, inner sep=1.2pt] (M) at (3.0,0.1) {};
+  \draw[vecstyle] (M) -- ++(0.7,0.15)
+    node[above, font=\small]{$t^a$};
+  % Transported vector at p
+  \draw[vecstyle, spacecadet] (P) -- ++(0.3,0.7)
+    node[above, font=\small]{$v^a$};
+  % Transported vector at midpoint
+  \draw[vecstyle, spacecadet] (M) -- ++(0.3,0.7)
+    node[above, font=\small]{$v^a$};
+  % Transported vector at q
+  \draw[vecstyle, spacecadet] (Q) -- ++(0.3,0.7)
+    node[above, font=\small]{$v^a$};
+\end{tikzpicture}
+\end{center}
+
+The curve $C$ connects a point~$p$ to a point~$q$.  We wish to
+define a linear map
+\[
+  U_C\colon V_p \to V_q
+\]
+that ``transports'' vectors from~$p$ to~$q$ along~$C$.
+
+\begin{definition}[Parallel transport of a vector]%
+\label{def:parallel-transport}
+  Let $C$ be a smooth curve in~$\M$ with tangent vector~$t^a$.
+  A vector field~$v^a$ defined along~$C$ is said to be
+  \textbf{parallelly transported} along~$C$ if
+  \begin{equation}\label{eq:parallel-transport-vec}
+    \eqbox{t^a \covd_a v^b = 0}
+  \end{equation}
+  at every point of~$C$.
+\end{definition}
+
+\noindent
+More generally, if
+$T^{a_1\cdots a_k}{}_{c_1\cdots c_l}$ is a tensor field of
+type~$(k,l)$ defined along~$C$, we say it is parallelly
+transported if
+\begin{equation}\label{eq:parallel-transport-tensor}
+  t^a \covd_a T^{a_1\cdots a_k}{}_{c_1\cdots c_l} = 0\,.
+\end{equation}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Parallel transport in coordinates}%
+\label{sec:parallel-transport-coords}
+
+Let $\psi$ be a coordinate chart determining the ordinary
+derivative operator $\partial_a$.  Recall that the covariant
+derivative of a vector is related to the ordinary derivative by
+\[
+  \covd_a v^b = \partial_a v^b
+    + \chris{b}{ac}\, v^c\,.
+\]
+In the chart $\psi$, the tangent vector to the curve has
+components $t^\mu = \dd x^\mu/\dd t$.
+The parallel transport condition
+$t^a \covd_a v^b = 0$ becomes
+\[
+  \frac{\dd x^\mu}{\dd t}\,
+  \pd{v^\nu}{x^\mu}
+  + \frac{\dd x^\mu}{\dd t}\,
+  \chris{\nu}{\mu\lambda}\, v^\lambda = 0\,.
+\]
+The first factor in each term combines to give
+$\dd v^\nu/\dd t$ along the curve.  Hence:
+\begin{equation}\label{eq:parallel-transport-coord}
+  \eqbox{\frac{\dd v^\nu}{\dd t}
+    + \frac{\dd x^\mu}{\dd t}\,
+      \chris{\nu}{\mu\lambda}\, v^\lambda = 0}
+\end{equation}
+
+\begin{remark}
+  The parallel transport condition~\eqref{eq:parallel-transport-coord}
+  only involves the values of~$v^a$ on the curve~$C$.  We do
+  \emph{not} need $v^a$ to be defined as a vector field on all
+  of~$\M$---it suffices for $v^a$ to be given along~$C$.
+\end{remark}
+
+\begin{remark}
+  Equation~\eqref{eq:parallel-transport-coord} is a system of
+  linear first-order ordinary differential equations for the
+  components $v^\nu(t)$.  By the standard existence and uniqueness
+  theorem for ODEs, given an initial vector $v^a|_p$, there exists
+  a unique solution along~$C$.  This defines the
+  \textbf{parallel transporter}
+  \[
+    U_C\colon V_p \to V_q\,,
+    \qquad v^a(p) \mapsto \tilde{v}^a(q)\,,
+  \]
+  which is a linear isomorphism (linearity follows from the
+  linearity of the ODE).
+\end{remark}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{The Levi-Civita connection}%
+\label{sec:levi-civita}
+
+If the manifold $\M$ is equipped with a metric $g_{ab}$, we can
+make a \emph{canonical} choice of derivative operator $\covd_a$.
+The guiding physical requirement is that parallel transport should
+preserve lengths and angles.
+
+\subsubsection{Metric compatibility}\label{sec:metric-compat}
+
+Consider two vectors $v^a, w^a \in V_p$ that are parallelly
+transported along a curve~$C$ with tangent~$t^a$:
+\[
+  t^a \covd_a v^b = 0\,,
+  \qquad
+  t^a \covd_a w^b = 0\,.
+\]
+We require that the inner product
+$(v,w)_p = g_{ab}\, v^a w^b$ is preserved during transport.
+That is,
+\[
+  t^a \covd_a \bigl(g_{bc}\, v^b w^c\bigr) = 0\,.
+\]
+Applying the Leibniz rule:
+\begin{align}
+  0 &= (t^a \covd_a g_{bc})\, v^b w^c
+     + g_{bc}\,(t^a \covd_a v^b)\, w^c
+     + g_{bc}\, v^b\,(t^a \covd_a w^c)\,.
+     \label{eq:leibniz-metric}
+\end{align}
+The last two terms vanish by the parallel transport condition.
+Since this must hold for \emph{all} vectors $v^b$, $w^c$, all
+curves, and all tangent vectors~$t^a$, we conclude:
+
+\begin{equation}\label{eq:metric-compatibility}
+  \eqbox{\covd_a g_{bc} = 0}
+\end{equation}
+
+\begin{definition}[Metric compatibility]\label{def:metric-compat}
+  A derivative operator $\covd_a$ is said to be
+  \textbf{metric-compatible} (or \textbf{compatible with the
+  metric} $g_{ab}$) if $\covd_a g_{bc} = 0$.
+\end{definition}
+
+\begin{intuition}[Why metric compatibility?]
+  The metric encodes the notions of length and angle.  If
+  $\covd_a g_{bc} = 0$, then parallel transport preserves the
+  inner product: two vectors that are orthogonal at~$p$ remain
+  orthogonal after transport to~$q$, and their lengths do not
+  change.  This is the natural analogue of the familiar fact
+  that, in Euclidean space, translating a vector does not alter
+  its length or direction.
+\end{intuition}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Existence and uniqueness of the Levi-Civita
+  connection}\label{sec:levi-civita-unique}
+
+\begin{theorem}[Levi-Civita connection]\label{thm:levi-civita}
+  Let $g_{ab}$ be a metric on~$\M$.  Then there exists a
+  \textbf{unique} torsion-free derivative operator $\covd_a$
+  satisfying $\covd_a g_{bc} = 0$.
+\end{theorem}
+
+\begin{proof}
+  Let $\tilde\covd_a$ be \emph{any} derivative operator
+  (for instance, the ordinary derivative $\partial_a$ associated
+  with some coordinate chart).  Any other derivative operator
+  $\covd_a$ differs from~$\tilde\covd_a$ by a tensor
+  $C^d{}_{ab}$:
+  \[
+    \covd_a \omega_b
+      = \tilde\covd_a \omega_b - C^d{}_{ab}\, \omega_d\,.
+  \]
+  Since $\covd_a$ is torsion-free, $C^d{}_{ab} = C^d{}_{ba}$.
+
+  \smallskip
+  \noindent\textbf{Step 1: Impose metric compatibility.}\;
+  The condition $\covd_a g_{bc} = 0$ reads
+  \begin{equation}\label{eq:metric-compat-expand}
+    0 = \covd_a g_{bc}
+      = \tilde\covd_a g_{bc}
+        - C^d{}_{ab}\, g_{dc}
+        - C^d{}_{ac}\, g_{bd}\,.
+  \end{equation}
+  Writing $C_{cab} = g_{dc}\, C^d{}_{ab}$, this becomes
+  \begin{equation}\label{eq:compat-lowered}
+    \tilde\covd_a g_{bc} = C_{cab} + C_{bac}\,.
+  \end{equation}
+
+  \noindent\textbf{Step 2: Cyclic permutations.}\;
+  Write~\eqref{eq:compat-lowered} with three different index
+  orderings:
+  \begin{align}
+    \tilde\covd_a g_{bc} &= C_{cab} + C_{bac}\,,
+      \label{eq:perm1}\\
+    \tilde\covd_b g_{ac} &= C_{cba} + C_{abc}\,,
+      \label{eq:perm2}\\
+    \tilde\covd_c g_{ab} &= C_{bca} + C_{acb}\,.
+      \label{eq:perm3}
+  \end{align}
+  Form the combination
+  $\eqref{eq:perm1} + \eqref{eq:perm2} - \eqref{eq:perm3}$:
+  \begin{align}
+    \tilde\covd_a g_{bc}
+    + \tilde\covd_b g_{ac}
+    - \tilde\covd_c g_{ab}
+    &= C_{cab} + C_{bac}
+     + C_{cba} + C_{abc}
+     - C_{bca} - C_{acb}\,.
+     \notag
+  \end{align}
+  Using the torsion-free symmetry
+  $C_{cab} = C_{cba}$, the right-hand side simplifies to
+  $2C_{cab}$.  Therefore
+  \begin{equation}\label{eq:C-solved}
+    C_{cab} = \tfrac{1}{2}\bigl(
+      \tilde\covd_a g_{bc}
+      + \tilde\covd_b g_{ac}
+      - \tilde\covd_c g_{ab}\bigr)\,.
+  \end{equation}
+  Raising the first index:
+  \begin{equation}\label{eq:C-solved-raised}
+    C^c{}_{ab} = \tfrac{1}{2}\, g^{cd}\bigl(
+      \tilde\covd_a g_{bd}
+      + \tilde\covd_b g_{ad}
+      - \tilde\covd_d g_{ab}\bigr)\,.
+  \end{equation}
+  Since $C^c{}_{ab}$ is uniquely determined
+  by~$\tilde\covd_a$ and~$g_{ab}$, the derivative operator
+  $\covd_a$ is unique.
+\end{proof}
+
+\begin{remark}
+  From now on, whenever a metric $g_{ab}$ is given, we choose
+  $\covd_a$ to be the unique Levi-Civita connection determined
+  by~$g_{ab}$.
+\end{remark}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Christoffel symbols}\label{sec:christoffel}
+
+In the special case where $\tilde\covd_a = \partial_a$ is the
+ordinary derivative associated with a coordinate chart~$\psi$,
+the tensor $C^c{}_{ab}$ becomes the Christoffel symbol
+$\chris{c}{ab}$.  Since $\partial_a g_{bd}$ simply
+differentiates the metric components, we obtain
+(in abstract index notation):
+\begin{equation}\label{eq:christoffel-abstract}
+  \chris{c}{ab}
+    = \tfrac{1}{2}\, g^{cd}\bigl(
+      \partial_a g_{bd}
+      + \partial_b g_{ad}
+      - \partial_d g_{ab}\bigr)\,.
+\end{equation}
+
+In the coordinate chart $\psi$ with coordinates
+$(x^1,\dots,x^n)$, this reads:
+\begin{equation}\label{eq:christoffel-coord}
+  \eqbox{\chris{\rho}{\mu\nu}
+    = \frac{1}{2}\sum_\sigma g^{\rho\sigma}
+      \!\left(
+        \pd{g_{\sigma\mu}}{x^\nu}
+        + \pd{g_{\sigma\nu}}{x^\mu}
+        - \pd{g_{\mu\nu}}{x^\sigma}
+      \right)}
+\end{equation}
+
+\begin{keyresult}[Christoffel symbols from the metric]
+  The Christoffel symbols~\eqref{eq:christoffel-coord} are
+  determined entirely by the metric and its first derivatives.
+  They are symmetric in the lower two indices:
+  $\chris{\rho}{\mu\nu} = \chris{\rho}{\nu\mu}$.
+  Note that they are \emph{not} the components of a tensor
+  (see~\S\ref{sec:connection-transform} below).
+\end{keyresult}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Example: $\Rn{2}$ in Cartesian and polar coordinates}%
+\label{sec:R2-example}
+
+\subsubsection{Cartesian coordinates}\label{sec:R2-cartesian}
+
+\begin{example}[Flat metric in Cartesian coordinates]%
+\label{ex:R2-cartesian}
+  Let $\M = \Rn{2}$ with Cartesian coordinates $(x,y)$.  A
+  vector is expanded as
+  \[
+    v = \sum_{\mu = x,y} v^\mu\,
+      \pd{}{x^\mu}\bigg|_p\,.
+  \]
+  The Euclidean metric is
+  \[
+    g_{\mu\nu}\,\dd x^\mu \tp \dd x^\nu
+      = \dd x \tp \dd x + \dd y \tp \dd y\,,
+  \]
+  so $g_{\mu\nu} = \delta_{\mu\nu}$ and all derivatives of
+  $g_{\mu\nu}$ vanish.  Hence
+  \[
+    \chris{\lambda}{\mu\nu} = 0\,.
+  \]
+  Choose $\tilde\covd_a = \partial_a$ with respect to Cartesian
+  coordinates.  Then $\covd_a = \partial_a$, and the parallel
+  transport equation $t^a \covd_a v^b = 0$ becomes
+  \[
+    t^\nu\,\pd{v^\mu}{x^\nu} = 0
+    \quad\Longrightarrow\quad
+    v^\mu \text{ is constant along } C\,.
+  \]
+  This is the familiar result: in flat space with Cartesian
+  coordinates, parallel transport simply keeps the components
+  of the vector constant.
+\end{example}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Polar coordinates}\label{sec:R2-polar}
+
+\begin{example}[Flat metric in polar coordinates]%
+\label{ex:R2-polar}
+  Now introduce polar coordinates $(r,\varphi)$ on $\Rn{2}$
+  via $(x,y) = (r\cos\varphi,\; r\sin\varphi)$.
+  Using $\dd x = \cos\varphi\,\dd r - r\sin\varphi\,\dd\varphi$
+  and $\dd y = \sin\varphi\,\dd r + r\cos\varphi\,\dd\varphi$,
+  the metric becomes
+  \begin{equation}\label{eq:polar-metric}
+    g = \dd r\tp\dd r + r^2\,\dd\varphi\tp\dd\varphi\,.
+  \end{equation}
+  In matrix form:
+  \[
+    g_{\mu'\nu'}
+      = \begin{pmatrix} 1 & 0 \\ 0 & r^2 \end{pmatrix},
+    \qquad
+    g^{\mu'\nu'}
+      = \begin{pmatrix} 1 & 0 \\ 0 & 1/r^2 \end{pmatrix}.
+  \]
+
+  \noindent\textbf{Christoffel symbols.}\;
+  From~\eqref{eq:christoffel-coord}, the only nonvanishing
+  derivatives of $g_{\mu'\nu'}$ involve
+  $\partial g_{\varphi\varphi}/\partial r = 2r$.
+  A direct computation gives:
+  \begin{equation}\label{eq:chris-polar}
+    \chris{r}{\varphi\varphi} = -r\,,
+    \qquad
+    \chris{\varphi}{r\varphi}
+      = \chris{\varphi}{\varphi r}
+      = \frac{1}{r}\,,
+  \end{equation}
+  with all other components vanishing.
+\end{example}
+
+\begin{exercise}\label{ex:chris-polar}
+  Verify the Christoffel
+  symbols~\eqref{eq:chris-polar} by direct computation
+  from~\eqref{eq:christoffel-coord}.
+\end{exercise}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Parallel transport along a radial line}%
+\label{sec:radial-transport}
+
+Take the curve $C$ to be a displacement along the radial
+direction: the tangent vector is
+$t^a = (\partial/\partial r)^a$, so $t^r = 1$ and
+$t^\varphi = 0$.
+
+The parallel transport
+equation~\eqref{eq:parallel-transport-coord} yields two
+component equations:
+\begin{align}
+  \frac{\dd v^r}{\dd r}
+    + \chris{r}{rr}\, v^r
+    + \chris{r}{r\varphi}\, v^\varphi
+    &= 0
+  \quad\Longrightarrow\quad
+  \frac{\dd v^r}{\dd r} = 0\,,
+  \label{eq:radial-vr}\\[4pt]
+  \frac{\dd v^\varphi}{\dd r}
+    + \chris{\varphi}{rr}\, v^r
+    + \chris{\varphi}{r\varphi}\, v^\varphi
+    &= 0
+  \quad\Longrightarrow\quad
+  \frac{\dd v^\varphi}{\dd r} = -\frac{v^\varphi}{r}\,.
+  \label{eq:radial-vphi}
+\end{align}
+
+From~\eqref{eq:radial-vr}, $v^r$ is constant.
+Equation~\eqref{eq:radial-vphi} is separable:
+\[
+  \frac{1}{v^\varphi}\,\dd v^\varphi = -\frac{1}{r}\,\dd r
+  \quad\Longrightarrow\quad
+  \log v^\varphi = -\log r + \text{const}
+  \quad\Longrightarrow\quad
+  v^\varphi = \frac{A}{r}\,,
+\]
+where $A$ is a constant determined by the initial conditions.
+
+\begin{remark}
+  The components $v^\varphi$ change along the curve, but this
+  is entirely because the coordinate basis vectors
+  $\partial/\partial r$ and $\partial/\partial\varphi$ themselves
+  change from point to point.  The vector $v^a$ is ``constant''
+  in the Cartesian sense---the parallel transport equation
+  correctly accounts for the variation of the basis.
+\end{remark}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Covariant derivative of one-forms and connection
+  one-forms}\label{sec:covd-oneforms}
+
+Suppose $\covd_a$ is a derivative operator.  Let $\omega$ be a
+covector (a tensor of type~$(0,1)$) and let $\psi$ be a
+coordinate chart.  In the coordinate basis, the covariant
+derivative of the dual basis element $\dd x^\nu$ in the
+direction $\partial/\partial x^\mu$ is
+\begin{equation}\label{eq:covd-dual-basis}
+  \covd_{\partial/\partial x^\mu}(\dd x^\nu)
+    = -\chris{\nu}{\mu\lambda}\,\dd x^\lambda\,.
+\end{equation}
+For each choice of $\mu$ and $\nu$, this defines a one-form
+called a \textbf{connection one-form}.
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Transformation of connection coefficients}%
+\label{sec:connection-transform}
+
+Let $(U,\psi)$ and $(V,\psi')$ be two overlapping charts with
+coordinates $x^\mu = \psi(p)$ and $y^\alpha = \psi'(p)$.
+Write $\chris{\gamma}{\alpha\beta}$ for the Christoffel symbols
+in the $x$-chart and $\tilde\Gamma^\gamma{}_{\alpha\beta}$ for
+those in the $y$-chart.
+
+Starting from the definition
+$\chris{\gamma}{\alpha\beta}\,\partial/\partial x^\gamma
+  = \covd_{\partial/\partial x^\alpha}
+    (\partial/\partial x^\beta)$,
+one can express the basis vectors
+$\partial/\partial y^\alpha
+  = (\partial x^\mu/\partial y^\alpha)\,
+    \partial/\partial x^\mu$
+and compute:
+\begin{equation}\label{eq:connection-transform}
+  \eqbox{\tilde\Gamma^\gamma{}_{\alpha\beta}
+    = \pd{x^\lambda}{y^\alpha}\,
+      \pd{x^n}{y^\beta}\,
+      \pd{y^\gamma}{x^\nu}\,
+      \chris{\nu}{\lambda n}
+    + \frac{\partial^2 x^\nu}{\partial y^\alpha\,
+        \partial y^\beta}\,
+      \pd{y^\gamma}{x^\nu}}
+\end{equation}
+
+\begin{remark}
+  The first term in~\eqref{eq:connection-transform} is the
+  standard tensorial transformation law.  The second term,
+  involving second derivatives of the coordinate
+  transformation, shows that $\chris{\nu}{\mu\lambda}$ does
+  \emph{not} transform as a tensor.  It is precisely this
+  inhomogeneous term that allows $\covd_a v^b$ to be a tensor
+  even though $v^b$ and $\chris{b}{ac}$ individually are not.
+\end{remark}
+
+\begin{exercise}\label{ex:covd-invariance}
+  Show that $\covd_X Y$ is independent of the choice of
+  coordinates: if $X = X^\mu\,\partial/\partial x^\mu$,
+  $Y = Y^\nu\,\partial/\partial x^\nu$ in one chart and
+  $X = \tilde X^\alpha\,\partial/\partial y^\alpha$,
+  $Y = \tilde Y^\beta\,\partial/\partial y^\beta$ in another,
+  then $X^\mu \covd_{\partial/\partial x^\mu}
+    (Y^\nu\,\partial/\partial x^\nu)
+  = \tilde X^\alpha \covd_{\partial/\partial y^\alpha}
+    (\tilde Y^\beta\,\partial/\partial y^\beta)$.
+\end{exercise}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Geodesics}\label{sec:geodesics}
+
+We now arrive at one of the central concepts in general
+relativity.
+
+\begin{definition}[Geodesic]\label{def:geodesic}
+  Let $(\M, g_{ab})$ be a manifold with metric.  A
+  \textbf{geodesic} is a curve whose tangent vector $T^a$ is
+  parallelly transported along itself:
+  \begin{equation}\label{eq:geodesic-abstract}
+    \eqbox{T^a \covd_a T^b = 0}
+  \end{equation}
+\end{definition}
+
+\begin{intuition}[Geodesics as straightest curves]
+  A geodesic is the ``straightest possible'' curve one can
+  trace through~$\M$.  On a curved manifold there is in general
+  no global notion of a ``straight line,'' but the geodesic
+  equation captures the idea locally: the tangent vector does
+  not turn relative to the connection.  In flat space, geodesics
+  reduce to straight lines.
+\end{intuition}
+
+% Diagram: geodesic on a curved surface
+\begin{center}
+\begin{tikzpicture}[scale=0.85]
+  % Curved manifold
+  \draw[thick, spacecadet, rounded corners=14pt]
+    (0,0.5) to[out=20,in=160] (5.5,0.8)
+    to[out=-20,in=40] (6.0,-0.6)
+    to[out=220,in=-10] (0.5,-0.5)
+    to[out=170,in=250] cycle;
+  \node[font=\sf\small, text=cgblue] at (5.8,1.0) {$\M$};
+  % Geodesic curve
+  \draw[thick, munsell]
+    (1.0,0.1) to[out=10,in=190] (3.0,0.3)
+    to[out=10,in=200] (5.0,0.2);
+  % Points
+  \node[circle, fill=banana, inner sep=1.8pt] (P) at (1.0,0.1) {};
+  \node[font=\small, below left] at (P) {$p$};
+  \node[circle, fill=banana, inner sep=1.8pt] (Q) at (5.0,0.2) {};
+  \node[font=\small, below right] at (Q) {$q$};
+  % Tangent vectors
+  \draw[vecstyle] (P) -- ++(0.8,0.12)
+    node[above, font=\small]{$T^a$};
+  \node[circle, fill=banana, inner sep=1.2pt] (M) at (3.0,0.3) {};
+  \draw[vecstyle] (M) -- ++(0.8,0.08)
+    node[above, font=\small]{$T^a$};
+  \draw[vecstyle] (Q) -- ++(0.7,-0.05)
+    node[above, font=\small]{$T^a$};
+\end{tikzpicture}
+\end{center}
+
+\subsubsection{Geodesic equation in coordinates}%
+\label{sec:geodesic-coords}
+
+Choose a coordinate chart~$\psi$.  A curve is described by
+functions $x^\mu(t)$, and the tangent vector has components
+$T^\mu = \dd x^\mu/\dd t$.  Applying the parallel transport
+equation~\eqref{eq:parallel-transport-coord} with
+$v^\mu = T^\mu$:
+\[
+  \frac{\dd T^\mu}{\dd t}
+    + \chris{\mu}{\sigma\nu}\,
+      \frac{\dd x^\sigma}{\dd t}\,
+      T^\nu = 0\,.
+\]
+Since $T^\mu = \dd x^\mu/\dd t$, we write
+$\dd T^\mu/\dd t = \dd^2 x^\mu/\dd t^2$ to obtain:
+
+\begin{equation}\label{eq:geodesic-coord}
+  \eqbox{\frac{\dd^2 x^\mu}{\dd t^2}
+    + \sum_{\sigma,\nu}
+      \chris{\mu}{\sigma\nu}\,
+      \frac{\dd x^\sigma}{\dd t}\,
+      \frac{\dd x^\nu}{\dd t}
+    = 0}
+\end{equation}
+
+\begin{remark}
+  Equation~\eqref{eq:geodesic-coord} is a system of $n$
+  coupled second-order ordinary differential equations for the
+  $n$ functions $x^\mu(t)$.  Given initial position
+  $x^\mu(0)$ and initial velocity
+  $\dd x^\mu/\dd t|_{t=0}$, the ODE existence and uniqueness
+  theorem guarantees a unique geodesic (at least locally).
+\end{remark}
+
+\begin{exercise}\label{ex:geodesic-flat}
+  Show that the geodesics of Euclidean $\Rn{n}$ (with the
+  standard flat metric in Cartesian coordinates) are straight
+  lines.
+\end{exercise}
+
+\begin{exercise}\label{ex:geodesic-sphere}
+  Compute the Christoffel symbols for the round metric
+  $g = \dd\theta\tp\dd\theta
+    + \sin^2\!\theta\;\dd\varphi\tp\dd\varphi$
+  on $S^2$, and write down the geodesic equations.
+  Verify that great circles satisfy these equations.
+\end{exercise}

@@ -1,0 +1,464 @@
+%!TEX root = ../GeneralRelativity.tex
+% ──────────────────────────────────────────────────────────────
+%  Lecture 7 — Derivative operators and parallel transport (Part I)
+% ──────────────────────────────────────────────────────────────
+
+\section{Derivative operators and parallel transport~(I)}%
+\label{sec:derivative-operators}
+
+In the previous lectures we developed the algebra of tensors on a
+manifold~$\M$.  We can add tensors, take tensor products, and
+contract indices---but we cannot yet \emph{differentiate} tensor
+fields.  In $\Rn{n}$ one differentiates by comparing values of a
+tensor at nearby points; on a general manifold this comparison
+requires extra structure.  That structure is a \textbf{derivative
+operator} (or \textbf{affine connection}).
+
+\begin{notation}
+  We write $\mathscr{X}(\M)$ for the space of smooth vector
+  fields on~$\M$, and $\mathscr{F}(\M)$ for the space of smooth
+  functions $f\colon\M\to\R$.
+\end{notation}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Affine connections: definition}\label{sec:affine-connection}
+
+\begin{definition}[Affine connection / covariant derivative]%
+\label{def:affine-connection}
+  An \textbf{affine connection} (or \textbf{covariant derivative
+  operator}) on a manifold~$\M$ is a map
+  \[
+    \covd\colon \mathscr{X}(\M)\times\mathscr{X}(\M)
+      \to \mathscr{X}(\M)\,,
+    \qquad (X,Y)\mapsto \covd_X Y\,,
+  \]
+  which we immediately extend to a map
+  $\covd\colon \mathscr{X}(\M)\times\ttype{k}{l}
+  \to\ttype{k}{l}$, satisfying axioms~(0)--(5) below.
+\end{definition}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{The axioms}\label{sec:connection-axioms}
+
+\subsubsection*{Axiom~(0): Additivity in the first argument}
+
+For all $X,Y\in\mathscr{X}(\M)$ and $Z\in\ttype{k}{l}$:
+\begin{equation}\label{eq:axiom0}
+  \covd_{X+Y} Z = \covd_X Z + \covd_Y Z\,.
+\end{equation}
+
+\subsubsection*{Axiom~(0$'$): $\mathscr{F}(\M)$-linearity in
+the first argument}
+
+For all $f\in\mathscr{F}(\M)$, $X\in\mathscr{X}(\M)$, and
+$Y\in\ttype{k}{l}$:
+\begin{equation}\label{eq:axiom0prime}
+  \covd_{fX} Y = f\,\covd_X Y\,.
+\end{equation}
+
+\begin{remark}
+  Axioms~(0) and~(0$'$) together say that $\covd_X$ depends
+  $\mathscr{F}(\M)$-linearly on the ``direction''~$X$.  In
+  abstract index notation we write
+  $\covd_X \equiv X^a\covd_a$, so that the derivative in
+  direction~$X$ is determined by the components of~$X$ and the
+  operator~$\covd_a$.
+\end{remark}
+
+\subsubsection*{Axiom~(1): Linearity}
+
+For all $A,B\in\ttype{k}{l}$:
+\begin{equation}\label{eq:axiom1}
+  \covd_X(A + B) = \covd_X A + \covd_X B\,.
+\end{equation}
+In abstract index notation:
+\[
+  \covd_c\bigl(
+    A^{a_1\cdots a_k}{}_{b_1\cdots b_l}
+    + B^{a_1\cdots a_k}{}_{b_1\cdots b_l}
+  \bigr)
+  = \covd_c A^{a_1\cdots a_k}{}_{b_1\cdots b_l}
+  + \covd_c B^{a_1\cdots a_k}{}_{b_1\cdots b_l}\,.
+\]
+
+\subsubsection*{Axiom~(2): Leibniz rule}
+
+For all $A\in\ttype{k}{l}$ and $B\in\ttype{k'}{l'}$:
+\begin{equation}\label{eq:axiom2}
+  \covd_X(A\tp B) = (\covd_X A)\tp B + A\tp(\covd_X B)\,.
+\end{equation}
+In abstract index notation:
+\begin{multline}\label{eq:axiom2-ain}
+  \covd_e\bigl(
+    A^{a_1\cdots a_k}{}_{b_1\cdots b_l}\,
+    B^{c_1\cdots c_{k'}}{}_{d_1\cdots d_{l'}}
+  \bigr) \\
+  = (\covd_e A^{a_1\cdots a_k}{}_{b_1\cdots b_l})\,
+    B^{c_1\cdots c_{k'}}{}_{d_1\cdots d_{l'}}
+  + A^{a_1\cdots a_k}{}_{b_1\cdots b_l}\,
+    (\covd_e B^{c_1\cdots c_{k'}}{}_{d_1\cdots d_{l'}})\,.
+\end{multline}
+
+\subsubsection*{Axiom~(3): Commutativity with contraction}
+
+For all $A\in\ttype{k}{l}$ (with $k\geq 1$, $l\geq 1$):
+\begin{equation}\label{eq:axiom3}
+  \covd_X(C_{j,j'}\, A) = C_{j,j'}(\covd_X A)\,.
+\end{equation}
+In abstract index notation, contraction is implemented by
+repeating an index, and the axiom states that $\covd_d$
+commutes with this operation.
+
+\subsubsection*{Axiom~(4): Reduction to directional derivative
+on scalars}
+
+For all $f\in\mathscr{F}(\M)$:
+\begin{equation}\label{eq:axiom4}
+  \eqbox{\covd_X(f) = X(f)}\,.
+\end{equation}
+In abstract index notation: $X(f) = X^a\covd_a f$.
+
+\begin{remark}
+  Axiom~(4) says that on scalar functions the covariant
+  derivative reduces to the ordinary directional derivative.
+  No extra data is needed to differentiate scalars.
+\end{remark}
+
+\subsubsection*{Axiom~(5): Torsion-free}
+
+For all $X,Y\in\mathscr{X}(\M)$:
+\begin{equation}\label{eq:axiom5-torsionfree}
+  \eqbox{\covd_X Y - \covd_Y X - [X,Y] = 0}\,.
+\end{equation}
+Equivalently, in abstract index notation: for all
+$f\in\mathscr{F}(\M)$,
+\begin{equation}\label{eq:torsion-free-ain}
+  \covd_a\covd_b f = \covd_b\covd_a f\,.
+\end{equation}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Simple consequences}\label{sec:connection-consequences}
+
+Two useful identities follow directly from the axioms.
+
+\begin{theorem}[Leibniz rule on products]\label{thm:leibniz-fY}
+  For all $X\in\mathscr{X}(\M)$,
+  $Y\in\mathscr{X}(\M)$, and $f\in\mathscr{F}(\M)$:
+  \begin{equation}\label{eq:leibniz-fY}
+    \covd_X(fY) = X(f)\,Y + f\,\covd_X Y\,.
+  \end{equation}
+\end{theorem}
+
+\begin{proof}
+  View $fY$ as the tensor product
+  $f\tp Y$ (with $f\in\ttype{0}{0}$, $Y\in\ttype{1}{0}$).
+  By axiom~(2):
+  \[
+    \covd_X(f\tp Y) = (\covd_X f)\tp Y + f\tp(\covd_X Y)\,.
+  \]
+  By axiom~(4), $\covd_X f = X(f)$.  The result follows.
+\end{proof}
+
+\begin{theorem}[Lie bracket via $\covd$]\label{thm:lie-bracket-covd}
+  For all $v,w\in\mathscr{X}(\M)$:
+  \begin{equation}\label{eq:lie-bracket-covd}
+    \eqbox{[v,w]^b = v^a\covd_a w^b - w^a\covd_a v^b}\,.
+  \end{equation}
+\end{theorem}
+
+\begin{proof}
+  By axiom~(5), $\covd_v w - \covd_w v = [v,w]$.  Writing
+  $\covd_v \equiv v^a\covd_a$ and $\covd_w \equiv w^a\covd_a$
+  gives~\eqref{eq:lie-bracket-covd}.
+\end{proof}
+
+\begin{remark}
+  Equation~\eqref{eq:lie-bracket-covd} shows that the Lie
+  bracket, which is defined purely in terms of the manifold
+  structure, can be computed using \emph{any} torsion-free
+  connection.  The result is independent of the choice of~$\covd$.
+\end{remark}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Existence and non-uniqueness}%
+\label{sec:existence-nonuniqueness}
+
+There are \emph{many} derivative operators satisfying
+axioms~(0)--(5).  We first exhibit the simplest one, then
+characterise the freedom in choosing~$\covd$.
+
+\subsubsection{The ordinary derivative}\label{sec:ordinary-deriv}
+
+Let $\psi$ be a chart on~$\M$ with coordinate
+functions~$(x^1,\dots,x^n)$.  For a tensor
+$T\in\ttype{k}{l}$ with components
+$T^{\mu_1\cdots\mu_k}{}_{\nu_1\cdots\nu_l}$ in the coordinate
+basis, define $\partial_a$ by letting it act via the partial
+derivative $\partial/\partial x^\sigma$ on these components.
+
+\begin{remark}
+  The operator $\partial_a$ satisfies axioms~(0)--(5), but it is
+  \textbf{chart-dependent}: it is defined only with respect to
+  the chart~$\psi$.  A different chart generally gives a
+  different operator~$\partial_a$.  A true covariant derivative
+  is chart-independent.
+\end{remark}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Difference of two derivative operators}%
+\label{sec:difference-operators}
+
+Suppose $\covd_a$ and $\tilde\covd_a$ are two derivative
+operators both satisfying axioms~(0)--(5).
+
+\medskip\noindent
+\textbf{Step~1: On scalars.}\;
+For all $f\in\mathscr{F}(\M)$, axiom~(4) gives
+\begin{equation}\label{eq:diff-on-scalars}
+  (\tilde\covd_a - \covd_a)f
+    = \tilde\covd_a f - \covd_a f = 0\,.
+\end{equation}
+
+\medskip\noindent
+\textbf{Step~2: On covectors.}\;
+Consider the map
+$(\tilde\covd_a - \covd_a)\colon\ttype{0}{1}\to\ttype{0}{2}$.
+Let $f\in\mathscr{F}(\M)$ and $\omega\in\ttype{0}{1}$.  Then
+$f\omega_a\in\ttype{0}{1}$, and by the Leibniz
+rule~\eqref{eq:axiom2} and~\eqref{eq:diff-on-scalars}:
+\begin{equation}\label{eq:diff-covector-flinearity}
+  (\tilde\covd_a - \covd_a)(f\omega_b)
+    = f\,(\tilde\covd_a - \covd_a)\omega_b\,.
+\end{equation}
+
+\begin{theorem}\label{thm:diff-local}
+  The quantity $(\tilde\covd_a - \covd_a)\omega_b$
+  depends only on the value of $\omega_b$ at the
+  point~$p$.
+\end{theorem}
+
+\begin{proof}
+  Let $\omega'_b\in\ttype{0}{1}$ agree with $\omega_b$ at~$p$,
+  i.e.\ $\omega'_b|_p = \omega_b|_p$.  We must show that
+  \[
+    (\tilde\covd_a - \covd_a)\omega'_c\big|_p
+    = (\tilde\covd_a - \covd_a)\omega_c\big|_p\,.
+  \]
+  Write the difference $\omega'_b - \omega_b$ in terms of smooth
+  functions~$f_\alpha$ vanishing at~$p$ and smooth covector
+  fields~$\mu_b^{(\alpha)}$:
+  \[
+    \omega'_b - \omega_b
+      = \sum_\alpha f_\alpha\, \mu_b^{(\alpha)}\,,
+    \qquad f_\alpha|_p = 0\,.
+  \]
+  (Such a decomposition exists by the smoothness of
+  $\omega' - \omega$ and the fact that it vanishes at~$p$.)
+  Applying $(\tilde\covd_a - \covd_a)$ and
+  using~\eqref{eq:diff-covector-flinearity}:
+  \[
+    (\tilde\covd_a - \covd_a)(\omega'_b - \omega_b)\big|_p
+    = \sum_\alpha
+      f_\alpha|_p\,
+      (\tilde\covd_a - \covd_a)\mu_b^{(\alpha)}\big|_p
+    = 0\,,
+  \]
+  since $f_\alpha|_p = 0$.
+\end{proof}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{The $C$ tensor}\label{sec:C-tensor}
+
+By Theorem~\ref{thm:diff-local}, the map
+$(\tilde\covd_a - \covd_a)$ on covectors at~$p$ is a map
+\[
+  V_p^* \;\longrightarrow\; V_p^*\tp V_p^*\,.
+\]
+By duality ($V_p^{**}\cong V_p$), this can be interpreted as an
+element of $V_p\tp V_p^*\tp V_p^*$.  We write its components as
+$C^c{}_{ab}$ and record:
+\begin{equation}\label{eq:C-tensor-covector}
+  \eqbox{\covd_a\omega_b
+    = \tilde\covd_a\omega_b - C^c{}_{ab}\,\omega_c}\,.
+\end{equation}
+
+\begin{remark}
+  \textbf{Warning:} if one takes $\tilde\covd_a = \partial_a$,
+  then $C^c{}_{ab}$ does \emph{not} transform as a tensor field
+  of type~$\ttype{1}{2}$ under coordinate changes.  Only the
+  \emph{difference} of two genuine covariant derivatives
+  transforms tensorially.
+\end{remark}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Symmetry of $C^c{}_{ab}$}%
+\label{sec:C-symmetry}
+
+Let $f\in\mathscr{F}(\M)$ and consider the covector
+$\omega_b = \covd_b f = \tilde\covd_b f$ (by axiom~(4) both
+operators agree on scalars).  Then
+\begin{equation}\label{eq:C-symmetry-derivation}
+  \covd_a\covd_b f
+    = \tilde\covd_a\tilde\covd_b f
+      - C^c{}_{ab}\,\covd_c f\,.
+\end{equation}
+The left-hand side is symmetric in $a,b$ (torsion-free,
+axiom~(5)), and the first term on the right-hand side is
+likewise symmetric.  Therefore
+\begin{equation}\label{eq:C-symmetric}
+  \eqbox{C^c{}_{ab} = C^c{}_{ba}}\,.
+\end{equation}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Action on vectors}\label{sec:C-on-vectors}
+
+We now determine how $(\tilde\covd_a - \covd_a)$ acts on
+vectors $t^b\in\ttype{1}{0}$.  Let $\omega\in\ttype{0}{1}$ and
+$t\in\ttype{1}{0}$.  The contraction $\omega_b\,t^b$ is a
+scalar, so by axiom~(4):
+\begin{equation}\label{eq:diff-scalar-zero}
+  (\tilde\covd_a - \covd_a)(\omega_b\, t^b) = 0\,.
+\end{equation}
+Expanding by the Leibniz rule:
+\[
+  t^b\,(\tilde\covd_a - \covd_a)\omega_b
+  + \omega_b\,(\tilde\covd_a - \covd_a)t^b = 0\,.
+\]
+Substituting~\eqref{eq:C-tensor-covector}
+($(\tilde\covd_a - \covd_a)\omega_b = C^c{}_{ab}\,\omega_c$
+from the \emph{opposite} sign convention):
+\[
+  -t^b\,C^c{}_{ab}\,\omega_c
+  + \omega_b\,(\tilde\covd_a - \covd_a)t^b = 0\,.
+\]
+Relabelling the dummy index $c\to b$ in the first term and
+requiring this to hold for all~$\omega_b$, we obtain
+\begin{equation}\label{eq:C-tensor-vector}
+  \eqbox{\covd_a t^b
+    = \tilde\covd_a t^b + C^b{}_{ac}\, t^c}\,.
+\end{equation}
+
+\begin{keyresult}[Difference of connections on vectors]
+  Two torsion-free derivative operators $\covd_a$ and
+  $\tilde\covd_a$ are related on vector fields by
+  \[
+    \covd_a t^b = \tilde\covd_a t^b + C^b{}_{ac}\, t^c\,,
+  \]
+  where $C^c{}_{ab} = C^c{}_{ba}$ is symmetric in its lower
+  indices.
+\end{keyresult}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Extension to general tensors}\label{sec:C-general}
+
+The Leibniz rule and axiom~(4) determine the action of
+$(\tilde\covd_a - \covd_a)$ on \emph{all} tensor fields.  For a
+general $T\in\ttype{k}{l}$:
+\begin{equation}\label{eq:C-general-tensor}
+  \eqbox{
+  \covd_a T^{b_1\cdots b_k}{}_{c_1\cdots c_l}
+  = \tilde\covd_a T^{b_1\cdots b_k}{}_{c_1\cdots c_l}
+  + \sum_{j=1}^{k}
+    C^{b_j}{}_{ad}\,
+    T^{b_1\cdots d\cdots b_k}{}_{c_1\cdots c_l}
+  - \sum_{j=1}^{l}
+    C^d{}_{ac_j}\,
+    T^{b_1\cdots b_k}{}_{c_1\cdots d\cdots c_l}
+  }
+\end{equation}
+In the first sum, $d$ replaces $b_j$; in the second sum, $d$
+replaces~$c_j$.
+
+\begin{remark}
+  The rule is: one $+C$ term for each upper index, one $-C$
+  term for each lower index.  The action of $\tilde\covd_a -
+  \covd_a$ on an arbitrary tensor of type~$(k,l)$ is thus
+  completely determined by the single object
+  $C^c{}_{ab}\in V_p\tp V_p^*\tp V_p^*$.
+\end{remark}
+
+\begin{theorem}[Converse]\label{thm:C-converse}
+  Conversely, given \emph{any} derivative operator
+  $\tilde\covd_a$ satisfying axioms~(0)--(5) and \emph{any}
+  smooth tensor field $C^c{}_{ab}$ symmetric in $a,b$,
+  the operator $\covd_a$ defined
+  by~\eqref{eq:C-general-tensor} is also a derivative operator
+  satisfying axioms~(0)--(5).
+\end{theorem}
+
+\begin{intuition}[The space of connections]
+  The set of all torsion-free connections on~$\M$ is an
+  \emph{affine space}: fixing any one connection
+  $\tilde\covd_a$, every other connection is obtained by
+  adding a symmetric tensor $C^c{}_{ab}$.  There is no
+  preferred ``origin''---no canonical choice of
+  connection---without additional structure such as a metric.
+\end{intuition}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Christoffel symbols}\label{sec:christoffel}
+
+The most important special case arises when we choose
+$\tilde\covd_a = \partial_a$, the ordinary derivative in some
+coordinate system.  The corresponding $C^c{}_{ab}$ is then
+written $\chris{c}{ab}$ and called the \textbf{Christoffel
+symbols} (of the second kind).
+
+\begin{definition}[Christoffel symbols]\label{def:christoffel}
+  Let $\partial_a$ denote the ordinary (coordinate) derivative
+  in a chart~$\psi$.  The \textbf{Christoffel symbols}
+  $\chris{c}{ab}$ are defined by the relation
+  \begin{equation}\label{eq:christoffel-def-vector}
+    \covd_a t^b = \partial_a t^b + \chris{b}{ac}\, t^c\,.
+  \end{equation}
+\end{definition}
+
+\noindent
+In coordinate components (replacing abstract indices
+$a,b,c,\dots$ by coordinate indices $\mu,\nu,\lambda,\dots$),
+this reads
+\begin{equation}\label{eq:covd-coord}
+  \eqbox{\covd_\mu t^\nu
+    = \pd{t^\nu}{x^\mu} + \chris{\nu}{\mu\lambda}\, t^\lambda}\,.
+\end{equation}
+
+\begin{remark}
+  Although $\chris{c}{ab}$ has three indices, it does
+  \textbf{not} transform as a tensor under coordinate changes.
+  Under a change of coordinates $x^\mu\to x'^{\mu'}$, the
+  Christoffel symbols pick up an inhomogeneous term involving
+  second derivatives of the coordinate transformation.  It is
+  only the \emph{difference} of two connections that transforms
+  tensorially.
+\end{remark}
+
+For a covector field $\omega_b$, the corresponding formula is
+\begin{equation}\label{eq:covd-covector-coord}
+  \covd_\mu\omega_\nu
+    = \pd{\omega_\nu}{x^\mu}
+      - \chris{\lambda}{\mu\nu}\,\omega_\lambda\,.
+\end{equation}
+For a general tensor $T\in\ttype{k}{l}$:
+\begin{multline}\label{eq:covd-general-coord}
+  \covd_\sigma T^{\mu_1\cdots\mu_k}{}_{\nu_1\cdots\nu_l}
+  = \pd{T^{\mu_1\cdots\mu_k}{}_{\nu_1\cdots\nu_l}}{x^\sigma}
+  + \sum_{j=1}^{k}
+    \chris{\mu_j}{\sigma\lambda}\,
+    T^{\mu_1\cdots\lambda\cdots\mu_k}{}_{\nu_1\cdots\nu_l} \\
+  - \sum_{j=1}^{l}
+    \chris{\lambda}{\sigma\nu_j}\,
+    T^{\mu_1\cdots\mu_k}{}_{\nu_1\cdots\lambda\cdots\nu_l}\,.
+\end{multline}
+
+\begin{exercise}\label{ex:covd-metric-components}
+  Using~\eqref{eq:covd-general-coord}, write out the
+  explicit expression for $\covd_\sigma g_{\mu\nu}$ in terms
+  of partial derivatives and Christoffel symbols.
+\end{exercise}
+
+\begin{exercise}\label{ex:christoffel-not-tensor}
+  Let $x^\mu$ and $x'^{\mu'}$ be two coordinate systems.
+  Derive the transformation law for the Christoffel symbols
+  $\chris{\nu}{\mu\lambda}$ under the coordinate change and
+  verify that it contains an inhomogeneous (non-tensorial) term.
+\end{exercise}

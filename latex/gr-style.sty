@@ -27,19 +27,29 @@
 \RequirePackage{graphicx}
 \RequirePackage{wrapfig}
 
-% ── Math fonts ────────────────────────────────────────────────
-\RequirePackage{amsmath}
-\RequirePackage{amsthm}
-\RequirePackage{mathtools}
+% ── Boxes (loaded early to avoid mathspec conflict) ──────────
+\RequirePackage[many]{tcolorbox}
+\RequirePackage[textsize=tiny]{todonotes}
 
+% ── Math fonts ────────────────────────────────────────────────
 \ifgr@cmfonts
   % ── Computer Modern fallback (portable, no proprietary fonts) ──
+  \RequirePackage{amsmath}
+  \RequirePackage{amsthm}
+  \RequirePackage{mathtools}
   \RequirePackage{fontspec}
   \RequirePackage{amssymb}
+  \RequirePackage{mathrsfs}
 \else
   % ── Full font stack (Times LT Std + Whitney + mtpro2) ─────────
+  % Load order: amsmath → mathtools → mtpro2 → mathspec (mathspec
+  % requires amsmath to be fully loaded first)
+  \RequirePackage{amsmath}
+  \RequirePackage{amsthm}
+  \RequirePackage{mathtools}
   \RequirePackage[mtphrb,mtpcal,mtpfrak]{mtpro2}
   \RequirePackage{mathspec}
+  \RequirePackage{mathrsfs}
   \setmathrm{Times LT Std}
   \setmainfont[
     BoldFont      = Times LT Std Bold,
@@ -62,10 +72,6 @@
 \RequirePackage{pgfplots}
 \pgfplotsset{compat=1.18}
 \usepgfplotslibrary{patchplots,fillbetween}
-
-% ── Boxes ─────────────────────────────────────────────────────
-\RequirePackage[many]{tcolorbox}
-\RequirePackage[textsize=tiny]{todonotes}
 
 % ── Lists ─────────────────────────────────────────────────────
 \RequirePackage{enumerate}
@@ -106,6 +112,7 @@
 \theoremstyle{remark}
 \newtheorem*{remark}{Remark}
 \newtheorem*{note}{Note}
+\newtheorem*{notation}{Notation}
 
 \newenvironment{solution}
   {\begin{proof}[\color{cgblue}Solution]\color{spacecadet}}

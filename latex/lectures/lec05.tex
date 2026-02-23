@@ -1,0 +1,485 @@
+%!TEX root = ../GeneralRelativity.tex
+% ──────────────────────────────────────────────────────────────
+%  Lecture 5 — Flows and Tensors
+% ──────────────────────────────────────────────────────────────
+
+\section{Flows and tensors}\label{sec:flows-tensors}
+
+In the previous lecture we defined the tangent space $V_p$ at a
+point $p\in\M$, coordinate bases, curves, and tangent vector
+fields.  We now study how vector fields generate \emph{flows}
+(one-parameter groups of diffeomorphisms), how to form new vector
+fields from old ones via the \emph{commutator}, and the algebraic
+machinery of \emph{tensors} that lies at the heart of general
+relativity.
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Flows (one-parameter groups of diffeomorphisms)}%
+\label{sec:flows}
+
+\begin{definition}[One-parameter group of diffeomorphisms]%
+\label{def:one-param-group}
+  Let $\M$ be a smooth manifold.  A \textbf{one-parameter group of
+  diffeomorphisms} is a $C^\infty$ map
+  \[
+    \Phi\colon \R\times\M \to \M\,,
+    \qquad (t,p)\mapsto \Phi_t(p)\,,
+  \]
+  such that
+  \begin{enumerate}
+    \item for each fixed $t\in\R$, the map
+      $\Phi_t\colon\M\to\M$ is a diffeomorphism, and
+    \item for all $s,t\in\R$,
+      \begin{equation}\label{eq:group-law}
+        \eqbox{\Phi_s \circ \Phi_t = \Phi_{t+s}}\,.
+      \end{equation}
+  \end{enumerate}
+\end{definition}
+
+\noindent
+Choosing $s = -t$ in~\eqref{eq:group-law} immediately gives
+$\Phi_0 = \id$ (the identity map on $\M$).
+
+\begin{center}
+\begin{tikzpicture}[scale=0.85]
+  % Manifold
+  \draw[thick, spacecadet, rounded corners=14pt]
+    (0,0.2) to[out=30,in=160] (4.5,0.6)
+    to[out=-20,in=60] (5.0,-0.8)
+    to[out=240,in=-10] (0.5,-1.0)
+    to[out=170,in=260] cycle;
+  \node[font=\sf\small, text=cgblue] at (4.8,0.8) {$\M$};
+  % Point p
+  \node[circle, fill=banana, inner sep=1.8pt] (P) at (1.2,-0.1) {};
+  \node[font=\small, below left] at (P) {$p$};
+  % Flow curve
+  \draw[thick, munsell] (P.center)
+    to[out=20,in=200] (2.5,0.3)
+    to[out=20,in=190] (3.8,0.2);
+  % Points along flow
+  \node[circle, fill=banana, inner sep=1.5pt] (Q1) at (2.5,0.3) {};
+  \node[font=\scriptsize, above] at (Q1) {$\Phi_t(p)$};
+  \node[circle, fill=banana, inner sep=1.5pt] (Q2) at (3.8,0.2) {};
+  \node[font=\scriptsize, above] at (Q2) {$\Phi_{t+s}(p)$};
+  % Tangent vector at p
+  \draw[vecstyle] (P) -- ++(0.7,0.25)
+    node[above, font=\small]{$v|_p$};
+\end{tikzpicture}
+\end{center}
+
+\subsubsection{From flows to vector fields}
+
+Given a one-parameter group $\Phi_t$, we obtain a tangent vector
+field $v$ on $\M$ as follows.  For a fixed $p\in\M$, the map
+\[
+  C_p\colon \R\to\M\,,\qquad t\mapsto \Phi_t(p)\,,
+\]
+is a smooth curve through $p$ (with $C_p(0)=p$).  Define $v|_p$ to
+be the tangent vector to $C_p$ at $t=0$:
+\begin{equation}\label{eq:flow-to-field}
+  v|_p(f) = \td{}{t}(f\circ\Phi_t(p))\bigg|_{t=0}\,,
+  \qquad f\in\mathscr{F}(\M)\,.
+\end{equation}
+Repeating this for every $p\in\M$ yields a smooth vector field $v$.
+
+\subsubsection{From vector fields to flows (integral curves)}
+
+Conversely, given a smooth vector field $v$ on $\M$, we seek
+\textbf{integral curves} of $v$: a family of curves in $\M$, one
+through each point $p$, such that the tangent vector to the curve
+at $p$ equals $v|_p$.
+
+Let $C$ be such an integral curve through $p$, and let $(x^1,\dots,x^n)$
+be local coordinates.  Then the tangent vector to $C$ acts on
+$f\in\mathscr{F}(\M)$ by
+\begin{equation}\label{eq:tangent-to-C}
+  T(f) = \td{}{t}(f\circ C)
+       = \sum_{\mu=1}^{n} \td{x^\mu}{t}\, X_\mu(f)\,,
+\end{equation}
+where $X_\mu = \partial/\partial x^\mu|_p$ is the coordinate basis.
+Meanwhile, the vector field gives
+\begin{equation}\label{eq:field-at-p}
+  v(f) = \sum_{\mu=1}^{n} v^\mu\, X_\mu(f)\,.
+\end{equation}
+Setting~\eqref{eq:tangent-to-C} equal to~\eqref{eq:field-at-p},
+we must solve the system of coupled ordinary differential equations
+\begin{equation}\label{eq:integral-curve-ode}
+  \eqbox{\td{x^\mu}{t} = v^\mu(x^1,\dots,x^n)}
+  \qquad \mu = 1,\dots,n\,.
+\end{equation}
+
+By the standard existence and uniqueness theorem for ODEs, there
+exists $\varepsilon > 0$ such that a unique solution exists for all
+$t\in(-\varepsilon,\varepsilon)$.
+
+\begin{remark}
+  If $\M$ is compact, the integral curves exist for all
+  $t\in\R$, and the family of integral curves defines a genuine
+  one-parameter group of diffeomorphisms.
+\end{remark}
+
+\begin{intuition}[Flows as fluid motion]
+  Think of $v$ as a velocity field describing steady fluid flow on
+  $\M$.  The integral curves are the streamlines: each fluid
+  particle follows the integral curve through its initial position.
+  The map $\Phi_t$ advances every particle by time~$t$.
+\end{intuition}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{New vector fields from old: the commutator}%
+\label{sec:commutator}
+
+\begin{definition}[Commutator / Lie bracket]\label{def:commutator}
+  Let $v$ and $w$ be smooth vector fields on a manifold $\M$.
+  Define a new map $u\colon\mathscr{F}(\M)\to\mathscr{F}(\M)$ by
+  \begin{equation}\label{eq:commutator}
+    \eqbox{u(f) = v\bigl(w(f)\bigr) - w\bigl(v(f)\bigr)}
+    \qquad\text{for all } f\in\mathscr{F}(\M)\,.
+  \end{equation}
+  This map $u$ is called the \textbf{commutator} (or \textbf{Lie
+  bracket}) of $v$ and $w$, and is written $u = [v,w]$.
+\end{definition}
+
+\begin{exercise}\label{ex:commutator-vf}
+  Show that $[v,w]$ as defined in~\eqref{eq:commutator} is
+  indeed a vector field, i.e.\ it satisfies linearity and the
+  Leibniz rule at every point.
+\end{exercise}
+
+\begin{remark}
+  Although $v$ and $w$ each involve first-order derivatives, the
+  second-order terms cancel in the combination $v(w(f))-w(v(f))$,
+  leaving $[v,w]$ a first-order operator---hence a genuine vector
+  field.
+\end{remark}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{New vector spaces from old}\label{sec:new-spaces}
+
+Before defining tensors on manifolds, we review the key algebraic
+constructions that build new vector spaces from given ones.  Let
+$V$ and $W$ be finite-dimensional real vector spaces.
+
+\begin{enumerate}[(i)]
+  \item \textbf{Taking duals:} $V \mapsto V^*$.
+  \item \textbf{Taking direct sums:} $V,\, W \mapsto V\oplus W$.
+  \item \textbf{Taking tensor products:} $V,\, W \mapsto V\tp W$.
+  \item \textbf{Taking subspaces:} $U\subset V$.
+  \item \textbf{Taking exterior (wedge) products:}
+    $V,\, W \mapsto V\wedge W$.
+  \item \textbf{Taking joins:} $V,\, W \mapsto V\vee W$.
+\end{enumerate}
+
+We now develop the first three in detail.
+
+% ──────────────────────────────────────────────────────────────
+\subsection{The dual space $V^*$}\label{sec:dual-space}
+
+\begin{definition}[Dual space]\label{def:dual-space}
+  Let $V$ be a real vector space.  The \textbf{dual space} $V^*$ is
+  the vector space of all linear functions $f\colon V\to\R$.
+  Elements of $V^*$ are called \textbf{dual vectors} (or
+  \textbf{covectors}, or \textbf{one-forms}).
+\end{definition}
+
+\begin{exercise}\label{ex:dual-vs}
+  Show that $V^*$ is a real vector space under pointwise addition
+  and scalar multiplication.
+\end{exercise}
+
+\begin{remark}
+  Let $\{v_1,\dots,v_n\}$ be a basis for $V$.  We obtain a
+  \textbf{dual basis} $\{(v^\mu)^* \mid \mu=1,\dots,n\}$ for
+  $V^*$ defined by
+  \begin{equation}\label{eq:dual-basis}
+    (v^\mu)^*(v_\nu) = \delta^\mu{}_\nu\,,
+  \end{equation}
+  where $\delta^\mu{}_\nu$ is the Kronecker delta.
+\end{remark}
+
+\begin{exercise}\label{ex:double-dual}
+  Show that $(V^*)^* \cong V$ (the double dual is canonically
+  isomorphic to $V$).
+\end{exercise}
+
+\begin{exercise}\label{ex:dim-dual}
+  Show that $\dim(V^*) = \dim(V)$.
+\end{exercise}
+
+\begin{remark}
+  The map $v_\mu \mapsto (v^\mu)^*$ gives an isomorphism between
+  $V$ and $V^*$, but this isomorphism \textbf{depends on the choice
+  of basis}---it is \emph{non-canonical}.  In general relativity,
+  a canonical isomorphism $V\to V^*$ arises from the metric.
+\end{remark}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{The tensor product}\label{sec:tensor-product}
+
+\subsubsection{Informal definition}
+
+\begin{definition}[Tensor product (informal)]\label{def:tp-informal}
+  Let $V$ and $W$ be finite-dimensional real vector spaces.  The
+  \textbf{tensor product} $V\tp W$ consists of elements of the
+  form $v\tp w$ (for $v\in V$, $w\in W$) together with all their
+  linear combinations, subject to the \textbf{bilinearity condition}:
+  \begin{equation}\label{eq:bilinearity}
+    (a_1 v_1 + a_2 v_2)\tp(b_1 w_1 + b_2 w_2)
+    = a_1 b_1\, v_1\tp w_1
+    + a_1 b_2\, v_1\tp w_2
+    + a_2 b_1\, v_2\tp w_1
+    + a_2 b_2\, v_2\tp w_2\,.
+  \end{equation}
+\end{definition}
+
+\begin{example}\label{ex:R2-tensor-R2}
+  Let $V = \Rn{2}$, $W = \Rn{2}$.  Then
+  $V\tp W = \Rn{2}\tp\Rn{2} \cong \Rn{4}$.
+\end{example}
+
+\subsubsection{Formal construction}
+
+More precisely, one defines
+\begin{equation}\label{eq:tp-formal}
+  V\tp W \;\equiv\; F(V\times W)\big/{\sim}\,,
+\end{equation}
+where $F(V\times W)$ is the free vector space on the set
+$V\times W$ (formal linear combinations of ordered pairs $(v,w)$),
+and $\sim$ is the equivalence relation generated by:
+\begin{enumerate}
+  \item identity, symmetry, and transitivity (equivalence relation
+    axioms),
+  \item distributivity:
+    $(v_1+v_2,\,w) \sim (v_1,w) + (v_2,w)$ and
+    $(v,\,w_1+w_2) \sim (v,w_1) + (v,w_2)$,
+  \item scalar multiples:
+    $c(v,w) \sim (cv,\,w) \sim (v,\,cw)$ for all $c\in\R$.
+\end{enumerate}
+The equivalence class of $(v,w)$ is written $v\tp w$.  Elements of
+$V\tp W$ are linear combinations of \textbf{simple tensors}
+$v_j\tp w_k$.
+
+\begin{keyresult}[Not every tensor is simple]
+  \textbf{Warning:} given $u\in V\tp W$, it is \emph{not} always
+  true that $u = v\tp w$ for some $v\in V$, $w\in W$.  Generically,
+  $u$ is a sum of simple tensors that cannot be factored.
+\end{keyresult}
+
+\begin{exercise}\label{ex:dim-tp}
+  Show that $\dim(V\tp W) = \dim(V)\cdot\dim(W)$.
+  \emph{Hint:} If $\{v_\mu\}$ is a basis for $V$ and
+  $\{w_\nu\}$ is a basis for $W$, show that
+  $\{v_\mu\tp w_\nu\}$ is a basis for $V\tp W$.
+\end{exercise}
+
+\noindent
+The tensor product is associative:
+\begin{equation}\label{eq:tp-assoc}
+  U\tp(V\tp W) \;\cong\; (U\tp V)\tp W\,,
+\end{equation}
+so we may write $U\tp V\tp W$ without ambiguity.
+
+\subsubsection{The dual characterisation of tensors}
+
+\begin{definition}[Tensor as multilinear map]\label{def:tensor-multilinear}
+  Let $V$ and $W$ be real vector spaces.  A \textbf{tensor} (in
+  the dual sense) is a multilinear map
+  $T\colon V\times W \to \R$, i.e.\
+  \begin{equation}\label{eq:multilinear}
+    T(a_1 v_1 + a_2 v_2,\; b_1 w_1 + b_2 w_2)
+    = a_1 b_1\, T(v_1,w_1)
+    + a_1 b_2\, T(v_1,w_2)
+    + a_2 b_1\, T(v_2,w_1)
+    + a_2 b_2\, T(v_2,w_2)\,.
+  \end{equation}
+\end{definition}
+
+\noindent
+This is the ``classical'' approach to tensor products.  It is
+related to the informal definition by
+\begin{equation}\label{eq:tp-dual-relation}
+  (V\tp W)^* \;\cong\;
+  \{T\colon V\times W \to \R \mid T \text{ multilinear}\}\,.
+\end{equation}
+
+\begin{exercise}\label{ex:tp-dual-iso}
+  Show that $(V\tp W)^* \cong V^*\tp W^*$.
+\end{exercise}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Tensors on manifolds}\label{sec:tensors-manifolds}
+
+We now apply these algebraic constructions to the tangent space
+$V_p$ at a point $p\in\M$.
+
+From $V_p$ we build:
+\begin{itemize}
+  \item the dual space $V_p^*$ (cotangent vectors),
+  \item tensor products such as $V_p\tp V_p$,
+    $V_p^*\tp V_p$, etc.,
+  \item and more generally, the space
+    $\underbrace{V_p\tp\cdots\tp V_p}_{k}\,\tp\,
+     \underbrace{V_p^*\tp\cdots\tp V_p^*}_{l}
+     \;\cong\; V_p^{\tp k}\tp (V_p^*)^{\tp l}$.
+\end{itemize}
+
+\noindent
+Since $(V_p^*)^* \cong V_p$, an element $t\in V_p$ can be viewed
+as a linear function on $V_p^*$ as well.
+
+\subsubsection{Tensors of type $(k,l)$}
+
+\begin{definition}[Tensor of type $(k,l)$]\label{def:tensor-type}
+  A \textbf{tensor of type $(k,l)$} at $p$ is an element
+  \[
+    T \;\in\; V_p^{\tp k}\tp (V_p^*)^{\tp l}\,.
+  \]
+  Equivalently, $T$ is a multilinear map
+  \[
+    T\colon \underbrace{V_p^*\times\cdots\times V_p^*}_{k}
+      \;\times\;
+      \underbrace{V_p\times\cdots\times V_p}_{l}
+      \;\longrightarrow\; \R\,.
+  \]
+  The vector space of all tensors of type $(k,l)$ at $p$ is denoted
+  $\ttype{k}{l}$.
+\end{definition}
+
+\begin{equation}\label{eq:dim-tensor-space}
+  \dim\bigl(\ttype{k}{l}\bigr) = n^{k+l}\,,
+  \qquad\text{where } n = \dim(V_p)\,.
+\end{equation}
+
+\begin{remark}
+  We adopt the convention $V^{\tp 0} \cong \R$, so that
+  $\ttype{0}{0} \cong \R$ (scalars).
+\end{remark}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Examples of tensors}\label{sec:tensor-examples}
+
+\begin{example}[Type $(0,1)$: dual vectors]\label{ex:type-01}
+  A tensor of type $(0,1)$ is an element of
+  $V_p^{\tp 0}\tp (V_p^*)^{\tp 1} \cong \R\tp V_p^* \cong V_p^*$.
+  It is simply a \textbf{dual vector} (covector).
+\end{example}
+
+\begin{example}[Type $(1,0)$: vectors]\label{ex:type-10}
+  A tensor of type $(1,0)$ is an element of
+  $V_p^{\tp 1}\tp (V_p^*)^{\tp 0} \cong V_p\tp \R \cong V_p$.
+  It is simply a \textbf{vector}.
+\end{example}
+
+\begin{example}[Type $(1,1)$: linear maps]\label{ex:type-11}
+  A tensor of type $(1,1)$ is an element of $V_p\tp V_p^*$.
+  Such a tensor $T$ can be interpreted in three equivalent ways:
+  \begin{enumerate}[(i)]
+    \item as an element of $V_p\tp V_p^*$,
+    \item as a multilinear map $V_p^*\times V_p \to \R$
+      (equivalently, a dual vector in $(V_p^*\tp V_p)^*$),
+    \item as a \textbf{linear transformation}
+      $T\colon V_p\to V_p$, i.e.\ a matrix.
+  \end{enumerate}
+\end{example}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Tensor components and the action of tensors}%
+\label{sec:tensor-components}
+
+Choose a basis $\{v_\mu\}$ of $V_p$ with dual basis
+$\{(v^\nu)^*\}$ for $V_p^*$.  A type-$(1,1)$ tensor $T$ can be
+expanded as
+\begin{equation}\label{eq:type11-expansion}
+  T = \sum_{\mu,\nu} t^\mu{}_\nu\; v_\mu \tp (v^\nu)^*
+  \;\in\; V_p\tp V_p^*\,.
+\end{equation}
+The scalars $[T]^\mu{}_\nu = t^\mu{}_\nu$ are called the
+\textbf{components} (or \textbf{matrix elements}) of $T$ in the
+basis $\{v_\mu\}$.
+
+\medskip
+\noindent\textbf{Action on a vector.}\;
+Let $w\in V_p$, with $w = \sum_\nu w^\nu\, v_\nu$.  Then
+\begin{align}
+  Tw &= \biggl(\sum_{\mu,\nu} t^\mu{}_\nu\; v_\mu\tp (v^\nu)^*
+        \biggr)(w)
+      = \sum_{\mu,\nu} t^\mu{}_\nu\; (v^\nu)^*(w)\; v_\mu
+        \notag\\
+     &= \sum_{\mu,\nu} t^\mu{}_\nu\; w^\nu\; v_\mu\,.
+        \label{eq:tensor-action}
+\end{align}
+Therefore the components of $Tw$ are
+\begin{equation}\label{eq:tensor-action-components}
+  \eqbox{[Tw]^\mu = \sum_{\nu=1}^{n} t^\mu{}_\nu\, w^\nu}\,.
+\end{equation}
+This is an example of \textbf{tensor contraction}.
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Tensor contraction}\label{sec:contraction}
+
+\begin{definition}[Contraction]\label{def:contraction}
+  Let $T\in\ttype{k}{l}$ with $k\geq 1$ and $l\geq 1$.  The
+  \textbf{contraction} over the $j$-th contravariant and $j'$-th
+  covariant index is the map
+  \[
+    C_{j,j'}\colon \ttype{k}{l} \to \ttype{k-1}{l-1}
+  \]
+  defined (interpreting $T$ as a multilinear map) by
+  \begin{equation}\label{eq:contraction}
+    (C_{j,j'}\, T)(\dots) =
+    \sum_{\sigma=1}^{n}
+      T\bigl(\dots,\underbrace{(v^\sigma)^*}_{j\text{-th slot}},
+             \dots;\;
+             \underbrace{v_\sigma}_{j'\text{-th slot}},\dots\bigr)\,,
+  \end{equation}
+  where $\{v_\sigma\}$ is any basis for $V_p$ and $\{(v^\sigma)^*\}$
+  is the dual basis.
+\end{definition}
+
+\noindent
+In terms of components:
+\begin{equation}\label{eq:contraction-components}
+  \eqbox{(C_{j,j'}\, T)^{\mu_1\cdots\mu_{k-1}}{}_{\nu_1\cdots\nu_{l-1}}
+  = \sum_{\sigma=1}^{n}
+    T^{\mu_1\cdots\sigma\cdots\mu_{k-1}}{}_{\nu_1\cdots\sigma\cdots\nu_{l-1}}}
+\end{equation}
+where $\sigma$ appears in the $j$-th upper position and the
+$j'$-th lower position and is summed over.
+
+\begin{exercise}\label{ex:contraction-basis-ind}
+  Show that the contraction is independent of the choice of basis.
+\end{exercise}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{The outer product}\label{sec:outer-product}
+
+\begin{definition}[Outer product]\label{def:outer-product}
+  Let $S\in\ttype{k}{l}$ and $T\in\ttype{k'}{l'}$.  Their
+  \textbf{outer product} (or \textbf{tensor product})
+  $S\tp T \in \ttype{k+k'}{l+l'}$ is defined in components by
+  \begin{equation}\label{eq:outer-product}
+    (S\tp T)^{\mu_1\cdots\mu_k\,\mu_{k+1}\cdots\mu_{k+k'}}
+             {}_{\nu_1\cdots\nu_l\,\nu_{l+1}\cdots\nu_{l+l'}}
+    = S^{\mu_1\cdots\mu_k}{}_{\nu_1\cdots\nu_l}\;\cdot\;
+      T^{\mu_{k+1}\cdots\mu_{k+k'}}{}_{\nu_{l+1}\cdots\nu_{l+l'}}\,.
+  \end{equation}
+\end{definition}
+
+\noindent
+Intrinsically, $S\tp T$ lives in
+\[
+  \bigl(V_p^{\tp k}\tp (V_p^*)^{\tp l}\bigr)
+  \tp
+  \bigl(V_p^{\tp k'}\tp (V_p^*)^{\tp l'}\bigr)\,,
+\]
+which is rearranged (collecting all $V_p$ factors to the left and
+all $V_p^*$ factors to the right) to give an element of
+$V_p^{\tp(k+k')}\tp (V_p^*)^{\tp(l+l')}$.
+
+\begin{intuition}[Building tensors]
+  Every tensor can be built from vectors and dual vectors using the
+  outer product, and then contracted.  The outer product increases
+  the type, while contraction decreases it.  Together, these two
+  operations generate the full algebra of tensor manipulations used
+  throughout general relativity.
+\end{intuition}

@@ -1,0 +1,440 @@
+%!TEX root = ../GeneralRelativity.tex
+% ──────────────────────────────────────────────────────────────
+%  Lecture 6 — Tensors continued
+% ──────────────────────────────────────────────────────────────
+
+\section{Tensors continued}\label{sec:tensors-continued}
+
+Let $p\in\M$ be a point in a manifold~$\M$.  We write $V_p$ for
+the tangent space at~$p$.  Our goal in this lecture is to study
+how vectors $v\in V_p$, covectors $\omega\in V_p^*$, and more
+general tensors transform under a change of coordinates on~$\M$.
+
+% ──────────────────────────────────────────────────────────────
+\subsection{The cotangent space (dual of $V_p$)}\label{sec:cotangent}
+
+\begin{definition}[Cotangent space]\label{def:cotangent}
+  The \textbf{cotangent space} at~$p$ is the dual vector space
+  \[
+    V_p^* \;\equiv\; \Tps\,.
+  \]
+  Elements of $V_p^*$ are called \textbf{covectors}
+  (or \emph{one-forms}).
+\end{definition}
+
+Recall that $V_p$ has a coordinate basis
+$\{e_\mu\} = \{\partial/\partial x^\mu|_p\}$.
+We formally define the \textbf{dual basis}
+$\{e^\mu\} = \{\dd x^\mu\}$ by the requirement
+\begin{equation}\label{eq:dual-basis-def}
+  e^\mu(e_\nu) = \delta^\mu{}_\nu\,.
+\end{equation}
+In coordinate notation this reads
+\begin{equation}\label{eq:dual-basis-coord}
+  \eqbox{\dd x^\mu\!\left(\pd{}{x^\nu}\bigg|_p\right)
+    = \delta^\mu{}_\nu}\,.
+\end{equation}
+Thus $\dd x^\mu$ is a \emph{linear function of tangent vectors},
+fully determined by~\eqref{eq:dual-basis-coord}.
+
+\begin{intuition}[Covectors as measuring devices]
+  A tangent vector~$v$ specifies a direction and magnitude
+  at~$p$.  A covector~$\omega$ is a linear machine that
+  ``measures'' tangent vectors: it eats a vector and returns a
+  real number.  The dual basis element $\dd x^\mu$ measures the
+  $\mu$-th component of a vector.
+\end{intuition}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Transformation law for covectors}\label{sec:covector-transform}
+
+Recall the \emph{contravariant} vector transformation law
+(Lecture~4):
+\begin{equation}\label{eq:vector-transform-recall}
+  v'^{\mu} = \sum_{\nu} v^\nu\,
+    \pd{x'^\mu}{x^\nu}\,.
+\end{equation}
+
+Now let $\omega\in V_p^*$.  In the coordinate basis,
+\[
+  \omega = \sum_\mu \omega_\mu\,\dd x^\mu\,.
+\]
+We ask: how are the components $\omega'_{\mu'}$ in the new
+coordinate system $x'^\mu$ related to the old
+components~$\omega_\mu$?
+
+\smallskip
+Apply $\omega$ to an arbitrary vector $v\in V_p$:
+\begin{align}
+  \omega(v)
+    &= \omega\!\left(\sum_\mu v^\mu\,\pd{}{x^\mu}\bigg|_p\right)
+     = \sum_\mu v^\mu\,
+       \omega\!\left(\pd{}{x^\mu}\bigg|_p\right)
+     = \sum_\mu \omega_\mu\, v^\mu\,.
+     \label{eq:omega-v-old}
+\end{align}
+In the primed coordinates the same contraction gives
+\begin{align}
+  \omega(v)
+    &= \sum_{\mu'} \omega'_{\mu'}\, v'^{\mu'}
+     = \sum_{\mu',\mu} \omega'_{\mu'}\,
+       \pd{x'^{\mu'}}{x^\mu}\, v^\mu\,.
+     \label{eq:omega-v-new}
+\end{align}
+Since~\eqref{eq:omega-v-old} and~\eqref{eq:omega-v-new} must
+agree for \emph{all} $v^\mu$, we read off
+\begin{equation}\label{eq:covariant-transform}
+  \eqbox{\omega_\mu
+    = \sum_{\mu'} \omega'_{\mu'}\,
+      \pd{x'^{\mu'}}{x^\mu}}
+  \qquad\Longleftrightarrow\qquad
+  \eqbox{\omega'_{\mu'}
+    = \sum_{\mu} \pd{x^\mu}{x'^{\mu'}}\,\omega_\mu}\,.
+\end{equation}
+This is the \textbf{covariant vector transformation law}.
+
+\begin{remark}
+  Compare the two transformation laws:
+  \begin{itemize}
+    \item \textbf{Contravariant} (vectors): $v'^{\mu'}
+      = (\partial x'^{\mu'}/\partial x^\mu)\,v^\mu$.
+    \item \textbf{Covariant} (covectors): $\omega'_{\mu'}
+      = (\partial x^\mu/\partial x'^{\mu'})\,\omega_\mu$.
+  \end{itemize}
+  The Jacobian matrices that appear are \emph{inverse transposes}
+  of each other.
+\end{remark}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{General tensor transformation law}\label{sec:tensor-transform}
+
+Let $T\in\ttype{k}{l}$ be a tensor of type~$(k,l)$.
+In a coordinate basis, $T$ is expanded as
+\begin{equation}\label{eq:tensor-expansion}
+  T = \sum T^{\mu_1\cdots\mu_k}{}_{\nu_1\cdots\nu_l}\;
+    e_{\mu_1}\tp\cdots\tp e_{\mu_k}
+    \tp e^{\nu_1}\tp\cdots\tp e^{\nu_l}\,,
+\end{equation}
+where $e_\mu = \partial/\partial x^\mu|_p$ and
+$e^\nu = \dd x^\nu$.
+
+Under a change of coordinates
+$x^\mu\to x'^{\mu'}$, the components transform as
+\begin{equation}\label{eq:tensor-transform}
+  \eqbox{T'^{\mu'_1\cdots\mu'_k}{}_{\nu'_1\cdots\nu'_l}
+    = \sum
+      T^{\mu_1\cdots\mu_k}{}_{\nu_1\cdots\nu_l}\,
+      \pd{x'^{\mu'_1}}{x^{\mu_1}}\cdots
+      \pd{x'^{\mu'_k}}{x^{\mu_k}}\,
+      \pd{x^{\nu_1}}{x'^{\nu'_1}}\cdots
+      \pd{x^{\nu_l}}{x'^{\nu'_l}}}
+\end{equation}
+This is the \textbf{tensor transformation law}.
+
+\begin{keyresult}[Classical definition of a tensor]
+  Classically, a \emph{tensor of type~$(k,l)$} at a point
+  $p\in\M$ is a collection of numbers
+  $T^{\mu_1\cdots\mu_k}{}_{\nu_1\cdots\nu_l}(p)$ that
+  transforms under coordinate changes
+  via~\eqref{eq:tensor-transform}.
+\end{keyresult}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Smooth tensor fields}\label{sec:smooth-tensor-field}
+
+\begin{definition}[Smooth tensor field]\label{def:smooth-tensor-field}
+  A \textbf{smooth tensor field} $T$ of type~$(k,l)$ on~$\M$ is
+  an assignment of a tensor
+  $T|_p\in\ttype{k}{l}(V_p)$ to each point $p\in\M$, such that
+  for all smooth covector fields
+  $\omega^1,\dots,\omega^k$ and all smooth vector fields
+  $v_1,\dots,v_l$, the function
+  \[
+    p\;\longmapsto\;
+      T|_p(\omega^1|_p,\dots,\omega^k|_p;\;
+            v_1|_p,\dots,v_l|_p)
+  \]
+  is $C^\infty$ on~$\M$.
+\end{definition}
+
+\begin{remark}
+  A covector field $\omega$ is \emph{smooth} if and only if
+  $\omega(v)$ is a $C^\infty$ function on~$\M$ for every smooth
+  vector field~$v$.
+\end{remark}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Examples from special relativity}\label{sec:SR-examples}
+
+We now illustrate the tensor concept with three physically
+important examples, all set in Minkowski
+spacetime~$\M = \Rn{1,3}$.
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Currents and charge densities}\label{sec:four-current}
+
+Consider $N$ particles with worldlines $x_j(t)$ and charges
+$q_j$, $j = 1,\dots,N$.
+
+\begin{definition}[Charge density and current]\label{def:charge-current}
+  The \textbf{charge density} is
+  \begin{equation}\label{eq:charge-density}
+    \varepsilon(\vb{x},t)
+      = \sum_{j=1}^{N} q_j\,
+        \delta^{(3)}\!\bigl(\vb{x} - \vb{x}_j(t)\bigr)\,,
+  \end{equation}
+  and the \textbf{current density} is
+  \begin{equation}\label{eq:current-density}
+    \vb{J}(\vb{x},t)
+      = \sum_{j=1}^{N} q_j\,
+        \delta^{(3)}\!\bigl(\vb{x} - \vb{x}_j(t)\bigr)\,
+        \frac{d\vb{x}_j(t)}{dt}\,.
+  \end{equation}
+\end{definition}
+
+\noindent Define a \textbf{four-current} $J^\mu$ by setting
+\begin{equation}\label{eq:four-current}
+  J^\mu = (\varepsilon,\;\vb{J})\,.
+\end{equation}
+
+\begin{exercise}\label{ex:four-current-vector}
+  Argue that $J^\mu$ is a vector (i.e.\ an element of~$V_p$)
+  field under Lorentz transformations
+  $x'^{\nu} = \Lambda^\nu{}_\mu\, x^\mu$.
+\end{exercise}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{The energy-momentum tensor}\label{sec:energy-momentum}
+
+Consider $N$ particles with energy-momentum four-vectors
+$p_j^\mu$, $j = 1,\dots,N$.
+
+The density of the $\mu$-th component of four-momentum is
+\begin{equation}\label{eq:Tmu0}
+  T^{\mu 0}(\vb{x},t)
+    = \sum_{j=1}^{N} p_j^\mu(t)\,
+      \delta^{(3)}\!\bigl(\vb{x} - \vb{x}_j(t)\bigr)\,.
+\end{equation}
+The corresponding current (the flux of $p^\mu$ in the
+$x^k$-direction) is
+\begin{equation}\label{eq:Tmuk}
+  T^{\mu k}(\vb{x},t)
+    = \sum_{j=1}^{N} p_j^\mu(t)\,
+      \frac{dx_j^k(t)}{dt}\,
+      \delta^{(3)}\!\bigl(\vb{x} - \vb{x}_j(t)\bigr)\,.
+\end{equation}
+Combining into a single formula
+(with $x^0(t) = t$):
+\begin{equation}\label{eq:Tmunu-dt}
+  T^{\mu\nu}(x)
+    = \sum_{j=1}^{N} p_j^\mu\,
+      \frac{dx_j^\nu(t)}{dt}\,
+      \delta^{(3)}\!\bigl(\vb{x} - \vb{x}_j(t)\bigr)\,.
+\end{equation}
+
+Since $p_j^\nu = E_j\, dx_j^\nu/dt$, this may be rewritten as
+\begin{equation}\label{eq:Tmunu-symmetric}
+  \eqbox{T^{\mu\nu}(x)
+    = \sum_{j=1}^{N}
+      \frac{p_j^\mu\, p_j^\nu}{E_j}\,
+      \delta^{(3)}\!\bigl(\vb{x} - \vb{x}_j(t)\bigr)}\,.
+\end{equation}
+Hence $T^{\mu\nu}$ is \textbf{symmetric}:
+$T^{\mu\nu} = T^{\nu\mu}$.
+
+\smallskip
+In covariant (proper-time) form:
+\begin{equation}\label{eq:Tmunu-covariant}
+  T^{\mu\nu}(x)
+    = \sum_{j=1}^{N} \int\!\dd\tau\;
+      p_j^\mu\,\frac{dx_j^\nu}{d\tau}\,
+      \delta^{(4)}\!\bigl(x - x_j(\tau)\bigr)\,.
+\end{equation}
+
+\begin{exercise}\label{ex:Tmunu-tensor}
+  Under Lorentz transformations
+  $x'^{\nu} = \Lambda^\nu{}_\mu\, x^\mu$
+  (with $\Lambda^{\mu'}{}_\mu = \partial x'^{\mu'}/\partial x^\mu$),
+  show that
+  \begin{equation}\label{eq:Tmunu-transform}
+    T'^{\mu'\nu'}
+      = \Lambda^{\mu'}{}_\mu\,
+        \Lambda^{\nu'}{}_\nu\,
+        T^{\mu\nu}\,.
+  \end{equation}
+  Conclude that $T^{\mu\nu}$ is a tensor of type~$(2,0)$.
+\end{exercise}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{The metric tensor}\label{sec:metric-tensor}
+
+\begin{definition}[Metric tensor]\label{def:metric-tensor}
+  A \textbf{metric tensor} $\metric$ on a manifold~$\M$ is a
+  smooth tensor field of type~$(0,2)$ that is
+  \begin{enumerate}
+    \item \textbf{symmetric:}
+      $\metric(v_1,v_2) = \metric(v_2,v_1)$
+      for all $v_1,v_2\in V_p$, and
+    \item \textbf{nondegenerate:}
+      $\metric(v,w) = 0$ for all $w\in V_p$ implies $v = 0$.
+  \end{enumerate}
+\end{definition}
+
+\begin{intuition}[Why we need a metric]
+  A manifold by itself has no notion of distance or angle.
+  A metric is the extra datum that supplies an
+  \emph{infinitesimal length}:
+  an infinitesimal displacement is modelled by a tangent vector,
+  and the ``infinitesimal squared distance'' is a quadratic
+  function of that tangent vector---precisely what
+  $\metric(v,v)$ provides.
+\end{intuition}
+
+In a coordinate basis
+$\{\partial/\partial x^\mu|_p\}$, expand the metric as
+\begin{equation}\label{eq:metric-components}
+  \metric = \sum_{\mu,\nu} g_{\mu\nu}\,
+    \dd x^\mu\tp\dd x^\nu\,.
+\end{equation}
+This is often written (omitting the tensor product sign) as
+the \textbf{line element}
+\begin{equation}\label{eq:line-element}
+  \eqbox{\dd s^2 = \sum_{\mu,\nu} g_{\mu\nu}\,
+    \dd x^\mu\,\dd x^\nu}\,.
+\end{equation}
+
+The metric defines an \textbf{inner product} on~$V_p$ for each
+$p\in\M$:
+\begin{align}
+  (v,w)_p
+    &= \sum_{\mu,\nu} g_{\mu\nu}\,
+       (\dd x^\mu\tp\dd x^\nu)(v,w)
+     = \sum_{\mu,\nu} g_{\mu\nu}\,
+       \dd x^\mu(v)\,\dd x^\nu(w) \notag\\
+    &= \sum_{\mu,\nu} g_{\mu\nu}\, v^\mu\, w^\nu\,.
+     \label{eq:inner-product}
+\end{align}
+
+\subsubsection{Signature}\label{sec:signature}
+
+By the Gram--Schmidt procedure, there exists an orthonormal
+basis $\{v_{\hat\mu}\}$ for~$V_p$ such that
+\begin{equation}\label{eq:orthonormal-basis}
+  \metric(v_{\hat\mu},\, v_{\hat\nu})
+    = s_\mu\,\delta_{\mu\nu}\,,
+  \qquad s_\mu \in \{+1,\,-1\}\,.
+\end{equation}
+
+\begin{exercise}\label{ex:gram-schmidt}
+  Prove that an orthonormal basis satisfying
+  \eqref{eq:orthonormal-basis} exists.
+\end{exercise}
+
+\noindent The number of $+1$'s and $-1$'s is independent of
+the choice of orthonormal basis.  This invariant is the
+\textbf{signature} of~$\metric$.
+
+\begin{definition}[Riemannian and Lorentzian metrics]%
+  \label{def:riemannian-lorentzian}
+  \leavevmode
+  \begin{itemize}
+    \item A metric $\metric$ with $s_\mu = +1$ for all~$\mu$ is
+      called \textbf{Riemannian} (positive definite).
+    \item The metric of spacetime has signature
+      $(-1,+1,+1,+1)$---this is called a \textbf{Lorentzian}
+      metric.
+  \end{itemize}
+\end{definition}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{The metric as a map $V_p\to V_p^*$}\label{sec:metric-isomorphism}
+
+A metric tensor $\metric$ can be viewed simultaneously as:
+\begin{enumerate}
+  \item a $(0,2)$ tensor,
+  \item a bilinear map $V_p\times V_p\to\R$, and
+  \item a linear map $V_p\to V_p^*$.
+\end{enumerate}
+
+The third interpretation is induced by the map
+\begin{equation}\label{eq:metric-map}
+  v \;\longmapsto\; \metric(\cdot\,,v) \;=:\; \omega\,.
+\end{equation}
+Here $\metric(\cdot\,,v)\colon V_p\to\R$, so indeed
+$\metric(\cdot\,,v)\in V_p^*$.
+
+\begin{theorem}\label{thm:metric-iso}
+  If $\metric$ is nondegenerate, then the
+  map~\eqref{eq:metric-map} is a linear isomorphism
+  $V_p\xrightarrow{\;\sim\;} V_p^*$.
+\end{theorem}
+
+\begin{proof}
+  The map $v\mapsto\metric(\cdot\,,v)$ is linear by bilinearity
+  of~$\metric$.  Suppose $\metric(\cdot\,,v) = 0$, i.e.\
+  $\metric(w,v) = 0$ for all $w\in V_p$.  By nondegeneracy,
+  $v = 0$.  Hence the kernel is trivial and the map is injective.
+  Since $\dim V_p = \dim V_p^*$, it is also surjective.
+\end{proof}
+
+\begin{keyresult}[Raising and lowering indices]
+  The metric provides a canonical, basis-independent
+  correspondence between vectors and covectors.  In components:
+  \[
+    v_\mu = \sum_\nu g_{\mu\nu}\, v^\nu
+    \qquad(\text{lowering})\,,
+    \qquad
+    \omega^\mu = \sum_\nu g^{\mu\nu}\,\omega_\nu
+    \qquad(\text{raising})\,,
+  \]
+  where $g^{\mu\nu}$ is the matrix inverse of $g_{\mu\nu}$.
+\end{keyresult}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Abstract index notation}\label{sec:abstract-index}
+
+Suppose $T\in\ttype{k}{l}$.  Think of $T$ as a multilinear map
+\[
+  T\colon \underbrace{V_p^*\tp\cdots\tp V_p^*}_{k}
+    \;\tp\;
+    \underbrace{V_p\tp\cdots\tp V_p}_{l}
+    \;\longrightarrow\; \R\,.
+\]
+One can specify $T$ by its components
+$T^{\mu_1\cdots\mu_k}{}_{\nu_1\cdots\nu_l}$ in some basis.
+However, it is often sufficient to know merely \emph{which
+arguments of~$T$ take vectors and which take covectors},
+without committing to a particular basis.
+
+\begin{definition}[Abstract index notation]\label{def:abstract-index}
+  In the \textbf{abstract index notation}, each argument of a
+  tensor is labelled by a lower-case Latin letter.
+  \begin{itemize}
+    \item A \textbf{superscript} (upper) index labels a
+      \emph{contravariant} slot (takes a covector).
+    \item A \textbf{subscript} (lower) index labels a
+      \emph{covariant} slot (takes a vector).
+  \end{itemize}
+\end{definition}
+
+\begin{example}\label{ex:abstract-index}
+  \leavevmode
+  \begin{itemize}
+    \item A vector is written $v^a$---one contravariant slot.
+    \item A covector is written $\omega_a$---one covariant slot.
+    \item $T^{ab}{}_{cd}$ denotes a tensor of type~$(2,2)$.
+  \end{itemize}
+  Here the lower-case Latin letters $a,b,c,d,\dots$ label
+  \emph{arguments and their type}, not components with respect
+  to a basis (for which we use Greek
+  indices~$\mu,\nu,\rho,\dots$).
+\end{example}
+
+\begin{remark}
+  The abstract index notation (due to R.~Penrose) is a
+  compromise between the coordinate-free and
+  component-based approaches.  It carries the structural
+  information of index placement (contravariant vs.\ covariant)
+  without fixing a basis, yet retains the computational
+  convenience of the index calculus.
+\end{remark}

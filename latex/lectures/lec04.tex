@@ -1,0 +1,377 @@
+%!TEX root = ../GeneralRelativity.tex
+% ──────────────────────────────────────────────────────────────
+%  Lecture 4 — Tangent Space
+% ──────────────────────────────────────────────────────────────
+
+\section{Tangent space}\label{sec:tangent-space}
+
+In the previous lecture we saw that a general manifold $\M$ does not
+carry a natural vector space structure.  Nevertheless, we showed that
+one can \emph{visualise} a tangent plane at each point when the
+manifold is embedded in some ambient $\Rn{m}$.  The goal of this
+lecture is to give a purely \emph{intrinsic} definition of the tangent
+space---one that makes no reference to any embedding.
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Directional derivatives as vectors}\label{sec:dir-deriv}
+
+The key idea is to \textbf{identify tangent vectors with directional
+derivatives}.
+
+Let $\vb{v} = (v^1,\dots,v^n)\in\Rn{n}$.  At a point
+$p\in\Rn{n}$, define the \emph{directional derivative} along
+$\vb{v}$ as follows.  Suppose $f$ is a $C^1$ function from
+$\Rn{n}\to\R$, and define
+\begin{equation}\label{eq:dir-deriv-Rn}
+  \vb{v}\cdot\nabla
+    = \sum_{\mu=1}^{n} v^\mu \pd{}{{x^\mu}}\,,
+  \qquad
+  v(f) \;\equiv\; (\vb{v}\cdot\nabla) f(\vb{x})\Big|_{\vb{x}=p}
+    = \sum_{\mu=1}^{n} v^\mu \pd{f}{x^\mu}(p)\,.
+\end{equation}
+This is the \emph{directional derivative of $f$ at $p$} along
+$\vb{v}$.
+
+Conversely, given the directional derivative operator
+$(\vb{v}\cdot\nabla)_p$, we can recover the vector
+$\vb{v}\in\Rn{n}$ (apply it to each coordinate function).
+Furthermore, directional derivatives at $p$ form a \textbf{vector
+space}:
+
+\begin{intuition}[Vectors as derivatives]
+  In $\Rn{n}$, there is a one-to-one correspondence between vectors
+  and directional derivative operators.  On a general manifold, where
+  there is no ambient space, we \emph{define} tangent vectors to be
+  directional derivative operators.
+\end{intuition}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{The tangent space $V_p$}\label{sec:Vp-def}
+
+\begin{notation}
+  Write $\mathscr{F}(\M)$ for the set of all $C^\infty$ functions
+  $f\colon\M\to\R$.
+\end{notation}
+
+Note that $(\vb{v}\cdot\nabla)_p$ satisfies two properties:
+\begin{enumerate}
+  \item \textbf{Linearity:}
+    $v(af + bg) = a\,v(f) + b\,v(g)$ for all $f,g\in\mathscr{F}(\M)$
+    and all $a,b\in\R$.
+  \item \textbf{Leibniz rule:}
+    $v(fg) = f(p)\,v(g) + g(p)\,v(f)$
+    \quad (the product rule).
+\end{enumerate}
+
+\begin{definition}[Tangent space]\label{def:tangent-space}
+  Let $\M$ be a smooth manifold and $p\in\M$.  The \textbf{tangent
+  space} $V_p$ at $p$ is the set of all maps
+  $v\colon\mathscr{F}(\M)\to\R$ satisfying~(1) and~(2) above.
+\end{definition}
+
+\begin{exercise}\label{ex:const-zero}
+  Using only properties~(1) and~(2), show that if
+  $h\in\mathscr{F}(\M)$ is constant then $v(h) = 0$ for every
+  $v\in V_p$.
+\end{exercise}
+
+\begin{exercise}\label{ex:Vp-vector-space}
+  Prove that $V_p$ is a vector space (under pointwise addition and
+  scalar multiplication of the maps $v$).
+\end{exercise}
+
+Have we created a monster?  Could $V_p$ be infinite-dimensional?
+
+\begin{theorem}\label{thm:dim-Vp}
+  Let $\M$ be an $n$-dimensional smooth manifold and let $p\in\M$.
+  Then $\dim(V_p) = n$.
+\end{theorem}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Coordinate basis}\label{sec:coord-basis}
+
+Let $\psi\colon O\to U\subset\Rn{n}$ be a chart with $p\in O$.
+If $f\in\mathscr{F}(\M)$, then the composite
+$f\circ\psi^{-1}\colon U\to\R$ is $C^\infty$.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.85]
+  % Manifold
+  \draw[thick, spacecadet, rounded corners=12pt]
+    (2,0.3) to[out=30,in=150] (5,0.5)
+    to[out=-30,in=30] (5.2,-0.8)
+    to[out=210,in=-10] (2,-0.6) -- cycle;
+  \node[font=\sf\small, text=cgblue] at (5.0,0.8) {$\M$};
+  % O_alpha region
+  \draw[thick, cgblue, fill=cgblue!10, rounded corners=5pt]
+    (2.5,-0.1) to[out=40,in=160] (4.2,0.2)
+    to[out=-20,in=50] (4.0,-0.4)
+    to[out=210,in=-20] (2.4,-0.4) -- cycle;
+  \node[font=\small] at (3.3,-0.05) {$O$};
+  \node[circle, fill=banana, inner sep=1.5pt, label={above:\small $p$}]
+    at (3.5,0.1) {};
+  % f arrow down-left
+  \draw[thick, -{Stealth[length=6pt]}, spacecadet]
+    (2.2,-0.8) -- (0.6,-2.2)
+    node[midway, left, font=\small]{$f$};
+  % psi arrow down-right
+  \draw[thick, -{Stealth[length=6pt]}, cgblue]
+    (4.8,-0.8) -- (6.4,-2.2)
+    node[midway, right, font=\small]{$\psi$};
+  % R (target of f)
+  \node[font=\sf\small, text=spacecadet] at (0.2,-2.6) {$\R$};
+  \node[circle, fill=banana, inner sep=1.2pt] at (0.6,-2.6) {};
+  \node[font=\scriptsize, below] at (0.6,-2.7) {$f(p)$};
+  % R^n (target of psi)
+  \begin{scope}[shift={(5.8,-3.0)}]
+    \draw[axisstyle, spacecadet] (0,-0.6) -- (0,0.8);
+    \draw[axisstyle, spacecadet] (-0.3,0) -- (2.2,0);
+    \node[font=\sf\small, text=spacecadet] at (2.0,0.8) {$\Rn{n}$};
+    \draw[thick, cgblue, fill=cgblue!10, rounded corners=4pt]
+      (0.2,-0.4) to[out=30,in=210] (1.4,0.3)
+      to[out=-20,in=80] (1.5,-0.2)
+      to[out=220,in=-10] (0.2,-0.4);
+    \node[font=\small] at (0.85,0.0) {$U$};
+    \node[circle, fill=banana, inner sep=1.2pt] at (1.0,0.1) {};
+    \node[font=\scriptsize, below right] at (1.0,0.0) {$\psi(p)$};
+  \end{scope}
+  % Composite arrow
+  \draw[thick, -{Stealth[length=5pt]}, spacecadet!70]
+    (6.0,-2.8) to[out=200,in=-10] (1.2,-2.6)
+    node[midway, below, font=\scriptsize]
+      {$f\circ\psi^{-1}$};
+\end{tikzpicture}
+\end{center}
+
+\begin{definition}[Coordinate basis vectors]\label{def:coord-basis}
+  For $\mu = 1,\dots,n$, define
+  \begin{equation}\label{eq:coord-basis}
+    X_\mu(f) = \pd{(f\circ\psi^{-1})}{x^\mu}\bigg|_{\psi(p)}\,,
+  \end{equation}
+  where $(x^1,\dots,x^n)$ are the coordinates of $\Rn{n}$.
+\end{definition}
+
+\noindent\textbf{Claim.} The $X_\mu$ so defined are tangent vectors
+(i.e.\ elements of $V_p$).
+
+\begin{proof}[Proof that $\{X_\mu\}$ is a basis for $V_p$]
+  We use the following lemma.
+
+  \smallskip\noindent
+  \textbf{Lemma.}\;
+  Suppose $F\colon\Rn{n}\to\R$ is $C^\infty$.  Then for all
+  $\vb{a} = (a^1,\dots,a^n)\in\Rn{n}$, there exist $C^\infty$
+  functions $H_\mu\colon\Rn{n}\to\R$ such that
+  \begin{equation}\label{eq:taylor-lemma}
+    F(\vb{x}) = F(\vb{a})
+      + \sum_{\mu=1}^{n}(x^\mu - a^\mu)\,H_\mu(\vb{x})\,,
+  \end{equation}
+  with
+  \(
+    H_\mu(\vb{a}) = \dfrac{\partial F}{\partial x^\mu}\Big|_{\vb{x}=\vb{a}}
+  \).
+  (See the homework for a proof.)
+
+  \smallskip
+  Let $F = f\circ\psi^{-1}$ and $\vb{a} = \psi(p)$.  Then
+  by~\eqref{eq:taylor-lemma}, for all $q\in O$,
+  \begin{equation}\label{eq:taylor-on-M}
+    f(q) = f(p)
+      + \sum_{\mu=1}^{n}
+        \bigl((x^\mu\circ\psi)(q) - (x^\mu\circ\psi)(p)\bigr)\,
+        H_\mu(\psi(q))\,.
+  \end{equation}
+
+  Now suppose $v\in V_p$.  Apply $v$ to $f$:
+  \begin{align}
+    v(f)
+      &\stackrel{\eqref{eq:taylor-on-M}}{=}
+        v\!\Bigl(f(p)
+          + \textstyle\sum_{\mu} (\cdots)\,H_\mu(\psi(\cdot))\Bigr)
+        \notag\\
+      &= \underbrace{v(f(p))}_{=\,0}
+        + \sum_{\mu=1}^{n}
+          \Bigl[
+            \underbrace{(H_\mu\circ\psi)(p)}_{\partial F/\partial x^\mu|_{\psi(p)}}
+            \cdot v(x^\mu\circ\psi)
+          + \underbrace{\bigl((x^\mu\circ\psi)(p) - (x^\mu\circ\psi)(p)\bigr)}_{=\,0}
+            \cdot v(H_\mu\circ\psi)
+          \Bigr]
+        \notag\\
+      &= \sum_{\mu=1}^{n}
+          \underbrace{v(x^\mu\circ\psi)}_{=:\,v^\mu}
+          \;\pd{(f\circ\psi^{-1})}{x^\mu}\bigg|_{\psi(p)}\,.
+        \label{eq:v-expansion}
+  \end{align}
+  Therefore
+  \begin{equation}\label{eq:v-in-basis}
+    \eqbox{v(f) = \sum_{\mu=1}^{n} v^\mu\, X_\mu(f)}\,,
+  \end{equation}
+  and the $\{X_\mu \mid \mu = 1,\dots,n\}$ form a basis for $V_p$.
+\end{proof}
+
+The basis $\{X_\mu\}$ is called the \textbf{coordinate basis}.
+It is often denoted
+\begin{equation}\label{eq:coord-basis-notation}
+  X_\mu \;\equiv\; \pd{}{x^\mu}\bigg|_p\,,
+  \qquad\text{or}\qquad
+  \partial_\mu\big|_p\,,
+  \qquad\text{or}\qquad
+  e_\mu\,.
+\end{equation}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.85]
+  % Manifold
+  \draw[thick, spacecadet, rounded corners=14pt]
+    (0,0.2) to[out=30,in=160] (3.5,0.6)
+    to[out=-20,in=60] (4.0,-0.5)
+    to[out=240,in=-10] (0.5,-0.8)
+    to[out=170,in=260] cycle;
+  \node[font=\sf\small, text=cgblue] at (3.8,0.8) {$\M$};
+  % Point and tangent vectors
+  \node[circle, fill=banana, inner sep=1.8pt] (P) at (2.0,0.0) {};
+  \node[font=\small, below left] at (P) {$p$};
+  \draw[vecstyle] (P) -- ++(0.9,0.4)
+    node[right, font=\small]{$\partial/\partial x^1|_p$};
+  \draw[vecstyle] (P) -- ++(0.3,0.8)
+    node[above, font=\small]{$\partial/\partial x^2|_p$};
+  % Arrow to R^n
+  \draw[thick, -{Stealth[length=6pt]}, cgblue]
+    (4.5,0.0) -- (6.0,0.0)
+    node[midway, above, font=\small]{$\psi$};
+  % R^n with basis
+  \begin{scope}[shift={(6.5,-0.2)}]
+    \draw[axisstyle, spacecadet] (0,-0.5) -- (0,1.5);
+    \draw[axisstyle, spacecadet] (-0.3,0) -- (2.5,0);
+    \node[circle, fill=banana, inner sep=1.5pt] (Q) at (1.0,0.5) {};
+    \node[font=\scriptsize, below left] at (Q) {$\psi(p)$};
+    \draw[vecstyle, spacecadet] (Q) -- ++(0.8,0.0)
+      node[right, font=\scriptsize]{$\partial/\partial x^1$};
+    \draw[vecstyle, spacecadet] (Q) -- ++(0.0,0.7)
+      node[above, font=\scriptsize]{$\partial/\partial x^2$};
+  \end{scope}
+\end{tikzpicture}
+\end{center}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Change of basis}\label{sec:change-basis}
+
+Suppose we choose a different chart $\psi'$, giving a coordinate
+basis $\{X'_\nu\}$.  By the chain rule:
+\begin{equation}\label{eq:change-basis}
+  X_\mu = \sum_{\nu=1}^{n}
+    \pd{x'^\nu}{x^\mu}\bigg|_{\psi(p)}\, X'_\nu\,.
+\end{equation}
+
+Given a tangent vector $v = \sum_\mu v^\mu X_\mu$, the components in
+the new basis are
+\begin{equation}\label{eq:vector-transform}
+  \eqbox{v'^\nu = \sum_{\mu=1}^{n} v^\mu\,
+    \pd{x'^\nu}{x^\mu}\bigg|_{\psi(p)}}
+\end{equation}
+This is the \textbf{(contravariant) vector transformation law}.
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Curves on manifolds}\label{sec:curves}
+
+\begin{definition}[Smooth curve]\label{def:smooth-curve}
+  A \textbf{smooth curve} $C$ on a manifold $\M$ is a $C^\infty$
+  map
+  \[
+    C\colon \R \to \M
+    \qquad(\text{or from an interval } I\subset\R)\,,
+    \qquad t\mapsto C(t)\,.
+  \]
+\end{definition}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.85]
+  % Real line
+  \draw[thick, spacecadet] (-0.5,0) -- (3,0);
+  \node[font=\sf\small, text=spacecadet] at (-0.7,0) {$\R$};
+  \node[font=\small, below] at (1.5,0) {$t$};
+  \fill[banana] (1.5,0) circle (2pt);
+  % Arrow
+  \draw[thick, -{Stealth[length=6pt]}, cgblue]
+    (3.3,0) -- (4.8,0)
+    node[midway, above, font=\small]{$C$};
+  % Manifold
+  \begin{scope}[shift={(5.5,0)}]
+    \draw[thick, spacecadet, rounded corners=12pt]
+      (0,0.5) to[out=30,in=150] (3.5,0.6)
+      to[out=-30,in=30] (3.7,-0.6)
+      to[out=210,in=-10] (0,-0.5) -- cycle;
+    \node[font=\sf\small, text=cgblue] at (3.4,0.9) {$\M$};
+    % Curve
+    \draw[thick, munsell] (0.5,-0.2)
+      to[out=20,in=200] (1.8,0.2)
+      to[out=20,in=180] (3.0,0.1);
+    \node[circle, fill=banana, inner sep=1.5pt] (P) at (1.8,0.2) {};
+    \node[font=\small, above] at (P) {$p$};
+  \end{scope}
+\end{tikzpicture}
+\end{center}
+
+To each point $p\in\M$ on the curve $C$ (say $p = C(t_0)$),
+we associate a tangent vector $T\in V_p$ as follows.
+For $f\in\mathscr{F}(\M)$:
+\begin{equation}\label{eq:tangent-from-curve}
+  T(f) = \td{}{t}(f\circ C)\bigg|_{p}
+    = \sum_{\mu} \pd{(f\circ\psi^{-1})}{x^\mu}\bigg|_{\psi(p)}
+      \,\td{x^\mu}{t}
+    = \sum_{\mu} \td{x^\mu}{t}\, X_\mu(f)\,,
+\end{equation}
+where $x^\mu = x^\mu(\psi\circ C) \equiv x^\mu(t)$.
+
+This expansion works for \emph{any} coordinate basis.  The components
+of $T$ in the basis $\{X_\mu\}$ are
+\begin{equation}\label{eq:tangent-components}
+  T^\mu = \td{x^\mu}{t}\,.
+\end{equation}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{The tangent bundle}\label{sec:tangent-bundle}
+
+We call $V_p$ the \textbf{tangent space at $p$}.  The
+\textbf{tangent bundle} is the disjoint union of all tangent spaces:
+\begin{equation}\label{eq:tangent-bundle}
+  T\M = \bigcup_{p\in\M} V_p\,.
+\end{equation}
+
+\begin{remark}
+  Although $\dim(V_p) = \dim(V_q) = n$ for all $p,q\in\M$, and thus
+  $V_p \cong V_q$ as vector spaces, the isomorphisms are
+  \textbf{not natural}.  There is no standard way to choose an
+  isomorphism $V_p \xrightarrow{\sim} V_q$ without extra data (such
+  as a connection).
+\end{remark}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Tangent vector fields}\label{sec:vector-fields}
+
+\begin{definition}[Tangent vector field]\label{def:vector-field}
+  A \textbf{tangent vector field} $v$ on a manifold $\M$ is a smooth
+  assignment of a tangent vector $v|_p \in V_p$ to each point
+  $p\in\M$.  We say $v$ is \emph{smooth} if for every
+  $f\in\mathscr{F}(\M)$, the function $v(f)\colon\M\to\R$ defined
+  by $p\mapsto v|_p(f)$ is $C^\infty$.
+\end{definition}
+
+\begin{lemma}\label{lem:coord-basis-smooth}
+  The coordinate basis fields $X_\mu$ are smooth:
+  $X_\mu(f)(p) = \partial(f\circ\psi^{-1})/\partial x^\mu|_{\psi(p)}$
+  is a $C^\infty$ function of $p$.
+\end{lemma}
+
+Since an arbitrary tangent vector $v$ is a linear combination of the
+$X_\mu$ with components $v^\mu$, smoothness of $v$ is equivalent
+to smoothness of its component functions
+$v^\mu\in\mathscr{F}(\M)$.
+
+\begin{intuition}[Velocity fields]
+  A \emph{velocity field} $v$ is a tangent vector field.  If $C$ is
+  a smooth curve solving the equation of motion, then
+  $T(f) = v(f)$ along $C$---i.e.\ the tangent to the solution curve
+  equals the velocity field.
+\end{intuition}
