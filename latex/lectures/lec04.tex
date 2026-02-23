@@ -8,9 +8,11 @@
 In the previous lecture we saw that a general manifold $\M$ does not
 carry a natural vector space structure.  Nevertheless, we showed that
 one can \emph{visualise} a tangent plane at each point when the
-manifold is embedded in some ambient $\Rn{m}$.  The goal of this
-lecture is to give a purely \emph{intrinsic} definition of the tangent
-space---one that makes no reference to any embedding.
+manifold is embedded in some ambient $\Rn{m}$, and we identified a
+strategy: replace tangent vectors by directional derivatives, which
+\emph{can} be defined intrinsically.  The goal of this lecture is to
+carry out that programme---giving a purely \emph{intrinsic} definition
+of the tangent space that makes no reference to any embedding.
 
 % ──────────────────────────────────────────────────────────────
 \subsection{Directional derivatives as vectors}\label{sec:dir-deriv}
@@ -80,7 +82,10 @@ Note that $(\vb{v}\cdot\nabla)_p$ satisfies two properties:
   scalar multiplication of the maps $v$).
 \end{exercise}
 
-Have we created a monster?  Could $V_p$ be infinite-dimensional?
+Have we created a monster?  By demanding only linearity and the
+Leibniz rule, we might inadvertently have produced a huge---even
+infinite-dimensional---vector space that has nothing to do with
+tangent vectors.  Fortunately, this is not the case:
 
 \begin{theorem}\label{thm:dim-Vp}
   Let $\M$ be an $n$-dimensional smooth manifold and let $p\in\M$.
@@ -275,6 +280,9 @@ This is the \textbf{(contravariant) vector transformation law}.
 % ──────────────────────────────────────────────────────────────
 \subsection{Curves on manifolds}\label{sec:curves}
 
+To do mechanics on a manifold we need the notion of a trajectory---a
+smooth path that a test particle might follow.
+
 \begin{definition}[Smooth curve]\label{def:smooth-curve}
   A \textbf{smooth curve} $C$ on a manifold $\M$ is a $C^\infty$
   map
@@ -342,9 +350,12 @@ We call $V_p$ the \textbf{tangent space at $p$}.  The
 \begin{remark}
   Although $\dim(V_p) = \dim(V_q) = n$ for all $p,q\in\M$, and thus
   $V_p \cong V_q$ as vector spaces, the isomorphisms are
-  \textbf{not natural}.  There is no standard way to choose an
-  isomorphism $V_p \xrightarrow{\sim} V_q$ without extra data (such
-  as a connection).
+  \textbf{not natural}.  There is no canonical way to identify a
+  tangent vector at~$p$ with one at~$q$; the identification can
+  even vary wildly as one moves around~$\M$.  To obtain a ``good''
+  (smooth, geometrically meaningful) identification one needs extra
+  data---a \emph{connection}, which we introduce in
+  Lecture~\ref{sec:derivative-operators}.
 \end{remark}
 
 % ──────────────────────────────────────────────────────────────
@@ -357,6 +368,11 @@ We call $V_p$ the \textbf{tangent space at $p$}.  The
   $f\in\mathscr{F}(\M)$, the function $v(f)\colon\M\to\R$ defined
   by $p\mapsto v|_p(f)$ is $C^\infty$.
 \end{definition}
+
+Note that smoothness of a vector field is defined purely in terms of
+the manifold structure---no metric is required.  This is perhaps
+surprising: we cannot yet compare tangent vectors at different
+points, yet we can still say whether a vector field varies smoothly.
 
 \begin{lemma}\label{lem:coord-basis-smooth}
   The coordinate basis fields $X_\mu$ are smooth:

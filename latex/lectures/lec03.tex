@@ -5,22 +5,49 @@
 
 \section{Manifolds}\label{sec:manifolds}
 
-We want to describe curved continua \emph{intrinsically}, without
-reference to an ambient space $\Rn{m}$ in which they might be
-embedded.  The appropriate mathematical notion is that of a
-\emph{manifold}.
+It is a core underlying assumption of both special and general
+relativity---indeed of much of physics---that spacetime is a
+continuum: to characterise an event we need four numbers (one
+temporal, three spatial).  In special relativity this continuum is
+the familiar flat $\Rn{4}$, but in general relativity the geometry
+itself is dynamical---it changes in response to the distribution of
+matter, energy, and stress throughout the universe.
+
+Because we now allow the geometry to be curved and dynamical, we need
+a mathematical apparatus to describe and quantify the situation
+precisely; without it we would be limited to qualitative remarks,
+whereas in physics we want to make sharp, falsifiable predictions.
+One approach would be to model curved continua as surfaces embedded
+in a higher-dimensional ambient space~$\Rn{m}$.  This works, but it
+raises an uncomfortable question: do these extra dimensions exist?
+We sidestep the issue entirely by studying curved continua
+\emph{intrinsically}, without reference to any ambient
+space---and this leads us to the theory of \emph{manifolds}.
 
 \begin{intuition}[Why manifolds?]
   In general relativity, spacetime is a manifold~$\M$.
   Although we may picture $\M$ as sitting inside some higher-dimensional
   $\Rn{m}$, all physically meaningful statements should be intrinsic:
   they must not depend on the embedding.
+  The intrinsic approach requires more formalism upfront, but it is
+  ultimately more natural and more transferable to other areas of
+  theoretical physics.
 \end{intuition}
 
 % ──────────────────────────────────────────────────────────────
 \subsection{Notation and prerequisites}
 
-We work in $n$ dimensions throughout.
+We work in $n$ dimensions throughout.  One might ask: why bother
+with arbitrary~$n$ when spacetime is four-dimensional?  There are
+several good reasons.  First, it costs almost no extra effort and
+yields considerable generality for free.  Second, we often wish to
+restrict attention to dynamics on a lower-dimensional hypersurface
+(a particle constrained to the surface of a sphere, for instance).
+Third---and more speculatively---there are indications from
+quantum gravity (the holographic principle, for example) that the
+effective dimension of spacetime may itself be emergent.  Finally,
+in a quantum theory of gravity one might need to superpose spacetimes
+of different dimensions, so it is wise not to hard-code $n=4$.
 
 \begin{itemize}
   \item $\Rn{n} = \{(x^1,\dots,x^n) \mid x^j \in \R\}$.
@@ -96,6 +123,11 @@ We work in $n$ dimensions throughout.
       \end{tikzpicture}
       \end{center}
 
+      One should think of each pair $(O_\alpha,\psi_\alpha)$ as
+      identifying a piece of the manifold with a piece of
+      Euclidean space.  A manifold is thus \emph{built up---sewn
+      together---from patches of~$\Rn{n}$}.
+
     \item[\textup{(3)}] If any two sets $O_\alpha$ and $O_\beta$
       \textbf{overlap}, i.e.\ $O_\alpha \cap O_\beta \neq \varnothing$,
       then the \emph{transition map}
@@ -105,7 +137,9 @@ We work in $n$ dimensions throughout.
           \;\to\; \psi_\beta[O_\alpha\cap O_\beta]
       \]
       (which is a map between open subsets of $\Rn{n}$)
-      is $C^\infty$.
+      is $C^\infty$.  This condition governs the \emph{gluing}:
+      wherever two patches overlap, the two coordinate
+      descriptions must be smoothly related.
   \end{enumerate}
 \end{definition}
 
@@ -283,9 +317,16 @@ On the overlap, the transition function is
 \end{exercise}
 
 \begin{intuition}[Do we need manifolds?]
-  Yes!  The non-trivial topology of manifolds is essential for
-  describing cosmological spacetimes (which may be compact) and
-  black hole spacetimes (which have non-trivial causal structure).
+  For many basic solutions of Einstein's field equations the
+  underlying manifold is simply~$\Rn{4}$---only the geometry
+  (the metric) varies.  So one might wonder whether the full
+  manifold machinery is really necessary.
+  The answer is \emph{yes}: as soon as one considers cosmological
+  spacetimes (which may be compact, like $S^3\times\R$) or black
+  hole spacetimes (which have non-trivial causal structure and
+  topology), more general manifolds become unavoidable.
+  In quantum gravity one may even wish to sum over manifolds of
+  different topologies, making this generality essential.
 \end{intuition}
 
 % ──────────────────────────────────────────────────────────────
@@ -427,12 +468,25 @@ Euclidean space $\Rn{n}$ (and Minkowski space) carries a natural
 a manifold and a vector space.
 
 For a general manifold this is \textbf{no longer true}---there is
-no natural additive structure.
+no natural additive structure.  This is an instance of a general
+phenomenon: when one generalises a definition so that it applies to
+more examples, some of the structure enjoyed by the original
+example is inevitably lost.  Euclidean space is simultaneously a
+manifold, a vector space, and a group; a generic manifold is none
+of the latter two.
 
 \begin{example}[$S^2$ is not a vector space]
   The 2-sphere $S^2$ is a manifold, but it is \emph{not} a vector
-  space: there is no meaningful way to ``add'' two points on $S^2$.
+  space: there is no natural way to ``add'' two points on $S^2$
+  and obtain another point on~$S^2$.
 \end{example}
+
+We want to preserve as much of this vector-space structure as
+possible, because without vectors we cannot write down equations of
+motion for test particles.  The key observation is that even
+though~$S^2$ is not globally a vector space, at each point~$p$
+there is still a natural \emph{local} vector space---the tangent
+plane---and this idea generalises to arbitrary manifolds.
 
 It is, however, still possible to associate a vector space to each
 point of a manifold.  For a manifold $\M$ embedded in $\Rn{m}$
@@ -465,10 +519,14 @@ But we want an \emph{intrinsic} definition, independent of any
 embedding.
 
 \begin{keyresult}[Intrinsic tangent vectors]
-  The key idea: identify the vector space of tangent vectors at a
-  point with the vector space of \emph{directional derivatives}
-  at that point.  Directional derivatives can be defined using
-  only the manifold structure---no embedding required.
+  The picture above relies on the embedding $S^2\subset\Rn{3}$,
+  which we have declared off-limits.  The solution is a pleasant
+  roundabout: one first observes that there is a one-to-one
+  correspondence between tangent vectors and \emph{directional
+  derivatives} of smooth functions, and then notes that directional
+  derivatives can be defined using only the manifold
+  structure---no embedding required.  We therefore \emph{define}
+  tangent vectors as directional derivatives.
   This is developed in the next lecture.
 \end{keyresult}
 
