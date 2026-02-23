@@ -1,0 +1,428 @@
+%!TEX root = ../GeneralRelativity.tex
+% ──────────────────────────────────────────────────────────────
+%  Lecture 9 — Abstract index notation review; introduction to curvature
+% ──────────────────────────────────────────────────────────────
+
+\section{Abstract index notation review; introduction to curvature}%
+\label{sec:ain-curvature}
+
+In this lecture we consolidate the abstract index notation (AIN)
+introduced earlier and develop its computational machinery
+(contraction, outer products, raising and lowering indices,
+symmetrisation).  We then turn to the central geometric question
+of general relativity: \emph{what is curvature?}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Review of abstract index notation}\label{sec:ain-review}
+
+Recall from Lecture~6 that a tensor $T\in\ttype{k}{l}$ can be
+viewed in two equivalent ways:
+\begin{enumerate}[(i)]
+  \item as an element of the tensor product vector space
+    $\underbrace{V_p\tp\cdots\tp V_p}_{k}\,\tp\,
+     \underbrace{V_p^*\tp\cdots\tp V_p^*}_{l}$, or
+  \item as a multilinear map
+    $\underbrace{V_p^*\times\cdots\times V_p^*}_{k}
+     \;\times\;
+     \underbrace{V_p\times\cdots\times V_p}_{l}
+     \;\longrightarrow\; \R$.
+\end{enumerate}
+
+\begin{notation}
+  In the abstract index notation, we write
+  $T^{a_1\cdots a_k}{}_{b_1\cdots b_l}$
+  to denote the tensor~$T$ of type~$(k,l)$.  The lower-case
+  Latin indices $a,b,c,\dots$ label \textbf{arguments and their
+  type} (contravariant vs.\ covariant), \emph{not} components
+  with respect to a particular basis.
+\end{notation}
+
+\begin{remark}
+  To obtain actual \emph{components}, one must choose a coordinate
+  chart and expand in the coordinate basis.  Components are
+  denoted with Greek indices:
+  $T^{\mu_1\cdots\mu_k}{}_{\nu_1\cdots\nu_l}$.  Thus the
+  abstract expression $T^{ab}{}_{c}$ represents the tensor
+  itself, whereas
+  $T^{\mu\nu}{}_{\rho}$ denotes a specific array of numbers in a
+  given basis.
+\end{remark}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Tensor operations in abstract index notation}%
+\label{sec:ain-operations}
+
+The two basic operations---contraction and outer product---have
+clean expressions in AIN.
+
+\medskip\noindent
+\textbf{Contraction.}\;
+A repeated abstract index (one upper, one lower) denotes
+contraction.  If $T\in\ttype{k}{l}$ with $k\geq 1$,
+$l\geq 1$, then
+\begin{equation}\label{eq:ain-contraction}
+  C_{j,j'}\, T
+  \;\longleftrightarrow\;
+  T^{a_1\cdots \underset{j}{c} \cdots a_{k-1}}{}%
+    _{b_1\cdots \underset{j'}{c} \cdots b_{l-1}}
+  \;\in\; \ttype{k-1}{l-1}\,.
+\end{equation}
+The repeated index~$c$ is summed over (in the abstract sense);
+the result has type $(k-1,\,l-1)$.
+
+\medskip\noindent
+\textbf{Outer product.}\;
+Let $T\in\ttype{k}{l}$ and $S\in\ttype{k'}{l'}$.  The outer
+product is simply the juxtaposition of their abstract indices:
+\begin{equation}\label{eq:ain-outer}
+  T^{a_1\cdots a_k}{}_{b_1\cdots b_l}\;
+  S^{a'_1\cdots a'_{k'}}{}_{b'_1\cdots b'_{l'}}
+  \;\in\; \ttype{k+k'}{l+l'}\,.
+\end{equation}
+
+\begin{example}\label{ex:ain-contraction}
+  Let $v^a$ be a vector and $\omega_a$ a covector.  The
+  contraction $v^a\,\omega_a \in \ttype{0}{0} \cong \R$ is
+  the scalar $\omega(v)$.  Meanwhile, the outer product
+  $v^a\,\omega_b \in \ttype{1}{1}$ is a type-$(1,1)$ tensor
+  (a linear map $V_p\to V_p$).
+\end{example}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{The metric in abstract index notation}%
+\label{sec:ain-metric}
+
+The metric tensor $\metric\in\ttype{0}{2}$ is written in AIN as
+\begin{equation}\label{eq:metric-ain}
+  g_{ab}\,.
+\end{equation}
+Since $\metric$ is nondegenerate, its inverse exists.  We denote
+the inverse metric by
+\begin{equation}\label{eq:inverse-metric-ain}
+  (\metric^{-1})^{ab} \;\equiv\; g^{ab} \;\in\; \ttype{2}{0}\,.
+\end{equation}
+
+\begin{lemma}\label{lem:metric-inverse-identity}
+  The metric and its inverse satisfy
+  \begin{equation}\label{eq:metric-inverse-contraction}
+    \eqbox{g^{ab}\, g_{bc} = \delta^a{}_c}\,,
+  \end{equation}
+  where $\delta^a{}_c$ is the identity tensor (Kronecker delta)
+  in~$\ttype{1}{1}$.
+\end{lemma}
+
+\begin{proof}
+  Consider the outer product
+  $g^{ab}\,g_{cd}\in\ttype{2}{2}$.  Contracting on the pair
+  $(b,c)$ yields a tensor of type~$(1,1)$.  In any coordinate
+  basis, this contraction gives
+  \[
+    \sum_\nu g^{\mu\nu}\, g_{\nu\rho}
+    = \delta^\mu{}_\rho\,,
+  \]
+  since $g^{\mu\nu}$ is the matrix inverse of $g_{\mu\nu}$.
+  In abstract index notation, this reads
+  $g^{ab}\,g_{bc} = \delta^a{}_c$.
+\end{proof}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Raising and lowering indices}%
+\label{sec:raising-lowering}
+
+The metric provides a canonical isomorphism $V_p\to V_p^*$.
+In AIN, this operation is simply contraction with $g_{ab}$ or
+$g^{ab}$.
+
+\begin{definition}[Lowering an index]\label{def:lowering}
+  Given a vector $v^a$, define the covector
+  \begin{equation}\label{eq:lowering}
+    \eqbox{v_a \;\equiv\; g_{ac}\, v^c}\,.
+  \end{equation}
+\end{definition}
+
+\begin{definition}[Raising an index]\label{def:raising}
+  Given a covector $\omega_a$, define the vector
+  \begin{equation}\label{eq:raising}
+    \eqbox{\omega^a \;\equiv\; g^{ac}\, \omega_c}\,.
+  \end{equation}
+\end{definition}
+
+\begin{remark}
+  These operations are consistent:
+  lowering and then raising returns the original tensor, since
+  $g^{ab}\,g_{bc}\,v^c = \delta^a{}_c\,v^c = v^a$.
+\end{remark}
+
+\noindent
+More generally, one can raise or lower any individual index of
+a higher-rank tensor.  For instance, given
+$T^{abc}{}_{def}\in\ttype{3}{3}$, lowering the first upper
+index gives
+\begin{equation}\label{eq:general-lowering}
+  g_{aa'}\, T^{a'bc}{}_{def}
+  \;\equiv\; T^{bc}{}_{a\,def}
+  \;\in\; \ttype{2}{4}\,.
+\end{equation}
+This is consistent: the result is obtained by repeatedly
+applying $g_{ab}$ and $g^{ab}$ in any order.
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Symmetric and antisymmetric tensors}%
+\label{sec:symmetrisation}
+
+Let $T,\, T'\in\ttype{k}{l}$.  Their sum is again a tensor of
+type~$(k,l)$, written in AIN as
+\[
+  T^{a_1\cdots a_k}{}_{b_1\cdots b_l}
+  + T'^{a_1\cdots a_k}{}_{b_1\cdots b_l}
+  \;\in\; \ttype{k}{l}\,.
+\]
+
+\begin{definition}[Symmetrisation]\label{def:symmetrisation}
+  For a type-$(0,2)$ tensor $T_{ab}$, the
+  \textbf{symmetric part} is
+  \begin{equation}\label{eq:sym-2}
+    \eqbox{T_{(ab)} \;\equiv\; \tfrac{1}{2}\bigl(T_{ab} + T_{ba}\bigr)}\,.
+  \end{equation}
+\end{definition}
+
+\begin{definition}[Antisymmetrisation]\label{def:antisymmetrisation}
+  For a type-$(0,2)$ tensor $T_{ab}$, the
+  \textbf{antisymmetric part} is
+  \begin{equation}\label{eq:antisym-2}
+    \eqbox{T_{[ab]} \;\equiv\; \tfrac{1}{2}\bigl(T_{ab} - T_{ba}\bigr)}\,.
+  \end{equation}
+\end{definition}
+
+\noindent
+Any type-$(0,2)$ tensor decomposes uniquely as
+$T_{ab} = T_{(ab)} + T_{[ab]}$.
+
+\subsubsection{General symmetrisation and antisymmetrisation}%
+\label{sec:general-sym}
+
+For a tensor with $l$ covariant indices, the general formulas
+involve the symmetric group~$S_l$.
+
+\begin{definition}[General symmetrisation]\label{def:general-sym}
+  \begin{equation}\label{eq:general-sym}
+    T_{(a_1\cdots a_l)}
+    \;\equiv\;
+    \frac{1}{l!}\sum_{\pi\in S_l}
+      T_{a_{\pi(1)}\cdots a_{\pi(l)}}\,.
+  \end{equation}
+\end{definition}
+
+\begin{definition}[General antisymmetrisation]%
+\label{def:general-antisym}
+  \begin{equation}\label{eq:general-antisym}
+    T_{[a_1\cdots a_l]}
+    \;\equiv\;
+    \frac{1}{l!}\sum_{\pi\in S_l}
+      \varepsilon(\pi)\,
+      T_{a_{\pi(1)}\cdots a_{\pi(l)}}\,,
+  \end{equation}
+  where $\varepsilon(\pi) = +1$ for even permutations and
+  $\varepsilon(\pi) = -1$ for odd permutations.
+\end{definition}
+
+\begin{example}[Mixed symmetrisation]\label{ex:mixed-sym}
+  Round and square brackets can be applied independently to
+  different groups of indices.  For instance,
+  \begin{equation}\label{eq:mixed-sym}
+    T^{(ab)c}{}_{[de]}
+    = \tfrac{1}{4}\bigl(
+        T^{abc}{}_{de}
+      + T^{bac}{}_{de}
+      - T^{abc}{}_{ed}
+      - T^{bac}{}_{ed}
+    \bigr)\,.
+  \end{equation}
+\end{example}
+
+\begin{definition}[Differential forms]\label{def:diff-form}
+  A tensor $T_{a_1\cdots a_l}$ of type~$(0,l)$ that is
+  \textbf{totally antisymmetric},
+  \[
+    T_{a_1\cdots a_l} = T_{[a_1\cdots a_l]}\,,
+  \]
+  is called a \textbf{differential $l$-form}.
+\end{definition}
+
+\begin{remark}
+  On an $n$-dimensional manifold, the space of $l$-forms is
+  $\binom{n}{l}$-dimensional.  In particular, $l$-forms vanish
+  identically for $l > n$.
+\end{remark}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Introduction to curvature}\label{sec:curvature-intro}
+
+We now turn to one of the most important concepts in general
+relativity: \emph{curvature}.  The key question is:
+
+\begin{center}
+  \itshape How can we detect that a manifold is curved
+  without embedding it in a higher-dimensional space?
+\end{center}
+
+\noindent
+In general relativity, spacetime is \textbf{not} embedded in any
+ambient space---we need a purely intrinsic notion of curvature.
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Parallel transport and path dependence}%
+\label{sec:parallel-transport-curvature}
+
+\begin{intuition}[Curvature from parallel transport]
+  On a \emph{flat} manifold (such as~$\Rn{n}$ with the
+  Euclidean metric), parallel transport of a vector from a
+  point~$p$ to a point~$q$ is \textbf{independent of the path}
+  chosen.  On a \emph{curved} manifold (such as the
+  two-sphere~$S^2$), parallel transport \textbf{depends on the
+  path}: transporting a vector along two different paths from $p$
+  to $q$ generally yields two different vectors at~$q$.
+
+  \medskip
+  \textbf{Curvature measures precisely this path dependence.}
+\end{intuition}
+
+Consider two illustrative cases:
+\begin{itemize}
+  \item \textbf{Flat space $\Rn{n}$:}\;
+    Given two paths $\gamma_1,\gamma_2$ from $p$ to $q$,
+    parallel-transporting any vector $v\in V_p$ along
+    $\gamma_1$ or $\gamma_2$ produces the \emph{same} vector
+    at~$q$.  The result is path-independent.
+  \item \textbf{The two-sphere $S^2$:}\;
+    Transport a vector $v$ at the north pole along two different
+    great-circle paths to a point on the equator.  The resulting
+    vectors at that point will in general \emph{differ}.  The
+    discrepancy is a direct manifestation of the curvature
+    of~$S^2$.
+\end{itemize}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{The parallel transporter}\label{sec:parallel-transporter}
+
+To make the notion of parallel transport precise, we introduce
+additional geometric data beyond the manifold and metric.
+
+\begin{definition}[Parallel transporter (heuristic)]%
+\label{def:parallel-transporter}
+  Given a curve $\gamma$ from $p$ to $q$ on a manifold~$\M$,
+  a \textbf{parallel transporter} along~$\gamma$ is a linear map
+  \begin{equation}\label{eq:parallel-transporter}
+    U_\gamma\colon V_p \longrightarrow V_q
+  \end{equation}
+  that ``moves'' tangent vectors from $p$ to $q$ along $\gamma$.
+\end{definition}
+
+\begin{remark}
+  The tangent spaces $V_p$ and $V_q$ at different points are
+  \emph{distinct} vector spaces with no canonical identification
+  between them.  The parallel transporter $U_\gamma$ provides
+  exactly this missing identification---but it depends on the
+  choice of path~$\gamma$.  When the path dependence is
+  nontrivial, the manifold is curved.
+\end{remark}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{The problem of differentiation on manifolds}%
+\label{sec:differentiation-problem}
+
+In Euclidean space~$\Rn{n}$, we can differentiate a vector field
+$v^\mu(x)$ simply by taking partial derivatives
+$\partial v^\mu/\partial x^\nu$, because the additive structure
+of~$\Rn{n}$ allows us to \emph{compare vectors at different
+points} by shifting them.
+
+On a general manifold~$\M$, no such global comparison is
+available.  To define a derivative of a vector field, we need to
+compare the vector $v|_{q}$ at a nearby point $q = p + \Delta x$
+with a vector at~$q$ obtained by parallel-transporting $v|_p$
+along an infinitesimal path from $p$ to~$q$.
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Connection coefficients and the covariant
+derivative}\label{sec:connection-coefficients}
+
+Consider a vector field $v = v^\mu\,\partial/\partial x^\mu$ and
+an infinitesimal displacement $\Delta x^\nu$ from a point~$p$.
+The parallel-transported vector $\tilde{v}$ at the nearby point
+$q$ has components
+\begin{equation}\label{eq:parallel-transport-inf}
+  \tilde{v}^\mu
+  = v^\mu - v^\lambda\,\chris{\mu}{\nu\lambda}(x)\,\Delta x^\nu\,,
+\end{equation}
+where the $\chris{\mu}{\nu\lambda}$ are the \textbf{connection
+coefficients} (or \textbf{Christoffel symbols}).
+
+\begin{remark}
+  The connection coefficients encode the infinitesimal parallel
+  transport rule: they tell us how much the components of a
+  vector ``rotate'' when transported an infinitesimal distance
+  $\Delta x^\nu$ in the $\nu$-direction.
+\end{remark}
+
+\noindent
+The key observation is that, to every infinitesimal parallel
+transporter $U_\gamma$, we can associate a derivative-type
+operator on vector fields.  Define:
+\begin{equation}\label{eq:covd-heuristic}
+  \covd_\nu\!\left(v^\mu\,\pd{}{x^\mu}\bigg|_p\right)
+  \;=\;
+  \lim_{\Delta x^\nu\to 0}
+    \frac{v^\mu(x+\Delta x) - \tilde{v}^\mu(x+\Delta x)}%
+         {\Delta x^\nu}\;
+    \pd{}{x^\mu}\bigg|_q\,.
+\end{equation}
+Substituting~\eqref{eq:parallel-transport-inf} into this
+expression, we obtain
+
+\begin{keyresult}[The covariant derivative of a vector field]
+  The \textbf{covariant derivative} of a vector field
+  $v^\mu$ in the direction $\partial/\partial x^\nu$ is
+  \begin{equation}\label{eq:covd-vector}
+    \eqbox{\covd_\nu v^\mu
+    = \pd{v^\mu}{x^\nu} + v^\lambda\,\chris{\mu}{\nu\lambda}}\,.
+  \end{equation}
+  In abstract index notation, this is written
+  \begin{equation}\label{eq:covd-vector-ain}
+    \covd_b\, v^a
+    = \partial_b\, v^a + v^c\,\chris{a}{bc}\,.
+  \end{equation}
+\end{keyresult}
+
+\begin{remark}
+  The first term $\partial_b\,v^a$ is the ordinary partial
+  derivative of the components---this is \emph{not} tensorial by
+  itself.  The second term $v^c\,\chris{a}{bc}$ compensates for
+  the fact that the basis vectors themselves change from point to
+  point.  Together, $\covd_b\, v^a$ transforms as a tensor of
+  type~$(1,1)$.
+\end{remark}
+
+\begin{remark}
+  The connection coefficients $\chris{\mu}{\nu\lambda}$ do
+  \textbf{not} transform as the components of a tensor.  Under a
+  coordinate change, they acquire an inhomogeneous term involving
+  second derivatives of the coordinate transformation.  It is
+  the \emph{combination}~\eqref{eq:covd-vector} that transforms
+  tensorially.
+\end{remark}
+
+\begin{intuition}[From parallel transport to curvature]
+  We have seen that a parallel transporter determines a covariant
+  derivative~$\covd_a$, and vice versa.  In the next lectures, we
+  will show that curvature is encoded in the
+  \textbf{failure of covariant derivatives to commute}:
+  the Riemann curvature tensor $\Riem^a{}_{bcd}$ is defined via
+  \[
+    (\covd_c\,\covd_d - \covd_d\,\covd_c)\,v^a
+    = \Riem^a{}_{bcd}\,v^b\,.
+  \]
+  When $\Riem^a{}_{bcd} = 0$, parallel transport is path-independent
+  and the manifold is flat.  Nonvanishing $\Riem^a{}_{bcd}$
+  signals genuine curvature.
+\end{intuition}

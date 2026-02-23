@@ -1,0 +1,602 @@
+%!TEX root = ../GeneralRelativity.tex
+% ──────────────────────────────────────────────────────────────
+%  Lecture 10 — Geodesics continued; curvature
+% ──────────────────────────────────────────────────────────────
+
+\section{Geodesics continued; curvature}\label{sec:geodesics-curvature}
+
+In the previous lectures we defined geodesics as curves whose
+tangent vector is parallelly transported along itself.  In this
+lecture we study the \emph{arc length} and \emph{proper time}
+functionals, show that geodesics are \emph{extremal curves} of
+these functionals, and then introduce the central object of
+Riemannian geometry: the \textbf{Riemann curvature tensor}.
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Arc length and proper time}\label{sec:arc-length}
+
+Let $(\M,g_{ab})$ be a manifold with metric, and let $\covd_a$
+be the Levi-Civita connection.  Consider a smooth curve~$C$
+from a point~$p$ to a point~$q$ in~$\M$, parametrised by~$t$,
+with tangent vector~$T^a$.
+
+% Diagram: curve C from p to q with tangent vector
+\begin{center}
+\begin{tikzpicture}[scale=0.9]
+  % Manifold blob
+  \draw[thick, spacecadet, rounded corners=14pt]
+    (0,0.3) to[out=25,in=160] (6.5,0.6)
+    to[out=-20,in=50] (7.0,-1.0)
+    to[out=230,in=-10] (0.5,-1.2)
+    to[out=170,in=250] cycle;
+  \node[font=\sf\small, text=cgblue] at (6.8,0.9) {$\M$};
+  % Labels for metric and connection
+  \node[font=\small, text=spacecadet] at (1.5,0.7) {$g_{ab},\;\covd_a$};
+  % Curve
+  \draw[thick, munsell]
+    (1.2,-0.3) to[out=15,in=200] (3.5,0.1)
+    to[out=20,in=190] (5.8,-0.1);
+  \node[font=\scriptsize, munsell, below] at (3.5,-0.2) {$C$};
+  % Point p
+  \node[circle, fill=banana, inner sep=1.8pt] (P) at (1.2,-0.3) {};
+  \node[font=\small, below left] at (P) {$p$};
+  % Point q
+  \node[circle, fill=banana, inner sep=1.8pt] (Q) at (5.8,-0.1) {};
+  \node[font=\small, below right] at (Q) {$q$};
+  % Tangent vector at midpoint
+  \node[circle, fill=banana, inner sep=1.2pt] (M) at (3.5,0.1) {};
+  \draw[vecstyle] (M) -- ++(0.8,0.12)
+    node[above, font=\small]{$T^a$};
+\end{tikzpicture}
+\end{center}
+
+\begin{definition}[Arc length]\label{def:arc-length}
+  Assume for now that $g_{ab}$ has Riemannian signature
+  $(+,+,\dots,+)$.  The \textbf{length} (or \textbf{arc length})
+  of~$C$ with respect to~$g_{ab}$ is
+  \begin{equation}\label{eq:arc-length}
+    \eqbox{\ell = \int_a^b \sqrt{g_{ab}\,T^a T^b}\;\dd t}\,,
+  \end{equation}
+  where $T^a$ is the tangent vector to~$C$ and $t$ is the curve
+  parameter, with $C(a)=p$ and $C(b)=q$.
+\end{definition}
+
+For a Lorentzian metric with signature $(-,+,+,\dots,+)$, the
+quantity $g_{ab}\,T^a T^b$ need not be positive.  We
+distinguish three cases:
+
+\begin{definition}[Causal character of curves]%
+\label{def:causal-character}
+  Let $C$ be a smooth curve with tangent~$T^a$ on a Lorentzian
+  manifold $(\M,g_{ab})$.
+  \begin{itemize}
+    \item $C$ is \textbf{timelike} if
+      $g_{ab}\,T^a T^b < 0$ everywhere along~$C$.
+    \item $C$ is \textbf{null} (or \textbf{lightlike}) if
+      $g_{ab}\,T^a T^b = 0$ everywhere along~$C$.
+    \item $C$ is \textbf{spacelike} if
+      $g_{ab}\,T^a T^b > 0$ everywhere along~$C$.
+  \end{itemize}
+\end{definition}
+
+\begin{definition}[Proper time]\label{def:proper-time}
+  For a \textbf{timelike} curve~$C$ on a Lorentzian manifold,
+  the \textbf{proper time} along~$C$ is
+  \begin{equation}\label{eq:proper-time}
+    \eqbox{\tau = \int_a^b \sqrt{-g_{ab}\,T^a T^b}\;\dd t}\,.
+  \end{equation}
+\end{definition}
+
+A key observation is that the causal character of a geodesic
+cannot change.
+
+\begin{theorem}[Constancy of the norm along a geodesic]%
+\label{thm:geodesic-norm-constant}
+  Let $C$ be a geodesic with tangent~$T^a$.  Then the quantity
+  $g_{ab}\,T^a T^b$ is constant along~$C$.  In particular, a
+  geodesic cannot change from timelike to null, or from null to
+  spacelike, etc.
+\end{theorem}
+
+\begin{proof}
+  Compute the derivative of the norm along~$C$:
+  \begin{align}
+    T^c\covd_c\bigl(g_{ab}\,T^a T^b\bigr)
+      &= (T^c\covd_c g_{ab})\,T^a T^b
+        + g_{ab}\,(T^c\covd_c T^a)\,T^b
+        + g_{ab}\,T^a\,(T^c\covd_c T^b)\,.
+        \label{eq:norm-deriv}
+  \end{align}
+  The first term vanishes because the Levi-Civita connection is
+  metric-compatible: $\covd_c g_{ab} = 0$.  The second and third
+  terms vanish by the geodesic equation $T^c\covd_c T^a = 0$.
+  Hence
+  \[
+    T^c\covd_c\bigl(g_{ab}\,T^a T^b\bigr) = 0\,,
+  \]
+  i.e.\ the inner product $(T,T) = g_{ab}\,T^a T^b$ is constant
+  along the geodesic.
+\end{proof}
+
+\begin{intuition}[Causal character is preserved]
+  Since for a geodesic $T^a$ is parallelly transported along
+  itself, and parallel transport (with respect to a
+  metric-compatible connection) preserves inner products, the
+  ``squared speed'' $g_{ab}\,T^a T^b$ cannot change sign.  A
+  geodesic that starts timelike remains timelike forever.
+\end{intuition}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Reparametrisation invariance}%
+\label{sec:reparam-invariance}
+
+The arc length and proper time are \textbf{reparametrisation
+invariant}: they do not depend on the choice of curve parameter.
+
+\begin{theorem}[Reparametrisation invariance of arc length]%
+\label{thm:reparam-invariance}
+  Let $s = s(t)$ be a monotone reparametrisation of~$C$, and
+  let $S^a$ denote the tangent vector with respect to~$s$.  Then
+  $\ell$ computed using parameter~$s$ equals~$\ell$ computed
+  using parameter~$t$.
+\end{theorem}
+
+\begin{proof}
+  The new tangent vector is related to the old one by
+  \[
+    S^a = \td{t}{s}\, T^a\,.
+  \]
+  Therefore
+  \begin{align}
+    \ell'
+      &= \int \sqrt{g_{ab}\,S^a S^b}\;\dd s
+       = \int \sqrt{g_{ab}\,T^a T^b}\,
+         \left|\td{t}{s}\right|\;\dd s
+       = \int \sqrt{g_{ab}\,T^a T^b}\;\dd t
+       = \ell\,.
+         \notag
+  \end{align}
+  The same argument applies to the proper time~$\tau$.
+\end{proof}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Geodesics as extremal curves}%
+\label{sec:geodesics-extremal}
+
+We now prove the fundamental result connecting geodesics to the
+calculus of variations.
+
+\begin{theorem}[Geodesics extremise arc length]%
+\label{thm:geodesics-extremise}
+  A curve~$C$ joining two points $p$ and~$q$ extremises the arc
+  length functional~$\ell$ if and only if $C$ is a geodesic.
+\end{theorem}
+
+\noindent\textbf{Setup.}\;
+Let $p$ and~$q$ lie in a common chart
+$\psi\colon\M\to\Rn{n}$, and assume~$C$ is spacelike.  In
+coordinates, the arc length is
+\begin{equation}\label{eq:arc-length-coord}
+  \ell = \int_a^b
+    \sqrt{\sum_{\mu,\nu}
+      g_{\mu\nu}\,\frac{\dd x^\mu}{\dd t}\,
+        \frac{\dd x^\nu}{\dd t}}
+    \;\dd t\,,
+  \qquad C(a)=p,\; C(b)=q\,.
+\end{equation}
+
+% Diagram: curve C from p to q on manifold and in chart
+\begin{center}
+\begin{tikzpicture}[scale=0.85]
+  % Manifold
+  \draw[thick, spacecadet, rounded corners=12pt]
+    (0,0.3) to[out=30,in=160] (4.0,0.5)
+    to[out=-20,in=30] (4.2,-0.6)
+    to[out=210,in=-10] (0.2,-0.5) -- cycle;
+  \node[font=\sf\small, text=cgblue] at (3.8,0.8) {$\M$};
+  % Curve
+  \draw[thick, munsell]
+    (0.8,-0.1) to[out=20,in=200] (2.0,0.15)
+    to[out=20,in=190] (3.2,0.0);
+  \node[circle, fill=banana, inner sep=1.5pt] (P) at (0.8,-0.1) {};
+  \node[font=\small, below left] at (P) {$p$};
+  \node[circle, fill=banana, inner sep=1.5pt] (Q) at (3.2,0.0) {};
+  \node[font=\small, below right] at (Q) {$q$};
+  \node[font=\scriptsize, munsell] at (2.0,-0.2) {$C$};
+  % Arrow psi
+  \draw[thick, -{Stealth[length=6pt]}, cgblue]
+    (4.6,0.0) -- (6.0,0.0)
+    node[midway, above, font=\small]{$\psi$};
+  % R^n
+  \begin{scope}[shift={(6.5,-0.5)}]
+    \draw[axisstyle, spacecadet] (0,-0.5) -- (0,1.3);
+    \draw[axisstyle, spacecadet] (-0.3,0) -- (2.5,0);
+    \node[font=\sf\small, text=spacecadet] at (2.2,1.1) {$\Rn{n}$};
+    \draw[thick, munsell]
+      (0.3,0.2) to[out=30,in=210] (1.2,0.7)
+      to[out=30,in=200] (2.0,0.5);
+    \node[circle, fill=banana, inner sep=1.2pt] at (0.3,0.2) {};
+    \node[font=\scriptsize, below left] at (0.3,0.2) {$\psi(p)$};
+    \node[circle, fill=banana, inner sep=1.2pt] at (2.0,0.5) {};
+    \node[font=\scriptsize, below right] at (2.0,0.5) {$\psi(q)$};
+  \end{scope}
+\end{tikzpicture}
+\end{center}
+
+\subsubsection{Variational derivation}\label{sec:variational-derivation}
+
+Consider an infinitesimal variation of the curve:
+\[
+  x^\mu(t) \;\longmapsto\; x^\mu(t) + \delta x^\mu(t)\,,
+  \qquad \delta x^\mu(a) = \delta x^\mu(b) = 0\,.
+\]
+The endpoints are held fixed.  We assume a parametrisation with
+\textbf{unit speed}: $g_{ab}\,T^a T^b = 1$.
+
+\begin{proof}[Proof of Theorem~\ref{thm:geodesics-extremise}]
+  The extremality condition $\delta\ell = 0$ for all variations
+  $\delta x^\alpha$ yields, after integration by parts,
+  \begin{equation}\label{eq:euler-lagrange-length}
+    0 = -\sum_\alpha g_{\alpha\beta}\,
+        \frac{\dd^2 x^\alpha}{\dd t^2}
+      - \sum_{\alpha,\lambda}
+        \pd{g_{\alpha\beta}}{x^\lambda}\,
+        \frac{\dd x^\alpha}{\dd t}\,
+        \frac{\dd x^\lambda}{\dd t}
+      + \frac{1}{2}\sum_{\alpha,\lambda}
+        \pd{g_{\alpha\lambda}}{x^\beta}\,
+        \frac{\dd x^\alpha}{\dd t}\,
+        \frac{\dd x^\lambda}{\dd t}\,.
+  \end{equation}
+  Multiplying through by $g^{\mu\beta}$ and using the formula
+  for the Christoffel symbols, this is equivalent to
+  \begin{equation}\label{eq:geodesic-from-variation}
+    \eqbox{\frac{\dd^2 x^\mu}{\dd t^2}
+      + \sum_{\alpha,\lambda}
+        \chris{\mu}{\alpha\lambda}\,
+        \frac{\dd x^\alpha}{\dd t}\,
+        \frac{\dd x^\lambda}{\dd t}
+      = 0}
+  \end{equation}
+  This is precisely the \textbf{geodesic equation}.  Hence a
+  curve extremises arc length if and only if it is a geodesic.
+\end{proof}
+
+\begin{keyresult}[Geodesics from the Lagrangian]
+  The geodesic equation can also be obtained by applying
+  the Euler--Lagrange equations to the \textbf{Lagrangian}
+  \begin{equation}\label{eq:geodesic-lagrangian}
+    L = \sum_{\mu,\nu}
+      g_{\mu\nu}\,\frac{\dd x^\mu}{\dd t}\,
+        \frac{\dd x^\nu}{\dd t}\,,
+  \end{equation}
+  via $\partial L/\partial x^\alpha
+    - \dd/\dd t(\partial L/\partial\dot{x}^\alpha) = 0$.
+  This provides a very efficient method for computing the
+  Christoffel symbols: one simply reads them off from the
+  Euler--Lagrange equations.
+\end{keyresult}
+
+\begin{exercise}\label{ex:geodesic-lagrangian-sphere}
+  Use the Lagrangian method to derive the geodesic equations on
+  the sphere $S^2$ with metric
+  $g = \dd\theta\tp\dd\theta
+    + \sin^2\!\theta\;\dd\varphi\tp\dd\varphi$,
+  and read off the Christoffel symbols.
+\end{exercise}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Extrema versus minima}\label{sec:extrema-vs-minima}
+
+\begin{remark}
+  For a Riemannian metric (positive-definite signature), a
+  geodesic locally \emph{minimises} arc length.  The situation
+  is more subtle for Lorentzian signature: a timelike curve
+  joining two points may have \textbf{arbitrarily small} proper
+  time (consider a ``zigzag'' path close to null segments).  If
+  a curve of \emph{greatest} proper time between two events
+  exists, it must be a timelike geodesic---but a timelike
+  geodesic need not maximise proper time globally (it is only a
+  local extremum).
+\end{remark}
+
+\begin{intuition}[The twin paradox revisited]
+  In special relativity, the twin who travels along a
+  non-geodesic (accelerated) worldline accumulates less proper
+  time than the twin who follows the geodesic (inertial)
+  worldline.  This is because the inertial worldline
+  \emph{maximises} proper time among all timelike curves joining
+  the same two events.
+\end{intuition}
+
+% ══════════════════════════════════════════════════════════════
+%  CURVATURE
+% ══════════════════════════════════════════════════════════════
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Curvature: the Riemann tensor}%
+\label{sec:riemann-tensor}
+
+We now turn to the second major topic of this lecture:
+\textbf{curvature}.
+
+The curvature of a manifold~$\M$ equipped with a connection
+$\covd_a$ measures the \textbf{path-dependence of parallel
+transport}.  On a flat manifold, parallel-transporting a vector
+around a closed loop returns the original vector.  On a curved
+manifold, the transported vector generally \emph{differs} from
+the original.  The Riemann curvature tensor provides a precise,
+intrinsic measure of this failure.
+
+\begin{intuition}[Curvature as non-commutativity]
+  The Riemann curvature tensor measures the failure of
+  successive covariant derivatives to commute.  In flat space,
+  $\covd_a\covd_b = \covd_b\covd_a$ when acting on any tensor;
+  curvature is the obstruction to this commutativity.
+\end{intuition}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{The commutator of covariant derivatives on
+  dual vectors}\label{sec:commutator-covd}
+
+We begin by studying the action of the commutator
+$\covd_a\covd_b - \covd_b\covd_a$ on an arbitrary dual vector
+field $\omega_c$.
+
+\begin{theorem}\label{thm:commutator-local}
+  For any $f\in\mathscr{F}(\M)$ and any dual vector
+  field~$\omega_c$,
+  \begin{equation}\label{eq:commutator-f-omega}
+    (\covd_a\covd_b - \covd_b\covd_a)(f\omega_c)
+      = f\,(\covd_a\covd_b - \covd_b\covd_a)\omega_c\,.
+  \end{equation}
+  Consequently, $(\covd_a\covd_b - \covd_b\covd_a)\omega_c$
+  depends only on the value of~$\omega_c$ at the point~$p$.
+\end{theorem}
+
+\begin{proof}
+  Apply the Leibniz rule:
+  \begin{align}
+    \covd_a\covd_b(f\omega_c)
+      &= \covd_a\bigl((\covd_b f)\,\omega_c
+        + f\,\covd_b\omega_c\bigr) \notag\\
+      &= (\covd_a\covd_b f)\,\omega_c
+        + (\covd_b f)\,\covd_a\omega_c
+        + (\covd_a f)\,\covd_b\omega_c
+        + f\,\covd_a\covd_b\omega_c\,.
+        \label{eq:commutator-expand-ab}
+  \end{align}
+  The corresponding expression with $a$ and $b$ swapped is
+  \begin{equation}\label{eq:commutator-expand-ba}
+    \covd_b\covd_a(f\omega_c)
+      = (\covd_b\covd_a f)\,\omega_c
+        + (\covd_a f)\,\covd_b\omega_c
+        + (\covd_b f)\,\covd_a\omega_c
+        + f\,\covd_b\covd_a\omega_c\,.
+  \end{equation}
+  Subtracting~\eqref{eq:commutator-expand-ba}
+  from~\eqref{eq:commutator-expand-ab} and using the
+  torsion-free condition
+  $\covd_a\covd_b f = \covd_b\covd_a f$ (axiom~(5)):
+  \[
+    (\covd_a\covd_b - \covd_b\covd_a)(f\omega_c)
+      = f\,(\covd_a\covd_b - \covd_b\covd_a)\omega_c\,.
+  \]
+  Since the operator $(\covd_a\covd_b - \covd_b\covd_a)$ is
+  $\mathscr{F}(\M)$-linear on dual vector fields, by the same
+  argument as in Theorem~\ref{thm:diff-local} (localisation), it
+  depends only on the pointwise value of~$\omega_c$.
+\end{proof}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Definition of the Riemann tensor}%
+\label{sec:riemann-def}
+
+Since the map
+$\omega_c \mapsto (\covd_a\covd_b - \covd_b\covd_a)\omega_c$
+is a linear map $\ttype{0}{1}\to\ttype{0}{3}$ that depends only
+on the pointwise value of~$\omega_c$, there exists a tensor
+$\Riem_{abc}{}^d\in\ttype{1}{3}$ such that:
+
+\begin{definition}[Riemann curvature tensor]\label{def:riemann}
+  The \textbf{Riemann curvature tensor}
+  $\Riem_{abc}{}^d$ is defined by
+  \begin{equation}\label{eq:riemann-def}
+    \eqbox{(\covd_a\covd_b - \covd_b\covd_a)\omega_c
+      = \Riem_{abc}{}^d\,\omega_d}
+  \end{equation}
+  for all dual vector fields~$\omega_c$.
+\end{definition}
+
+\begin{remark}
+  The Riemann tensor is a tensor of type~$(1,3)$.  It is
+  determined entirely by the derivative operator $\covd_a$ (and
+  hence, when $\covd_a$ is the Levi-Civita connection, entirely
+  by the metric $g_{ab}$).  If $\Riem_{abc}{}^d = 0$, the
+  connection is \textbf{flat}: covariant derivatives commute on
+  all tensor fields, and parallel transport is path-independent.
+\end{remark}
+
+\begin{exercise}\label{ex:riemann-on-vectors}
+  Show that for a vector field $v^c$:
+  \[
+    (\covd_a\covd_b - \covd_b\covd_a)v^c
+      = -\Riem_{abd}{}^c\,v^d\,.
+  \]
+  \emph{Hint:} Apply the commutator to the scalar
+  $\omega_c\,v^c$ and use the Leibniz rule.
+\end{exercise}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Curvature and parallel transport around a loop}%
+\label{sec:curvature-loop}
+
+We now give a geometric interpretation of the Riemann tensor as
+measuring the change in a vector under parallel transport
+around an infinitesimal closed loop.
+
+% Diagram: infinitesimal loop on 2D surface
+\begin{center}
+\begin{tikzpicture}[scale=1.1]
+  % Surface patch
+  \draw[thick, spacecadet, rounded corners=6pt,
+        fill=isabelline!40]
+    (-0.3,-0.3) -- (4.3,-0.3) -- (4.3,3.3) -- (-0.3,3.3)
+    -- cycle;
+  \node[font=\sf\small, text=cgblue] at (4.6,3.1) {$S$};
+  % Coordinate labels
+  \node[font=\small, text=spacecadet] at (4.6,-0.1) {$s$};
+  \node[font=\small, text=spacecadet] at (-0.5,3.1) {$t$};
+  % Loop
+  \draw[ultra thick, munsell, -{Stealth[length=6pt]}]
+    (0.5,0.5) -- (0.5,2.5)
+    node[midway, left, font=\scriptsize]{(i)};
+  \draw[ultra thick, munsell, -{Stealth[length=6pt]}]
+    (0.5,2.5) -- (3.5,2.5)
+    node[midway, above, font=\scriptsize]{(ii)};
+  \draw[ultra thick, munsell, -{Stealth[length=6pt]}]
+    (3.5,2.5) -- (3.5,0.5)
+    node[midway, right, font=\scriptsize]{(iii)};
+  \draw[ultra thick, munsell, -{Stealth[length=6pt]}]
+    (3.5,0.5) -- (0.5,0.5)
+    node[midway, below, font=\scriptsize]{(iv)};
+  % Corner labels
+  \node[circle, fill=banana, inner sep=1.8pt] (A) at (0.5,0.5) {};
+  \node[font=\scriptsize, below left] at (A)
+    {$(0,0)$};
+  \node[circle, fill=banana, inner sep=1.2pt] at (0.5,2.5) {};
+  \node[font=\scriptsize, above left] at (0.5,2.5)
+    {$(0,\Delta t)$};
+  \node[circle, fill=banana, inner sep=1.2pt] at (3.5,2.5) {};
+  \node[font=\scriptsize, above right] at (3.5,2.5)
+    {$(\Delta s,\Delta t)$};
+  \node[circle, fill=banana, inner sep=1.2pt] at (3.5,0.5) {};
+  \node[font=\scriptsize, below right] at (3.5,0.5)
+    {$(\Delta s,0)$};
+  % Vector at p
+  \draw[vecstyle, spacecadet] (A) -- ++(0.4,0.6)
+    node[above right, font=\small]{$v^a$};
+\end{tikzpicture}
+\end{center}
+
+Consider a two-dimensional surface~$S\subset\M$ parametrised by
+coordinates $(s,t)$.  Let $T^a = (\partial/\partial t)^a$ and
+$S^a = (\partial/\partial s)^a$ be the coordinate tangent
+vectors.  We parallel-transport a vector $v^a$ around the
+infinitesimal loop:
+\[
+  (0,0) \;\xrightarrow{\;\text{(i)}\;}\; (0,\Delta t)
+  \;\xrightarrow{\;\text{(ii)}\;}\; (\Delta s,\Delta t)
+  \;\xrightarrow{\;\text{(iii)}\;}\; (\Delta s,0)
+  \;\xrightarrow{\;\text{(iv)}\;}\; (0,0)\,.
+\]
+We test the change in~$v^a$ by contracting with an arbitrary
+dual vector~$\omega_a$.  Since $v^a$ is parallelly transported,
+only $\omega_a$ varies along each leg.
+
+\medskip\noindent
+\textbf{Legs (i) and (iii).}\;
+Along leg~(i) (transport in the $t$-direction at $s=0$), the
+change in $v^a\omega_a$ is
+\[
+  \delta_1 = \Delta t \cdot T^b\covd_b(v^a\omega_a)
+    \Big|_{(\Delta t/2,\,0)}
+  = \Delta t \cdot v^a\,T^b\covd_b\omega_a
+    \Big|_{(\Delta t/2,\,0)}\,,
+\]
+where we used $T^b\covd_b v^a = 0$ (parallel transport).
+Along leg~(iii) (transport in the $(-t)$-direction at
+$s=\Delta s$):
+\[
+  \delta_3 = -\Delta t \cdot v^a\,T^b\covd_b\omega_a
+    \Big|_{(\Delta t/2,\,\Delta s)}\,.
+\]
+Combining:
+\begin{equation}\label{eq:delta13}
+  \delta_1 + \delta_3
+    = \Delta t\Bigl(
+        v^a\,T^b\covd_b\omega_a\Big|_{(\Delta t/2,\,0)}
+      - v^a\,T^b\covd_b\omega_a\Big|_{(\Delta t/2,\,\Delta s)}
+      \Bigr)
+    = -\Delta s\,\Delta t\;
+      S^c\covd_c\bigl(v^a\,T^b\covd_b\omega_a\bigr)\,.
+\end{equation}
+
+\medskip\noindent
+\textbf{Legs (ii) and (iv).}\;
+By an analogous calculation (transport in the $s$- and
+$(-s)$-directions):
+\begin{equation}\label{eq:delta24}
+  \delta_2 + \delta_4
+    = \Delta s\,\Delta t\;
+      T^c\covd_c\bigl(v^a\,S^b\covd_b\omega_a\bigr)\,.
+\end{equation}
+
+\medskip\noindent
+\textbf{Total change.}\;
+The net change in $v^a\omega_a$ around the loop is
+\begin{align}
+  \delta(v^a\omega_a)
+    &= (\delta_1+\delta_3) + (\delta_2+\delta_4) \notag\\
+    &= \Delta s\,\Delta t\; v^a
+      \bigl(
+        T^c\,S^b\,\covd_c\covd_b\omega_a
+        - S^c\,T^b\,\covd_c\covd_b\omega_a
+      \bigr) \notag\\
+    &= \Delta s\,\Delta t\; v^a\,T^c\,S^b\,
+      (\covd_c\covd_b - \covd_b\covd_c)\omega_a\,.
+      \label{eq:total-change}
+\end{align}
+By the definition of the Riemann
+tensor~\eqref{eq:riemann-def}:
+\begin{equation}\label{eq:loop-riemann}
+  \delta(v^a\omega_a)
+    = \Delta s\,\Delta t\;
+      v^a\,T^c\,S^b\,\Riem_{cba}{}^d\,\omega_d\,.
+\end{equation}
+Since this holds for \emph{all} dual vectors~$\omega_a$, we
+conclude:
+
+\begin{keyresult}[Parallel transport around an infinitesimal
+  loop]\label{res:loop-transport}
+  The change in a vector $v^a$ after parallel transport around
+  an infinitesimal loop spanned by $T^a$ and $S^a$ is
+  \begin{equation}\label{eq:delta-v-loop}
+    \eqbox{\delta v^a
+      = \Delta s\,\Delta t\;
+        v^d\,T^c\,S^b\,\Riem_{cbd}{}^a}
+  \end{equation}
+\end{keyresult}
+
+\begin{remark}
+  Equation~\eqref{eq:delta-v-loop} is the precise statement
+  that curvature equals the path-dependence of parallel
+  transport.  On a flat manifold, $\Riem_{abc}{}^d = 0$ and
+  $\delta v^a = 0$: parallel transport around any closed loop
+  returns the original vector.
+\end{remark}
+
+\begin{exercise}\label{ex:riemann-sphere-holonomy}
+  Consider the unit sphere $S^2$ with the round metric.
+  Parallel-transport a vector around the triangle formed by the
+  equator from $\varphi=0$ to $\varphi=\pi/2$, the meridian
+  from the equator to the north pole, and the meridian from the
+  north pole back to the starting point.  Verify that the vector
+  rotates by~$\pi/2$, consistent with the curvature of~$S^2$.
+\end{exercise}
+
+\begin{exercise}\label{ex:riemann-christoffel}
+  Show that in a coordinate chart, the components of the
+  Riemann tensor are given by
+  \[
+    \Riem^\rho{}_{\sigma\mu\nu}
+      = \pd{\chris{\rho}{\nu\sigma}}{x^\mu}
+      - \pd{\chris{\rho}{\mu\sigma}}{x^\nu}
+      + \chris{\rho}{\mu\lambda}\,\chris{\lambda}{\nu\sigma}
+      - \chris{\rho}{\nu\lambda}\,\chris{\lambda}{\mu\sigma}\,.
+  \]
+  \emph{Hint:} Apply the
+  definition~\eqref{eq:riemann-def} to~$\omega_c$
+  expressed in the coordinate basis and use the formula for
+  $\covd_\mu\omega_\nu$ in terms of Christoffel symbols.
+\end{exercise}

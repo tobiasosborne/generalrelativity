@@ -1,0 +1,694 @@
+%!TEX root = ../GeneralRelativity.tex
+% ──────────────────────────────────────────────────────────────
+%  Lecture 11 — Curvature continued
+% ──────────────────────────────────────────────────────────────
+
+\section{Curvature continued}\label{sec:curvature-continued}
+
+In the previous lecture we introduced the Riemann curvature tensor
+$\Riem_{abc}{}^d$ via the commutator of covariant derivatives
+acting on a covector field.  We now extend this to vectors and
+general tensors, establish the fundamental symmetry and Bianchi
+identities, define the Ricci tensor and scalar curvature, derive
+the geodesic deviation equation, and give the explicit coordinate
+formula for the Riemann tensor.
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Action of the Riemann tensor on vectors and tensors}%
+\label{sec:riemann-on-vectors}
+
+Recall that for a covector field~$\omega_c$:
+\begin{equation}\label{eq:riemann-on-covector-recall}
+  (\covd_a \covd_b - \covd_b \covd_a)\omega_c
+    = \Riem_{abc}{}^d\, \omega_d\,.
+\end{equation}
+We now determine the action of the commutator
+$[\covd_a, \covd_b] \equiv \covd_a \covd_b - \covd_b \covd_a$
+on vectors and general tensor fields.
+
+\subsubsection{Action on a vector field}%
+\label{sec:riemann-action-vector}
+
+Let $t^c$ be an arbitrary vector field and $\omega_c$ an
+arbitrary covector field.  The contraction $t^c \omega_c$ is a
+scalar, so by the torsion-free property:
+\begin{equation}\label{eq:commutator-scalar-zero}
+  0 = (\covd_a \covd_b - \covd_b \covd_a)(t^c \omega_c)\,.
+\end{equation}
+Expanding by the Leibniz rule:
+\begin{align}
+  0
+    &= \covd_a(\omega_c\, \covd_b t^c + t^c\, \covd_b \omega_c)
+     - \covd_b(\omega_c\, \covd_a t^c + t^c\, \covd_a \omega_c)
+     \notag\\
+    &= \omega_c\,
+       (\covd_a \covd_b - \covd_b \covd_a) t^c
+     + t^c\,
+       (\covd_a \covd_b - \covd_b \covd_a) \omega_c
+     \notag\\
+    &= \omega_c\,
+       (\covd_a \covd_b - \covd_b \covd_a) t^c
+     + t^c\, \omega_d\, \Riem_{abc}{}^d\,.
+     \label{eq:riemann-vector-derivation}
+\end{align}
+Since $\omega_c$ is arbitrary, we conclude:
+\begin{equation}\label{eq:riemann-on-vector}
+  \eqbox{(\covd_a \covd_b - \covd_b \covd_a) t^c
+    = -\Riem_{abd}{}^c\, t^d}
+\end{equation}
+Note the crucial minus sign: for vectors the Riemann tensor
+appears with the opposite sign compared to covectors.
+
+\subsubsection{Action on a general tensor field}%
+\label{sec:riemann-action-general}
+
+\begin{exercise}\label{ex:riemann-general-tensor}
+  By repeated application of the Leibniz rule, show that for a
+  tensor field
+  $T^{c_1 \cdots c_k}{}_{d_1 \cdots d_l}$ of type~$(k,l)$:
+\end{exercise}
+
+\begin{equation}\label{eq:riemann-on-general}
+  \eqbox{
+  (\covd_a \covd_b - \covd_b \covd_a)
+    T^{c_1 \cdots c_k}{}_{d_1 \cdots d_l}
+  = -\sum_{j=1}^{k}
+      \Riem_{abe}{}^{c_j}\,
+      T^{c_1 \cdots e \cdots c_k}{}_{d_1 \cdots d_l}
+    + \sum_{j=1}^{l}
+      \Riem_{ab d_j}{}^{e}\,
+      T^{c_1 \cdots c_k}{}_{d_1 \cdots e \cdots d_l}
+  }
+\end{equation}
+In the first sum, the dummy index~$e$ replaces~$c_j$ in the
+$j$-th contravariant slot; in the second sum, $e$ replaces~$d_j$
+in the $j$-th covariant slot.
+
+\begin{remark}
+  The pattern is: one $-\Riem$ term for each upper index (just as
+  for a single vector), one $+\Riem$ term for each lower index
+  (just as for a single covector).  This is the universal formula
+  for the ``failure of covariant derivatives to commute'' on
+  tensors of arbitrary type.
+\end{remark}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Symmetries of the Riemann tensor}%
+\label{sec:riemann-symmetries}
+
+We now establish four fundamental properties of
+$\Riem_{abc}{}^d$.  Properties~(1)--(2) hold for \emph{any}
+torsion-free derivative operator; properties~(3)--(4) require in
+addition that $\covd_a$ be the metric-compatible (Levi-Civita)
+connection.
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Property 1: Antisymmetry in the first two indices}%
+\label{sec:riemann-prop1}
+
+\begin{theorem}\label{thm:riemann-antisym-ab}
+  \begin{equation}\label{eq:riemann-antisym-ab}
+    \Riem_{abc}{}^d = -\Riem_{bac}{}^d\,.
+  \end{equation}
+\end{theorem}
+
+\begin{proof}
+  This follows directly from the definition
+  $\Riem_{abc}{}^d\, \omega_d
+    = (\covd_a \covd_b - \covd_b \covd_a)\omega_c$.
+  The commutator $[\covd_a, \covd_b]$ is manifestly
+  antisymmetric in $a$ and~$b$.
+\end{proof}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Property 2: First Bianchi identity (algebraic
+  Bianchi identity)}\label{sec:riemann-prop2}
+
+\begin{theorem}[First Bianchi identity]\label{thm:first-bianchi}
+  For any torsion-free derivative operator:
+  \begin{equation}\label{eq:first-bianchi}
+    \Riem_{[abc]}{}^d = 0\,.
+  \end{equation}
+\end{theorem}
+
+\begin{proof}
+  Let $\omega_a$ be an arbitrary covector field and $\covd_a$ a
+  torsion-free derivative operator.  We claim that
+  \begin{equation}\label{eq:double-covd-antisym}
+    \covd_{[a} \covd_b \omega_{c]} = 0\,.
+  \end{equation}
+  To verify~\eqref{eq:double-covd-antisym}, let
+  $\tilde\covd_a = \partial_a$ be the ordinary derivative in
+  some coordinate chart.  Then
+  $\covd_b \omega_c
+    = \partial_b \omega_c - C^d{}_{bc}\, \omega_d$,
+  and hence
+  \[
+    \covd_a \covd_b \omega_c
+      = \partial_a \partial_b \omega_c
+        + C^d{}_{ab}\, \partial_{|d|} \omega_c
+        + C^e{}_{ac}\, C^d{}_{|e|b}\, \omega_d
+        + \cdots\,.
+  \]
+  Antisymmetrising over $a,b,c$ and using the torsion-free
+  condition $C^d{}_{ab} = C^d{}_{ba}$, all terms
+  vanish, confirming~\eqref{eq:double-covd-antisym}.
+
+  Now write
+  \begin{align}
+    0 &= 2\,\covd_{[a} \covd_b \omega_{c]}
+       = \covd_{[a} \covd_b \omega_{c]}
+         - \covd_{[b} \covd_a \omega_{c]}
+       = \Riem_{[abc]}{}^d\, \omega_d\,.
+       \label{eq:first-bianchi-proof}
+  \end{align}
+  Since $\omega_d$ is arbitrary,
+  $\Riem_{[abc]}{}^d = 0$.
+\end{proof}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Property 3: Antisymmetry in the last two indices}%
+\label{sec:riemann-prop3}
+
+\begin{theorem}\label{thm:riemann-antisym-cd}
+  If $\covd_a$ is the Levi-Civita connection
+  ($\covd_a g_{bc} = 0$), then
+  \begin{equation}\label{eq:riemann-antisym-cd}
+    \Riem_{abcd} = -\Riem_{abdc}\,,
+  \end{equation}
+  where $\Riem_{abcd} \equiv g_{de}\, \Riem_{abc}{}^e$.
+\end{theorem}
+
+\begin{proof}
+  Since $\covd_a g_{cd} = 0$, applying the commutator formula to
+  the metric tensor gives
+  \begin{align}
+    0 &= (\covd_a \covd_b - \covd_b \covd_a) g_{cd}
+       = \Riem_{abc}{}^e\, g_{ed}
+         + \Riem_{abd}{}^e\, g_{ce}
+       = \Riem_{abcd} + \Riem_{abdc}\,.
+       \label{eq:antisym-cd-proof}
+  \end{align}
+  Hence $\Riem_{abcd} = -\Riem_{abdc}$.
+\end{proof}
+
+\begin{remark}
+  Together, properties~(1)--(3) imply that $\Riem_{abcd}$ is
+  antisymmetric in the pair $(a,b)$ and in the pair $(c,d)$, and
+  symmetric under exchange of the two pairs:
+  $\Riem_{abcd} = \Riem_{cdab}$.
+\end{remark}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Property 4: Differential Bianchi identity}%
+\label{sec:riemann-prop4}
+
+\begin{theorem}[Bianchi identity]\label{thm:bianchi-identity}
+  For any torsion-free derivative operator:
+  \begin{equation}\label{eq:bianchi-identity}
+    \covd_{[a}\, \Riem_{bc]d}{}^e = 0\,.
+  \end{equation}
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+  Let $\omega_d$ be an arbitrary covector field.  Consider the
+  two expressions:
+  \begin{enumerate}[(i)]
+    \item $(\covd_a \covd_b - \covd_b \covd_a)\covd_c \omega_d
+      = \Riem_{abc}{}^e\, \covd_e \omega_d
+        + \Riem_{abd}{}^f\, \covd_c \omega_f$.
+    \item $\covd_a(\covd_b \covd_c - \covd_c \covd_b)\omega_d
+      = \covd_a(\Riem_{bcd}{}^e\, \omega_e)
+      = \omega_e\, \covd_a \Riem_{bcd}{}^e
+        + \Riem_{bcd}{}^e\, \covd_a \omega_e$.
+  \end{enumerate}
+  Antisymmetrise both expressions over $a,b,c$.  In~(i), the
+  term $\Riem_{[abc]}{}^e\, \covd_e \omega_d$ vanishes by the
+  first Bianchi identity, and the remaining terms cancel with
+  corresponding terms from~(ii).  This yields
+  \[
+    \omega_e\, \covd_{[a}\, \Riem_{bc]d}{}^e = 0\,.
+  \]
+  Since $\omega_e$ is arbitrary:
+  $\covd_{[a}\, \Riem_{bc]d}{}^e = 0$.
+\end{proof}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Ricci tensor, scalar curvature, and the Einstein
+  tensor}\label{sec:ricci-einstein}
+
+\subsubsection{Geometric interpretation of the Riemann tensor}%
+\label{sec:riemann-interpretation}
+
+Given two vectors $v^a, w^a \in V_p$, the quantity
+$\Riem(v, w, \cdot, \cdot)$ defines a linear transformation
+$M_a{}^b$ of~$V_p$.  The two vectors $v^a$ and $w^a$ span a
+two-dimensional subspace of~$V_p$; the Riemann tensor ``probes''
+the curvature of~$\M$ in the corresponding two-dimensional
+plane.
+
+\begin{intuition}[Riemann as sectional curvature probe]
+  Each pair of tangent vectors at~$p$ specifies a 2-plane
+  in~$V_p$.  The Riemann tensor, when fed these two directions,
+  returns a linear map that encodes how vectors are rotated
+  when parallel-transported around an infinitesimal loop in
+  that 2-plane.  This is the essence of \emph{sectional
+  curvature}.
+\end{intuition}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{The Ricci tensor}\label{sec:ricci-tensor}
+
+\begin{definition}[Ricci tensor]\label{def:ricci-tensor}
+  The \textbf{Ricci tensor} is the contraction of the Riemann
+  tensor over its second and fourth indices:
+  \begin{equation}\label{eq:ricci-tensor}
+    \Ric_{ac} = \Riem_{abc}{}^b\,.
+  \end{equation}
+\end{definition}
+
+\begin{remark}
+  By the symmetries of $\Riem_{abcd}$ (properties 1--3), the
+  Ricci tensor is symmetric:
+  $\Ric_{ab} = \Ric_{ba}$.
+\end{remark}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Scalar curvature}\label{sec:scalar-curvature}
+
+\begin{definition}[Scalar curvature]\label{def:scalar-curvature}
+  The \textbf{scalar curvature} (or \textbf{Ricci scalar}) is
+  the trace of the Ricci tensor:
+  \begin{equation}\label{eq:scalar-curvature}
+    \eqbox{\Ric = \Ric_a{}^a = g^{ab}\, \Ric_{ab}}
+  \end{equation}
+\end{definition}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{The contracted Bianchi identity and the Einstein
+  tensor}\label{sec:einstein-tensor}
+
+We now contract the differential Bianchi
+identity~\eqref{eq:bianchi-identity} to obtain a fundamental
+divergence condition.
+
+\medskip\noindent
+\textbf{Step 1: First contraction.}\;
+Write out the Bianchi identity explicitly:
+\[
+  \covd_a \Riem_{bcd}{}^a
+  + \covd_b \Riem_{cd}
+  - \covd_c \Riem_{bd}
+  = 0\,,
+\]
+where we used $\Riem_{bcd}{}^a$ contracted on the first and
+last indices to relate to the Ricci tensor.
+
+\medskip\noindent
+\textbf{Step 2: Second contraction.}\;
+Contract with $g^{bd}$:
+\[
+  \covd_a \Ric_c{}^a
+  + \covd_b \Ric_c{}^b
+  - \covd_c \Ric
+  = 0\,,
+\]
+which gives
+\begin{equation}\label{eq:contracted-bianchi}
+  2\,\covd_a \Ric_c{}^a - \covd_c \Ric = 0\,.
+\end{equation}
+This can be rewritten as $\covd^a \Ein_{ab} = 0$, where:
+
+\begin{definition}[Einstein tensor]\label{def:einstein-tensor}
+  The \textbf{Einstein tensor} is defined by
+  \begin{equation}\label{eq:einstein-tensor}
+    \eqbox{\Ein_{ab}
+      = \Ric_{ab} - \tfrac{1}{2}\,\Ric\, g_{ab}}
+  \end{equation}
+\end{definition}
+
+\begin{keyresult}[Divergence-free Einstein tensor]
+  The Einstein tensor is divergence-free:
+  \begin{equation}\label{eq:einstein-divergence-free}
+    \covd^a \Ein_{ab} = 0\,.
+  \end{equation}
+  This identity holds purely as a consequence of the Bianchi
+  identity---it is a geometric identity, not a field equation.
+  It will play a central role when we write down Einstein's
+  field equations.
+\end{keyresult}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Geodesic deviation}\label{sec:geodesic-deviation}
+
+The Riemann tensor has a direct physical interpretation: it
+controls how nearby geodesics accelerate toward or away from
+each other.  This is captured by the \textbf{geodesic deviation
+equation}.
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Setup: a one-parameter family of geodesics}%
+\label{sec:geodesic-family}
+
+Consider a one-parameter family of geodesics
+$\gamma_s(t)$, where $s\in(-\varepsilon,\bar\varepsilon)$
+labels the different geodesics and $t$ is an affine parameter
+along each one.  We require:
+\begin{enumerate}
+  \item $\gamma_s$ is a geodesic for every~$s$, and
+  \item the map $(s,t) \mapsto \gamma_s(t)$ is smooth,
+    one-to-one, with smooth inverse.
+\end{enumerate}
+
+\noindent
+The image of this family is a two-dimensional submanifold
+$\Sigma \subset \M$, and $(s,t)$ serve as a coordinate system
+on~$\Sigma$.
+
+% Diagram: one-parameter family of geodesics
+\begin{center}
+\begin{tikzpicture}[scale=0.9]
+  % Manifold blob
+  \draw[thick, spacecadet, rounded corners=14pt]
+    (0,0.5) to[out=20,in=160] (7.0,0.8)
+    to[out=-20,in=50] (7.5,-1.2)
+    to[out=230,in=-10] (0.5,-1.0)
+    to[out=170,in=250] cycle;
+  \node[font=\sf\small, text=cgblue] at (7.2,1.0) {$\M$};
+  % Geodesics
+  \draw[thick, munsell]
+    (1.0,0.4) to[out=5,in=175] (6.0,0.5);
+  \draw[thick, munsell]
+    (1.0,0.0) to[out=5,in=175] (6.0,-0.1);
+  \draw[thick, munsell]
+    (1.0,-0.4) to[out=5,in=175] (6.0,-0.7);
+  % Labels
+  \node[font=\scriptsize, munsell, right] at (6.0,0.5)
+    {$\gamma_{s+\delta s}$};
+  \node[font=\scriptsize, munsell, right] at (6.0,-0.1)
+    {$\gamma_s$};
+  \node[font=\scriptsize, munsell, right] at (6.0,-0.7)
+    {$\gamma_{s-\delta s}$};
+  % Point on middle geodesic
+  \node[circle, fill=banana, inner sep=1.8pt] (P) at (3.5,-0.05) {};
+  % T^a tangent vector
+  \draw[vecstyle] (P) -- ++(0.9,0.02)
+    node[above, font=\small]{$T^a$};
+  % X^a deviation vector
+  \draw[vecstyle, spacecadet] (P) -- ++(0.05,0.45)
+    node[left, font=\small]{$X^a$};
+\end{tikzpicture}
+\end{center}
+
+Define two vector fields on~$\Sigma$:
+\begin{itemize}
+  \item $T^a = (\partial/\partial t)^a$: the tangent vector to
+    each geodesic.  Since $\gamma_s$ is a geodesic:
+    $T^a \covd_a T^b = 0$.
+  \item $X^a = (\partial/\partial s)^a$: the \textbf{deviation
+    vector}, pointing from $\gamma_s(t)$ to the infinitesimally
+    nearby geodesic $\gamma_{s+\delta s}(t)$.
+\end{itemize}
+
+\noindent
+Since $T^a$ and $X^a$ are coordinate vector fields on~$\Sigma$,
+they commute:
+\begin{equation}\label{eq:TX-commute}
+  [T, X]^a = 0
+  \qquad\Longleftrightarrow\qquad
+  T^b \covd_b X^a = X^b \covd_b T^a\,.
+\end{equation}
+
+\begin{exercise}\label{ex:XdotT-constant}
+  Using~\eqref{eq:TX-commute} and the geodesic equation
+  $T^a \covd_a T^b = 0$, show that $X^a T_a$ is constant
+  along each geodesic.  (By a reparametrisation of~$s$,
+  we may set $X^a T_a = 0$, so that $X^a$ is purely
+  transverse.)
+\end{exercise}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Relative velocity and acceleration}%
+\label{sec:relative-accel}
+
+Define the \textbf{relative velocity} of nearby geodesics:
+\begin{equation}\label{eq:relative-velocity}
+  v^a = T^b \covd_b X^a\,.
+\end{equation}
+This measures the rate of change of the deviation vector~$X^a$
+along the geodesic.
+
+\medskip\noindent
+The \textbf{relative acceleration} is
+\begin{equation}\label{eq:relative-accel-def}
+  A^a = T^c \covd_c v^a
+      = T^c \covd_c (T^b \covd_b X^a)\,.
+\end{equation}
+
+\noindent
+We now simplify~\eqref{eq:relative-accel-def} using the
+commutativity condition~\eqref{eq:TX-commute}:
+\begin{align}
+  A^a
+    &= T^c \covd_c (X^b \covd_b T^a)
+       \notag\\
+    &= (T^c \covd_c X^b)(\covd_b T^a)
+       + X^b\, T^c \covd_c \covd_b T^a\,.
+       \label{eq:accel-expand1}
+\end{align}
+Using the commutativity relation again on the first term,
+$(T^c \covd_c X^b) = (X^c \covd_c T^b)$:
+\begin{align}
+  A^a
+    &= (X^c \covd_c T^b)(\covd_b T^a)
+       + X^b\, T^c \covd_c \covd_b T^a\,.
+       \label{eq:accel-expand2}
+\end{align}
+The first term equals
+$X^c \covd_c(T^b \covd_b T^a)
+  - X^b(\text{extra terms})$.
+But $T^b \covd_b T^a = 0$ (geodesic equation), so
+\[
+  (X^c \covd_c T^b)(\covd_b T^a)
+    = X^c \covd_c(T^b \covd_b T^a)
+      - X^b(T^c \covd_b \covd_c T^a - \text{cancelled})\,.
+\]
+The simplification, using the definition of the Riemann tensor
+$T^c \covd_c \covd_b T^a - T^c \covd_b \covd_c T^a
+  = -\Riem_{cbd}{}^a\, T^c T^d$,
+and the geodesic equation, yields:
+
+\begin{equation}\label{eq:geodesic-deviation}
+  \eqbox{A^a = -\Riem_{cbd}{}^a\, X^b\, T^c\, T^d}
+\end{equation}
+
+\noindent
+This is the \textbf{geodesic deviation equation} (also called
+the \textbf{Jacobi equation}).
+
+\begin{intuition}[Tidal forces]
+  In general relativity, freely falling particles follow
+  geodesics.  The geodesic deviation equation says that the
+  relative acceleration between two nearby freely falling
+  particles is proportional to the Riemann tensor.  This is the
+  precise formulation of \emph{tidal forces}: the Riemann
+  tensor is what an observer actually \emph{measures} as the
+  differential gravitational acceleration across a small region
+  of spacetime.
+\end{intuition}
+
+\begin{keyresult}[Curvature $\Leftrightarrow$ geodesic deviation]
+  A manifold is flat ($\Riem_{abc}{}^d = 0$ everywhere) if and
+  only if $A^a = 0$ for \emph{all} one-parameter families of
+  geodesics.  Conversely, if there exist relatively
+  accelerating geodesics, then $\Riem_{abc}{}^d \neq 0$: the
+  manifold is curved.
+\end{keyresult}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Computing curvature in coordinates}%
+\label{sec:curvature-coordinates}
+
+Given a manifold $\M$ with metric $g_{ab}$, the Riemann tensor
+$\Riem_{abc}{}^d$ is uniquely determined by the Levi-Civita
+connection~$\covd_a$.  We now derive the explicit coordinate
+expression.
+
+\subsubsection{Derivation}\label{sec:riemann-coord-derivation}
+
+Choose a coordinate chart $(\psi, x^\mu)$.  For a covector
+field~$\omega_c$, recall that the covariant derivative is
+\[
+  \covd_b \omega_c = \partial_b \omega_c
+    - \chris{d}{bc}\, \omega_d\,.
+\]
+Applying a second covariant derivative:
+\begin{align}
+  \covd_a \covd_b \omega_c
+    &= \partial_a(\partial_b \omega_c
+       - \chris{d}{bc}\, \omega_d)
+     - \chris{e}{ab}(\partial_e \omega_c
+       - \chris{d}{ec}\, \omega_d)
+     - \chris{e}{ac}(\partial_b \omega_e
+       - \chris{d}{be}\, \omega_d)\,.
+     \label{eq:double-covd-coords}
+\end{align}
+The Riemann tensor is obtained by antisymmetrising:
+\[
+  \Riem_{abc}{}^d\, \omega_d
+    = 2\,\covd_{[a} \covd_{b]} \omega_c
+    = (-2\,\partial_{[a} \chris{d}{b]c}
+       + 2\,\chris{e}{c[a}\, \chris{d}{b]e})\,\omega_d\,.
+\]
+Since $\omega_d$ is arbitrary, we read off the coordinate
+components:
+
+\begin{equation}\label{eq:riemann-coord}
+  \eqbox{\Riem^\sigma{}_{\mu\nu\rho}
+    = \pd{\chris{\sigma}{\nu\rho}}{x^\mu}
+    - \pd{\chris{\sigma}{\mu\rho}}{x^\nu}
+    + \sum_\alpha
+      \bigl(
+        \chris{\alpha}{\nu\rho}\,\chris{\sigma}{\mu\alpha}
+        - \chris{\alpha}{\mu\rho}\,\chris{\sigma}{\nu\alpha}
+      \bigr)}
+\end{equation}
+
+\begin{remark}
+  The Riemann tensor involves the Christoffel symbols and their
+  first derivatives, hence the metric and its first \emph{and}
+  second derivatives.  This is consistent with the fact that the
+  Christoffel symbols involve first derivatives of the metric,
+  and the Riemann tensor involves first derivatives of the
+  Christoffel symbols.
+\end{remark}
+
+\subsubsection{Ricci tensor in coordinates}%
+\label{sec:ricci-coord}
+
+By contraction, the Ricci tensor in coordinates is
+\begin{equation}\label{eq:ricci-coord}
+  \Ric_{\mu\rho}
+    = \sum_\nu \Riem^\nu{}_{\mu\nu\rho}
+    = \sum_\nu \biggl(
+        \pd{\chris{\nu}{\nu\rho}}{x^\mu}
+        - \pd{\chris{\nu}{\mu\rho}}{x^\nu}
+        + \sum_\alpha
+          \bigl(
+            \chris{\alpha}{\nu\rho}\,\chris{\nu}{\mu\alpha}
+            - \chris{\alpha}{\mu\rho}\,\chris{\nu}{\nu\alpha}
+          \bigr)
+      \biggr)\,.
+\end{equation}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Useful formulas}\label{sec:useful-formulas}
+
+We collect several results that simplify practical computations
+involving the Christoffel symbols.
+
+\subsubsection{The metric determinant}\label{sec:metric-det}
+
+Let $g = \det(g_{\mu\nu})$ denote the determinant of the metric
+in a coordinate chart.  A standard identity from matrix calculus
+gives:
+\begin{equation}\label{eq:det-deriv}
+  \sum_{\nu,\alpha} g^{\nu\alpha}\,
+    \pd{g_{\nu\alpha}}{x^\mu}
+    = \frac{1}{g}\,\pd{g}{x^\mu}
+    = \pd{\log|g|}{x^\mu}\,.
+\end{equation}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Trace of the Christoffel symbols}%
+\label{sec:christoffel-trace}
+
+\begin{theorem}\label{thm:christoffel-trace}
+  The trace of the Christoffel symbols over the first and second
+  indices is
+  \begin{equation}\label{eq:christoffel-trace}
+    \chris{\alpha}{\alpha\mu}
+      = \sum_\nu \chris{\nu}{\nu\mu}
+      = \frac{1}{2} \sum_{\nu,\alpha} g^{\nu\alpha}\,
+          \pd{g_{\nu\alpha}}{x^\mu}
+      = \pd{\log\sqrt{|g|}}{x^\mu}\,.
+  \end{equation}
+\end{theorem}
+
+\begin{proof}
+  From the definition of the Christoffel
+  symbols~\eqref{eq:christoffel-trace}:
+  \[
+    \chris{\alpha}{\alpha\mu}
+      = \frac{1}{2}\, g^{\alpha\sigma}\biggl(
+          \pd{g_{\sigma\alpha}}{x^\mu}
+          + \pd{g_{\sigma\mu}}{x^\alpha}
+          - \pd{g_{\alpha\mu}}{x^\sigma}
+        \biggr)\,.
+  \]
+  The last two terms cancel when summed over $\alpha$ (by
+  relabelling $\alpha\leftrightarrow\sigma$ and using the
+  symmetry $g^{\alpha\sigma} = g^{\sigma\alpha}$), leaving
+  \[
+    \chris{\alpha}{\alpha\mu}
+      = \frac{1}{2}\, g^{\alpha\sigma}\,
+          \pd{g_{\sigma\alpha}}{x^\mu}
+      = \frac{1}{2g}\,\pd{g}{x^\mu}
+      = \pd{\log\sqrt{|g|}}{x^\mu}\,.
+      \qedhere
+  \]
+\end{proof}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Divergence formula}\label{sec:divergence-formula}
+
+\begin{theorem}[Covariant divergence in coordinates]%
+\label{thm:divergence-formula}
+  For a vector field $T^a$, the covariant divergence is
+  \begin{equation}\label{eq:divergence-formula}
+    \eqbox{\covd_a T^a
+      = \sum_\mu
+        \frac{1}{\sqrt{|g|}}\,
+        \pd{(\sqrt{|g|}\, T^\mu)}{x^\mu}}
+  \end{equation}
+\end{theorem}
+
+\begin{proof}
+  By definition,
+  \[
+    \covd_a T^a
+      = \partial_a T^a + \chris{a}{ab}\, T^b
+      = \sum_\mu \pd{T^\mu}{x^\mu}
+        + \sum_\mu \chris{\mu}{\mu\nu}\, T^\nu\,.
+  \]
+  Substituting the Christoffel
+  trace~\eqref{eq:christoffel-trace}:
+  \[
+    \covd_a T^a
+      = \sum_\mu \pd{T^\mu}{x^\mu}
+        + \sum_\nu
+          \frac{1}{\sqrt{|g|}}\,
+          \pd{\sqrt{|g|}}{x^\nu}\, T^\nu
+      = \sum_\mu
+        \frac{1}{\sqrt{|g|}}\,
+        \pd{(\sqrt{|g|}\, T^\mu)}{x^\mu}\,,
+  \]
+  where the last step uses the product rule.
+\end{proof}
+
+\begin{remark}
+  The divergence formula~\eqref{eq:divergence-formula} is
+  extremely useful in practice.  It shows that the covariant
+  divergence can be computed without explicitly evaluating
+  Christoffel symbols: one needs only the metric determinant and
+  partial derivatives.
+\end{remark}
+
+\begin{exercise}\label{ex:divergence-spherical}
+  Using the divergence
+  formula~\eqref{eq:divergence-formula}, compute $\covd_a T^a$
+  for the metric of $\Rn{3}$ in spherical coordinates
+  $(r,\theta,\varphi)$ and verify that it reproduces the
+  standard expression for the divergence in spherical
+  coordinates.
+\end{exercise}
