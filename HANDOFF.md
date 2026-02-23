@@ -135,6 +135,25 @@ Whitney fonts symlinked to `~/texmf/fonts/opentype/whitney/`.
 4. **Build test**: `./build.sh --draft` — verify zero errors
 5. **Guidelines**: keep additions proportionate; add the lecturer's voice and explanatory depth without overwhelming the existing mathematical content. Good candidates: opening/closing motivational paragraphs, "why we care" framing, physical interpretation of formalism, historical/experimental context, forward/backward references between lectures.
 
+## TikZ figure generation from PNG references
+
+**Potrace-based pipeline** (prototyped 2026-02-23 in `temp/`):
+
+1. Convert PNG → PGM: `python3 -c "from PIL import Image; Image.open('input.png').convert('L').save('input.pgm')"`
+2. Trace bitmap → SVG: `potrace input.pgm -s -o traced.svg --turdsize 5 --alphamax 1.0`
+3. Convert SVG → TikZ: `python3 temp/svg2tikz.py traced.svg 8.0 > output.tex`
+4. Compile preview: `scripts/tikz-preview.sh output.tex`
+
+The converter (`temp/svg2tikz.py`) parses potrace SVG path `d` attributes (M, c, C, l, L, h, v, z commands) and emits TikZ `\fill` commands with exact bezier coordinates. Produces geometrically faithful reproductions.
+
+**Next steps for a production figure**:
+- Separate the main geometry path (Path 4, ~563 pts) from text glyph paths (small paths)
+- Replace `\fill` glyph paths with proper `\node` labels using LaTeX math (`$x^3$`, `$\vb{a}_1$`, etc.)
+- Convert filled line paths to `\draw` strokes where appropriate
+- Apply project styles (spacecadet, cgblue, axisstyle, vecstyle)
+
+**Lesson learned**: Hand-crafting bezier curves by eye is slow and imprecise. Potrace gives geometrically accurate bezier skeletons that can be post-processed into clean TikZ. The pipeline requires `potrace` (apt package) and Python 3 with PIL.
+
 ## Future integration
 
 **Lyr.jl** (`~/Projects/Lyr.jl`): Julia volumetric renderer with planned LyrGR module for Schwarzschild/Kerr geodesic raytracing. Will generate bitmaps for gravitational lensing, redshift, black hole shadows to embed in later lectures.

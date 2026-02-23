@@ -1,0 +1,108 @@
+% surface_fig.tex — Parametric surface in 3D with coordinate curves
+% Matches: 483598_1_En_2_Fig1_HTML.png
+
+\begin{tikzpicture}[
+    scale=1.0,
+    >=Stealth,
+  ]
+
+  % ── Coordinate axes ──────────────────────────────────────────
+  \draw[axisstyle, spacecadet] (0,0) -- (5.8,0) node[right] {$x^2$};
+  \draw[axisstyle, spacecadet] (0,0) -- (0,5.5) node[above] {$x^3$};
+  \draw[axisstyle, spacecadet] (0,0) -- (-1.2,-1.6) node[below left] {$x^1$};
+
+  % ── Basis vectors at origin ──────────────────────────────────
+  \draw[vecstyle, spacecadet] (0,0) -- (-0.55,-0.72)
+    node[below, font=\small\bfseries] {$\vb{e}_1$};
+  \draw[vecstyle, spacecadet] (0,0) -- (1.4,0)
+    node[below, font=\small\bfseries] {$\vb{e}_2$};
+  \draw[vecstyle, spacecadet] (0,0) -- (0,1.4)
+    node[left, font=\small\bfseries] {$\vb{e}_3$};
+
+  % ── Surface S ───────────────────────────────────────────────
+  % Rectangular-ish patch with convex curvature (dome-like)
+  \coordinate (BL) at (0.3, 1.8);
+  \coordinate (BR) at (5.0, 0.9);
+  \coordinate (TR) at (5.2, 4.0);
+  \coordinate (TL) at (0.7, 4.9);
+
+  % Fill surface
+  \fill[isabelline, opacity=0.45]
+    (BL) .. controls (1.8, 0.9) and (3.6, 0.4) .. (BR)       % bottom: sags
+         .. controls (5.2, 1.8) and (5.3, 3.0) .. (TR)        % right: straighter
+         .. controls (3.5, 4.7) and (1.8, 5.1) .. (TL)        % top: moderate arch
+         .. controls (0.3, 3.7) and (0.1, 2.8) .. (BL);       % left: straighter
+
+  % ── Grid lines: u¹ curves (horizontal, left→right) ──────────
+  % t=0.15: near bottom, strong sag
+  \draw[spacecadet!70, line width=0.5pt]
+    (0.36, 2.3) .. controls (1.6, 1.3) and (3.5, 0.9) .. (5.0, 1.4);
+  % t=0.30
+  \draw[spacecadet!70, line width=0.5pt]
+    (0.42, 2.8) .. controls (1.7, 2.0) and (3.5, 1.6) .. (5.0, 1.9);
+  % t=0.45
+  \draw[spacecadet!70, line width=0.5pt]
+    (0.48, 3.2) .. controls (1.8, 2.6) and (3.5, 2.4) .. (5.0, 2.4);
+  % t=0.60
+  \draw[spacecadet!70, line width=0.5pt]
+    (0.54, 3.7) .. controls (1.9, 3.3) and (3.5, 3.1) .. (5.0, 3.0);
+  % t=0.75
+  \draw[spacecadet!70, line width=0.5pt]
+    (0.60, 4.15) .. controls (2.0, 3.9) and (3.6, 3.7) .. (5.1, 3.5);
+  % t=0.90: near top, slight arch
+  \draw[spacecadet!70, line width=0.5pt]
+    (0.66, 4.6) .. controls (2.1, 4.5) and (3.6, 4.4) .. (5.15, 3.9);
+
+  % ── Grid lines: u² curves (vertical, bottom→top) ────────────
+  % s=0.15
+  \draw[spacecadet!70, line width=0.5pt]
+    (1.0, 1.6) .. controls (0.85, 2.6) and (0.85, 3.7) .. (1.3, 4.82);
+  % s=0.30
+  \draw[spacecadet!70, line width=0.5pt]
+    (1.7, 1.5) .. controls (1.55, 2.5) and (1.55, 3.5) .. (1.9, 4.72);
+  % s=0.45
+  \draw[spacecadet!70, line width=0.5pt]
+    (2.4, 1.3) .. controls (2.30, 2.3) and (2.25, 3.4) .. (2.5, 4.60);
+  % s=0.60
+  \draw[spacecadet!70, line width=0.5pt]
+    (3.1, 1.1) .. controls (3.10, 2.1) and (3.05, 3.3) .. (3.15, 4.46);
+  % s=0.75
+  \draw[spacecadet!70, line width=0.5pt]
+    (3.8, 1.0) .. controls (3.90, 2.0) and (3.90, 3.2) .. (3.8, 4.30);
+  % s=0.90
+  \draw[spacecadet!70, line width=0.5pt]
+    (4.5, 0.9) .. controls (4.70, 1.9) and (4.75, 3.1) .. (4.45, 4.12);
+
+  % Surface outline (thick border)
+  \draw[very thick, spacecadet]
+    (BL) .. controls (1.8, 0.9) and (3.6, 0.4) .. (BR)
+         .. controls (5.2, 1.8) and (5.3, 3.0) .. (TR)
+         .. controls (3.5, 4.7) and (1.8, 5.1) .. (TL)
+         .. controls (0.3, 3.7) and (0.1, 2.8) .. (BL);
+
+  % ── Position vector r (dashed) ──────────────────────────────
+  \coordinate (P) at (1.6, 3.2);
+  \draw[thick, dashed, spacecadet] (0,0) -- (P);
+  \node[font=\small\bfseries, spacecadet] at (0.45, 1.35) {$\vb{r}$};
+
+  % Surface point dot
+  \fill[spacecadet] (P) circle (1.5pt);
+
+  % ── Tangent vectors ─────────────────────────────────────────
+  \draw[vecstyle, spacecadet] (P) -- ++(1.4, -0.05)
+    node[right, font=\small\bfseries] {$\vb{a}_1$};
+  \draw[vecstyle, spacecadet] (P) -- ++(0.3, 1.1)
+    node[above right=-2pt, font=\small\bfseries] {$\vb{a}_2$};
+
+  % ── Normal vector n ──────────────────────────────────────────
+  \draw[vecstyle, spacecadet] (P) -- ++(-0.25, 1.4)
+    node[above, font=\small\bfseries] {$\vb{n}$};
+
+  % ── Labels ──────────────────────────────────────────────────
+  \node[font=\Large, spacecadet] at (4.3, 3.5) {$S$};
+  \node[font=\small, spacecadet] at (2.6, 1.2) {$u^1$};
+  \node[font=\small, spacecadet] at (3.8, 1.4) {$u^2$};
+  \node[font=\itshape\large, cgblue, anchor=north west] at (2.8, -0.3)
+    {coordinate curves};
+
+\end{tikzpicture}
