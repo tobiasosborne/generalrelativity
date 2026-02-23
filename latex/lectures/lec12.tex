@@ -1,0 +1,742 @@
+%!TEX root = ../GeneralRelativity.tex
+% ──────────────────────────────────────────────────────────────
+%  Lecture 12 — Lie derivatives and the Newtonian limit
+% ──────────────────────────────────────────────────────────────
+
+\section{Lie derivatives and the Newtonian limit}%
+\label{sec:lie-newtonian}
+
+Having developed the full apparatus of differential
+geometry---manifolds, tangent spaces, tensor fields, covariant
+derivatives, and curvature---we are finally ready to formulate
+Einstein's general theory of relativity.  In this lecture we state
+the fundamental hypotheses of GR and discuss the principles that
+guide the construction of equations of motion in curved spacetime.
+We then introduce the \textbf{Lie derivative}, which makes precise
+the sense in which diffeomorphisms are the gauge symmetry of
+general relativity, and leads naturally to \textbf{Killing vector
+fields} and the connection between spacetime symmetries and
+conservation laws.  Finally, we state \textbf{Einstein's field
+equations} relating spacetime curvature to the distribution of
+matter, linearise them around flat spacetime, and show that in the
+appropriate limit they reproduce Newtonian gravity: both Poisson's
+equation for the gravitational potential and Newton's equation of
+motion for test particles.
+
+% ──────────────────────────────────────────────────────────────
+\subsection{The fundamental hypotheses of general relativity}%
+\label{sec:fundamental-hypotheses}
+
+The equivalence principle, developed in Lecture~2, tells us that no
+experiment can locally distinguish a gravitational field from
+uniform acceleration.  A far-reaching consequence is that it is
+impossible, in general, to set up a family of inertial observers to
+measure the gravitational ``force''---any observer falls along with
+the test body, and there is no natural background motion to compare
+with.  This motivates us to abandon the concept of gravitational
+force altogether and instead encode gravity in the geometry of
+spacetime.
+
+\begin{keyresult}[Fundamental hypothesis of general relativity]
+  \begin{enumerate}
+    \item Spacetime is a four-dimensional manifold~$\M$ equipped
+      with a Lorentz metric~$g_{ab}$ of signature~$(-,+,+,+)$.
+    \item The manifold~$\M$ need not be topologically~$\Rn{4}$,
+      and the metric~$g_{ab}$ need not be flat.
+    \item The world lines of freely falling bodies are geodesics
+      of~$g_{ab}$.
+  \end{enumerate}
+\end{keyresult}
+
+\begin{remark}
+  While the gravitational force cannot be measured directly in a
+  general spacetime, the \emph{relative acceleration} of nearby
+  geodesics---quantified by the geodesic deviation
+  equation~\eqref{eq:geodesic-deviation}---is always well defined.
+  We can therefore speak meaningfully of \emph{tidal forces} in
+  general relativity.  This observation will prove critical when we
+  derive Einstein's field equations below.
+\end{remark}
+
+\begin{intuition}[When can we measure ``gravitational force''?]
+  In situations with time-translation symmetry---for instance, the
+  gravitational field of a single isolated body like the
+  Earth---one can set up a preferred family of static observers and
+  define a gravitational force relative to them.  But the moment
+  two or more bodies are in relative motion, the time-translation
+  symmetry is broken and no preferred background exists.  General
+  relativity is designed to handle this fully general situation.
+\end{intuition}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Equations of motion in curved spacetime}%
+\label{sec:eom-curved}
+
+Given the fundamental hypothesis, how do we determine the laws of
+physics in curved spacetime?  Two guiding principles, while not
+mathematically rigorous, are powerful enough to essentially
+determine the correct equations of motion in most situations of
+physical interest.
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{General covariance and minimal substitution}%
+\label{sec:general-covariance}
+
+\begin{definition}[Principle of general covariance]%
+\label{def:general-covariance}
+  Only the metric~$g_{ab}$ and quantities derivable from it may
+  appear as spacetime quantities in the laws of physics.
+\end{definition}
+
+\noindent
+In particular, no reference to a preferred coordinate system or
+background structure is permitted.
+
+\begin{definition}[Correspondence principle]%
+\label{def:correspondence}
+  The equations of physics in general relativity must reduce to
+  their special-relativistic form when $g_{ab} = \eta_{ab}$.
+\end{definition}
+
+\noindent
+Together, these two principles suggest the following
+\textbf{minimal substitution rules} for passing from special to
+general relativity:
+\begin{equation}\label{eq:minimal-substitution}
+  \eta_{ab} \;\longrightarrow\; g_{ab}\,,
+  \qquad
+  \partial_a \;\longrightarrow\; \covd_a\,,
+\end{equation}
+where $\covd_a$ is the Levi-Civita connection of~$g_{ab}$.
+
+\begin{remark}
+  The minimal substitution rules are a starting point, not a
+  theorem.  Additional curvature-coupling terms (e.g.\ a term
+  $\alpha\, \Ric\, \phi$ in a scalar field equation) may be
+  permitted by both principles, since such terms vanish in the flat
+  limit.  One must supply independent arguments---experiment or
+  internal consistency---to fix such ambiguities.
+\end{remark}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Free particles, energy, and the stress-energy
+  tensor}\label{sec:free-particles-gr}
+
+Physical quantities continue to be represented by tensor fields,
+just as in special relativity.  The key updates concern the
+equations of motion.
+
+\medskip\noindent
+\textbf{Free particle motion.}\;
+A free particle follows a time-like geodesic:
+\begin{equation}\label{eq:geodesic-eom-gr}
+  u^a \covd_a u^b = 0\,,
+\end{equation}
+where $u^a$ is the unit four-velocity tangent to the world line,
+normalised so that $g_{ab}\, u^a u^b = -1$.  When a force acts,
+the equation generalises to $f^a = m\, u^b \covd_b u^a$, where $m$
+is the rest mass.  The four-momentum is $p^a = m\, u^a$.
+
+\medskip\noindent
+\textbf{Energy.}\;
+An observer with four-velocity~$v^a$, present at an event on the
+particle's world line, measures the particle's energy to be
+\begin{equation}\label{eq:energy-local}
+  E = -p_a\, v^a = -g_{ab}\, p^a v^b\,.
+\end{equation}
+This definition requires the observer and the particle to be at
+the \emph{same} spacetime event: on a curved manifold, parallel
+transport is path-dependent, so there is no canonical way to
+compare vectors at distant points.  A given observer cannot, in
+general, define the energy of a distant particle.
+
+\medskip\noindent
+\textbf{Continuous matter.}\;
+A continuous distribution of matter is described by the
+stress-energy tensor~$T_{ab}$.  For a \textbf{perfect fluid} with
+energy density~$\rho$, pressure~$p$, and four-velocity
+field~$u^a$:
+\begin{equation}\label{eq:perfect-fluid}
+  T_{ab} = (\rho + p)\, u_a u_b + p\, g_{ab}\,.
+\end{equation}
+Applying the minimal substitution rule to the
+special-relativistic conservation law
+$\partial^a T_{ab} = 0$ yields
+\begin{equation}\label{eq:stress-energy-conservation}
+  \eqbox{\covd^a T_{ab} = 0}
+\end{equation}
+
+\begin{intuition}[Why $\covd^a T_{ab} = 0$ is not global
+  conservation]
+  In special relativity, $\partial^a T_{ab} = 0$ implies global
+  conservation of energy and momentum via Gauss's theorem: one
+  sets up a family of inertial observers with parallel
+  four-velocities, defines a current
+  $J^a = -T^{ab}\, v_b$, and integrates its divergence over a
+  spacetime region.  In general relativity, the analogous
+  construction requires $v^a$ to satisfy Killing's equation
+  $\covd_{(a} v_{b)} = 0$---but such vector fields need not
+  exist on a general curved spacetime.  We will return to this
+  point in \S\ref{sec:conservation-gr}.
+\end{intuition}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{The Lie derivative}\label{sec:lie-derivative}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Diffeomorphism invariance in general relativity}%
+\label{sec:diffeo-invariance}
+
+For a diffeomorphism $\phi\colon \M \to \M$, the spacetimes
+$(\M, g_{ab})$ and $(\M, \phi^* g_{ab})$ describe the same
+physics: all operationally defined quantities are built from
+tensors in a coordinate-free manner, so the Jacobian factors
+introduced by~$\phi$ cancel in every contraction and tensor
+transformation law.
+
+\begin{keyresult}[Gauge freedom of general relativity]
+  Diffeomorphisms comprise the gauge freedom of general
+  relativity.  Two metrics related by a diffeomorphism represent
+  the same physical spacetime.
+\end{keyresult}
+
+\noindent
+To study \emph{infinitesimal} diffeomorphisms, we need a notion
+of derivative that measures how a tensor field changes along a
+flow.  This is the \textbf{Lie derivative}.
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Definition and elementary properties}%
+\label{sec:lie-def}
+
+Let $v^a$ be a smooth vector field on~$\M$ and $\phi_t$ the
+one-parameter group of diffeomorphisms it generates (its
+\emph{flow}, introduced in Lecture~5).  The
+pullback~$\phi_t^*$ acts on tensor fields by dragging them back
+along the flow.
+
+\begin{definition}[Lie derivative]\label{def:lie-derivative}
+  The \textbf{Lie derivative} of a tensor field
+  $T^{a_1 \cdots a_k}{}_{b_1 \cdots b_l}$ along~$v^a$ is
+  \begin{equation}\label{eq:lie-def}
+    \Lie_v T^{a_1 \cdots a_k}{}_{b_1 \cdots b_l}
+      = \lim_{t \to 0} \frac{1}{t}
+        \Bigl(
+          \phi_t^*\, T^{a_1 \cdots a_k}{}_{b_1 \cdots b_l}
+            \big|_{\phi_t(p)}
+          - T^{a_1 \cdots a_k}{}_{b_1 \cdots b_l}\big|_p
+        \Bigr)\,.
+  \end{equation}
+\end{definition}
+
+\noindent
+The Lie derivative has three fundamental properties:
+\begin{enumerate}
+  \item \textbf{Tensorial}: $\Lie_v T$ is a tensor field of the
+    same type as~$T$.
+  \item \textbf{Leibniz rule}: for any tensor fields~$S$ and~$T$,
+    $\Lie_v(S \tp T) = (\Lie_v S) \tp T + S \tp (\Lie_v T)$.
+  \item \textbf{Linearity}: $\Lie_v(\alpha S + \beta T)
+    = \alpha\, \Lie_v S + \beta\, \Lie_v T$ for
+    $\alpha, \beta \in \R$.
+\end{enumerate}
+
+\medskip\noindent
+\textbf{On scalar fields.}\;
+For $f \in C^\infty(\M)$:
+\begin{equation}\label{eq:lie-scalar}
+  \Lie_v f = v(f) = v^a \partial_a f\,.
+\end{equation}
+
+\medskip\noindent
+\textbf{On vector fields.}\;
+For a vector field~$w^a$, the Lie derivative is the Lie bracket:
+\begin{equation}\label{eq:lie-vector}
+  \Lie_v w^a = [v, w]^a
+    = v^b \covd_b w^a - w^b \covd_b v^a\,.
+\end{equation}
+
+\begin{exercise}\label{ex:lie-vector-proof}
+  Prove~\eqref{eq:lie-vector} from the
+  definition~\eqref{eq:lie-def}.
+\end{exercise}
+
+\medskip\noindent
+\textbf{On covector fields.}\;
+For a covector field~$\mu_a$, apply the Leibniz rule to the
+scalar $\mu_a w^a$ for an arbitrary vector field~$w^a$:
+\[
+  \Lie_v(\mu_a w^a)
+    = w^a \Lie_v \mu_a + \mu_a\, [v, w]^a\,.
+\]
+Since $\Lie_v(\mu_a w^a) = v^b \covd_b(\mu_a w^a)$ by
+\eqref{eq:lie-scalar}, expanding the right-hand side and comparing
+terms yields (since $w^a$ is arbitrary):
+\begin{equation}\label{eq:lie-covector}
+  \Lie_v \mu_a = v^b \covd_b \mu_a + \mu_b\, \covd_a v^b\,.
+\end{equation}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{The Lie derivative of a general tensor field}%
+\label{sec:lie-general}
+
+Extending the pattern of~\eqref{eq:lie-vector}
+and~\eqref{eq:lie-covector} to a tensor of type~$(k,l)$:
+
+\begin{theorem}[Lie derivative of a general tensor]%
+\label{thm:lie-general}
+  For any torsion-free derivative operator~$\covd_a$:
+  \begin{equation}\label{eq:lie-general}
+    \eqbox{
+    \Lie_v T^{a_1 \cdots a_k}{}_{b_1 \cdots b_l}
+      = v^c \covd_c T^{a_1 \cdots a_k}{}_{b_1 \cdots b_l}
+        - \sum_{j=1}^{k}
+          T^{a_1 \cdots c \cdots a_k}{}_{b_1 \cdots b_l}\,
+          \covd_c v^{a_j}
+        + \sum_{j=1}^{l}
+          T^{a_1 \cdots a_k}{}_{b_1 \cdots c \cdots b_l}\,
+          \covd_{b_j} v^c
+    }
+  \end{equation}
+  In the first sum, the index~$c$ replaces~$a_j$ in the $j$-th
+  contravariant slot; in the second sum, $c$ replaces~$b_j$ in the
+  $j$-th covariant slot.
+\end{theorem}
+
+\begin{remark}
+  Although individual terms in~\eqref{eq:lie-general} depend on the
+  choice of~$\covd_a$, the Christoffel-symbol contributions cancel
+  in the sum.  The Lie derivative is defined purely in terms of the
+  flow of~$v^a$ and requires no connection.
+\end{remark}
+
+\begin{exercise}\label{ex:lie-general-verify}
+  Verify~\eqref{eq:lie-general} by applying the Leibniz rule
+  repeatedly, using the results for
+  scalars~\eqref{eq:lie-scalar},
+  vectors~\eqref{eq:lie-vector}, and
+  covectors~\eqref{eq:lie-covector}.
+\end{exercise}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Killing vector fields and conservation laws}%
+\label{sec:killing}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{The Lie derivative of the metric}%
+\label{sec:lie-metric}
+
+Since $\covd_a g_{bc} = 0$ for the Levi-Civita connection,
+applying~\eqref{eq:lie-general} to the metric gives
+\begin{equation}\label{eq:lie-metric}
+  \eqbox{\Lie_v g_{ab} = \covd_a v_b + \covd_b v_a}
+\end{equation}
+where $v_a = g_{ab}\, v^b$.
+
+\begin{intuition}[Lie derivative as metric strain]
+  The quantity $\Lie_v g_{ab}$ measures how the metric changes as
+  one flows along~$v^a$.  If $\Lie_v g_{ab} = 0$, then distances
+  and angles are preserved by the flow: it is an isometry.
+  Formula~\eqref{eq:lie-metric} shows that this condition depends
+  only on the symmetrised covariant derivative of~$v^a$---the
+  curved-space analogue of the strain tensor in continuum
+  mechanics.
+\end{intuition}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Killing's equation and isometries}%
+\label{sec:killing-equation}
+
+\begin{definition}[Killing vector field]\label{def:killing}
+  A vector field~$v^a$ is a \textbf{Killing vector field} if it
+  generates an isometry: $\Lie_v g_{ab} = 0$.
+  By~\eqref{eq:lie-metric}, this is equivalent to
+  \textbf{Killing's equation}:
+  \begin{equation}\label{eq:killing-equation}
+    \eqbox{\covd_{(a} v_{b)} = 0}
+  \end{equation}
+\end{definition}
+
+\noindent
+Each solution of Killing's equation corresponds to a continuous
+symmetry of the spacetime geometry.  In Minkowski space, there are
+ten independent Killing vector fields: four translations
+(generating conservation of energy-momentum) and six Lorentz
+transformations (generating conservation of angular momentum).
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Conservation laws in general relativity}%
+\label{sec:conservation-gr}
+
+In special relativity, the condition $\partial^a T_{ab} = 0$
+leads to global conservation laws via Gauss's theorem.  The
+procedure requires a family of inertial observers with parallel
+four-velocities ($\partial_a v^b = 0$), which allows one to
+define a conserved current
+$J^a = -T^{ab}\, v_b$ satisfying $\partial_a J^a = 0$.
+
+In general relativity, the analogous condition
+$\covd^a T_{ab} = 0$ does \emph{not} by itself imply a global
+conservation law.  To construct a divergence-free current, we need
+a vector field~$v^a$ satisfying Killing's
+equation~\eqref{eq:killing-equation}.
+
+\begin{keyresult}[No global energy conservation in general]
+  On a general curved spacetime, Killing vector fields need not
+  exist.  In particular, de~Sitter spacetime admits no global
+  time-like Killing vector field.  Consequently, there is no
+  global notion of conserved energy, and the equation
+  $\covd^a T_{ab} = 0$ does \emph{not} imply global energy
+  conservation.
+\end{keyresult}
+
+\noindent
+However, when a Killing vector~$\xi^a$ does exist, we obtain a
+genuinely conserved current:
+\begin{equation}\label{eq:killing-current}
+  J^a = T^{ab}\, \xi_b\,,
+  \qquad
+  \covd_a J^a = 0\,.
+\end{equation}
+
+\begin{exercise}\label{ex:killing-current}
+  Prove that if $\xi^a$ is a Killing vector field and
+  $\covd^a T_{ab} = 0$, then $\covd_a J^a = 0$ where
+  $J^a = T^{ab}\, \xi_b$.
+\end{exercise}
+
+\begin{remark}
+  Physically, the absence of global energy conservation reflects
+  the fact that the gravitational field does work on matter via
+  tidal forces, transferring energy between the curvature of
+  spacetime and the matter content.  Only when a time-translation
+  symmetry exists can one define a total energy that is conserved.
+  Equation~\eqref{eq:stress-energy-conservation} may still be
+  regarded as expressing \emph{local} conservation of
+  energy-momentum in a sufficiently small, approximately flat
+  region.
+\end{remark}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Einstein's field equations}%
+\label{sec:einstein-equations}
+
+We have equations of motion for matter fields
+($\covd^a T_{ab} = 0$), but we do not yet have an equation
+determining the metric itself.  Since general relativity treats
+spacetime as dynamical---its geometry responds to the presence of
+matter---we need an equation of motion for~$g_{ab}$.  This is
+where Mach's principle enters: the geometry of spacetime is
+determined by the distribution of matter and energy.
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{From tidal forces to spacetime curvature}%
+\label{sec:tidal-to-curvature}
+
+The key clue comes from comparing the Newtonian description of
+tidal forces with the geodesic deviation equation.  In Newtonian
+gravity, two test particles on nearby orbits in a gravitational
+potential~$\phi$ experience a relative (tidal) acceleration
+\begin{equation}\label{eq:newtonian-tidal}
+  a^i = -\frac{\partial^2 \phi}{\partial x^i\, \partial x^j}\, \Delta x^j\,,
+\end{equation}
+where $\Delta x^j$ is the separation vector.  In general
+relativity, the geodesic deviation
+equation~\eqref{eq:geodesic-deviation} gives
+\[
+  A^a = -\Riem_{cbd}{}^a\, X^b\, T^c\, T^d\,.
+\]
+Comparing these suggests the correspondence
+\begin{equation}\label{eq:curvature-potential}
+  \Riem_{cbd}{}^a\, T^c T^d
+  \;\longleftrightarrow\;
+  \frac{\partial^2 \phi}{\partial x^i\, \partial x^j}\,.
+\end{equation}
+In Newtonian theory, $\phi$ is determined by the mass
+density~$\rho$ via Poisson's equation
+$\nabla^2 \phi = 4\pi\rho$.  Since the energy density observed
+by an observer with four-velocity~$v^a$ is
+$\rho = T_{ab}\, v^a v^b$, the
+correspondence~\eqref{eq:curvature-potential} points toward an
+equation relating curvature to~$T_{ab}$.  Contracting over the
+velocity directions yields a correspondence between the Ricci
+tensor and the stress-energy tensor.
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{The Einstein equation}%
+\label{sec:einstein-equation}
+
+A first guess, following the analogy above, would be
+$\Ric_{ab} = 8\pi\, T_{ab}$.  However, this is
+\emph{inconsistent} with the equation of motion
+$\covd^a T_{ab} = 0$.  The contracted Bianchi
+identity~\eqref{eq:contracted-bianchi} gives
+\[
+  \covd^a \Ric_{ab} = \tfrac{1}{2}\, \covd_b \Ric\,,
+\]
+which vanishes only when the Ricci scalar~$\Ric$ is constant---a
+condition not satisfied by most interesting spacetimes.
+
+The resolution is to use the Einstein tensor
+$\Ein_{ab} = \Ric_{ab} - \frac{1}{2}\, \Ric\, g_{ab}$, which
+\emph{is} divergence-free
+($\covd^a \Ein_{ab} = 0$,
+cf.~\eqref{eq:einstein-divergence-free}) as a consequence of
+the Bianchi identity.
+
+\begin{keyresult}[Einstein's field equations]
+  \begin{equation}\label{eq:einstein-field}
+    \eqbox{\Ein_{ab}
+      = \Ric_{ab} - \tfrac{1}{2}\, \Ric\, g_{ab}
+      = 8\pi\, T_{ab}}
+  \end{equation}
+  This equation relates the curvature of spacetime (left-hand
+  side) to the distribution of matter and energy (right-hand
+  side).  The factor~$8\pi$ is fixed by requiring agreement with
+  Newtonian gravity in the appropriate limit.
+\end{keyresult}
+
+\begin{historical}[Einstein's path to the field equations]
+  Einstein first proposed $\Ric_{ab} = 8\pi\, T_{ab}$ but quickly
+  realised the inconsistency with energy-momentum conservation.
+  The resolution---replacing the Ricci tensor with the Einstein
+  tensor---was guided by the contracted Bianchi identity.  The
+  final form~\eqref{eq:einstein-field} was published by Einstein
+  in November~1915.  The mathematical identity
+  $\covd^a \Ein_{ab} = 0$ guarantees that Einstein's equation is
+  \emph{automatically} consistent with the conservation of
+  energy-momentum---the geometry and the matter talk to each other
+  in a self-consistent way.
+\end{historical}
+
+\begin{remark}
+  Einstein's equation~\eqref{eq:einstein-field} is a system of
+  ten coupled, nonlinear partial differential equations for the ten
+  independent components of~$g_{ab}$.  Finding exact solutions is
+  extraordinarily difficult; we will succeed only in a few highly
+  symmetric cases.  Much of the remainder of this course is devoted
+  to exploring the consequences of this equation.
+\end{remark}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Linearised gravity and gauge invariance}%
+\label{sec:linearised}
+
+To connect Einstein's equation with Newtonian gravity, we consider
+the regime where the gravitational field is weak: the metric is
+close to the flat Minkowski metric.
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Metric perturbations and the linearised Einstein
+  tensor}\label{sec:metric-perturbations}
+
+Write the metric as a small perturbation of flat spacetime:
+\begin{equation}\label{eq:metric-perturbation}
+  g_{ab} = \eta_{ab} + \gamma_{ab}\,,
+  \qquad |\gamma_{ab}| \ll 1\,.
+\end{equation}
+All indices are raised and lowered with~$\eta_{ab}$.  Define the
+\textbf{trace-reversed perturbation}:
+\begin{equation}\label{eq:trace-reversed}
+  \bar\gamma_{ab} = \gamma_{ab}
+    - \tfrac{1}{2}\, \eta_{ab}\, \gamma\,,
+  \qquad
+  \gamma = \eta^{ab}\, \gamma_{ab}\,.
+\end{equation}
+
+\noindent
+To first order in~$\gamma_{ab}$, Einstein's
+equation~\eqref{eq:einstein-field} becomes the \textbf{linearised
+Einstein equation}:
+\begin{equation}\label{eq:linearised-einstein}
+  \Ein_{ab}^{(1)}
+    = -\tfrac{1}{2}\, \partial^c \partial_c\, \bar\gamma_{ab}
+      + \partial^c \partial_{(a}\, \bar\gamma_{b)c}
+      - \tfrac{1}{2}\, \eta_{ab}\, \partial^c \partial^d\,
+        \bar\gamma_{cd}
+    = 8\pi\, T_{ab}\,.
+\end{equation}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Gauge freedom and the Lorenz gauge}%
+\label{sec:gauge-lorenz}
+
+An infinitesimal diffeomorphism generated by a vector
+field~$\xi^a$ transforms the metric perturbation as
+\begin{equation}\label{eq:gauge-transformation}
+  \gamma_{ab} \;\longrightarrow\;
+  \gamma_{ab} + \partial_a \xi_b + \partial_b \xi_a\,.
+\end{equation}
+This is the linearised version of the diffeomorphism invariance
+discussed in \S\ref{sec:diffeo-invariance}: it is the
+\textbf{gauge freedom} of linearised gravity, directly analogous
+to the gauge freedom $A_a \to A_a + \partial_a \Lambda$ of
+electromagnetism.
+
+We exploit this freedom to simplify the field equations.
+Choose~$\xi^a$ satisfying the wave equation
+\begin{equation}\label{eq:lorenz-gauge-solve}
+  \partial^b \partial_b\, \xi_a
+    = -\partial^b \bar\gamma_{ab}\,.
+\end{equation}
+After this gauge transformation, the \textbf{Lorenz gauge
+condition}
+\begin{equation}\label{eq:lorenz-gauge}
+  \partial^b \bar\gamma_{ab} = 0
+\end{equation}
+is satisfied, and the linearised Einstein
+equation~\eqref{eq:linearised-einstein} reduces to
+\begin{equation}\label{eq:linearised-wave}
+  \eqbox{\partial^c \partial_c\, \bar\gamma_{ab}
+    = -16\pi\, T_{ab}}
+\end{equation}
+
+\begin{remark}
+  In vacuum ($T_{ab} = 0$),
+  equation~\eqref{eq:linearised-wave} is the wave equation
+  $\dalem\, \bar\gamma_{ab} = 0$ for a massless spin-$2$ field
+  propagating on flat spacetime.  Its solutions are
+  \textbf{gravitational waves}---ripples in the fabric of
+  spacetime---which we will study in a later lecture.
+\end{remark}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{The Newtonian limit}\label{sec:newtonian-limit}
+
+We now show that Einstein's equation reduces to Newtonian gravity
+in the appropriate limit, thereby fixing the constant~$8\pi$
+in~\eqref{eq:einstein-field} and providing a powerful consistency
+check.
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Assumptions}\label{sec:newtonian-assumptions}
+
+The Newtonian limit is the regime where:
+\begin{enumerate}[(a)]
+  \item \textbf{Gravity is weak}: the metric is well approximated
+    by~\eqref{eq:metric-perturbation} with
+    $|\gamma_{ab}| \ll 1$.
+  \item \textbf{Motion is slow}: all velocities are much less
+    than~$c$.
+  \item \textbf{Stresses are small}: material stresses (pressure)
+    are much less than the mass-energy density~$\rho$.
+\end{enumerate}
+These assumptions allow us to choose a global inertial coordinate
+system in which the stress-energy tensor takes the form
+\begin{equation}\label{eq:tab-newtonian}
+  T_{ab} \approx \rho\, t_a\, t_b\,,
+\end{equation}
+where $t^a = (\partial / \partial x^0)^a$ is the unit time-like
+vector.  Since sources are slowly varying, time derivatives of the
+perturbation~$\bar\gamma_{ab}$ are negligible compared to spatial
+derivatives.
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Recovery of Poisson's equation}%
+\label{sec:poisson-recovery}
+
+Under these assumptions, the wave
+equation~\eqref{eq:linearised-wave} reduces to the Laplace/Poisson
+equations:
+\[
+  \nabla^2 \bar\gamma_{\mu\nu}
+    = -16\pi\, T_{\mu\nu}\,.
+\]
+For $(\mu,\nu) \neq (0,0)$, the right-hand side vanishes, giving
+$\nabla^2 \bar\gamma_{\mu\nu} = 0$.  With the boundary condition
+$\bar\gamma_{\mu\nu} \to 0$ at spatial infinity, the unique
+solution is $\bar\gamma_{\mu\nu} = 0$ for
+$(\mu,\nu) \neq (0,0)$.
+
+The $(0,0)$ component gives
+\begin{equation}\label{eq:gamma-00}
+  \nabla^2 \bar\gamma_{00} = -16\pi\rho\,.
+\end{equation}
+Defining the \textbf{Newtonian gravitational potential}
+\begin{equation}\label{eq:newtonian-potential}
+  \phi = -\tfrac{1}{4}\, \bar\gamma_{00}\,,
+\end{equation}
+equation~\eqref{eq:gamma-00} becomes
+\begin{equation}\label{eq:poisson}
+  \eqbox{\nabla^2 \phi = 4\pi\rho}
+\end{equation}
+which is \textbf{Poisson's equation}---the fundamental field
+equation of Newtonian gravity.
+
+\medskip\noindent
+The full metric perturbation in the Newtonian limit is
+\begin{equation}\label{eq:newtonian-metric}
+  \gamma_{ab}
+    = \bar\gamma_{ab}
+      - \tfrac{1}{2}\, \eta_{ab}\, \bar\gamma
+    = -(4\, t_a t_b + 2\, \eta_{ab})\,\phi\,,
+\end{equation}
+giving the line element
+\begin{equation}\label{eq:newtonian-line-element}
+  ds^2 = -(1 + 2\phi)\, dt^2
+       + (1 - 2\phi)(dx^2 + dy^2 + dz^2)\,.
+\end{equation}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Recovery of Newton's equation of motion}%
+\label{sec:newton-eom}
+
+It remains to show that freely falling particles obey Newton's
+law.  The geodesic equation in coordinates reads
+\[
+  \frac{d^2 x^\mu}{d\tau^2}
+    + \chris{\mu}{\rho\sigma}\,
+      \frac{dx^\rho}{d\tau}\, \frac{dx^\sigma}{d\tau}
+    = 0\,.
+\]
+For a slowly moving test body,
+$dx^\mu/d\tau \approx (1,0,0,0)$ and $\tau \approx t$, so
+\begin{equation}\label{eq:geodesic-slow}
+  \frac{d^2 x^\mu}{dt^2}
+    \approx -\chris{\mu}{00}\,.
+\end{equation}
+From the metric~\eqref{eq:newtonian-metric}, the relevant
+Christoffel symbols are (neglecting time derivatives):
+\begin{equation}\label{eq:christoffel-newtonian}
+  \chris{i}{00}
+    = -\tfrac{1}{2}\, \eta^{ij}\,
+      \pd{\gamma_{00}}{x^j}
+    = \pd{\phi}{x^i}\,,
+  \qquad i = 1,2,3\,.
+\end{equation}
+Substituting into~\eqref{eq:geodesic-slow}:
+\begin{equation}\label{eq:newton-law}
+  \eqbox{\frac{d^2 x^i}{dt^2} = -\pd{\phi}{x^i}}
+\end{equation}
+In vector notation, $\vb{a} = -\nabla\phi$: a test particle
+accelerates in the direction of decreasing gravitational
+potential.  This is precisely \textbf{Newton's law of
+gravitation}.
+
+\begin{keyresult}[General relativity contains Newtonian gravity]
+  In the limit of weak gravitational fields, slow motion, and
+  small stresses, Einstein's field
+  equations~\eqref{eq:einstein-field} reduce to Poisson's
+  equation~\eqref{eq:poisson} for the gravitational potential, and
+  the geodesic equation reduces to Newton's law of
+  motion~\eqref{eq:newton-law}.  Newtonian gravity is contained
+  within general relativity as a limiting case.
+\end{keyresult}
+
+\begin{intuition}[The meaning of $8\pi$]
+  The factor of~$8\pi$ in Einstein's
+  equation~\eqref{eq:einstein-field} is not arbitrary: it is
+  uniquely fixed by the requirement that the Newtonian limit
+  reproduces Poisson's equation with the correct coefficient
+  $4\pi\rho$.  This is the quantitative content of Mach's
+  principle in general relativity.
+\end{intuition}
+
+\medskip
+With Einstein's field equations in hand and the Newtonian limit
+verified, we have established the complete framework of general
+relativity.  In the lectures that follow, we will explore the
+consequences of Einstein's equation in greater depth: its
+linearised solutions (gravitational radiation), exact solutions
+in the presence of spherical symmetry (the Schwarzschild
+solution), and cosmological models.

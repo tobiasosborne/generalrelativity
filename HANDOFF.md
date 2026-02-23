@@ -7,17 +7,18 @@ Public: https://github.com/tobiasosborne/generalrelativity (Apache 2.0)
 
 ## Status
 
-11 of 23 lectures converted (+ 1 supplementary note). 60 pages total.
+12 of 23 lectures converted (+ 1 supplementary note). 68 pages total.
 Lectures 1–11 enriched with transcript material.
+Lecture 12 created via full workflow (PDF + transcript).
 Julia simulation pipeline operational: 3 scripts generating data-driven pgfplots figures.
 Build tool: `./build.sh` with `--cmfonts`, `--draft`, `--simdata`, `--full`, `--clean`, `--watch` options.
 
 | Done | Transcript-enriched | Next |
 |------|---------------------|------|
-| Lec 1: Prerelativity gravitation + Lagrange point figure | ✓ | Lec 12: Lie derivatives & Newtonian limit (full workflow) |
-| Lec 2: Equivalence principle & Mach + geodesic bump figure | ✓ | Lec 13: Einstein's field equations, linearised solutions |
-| Lec 3: Manifolds + ellipsoid geodesics figure | ✓ | Lec 14: Gravitational radiation |
-| Lec 4: Tangent space | ✓ | Lec 15–18: Schwarzschild solution & geodesics |
+| Lec 1: Prerelativity gravitation + Lagrange point figure | ✓ | Lec 13: Einstein's field equations, linearised solutions |
+| Lec 2: Equivalence principle & Mach + geodesic bump figure | ✓ | Lec 14: Gravitational radiation |
+| Lec 3: Manifolds + ellipsoid geodesics figure | ✓ | Lec 15–18: Schwarzschild solution & geodesics |
+| Lec 4: Tangent space | ✓ | |
 | Lec 5: Flows and tensors | ✓ | |
 | Lec 6: Tensors continued (cotangent, transformation laws, metric, AIN) | ✓ | |
 | Lec 7: Derivative operators (affine connections, C tensor, Christoffel) | ✓ | |
@@ -25,6 +26,7 @@ Build tool: `./build.sh` with `--cmfonts`, `--draft`, `--simdata`, `--full`, `--
 | Lec 9: Abstract index notation review, curvature intro | ✓ | |
 | Lec 10: Geodesics as extremal curves, Riemann tensor, loops | ✓ | |
 | Lec 11: Riemann symmetries, Bianchi, Ricci, Einstein tensor, geodesic deviation | ✓ | |
+| Lec 12: Lie derivatives, Killing vectors, Einstein's eqs, linearised gravity, Newtonian limit | ✓ | |
 | Note: ∂_a as covariant derivative | | |
 
 ## Lecture-to-PDF mapping
@@ -76,7 +78,7 @@ latex/
   gr-tikz-templates.sty       # pgfplots styles, colormaps, standard dims, \pic defs
   references.bib              # Bibliography (Wald, MTW, Weinberg, TLL73)
   lectures/
-    lec01.tex – lec11.tex     # Converted lectures
+    lec01.tex – lec12.tex     # Converted lectures
   notes/
     note_da_covariant_derivative.tex
   figures/
