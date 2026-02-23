@@ -1,0 +1,121 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{gr-macros}[2026/02/23 General Relativity macro library]
+
+% ══════════════════════════════════════════════════════════════
+%  DERIVATIVES
+% ══════════════════════════════════════════════════════════════
+
+% Partial derivative: \pd{f}{x}, \pd[2]{f}{x}
+\newcommand{\pd}[3][]{\frac{\partial^{#1} #2}{\partial #3^{#1}}}
+
+% Total derivative
+\newcommand{\td}[2]{\frac{d #1}{d #2}}
+
+% Upright differential
+\newcommand{\dd}{\mathrm{d}}
+
+% Covariant derivative operator
+\newcommand{\covd}{\nabla}
+
+% Lie derivative
+\newcommand{\Lie}{\mathcal{L}}
+
+% d'Alembertian / wave operator
+\newcommand{\dalem}{\Box}
+
+% Laplacian
+\newcommand{\lap}{\Delta}
+
+% ══════════════════════════════════════════════════════════════
+%  VECTORS & NOTATION
+% ══════════════════════════════════════════════════════════════
+
+% Bold vector (for 3-vectors in Newtonian context)
+\newcommand{\vb}[1]{\boldsymbol{#1}}
+
+% Unit vector
+\newcommand{\uv}[1]{\hat{\boldsymbol{#1}}}
+
+% Dot (time derivative)
+\newcommand{\dt}[1]{\dot{#1}}
+\newcommand{\ddt}[1]{\ddot{#1}}
+
+% Norm
+\newcommand{\norm}[1]{\lVert #1 \rVert}
+
+% ══════════════════════════════════════════════════════════════
+%  TENSOR CALCULUS & DIFFERENTIAL GEOMETRY
+% ══════════════════════════════════════════════════════════════
+
+% Christoffel symbols: \chris{a}{bc}
+\newcommand{\chris}[2]{\Gamma^{#1}{}_{#2}}
+
+% Riemann tensor
+\newcommand{\Riem}{R}
+
+% Ricci tensor / scalar
+\newcommand{\Ric}{R}
+
+% Einstein tensor
+\newcommand{\Ein}{G}
+
+% Weyl tensor
+\newcommand{\Weyl}{C}
+
+% Metric
+\newcommand{\metric}{g}
+
+% Tensor type
+\newcommand{\ttype}[2]{\mathcal{T}(#1,#2)}
+
+% Tensor product
+\newcommand{\tp}{\otimes}
+
+% ══════════════════════════════════════════════════════════════
+%  SPACES & MANIFOLDS
+% ══════════════════════════════════════════════════════════════
+
+\newcommand{\M}{\mathcal{M}}           % Manifold
+\newcommand{\Tp}{T_p\M}                % Tangent space
+\newcommand{\Tps}{T_p^*\M}             % Cotangent space
+\newcommand{\R}{\mathbb{R}}            % Reals
+\newcommand{\Rn}[1]{\mathbb{R}^{#1}}   % R^n
+
+% ══════════════════════════════════════════════════════════════
+%  PHYSICS OPERATORS & CONSTANTS
+% ══════════════════════════════════════════════════════════════
+
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\grad}{grad}
+\DeclareMathOperator{\Div}{div}
+\DeclareMathOperator{\curl}{curl}
+
+% Gravitational constant
+\newcommand{\grav}{G}
+
+% ══════════════════════════════════════════════════════════════
+%  TIKZ STYLES (for vectors, fields, coordinate systems)
+% ══════════════════════════════════════════════════════════════
+
+\tikzset{
+  % Vector arrow style
+  vecstyle/.style={-{Stealth[length=6pt,width=4pt]}, thick, cgblue},
+  % Field line style
+  fieldline/.style={-{Stealth[length=5pt,width=3pt]}, thin, spacecadet},
+  % Coordinate axes
+  axisstyle/.style={-{Stealth[length=6pt,width=4pt]}, thick},
+  % Point mass
+  pointmass/.style={circle, fill=spacecadet, inner sep=2pt},
+  % Test mass
+  testmass/.style={circle, fill=cgblue, inner sep=1.5pt},
+  % Dashed trajectory
+  trajectory/.style={dashed, cgblue, thick},
+  % Gravitational field region
+  fieldregion/.style={draw=none, fill=isabelline, rounded corners=3pt},
+}
+
+\endinput

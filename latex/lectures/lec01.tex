@@ -1,0 +1,469 @@
+%!TEX root = ../GeneralRelativity.tex
+% ──────────────────────────────────────────────────────────────
+%  Lecture 1 — Prerelativity Gravitation
+% ──────────────────────────────────────────────────────────────
+
+\section{Prerelativity gravitation}\label{sec:prerelativity}
+
+\subsection{Course overview}
+
+\noindent\textbf{Text.} Wald, \emph{General Relativity}~\cite{Wald84}.\\
+\textbf{Other sources:}
+\begin{itemize}
+  \item Misner, Thorne \& Wheeler~\cite{MTW73}
+  \item Weinberg~\cite{Weinberg72}
+\end{itemize}
+
+\noindent\textbf{Structure.}
+The course proceeds from mathematical methods to the physics of
+gravitation:
+
+\begin{center}
+\begin{tikzpicture}[
+  block/.style={rectangle, rounded corners=3pt, draw=cgblue,
+    fill=cgblue!10, minimum height=1.8em, text=spacecadet,
+    font=\sf\small, inner sep=5pt},
+  arr/.style={-{Stealth[length=5pt]}, thick, cgblue}
+]
+  \node[block] (math) {Differential geometry};
+  \node[block, right=1.8cm of math] (phys) {Physics of gravitation};
+  \node[block, below=0.8cm of math, font=\sf\small\itshape,
+    draw=spacecadet!30, fill=isabelline]
+    (qg) {Quantum gravity \& string theory};
+  \draw[arr] (math) -- (phys);
+  \draw[arr, spacecadet!50] (math) -- (qg);
+  \draw[arr, spacecadet!50] (phys.south) to[out=-90,in=0] (qg.east);
+\end{tikzpicture}
+\end{center}
+
+\noindent\textbf{Videos.} Lenny Susskind's lecture series.
+
+\medskip\noindent\textbf{Prerequisites:}
+\begin{itemize}
+  \item Special relativity
+  \item Calculus
+  \item Linear algebra
+  \item Combinatorics
+\end{itemize}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Newtonian mechanics and inertial frames}
+
+\textbf{Assumption:} Newtonian physics presupposes the existence of a
+preferred reference system and clocks.
+
+\begin{center}
+\begin{tikzpicture}
+  \draw[axisstyle] (0,0,0) -- (2.5,0,0) node[right]{$x$};
+  \draw[axisstyle] (0,0,0) -- (0,2,0)   node[above]{$z$};
+  \draw[axisstyle] (0,0,0) -- (0,0,2)   node[below left]{$y$};
+\end{tikzpicture}
+\end{center}
+
+A free test mass (i.e.\ no force acts) moves along a straight trajectory
+at a constant rate, uniformly in time.
+This defines an \emph{inertial reference frame}.
+
+Newton's second law is written with respect to an inertial reference system:
+\begin{equation}\label{eq:newton2}
+  \eqbox{\vb{F}(\vb{x}(t),\, t) \;=\; m_I\, \ddt{\vb{x}}(t)}\,,
+\end{equation}
+where $\vb{F}$ is the force, $m_I$ is the \emph{inertial mass}, and
+$\ddt{\vb{x}}$ is the acceleration.
+
+\subsubsection{Non-inertial reference frames}
+With respect to a non-inertial reference frame, define three
+(time-dependent) unit vectors $\uv{x}'(t)$, $\uv{y}'(t)$, $\uv{z}'(t)$.
+A trajectory can be expressed in either basis:
+\begin{align}
+  \vb{w}(t) &= w_x(t)\,\uv{x} + w_y(t)\,\uv{y} + w_z(t)\,\uv{z}
+  \label{eq:traj-inertial}\\
+  &= w_{x'}(t)\,\uv{x}'(t) + w_{y'}(t)\,\uv{y}'(t) + w_{z'}(t)\,\uv{z}'(t).
+  \label{eq:traj-noninertial}
+\end{align}
+
+\noindent\textbf{Index notation.}
+For a vector $\vb{a}$ and a matrix $M$:
+\[
+  [\vb{a}]_x = a_x\,,\qquad
+  [M]_{xy} = M_{xy}\,.
+\]
+
+Physics in non-inertial frames (as captured by Newton's second law) gives
+rise to additional \emph{inertial force} terms, e.g.\ centrifugal,
+Coriolis, Euler forces, etc.
+
+\begin{exercise}
+  Distinguish ``true forces'' from apparent (inertial) forces.
+\end{exercise}
+
+\begin{intuition}[Why inertial forces matter]
+  In a rotating reference frame, a ball thrown in a straight line
+  \emph{appears} to curve (Coriolis effect).  The ``force'' causing this
+  curve is not due to any physical interaction---it is an artefact of the
+  non-inertial frame.  In Newtonian physics, gravity is classified as a
+  \emph{true} force.  A central insight of general relativity is that
+  gravity, too, can be understood as an artefact of geometry---effectively
+  reclassifying it alongside the inertial forces.
+\end{intuition}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Mass: three conceptually distinct quantities}
+
+\begin{enumerate}[(i)]
+  \item \textbf{Inertial mass} $m_I$: the constant of proportionality in
+    Newton's second law,
+    \begin{equation}\label{eq:newton2-abstract}
+      F = m_I\, a\,.
+    \end{equation}
+
+  \item \textbf{Active gravitational mass} $m_g^{(a)}$: the mass that
+    \emph{produces} the gravitational field that other masses respond to.
+    The gravitational field of a point source at position $\vb{x}'$ is
+    \begin{equation}\label{eq:grav-field-point}
+      \vb{g}(\vb{x})
+        = -\grav\, m_g^{(a)}\,
+          \frac{\vb{x} - \vb{x}'}{\norm{\vb{x} - \vb{x}'}^3}\,,
+    \end{equation}
+    where $\grav$ is the gravitational constant,
+    \begin{equation}
+      \grav = 6.674\,30(15) \times 10^{-11}\;\mathrm{m}^3\,
+              \mathrm{kg}^{-1}\,\mathrm{s}^{-2}\,.
+    \end{equation}
+
+  \item \textbf{Passive gravitational mass} $m_g^{(p)}$: the mass that
+    \emph{responds} to an external gravitational field by accelerating,
+    \begin{equation}\label{eq:grav-force}
+      \vb{F}_g = m_g^{(p)}\,\vb{g}\,.
+    \end{equation}
+\end{enumerate}
+
+It is assumed that $m_I,\, m_g^{(a)},\, m_g^{(p)} \geq 0$.
+
+\begin{exercise}
+  Using Newton's third law, argue that $m_g^{(a)}/m_g^{(p)}$ is a
+  universal constant.
+\end{exercise}
+
+Choosing units: $m_g^{(a)} = m_g^{(p)} \equiv m_g$.
+
+\begin{intuition}[Three masses, one body]
+  Every massive body carries \emph{three} logically independent
+  numbers: how much it resists acceleration ($m_I$), how strongly
+  it sources a gravitational field ($m_g^{(a)}$), and how strongly
+  it responds to one ($m_g^{(p)}$).  That nature chooses to make all
+  three equal is not obvious---it is a deep empirical fact that general
+  relativity elevates to a geometric principle.
+\end{intuition}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{The universality of free fall}\label{sec:UFF}
+
+Extensive experimental evidence suggests $m_g = m_I$.
+
+\begin{definition}[Universality of Free Fall]\label{def:UFF}
+  In a gravitational field $\vb{g}$, the orbit $\vb{x}(t)$ of a test mass
+  depends \emph{only} on the initial conditions.  That is, identical
+  initial conditions produce identical trajectories regardless of the
+  composition or internal structure of the test mass.
+\end{definition}
+
+Consider a test mass in a gravitational field:
+
+\begin{center}
+\begin{tikzpicture}[scale=1.1]
+  % Background field region
+  \begin{scope}[on background layer]
+    \fill[isabelline, rounded corners=5pt] (-0.5,-0.8) rectangle (6.2,3.5);
+  \end{scope}
+  % Source mass
+  \node[pointmass, minimum size=8pt,
+    label={[font=\small]below:{source mass $M$}}] (M) at (5.2,1.2) {};
+  % Field arrows (radial, pointing inward)
+  \foreach \a in {120,140,...,240} {
+    \draw[fieldline] (M) ++(\a:2.0) -- ++(\a:-0.7);
+  }
+  \foreach \a in {130,150,...,230} {
+    \draw[fieldline, thin, opacity=0.5] (M) ++(\a:2.8) -- ++(\a:-0.6);
+  }
+  % Label field
+  \node[font=\small] at (2.8,0.0) {$\vb{g}(\vb{x})$};
+  % Test mass trajectory
+  \node[testmass, minimum size=5pt,
+    label={[font=\small]above left:{$\vb{x}(t)$}}] (m) at (2.0,2.2) {};
+  \draw[trajectory] (0.3,3.2) to[out=-15,in=155] (m);
+  \draw[trajectory] (m) to[out=-25,in=160] (4.0,0.8);
+  % Velocity arrow
+  \draw[vecstyle] (m) -- ++(0.8,-0.35) node[right, font=\small]{$\dt{\vb{x}}$};
+\end{tikzpicture}
+\end{center}
+
+The equation of motion reads
+\begin{equation}\label{eq:eom-grav}
+  m_g\,\vb{g}(\vb{x}(t)) = m_I\,\ddt{\vb{x}}(t)\,,
+\end{equation}
+or equivalently,
+\begin{equation}\label{eq:eom-UFF}
+  \eqbox{\ddt{\vb{x}}(t) = \frac{m_g}{m_I}\,\vb{g}(\vb{x}(t))}\,.
+\end{equation}
+Since $m_g/m_I$ is a universal constant, we may choose units such that
+$m_g = m_I$.
+
+\begin{remark}
+\begin{enumerate}[(1)]
+  \item The universality of free fall is \emph{not} a consequence of
+    Newtonian theory---it is a falsifiable hypothesis.
+  \item UFF applies specifically to \emph{test masses} (a subtle concept).
+\end{enumerate}
+\end{remark}
+
+\begin{historical}[Experimental tests of the equivalence principle]
+  The equality $m_g = m_I$ has been tested with extraordinary precision:
+  \begin{center}
+  \begin{tikzpicture}[
+    exp/.style={rectangle, rounded corners=2pt, draw=spacecadet!40,
+      fill=isabelline, minimum width=3cm, minimum height=1.4em,
+      font=\small, inner sep=4pt, text=spacecadet},
+    prec/.style={font=\small\sf, text=munsell!80!black},
+    timeline/.style={thick, spacecadet!30}
+  ]
+    % Timeline
+    \draw[timeline] (0,0) -- (11.5,0);
+    % Entries
+    \node[exp, anchor=south] (N) at (0.6,0.3)  {Newton (1687)};
+    \node[prec, anchor=north] at (0.6,-0.2) {$\sim10^{-3}$};
+
+    \node[exp, anchor=south] (E) at (3.7,0.3)
+      {E\"otv\"os (1922)};
+    \node[prec, anchor=north] at (3.7,-0.2) {$\sim10^{-9}$};
+
+    \node[exp, anchor=south] (LLR) at (6.8,0.3)
+      {Lunar laser (1969)};
+    \node[prec, anchor=north] at (6.8,-0.2) {$\sim10^{-13}$};
+
+    \node[exp, anchor=south] (MS) at (10.2,0.3)
+      {\textsc{microscope} (2022)};
+    \node[prec, anchor=north] at (10.2,-0.2) {$\sim10^{-15}$};
+
+    % Dots on timeline
+    \foreach \x in {0.6,3.7,6.8,10.2}
+      \fill[spacecadet] (\x,0) circle(2pt);
+  \end{tikzpicture}
+  \end{center}
+  \smallskip
+  The E\"otv\"os experiment uses a \emph{torsion balance}: two masses of
+  different composition are suspended at opposite ends of a bar.  If
+  $m_g/m_I$ differed between materials, the bar would rotate.  No such
+  rotation has ever been observed.
+  The \textsc{microscope} satellite (2017--2022)
+  achieved the most stringent test to date, confirming
+  $|m_g/m_I - 1| < 10^{-15}$.
+\end{historical}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{From Newtonian gravity to general relativity}
+
+We now reformulate Newton's gravity as a \emph{field theory}, drawing on
+the analogy between Newtonian gravity and electrostatics.
+
+\subsubsection{Coulomb vs.\ Newton: a detailed comparison}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.85]
+  % Coulomb side
+  \begin{scope}[shift={(-4,0)}]
+    \node[font=\sf\bfseries, text=cgblue] at (0,2.4) {Electrostatics};
+    % Charges
+    \node[circle, fill=red!60, inner sep=3pt, font=\footnotesize\sf,
+      text=white] (q1) at (-1.2,0) {$+$};
+    \node[circle, fill=blue!60, inner sep=3pt, font=\footnotesize\sf,
+      text=white] (q2) at (1.2,0) {$-$};
+    % Force arrows
+    \draw[vecstyle, red!70!black] (q1) -- ++(0.6,0)
+      node[above,font=\footnotesize]{$\vb{F}$};
+    \draw[vecstyle, blue!70!black] (q2) -- ++(-0.6,0)
+      node[above,font=\footnotesize]{$\vb{F}$};
+    % Label
+    \node[font=\small, text=spacecadet, text width=3.5cm, align=center]
+      at (0,-1.2) {Attractive \emph{and} repulsive};
+  \end{scope}
+  % Newton side
+  \begin{scope}[shift={(4,0)}]
+    \node[font=\sf\bfseries, text=cgblue] at (0,2.4) {Newtonian gravity};
+    % Masses
+    \node[circle, fill=spacecadet, inner sep=3pt,
+      font=\footnotesize\sf, text=white] (m1) at (-1.2,0) {$m$};
+    \node[circle, fill=spacecadet!70, inner sep=3pt,
+      font=\footnotesize\sf, text=white] (m2) at (1.2,0) {$m$};
+    % Force arrows (attractive only)
+    \draw[vecstyle, spacecadet] (m1) -- ++(0.6,0)
+      node[above,font=\footnotesize]{$\vb{F}$};
+    \draw[vecstyle, spacecadet] (m2) -- ++(-0.6,0)
+      node[above,font=\footnotesize]{$\vb{F}$};
+    % Label
+    \node[font=\small, text=spacecadet, text width=3.5cm, align=center]
+      at (0,-1.2) {Attractive \emph{only}};
+  \end{scope}
+\end{tikzpicture}
+\end{center}
+
+\begin{center}
+\small
+\begin{tabular}{@{}lcc@{}}
+  \toprule
+  & \textbf{Electrostatics} & \textbf{Newtonian gravity} \\
+  \midrule
+  Force law
+    & $\displaystyle\vb{F} = k_e\frac{q_1 q_2}{r^2}\,\uv{r}$
+    & $\displaystyle\vb{F} = -\grav\frac{m_1 m_2}{r^2}\,\uv{r}$ \\[10pt]
+  Field
+    & $\vb{E}$
+    & $\vb{g}$  \\[4pt]
+  Source
+    & charge density $\rho_e$
+    & mass density $\rho$ \\[4pt]
+  Source sign
+    & both signs
+    & $\rho \geq 0$ only \\[4pt]
+  Potential
+    & $V$
+    & $\phi$  \\[4pt]
+  Field from potential
+    & $\vb{E} = -\nabla V$
+    & $\vb{g} = -\nabla\phi$ \\[4pt]
+  Gauss's law
+    & $\nabla\cdot\vb{E} = \rho_e/\varepsilon_0$
+    & $\nabla\cdot\vb{g} = -4\pi\grav\rho$ \\[4pt]
+  Poisson equation
+    & $\Delta V = -\rho_e/\varepsilon_0$
+    & $\Delta\phi = 4\pi\grav\rho$ \\[4pt]
+  \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{intuition}[The gravity--electrostatics analogy]
+  The structural parallel is almost perfect: both are
+  $1/r^2$ force laws sourced by a density and governed by a Poisson
+  equation.  The crucial difference is that electric charge comes in
+  two signs (allowing shielding and cancellation), while mass is always
+  positive.  This means gravity cannot be screened---every mass in the
+  universe contributes---which is ultimately why a geometric description
+  (curved spacetime) becomes necessary.
+\end{intuition}
+
+\subsubsection{Gravitational field}
+The gravitational field is a map
+\[
+  \vb{g}\colon \R\times\Rn{3} \to \Rn{3}\,,\qquad
+  (t,\,\vb{x}) \mapsto \vb{g}(t,\,\vb{x})\,.
+\]
+
+\subsubsection{Sources}
+The (gravitational) mass density is
+\[
+  \rho\colon \R\times\Rn{3} \to \R^+\,,
+\]
+and the field equation reads
+\begin{equation}\label{eq:gauss-grav}
+  \eqbox{\nabla\cdot\vb{g} = -4\pi\grav\,\rho}\,.
+\end{equation}
+
+\subsubsection{Gravitational potential}
+Since $\nabla\times\vb{g} = 0$, the field $\vb{g}$ is conservative.
+By Poincar\'e's lemma there exists a scalar potential
+$\phi\colon \R\times\Rn{3}\to\R$ such that
+\begin{equation}\label{eq:g-from-phi}
+  \eqbox{\vb{g} = -\nabla\phi}
+  \qquad\text{(sign convention).}
+\end{equation}
+Substituting into~\eqref{eq:gauss-grav}:
+\begin{equation}\label{eq:poisson}
+  \eqbox{\lap\phi = 4\pi\grav\,\rho}
+  \qquad\text{(Poisson's equation).}
+\end{equation}
+
+\subsubsection{Equation of motion for test masses}
+\begin{equation}\label{eq:eom-potential}
+  \eqbox{\ddt{\vb{x}}(t) = -\nabla\phi\big(t,\,\vb{x}(t)\big)}\,.
+\end{equation}
+
+\subsubsection{Boundary conditions and uniqueness}
+Assume $\supp(\rho)$ is compact (closed and bounded by the Heine--Borel
+theorem), with
+\[
+  \phi(t,\,\vb{x}) \to 0 \quad\text{as}\quad \norm{\vb{x}}\to\infty\,.
+\]
+Then the unique solution to Poisson's equation is
+\begin{equation}\label{eq:poisson-solution}
+  \eqbox{\phi(t,\,\vb{x})
+    = -\grav\!\int_{\Rn{3}}\!\dd^3 x'\;
+      \frac{\rho(t,\,\vb{x}')}{\norm{\vb{x} - \vb{x}'}}}\,.
+\end{equation}
+This gives the ``gravitostatic'' formulation of Newtonian gravity.
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Adding dynamics: routes to general relativity}
+
+How do we add dynamics to the gravitational field?
+Several approaches suggest themselves---with very different outcomes:
+
+\begin{center}
+\begin{tikzpicture}[
+  start/.style={rectangle, rounded corners=4pt, draw=cgblue, fill=cgblue!12,
+    minimum width=4cm, minimum height=2em,
+    font=\sf\small, text=spacecadet, inner sep=6pt},
+  route/.style={rectangle, rounded corners=3pt, draw=spacecadet!40,
+    fill=isabelline, minimum width=3.5cm, minimum height=1.8em,
+    font=\small, text=spacecadet, inner sep=5pt, text width=3.3cm,
+    align=center},
+  outcome/.style={font=\small\sf},
+  fail/.style={outcome, text=red!70!black},
+  win/.style={outcome, text=munsell!80!black},
+  arr/.style={-{Stealth[length=5pt]}, thick, spacecadet!60},
+]
+  % Starting point
+  \node[start] (N) at (0,0) {Newtonian gravity: scalar $\phi$};
+  \node[font=\sf\small\itshape, text=spacecadet!70, below=2pt of N]
+    {How to make it dynamical?};
+
+  % Four routes
+  \node[route] (r0) at (-5.0,-2.8) {(0)~Instantaneous propagation};
+  \node[route] (r1) at (-1.7,-2.8) {(1)~Scalar wave equation for $\phi$};
+  \node[route] (r2) at (1.7,-2.8) {(2)~Promote $\phi$ to a 4-vector};
+  \node[route] (r3) at (5.0,-2.8)
+    {(3)~Promote $\phi$ to a symmetric tensor};
+
+  % Arrows from start
+  \draw[arr] (N.south) -- (r0.north);
+  \draw[arr] (N.south) -- (r1.north);
+  \draw[arr] (N.south) -- (r2.north);
+  \draw[arr] (N.south) -- (r3.north);
+
+  % Outcomes
+  \node[fail, below=6pt of r0, text width=2.8cm, align=center]
+    {Violates causality\\$\times$};
+  \node[fail, below=6pt of r1, text width=2.8cm, align=center]
+    {No light bending\\$\times$};
+  \node[fail, below=6pt of r2, text width=3cm, align=center]
+    {Negative-energy waves; perihelion\\$\times$};
+  \node[win, below=6pt of r3, text width=3cm, align=center]
+    (gr) {Linearised Einstein eqs.\\$\Downarrow$\\
+    \textbf{General relativity}};
+
+  % Highlight the winning route
+  \draw[thick, munsell, rounded corners=3pt]
+    ([shift={(-3pt,-3pt)}]r3.south west)
+    rectangle ([shift={(3pt,3pt)}]r3.north east);
+\end{tikzpicture}
+\end{center}
+
+See Misner, Thorne \& Wheeler~\cite{MTW73}, Chapter~7.
+
+\begin{intuition}[Why a tensor?]
+  A scalar field $\phi$ has one component---not enough to encode the
+  geometry of a 4-dimensional spacetime.  A 4-vector has four components,
+  but leads to unphysical negative-energy solutions.  A symmetric
+  rank-2 tensor $g_{\mu\nu}$ has ten independent components in four
+  dimensions---exactly the right number to describe a metric on spacetime.
+  This is the gravitational field of general relativity.
+\end{intuition}

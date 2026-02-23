@@ -1,0 +1,131 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{gr-style}[2026/02/23 General Relativity lecture notes style]
+
+% ── Geometry ──────────────────────────────────────────────────
+\RequirePackage{geometry}
+\geometry{a4paper, margin=2.5cm}
+
+% ── Colour palette (from TheoretischePhysikC) ────────────────
+\RequirePackage{color}
+\RequirePackage[table]{xcolor}
+
+\definecolor{spacecadet}{HTML}{0D284C}
+\definecolor{munsell}{HTML}{008FA8}
+\definecolor{banana}{HTML}{FFD932}
+\definecolor{cgblue}{HTML}{007CA5}
+\definecolor{isabelline}{HTML}{EAEDEA}
+\definecolor{light-gray}{gray}{0.85}
+
+% ── Graphics and figures ──────────────────────────────────────
+\RequirePackage{graphicx}
+\RequirePackage{wrapfig}
+
+% ── Math fonts ────────────────────────────────────────────────
+\RequirePackage{amsmath}
+\RequirePackage{amsthm}
+\RequirePackage{mathtools}
+\RequirePackage[mtphrb,mtpcal,mtpfrak]{mtpro2}
+\RequirePackage{mathspec}
+
+\setmathrm{Times LT Std}
+\setmainfont[
+  BoldFont      = Times LT Std Bold,
+  ItalicFont    = Times LT Std Italic,
+  BoldItalicFont= Times LT Std Bold Italic,
+  Ligatures     = TeX
+]{Times LT Std}
+\setsansfont[
+  BoldFont   = Whitney-Semibold.otf,
+  ItalicFont = Whitney-MediumItalic.otf,
+  Ligatures  = TeX
+]{Whitney-Medium.otf}
+\setboldmathrm[BoldFont={Times LT Std Bold}]{Times LT Std Bold}
+
+% ── TikZ & pgfplots ──────────────────────────────────────────
+\RequirePackage{tikz}
+\usetikzlibrary{calc,arrows.meta,decorations.markings,patterns,
+  positioning,shapes.geometric,backgrounds}
+\RequirePackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{patchplots,fillbetween}
+
+% ── Boxes ─────────────────────────────────────────────────────
+\RequirePackage[many]{tcolorbox}
+\RequirePackage[textsize=tiny]{todonotes}
+
+% ── Lists ─────────────────────────────────────────────────────
+\RequirePackage{enumerate}
+\RequirePackage{booktabs}
+
+% ── Section formatting ────────────────────────────────────────
+\makeatletter
+\def\@secnumfont{\bfseries}
+\def\part{\@startsection{part}{0}%
+  \z@{\linespacing\@plus\linespacing}{.5\linespacing}%
+  {\normalfont\bfseries\raggedright}}
+\def\specialsection{\@startsection{section}{1}%
+  \z@{\linespacing\@plus\linespacing}{.5\linespacing}%
+  {\color{cgblue}\normalfont\centering}}
+\def\section{\@startsection{section}{1}%
+  \z@{.7\linespacing\@plus\linespacing}{.5\linespacing}%
+  {\color{cgblue}\normalfont\sf\bfseries\large\centering}}
+\def\subsection{\@startsection{subsection}{2}%
+  \z@{.5\linespacing\@plus.7\linespacing}{-.5em}%
+  {\color{cgblue}\normalfont\sf\bfseries}}
+\def\subsubsection{\@startsection{subsubsection}{3}%
+  \z@{.5\linespacing\@plus.7\linespacing}{-.5em}%
+  {\color{cgblue}\normalfont\sf\itshape}}
+\makeatother
+
+% ── Theorem environments ──────────────────────────────────────
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem*{corollary}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}{\color{cgblue}Definition}[section]
+\newtheorem{example}{\color{cgblue}Example}[section]
+\newtheorem{exercise}{\color{cgblue}Exercise}[section]
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem*{note}{Note}
+
+\newenvironment{solution}
+  {\begin{proof}[\color{cgblue}Solution]\color{spacecadet}}
+  {\end{proof}}
+
+% ── Highlighted boxes ─────────────────────────────────────────
+% Key equation box (banana highlight)
+\def\eqbox#1{\tcboxmath[colback=banana,arc=0cm,frame hidden,enhanced]{#1}}
+% Important result box
+\newtcolorbox{keyresult}[1][]{%
+  colback=banana!20, colframe=cgblue, arc=2pt,
+  fonttitle=\sf\bfseries\color{cgblue},
+  title={#1}}
+% Physical intuition box
+\newtcolorbox{intuition}[1][Physical intuition]{%
+  enhanced, breakable,
+  colback=munsell!8, colframe=munsell!60!black,
+  arc=3pt, boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt,
+  fonttitle=\sf\bfseries\color{munsell!80!black},
+  attach boxed title to top left={yshift=-2mm, xshift=4mm},
+  boxed title style={colback=munsell!8, frame hidden, arc=2pt},
+  title={#1}}
+% Historical note box
+\newtcolorbox{historical}[1][Historical note]{%
+  enhanced, breakable,
+  colback=isabelline, colframe=spacecadet!40,
+  arc=3pt, boxrule=0.6pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt,
+  fonttitle=\sf\bfseries\color{spacecadet},
+  attach boxed title to top left={yshift=-2mm, xshift=4mm},
+  boxed title style={colback=isabelline, frame hidden, arc=2pt},
+  title={#1}}
+% Figure placeholder
+\def\figbox{\begin{center}\tcboxmath[colback=isabelline,frame hidden,enhanced,sharp corners]{\parbox[c][3cm][c]{10cm}{\ }}\end{center}}
+
+\endinput

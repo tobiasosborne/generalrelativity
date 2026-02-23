@@ -1,0 +1,72 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{mathtools}
+
+\newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
+
+\theoremstyle{definition}
+\newtheorem*{remark}{Remark}
+
+\title{A Note on $\partial_a$ as a Covariant Derivative}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+Let $T^{a_1 \cdots a_k}{}_{b_1 \cdots b_l}$ be a tensor of type $(k,l)$.
+Let $\psi$ be a chart. Then
+\begin{equation}\label{eq:tensor-expansion}
+  T = \sum_{\substack{\mu_1 \cdots \mu_k \\ \nu_1 \cdots \nu_l}}
+    T^{\mu_1 \cdots \mu_k}{}_{\nu_1 \cdots \nu_l}\;
+    \pd{}{x^{\mu_1}} \otimes \cdots \otimes \pd{}{x^{\mu_k}}
+    \otimes dx^{\nu_1} \otimes \cdots \otimes dx^{\nu_l}.
+\end{equation}
+
+\textbf{Definition.}
+Define $\partial_a T^{a_1 \cdots a_k}{}_{b_1 \cdots b_l}$ to be the tensor $T'$
+whose representation in this basis is
+\begin{equation}\label{eq:def-partial}
+  T' = \sum_{\substack{\mu_1 \cdots \mu_k \\ \nu_1 \cdots \nu_l}}
+    \pd{T^{\mu_1 \cdots \mu_k}{}_{\nu_1 \cdots \nu_l}}{x^\sigma}\;
+    \pd{}{x^{\mu_1}} \otimes \cdots \otimes \pd{}{x^{\mu_k}}
+    \otimes dx^{\nu_1} \otimes \cdots \otimes dx^{\nu_l}.
+\end{equation}
+
+When we change coordinates, the basis elements transform as
+\begin{align}
+  \pd{}{x^\mu} &\;\longmapsto\; \pd{x^{\mu'}}{x^\mu}\,\pd{}{x^{\mu'}},
+  \label{eq:basis-transform} \\[6pt]
+  dx^\nu &\;\longmapsto\; \pd{x^{\nu}}{x^{\nu'}}\,dx^{\nu'}.
+  \label{eq:cobasis-transform}
+\end{align}
+
+Thus, in the new coordinate basis,
+\begin{equation}\label{eq:Tprime-transformed}
+\begin{split}
+  T' = \sum_{\substack{\mu'_1 \cdots \mu'_k \\ \nu'_1 \cdots \nu'_l}}\;
+       \sum_{\substack{\mu_1 \cdots \mu_k \\ \nu_1 \cdots \nu_l}}\;
+       \sum_{\sigma'}
+    &\pd{T^{\mu_1 \cdots \mu_k}{}_{\nu_1 \cdots \nu_l}}{x^{\sigma'}}\;
+     \pd{x^{\sigma'}}{x^\sigma}\;
+     \pd{x^{\mu'_1}}{x^{\mu_1}} \cdots \pd{x^{\mu'_k}}{x^{\mu_k}}\;
+     \pd{x^{\nu_1}}{x^{\nu'_1}} \cdots \pd{x^{\nu_l}}{x^{\nu'_l}} \\[4pt]
+    &\quad\times\pd{}{x^{\mu'_1}} \otimes \cdots \otimes \pd{}{x^{\mu'_k}}
+     \otimes dx^{\nu'_1} \otimes \cdots \otimes dx^{\nu'_l}.
+\end{split}
+\end{equation}
+
+Thus, when you change coordinates, the Jacobian-type factors come from the
+$\pd{}{x^\mu}$ and $dx^\nu$ terms.
+The components of the tensor itself do not transform; rather, the basis
+elements of $V_p$ and $V_p^*$ transform.
+
+Thus the tensor $T'$, as defined above, does transform like a tensor.
+The reason why this isn't our favourite covariant derivative is that, had we
+defined $\partial_a T$ with respect to a \emph{different} chart, we would
+obtain different components when we transform back to our original chart.
+This derivative operator is \textbf{basis dependent}.
+
+\end{document}

@@ -1,0 +1,301 @@
+%!TEX root = ../GeneralRelativity.tex
+% ──────────────────────────────────────────────────────────────
+%  Lecture 2 — The Equivalence Principle and Mach's Principle
+% ──────────────────────────────────────────────────────────────
+
+\section{The equivalence principle and Mach's principle}%
+\label{sec:equivalence-principle}
+
+\subsection{Einstein's equivalence principle (EEP)}
+
+The Einstein equivalence principle consists of three parts:
+
+\begin{enumerate}
+  \item \textbf{Universality of free fall (UFF)}
+    (also known as the \emph{weak equivalence principle}, WEP).\\
+    Verified (not rejected) e.g.\ in torsion balance experiments
+    (cf.~\S\ref{sec:UFF}).
+
+  \item \textbf{Local Lorentz invariance (LLI).}\\
+    In a freely falling reference frame, the laws of physics are those
+    of special relativity (no ``preferred'' reference frame);
+    i.e.\ the laws of physics do not depend on the orientation or
+    velocity.
+
+    \smallskip
+    \noindent Best bounds from Michelson--Morley--type experiments:
+    \begin{equation}\label{eq:LLI-bound}
+      \frac{\Delta c}{c} < 5 \times 10^{-17}\,.
+    \end{equation}
+
+  \item \textbf{Local position invariance (LPI).}\\
+    Special relativity holds independent of spacetime position
+    (no ``preferred'' location).
+\end{enumerate}
+
+\begin{intuition}[The three pillars of EEP]
+  UFF says \emph{all bodies fall the same way}.
+  LLI says \emph{physics looks the same regardless of your velocity}.
+  LPI says \emph{physics looks the same regardless of where you are}.
+  Together, they force gravity to be a property of spacetime
+  geometry rather than an ordinary force.
+\end{intuition}
+
+\subsubsection{LPI and gravitational redshift}
+
+LPI is equivalent (exercise) to the \emph{universality of gravitational
+redshift} (UGR): clock rates are universally affected by the
+gravitational field.
+
+\begin{exercise}\label{ex:grav-redshift}
+  Show that for small velocities and weak gravitational fields,
+  the fractional change in clock rate between two positions
+  $\vb{x}_1$ and $\vb{x}_2$ is
+  \begin{equation}\label{eq:grav-redshift}
+    \eqbox{\frac{\Delta\nu}{\nu}
+      = \frac{\Delta\phi}{c^2}}\,,
+  \end{equation}
+  where $\nu(\vb{x}_1)$, $\nu(\vb{x}_2)$ are the clock rates at
+  positions $1,2$ and
+  $\Delta\phi = \phi(\vb{x}_1) - \phi(\vb{x}_2)$.
+\end{exercise}
+
+\noindent\textbf{Estimate:} On Earth's surface, for a height difference
+$\norm{\vb{x}_1 - \vb{x}_2} \sim 30\;\mathrm{cm}$, this effect is
+$\Delta\phi/c^2 \sim 10^{-17}$---and has been measured!
+
+\begin{intuition}[Gravity slows clocks]
+  A clock at the bottom of a gravitational potential well runs slower
+  than a clock at the top.  GPS satellites must correct for this:
+  their clocks run faster (by $\sim 45\;\mu\mathrm{s}/\mathrm{day}$)
+  than ground-based clocks.  Without this correction, GPS positions
+  would drift by $\sim 10\;\mathrm{km}/\mathrm{day}$.
+\end{intuition}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{From EEP to geometry}
+
+\textbf{Observation:} Using EEP, it is possible to ``derive'' that
+gravity should be described \emph{geometrically}
+(K.~Thorne, D.~Lee, \& A.~Lightman,
+\emph{Phys.\ Rev.\ D}, \textbf{7}, 3563--3578, 1973).
+
+\begin{keyresult}[The geometric consequence of EEP]
+  All matter couples to the \emph{same geometry}---namely, that of
+  spacetime.  A single metric suffices to describe all of these
+  couplings simultaneously.
+\end{keyresult}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Calculations with EEP}
+
+\textbf{Statement:} No external, static, homogeneous gravitational
+field can be detected in a freely falling elevator.
+
+\smallskip
+Suppose we have $N$ (non-relativistic) particles moving in a pair
+force field $\vb{F}(\vb{x}_j - \vb{x}_k)$ and an external gravitational
+field $\vb{g}(\vb{x}) = \vb{g}$ (constant), with $\vb{F}(\vb{0}) = \vb{0}$.
+
+\noindent Equations of motion:
+\begin{equation}\label{eq:eom-N-particles}
+  m_j\,\frac{d^2\vb{x}_j}{dt^2}
+    = m_j\,\vb{g}
+      + \sum_{k=1}^{N} \vb{F}(\vb{x}_j - \vb{x}_k)\,.
+\end{equation}
+
+Make a (non-Galilean) change to an \emph{accelerating frame}:
+\begin{equation}\label{eq:accelerating-frame}
+  \vb{x}' = \vb{x} - \tfrac{1}{2}\,\vb{g}\,t^2\,,\qquad
+  t' = t\,.
+\end{equation}
+
+Then the equations of motion become (exercise):
+\begin{equation}\label{eq:eom-freefall}
+  \eqbox{m_j\,\frac{d^2\vb{x}'_j}{dt'^2}
+    = \sum_{k} \vb{F}(\vb{x}'_j - \vb{x}'_k)}\,.
+\end{equation}
+The gravitational field has been \emph{eliminated}---the freely falling
+frame sees only the inter-particle forces.
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Gravitational forces and freely falling coordinates}
+
+According to EEP, for \emph{any} particle moving purely under the
+influence of a gravitational field, there exists a freely falling
+coordinate system $(\xi^0,\,\xi^1,\,\xi^2,\,\xi^3)$ such that
+\begin{equation}\label{eq:force-free}
+  \eqbox{\frac{d^2\xi^\alpha}{d\tau^2} = 0}
+  \qquad (\equiv\;\text{force-free motion})\,,
+\end{equation}
+where $\tau$ is the \emph{proper time}, defined by
+\begin{equation}\label{eq:proper-time-flat}
+  d\tau^2 = -\eta_{\alpha\beta}\,d\xi^\alpha\,d\xi^\beta\,,
+\end{equation}
+or equivalently,
+\begin{equation}\label{eq:4vel-normalisation}
+  -1 = \eta_{\alpha\beta}\,
+    \frac{d\xi^\alpha}{d\tau}\,\frac{d\xi^\beta}{d\tau}\,.
+\end{equation}
+
+Here $\eta_{\alpha\beta}$ is the \emph{Minkowski metric}:
+\begin{equation}\label{eq:minkowski}
+  \eta_{\alpha\beta}
+  = \diag(-1,\,+1,\,+1,\,+1)\,.
+\end{equation}
+
+\noindent\textbf{Einstein's summation convention:}
+\begin{equation}
+  u_\alpha\,\xi^\alpha
+  \;\equiv\; \sum_{\alpha=0}^{3} u_\alpha\,\xi^\alpha\,.
+\end{equation}
+Repeated indices (one ``upstairs,'' one ``downstairs'') are summed over.
+
+% ──────────────────────────────────────────────────────────────
+\subsection{The geodesic equation}
+
+Suppose $x^\mu$ denotes some other set of coordinates (e.g.\ lab,
+rotating, \ldots):
+
+\begin{center}
+\begin{tikzpicture}[scale=0.9]
+  % Freely-falling frame (xi)
+  \begin{scope}
+    \draw[axisstyle, spacecadet] (0,0) -- (0,2.5) node[left]{$\xi^0$};
+    \draw[axisstyle, spacecadet] (0,0) -- (2.2,0) node[below]{$\xi^1$};
+    \node[font=\sf\small, text=cgblue] at (1.1,2.6)
+      {freely falling};
+    % Grid lines
+    \foreach \i in {0.5,1.0,...,2.0} {
+      \draw[thin, spacecadet!20] (0,\i) -- (2.0,\i);
+      \draw[thin, spacecadet!20] (\i,0) -- (\i,2.0);
+    }
+  \end{scope}
+  % Arrow between
+  \draw[thick, -{Stealth[length=6pt]}, cgblue] (2.8,1.0) -- (4.2,1.0)
+    node[midway, above, font=\small]{$\xi^\alpha(x^\mu)$};
+  \draw[thick, -{Stealth[length=6pt]}, cgblue] (4.2,0.6) -- (2.8,0.6)
+    node[midway, below, font=\small]{$x^\mu(\xi^\alpha)$};
+  % Lab frame (x)
+  \begin{scope}[shift={(5,0)}]
+    \draw[axisstyle, spacecadet] (0,0) -- (0,2.5) node[left]{$x^0$};
+    \draw[axisstyle, spacecadet] (0,0) -- (2.2,0) node[below]{$x^1$};
+    \node[font=\sf\small, text=cgblue] at (1.1,2.6) {lab frame};
+    % Curved grid lines
+    \foreach \i in {0.5,1.0,...,2.0} {
+      \draw[thin, spacecadet!20] (0,\i) to[out=5,in=175] (2.0,{\i+0.15});
+      \draw[thin, spacecadet!20] (\i,0) to[out=85,in=-85] ({\i-0.1},2.0);
+    }
+  \end{scope}
+\end{tikzpicture}
+\end{center}
+
+The freely falling coordinates are functions of the lab coordinates:
+\[
+  \xi^\alpha = \xi^\alpha(x^0,\,x^1,\,x^2,\,x^3)\,.
+\]
+
+The force-free equation~\eqref{eq:force-free} becomes
+\begin{equation}
+  0 = \frac{d^2\xi^\alpha}{d\tau^2}
+    = \frac{d}{d\tau}\!\left(
+        \pd{\xi^\alpha}{x^\mu}\,\frac{dx^\mu}{d\tau}
+      \right)
+    = \pd{\xi^\alpha}{x^\mu}\,\frac{d^2 x^\mu}{d\tau^2}
+      + \frac{\partial^2\xi^\alpha}{\partial x^\mu\,\partial x^\nu}\,
+        \frac{dx^\mu}{d\tau}\,\frac{dx^\nu}{d\tau}\,.
+\end{equation}
+
+Multiplying by $\pd{x^\lambda}{\xi^\alpha}$ and using
+$\pd{\xi^\alpha}{x^\mu}\pd{x^\lambda}{\xi^\alpha} = \delta^\lambda{}_\mu$,
+we obtain the \textbf{geodesic equation}:
+\begin{equation}\label{eq:geodesic}
+  \eqbox{
+    \frac{d^2 x^\lambda}{d\tau^2}
+    + \chris{\lambda}{\mu\nu}\,
+      \frac{dx^\mu}{d\tau}\,\frac{dx^\nu}{d\tau}
+    = 0}\,,
+\end{equation}
+where the \emph{affine connection} (Christoffel symbol) is
+\begin{equation}\label{eq:christoffel-def}
+  \chris{\lambda}{\mu\nu}
+    = \pd{x^\lambda}{\xi^\alpha}\,
+      \frac{\partial^2\xi^\alpha}{\partial x^\mu\,\partial x^\nu}\,.
+\end{equation}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{The metric}\label{sec:metric-from-EEP}
+
+The proper time~\eqref{eq:proper-time-flat} expressed in the lab
+coordinates becomes
+\begin{align}
+  d\tau^2
+    &= -\eta_{\alpha\beta}\,d\xi^\alpha\,d\xi^\beta
+     = -\eta_{\alpha\beta}\,
+        \pd{\xi^\alpha}{x^\mu}\,\pd{\xi^\beta}{x^\nu}\,
+        dx^\mu\,dx^\nu \notag\\
+    &= -g_{\mu\nu}\,dx^\mu\,dx^\nu\,,
+    \label{eq:proper-time-general}
+\end{align}
+where
+\begin{equation}\label{eq:metric-def}
+  \eqbox{g_{\mu\nu}
+    = \pd{\xi^\alpha}{x^\mu}\,\pd{\xi^\beta}{x^\nu}\,
+      \eta_{\alpha\beta}}
+\end{equation}
+is the \textbf{metric}.
+
+\begin{intuition}[What the metric encodes]
+  The metric $g_{\mu\nu}$ tells you how to measure distances and
+  time intervals in arbitrary coordinates.  In freely falling
+  coordinates it reduces to the flat Minkowski metric
+  $\eta_{\alpha\beta}$.  The deviation of $g_{\mu\nu}$ from
+  $\eta_{\alpha\beta}$ encodes the gravitational field.
+\end{intuition}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Mach's principle}
+
+Mach's principle is the second key set of ideas underlying
+general relativity---less precise than EEP, but deeply influential.
+
+\begin{keyresult}[Mach's principle (summary)]
+  All matter in the universe should contribute to the local definition
+  of ``non-accelerating'' and ``non-rotating.''
+  In a universe devoid of matter, these concepts should have no meaning.
+\end{keyresult}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{General relativity: the synthesis}
+
+General relativity is the following statement:
+
+\begin{keyresult}[General relativity]
+  The observer-independent properties of spacetime are described
+  by a \emph{spacetime metric} $g_{\mu\nu}$, which need not have the
+  flat form $\eta_{\mu\nu}$ of special relativity.  \emph{Curvature}
+  accounts for the physical effects of gravitation.
+  Furthermore, curvature is determined by the distribution of
+  stress-energy and momentum (and vice versa).
+\end{keyresult}
+
+\begin{center}
+\begin{tikzpicture}[
+  concept/.style={ellipse, draw=cgblue, fill=cgblue!10, thick,
+    minimum width=3.2cm, minimum height=1.6cm,
+    font=\sf\small, text=spacecadet, align=center, inner sep=4pt},
+  arr/.style={-{Stealth[length=6pt]}, very thick, spacecadet!70},
+]
+  \node[concept] (SE) at (-3,0) {Stress-energy\\(matter)};
+  \node[concept] (C)  at (3,0)  {Curvature\\(geometry)};
+  \draw[arr] ([yshift=4pt]SE.east) -- ([yshift=4pt]C.west)
+    node[midway, above, font=\small\itshape]{tells spacetime how to curve};
+  \draw[arr] ([yshift=-4pt]C.west) -- ([yshift=-4pt]SE.east)
+    node[midway, below, font=\small\itshape]{tells matter how to move};
+  % Matter at bottom
+  \node[concept, draw=munsell, fill=munsell!8, minimum width=2.4cm,
+    minimum height=1.2cm] (M) at (0,-2.5) {Matter};
+  \draw[arr, munsell!60] (M) -- (SE);
+  \draw[arr, munsell!60] (M) -- (C);
+\end{tikzpicture}
+\end{center}

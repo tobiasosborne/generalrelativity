@@ -1,0 +1,23 @@
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+
+# Generated PDF (rebuild from source)
+latex/*.pdf
+
+# Editor/OS
+.DS_Store
+*~
+*.swp
+*.swo
+
+# Template file (not part of GR project)
+latex/TheoretischePhysikC.tex
