@@ -223,6 +223,26 @@ where the \emph{affine connection} (Christoffel symbol) is
       \frac{\partial^2\xi^\alpha}{\partial x^\mu\,\partial x^\nu}\,.
 \end{equation}
 
+\begin{intuition}[Geodesics on a curved surface]
+  To build intuition for the geodesic equation, consider a 2D
+  surface embedded in~$\Rn{3}$.  The shortest paths on the
+  surface---the geodesics---are \emph{not} straight lines in
+  the ambient space; they bend to stay on the surface.
+  The deviation from a straight line is governed by the
+  Christoffel symbols, which encode the surface's curvature.
+\end{intuition}
+
+\begin{figure}[htbp]
+  \centering
+  \input{figures/fig_lec02_geodesic_bump}
+  \caption{Geodesics on a Gaussian-bump surface
+    $z = e^{-(x^2+y^2)/2}$.
+    Top: 3D view showing geodesics (coloured curves) bending
+    over the bump.
+    Bottom: top-down view comparing geodesics (solid) with
+    Euclidean straight lines (dashed).}\label{fig:geodesic-bump}
+\end{figure}
+
 % ──────────────────────────────────────────────────────────────
 \subsection{The metric}\label{sec:metric-from-EEP}
 

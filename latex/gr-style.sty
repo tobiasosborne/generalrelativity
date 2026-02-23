@@ -1,6 +1,13 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{gr-style}[2026/02/23 General Relativity lecture notes style]
 
+% ── Options ───────────────────────────────────────────────────
+% Pass [cmfonts] to use standard Computer Modern (no mtpro2/mathspec)
+\newif\ifgr@cmfonts
+\gr@cmfontsfalse
+\DeclareOption{cmfonts}{\gr@cmfontstrue}
+\ProcessOptions\relax
+
 % ── Geometry ──────────────────────────────────────────────────
 \RequirePackage{geometry}
 \geometry{a4paper, margin=2.5cm}
@@ -24,22 +31,29 @@
 \RequirePackage{amsmath}
 \RequirePackage{amsthm}
 \RequirePackage{mathtools}
-\RequirePackage[mtphrb,mtpcal,mtpfrak]{mtpro2}
-\RequirePackage{mathspec}
 
-\setmathrm{Times LT Std}
-\setmainfont[
-  BoldFont      = Times LT Std Bold,
-  ItalicFont    = Times LT Std Italic,
-  BoldItalicFont= Times LT Std Bold Italic,
-  Ligatures     = TeX
-]{Times LT Std}
-\setsansfont[
-  BoldFont   = Whitney-Semibold.otf,
-  ItalicFont = Whitney-MediumItalic.otf,
-  Ligatures  = TeX
-]{Whitney-Medium.otf}
-\setboldmathrm[BoldFont={Times LT Std Bold}]{Times LT Std Bold}
+\ifgr@cmfonts
+  % ── Computer Modern fallback (portable, no proprietary fonts) ──
+  \RequirePackage{fontspec}
+  \RequirePackage{amssymb}
+\else
+  % ── Full font stack (Times LT Std + Whitney + mtpro2) ─────────
+  \RequirePackage[mtphrb,mtpcal,mtpfrak]{mtpro2}
+  \RequirePackage{mathspec}
+  \setmathrm{Times LT Std}
+  \setmainfont[
+    BoldFont      = Times LT Std Bold,
+    ItalicFont    = Times LT Std Italic,
+    BoldItalicFont= Times LT Std Bold Italic,
+    Ligatures     = TeX
+  ]{Times LT Std}
+  \setsansfont[
+    BoldFont   = Whitney-Semibold.otf,
+    ItalicFont = Whitney-MediumItalic.otf,
+    Ligatures  = TeX
+  ]{Whitney-Medium.otf}
+  \setboldmathrm[BoldFont={Times LT Std Bold}]{Times LT Std Bold}
+\fi
 
 % ── TikZ & pgfplots ──────────────────────────────────────────
 \RequirePackage{tikz}

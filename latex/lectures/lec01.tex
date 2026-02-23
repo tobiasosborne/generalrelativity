@@ -467,3 +467,34 @@ See Misner, Thorne \& Wheeler~\cite{MTW73}, Chapter~7.
   dimensions---exactly the right number to describe a metric on spacetime.
   This is the gravitational field of general relativity.
 \end{intuition}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Example: Lagrange points in a two-body system}
+
+The Newtonian gravitational potential for a system of two bodies
+in the \emph{co-rotating frame} illustrates the interplay between
+gravity and inertial (centrifugal/Coriolis) forces.
+The \textbf{effective potential} is
+\begin{equation}\label{eq:Phi-eff-cr3bp}
+  \eqbox{\Phi_{\mathrm{eff}}(x,y)
+    = -\frac{1-\mu}{r_1} - \frac{\mu}{r_2}
+      - \tfrac{1}{2}(x^2 + y^2)}\,,
+\end{equation}
+where $\mu = M_2/(M_1+M_2)$ is the mass ratio, and $r_{1,2}$
+are the distances to the two masses.
+This potential has five critical points---the \textbf{Lagrange
+points} $L_1$--$L_5$.  The collinear points $L_1$, $L_2$, $L_3$
+are saddle points (unstable), while $L_4$ and $L_5$ form
+equilateral triangles with the two masses and are linearly stable
+for $\mu < \mu_{\mathrm{crit}} \approx 0.0385$.
+
+\begin{figure}[htbp]
+  \centering
+  \input{figures/fig_lec01_lagrange}
+  \caption{Top: pseudo-colour plot of the effective potential
+    $\Phi_{\mathrm{eff}}$ in the co-rotating frame ($\mu = 0.01$),
+    with the five Lagrange points marked.
+    Bottom: tadpole orbit of a test particle released near~$L_4$
+    with a small perturbation, exhibiting the characteristic
+    epicyclic motion.}\label{fig:lagrange-points}
+\end{figure}

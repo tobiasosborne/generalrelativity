@@ -21,3 +21,18 @@ latex/*.pdf
 
 # Template file (not part of GR project)
 latex/TheoretischePhysikC.tex
+
+# Copyrighted literature (not for distribution)
+Literature/
+
+# Handwritten lecture source PDFs
+Lecture Notes/
+
+# Generated simulation data (regenerable from scripts/)
+latex/data/
+
+# Julia manifest (platform-specific)
+scripts/Manifest.toml
+
+# TikZ preview PNGs
+latex/figures/*.png

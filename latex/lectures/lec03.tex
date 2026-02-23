@@ -1,0 +1,520 @@
+%!TEX root = ../GeneralRelativity.tex
+% ──────────────────────────────────────────────────────────────
+%  Lecture 3 — Manifolds
+% ──────────────────────────────────────────────────────────────
+
+\section{Manifolds}\label{sec:manifolds}
+
+We want to describe curved continua \emph{intrinsically}, without
+reference to an ambient space $\Rn{m}$ in which they might be
+embedded.  The appropriate mathematical notion is that of a
+\emph{manifold}.
+
+\begin{intuition}[Why manifolds?]
+  In general relativity, spacetime is a manifold~$\M$.
+  Although we may picture $\M$ as sitting inside some higher-dimensional
+  $\Rn{m}$, all physically meaningful statements should be intrinsic:
+  they must not depend on the embedding.
+\end{intuition}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Notation and prerequisites}
+
+We work in $n$ dimensions throughout.
+
+\begin{itemize}
+  \item $\Rn{n} = \{(x^1,\dots,x^n) \mid x^j \in \R\}$.
+  \item For $\vb{x} = (x^1,\dots,x^n)$, the Euclidean norm is
+    \[
+      \norm{\vb{x}-\vb{y}}
+        = \Bigl(\sum_{j=1}^{n}(x^j - y^j)^2\Bigr)^{1/2}.
+    \]
+  \item The \emph{open ball} of radius~$r$ about $\vb{y}$ is
+    \[
+      B_r(\vb{y})
+        = \{\vb{x}\in\Rn{n} \mid \norm{\vb{x}-\vb{y}} < r\}.
+    \]
+  \item A subset $U\subseteq\Rn{n}$ is \emph{open} if
+    for every $\vb{x}\in U$ there exists $\varepsilon > 0$ such that
+    $B_\varepsilon(\vb{x})\subset U$.
+  \item $C^n$ denotes the set of $n$-times differentiable functions
+    (from $\Rn{n}$ to $\R$, or between open subsets thereof).
+  \item $C^0 = {}$continuous functions,\quad
+    $C^\infty = {}$smooth (infinitely differentiable) functions.
+\end{itemize}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Definition of a manifold}\label{sec:manifold-def}
+
+\begin{definition}[Manifold]\label{def:manifold}
+  An $n$-dimensional, $C^\infty$, real \textbf{manifold}~$\M$ is a set
+  together with a collection $\{O_\alpha\}$ of subsets satisfying:
+  \begin{enumerate}
+    \item[\textup{(0)}] $\M$ is a topological space (Hausdorff and
+      paracompact).\footnote{The Hausdorff and paracompact conditions
+      exclude pathological examples; they ensure, e.g., the existence
+      of partitions of unity.}
+    \item[\textup{(1)}] The subsets $\{O_\alpha\}$ \textbf{cover} $\M$,
+      i.e.\ $\bigcup_\alpha O_\alpha = \M$.
+      Equivalently: for every $p\in\M$ there exists at least one
+      $\alpha$ with $p\in O_\alpha$.
+    \item[\textup{(2)}] For each $\alpha$ there is a \textbf{one-to-one
+      and onto} map
+      \[
+        \psi_\alpha \colon O_\alpha \to U_\alpha\,,
+        \qquad U_\alpha \subset \Rn{n}\;\text{(open)}\,,
+      \]
+
+      \begin{center}
+      \begin{tikzpicture}[scale=0.85]
+        % Manifold blob
+        \draw[thick, spacecadet, rounded corners=12pt]
+          (0,0.3) to[out=30,in=150] (3,0.5)
+          to[out=-30,in=30] (3.2,-0.8)
+          to[out=210,in=-10] (0,-0.6) -- cycle;
+        \node[font=\sf\small, text=cgblue] at (1.6,0.8) {$\M$};
+        \draw[thick, cgblue, fill=cgblue!10, rounded corners=5pt]
+          (0.5,-0.2) to[out=40,in=150] (2.2,0.1)
+          to[out=-30,in=50] (2.0,-0.5)
+          to[out=210,in=-20] (0.4,-0.5) -- cycle;
+        \node[font=\small] at (1.3,-0.15) {$O_\alpha$};
+        % Arrow
+        \draw[thick, -{Stealth[length=6pt]}, cgblue]
+          (3.6,-0.1) -- (5.0,-0.1)
+          node[midway, above, font=\small]{$\psi_\alpha$};
+        % R^n region
+        \begin{scope}[shift={(5.4,0)}]
+          \draw[axisstyle, spacecadet] (0,-1) -- (0,1) node[left]{};
+          \draw[axisstyle, spacecadet] (-0.3,0) -- (2.5,0) node[below]{};
+          \node[font=\sf\small, text=spacecadet] at (2.4,1) {$\Rn{n}$};
+          \draw[thick, munsell, fill=munsell!10, rounded corners=4pt]
+            (0.3,-0.6) to[out=30,in=200] (1.8,0.5)
+            to[out=-30,in=80] (1.9,-0.4)
+            to[out=210,in=-10] (0.3,-0.6);
+          \node[font=\small] at (1.1,-0.05) {$U_\alpha$};
+        \end{scope}
+      \end{tikzpicture}
+      \end{center}
+
+    \item[\textup{(3)}] If any two sets $O_\alpha$ and $O_\beta$
+      \textbf{overlap}, i.e.\ $O_\alpha \cap O_\beta \neq \varnothing$,
+      then the \emph{transition map}
+      \[
+        \psi_\beta \circ \psi_\alpha^{-1}
+          \colon \psi_\alpha[O_\alpha\cap O_\beta]
+          \;\to\; \psi_\beta[O_\alpha\cap O_\beta]
+      \]
+      (which is a map between open subsets of $\Rn{n}$)
+      is $C^\infty$.
+  \end{enumerate}
+\end{definition}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.85]
+  % Manifold
+  \draw[thick, spacecadet, rounded corners=14pt]
+    (2,-0.3) to[out=60,in=170] (5.5,0.8)
+    to[out=-10,in=80] (6.5,-0.5)
+    to[out=260,in=-20] (2.5,-1.5)
+    to[out=160,in=280] cycle;
+  \node[font=\sf\small, text=cgblue] at (6.2,0.8) {$\M$};
+
+  % O_alpha
+  \draw[thick, cgblue, fill=cgblue!8, rounded corners=6pt]
+    (2.5,0.1) to[out=40,in=160] (4.5,0.3)
+    to[out=-20,in=60] (4.3,-0.7)
+    to[out=200,in=-30] (2.3,-0.5) -- cycle;
+  \node[font=\small, text=cgblue] at (2.7,0.3) {$O_\alpha$};
+
+  % O_beta
+  \draw[thick, munsell, fill=munsell!8, rounded corners=6pt]
+    (3.8,0.5) to[out=20,in=140] (5.8,0.2)
+    to[out=-40,in=30] (5.6,-0.8)
+    to[out=210,in=-10] (3.6,-0.4) -- cycle;
+  \node[font=\small, text=munsell] at (5.6,0.4) {$O_\beta$};
+
+  % Point p in overlap
+  \node[circle, fill=banana, inner sep=1.5pt, label={above:\small $p$}]
+    at (4.2,-0.1) {};
+
+  % psi_alpha arrow
+  \draw[thick, -{Stealth[length=6pt]}, cgblue]
+    (2.2,-1.0) -- (0.8,-2.4)
+    node[midway, left, font=\small]{$\psi_\alpha$};
+
+  % psi_beta arrow
+  \draw[thick, -{Stealth[length=6pt]}, munsell]
+    (5.5,-1.0) -- (6.8,-2.4)
+    node[midway, right, font=\small]{$\psi_\beta$};
+
+  % U_alpha in R^n (left)
+  \begin{scope}[shift={(0,-3.2)}]
+    \draw[axisstyle, spacecadet] (0,-0.8) -- (0,0.8);
+    \draw[axisstyle, spacecadet] (-0.3,0) -- (2.6,0);
+    \node[font=\sf\small, text=spacecadet] at (-0.1,1.0) {$\Rn{n}$};
+    \draw[thick, cgblue, fill=cgblue!10, rounded corners=4pt]
+      (0.3,-0.5) to[out=30,in=200] (1.8,0.4)
+      to[out=-20,in=80] (2.0,-0.3)
+      to[out=210,in=-10] (0.3,-0.5);
+    \node[font=\small, text=cgblue] at (1.1,0.0) {$U_\alpha$};
+    \node[circle, fill=banana, inner sep=1.2pt] (pa) at (1.5,0.1) {};
+    \node[font=\scriptsize, below left] at (pa) {$\psi_\alpha(p)$};
+  \end{scope}
+
+  % U_beta in R^n (right)
+  \begin{scope}[shift={(5.5,-3.2)}]
+    \draw[axisstyle, spacecadet] (0,-0.8) -- (0,0.8);
+    \draw[axisstyle, spacecadet] (-0.3,0) -- (2.6,0);
+    \node[font=\sf\small, text=spacecadet] at (2.5,1.0) {$\Rn{n}$};
+    \draw[thick, munsell, fill=munsell!10, rounded corners=4pt]
+      (0.4,-0.5) to[out=30,in=200] (1.9,0.4)
+      to[out=-20,in=80] (2.1,-0.3)
+      to[out=210,in=-10] (0.4,-0.5);
+    \node[font=\small, text=munsell] at (1.2,0.0) {$U_\beta$};
+    \node[circle, fill=banana, inner sep=1.2pt] (pb) at (0.8,0.1) {};
+    \node[font=\scriptsize, below right] at (pb) {$\psi_\beta(p)$};
+  \end{scope}
+
+  % Transition map arrow
+  \draw[thick, -{Stealth[length=6pt]}, spacecadet!70]
+    (2.2,-3.2) to[out=-10,in=190] (5.7,-3.2)
+    node[midway, below, font=\small]{$\psi_\beta\circ\psi_\alpha^{-1}$};
+\end{tikzpicture}
+\end{center}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Charts and atlases}
+
+The maps $\psi_\alpha$ are called \textbf{charts} (in mathematics)
+or \textbf{coordinate systems} (in physics).
+
+The definition as stated depends on the choice of cover
+$\{O_\alpha\}$ and charts $\{\psi_\alpha\}$.
+Adding a new chart $\psi'$ compatible with the existing ones
+would formally give a ``new'' manifold, even though it carries
+no new information.  To eliminate this ambiguity we require the
+atlas $\{\psi_\alpha\}$ to be \textbf{maximal}: \emph{all}
+coordinate systems compatible with conditions~(2) and~(3) are
+included.
+
+\begin{intuition}[Maximal atlas]
+  Requiring maximality is a bookkeeping device.
+  In practice one specifies a convenient atlas and declares
+  that every compatible chart is implicitly included.
+\end{intuition}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Examples}\label{sec:manifold-examples}
+
+\subsubsection{$\Rn{n}$ as a manifold}
+
+$\Rn{n}$ is the trivial example: it can be covered by a
+\emph{single} chart $O_1 = \Rn{n}$, $\psi_1 = \id$.
+As a manifold, $\Rn{n}$ has uncountably many compatible covers
+(any collection of open sets that covers $\Rn{n}$, together with
+the identity or other smooth maps, will do).
+
+\subsubsection{Spacetime}
+
+Minkowski spacetime is $\R^1\times\R^3 \cong \R^{1,3} \cong \Rn{4}$
+as a manifold.  (The Lorentzian structure---the metric
+signature---comes later.)
+
+\subsubsection{The sphere $S^n$}
+\label{sec:sphere}
+
+The $n$-sphere is
+\begin{equation}\label{eq:Sn-def}
+  S^n = \bigl\{(x^1,\dots,x^{n+1})\in\Rn{n+1}
+    \;\big|\; \textstyle\sum_{j=1}^{n+1}(x^j)^2 = 1\bigr\}.
+\end{equation}
+$S^n$ cannot be covered by a single chart (it is compact, while
+any chart image is an open subset of $\Rn{n}$).
+Define the $2(n{+}1)$ open sets
+\begin{equation}\label{eq:Sn-open-sets}
+  O_k^+ = \{(x^1,\dots,x^{n+1})\in S^n \mid x^k > 0\}\,,
+  \qquad
+  O_k^- = \{(x^1,\dots,x^{n+1})\in S^n \mid x^k < 0\}\,,
+\end{equation}
+for $k = 1,\dots,n{+}1$.
+These cover $S^n$.  The corresponding charts are
+\begin{equation}\label{eq:Sn-charts}
+  \psi_k^\pm \colon O_k^\pm \to \Rn{n}\,,
+  \qquad
+  \psi_k^\pm(x^1,\dots,x^{n+1})
+    = (x^1,\dots,x^{k-1},x^{k+1},\dots,x^{n+1})\,,
+\end{equation}
+i.e.\ one simply drops the $k$-th coordinate (whose sign is
+determined by the choice of $O_k^\pm$).
+
+\medskip
+\noindent\textbf{Special case: $S^2$.}\quad
+Consider the charts $\psi_x^+$ (drop $x$, restricted to $x>0$)
+and $\psi_y^-$ (drop $y$, restricted to $y<0$).
+On the overlap, the transition function is
+\[
+  (\psi_y^-\circ(\psi_x^+)^{-1})(y,z)
+    = \bigl(\sqrt{1-y^2-z^2},\; z\bigr).
+\]
+
+\begin{center}
+\begin{tikzpicture}[scale=0.9]
+  % Sphere
+  \shade[ball color=cgblue!15, opacity=0.6] (0,0) circle (1.4);
+  \draw[thick, spacecadet] (0,0) circle (1.4);
+  % Equator
+  \draw[thick, spacecadet, dashed]
+    (-1.4,0) arc (180:360:1.4 and 0.45);
+  \draw[thick, spacecadet]
+    (-1.4,0) arc (180:0:1.4 and 0.45);
+  % Axes
+  \draw[axisstyle, spacecadet!60] (0,-1.8) -- (0,1.8) node[right]{$y$};
+  \draw[axisstyle, spacecadet!60] (-1.8,0) -- (1.8,0) node[below]{$z$};
+  \draw[axisstyle, spacecadet!60] (0.7,-0.7) -- (-0.9,0.9) node[left]{$x$};
+  % Labels
+  \node[font=\sf\small, text=cgblue] at (1.9,1.2) {$S^2$};
+  \node[font=\scriptsize, text=munsell] at (1.6,-0.6) {$O_x^+$};
+\end{tikzpicture}
+\end{center}
+
+\begin{exercise}\label{ex:Sn-transitions}
+  Find the remaining transition functions for the atlas
+  $\{\psi_k^\pm\}$ of $S^n$ and show that they are all $C^\infty$.
+\end{exercise}
+
+\begin{intuition}[Do we need manifolds?]
+  Yes!  The non-trivial topology of manifolds is essential for
+  describing cosmological spacetimes (which may be compact) and
+  black hole spacetimes (which have non-trivial causal structure).
+\end{intuition}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{New manifolds from old: product manifolds}
+
+Suppose $\M$ and $\M'$ are manifolds of dimension $n$ and $n'$,
+respectively.  We can form the \textbf{product manifold}
+$\M\times\M'$.
+
+Let $\psi_\alpha\colon O_\alpha\to U_\alpha$ and
+$\psi'_\beta\colon O'_\beta\to U'_\beta$ be charts for $\M$ and
+$\M'$.  Define charts for $\M\times\M'$ via
+\[
+  \psi_{\alpha\beta}\colon O_\alpha\times O'_\beta
+    \;\to\; U_\alpha\times U'_\beta
+    \;\subset\; \Rn{n+n'}\,,
+\]
+with
+\begin{equation}\label{eq:product-chart}
+  \psi_{\alpha\beta}(p,p')
+    = \bigl(\psi_\alpha(p),\;\psi'_\beta(p')\bigr)
+    \;\in\; \Rn{n+n'}\,.
+\end{equation}
+
+\begin{exercise}\label{ex:product-manifold}
+  Verify that $\M\times\M'$ with the charts
+  $\{\psi_{\alpha\beta}\}$ satisfies the manifold axioms.
+\end{exercise}
+
+\begin{example}[Products build familiar spaces]
+\leavevmode
+\begin{itemize}
+  \item $\Rn{n} = \underbrace{\R\times\R\times\cdots\times\R}_{n}$.
+  \item The \emph{torus}: $T^2 = S^1\times S^1$.
+  \item With just $\R$ and $S^n$ and their products, one can
+    construct many of the manifolds relevant to general relativity.
+\end{itemize}
+\end{example}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Smooth maps and diffeomorphisms}
+
+Let $\M$ and $\M'$ be manifolds with charts $\{\psi_\alpha\}$ and
+$\{\psi'_\beta\}$.
+
+\begin{definition}[Smooth map]\label{def:smooth-map}
+  A map $f\colon\M\to\M'$ is said to be $C^\infty$ (\emph{smooth})
+  if for all $\alpha,\beta$ the composite
+  \[
+    \psi'_\beta\circ f\circ\psi_\alpha^{-1}
+      \colon U_\alpha \to U'_\beta
+  \]
+  is $C^\infty$ (as a map between open subsets of Euclidean spaces).
+\end{definition}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.85]
+  % M
+  \draw[thick, spacecadet, rounded corners=10pt]
+    (0,0.3) to[out=30,in=150] (2.5,0.4)
+    to[out=-30,in=30] (2.6,-0.6)
+    to[out=210,in=-10] (0,-0.5) -- cycle;
+  \node[font=\sf\small, text=cgblue] at (1.3,0.7) {$\M$};
+  \draw[thick, cgblue, fill=cgblue!8, rounded corners=4pt]
+    (0.4,0.0) to[out=30,in=170] (1.8,0.1)
+    to[out=-10,in=40] (1.7,-0.3)
+    to[out=200,in=-10] (0.3,-0.3) -- cycle;
+  \node[font=\scriptsize] at (1.0,-0.1) {$O_\alpha$};
+
+  % f arrow
+  \draw[thick, -{Stealth[length=6pt]}, spacecadet]
+    (2.9,-0.1) -- (4.6,-0.1)
+    node[midway, above, font=\small]{$f$};
+
+  % M'
+  \begin{scope}[shift={(5,0)}]
+    \draw[thick, spacecadet, rounded corners=10pt]
+      (0,0.3) to[out=30,in=150] (2.5,0.4)
+      to[out=-30,in=30] (2.6,-0.6)
+      to[out=210,in=-10] (0,-0.5) -- cycle;
+    \node[font=\sf\small, text=cgblue] at (1.3,0.7) {$\M'$};
+    \draw[thick, munsell, fill=munsell!8, rounded corners=4pt]
+      (0.5,0.0) to[out=30,in=170] (1.9,0.1)
+      to[out=-10,in=40] (1.8,-0.3)
+      to[out=200,in=-10] (0.4,-0.3) -- cycle;
+    \node[font=\scriptsize] at (1.1,-0.1) {$O'_\beta$};
+  \end{scope}
+
+  % psi_alpha down-left
+  \draw[thick, -{Stealth[length=5pt]}, cgblue]
+    (0.5,-0.7) -- (0.0,-1.8)
+    node[midway, left, font=\scriptsize]{$\psi_\alpha$};
+
+  % psi'_beta down-right
+  \draw[thick, -{Stealth[length=5pt]}, munsell]
+    (6.8,-0.7) -- (7.3,-1.8)
+    node[midway, right, font=\scriptsize]{$\psi'_\beta$};
+
+  % U_alpha
+  \begin{scope}[shift={(-0.8,-2.6)}]
+    \draw[thick, cgblue, rounded corners=3pt]
+      (0.2,-0.3) to[out=20,in=210] (1.5,0.3)
+      to[out=-20,in=70] (1.6,-0.2)
+      to[out=220,in=-10] (0.2,-0.3);
+    \node[font=\scriptsize, text=cgblue] at (0.9,0.0) {$U_\alpha$};
+    \node[font=\sf\scriptsize, text=spacecadet] at (-0.2,0.2) {$\Rn{n}$};
+  \end{scope}
+
+  % U'_beta
+  \begin{scope}[shift={(6.5,-2.6)}]
+    \draw[thick, munsell, rounded corners=3pt]
+      (0.2,-0.3) to[out=20,in=210] (1.5,0.3)
+      to[out=-20,in=70] (1.6,-0.2)
+      to[out=220,in=-10] (0.2,-0.3);
+    \node[font=\scriptsize, text=munsell] at (0.9,0.0) {$U'_\beta$};
+    \node[font=\sf\scriptsize, text=spacecadet] at (1.9,0.2) {$\Rn{n'}$};
+  \end{scope}
+
+  % Composite arrow
+  \draw[thick, -{Stealth[length=5pt]}, spacecadet!70]
+    (1.0,-2.8) to[out=-10,in=190] (6.8,-2.8)
+    node[midway, below, font=\scriptsize]
+      {$\psi'_\beta\circ f\circ\psi_\alpha^{-1}$};
+\end{tikzpicture}
+\end{center}
+
+\begin{definition}[Diffeomorphism]\label{def:diffeomorphism}
+  A map $f\colon\M\to\M'$ is a \textbf{diffeomorphism} if it is
+  $C^\infty$, one-to-one, onto, and its inverse $f^{-1}$ is also
+  $C^\infty$.  If such a map exists, $\M$ and $\M'$ are said to be
+  \textbf{diffeomorphic}: they have identical manifold structure.
+\end{definition}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Vectors on manifolds}\label{sec:vectors-manifolds}
+
+Euclidean space $\Rn{n}$ (and Minkowski space) carries a natural
+\emph{global} vector space structure: $V = \Rn{n}$ is simultaneously
+a manifold and a vector space.
+
+For a general manifold this is \textbf{no longer true}---there is
+no natural additive structure.
+
+\begin{example}[$S^2$ is not a vector space]
+  The 2-sphere $S^2$ is a manifold, but it is \emph{not} a vector
+  space: there is no meaningful way to ``add'' two points on $S^2$.
+\end{example}
+
+It is, however, still possible to associate a vector space to each
+point of a manifold.  For a manifold $\M$ embedded in $\Rn{m}$
+(such as $S^2\subset\Rn{3}$), one can visualise the
+\textbf{tangent plane} at a point~$p$:
+
+\begin{center}
+\begin{tikzpicture}[scale=0.9]
+  % Sphere
+  \shade[ball color=cgblue!12, opacity=0.5] (0,0) circle (1.4);
+  \draw[thick, spacecadet] (0,0) circle (1.4);
+  % Equator
+  \draw[thick, spacecadet, dashed]
+    (-1.4,0) arc (180:360:1.4 and 0.45);
+  \draw[thick, spacecadet]
+    (-1.4,0) arc (180:0:1.4 and 0.45);
+  % Point p
+  \node[circle, fill=banana, inner sep=1.8pt] (P) at (0.4,1.2) {};
+  \node[font=\small, above right] at (P) {$p$};
+  % Tangent plane
+  \draw[thick, munsell, fill=munsell!8, opacity=0.7]
+    (-1.0,1.8) -- (1.8,1.8) -- (2.2,0.8) -- (-0.6,0.8) -- cycle;
+  \node[font=\sf\small, text=munsell] at (2.5,1.4) {$\Tp$};
+  % Label
+  \node[font=\sf\small, text=cgblue] at (-1.8,0.8) {$S^2\subset\Rn{3}$};
+\end{tikzpicture}
+\end{center}
+
+But we want an \emph{intrinsic} definition, independent of any
+embedding.
+
+\begin{keyresult}[Intrinsic tangent vectors]
+  The key idea: identify the vector space of tangent vectors at a
+  point with the vector space of \emph{directional derivatives}
+  at that point.  Directional derivatives can be defined using
+  only the manifold structure---no embedding required.
+  This is developed in the next lecture.
+\end{keyresult}
+
+\begin{figure}[htbp]
+  \centering
+  \input{figures/fig_lec03_ellipsoid}
+  \caption{Top: geodesics on a triaxial ellipsoid
+    ($a=1.5$, $b=1.0$, $c=0.7$).  The curves are shortest paths
+    intrinsic to the surface.
+    Bottom: tangent vectors (gold) and a parallel-transported
+    vector (teal) along a geodesic, illustrating how
+    parallel transport preserves inner products but the
+    transported vector rotates relative to the tangent
+    direction.}\label{fig:ellipsoid-geodesics}
+\end{figure}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Formal definitions (summary)}
+
+We collect the precise versions of the definitions introduced
+above for reference.
+
+\begin{definition}[Locally Euclidean space]\label{def:loc-eucl}
+  A \textbf{locally Euclidean space} of dimension~$d$ is a
+  Hausdorff topological space~$\M$ such that every point has a
+  neighbourhood homeomorphic to an open subset of~$\Rn{d}$.
+\end{definition}
+
+\begin{definition}[Differentiable structure]\label{def:diff-struct}
+  A \textbf{differentiable structure}~$\mathcal{F}$ of class~$C^k$
+  ($1\le k\le\infty$) on a locally Euclidean space~$\M$ is a
+  collection of coordinate systems
+  $\{(O_\alpha,\psi_\alpha)\mid\alpha\in A\}$ such that:
+  \begin{enumerate}
+    \item[\textup{(a)}] $\displaystyle\bigcup_{\alpha\in A}
+      O_\alpha = \M$.
+    \item[\textup{(b)}] $\psi_\alpha\circ\psi_\beta^{-1}$ is
+      $C^k$ for all $\alpha,\beta\in A$.
+    \item[\textup{(c)}] The collection $\mathcal{F}$ is maximal
+      with respect to~(b).
+  \end{enumerate}
+\end{definition}
+
+A $d$-dimensional \textbf{differentiable manifold of class $C^k$}
+is a pair $(\M,\mathcal{F})$ consisting of a second-countable,
+locally Euclidean space~$\M$ together with a differentiable
+structure~$\mathcal{F}$ of class~$C^k$.
+(The $C^k$ condition can be generalised to $C^\infty$, complex
+analytic, etc.)
