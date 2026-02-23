@@ -1,0 +1,885 @@
+# General Relativity, Lecture 23: null geodesics for the Schwarzschild metric
+# YouTube: https://www.youtube.com/watch?v=oKfXjiAqV1k
+# Auto-generated transcript
+
+[00:00.00] hello and welcome back to the last
+[00:01.44] lecture of introduction to general
+[00:02.88] relativity
+[00:03.92] in today's lecture we will detail the
+[00:06.32] calculations of the deflection of light
+[00:08.80] by heavenly bodies for me this is one of
+[00:11.68] the most spectacular predictions of
+[00:13.20] general relativity that light itself
+[00:15.04] is curved by the gravitational field and
+[00:18.32] even more spectacular is that this
+[00:20.64] curvature
+[00:21.44] can be detected with terrestrial
+[00:24.80] observations and was detected in fact
+[00:26.72] back in 1919
+[00:28.84] already so to
+[00:31.36] commence the discussion of this uh
+[00:34.56] calculation we should recall uh
+[00:38.32] a couple of facts
+[00:41.60] about the the motion or the structure of
+[00:44.96] geodesics
+[00:46.24] in the schwarzschild solution
+[00:49.68] so we've got this energy equation so
+[00:52.16] remember
+[00:52.96] that we model the geodesic in the
+[00:55.76] schwarzschild
+[00:57.12] solution we obtained a
+[01:00.32] effective one-dimensional classical
+[01:02.56] mechanics model
+[01:03.68] that corresponds
+[01:06.96] to the geodesic coordinates
+[01:11.84] the schwarzschild solution and key here
+[01:15.12] is the following energy equation so by
+[01:17.92] introducing
+[01:19.28] uh an effective energy equation this is
+[01:21.04] not the energy
+[01:22.56] of the null geodesic directly um
+[01:26.32] it's just an effective interpretation of
+[01:30.08] this quantity for uh geodesics
+[01:34.00] as a using this one-dimensional analogy
+[01:37.60] one-dimensional classical mechanic
+[01:39.04] analogy now for analgeodesics there's
+[01:41.52] this constant kappa if you can go back
+[01:43.04] and look
+[01:43.52] into equation lectures 21 and 22 to
+[01:46.08] understand that
+[01:46.80] this constant kappa is zero for
+[01:48.32] analgesics
+[01:50.96] so if you look at this energy equation
+[01:53.04] it looks like that of a single
+[01:55.04] non-relativistic particle moving in this
+[01:56.96] funny potential this kind of
+[01:58.40] quartic cubic quadratic potential um
+[02:01.68] and uh well we might as well isolate
+[02:05.12] this effective potential
+[02:06.40] just to just to emphasize this point
+[02:10.64] so there's an effective radial potential
+[02:13.20] that this
+[02:13.76] fictitious particle is moving in and
+[02:17.52] it is based on the angular
+[02:21.12] effective angular momentum and the mass
+[02:23.84] of
+[02:24.16] the celestial body
+[02:27.44] so that's some potential right so you we
+[02:29.36] can plot this we so choose
+[02:31.44] and what we will find is something that
+[02:33.68] doesn't look unlike
+[02:35.44] the kinds of potentials that you have
+[02:38.48] by binding subatomic particles to nuclei
+[02:44.72] so potential looks something like this
+[02:47.36] goes up and
+[02:48.32] decays off and uh
+[02:51.52] we want to understand this potential
+[02:52.88] because the radial motion
+[02:55.04] is really determined by a classical
+[02:57.52] particle moving in this potential
+[02:59.28] so obviously it's kind of important to
+[03:00.96] understand this potential
+[03:02.80] and in particular there's you know one
+[03:04.40] important point here in this potential
+[03:05.84] namely this potential
+[03:07.12] uh stationary point here and that's
+[03:09.92] going to play an important role in any
+[03:11.44] classical motion
+[03:12.88] in this potential so if you have some
+[03:14.80] classical particle radial particle
+[03:17.04] you can imagine several scenarios like
+[03:18.80] this radial particle
+[03:20.72] this what particle zooms up the
+[03:22.48] potential doesn't have enough energy to
+[03:24.56] crest the potential and zooms away again
+[03:26.96] that would reflect an orbit of a null
+[03:28.88] geodesic that
+[03:30.64] comes close to the heavenly body and
+[03:32.00] then goes away or maybe the heaven
+[03:34.32] the the incoming particle has enough
+[03:37.12] energy to go over
+[03:38.40] the potential barrier and then it decays
+[03:41.76] or accelerates to negative in
+[03:45.52] potential energy so in other words
+[03:47.28] that's represents an analogy or desert
+[03:49.36] which gets caught
+[03:50.80] by this potential captured
+[03:54.08] and so it's obviously very important
+[03:55.60] that we uh understand where this point
+[03:58.40] is
+[03:59.36] that i've highlighted in yellow how can
+[04:01.92] we work that out well this is now first
+[04:03.92] year calculus
+[04:05.04] we can just take the derivative of the
+[04:07.04] effective potential
+[04:08.16] and set it to zero that'll give us the
+[04:09.84] stationary points there's only one
+[04:11.28] stationary point which you can sort of
+[04:12.80] see graphically
+[04:17.12] and doing that derivative which is what
+[04:18.96] i'm doing here
+[04:20.40] leads us to the following equation
+[04:25.60] minus three minus 2 m plus r
+[04:29.92] and well you know this goes away right
+[04:32.96] for solving
+[04:33.92] for the for the maxima or for the
+[04:36.40] extrema
+[04:37.52] and we learned that the maxima
+[04:41.20] is at r equals 3m
+[04:45.76] so what does that tell us well for large
+[04:48.72] masses
+[04:49.60] you know suppose m goes asymptotically
+[04:51.84] towards infinity it can't internal
+[04:53.28] relativity but suppose
+[04:55.04] then uh analogy it is again the presence
+[04:58.00] of a large mass will clearly be strongly
+[04:59.92] affected right because this maximum is
+[05:01.44] very high and so
+[05:02.72] you have um uh and then
+[05:06.08] the potential will spread out and so
+[05:08.40] this will
+[05:09.84] lead to very noticeable effects to the
+[05:11.36] propagation of null geodesics
+[05:16.00] so i'll just indicate on this plot that
+[05:17.60] this is the point 3 m
+[05:19.44] and you know for scale i'll sort of put
+[05:21.52] on a couple of other points
+[05:23.68] there we go
+[05:28.48] now uh we want to understand in the rest
+[05:32.08] of this video
+[05:33.04] how does analog geodesic propagate in
+[05:36.24] the presence of
+[05:37.20] such a uh in the presence of a heavenly
+[05:40.24] body
+[05:40.88] so for that um to set up the the
+[05:44.16] scenario here we have a heavenly body
+[05:45.68] like the sun
+[05:48.08] and we have a geodesic so there's all
+[05:51.04] sorts of scenarios but those scenarios
+[05:52.88] we're going to focus on here is we'll
+[05:54.24] focus on scattering type scenarios
+[06:06.16] so that's our goal for the rest of the
+[06:07.52] lecture so scattering type scenario you
+[06:09.20] know you have
+[06:10.56] uh infinite sort of infinitely far away
+[06:13.44] t
+[06:13.68] equals minus infinity you have an
+[06:15.20] incoming
+[06:18.00] null geodesic and then that's not
+[06:20.16] affected by
+[06:21.04] the schwarzschild uh geometry infinitely
+[06:23.68] far away this right shot geometry is
+[06:25.12] asymptotically flat
+[06:26.64] and as this knowledge does it comes
+[06:28.40] towards the heavenly body
+[06:30.24] the geodesic is going to be affected by
+[06:32.88] the curvature of the schwarzschild
+[06:34.24] solution
+[06:35.04] and will be deflected and then
+[06:36.80] infinitely far away in the future
+[06:40.40] it'll propagate eventually in a straight
+[06:42.08] line again
+[06:44.48] and to understand this type of scenario
+[06:47.52] it's very convenient
+[06:48.88] not to use the position of the the
+[06:52.96] particle or photon in this case but to
+[06:55.28] actually use a slightly different
+[06:56.72] parameter
+[06:57.44] to measure the relative position of
+[07:00.48] the incoming analgesic and the heavenly
+[07:03.52] body
+[07:04.72] and so for that we're going to set up a
+[07:06.56] coordinate called the impact parameter
+[07:08.48] and but to do that first we'll have to
+[07:11.36] talk a little bit about asymptotic
+[07:12.96] flatness
+[07:14.96] and identify which constants
+[07:18.32] in these solutions correspond to what
+[07:21.44] impact parameters and how to define them
+[07:24.64] so the first step is to define uh
+[07:30.00] uh to identify inside the constants l
+[07:32.96] and e
+[07:33.44] inside our governing equation for the
+[07:35.04] geodesic uh an
+[07:36.64] important other constant namely we
+[07:38.96] notice that
+[07:40.24] l divided by e represents the distance
+[07:42.96] of closest approach
+[07:44.00] to the center
+[07:47.36] i'll argue how to show that i'll show
+[07:49.20] you how to argue that in a second
+[08:08.88] all right so here's how you might argue
+[08:10.40] this it's not so difficult
+[08:12.48] so you know you go to a coordinate
+[08:14.08] system where the heavenly bodies at
+[08:17.20] well we're using just simply
+[08:23.12] polar coordinates so the black line here
+[08:26.56] is a uh
+[08:31.12] geodesic this is in the case where m is
+[08:34.72] naught
+[08:35.44] so i should put that up here
+[08:40.56] so
+[08:43.60] suppose m is not so we've got a flat a
+[08:45.52] flat geometry so we have the heavenly
+[08:47.52] body here at the
+[08:48.48] center of the coordinate system
+[08:55.44] and you imagine a geodesic propagating
+[08:57.68] along
+[09:00.40] a photon moving along this geodesic
+[09:03.68] and you specify the position of this
+[09:06.24] photon with a radius and a
+[09:09.60] angle variable phi and then
+[09:12.64] you note that the position of closest
+[09:15.36] approach
+[09:16.48] is here with the intersection of the
+[09:18.00] geodesic and the coordinate y axis
+[09:20.32] in yellow um
+[09:24.96] this y intersect is at r naught that's
+[09:27.52] the position of closest approach
+[09:29.60] and uh x is equal to t that's the actual
+[09:32.48] trajectory so the
+[09:33.92] the trajectory itself follows has these
+[09:37.20] coordinates as a function of time
+[09:38.80] y is always r naught and x is equal to t
+[09:42.48] and then you uh you can
+[09:45.68] calculate l divided by e or r squared
+[09:48.80] times by d phi dt for the solution
+[09:51.04] and then you set uh you find that the
+[09:53.20] time point when
+[09:54.40] the trajectory is intersecting the y
+[09:56.48] axis and you'll find that l divided by e
+[09:58.24] and d
+[09:58.56] gives r naught so that's uh
+[10:01.84] that that gives us that interpretation
+[10:04.40] that the case
+[10:06.08] m is naught now uh
+[10:10.64] l divided by e does not necessarily
+[10:13.68] uh equal the position
+[10:17.20] of closest approach
+[10:21.44] for a curved geometry however
+[10:27.76] as mentioned several times the
+[10:30.48] schwarzschild
+[10:31.36] solution or geometry
+[10:34.88] is asymptotically flat
+[10:47.68] and so by the way i should have stressed
+[10:49.20] this
+[10:50.72] l divided by e equals r naught no matter
+[10:53.44] what
+[10:53.84] t is in this flat case here
+[11:00.88] so in particular l divided by e equals r
+[11:03.84] naught when the trajectory is infinitely
+[11:05.52] far away
+[11:06.16] from the scattering center or the
+[11:07.68] heavenly body
+[11:09.76] now the schwarzschild geometry is
+[11:12.24] asymptotically flat so when you're
+[11:13.60] infinitely far away from the heavenly
+[11:15.20] body
+[11:15.92] then you
+[11:20.16] you can interpret everything as you
+[11:21.84] would for a flat geometry
+[11:24.96] so in particular for a light ray
+[11:30.48] photon
+[11:33.84] very far from the origin
+[11:41.44] so r is much bigger than the the m
+[11:44.56] parameter the constant
+[11:49.12] l divided by e represents an apparent
+[11:54.32] impact parameter so one thing i should
+[11:56.00] say is that r naught here
+[11:59.84] is what we call an impact parameter
+[12:11.76] r naught is an impact parameter what
+[12:13.20] does that mean it means a displacement
+[12:15.04] relative
+[12:15.84] to so you imagine the scattering uh
+[12:18.40] trajectory
+[12:19.36] and you measure the the distance
+[12:22.56] of the closest approach of the
+[12:25.44] scattering trajectory to your target and
+[12:27.20] that represents
+[12:28.08] your impact parameter
+[12:31.52] how we define the impact parameter
+[12:35.36] now uh for the
+[12:40.48] schwarzschild geometry when m is not
+[12:42.96] zero
+[12:43.76] uh we can by thinking
+[12:47.12] asymptotically imagining that the the
+[12:49.20] like impinging
+[12:50.40] light ray is infinitely far away from
+[12:52.96] the
+[12:53.52] heavenly body we can hereby interpret
+[12:56.96] therefore the constant
+[12:58.08] l divided by e as an apparent
+[13:05.44] impact parameter
+[13:16.48] so b we'll call it b l b is
+[13:19.52] l divided by e
+[13:28.56] and so b this constant l divided by e
+[13:31.20] represents sort of the distance between
+[13:33.28] the the axis which
+[13:37.04] runs right through the center of the
+[13:38.16] heavenly body and the
+[13:40.08] impingement trajectory
+[13:46.40] and so now imagine you look at the
+[13:48.72] heavenly body and you are a light ray
+[13:55.92] so there's the heavenly body and you are
+[13:57.52] the light ray and you are impingement on
+[13:59.60] this
+[14:00.56] uh celeste your body so you're
+[14:02.00] infinitely far away you're looking at it
+[14:04.16] and you're you're heading towards it
+[14:06.00] of course no time passes right you're on
+[14:07.84] the library so this
+[14:09.28] but uh whatever invoke your imagination
+[14:12.72] that you are a light ray
+[14:13.92] and then you are you could depending on
+[14:16.80] how far away you are from the scattering
+[14:18.40] center of this
+[14:19.36] heavenly body
+[14:22.72] you are in when you're infinitely far
+[14:26.08] away the scattering center is a distance
+[14:28.84] b
+[14:30.40] equals l divided by e effectively
+[14:33.52] away from your uh initial
+[14:36.56] trajectory so you imagine your light ray
+[14:39.84] trajectory heads
+[14:41.52] parallel to the axis running through the
+[14:43.76] heavenly body
+[14:44.72] and b measures the distance displacement
+[14:47.36] of
+[14:47.76] the impingement axis uh trajectory from
+[14:50.48] this axis
+[14:51.36] as the light ray gets closer of course
+[14:53.12] to the heavenly body so this circle with
+[14:54.72] a cross in it means
+[14:55.76] the the sort of the target point that
+[14:57.52] the light ray is would effectively
+[14:59.84] hit if there was no curved geometry
+[15:06.56] now it's important to note that right
+[15:09.20] because
+[15:10.40] the geometry is curved this effective
+[15:13.12] distance will
+[15:14.00] be closed once the trajectory gets close
+[15:16.24] to the heavenly body because
+[15:17.52] the geometry affects the geodesic and it
+[15:20.64] could be that the
+[15:21.60] particle gets trapped or not by
+[15:24.80] this heavenly body right it depends on
+[15:26.72] on this radial motion
+[15:28.72] so if you go back to here to this is
+[15:29.92] this radial potential if you are
+[15:32.16] if the radial uh energy is insufficient
+[15:35.52] to crest this
+[15:36.64] maxima then the the impingement
+[15:39.28] trajectory will come
+[15:40.48] in and uh be affected by the celestial
+[15:44.32] body and fly away
+[15:45.92] however for energies greater than
+[15:52.16] actually i don't like this wobbly circle
+[15:53.76] draw a real circle
+[15:56.40] if you have an energy greater than
+[16:00.00] vf maxima
+[16:06.40] so if the incoming
+[16:10.88] light ray has
+[16:15.52] energy half e squared
+[16:18.96] greater than v f
+[16:22.08] v max which is 3m
+[16:25.92] then it is
+[16:29.12] captured right
+[16:32.64] so that's defined by this red circle
+[16:35.92] here so any
+[16:37.36] as we'll see any light incoming light
+[16:39.52] ray that has an energy
+[16:42.24] bigger than uh enough to to crest the
+[16:45.12] the radial potential maxima
+[16:47.92] will be these energies will be defined
+[16:50.88] by a circle the circle won't have
+[16:52.56] necessarily have the same radius as the
+[16:54.16] celestial body
+[16:55.52] and then you will find that if your
+[16:58.40] impact parameter lies within this red
+[17:00.08] circle
+[17:00.64] then you will be captured and so this is
+[17:03.04] this red circle has a name
+[17:05.36] and the area of that circle is very
+[17:07.04] important and that's called the impact
+[17:09.44] the the cross section
+[17:12.88] so because some trajectories
+[17:22.80] they can reach r equals zero and hence
+[17:25.68] be captured
+[17:33.44] we estimate this capture area
+[17:38.64] or capture radius
+[17:42.96] or capture
+[17:46.08] cross section
+[17:53.92] of the object
+[17:58.72] so this is ie area
+[18:02.16] of the target
+[18:05.60] that captures
+[18:08.64] geodesic
+[18:13.12] and that area we traditionally use the
+[18:15.20] symbol signal the scattering the sigma
+[18:16.88] in scattering theory for this area and
+[18:18.56] it's
+[18:18.88] pi times the capture radius squared so
+[18:21.76] the
+[18:22.08] capture radius is b c squared
+[18:25.12] and to to calculate bc the capture
+[18:28.24] radius and therefore the red circle so
+[18:30.00] this is the red circle
+[18:34.80] so the red circle is the effective sort
+[18:37.12] of
+[18:38.00] target area where an incoming nonzero
+[18:40.80] design will be captured by
+[18:42.00] the heavenly body
+[18:46.00] and how do we we want to calculate now
+[18:47.60] bc and to do that we've got to relate bc
+[18:49.68] to the energy and that energy better be
+[18:51.52] bigger than the maximum of the radial
+[18:53.60] uh effective potential
+[19:08.80] okay so we need to know the height of
+[19:10.16] the maximum potential
+[19:14.56] so a half e squared has got to equal
+[19:18.00] the potential at the maximum that's when
+[19:20.00] the radius is three times
+[19:22.84] m
+[19:24.72] and that equals a little calculation
+[19:27.20] later
+[19:29.84] l squared m divided by two times
+[19:33.04] three m cubed
+[19:41.28] and uh well we need to work out what is
+[19:43.76] the the b
+[19:44.72] parameter not the e you know it's all
+[19:46.32] very well to have e but what well
+[19:48.24] uh we want b well b is uh defined to be
+[19:52.64] l divided by e right so we just need to
+[19:54.32] rearrange this equation to find l
+[19:55.84] divided by e's
+[19:57.68] and that's super easy here because you
+[20:00.72] can already see there's an e squared on
+[20:02.08] one side and an l squared on the other
+[20:04.24] and we end up with this equation l
+[20:07.04] squared divided by e squared equals
+[20:09.12] 27 m squared uh
+[20:12.24] and that tells us that b c is
+[20:15.52] root three or three to the three halves
+[20:22.40] times m
+[20:26.32] so now we know the apparent in and thus
+[20:29.12] now we know the apparent impact radius
+[20:31.60] capture radius if you like of this
+[20:33.36] heavenly body
+[20:35.68] and now we can work out the impact cross
+[20:37.84] section sigma to be
+[20:39.44] 27 pi m squared so the bigger the m
+[20:42.80] the larger the cross section and so for
+[20:45.76] something like a black hole solution
+[20:47.44] which we won't be able to cover in an
+[20:48.56] introductory course on general
+[20:49.76] relativity but which is indeed covered
+[20:51.84] uh which is indeed uh modeled by
+[20:54.80] schwarzschild solution
+[20:56.40] you can see that the larger m the the
+[20:58.64] larger this
+[20:59.76] capture cross section that such a
+[21:03.52] celestial body will have
+[21:06.72] now trajectories whose impact parameter
+[21:09.84] or impact effective impact distance
+[21:13.52] which exceed this bc capture radius
+[21:18.00] well they they won't be captured right
+[21:25.12] so if you're heading towards a black
+[21:26.56] hole and b
+[21:28.48] is bigger than bc then you won't be
+[21:30.00] sucked in
+[21:34.72] now our goal is
+[21:38.16] to understand how much you're deflected
+[21:40.08] by
+[21:42.16] as you zoom past this massive celestial
+[21:46.00] object
+[21:47.36] and you are analogy to think
+[21:51.52] so for that we want to uh understand the
+[21:54.64] the value of the angular parameter phi
+[21:57.52] is a function
+[21:58.00] of the radius parameter well from
+[22:00.40] lecture 22
+[22:01.44] we actually obtained this formula
+[22:13.20] and we can
+[22:15.00] [Music]
+[22:16.80] study this this uh this quantity and
+[22:20.88] try and understand how much total
+[22:23.84] deflection
+[22:24.64] a incoming trajectory will experience
+[22:27.84] so if we go back to the the picture here
+[22:30.08] i have of the scattering setup
+[22:32.08] so here here comes the the particle
+[22:34.40] comes in
+[22:36.00] and then it has some we want to
+[22:38.00] understand
+[22:39.12] what's the the total angle
+[22:42.16] phi deflection
+[22:46.00] that's our goal now just to work out
+[22:52.32] delta phi which measures the total angle
+[22:54.88] of deflection
+[22:56.08] of the knowledge as it zooms past the
+[22:59.04] heavenly body
+[23:21.60] so the goal is to calculate total
+[23:23.04] angular shift total angular deflection
+[23:24.96] how does that define well just work out
+[23:27.04] your radial variable for
+[23:30.16] tau is plus infinity this is your affine
+[23:32.40] parameter
+[23:33.36] and subtract from it the angle when tau
+[23:35.92] is minus infinity
+[23:37.12] and that's your total deflection
+[23:49.60] now for such trajectories the turning
+[23:52.08] point
+[23:56.72] is at a radial coordinate r equals
+[23:59.92] r naught and r naught well
+[24:03.12] we can work that out in a second
+[24:07.60] and we the way we can work out r naught
+[24:09.44] is we can go back to this radial
+[24:11.12] potential
+[24:12.16] here so remember here's the radial
+[24:14.48] potential experienced by
+[24:15.84] the effective particle and you have an
+[24:18.64] incoming trajectory
+[24:20.64] and then it comes up it doesn't have
+[24:21.92] enough energy to crest the
+[24:24.00] potential and that turning point here
+[24:26.08] that's r naught
+[24:31.44] we want to work out r naught how do we
+[24:34.40] work out r naught well r naught is when
+[24:36.00] the energy equals
+[24:37.36] the effective potential energy
+[24:49.36] and we
+[24:52.48] have ourselves
+[24:57.44] by rearranging we bring the energy over
+[25:00.08] through
+[25:00.64] to the right hand side so that we can
+[25:03.44] replace
+[25:04.00] l squared divided by e squared with the
+[25:05.36] impact parameter squared
+[25:11.84] and then well we do a little bit more
+[25:13.68] rearranging to get an equation
+[25:17.76] which we'll call equation one
+[25:21.36] it should get a cubic equation for this
+[25:23.12] turning point
+[25:29.44] so we've got to find the zero of a cubic
+[25:31.84] polynomial equation you can do that
+[25:34.64] it is analytically solvable up to
+[25:37.28] quartic equations you can find these
+[25:38.88] zeros
+[25:41.68] and uh well i'll just quote the answer
+[25:44.64] to you
+[25:45.84] because it's a pain
+[25:57.52] so the the largest radius for which the
+[26:01.12] potential equals the total energy is the
+[26:03.76] largest zero
+[26:06.80] of that cubic polynomial
+[26:10.16] and i'll just quote that i mean you
+[26:11.52] could work it out numerically if you
+[26:12.72] want or you can just believe me
+[26:14.96] that it is 2b root 3 cos
+[26:18.80] one third arc cos
+[26:22.84] minus three to the three halves
+[26:26.80] m on b
+[26:31.52] so that's okay you can believe me and
+[26:34.32] now
+[26:34.88] um now that we have the the
+[26:38.08] turning point that's the
+[26:41.12] distance the closest distance of the
+[26:43.12] trajectory to the heavenly body
+[26:45.04] we can go ahead and solve this
+[26:46.24] differential equation here so this
+[26:48.56] differential equation uh
+[26:52.08] is the one that will allow us to compute
+[26:54.72] the total angular shift
+[27:00.24] that's the one we want to integrate now
+[27:01.76] actually
+[27:03.84] the total angular shift is we're just
+[27:05.20] going to integrate both sides and then
+[27:06.64] set
+[27:07.76] input the limits we know that when tau
+[27:11.20] is minus infinity r is minus infinity
+[27:13.36] r is infinity and so on
+[27:37.52] uh this this equation here takes a
+[27:39.28] little justifying right so
+[27:40.56] we're going to integrate this equation
+[27:42.80] uh from
+[27:44.24] the point of closest the radius of
+[27:46.24] closest approach to
+[27:47.36] infinity now i put a 2 in front of there
+[27:50.48] why is that well
+[27:51.60] you've got two parts to this angular
+[27:54.64] shift differential equation so if you
+[27:56.88] look at the first
+[27:58.08] epoch right the analogy does it's
+[28:00.32] getting closer closer closer closer
+[28:01.60] closer
+[28:02.00] until it reaches the point r
+[28:05.04] equals r naught of closest approach
+[28:08.56] and then it gets further and out now if
+[28:11.04] you imagine the angular shift
+[28:12.56] generated part through this trajectory
+[28:14.40] well the angular shift
+[28:16.00] uh adds up right as you come in it gets
+[28:19.20] more and more and more and then
+[28:20.64] you've got a symmetric um epoch where
+[28:23.36] the particle is now
+[28:24.48] exiting the potential well the
+[28:27.04] gravitational well
+[28:28.32] and there the angular deflection just
+[28:30.96] adds up so we get twice the angular
+[28:32.80] deflection
+[28:33.60] we get a contribution when the radius
+[28:35.28] comes in to
+[28:37.04] r naught and we have a contribution from
+[28:38.80] when the radius goes from r naught back
+[28:40.40] to r equals infinity again that's why
+[28:42.16] there's a two here
+[28:44.72] at the front of this integral so this
+[28:46.24] integral is just literally integrating
+[28:48.56] this yellow boxed expression on the
+[28:52.00] right hand side
+[28:55.76] so it's symmetric about
+[29:02.72] i equals r
+[29:06.72] and now okay so this is a bit of
+[29:08.40] painless integral um
+[29:10.48] you just have to believe me
+[29:14.00] or work it out that you know making the
+[29:17.36] following
+[29:18.16] substitution is a good thing to do
+[29:28.08] makes it look a tad easier
+[29:36.16] but this integral is not trivial
+[29:39.28] one thing we can do however is set m
+[29:42.56] is zero and just as a sanity check you
+[29:45.52] know what happens when m is zero
+[29:52.40] well when m is zero we have flat space
+[29:54.16] time and we calculate
+[29:56.00] as an exercise that uh the total angular
+[29:59.68] shift
+[30:02.80] is pi okay as it should be right when
+[30:05.28] you come in
+[30:06.16] if you look at now the trajectory of a
+[30:09.12] null geodesic in the flat
+[30:11.04] case well phi goes from minus
+[30:17.12] pi to pi
+[30:30.40] and since we've defined the angular
+[30:32.40] shift in the way that we have here
+[30:34.24] you can see that the total angular shift
+[30:36.56] is pi
+[30:52.56] now let's investigate delta phi as a
+[30:55.28] function of m
+[30:56.40] right we really want to understand
+[30:57.60] what's the angular shift
+[30:59.44] in the case where uh we
+[31:04.24] are interested in
+[31:07.68] realistic celestial bodies like the sun
+[31:10.08] or something like that
+[31:17.44] well it's non-trivial
+[31:32.40] that's because this limit
+[31:40.00] becomes singular
+[31:47.92] at m equals zero
+[31:51.20] which is a pain right because if you
+[31:52.56] want to expand around the smallness of
+[31:54.56] m and something becomes singular at the
+[31:56.40] thing that you're expanding around then
+[31:57.60] the taylor series approximation doesn't
+[31:59.20] work exactly there
+[32:01.52] so we're going to avoid this uh in the
+[32:03.68] following way
+[32:05.52] we promote instead so this is
+[32:08.88] interrelationship between m and r naught
+[32:10.64] but instead what we're going to do is we
+[32:11.92] promote
+[32:12.48] m and r naught to independent variables
+[32:15.60] and then we will do our expansion and
+[32:17.68] then we'll set
+[32:19.12] we'll fix uh m to be equal to r naught
+[32:23.36] m to depend on r naught in the correct
+[32:26.84] fashion
+[32:33.92] so we'll compare delta phi which is now
+[32:37.04] a function of m and r naught
+[32:57.68] and we'll compare this angular
+[32:58.96] deflection for light rays with the same
+[33:01.36] r naught
+[33:10.48] the first step is to eliminate b
+[33:13.52] via equation one right so equation one
+[33:15.60] up here is the equation for the turning
+[33:17.04] point
+[33:18.80] and that tells us that b is a function
+[33:20.72] of r naught and m
+[33:24.00] that gives us a total angular deflection
+[33:26.24] to be 2
+[33:27.52] 0 goes from integral goes from 0 to 1
+[33:31.36] over r naught
+[33:33.28] so substituting in that value of b
+[33:44.80] gives us this nasty looking thing
+[33:49.76] and now the goal is to expand
+[33:54.72] we've gotten rid of b out of the story
+[33:57.52] now so we're going to expand
+[34:00.00] delta phi as a function of
+[34:03.68] the smallest as the taylor series and
+[34:06.32] the smallest of
+[34:07.04] m
+[34:19.44] so i've just drawn the first two terms
+[34:20.96] of a taylor series well we already know
+[34:22.32] what the zeroth order term is it's pi
+[34:27.52] so we need to work out the the first
+[34:30.32] order correction and for that we need to
+[34:31.68] do
+[34:32.56] this derivative
+[34:36.24] of this angular deflection as a function
+[34:38.72] of m and set it to m is zero
+[34:41.68] remembering that we've decoupled m and r
+[34:43.60] naught right
+[34:45.28] by making r naught independent
+[34:59.20] and that's a you know somewhat tedious
+[35:01.84] derivative we'll just pass the
+[35:03.12] derivative
+[35:03.76] with respect to m through the integral
+[35:14.84] sign
+[35:21.84] and this simplifies a little a little
+[35:28.84] bit
+[35:30.72] by substituting or using the
+[35:33.12] relationship between
+[35:34.08] r naught and the impact parameter
+[35:43.60] we arrive at the following much simpler
+[35:46.56] expression
+[35:47.12] 4 divided by b and so here we've used
+[35:49.60] something right we've used the fact
+[35:51.52] that um r naught equals b
+[35:54.64] naught so there's you know a kind of
+[35:56.72] warning warning here right
+[35:58.16] what's happened here i've changed r
+[35:59.84] naught for b naught
+[36:01.76] um well we've used
+[36:07.20] the following taylor series
+[36:18.96] so if you remember we've got this
+[36:26.96] equation here that uh sets
+[36:30.16] r naught as a function of b if you look
+[36:32.08] at this for long enough you
+[36:34.80] should see that r naught is effectively
+[36:36.64] determined by b in this equation
+[36:38.84] and we want to understand that
+[36:42.08] to lowest order in m
+[36:45.76] there's m features there as well so
+[36:47.44] we've used the fact that when you take
+[36:49.04] cos of the third of r cos of x
+[36:51.52] then that equals root 3 over 2
+[36:54.56] the first couple of terms in the taylor
+[36:56.00] series plus x over 6 minus x squared
+[36:59.04] over 12 root 3 blah blah blah blah
+[37:02.16] so using um the fact that r naught
+[37:05.44] is 2 b over root three
+[37:09.04] so r naught is two b over root three cos
+[37:12.64] one third
+[37:13.44] arc cos of this argument there
+[37:17.76] we can obtain a relationship correct to
+[37:20.56] first order
+[37:21.36] in m of the inter relationship between
+[37:25.12] r naught and b
+[37:34.00] and this equals b minus three m so to
+[37:37.52] zeroth order r naught is b right
+[37:53.68] and so to order m we've just learned
+[37:57.36] that delta phi
+[37:59.36] is approximately pi
+[38:02.56] plus 4 m over b and this is the
+[38:05.20] correction
+[38:06.80] so before we continue with the
+[38:08.80] correction i should just pause
+[38:10.72] to distinguish
+[38:13.84] two angular deflections that have
+[38:16.32] appeared in this lecture
+[38:17.76] so delta phi is the total change
+[38:21.20] in angular variable throughout the
+[38:24.76] trajectory's
+[38:30.84] lifetime
+[38:51.20] all right so delta phi is a very simple
+[38:52.80] thing to interpret it's just the total
+[38:54.24] angular
+[38:55.04] change of the trajectory and so that's
+[38:58.00] why
+[38:58.72] when for flat space time the total
+[39:01.20] angular change is simply pi
+[39:02.56] right you go from phi
+[39:05.76] is effectively zero through to pi
+[39:08.80] or phi is minus pi over two to pi over
+[39:11.20] two depending on where you set the zero
+[39:12.48] to pi
+[39:13.76] now there's an additional angular change
+[39:16.32] which
+[39:17.28] in the figure up here i had written as
+[39:21.52] uh big delta phi but actually i should
+[39:23.68] have written it as little delta pi
+[39:25.44] there's an additional angular shift due
+[39:27.68] to the curvature of the
+[39:29.12] geodesic and that
+[39:32.72] is this correction factor and that is
+[39:35.20] delta phi
+[39:37.20] little delta phi just so that we don't
+[39:40.16] confuse our notations
+[39:41.92] so for a trajectory moving in a
+[39:45.92] small celestial body such as the sun
+[39:49.44] there is or can be a perceptible
+[39:52.64] correction to the total angular variable
+[39:55.44] change
+[39:56.00] throughout a trajectory's lifetime so
+[40:00.48] for example for a light ray
+[40:03.76] grazing or touching the edge of the sun
+[40:11.04] uh this this correction
+[40:14.88] is about um
+[40:19.40] 1.75 seconds of arc
+[40:23.12] so it's just about perceptible
+[40:26.96] uh it was uh confirmed in 1919
+[40:31.84] although the error bars have always been
+[40:33.52] pretty high on this
+[40:34.96] sort of experiment
+[40:38.08] and this was by the dyson eddington
+[40:40.40] davidson
+[40:42.80] collaboration uh the this is
+[40:46.16] difficult to uh get the error bars down
+[40:50.08] because the sun
+[40:50.96] is such a bright emitter in the sky um
+[40:53.76] in fact it's far better to look at the
+[40:55.36] bending of radio waves
+[40:58.64] by uh from quasars
+[41:01.68] there you can get the error bars a lot
+[41:03.68] further down and so these predictions
+[41:05.28] have been
+[41:08.32] confirmed
+[41:11.36] by experiments
+[41:22.08] give better confirmation
+[41:28.24] so that's it for this lecture and indeed
+[41:30.88] for this course
+[41:32.24] thank you for joining me on this journey
+[41:34.96] through
+[41:35.52] uh einstein's general theory of
+[41:38.24] relativity
+[41:39.52] i hope you'll agree with me that it's an
+[41:41.20] extraordinary theory
+[41:42.64] that is that has a level of beauty that
+[41:45.52] is unparalleled by
+[41:47.20] many other theories in physics we've
+[41:49.76] only really scratched the surface
+[41:51.60] of the general theory of relativity
+[41:53.76] there's been active
+[41:54.64] research in this area since the early
+[41:57.36] 20s
+[41:58.48] and that's nearly a century of active
+[42:00.88] research
+[42:01.52] on uh einstein's general theory of
+[42:03.92] relativity
+[42:04.72] and there's now an immense amount of
+[42:06.56] things known and an immense number of
+[42:08.48] interesting and fascinating topics
+[42:10.56] and these problems are of ever greater
+[42:13.84] significance as we understand
+[42:16.64] and perform better cosmological
+[42:19.28] observations of our universe
+[42:20.56] universe and in fact in a way the
+[42:22.96] largest mysteries that remain open in
+[42:24.72] physics are those
+[42:25.76] that arise in general relativity and
+[42:28.84] cosmology
+[42:30.08] but that's it for today and for this
+[42:33.12] course
+[42:33.76] thank you for joining me and i'll see
+[42:36.40] you hopefully next time
+[42:37.84] goodbye

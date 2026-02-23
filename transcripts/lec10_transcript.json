@@ -1,0 +1,8322 @@
+{
+  "title": "General Relativity, Lecture 10: geodesics cont.; curvature",
+  "video_id": "5yh0pUpeOMw",
+  "url": "https://www.youtube.com/watch?v=5yh0pUpeOMw",
+  "transcript": [
+    {
+      "start": 0.32,
+      "duration": 3.44,
+      "text": "hello and welcome back to introduction"
+    },
+    {
+      "start": 1.92,
+      "duration": 2.32,
+      "text": "to general relativity in the previous"
+    },
+    {
+      "start": 3.76,
+      "duration": 3.119,
+      "text": "lecture"
+    },
+    {
+      "start": 4.24,
+      "duration": 4.399,
+      "text": "we introduced and discussed geodesics"
+    },
+    {
+      "start": 6.879,
+      "duration": 3.521,
+      "text": "today the objective is to also"
+    },
+    {
+      "start": 8.639,
+      "duration": 3.12,
+      "text": "talk about geodesics and provide a"
+    },
+    {
+      "start": 10.4,
+      "duration": 3.84,
+      "text": "second characterization"
+    },
+    {
+      "start": 11.759,
+      "duration": 3.601,
+      "text": "which is perhaps more intuitive of what"
+    },
+    {
+      "start": 14.24,
+      "duration": 3.68,
+      "text": "a geodesic is"
+    },
+    {
+      "start": 15.36,
+      "duration": 3.839,
+      "text": "on an arbitrary manifold after that"
+    },
+    {
+      "start": 17.92,
+      "duration": 4.08,
+      "text": "we're going to use"
+    },
+    {
+      "start": 19.199,
+      "duration": 4.801,
+      "text": "our discussion of parallel transport to"
+    },
+    {
+      "start": 22.0,
+      "duration": 6.64,
+      "text": "introduce a notion or intrinsic notion"
+    },
+    {
+      "start": 24.0,
+      "duration": 4.64,
+      "text": "of curvature of manifolds but first to"
+    },
+    {
+      "start": 28.84,
+      "duration": 5.16,
+      "text": "geodesics"
+    },
+    {
+      "start": 30.48,
+      "duration": 3.52,
+      "text": "suppose we have a manifold m"
+    },
+    {
+      "start": 37.68,
+      "duration": 6.559,
+      "text": "and we have two points on m"
+    },
+    {
+      "start": 40.719,
+      "duration": 7.601,
+      "text": "and we also have a derivative"
+    },
+    {
+      "start": 44.239,
+      "duration": 7.281,
+      "text": "operator associated to m"
+    },
+    {
+      "start": 48.32,
+      "duration": 6.48,
+      "text": "then we can associate to any"
+    },
+    {
+      "start": 51.52,
+      "duration": 6.32,
+      "text": "two points and any derivative operator"
+    },
+    {
+      "start": 54.8,
+      "duration": 5.2,
+      "text": "in a manifold a length"
+    },
+    {
+      "start": 57.84,
+      "duration": 4.16,
+      "text": "of the curve that joins these two points"
+    },
+    {
+      "start": 60.0,
+      "duration": 5.28,
+      "text": "so we imagine we have some curve"
+    },
+    {
+      "start": 62.0,
+      "duration": 7.36,
+      "text": "here that joins the two points"
+    },
+    {
+      "start": 65.28,
+      "duration": 4.08,
+      "text": "we'll call the two points p and q"
+    },
+    {
+      "start": 70.96,
+      "duration": 6.479,
+      "text": "and we can associate to such a curve a"
+    },
+    {
+      "start": 74.08,
+      "duration": 5.28,
+      "text": "length of course we need a metric"
+    },
+    {
+      "start": 77.439,
+      "duration": 3.36,
+      "text": "so the data of a derivative operator is"
+    },
+    {
+      "start": 79.36,
+      "duration": 2.72,
+      "text": "roughly speaking equivalent to the data"
+    },
+    {
+      "start": 80.799,
+      "duration": 6.161,
+      "text": "of a metric"
+    },
+    {
+      "start": 82.08,
+      "duration": 8.719,
+      "text": "but let's be explicit here"
+    },
+    {
+      "start": 86.96,
+      "duration": 5.44,
+      "text": "so we have ourselves a curve let's call"
+    },
+    {
+      "start": 90.799,
+      "duration": 3.68,
+      "text": "it c"
+    },
+    {
+      "start": 92.4,
+      "duration": 3.44,
+      "text": "we have two points p q we have a metric"
+    },
+    {
+      "start": 94.479,
+      "duration": 2.401,
+      "text": "we have a derivative operator we have a"
+    },
+    {
+      "start": 95.84,
+      "duration": 5.12,
+      "text": "manifold"
+    },
+    {
+      "start": 96.88,
+      "duration": 7.04,
+      "text": "and we can introduce the length"
+    },
+    {
+      "start": 100.96,
+      "duration": 2.96,
+      "text": "of the curve c"
+    },
+    {
+      "start": 105.119,
+      "duration": 3.121,
+      "text": "discussed previously"
+    },
+    {
+      "start": 109.84,
+      "duration": 6.0,
+      "text": "intuitively in previous lectures so the"
+    },
+    {
+      "start": 112.72,
+      "duration": 3.12,
+      "text": "length of c"
+    },
+    {
+      "start": 116.0,
+      "duration": 9.36,
+      "text": "with respect to g a b"
+    },
+    {
+      "start": 120.719,
+      "duration": 4.641,
+      "text": "delta a is just defined"
+    },
+    {
+      "start": 125.439,
+      "duration": 3.841,
+      "text": "to be the following expression you"
+    },
+    {
+      "start": 127.759,
+      "duration": 4.641,
+      "text": "integrate"
+    },
+    {
+      "start": 129.28,
+      "duration": 5.2,
+      "text": "over the length of the curve the inner"
+    },
+    {
+      "start": 132.4,
+      "duration": 4.8,
+      "text": "product between the two tangent vectors"
+    },
+    {
+      "start": 134.48,
+      "duration": 8.16,
+      "text": "between the tangent vector to the curve"
+    },
+    {
+      "start": 137.2,
+      "duration": 8.88,
+      "text": "along the length of the curve"
+    },
+    {
+      "start": 142.64,
+      "duration": 6.16,
+      "text": "so t a here is the tangent"
+    },
+    {
+      "start": 146.08,
+      "duration": 2.72,
+      "text": "curve to c"
+    },
+    {
+      "start": 149.36,
+      "duration": 8.879,
+      "text": "and t is the curve parameter"
+    },
+    {
+      "start": 156.239,
+      "duration": 3.201,
+      "text": "i'll draw on the picture here the"
+    },
+    {
+      "start": 158.239,
+      "duration": 2.72,
+      "text": "tangent vector so"
+    },
+    {
+      "start": 159.44,
+      "duration": 3.439,
+      "text": "to any point on the curve we have a"
+    },
+    {
+      "start": 160.959,
+      "duration": 4.961,
+      "text": "tangent vector t a"
+    },
+    {
+      "start": 162.879,
+      "duration": 6.321,
+      "text": "introduced introduced way back"
+    },
+    {
+      "start": 165.92,
+      "duration": 6.8,
+      "text": "in the earlier lectures and also"
+    },
+    {
+      "start": 169.2,
+      "duration": 3.52,
+      "text": "we assume just"
+    },
+    {
+      "start": 173.04,
+      "duration": 4.559,
+      "text": "that our metric can't just have any"
+    },
+    {
+      "start": 176.239,
+      "duration": 2.08,
+      "text": "metric for this expression to be well"
+    },
+    {
+      "start": 177.599,
+      "duration": 4.64,
+      "text": "defined"
+    },
+    {
+      "start": 178.319,
+      "duration": 3.92,
+      "text": "we assume that our metric gab has"
+    },
+    {
+      "start": 182.84,
+      "duration": 3.96,
+      "text": "signature"
+    },
+    {
+      "start": 184.959,
+      "duration": 3.121,
+      "text": "so when you diagonalize it as a matrix"
+    },
+    {
+      "start": 186.8,
+      "duration": 4.48,
+      "text": "you always get plus"
+    },
+    {
+      "start": 188.08,
+      "duration": 3.2,
+      "text": "positive eigenvalues"
+    },
+    {
+      "start": 192.8,
+      "duration": 3.12,
+      "text": "so implicit here now explicit is that"
+    },
+    {
+      "start": 195.44,
+      "duration": 3.68,
+      "text": "the"
+    },
+    {
+      "start": 195.92,
+      "duration": 5.36,
+      "text": "metric has positive signature"
+    },
+    {
+      "start": 199.12,
+      "duration": 3.68,
+      "text": "so we can define this length right"
+    },
+    {
+      "start": 201.28,
+      "duration": 4.4,
+      "text": "there's no no particular problems in"
+    },
+    {
+      "start": 202.8,
+      "duration": 6.159,
+      "text": "defining this quantity"
+    },
+    {
+      "start": 205.68,
+      "duration": 6.4,
+      "text": "it's the just integrate"
+    },
+    {
+      "start": 208.959,
+      "duration": 4.241,
+      "text": "infinitesimal lengths along the curve so"
+    },
+    {
+      "start": 212.08,
+      "duration": 2.079,
+      "text": "you've got to imagine that you have this"
+    },
+    {
+      "start": 213.2,
+      "duration": 3.28,
+      "text": "curve"
+    },
+    {
+      "start": 214.159,
+      "duration": 4.16,
+      "text": "c and you divide it up into little"
+    },
+    {
+      "start": 216.48,
+      "duration": 3.52,
+      "text": "pieces"
+    },
+    {
+      "start": 218.319,
+      "duration": 3.521,
+      "text": "you approximate each piece with a line"
+    },
+    {
+      "start": 220.0,
+      "duration": 3.36,
+      "text": "segment and then you use the"
+    },
+    {
+      "start": 221.84,
+      "duration": 3.36,
+      "text": "corresponding tangent vector"
+    },
+    {
+      "start": 223.36,
+      "duration": 3.84,
+      "text": "as the the linear approximant to the"
+    },
+    {
+      "start": 225.2,
+      "duration": 4.399,
+      "text": "curve then you calculate the"
+    },
+    {
+      "start": 227.2,
+      "duration": 3.2,
+      "text": "length of the tangent vector which is a"
+    },
+    {
+      "start": 229.599,
+      "duration": 2.881,
+      "text": "proxy for"
+    },
+    {
+      "start": 230.4,
+      "duration": 3.6,
+      "text": "the line segment and then you add them"
+    },
+    {
+      "start": 232.48,
+      "duration": 1.839,
+      "text": "all up and then you take the limit as"
+    },
+    {
+      "start": 234.0,
+      "duration": 2.239,
+      "text": "you"
+    },
+    {
+      "start": 234.319,
+      "duration": 3.521,
+      "text": "subdivide your curve into little smaller"
+    },
+    {
+      "start": 236.239,
+      "duration": 2.801,
+      "text": "smaller pieces and then you have an"
+    },
+    {
+      "start": 237.84,
+      "duration": 3.039,
+      "text": "expression for the length"
+    },
+    {
+      "start": 239.04,
+      "duration": 3.919,
+      "text": "hopefully this expression is intuitively"
+    },
+    {
+      "start": 240.879,
+      "duration": 5.121,
+      "text": "clear"
+    },
+    {
+      "start": 242.959,
+      "duration": 5.521,
+      "text": "so we can introduce this quantity uh"
+    },
+    {
+      "start": 246.0,
+      "duration": 3.68,
+      "text": "and what about for metrics a positive"
+    },
+    {
+      "start": 248.48,
+      "duration": 4.64,
+      "text": "signature"
+    },
+    {
+      "start": 249.68,
+      "duration": 4.8,
+      "text": "so in general relativity of course"
+    },
+    {
+      "start": 253.12,
+      "duration": 3.119,
+      "text": "our metric doesn't have positive"
+    },
+    {
+      "start": 254.48,
+      "duration": 7.84,
+      "text": "signature not always"
+    },
+    {
+      "start": 256.239,
+      "duration": 6.081,
+      "text": "um so for a metric with signature"
+    },
+    {
+      "start": 263.36,
+      "duration": 6.399,
+      "text": "we say minus one plus plus"
+    },
+    {
+      "start": 267.36,
+      "duration": 3.36,
+      "text": "plus we have to be a little bit more"
+    },
+    {
+      "start": 269.759,
+      "duration": 4.321,
+      "text": "creative with how we"
+    },
+    {
+      "start": 270.72,
+      "duration": 3.36,
+      "text": "define our our"
+    },
+    {
+      "start": 274.639,
+      "duration": 5.12,
+      "text": "our length our curve is said"
+    },
+    {
+      "start": 280.08,
+      "duration": 3.76,
+      "text": "to be time like"
+    },
+    {
+      "start": 286.32,
+      "duration": 4.72,
+      "text": "if when you compute the inner product of"
+    },
+    {
+      "start": 289.68,
+      "duration": 3.04,
+      "text": "the tangent vectors to the curve you get"
+    },
+    {
+      "start": 291.04,
+      "duration": 3.8,
+      "text": "a negative number right that's possible"
+    },
+    {
+      "start": 292.72,
+      "duration": 5.12,
+      "text": "now the sigma metric has negative"
+    },
+    {
+      "start": 294.84,
+      "duration": 3.0,
+      "text": "signature"
+    },
+    {
+      "start": 298.479,
+      "duration": 4.72,
+      "text": "if it's negative everywhere along the"
+    },
+    {
+      "start": 300.88,
+      "duration": 2.319,
+      "text": "curve"
+    },
+    {
+      "start": 306.16,
+      "duration": 3.52,
+      "text": "okay it's time like at that point let's"
+    },
+    {
+      "start": 307.84,
+      "duration": 3.12,
+      "text": "say"
+    },
+    {
+      "start": 309.68,
+      "duration": 2.4,
+      "text": "but it's got to be this this condition"
+    },
+    {
+      "start": 310.96,
+      "duration": 1.84,
+      "text": "is going to be true everywhere along the"
+    },
+    {
+      "start": 312.08,
+      "duration": 4.24,
+      "text": "curve"
+    },
+    {
+      "start": 312.8,
+      "duration": 5.6,
+      "text": "for the curve to be called time-like and"
+    },
+    {
+      "start": 316.32,
+      "duration": 3.52,
+      "text": "we have a different we have two other"
+    },
+    {
+      "start": 318.4,
+      "duration": 2.639,
+      "text": "kinds of kinds of curves that you're"
+    },
+    {
+      "start": 319.84,
+      "duration": 3.199,
+      "text": "certainly familiar from"
+    },
+    {
+      "start": 321.039,
+      "duration": 5.121,
+      "text": "or certainly familiar with from special"
+    },
+    {
+      "start": 323.039,
+      "duration": 3.121,
+      "text": "relativity we have null"
+    },
+    {
+      "start": 327.039,
+      "duration": 4.88,
+      "text": "curves they're ones where the inner"
+    },
+    {
+      "start": 330.32,
+      "duration": 4.48,
+      "text": "product of the tangent vector is exactly"
+    },
+    {
+      "start": 331.919,
+      "duration": 2.881,
+      "text": "zero everywhere"
+    },
+    {
+      "start": 336.72,
+      "duration": 5.199,
+      "text": "and we also have space like curves"
+    },
+    {
+      "start": 340.639,
+      "duration": 4.801,
+      "text": "that's where the inner product is"
+    },
+    {
+      "start": 341.919,
+      "duration": 3.521,
+      "text": "positive everywhere"
+    },
+    {
+      "start": 350.639,
+      "duration": 4.081,
+      "text": "so your three kinds of curves in in"
+    },
+    {
+      "start": 353.84,
+      "duration": 3.919,
+      "text": "manifolds with"
+    },
+    {
+      "start": 354.72,
+      "duration": 4.64,
+      "text": "uh laurencian's signature"
+    },
+    {
+      "start": 357.759,
+      "duration": 3.121,
+      "text": "minus one and the rest positive or all"
+    },
+    {
+      "start": 359.36,
+      "duration": 4.559,
+      "text": "minuses and one"
+    },
+    {
+      "start": 360.88,
+      "duration": 4.319,
+      "text": "positive for example so we have these"
+    },
+    {
+      "start": 363.919,
+      "duration": 3.921,
+      "text": "three kinds of"
+    },
+    {
+      "start": 365.199,
+      "duration": 2.641,
+      "text": "um"
+    },
+    {
+      "start": 371.759,
+      "duration": 3.44,
+      "text": "three kinds of special curves right not"
+    },
+    {
+      "start": 374.0,
+      "duration": 2.8,
+      "text": "every curve is"
+    },
+    {
+      "start": 375.199,
+      "duration": 3.84,
+      "text": "time like not every curve is space like"
+    },
+    {
+      "start": 376.8,
+      "duration": 5.119,
+      "text": "not every curve is null it's possible to"
+    },
+    {
+      "start": 379.039,
+      "duration": 4.88,
+      "text": "to write down curves in manifolds which"
+    },
+    {
+      "start": 381.919,
+      "duration": 4.881,
+      "text": "are sometimes null sometimes"
+    },
+    {
+      "start": 383.919,
+      "duration": 5.041,
+      "text": "time like sometimes space like they're"
+    },
+    {
+      "start": 386.8,
+      "duration": 5.6,
+      "text": "not physical"
+    },
+    {
+      "start": 388.96,
+      "duration": 5.359,
+      "text": "and as we'll see they can't be geodesics"
+    },
+    {
+      "start": 392.4,
+      "duration": 3.519,
+      "text": "but we can certainly write them down so"
+    },
+    {
+      "start": 394.319,
+      "duration": 3.44,
+      "text": "you've got to understand this definition"
+    },
+    {
+      "start": 395.919,
+      "duration": 3.681,
+      "text": "right as not being"
+    },
+    {
+      "start": 397.759,
+      "duration": 3.28,
+      "text": "for all curves like it's possible to"
+    },
+    {
+      "start": 399.6,
+      "duration": 3.68,
+      "text": "start off with a curve being null"
+    },
+    {
+      "start": 401.039,
+      "duration": 4.0,
+      "text": "going space-like and then going"
+    },
+    {
+      "start": 403.28,
+      "duration": 2.32,
+      "text": "time-like right i can draw that curve"
+    },
+    {
+      "start": 405.039,
+      "duration": 3.041,
+      "text": "but it's"
+    },
+    {
+      "start": 405.6,
+      "duration": 3.52,
+      "text": "no particle no solution to the equations"
+    },
+    {
+      "start": 408.08,
+      "duration": 4.16,
+      "text": "of motion"
+    },
+    {
+      "start": 409.12,
+      "duration": 4.16,
+      "text": "whatever field or or in special"
+    },
+    {
+      "start": 412.24,
+      "duration": 3.6,
+      "text": "relativity"
+    },
+    {
+      "start": 413.28,
+      "duration": 3.44,
+      "text": "no physical solution can can behave like"
+    },
+    {
+      "start": 415.84,
+      "duration": 3.919,
+      "text": "that"
+    },
+    {
+      "start": 416.72,
+      "duration": 4.64,
+      "text": "so that's that's a forbidden physically"
+    },
+    {
+      "start": 419.759,
+      "duration": 3.28,
+      "text": "forbidden but it's mathematically at"
+    },
+    {
+      "start": 421.36,
+      "duration": 2.959,
+      "text": "this point allowed"
+    },
+    {
+      "start": 423.039,
+      "duration": 4.401,
+      "text": "there's nothing that says that that's"
+    },
+    {
+      "start": 424.319,
+      "duration": 5.361,
+      "text": "wrong um"
+    },
+    {
+      "start": 427.44,
+      "duration": 3.28,
+      "text": "so i better for the future notes right"
+    },
+    {
+      "start": 429.68,
+      "duration": 3.76,
+      "text": "this is"
+    },
+    {
+      "start": 430.72,
+      "duration": 2.72,
+      "text": "unphysical"
+    },
+    {
+      "start": 434.72,
+      "duration": 3.68,
+      "text": "and then i'll highlight the portion so"
+    },
+    {
+      "start": 436.4,
+      "duration": 5.04,
+      "text": "it commences null"
+    },
+    {
+      "start": 438.4,
+      "duration": 5.68,
+      "text": "goes space like and then it goes"
+    },
+    {
+      "start": 441.44,
+      "duration": 2.64,
+      "text": "time like"
+    },
+    {
+      "start": 444.72,
+      "duration": 6.72,
+      "text": "so time like is green say"
+    },
+    {
+      "start": 448.24,
+      "duration": 6.32,
+      "text": "no it's yellow and"
+    },
+    {
+      "start": 451.44,
+      "duration": 3.84,
+      "text": "space like is blue it's certainly a"
+    },
+    {
+      "start": 454.56,
+      "duration": 2.96,
+      "text": "possible thing"
+    },
+    {
+      "start": 455.28,
+      "duration": 5.039,
+      "text": "to happen but as we'll see geodesics"
+    },
+    {
+      "start": 457.52,
+      "duration": 2.799,
+      "text": "cannot do that"
+    },
+    {
+      "start": 461.36,
+      "duration": 3.04,
+      "text": "and now that we've got these three"
+    },
+    {
+      "start": 462.96,
+      "duration": 4.799,
+      "text": "notions of"
+    },
+    {
+      "start": 464.4,
+      "duration": 5.519,
+      "text": "um of infinitesimal length"
+    },
+    {
+      "start": 467.759,
+      "duration": 3.84,
+      "text": "we're going to have to slightly expand"
+    },
+    {
+      "start": 469.919,
+      "duration": 3.361,
+      "text": "generalize or update our definition of"
+    },
+    {
+      "start": 471.599,
+      "duration": 3.28,
+      "text": "the length of the curve right because"
+    },
+    {
+      "start": 473.28,
+      "duration": 4.88,
+      "text": "okay the length of the curve still that"
+    },
+    {
+      "start": 474.879,
+      "duration": 5.04,
+      "text": "definition here still makes sense"
+    },
+    {
+      "start": 478.16,
+      "duration": 3.92,
+      "text": "when you have a null curve or a space"
+    },
+    {
+      "start": 479.919,
+      "duration": 4.481,
+      "text": "like curve in"
+    },
+    {
+      "start": 482.08,
+      "duration": 4.399,
+      "text": "you know lorenz you know kovskin setting"
+    },
+    {
+      "start": 484.4,
+      "duration": 3.12,
+      "text": "but if you had a timeline curve so"
+    },
+    {
+      "start": 486.479,
+      "duration": 2.321,
+      "text": "that's everywhere negative you can't"
+    },
+    {
+      "start": 487.52,
+      "duration": 5.04,
+      "text": "take the square root of it or if you did"
+    },
+    {
+      "start": 488.8,
+      "duration": 6.079,
+      "text": "you get an imaginary number um which is"
+    },
+    {
+      "start": 492.56,
+      "duration": 3.44,
+      "text": "you know you can certainly go that route"
+    },
+    {
+      "start": 494.879,
+      "duration": 2.16,
+      "text": "we're not going to do that though in"
+    },
+    {
+      "start": 496.0,
+      "duration": 2.8,
+      "text": "this lecture course"
+    },
+    {
+      "start": 497.039,
+      "duration": 9.121,
+      "text": "instead we're just going to say suppose"
+    },
+    {
+      "start": 498.8,
+      "duration": 12.0,
+      "text": "we have a timeline curve"
+    },
+    {
+      "start": 506.16,
+      "duration": 4.64,
+      "text": "you have a timeline of c well we define"
+    },
+    {
+      "start": 513.519,
+      "duration": 8.0,
+      "text": "instead of the length we call it the"
+    },
+    {
+      "start": 515.279,
+      "duration": 8.0,
+      "text": "proper time"
+    },
+    {
+      "start": 521.519,
+      "duration": 5.121,
+      "text": "so if you have a timeline curve then"
+    },
+    {
+      "start": 523.279,
+      "duration": 3.361,
+      "text": "instead of defining the length"
+    },
+    {
+      "start": 527.12,
+      "duration": 4.159,
+      "text": "of the geodesic you define the proper"
+    },
+    {
+      "start": 530.08,
+      "duration": 3.84,
+      "text": "time of the geodesic"
+    },
+    {
+      "start": 531.279,
+      "duration": 6.401,
+      "text": "well not g does it curve although of"
+    },
+    {
+      "start": 533.92,
+      "duration": 3.76,
+      "text": "course it will apply to geodesics"
+    },
+    {
+      "start": 538.56,
+      "duration": 5.12,
+      "text": "okay so now we have a definition that"
+    },
+    {
+      "start": 542.32,
+      "duration": 4.24,
+      "text": "covers"
+    },
+    {
+      "start": 543.68,
+      "duration": 6.48,
+      "text": "all the cases that we're going to"
+    },
+    {
+      "start": 546.56,
+      "duration": 3.6,
+      "text": "encounter in the world of geodesics"
+    },
+    {
+      "start": 551.36,
+      "duration": 5.12,
+      "text": "and oh yeah a side comment of course i"
+    },
+    {
+      "start": 553.839,
+      "duration": 4.161,
+      "text": "implicitly"
+    },
+    {
+      "start": 556.48,
+      "duration": 4.64,
+      "text": "implied this earlier but now let's say"
+    },
+    {
+      "start": 558.0,
+      "duration": 6.72,
+      "text": "it clearly so if a curve"
+    },
+    {
+      "start": 561.12,
+      "duration": 3.6,
+      "text": "c changes"
+    },
+    {
+      "start": 565.36,
+      "duration": 6.64,
+      "text": "from e g"
+    },
+    {
+      "start": 568.56,
+      "duration": 4.8,
+      "text": "time like to null or time like to space"
+    },
+    {
+      "start": 572.0,
+      "duration": 4.64,
+      "text": "like right that's where we're gonna have"
+    },
+    {
+      "start": 573.36,
+      "duration": 5.12,
+      "text": "real problems um"
+    },
+    {
+      "start": 576.64,
+      "duration": 4.639,
+      "text": "the length this implies the length is"
+    },
+    {
+      "start": 578.48,
+      "duration": 2.799,
+      "text": "just not defined"
+    },
+    {
+      "start": 582.48,
+      "duration": 3.2,
+      "text": "you can have fun trying to define a"
+    },
+    {
+      "start": 583.92,
+      "duration": 3.84,
+      "text": "length but we are just going to say it"
+    },
+    {
+      "start": 585.68,
+      "duration": 5.36,
+      "text": "is hereby not defined if the curve"
+    },
+    {
+      "start": 587.76,
+      "duration": 4.639,
+      "text": "changes from time like to space like"
+    },
+    {
+      "start": 591.04,
+      "duration": 3.919,
+      "text": "that's the particularly problematic"
+    },
+    {
+      "start": 592.399,
+      "duration": 2.56,
+      "text": "transition"
+    },
+    {
+      "start": 595.92,
+      "duration": 4.88,
+      "text": "and now we'll take a look at geodesics"
+    },
+    {
+      "start": 598.48,
+      "duration": 3.68,
+      "text": "this is the context of geodesics"
+    },
+    {
+      "start": 600.8,
+      "duration": 2.56,
+      "text": "we've already introduced geodesics in"
+    },
+    {
+      "start": 602.16,
+      "duration": 3.359,
+      "text": "the previous lecture so we can certainly"
+    },
+    {
+      "start": 603.36,
+      "duration": 3.76,
+      "text": "discuss the length of a geodesic"
+    },
+    {
+      "start": 605.519,
+      "duration": 3.041,
+      "text": "and what i'm going to argue in the"
+    },
+    {
+      "start": 607.12,
+      "duration": 3.12,
+      "text": "coming"
+    },
+    {
+      "start": 608.56,
+      "duration": 3.36,
+      "text": "next portion of the lecture is that a"
+    },
+    {
+      "start": 610.24,
+      "duration": 4.24,
+      "text": "geodesic has a very"
+    },
+    {
+      "start": 611.92,
+      "duration": 4.08,
+      "text": "uh the length of a geodesic enjoys a"
+    },
+    {
+      "start": 614.48,
+      "duration": 2.88,
+      "text": "very special property so that's the"
+    },
+    {
+      "start": 616.0,
+      "duration": 3.2,
+      "text": "objective now"
+    },
+    {
+      "start": 617.36,
+      "duration": 3.36,
+      "text": "but before we quite get to that argument"
+    },
+    {
+      "start": 619.2,
+      "duration": 2.879,
+      "text": "and you want to make some simpler"
+    },
+    {
+      "start": 620.72,
+      "duration": 5.44,
+      "text": "observations"
+    },
+    {
+      "start": 622.079,
+      "duration": 4.081,
+      "text": "so since for a geodesic"
+    },
+    {
+      "start": 627.6,
+      "duration": 6.239,
+      "text": "the tangent vector"
+    },
+    {
+      "start": 639.68,
+      "duration": 8.159,
+      "text": "it to the curve is parallel transported"
+    },
+    {
+      "start": 642.8,
+      "duration": 5.039,
+      "text": "along itself"
+    },
+    {
+      "start": 660.64,
+      "duration": 4.48,
+      "text": "now we learned that its norm can't"
+    },
+    {
+      "start": 662.48,
+      "duration": 2.64,
+      "text": "change right"
+    },
+    {
+      "start": 666.16,
+      "duration": 4.239,
+      "text": "the norm being the inner product of the"
+    },
+    {
+      "start": 668.079,
+      "duration": 6.88,
+      "text": "two of the tangent vectors itself which"
+    },
+    {
+      "start": 670.399,
+      "duration": 7.281,
+      "text": "is also known as just the metric"
+    },
+    {
+      "start": 674.959,
+      "duration": 2.721,
+      "text": "contracted"
+    },
+    {
+      "start": 685.04,
+      "duration": 3.2,
+      "text": "and what does that mean well i it it's a"
+    },
+    {
+      "start": 687.76,
+      "duration": 3.44,
+      "text": "basically"
+    },
+    {
+      "start": 688.24,
+      "duration": 4.159,
+      "text": "proof of uh the statement i just made"
+    },
+    {
+      "start": 691.2,
+      "duration": 4.16,
+      "text": "earlier that as"
+    },
+    {
+      "start": 692.399,
+      "duration": 2.961,
+      "text": "it cannot change"
+    },
+    {
+      "start": 695.839,
+      "duration": 5.44,
+      "text": "from null to time like"
+    },
+    {
+      "start": 701.6,
+      "duration": 3.919,
+      "text": "et cetera right you can't change a g"
+    },
+    {
+      "start": 703.36,
+      "duration": 3.76,
+      "text": "does it at time like you does it can't"
+    },
+    {
+      "start": 705.519,
+      "duration": 4.0,
+      "text": "change to being a space like one and so"
+    },
+    {
+      "start": 707.12,
+      "duration": 7.279,
+      "text": "on and so forth"
+    },
+    {
+      "start": 709.519,
+      "duration": 7.361,
+      "text": "and uh how can you convince yourself"
+    },
+    {
+      "start": 714.399,
+      "duration": 3.601,
+      "text": "that the norm doesn't change well just"
+    },
+    {
+      "start": 716.88,
+      "duration": 4.24,
+      "text": "take the derivative of"
+    },
+    {
+      "start": 718.0,
+      "duration": 6.72,
+      "text": "it right so that if you want to you know"
+    },
+    {
+      "start": 721.12,
+      "duration": 3.6,
+      "text": "why why does the norm not change"
+    },
+    {
+      "start": 724.88,
+      "duration": 4.72,
+      "text": "uh when we parallel transport a tangent"
+    },
+    {
+      "start": 727.839,
+      "duration": 4.56,
+      "text": "vector along itself"
+    },
+    {
+      "start": 729.6,
+      "duration": 3.359,
+      "text": "so let's just do a side computation"
+    },
+    {
+      "start": 732.399,
+      "duration": 4.401,
+      "text": "right"
+    },
+    {
+      "start": 732.959,
+      "duration": 8.161,
+      "text": "change in norm well"
+    },
+    {
+      "start": 736.8,
+      "duration": 4.32,
+      "text": "the change in the norm along the curve"
+    },
+    {
+      "start": 741.36,
+      "duration": 5.599,
+      "text": "is the directional derivative"
+    },
+    {
+      "start": 744.8,
+      "duration": 4.0,
+      "text": "of the norm we've got to take the"
+    },
+    {
+      "start": 746.959,
+      "duration": 2.88,
+      "text": "derivative of the norm as we go along"
+    },
+    {
+      "start": 748.8,
+      "duration": 2.56,
+      "text": "the curve"
+    },
+    {
+      "start": 749.839,
+      "duration": 3.281,
+      "text": "but now let's substitute our expression"
+    },
+    {
+      "start": 751.36,
+      "duration": 4.88,
+      "text": "for the norm so it's"
+    },
+    {
+      "start": 753.12,
+      "duration": 6.48,
+      "text": "tb delta b and then we get"
+    },
+    {
+      "start": 756.24,
+      "duration": 5.279,
+      "text": "g a b g-a-b-t-a-t-b"
+    },
+    {
+      "start": 759.6,
+      "duration": 3.28,
+      "text": "and then we apply the leibniz rule so"
+    },
+    {
+      "start": 761.519,
+      "duration": 10.801,
+      "text": "eventually you know you'll get pretty"
+    },
+    {
+      "start": 762.88,
+      "duration": 12.959,
+      "text": "good at these kind of computations"
+    },
+    {
+      "start": 772.32,
+      "duration": 7.199,
+      "text": "then you get g a b t b delta b"
+    },
+    {
+      "start": 775.839,
+      "duration": 9.0,
+      "text": "t a and you get a tb here"
+    },
+    {
+      "start": 779.519,
+      "duration": 8.32,
+      "text": "oh yeah i okay i hope it was kind of"
+    },
+    {
+      "start": 784.839,
+      "duration": 3.0,
+      "text": "clear"
+    },
+    {
+      "start": 788.8,
+      "duration": 3.52,
+      "text": "i should have not used the same index"
+    },
+    {
+      "start": 790.72,
+      "duration": 5.359,
+      "text": "here"
+    },
+    {
+      "start": 792.32,
+      "duration": 9.04,
+      "text": "so let's do c's and then"
+    },
+    {
+      "start": 796.079,
+      "duration": 8.401,
+      "text": "put c's here as well"
+    },
+    {
+      "start": 801.36,
+      "duration": 6.96,
+      "text": "and then there's a third term t"
+    },
+    {
+      "start": 804.48,
+      "duration": 3.84,
+      "text": "a delta oops tc"
+    },
+    {
+      "start": 812.24,
+      "duration": 2.96,
+      "text": "so if you look at this actually all"
+    },
+    {
+      "start": 813.44,
+      "duration": 3.36,
+      "text": "three terms of that niche right because"
+    },
+    {
+      "start": 815.2,
+      "duration": 3.439,
+      "text": "the first one vanishes because that's"
+    },
+    {
+      "start": 816.8,
+      "duration": 3.68,
+      "text": "one of the the defining properties of"
+    },
+    {
+      "start": 818.639,
+      "duration": 2.401,
+      "text": "the derivative operator associated to a"
+    },
+    {
+      "start": 820.48,
+      "duration": 3.599,
+      "text": "metric"
+    },
+    {
+      "start": 821.04,
+      "duration": 4.4,
+      "text": "meaning that the the derivative of the"
+    },
+    {
+      "start": 824.079,
+      "duration": 3.12,
+      "text": "metric itself is zero"
+    },
+    {
+      "start": 825.44,
+      "duration": 3.68,
+      "text": "and now look at this this term vanishes"
+    },
+    {
+      "start": 827.199,
+      "duration": 3.281,
+      "text": "here because ta is parallel transported"
+    },
+    {
+      "start": 829.12,
+      "duration": 3.76,
+      "text": "along itself and the same goes for this"
+    },
+    {
+      "start": 830.48,
+      "duration": 5.359,
+      "text": "argument here so that's why"
+    },
+    {
+      "start": 832.88,
+      "duration": 3.44,
+      "text": "when you parallel transport the tangent"
+    },
+    {
+      "start": 835.839,
+      "duration": 3.761,
+      "text": "vector"
+    },
+    {
+      "start": 836.32,
+      "duration": 5.84,
+      "text": "along of a curve along with the curve"
+    },
+    {
+      "start": 839.6,
+      "duration": 3.76,
+      "text": "the norm of the tangent vector cannot"
+    },
+    {
+      "start": 842.16,
+      "duration": 2.479,
+      "text": "change and when it normally cannot"
+    },
+    {
+      "start": 843.36,
+      "duration": 2.32,
+      "text": "change it can't change from being"
+    },
+    {
+      "start": 844.639,
+      "duration": 3.76,
+      "text": "analogy it is a"
+    },
+    {
+      "start": 845.68,
+      "duration": 5.44,
+      "text": "to a time like it is equal to a space"
+    },
+    {
+      "start": 848.399,
+      "duration": 2.721,
+      "text": "like geodesic"
+    },
+    {
+      "start": 852.0,
+      "duration": 5.12,
+      "text": "now you might worry justifiably worry"
+    },
+    {
+      "start": 854.32,
+      "duration": 6.16,
+      "text": "that the definition of the proper time"
+    },
+    {
+      "start": 857.12,
+      "duration": 7.68,
+      "text": "or of the length might be"
+    },
+    {
+      "start": 860.48,
+      "duration": 5.599,
+      "text": "might actually be um parameter"
+    },
+    {
+      "start": 864.8,
+      "duration": 3.279,
+      "text": "dependent right that would be kind of"
+    },
+    {
+      "start": 866.079,
+      "duration": 4.721,
+      "text": "stupid if if the"
+    },
+    {
+      "start": 868.079,
+      "duration": 3.841,
+      "text": "the the parameter we chose to specify"
+    },
+    {
+      "start": 870.8,
+      "duration": 3.92,
+      "text": "where we are along the curve"
+    },
+    {
+      "start": 871.92,
+      "duration": 3.599,
+      "text": "if our length depends on that parameter"
+    },
+    {
+      "start": 874.72,
+      "duration": 2.4,
+      "text": "then"
+    },
+    {
+      "start": 875.519,
+      "duration": 3.281,
+      "text": "that means that it depends on what mood"
+    },
+    {
+      "start": 877.12,
+      "duration": 2.959,
+      "text": "we were in on that day when we chose our"
+    },
+    {
+      "start": 878.8,
+      "duration": 3.52,
+      "text": "parametrization"
+    },
+    {
+      "start": 880.079,
+      "duration": 3.281,
+      "text": "turns out this is not the case of course"
+    },
+    {
+      "start": 882.32,
+      "duration": 2.8,
+      "text": "um"
+    },
+    {
+      "start": 883.36,
+      "duration": 3.52,
+      "text": "and i'll just give a brief argument why"
+    },
+    {
+      "start": 885.12,
+      "duration": 5.12,
+      "text": "before moving to"
+    },
+    {
+      "start": 886.88,
+      "duration": 6.48,
+      "text": "connecting geodesics to lengths so"
+    },
+    {
+      "start": 890.24,
+      "duration": 9.12,
+      "text": "l and tau"
+    },
+    {
+      "start": 893.36,
+      "duration": 8.719,
+      "text": "are re-parametrization"
+    },
+    {
+      "start": 899.36,
+      "duration": 2.719,
+      "text": "invariant"
+    },
+    {
+      "start": 906.519,
+      "duration": 3.0,
+      "text": "parameterization"
+    },
+    {
+      "start": 911.68,
+      "duration": 6.0,
+      "text": "invariant they don't change under"
+    },
+    {
+      "start": 915.519,
+      "duration": 3.841,
+      "text": "uh our choice of how we parametrize"
+    },
+    {
+      "start": 917.68,
+      "duration": 5.519,
+      "text": "where we are along the curve"
+    },
+    {
+      "start": 919.36,
+      "duration": 3.839,
+      "text": "so for example suppose we chose"
+    },
+    {
+      "start": 924.639,
+      "duration": 3.2,
+      "text": "s of t"
+    },
+    {
+      "start": 930.399,
+      "duration": 5.841,
+      "text": "instead of t to parameterize"
+    },
+    {
+      "start": 936.399,
+      "duration": 5.921,
+      "text": "our curve"
+    },
+    {
+      "start": 940.48,
+      "duration": 3.279,
+      "text": "to parametrize where we are along our"
+    },
+    {
+      "start": 942.32,
+      "duration": 4.879,
+      "text": "curve"
+    },
+    {
+      "start": 943.759,
+      "duration": 3.44,
+      "text": "then the new tangent vector"
+    },
+    {
+      "start": 950.88,
+      "duration": 6.959,
+      "text": "a little exercise for you is"
+    },
+    {
+      "start": 954.079,
+      "duration": 5.601,
+      "text": "s a is d t d s"
+    },
+    {
+      "start": 957.839,
+      "duration": 3.281,
+      "text": "t a you pretty much have to go to charts"
+    },
+    {
+      "start": 959.68,
+      "duration": 4.0,
+      "text": "that's one way to get"
+    },
+    {
+      "start": 961.12,
+      "duration": 4.079,
+      "text": "uh convince yourself of this"
+    },
+    {
+      "start": 963.68,
+      "duration": 4.159,
+      "text": "transformation law"
+    },
+    {
+      "start": 965.199,
+      "duration": 5.041,
+      "text": "and so now the length let's define the"
+    },
+    {
+      "start": 967.839,
+      "duration": 2.401,
+      "text": "length"
+    },
+    {
+      "start": 970.639,
+      "duration": 4.081,
+      "text": "let's just suppose we have a metric with"
+    },
+    {
+      "start": 972.16,
+      "duration": 4.72,
+      "text": "positive signature"
+    },
+    {
+      "start": 974.72,
+      "duration": 3.359,
+      "text": "so the length defined with respect to"
+    },
+    {
+      "start": 976.88,
+      "duration": 4.24,
+      "text": "this new parameter"
+    },
+    {
+      "start": 978.079,
+      "duration": 4.721,
+      "text": "s is well l prime is per definition just"
+    },
+    {
+      "start": 981.12,
+      "duration": 5.04,
+      "text": "the integral of the square root of g"
+    },
+    {
+      "start": 982.8,
+      "duration": 6.159,
+      "text": "a b s a s b where the s is the new"
+    },
+    {
+      "start": 986.16,
+      "duration": 2.799,
+      "text": "tangent vectors"
+    },
+    {
+      "start": 990.399,
+      "duration": 6.081,
+      "text": "but uh let's substitute for what we know"
+    },
+    {
+      "start": 994.959,
+      "duration": 4.961,
+      "text": "so we know that the new tangent vectors"
+    },
+    {
+      "start": 996.48,
+      "duration": 3.44,
+      "text": "are equal to the old tangent vectors"
+    },
+    {
+      "start": 1000.079,
+      "duration": 6.0,
+      "text": "times by this whatever delay factor t"
+    },
+    {
+      "start": 1003.279,
+      "duration": 3.041,
+      "text": "dt ds times ds but that's just equal to"
+    },
+    {
+      "start": 1006.079,
+      "duration": 2.161,
+      "text": "l"
+    },
+    {
+      "start": 1006.32,
+      "duration": 3.759,
+      "text": "so in fact the length of the curve"
+    },
+    {
+      "start": 1008.24,
+      "duration": 3.76,
+      "text": "doesn't depend on what kind of parameter"
+    },
+    {
+      "start": 1010.079,
+      "duration": 5.041,
+      "text": "we felt like choosing to to tell us"
+    },
+    {
+      "start": 1012.0,
+      "duration": 3.12,
+      "text": "where we are along the curve"
+    },
+    {
+      "start": 1017.519,
+      "duration": 3.921,
+      "text": "so now now comes the claim right"
+    },
+    {
+      "start": 1022.0,
+      "duration": 3.199,
+      "text": "this is the the reason we're talking"
+    },
+    {
+      "start": 1023.199,
+      "duration": 4.801,
+      "text": "about lengths of curves amongst others"
+    },
+    {
+      "start": 1025.199,
+      "duration": 4.161,
+      "text": "and that is that geodesics uh have a"
+    },
+    {
+      "start": 1028.0,
+      "duration": 2.799,
+      "text": "very beautiful property nearly they"
+    },
+    {
+      "start": 1029.36,
+      "duration": 10.479,
+      "text": "extremize"
+    },
+    {
+      "start": 1030.799,
+      "duration": 9.04,
+      "text": "the length of a curve joining two points"
+    },
+    {
+      "start": 1055.52,
+      "duration": 3.2,
+      "text": "so that's the claim that we're going to"
+    },
+    {
+      "start": 1056.64,
+      "duration": 4.399,
+      "text": "investigate now"
+    },
+    {
+      "start": 1058.72,
+      "duration": 5.12,
+      "text": "we're not going to completely prove it"
+    },
+    {
+      "start": 1061.039,
+      "duration": 8.161,
+      "text": "but we will investigate the claim"
+    },
+    {
+      "start": 1063.84,
+      "duration": 5.36,
+      "text": "and to see what we can learn"
+    },
+    {
+      "start": 1073.36,
+      "duration": 3.36,
+      "text": "once i show you this argument you should"
+    },
+    {
+      "start": 1075.6,
+      "duration": 3.12,
+      "text": "be content"
+    },
+    {
+      "start": 1076.72,
+      "duration": 4.48,
+      "text": "to generalize this to the most general"
+    },
+    {
+      "start": 1078.72,
+      "duration": 5.92,
+      "text": "setting possible"
+    },
+    {
+      "start": 1081.2,
+      "duration": 3.44,
+      "text": "okay to make this life simple"
+    },
+    {
+      "start": 1087.36,
+      "duration": 7.199,
+      "text": "we're going to suppose p and q"
+    },
+    {
+      "start": 1090.64,
+      "duration": 5.52,
+      "text": "are in a common chart"
+    },
+    {
+      "start": 1094.559,
+      "duration": 3.681,
+      "text": "just so we don't have to keep changing"
+    },
+    {
+      "start": 1096.16,
+      "duration": 3.759,
+      "text": "coordinates to get from one"
+    },
+    {
+      "start": 1098.24,
+      "duration": 4.24,
+      "text": "point to the other that would be a bit"
+    },
+    {
+      "start": 1099.919,
+      "duration": 2.561,
+      "text": "awkward"
+    },
+    {
+      "start": 1102.72,
+      "duration": 6.319,
+      "text": "so a chart is just a map from m to rn"
+    },
+    {
+      "start": 1106.96,
+      "duration": 4.48,
+      "text": "and when to make life even simpler we're"
+    },
+    {
+      "start": 1109.039,
+      "duration": 5.441,
+      "text": "going to assume"
+    },
+    {
+      "start": 1111.44,
+      "duration": 4.08,
+      "text": "that that c is space-like otherwise we"
+    },
+    {
+      "start": 1114.48,
+      "duration": 4.24,
+      "text": "have to deal with the"
+    },
+    {
+      "start": 1115.52,
+      "duration": 5.92,
+      "text": "proper time it's okay doesn't make any"
+    },
+    {
+      "start": 1118.72,
+      "duration": 4.4,
+      "text": "particular new challenges"
+    },
+    {
+      "start": 1121.44,
+      "duration": 5.76,
+      "text": "did for us the minus sign in proper time"
+    },
+    {
+      "start": 1123.12,
+      "duration": 5.6,
+      "text": "yes i did okay do i see a space like"
+    },
+    {
+      "start": 1127.2,
+      "duration": 3.599,
+      "text": "and then we're just gonna okay we have"
+    },
+    {
+      "start": 1128.72,
+      "duration": 3.36,
+      "text": "to use a definition for the length"
+    },
+    {
+      "start": 1130.799,
+      "duration": 6.081,
+      "text": "and i've got to name that definition"
+    },
+    {
+      "start": 1132.08,
+      "duration": 8.479,
+      "text": "let's call it star from now on"
+    },
+    {
+      "start": 1136.88,
+      "duration": 7.84,
+      "text": "so then star the length of our"
+    },
+    {
+      "start": 1140.559,
+      "duration": 4.161,
+      "text": "curve in this case geodesic"
+    },
+    {
+      "start": 1144.96,
+      "duration": 8.56,
+      "text": "is the integral from a to b of the sum"
+    },
+    {
+      "start": 1150.559,
+      "duration": 2.961,
+      "text": "g mu u"
+    },
+    {
+      "start": 1160.4,
+      "duration": 4.56,
+      "text": "so now we're working in a chart and with"
+    },
+    {
+      "start": 1162.24,
+      "duration": 5.84,
+      "text": "coordinates so"
+    },
+    {
+      "start": 1164.96,
+      "duration": 3.839,
+      "text": "so c the curve at the point parameter"
+    },
+    {
+      "start": 1168.08,
+      "duration": 4.0,
+      "text": "value a"
+    },
+    {
+      "start": 1168.799,
+      "duration": 3.841,
+      "text": "is p and c the curve with the parameter"
+    },
+    {
+      "start": 1172.08,
+      "duration": 7.68,
+      "text": "value"
+    },
+    {
+      "start": 1172.64,
+      "duration": 8.24,
+      "text": "b is q"
+    },
+    {
+      "start": 1179.76,
+      "duration": 2.799,
+      "text": "and because we're working in a"
+    },
+    {
+      "start": 1180.88,
+      "duration": 3.44,
+      "text": "coordinate chart that the tangent"
+    },
+    {
+      "start": 1182.559,
+      "duration": 6.881,
+      "text": "vectors now"
+    },
+    {
+      "start": 1184.32,
+      "duration": 7.52,
+      "text": "in this coordinate chart are dx mu dt"
+    },
+    {
+      "start": 1189.44,
+      "duration": 4.8,
+      "text": "so it's just the tangent vector from"
+    },
+    {
+      "start": 1191.84,
+      "duration": 2.4,
+      "text": "before"
+    },
+    {
+      "start": 1196.16,
+      "duration": 5.28,
+      "text": "now comes uh so i'll draw a little"
+    },
+    {
+      "start": 1198.0,
+      "duration": 6.24,
+      "text": "picture just so we've got a"
+    },
+    {
+      "start": 1201.44,
+      "duration": 3.359,
+      "text": "concrete setting in mind here here's m"
+    },
+    {
+      "start": 1204.24,
+      "duration": 4.799,
+      "text": "here's"
+    },
+    {
+      "start": 1204.799,
+      "duration": 6.401,
+      "text": "p here's q here's a chart"
+    },
+    {
+      "start": 1209.039,
+      "duration": 4.401,
+      "text": "draw that with gray here that contains"
+    },
+    {
+      "start": 1211.2,
+      "duration": 2.24,
+      "text": "them"
+    },
+    {
+      "start": 1213.52,
+      "duration": 8.32,
+      "text": "and then i'll draw rn underneath"
+    },
+    {
+      "start": 1224.559,
+      "duration": 3.761,
+      "text": "there's our chart then we'll draw the"
+    },
+    {
+      "start": 1227.52,
+      "duration": 4.48,
+      "text": "points p and"
+    },
+    {
+      "start": 1228.32,
+      "duration": 7.359,
+      "text": "q in this coordinate system p is q"
+    },
+    {
+      "start": 1232.0,
+      "duration": 6.799,
+      "text": "we have a curve that's connecting them"
+    },
+    {
+      "start": 1235.679,
+      "duration": 5.12,
+      "text": "here's c here's our curve here which is"
+    },
+    {
+      "start": 1238.799,
+      "duration": 6.081,
+      "text": "a bad picture to draw"
+    },
+    {
+      "start": 1240.799,
+      "duration": 7.681,
+      "text": "um his c which was our"
+    },
+    {
+      "start": 1244.88,
+      "duration": 5.52,
+      "text": "potential geodesic"
+    },
+    {
+      "start": 1248.48,
+      "duration": 3.28,
+      "text": "i think that's all we need right now and"
+    },
+    {
+      "start": 1250.4,
+      "duration": 3.12,
+      "text": "now the next part of the argument is"
+    },
+    {
+      "start": 1251.76,
+      "duration": 5.52,
+      "text": "we're going to imagine"
+    },
+    {
+      "start": 1253.52,
+      "duration": 5.039,
+      "text": "that we vary this curve slightly so"
+    },
+    {
+      "start": 1257.28,
+      "duration": 4.879,
+      "text": "imagine that instead of"
+    },
+    {
+      "start": 1258.559,
+      "duration": 4.961,
+      "text": "computing the length for the curve c"
+    },
+    {
+      "start": 1262.159,
+      "duration": 4.241,
+      "text": "we're going to compute the curve for a"
+    },
+    {
+      "start": 1263.52,
+      "duration": 4.56,
+      "text": "little variation of that curve so we"
+    },
+    {
+      "start": 1266.4,
+      "duration": 2.72,
+      "text": "vary the curve away from the end points"
+    },
+    {
+      "start": 1268.08,
+      "duration": 1.68,
+      "text": "at the endpoints which you leave the"
+    },
+    {
+      "start": 1269.12,
+      "duration": 5.12,
+      "text": "curve"
+    },
+    {
+      "start": 1269.76,
+      "duration": 6.64,
+      "text": "alone so let's just consider a new curve"
+    },
+    {
+      "start": 1274.24,
+      "duration": 4.48,
+      "text": "and compute the length for this new"
+    },
+    {
+      "start": 1276.4,
+      "duration": 2.32,
+      "text": "curve"
+    },
+    {
+      "start": 1282.4,
+      "duration": 4.8,
+      "text": "so this is the green curve"
+    },
+    {
+      "start": 1287.28,
+      "duration": 5.6,
+      "text": "is a variation is an infinitesimal"
+    },
+    {
+      "start": 1290.24,
+      "duration": 2.64,
+      "text": "variation"
+    },
+    {
+      "start": 1302.24,
+      "duration": 3.439,
+      "text": "right of psi compose c if we're being"
+    },
+    {
+      "start": 1304.559,
+      "duration": 2.321,
+      "text": "super proper"
+    },
+    {
+      "start": 1305.679,
+      "duration": 3.601,
+      "text": "so what does that mean that means that"
+    },
+    {
+      "start": 1306.88,
+      "duration": 6.32,
+      "text": "the trajectory in our chart"
+    },
+    {
+      "start": 1309.28,
+      "duration": 7.2,
+      "text": "of our geodesic is actually"
+    },
+    {
+      "start": 1313.2,
+      "duration": 4.0,
+      "text": "varied to a different trajectory namely"
+    },
+    {
+      "start": 1316.48,
+      "duration": 3.12,
+      "text": "x mu"
+    },
+    {
+      "start": 1317.2,
+      "duration": 4.0,
+      "text": "plus some little teeny infinitesimal"
+    },
+    {
+      "start": 1319.6,
+      "duration": 4.0,
+      "text": "variation which is the thing i've drawn"
+    },
+    {
+      "start": 1321.2,
+      "duration": 2.4,
+      "text": "in green"
+    },
+    {
+      "start": 1324.159,
+      "duration": 3.601,
+      "text": "and where just for some where we"
+    },
+    {
+      "start": 1327.12,
+      "duration": 4.4,
+      "text": "actually"
+    },
+    {
+      "start": 1327.76,
+      "duration": 7.279,
+      "text": "demand that d x mu"
+    },
+    {
+      "start": 1331.52,
+      "duration": 6.56,
+      "text": "at the end point so d x mu a equals d"
+    },
+    {
+      "start": 1335.039,
+      "duration": 4.801,
+      "text": "x mu b we're not going to vary the"
+    },
+    {
+      "start": 1338.08,
+      "duration": 3.68,
+      "text": "the curve at the end points we're only"
+    },
+    {
+      "start": 1339.84,
+      "duration": 4.16,
+      "text": "going to vary in the along along the"
+    },
+    {
+      "start": 1341.76,
+      "duration": 5.039,
+      "text": "length of the curve"
+    },
+    {
+      "start": 1344.0,
+      "duration": 5.039,
+      "text": "but not at its end points so then you"
+    },
+    {
+      "start": 1346.799,
+      "duration": 6.481,
+      "text": "can ask the question you know how"
+    },
+    {
+      "start": 1349.039,
+      "duration": 7.601,
+      "text": "does the length"
+    },
+    {
+      "start": 1353.28,
+      "duration": 8.56,
+      "text": "of c prime"
+    },
+    {
+      "start": 1356.64,
+      "duration": 5.2,
+      "text": "of the varied curve"
+    },
+    {
+      "start": 1365.039,
+      "duration": 5.12,
+      "text": "change if you do a little variation"
+    },
+    {
+      "start": 1368.88,
+      "duration": 3.12,
+      "text": "in the curve then the length's got to"
+    },
+    {
+      "start": 1370.159,
+      "duration": 2.64,
+      "text": "change and it'll change to first order"
+    },
+    {
+      "start": 1372.0,
+      "duration": 2.88,
+      "text": "and so on"
+    },
+    {
+      "start": 1372.799,
+      "duration": 2.961,
+      "text": "we'll just collect terms to first order"
+    },
+    {
+      "start": 1374.88,
+      "duration": 3.44,
+      "text": "because we're doing things"
+    },
+    {
+      "start": 1375.76,
+      "duration": 4.24,
+      "text": "infinitesimally"
+    },
+    {
+      "start": 1378.32,
+      "duration": 3.44,
+      "text": "infinitesimal just means we work to"
+    },
+    {
+      "start": 1380.0,
+      "duration": 3.28,
+      "text": "first order"
+    },
+    {
+      "start": 1381.76,
+      "duration": 2.799,
+      "text": "and then take things so small that the"
+    },
+    {
+      "start": 1383.28,
+      "duration": 3.12,
+      "text": "second order terms can be made"
+    },
+    {
+      "start": 1384.559,
+      "duration": 5.521,
+      "text": "arbitrarily small"
+    },
+    {
+      "start": 1386.4,
+      "duration": 6.48,
+      "text": "so if you com if you substitute now"
+    },
+    {
+      "start": 1390.08,
+      "duration": 5.12,
+      "text": "the the the new coordinates of the new"
+    },
+    {
+      "start": 1392.88,
+      "duration": 4.4,
+      "text": "curve"
+    },
+    {
+      "start": 1395.2,
+      "duration": 3.44,
+      "text": "the varied curve if you substitute those"
+    },
+    {
+      "start": 1397.28,
+      "duration": 6.16,
+      "text": "into our expression"
+    },
+    {
+      "start": 1398.64,
+      "duration": 8.159,
+      "text": "for the for the length"
+    },
+    {
+      "start": 1403.44,
+      "duration": 3.359,
+      "text": "well then you get a new term"
+    },
+    {
+      "start": 1406.96,
+      "duration": 3.599,
+      "text": "you get a new length right so you put"
+    },
+    {
+      "start": 1409.039,
+      "duration": 2.401,
+      "text": "this into a length formula length"
+    },
+    {
+      "start": 1410.559,
+      "duration": 4.561,
+      "text": "depends on"
+    },
+    {
+      "start": 1411.44,
+      "duration": 6.239,
+      "text": "on the the curve so the length"
+    },
+    {
+      "start": 1415.12,
+      "duration": 4.0,
+      "text": "if you substitute this new curve this"
+    },
+    {
+      "start": 1417.679,
+      "duration": 2.88,
+      "text": "varied curve into the length"
+    },
+    {
+      "start": 1419.12,
+      "duration": 3.6,
+      "text": "the length depends on the new curve"
+    },
+    {
+      "start": 1420.559,
+      "duration": 3.281,
+      "text": "right but if you expand to first order"
+    },
+    {
+      "start": 1422.72,
+      "duration": 2.8,
+      "text": "what should happen is you should get the"
+    },
+    {
+      "start": 1423.84,
+      "duration": 3.68,
+      "text": "length of the original curve"
+    },
+    {
+      "start": 1425.52,
+      "duration": 3.68,
+      "text": "plus some first order shift in the"
+    },
+    {
+      "start": 1427.52,
+      "duration": 3.68,
+      "text": "length the length is going to respond to"
+    },
+    {
+      "start": 1429.2,
+      "duration": 3.599,
+      "text": "the small variation in the length of the"
+    },
+    {
+      "start": 1431.2,
+      "duration": 3.2,
+      "text": "curve"
+    },
+    {
+      "start": 1432.799,
+      "duration": 3.281,
+      "text": "and they'll be higher order terms but we"
+    },
+    {
+      "start": 1434.4,
+      "duration": 3.519,
+      "text": "won't focus on those so what what's the"
+    },
+    {
+      "start": 1436.08,
+      "duration": 3.199,
+      "text": "the first order shift in the length"
+    },
+    {
+      "start": 1437.919,
+      "duration": 3.441,
+      "text": "you know how does it change when we"
+    },
+    {
+      "start": 1439.279,
+      "duration": 5.201,
+      "text": "slightly vary"
+    },
+    {
+      "start": 1441.36,
+      "duration": 6.08,
+      "text": "how geodesic well"
+    },
+    {
+      "start": 1444.48,
+      "duration": 2.96,
+      "text": "the answer is"
+    },
+    {
+      "start": 1448.64,
+      "duration": 3.68,
+      "text": "this you're just going to do some taylor"
+    },
+    {
+      "start": 1450.88,
+      "duration": 8.56,
+      "text": "expanding and then"
+    },
+    {
+      "start": 1452.32,
+      "duration": 10.4,
+      "text": "you'll end up with this expression here"
+    },
+    {
+      "start": 1459.44,
+      "duration": 14.4,
+      "text": "so this is a calculation that"
+    },
+    {
+      "start": 1462.72,
+      "duration": 11.12,
+      "text": "you will be assumed to be able to do"
+    },
+    {
+      "start": 1482.4,
+      "duration": 3.279,
+      "text": "it's just the taylor expansion of the"
+    },
+    {
+      "start": 1484.72,
+      "duration": 4.16,
+      "text": "length formula"
+    },
+    {
+      "start": 1485.679,
+      "duration": 6.721,
+      "text": "but this is one of these things"
+    },
+    {
+      "start": 1488.88,
+      "duration": 4.72,
+      "text": "where although it's just a taylor"
+    },
+    {
+      "start": 1492.4,
+      "duration": 4.24,
+      "text": "expansion"
+    },
+    {
+      "start": 1493.6,
+      "duration": 4.959,
+      "text": "it can slow you down in your studies if"
+    },
+    {
+      "start": 1496.64,
+      "duration": 3.519,
+      "text": "you're not able to fluidly just do these"
+    },
+    {
+      "start": 1498.559,
+      "duration": 3.921,
+      "text": "kinds of calculations so this is just"
+    },
+    {
+      "start": 1500.159,
+      "duration": 2.321,
+      "text": "really"
+    },
+    {
+      "start": 1502.88,
+      "duration": 4.159,
+      "text": "you know i could do all the steps for"
+    },
+    {
+      "start": 1504.24,
+      "duration": 6.0,
+      "text": "you i'm not going to because i'm a"
+    },
+    {
+      "start": 1507.039,
+      "duration": 3.201,
+      "text": "big believer that you should"
+    },
+    {
+      "start": 1511.44,
+      "duration": 4.4,
+      "text": "exercise yourself for these little"
+    },
+    {
+      "start": 1512.96,
+      "duration": 2.88,
+      "text": "calculations"
+    },
+    {
+      "start": 1516.08,
+      "duration": 4.56,
+      "text": "and uh therefore i'll leave this as an"
+    },
+    {
+      "start": 1518.96,
+      "duration": 4.64,
+      "text": "exercise"
+    },
+    {
+      "start": 1520.64,
+      "duration": 4.0,
+      "text": "so this is how the length responds to a"
+    },
+    {
+      "start": 1523.6,
+      "duration": 4.64,
+      "text": "tiny"
+    },
+    {
+      "start": 1524.64,
+      "duration": 6.639,
+      "text": "variation of the geodesic"
+    },
+    {
+      "start": 1528.24,
+      "duration": 6.4,
+      "text": "so to make life"
+    },
+    {
+      "start": 1531.279,
+      "duration": 3.361,
+      "text": "for us a little bit easier"
+    },
+    {
+      "start": 1537.279,
+      "duration": 3.28,
+      "text": "let's assume we've chosen a"
+    },
+    {
+      "start": 1540.84,
+      "duration": 6.6,
+      "text": "parametrization"
+    },
+    {
+      "start": 1543.6,
+      "duration": 8.0,
+      "text": "where the tangent or the infinitesimal"
+    },
+    {
+      "start": 1547.44,
+      "duration": 4.16,
+      "text": "norm is actually one"
+    },
+    {
+      "start": 1553.679,
+      "duration": 3.681,
+      "text": "now can we always do that let's take a"
+    },
+    {
+      "start": 1555.36,
+      "duration": 4.799,
+      "text": "look so if you go back to here"
+    },
+    {
+      "start": 1557.36,
+      "duration": 5.28,
+      "text": "note that whenever you re-parameterize"
+    },
+    {
+      "start": 1560.159,
+      "duration": 4.801,
+      "text": "whenever you re-parameterize"
+    },
+    {
+      "start": 1562.64,
+      "duration": 2.32,
+      "text": "um"
+    },
+    {
+      "start": 1565.919,
+      "duration": 4.88,
+      "text": "a curve so you choose a new parameter s"
+    },
+    {
+      "start": 1567.919,
+      "duration": 4.401,
+      "text": "then the new tangent vector"
+    },
+    {
+      "start": 1570.799,
+      "duration": 3.36,
+      "text": "can be computed according to this"
+    },
+    {
+      "start": 1572.32,
+      "duration": 5.28,
+      "text": "formula here where"
+    },
+    {
+      "start": 1574.159,
+      "duration": 4.481,
+      "text": "we've substituted we've differentiated"
+    },
+    {
+      "start": 1577.6,
+      "duration": 3.36,
+      "text": "instead of"
+    },
+    {
+      "start": 1578.64,
+      "duration": 3.36,
+      "text": "with respect to s but with respect to t"
+    },
+    {
+      "start": 1580.96,
+      "duration": 3.04,
+      "text": "and d t d s"
+    },
+    {
+      "start": 1582.0,
+      "duration": 4.08,
+      "text": "well s isn't pretty much an arbitrary"
+    },
+    {
+      "start": 1584.0,
+      "duration": 3.76,
+      "text": "monotonic increasing function right"
+    },
+    {
+      "start": 1586.08,
+      "duration": 3.44,
+      "text": "s is pretty much allowed to be whatever"
+    },
+    {
+      "start": 1587.76,
+      "duration": 2.0,
+      "text": "arbitrary monotonic increasing function"
+    },
+    {
+      "start": 1589.52,
+      "duration": 3.44,
+      "text": "you"
+    },
+    {
+      "start": 1589.76,
+      "duration": 5.68,
+      "text": "so choose and"
+    },
+    {
+      "start": 1592.96,
+      "duration": 2.48,
+      "text": "therefore"
+    },
+    {
+      "start": 1596.48,
+      "duration": 3.36,
+      "text": "i'm going to draw a cartoon of s"
+    },
+    {
+      "start": 1602.48,
+      "duration": 4.64,
+      "text": "since s is arbitrary monotonic"
+    },
+    {
+      "start": 1606.159,
+      "duration": 4.0,
+      "text": "increasing function"
+    },
+    {
+      "start": 1607.12,
+      "duration": 4.48,
+      "text": "then you're able to choose this"
+    },
+    {
+      "start": 1610.159,
+      "duration": 4.561,
+      "text": "monotonic increasing function"
+    },
+    {
+      "start": 1611.6,
+      "duration": 3.439,
+      "text": "always at every point along the curve so"
+    },
+    {
+      "start": 1614.72,
+      "duration": 3.199,
+      "text": "that"
+    },
+    {
+      "start": 1615.039,
+      "duration": 3.921,
+      "text": "the length of the tangent vector is"
+    },
+    {
+      "start": 1617.919,
+      "duration": 2.801,
+      "text": "always one"
+    },
+    {
+      "start": 1618.96,
+      "duration": 3.04,
+      "text": "just so you should convince yourself of"
+    },
+    {
+      "start": 1620.72,
+      "duration": 3.04,
+      "text": "that fact"
+    },
+    {
+      "start": 1622.0,
+      "duration": 3.52,
+      "text": "and so that's why we can assume this"
+    },
+    {
+      "start": 1623.76,
+      "duration": 2.799,
+      "text": "from going forward that just makes life"
+    },
+    {
+      "start": 1625.52,
+      "duration": 2.24,
+      "text": "easier for us remember"
+    },
+    {
+      "start": 1626.559,
+      "duration": 2.961,
+      "text": "the length doesn't depend on the"
+    },
+    {
+      "start": 1627.76,
+      "duration": 4.72,
+      "text": "parameterization we chose so we may as"
+    },
+    {
+      "start": 1629.52,
+      "duration": 2.96,
+      "text": "well choose a nice one"
+    },
+    {
+      "start": 1633.44,
+      "duration": 5.52,
+      "text": "now um let's test"
+    },
+    {
+      "start": 1636.72,
+      "duration": 3.52,
+      "text": "our geodesics special when it comes to"
+    },
+    {
+      "start": 1638.96,
+      "duration": 2.88,
+      "text": "length so"
+    },
+    {
+      "start": 1640.24,
+      "duration": 3.28,
+      "text": "extremality what does that mean that"
+    },
+    {
+      "start": 1641.84,
+      "duration": 4.079,
+      "text": "means that if you compute"
+    },
+    {
+      "start": 1643.52,
+      "duration": 3.039,
+      "text": "the change in something that change is"
+    },
+    {
+      "start": 1645.919,
+      "duration": 3.201,
+      "text": "zero"
+    },
+    {
+      "start": 1646.559,
+      "duration": 3.281,
+      "text": "at a point and the point in this case is"
+    },
+    {
+      "start": 1649.12,
+      "duration": 5.76,
+      "text": "a curve"
+    },
+    {
+      "start": 1649.84,
+      "duration": 7.6,
+      "text": "so you've got to remember"
+    },
+    {
+      "start": 1654.88,
+      "duration": 4.799,
+      "text": "l is a function we're doing variation or"
+    },
+    {
+      "start": 1657.44,
+      "duration": 5.359,
+      "text": "calculus here is a function"
+    },
+    {
+      "start": 1659.679,
+      "duration": 6.561,
+      "text": "functional of"
+    },
+    {
+      "start": 1662.799,
+      "duration": 9.041,
+      "text": "functions right i.e"
+    },
+    {
+      "start": 1666.24,
+      "duration": 5.6,
+      "text": "curves so l the length is a machine"
+    },
+    {
+      "start": 1672.159,
+      "duration": 4.961,
+      "text": "you give it a curve and it gives you a"
+    },
+    {
+      "start": 1674.72,
+      "duration": 2.4,
+      "text": "number"
+    },
+    {
+      "start": 1678.88,
+      "duration": 4.64,
+      "text": "and so if you give and so the space of"
+    },
+    {
+      "start": 1682.399,
+      "duration": 3.441,
+      "text": "inputs to the"
+    },
+    {
+      "start": 1683.52,
+      "duration": 4.0,
+      "text": "machine that is length is the space of"
+    },
+    {
+      "start": 1685.84,
+      "duration": 3.199,
+      "text": "all curves on a manifold"
+    },
+    {
+      "start": 1687.52,
+      "duration": 4.879,
+      "text": "or all sufficiently smooth curves on a"
+    },
+    {
+      "start": 1689.039,
+      "duration": 4.88,
+      "text": "manifold and"
+    },
+    {
+      "start": 1692.399,
+      "duration": 3.441,
+      "text": "you've got to imagine there's a huge"
+    },
+    {
+      "start": 1693.919,
+      "duration": 3.441,
+      "text": "infinite dimensional space and l is some"
+    },
+    {
+      "start": 1695.84,
+      "duration": 2.319,
+      "text": "functional on that infinite dimensional"
+    },
+    {
+      "start": 1697.36,
+      "duration": 4.08,
+      "text": "space"
+    },
+    {
+      "start": 1698.159,
+      "duration": 3.681,
+      "text": "and for a given curve that's a point in"
+    },
+    {
+      "start": 1701.44,
+      "duration": 2.0,
+      "text": "this"
+    },
+    {
+      "start": 1701.84,
+      "duration": 4.4,
+      "text": "huge infinite dimensional space of all"
+    },
+    {
+      "start": 1703.44,
+      "duration": 5.44,
+      "text": "curves you can evaluate dl"
+    },
+    {
+      "start": 1706.24,
+      "duration": 3.6,
+      "text": "and ask does is the variation in the"
+    },
+    {
+      "start": 1708.88,
+      "duration": 3.76,
+      "text": "length"
+    },
+    {
+      "start": 1709.84,
+      "duration": 2.8,
+      "text": "zero or not"
+    },
+    {
+      "start": 1713.279,
+      "duration": 2.961,
+      "text": "and of course"
+    },
+    {
+      "start": 1717.679,
+      "duration": 3.041,
+      "text": "we're going to discover that for"
+    },
+    {
+      "start": 1718.799,
+      "duration": 3.441,
+      "text": "geodesics this is the case"
+    },
+    {
+      "start": 1720.72,
+      "duration": 2.959,
+      "text": "now but we're going to do it sort of"
+    },
+    {
+      "start": 1722.24,
+      "duration": 2.48,
+      "text": "backwards we're going to say let's"
+    },
+    {
+      "start": 1723.679,
+      "duration": 2.961,
+      "text": "suppose"
+    },
+    {
+      "start": 1724.72,
+      "duration": 4.559,
+      "text": "let's just impose extreme melody let's"
+    },
+    {
+      "start": 1726.64,
+      "duration": 8.48,
+      "text": "suppose that dl is zero"
+    },
+    {
+      "start": 1729.279,
+      "duration": 5.841,
+      "text": "then when we make this supposition here"
+    },
+    {
+      "start": 1735.44,
+      "duration": 4.239,
+      "text": "we we set the left-hand side of the"
+    },
+    {
+      "start": 1737.279,
+      "duration": 6.561,
+      "text": "change in the length to zero"
+    },
+    {
+      "start": 1739.679,
+      "duration": 7.281,
+      "text": "but that expression"
+    },
+    {
+      "start": 1743.84,
+      "duration": 5.52,
+      "text": "then leads us to the following equation"
+    },
+    {
+      "start": 1746.96,
+      "duration": 4.48,
+      "text": "that must be satisfied by the curve"
+    },
+    {
+      "start": 1749.36,
+      "duration": 4.16,
+      "text": "right not any curve can be has been"
+    },
+    {
+      "start": 1751.44,
+      "duration": 4.64,
+      "text": "extremely length"
+    },
+    {
+      "start": 1753.52,
+      "duration": 2.56,
+      "text": "what sort of"
+    },
+    {
+      "start": 1758.72,
+      "duration": 8.559,
+      "text": "what sort of curves enjoy"
+    },
+    {
+      "start": 1762.08,
+      "duration": 8.16,
+      "text": "extrema lengths on a manifold"
+    },
+    {
+      "start": 1767.279,
+      "duration": 3.921,
+      "text": "well you can think it through you know"
+    },
+    {
+      "start": 1770.24,
+      "duration": 3.12,
+      "text": "you can set the"
+    },
+    {
+      "start": 1771.2,
+      "duration": 4.719,
+      "text": "left hand side of this variation dl to"
+    },
+    {
+      "start": 1773.36,
+      "duration": 5.36,
+      "text": "zero and then"
+    },
+    {
+      "start": 1775.919,
+      "duration": 4.321,
+      "text": "you should conveyor to convince yourself"
+    },
+    {
+      "start": 1778.72,
+      "duration": 5.199,
+      "text": "that the only way"
+    },
+    {
+      "start": 1780.24,
+      "duration": 5.36,
+      "text": "that that can vanish that variation in a"
+    },
+    {
+      "start": 1783.919,
+      "duration": 2.961,
+      "text": "length can vanish is if the following"
+    },
+    {
+      "start": 1785.6,
+      "duration": 4.319,
+      "text": "equation"
+    },
+    {
+      "start": 1786.88,
+      "duration": 5.919,
+      "text": "is satisfied"
+    },
+    {
+      "start": 1789.919,
+      "duration": 4.801,
+      "text": "again little exercise this exercise"
+    },
+    {
+      "start": 1792.799,
+      "duration": 6.961,
+      "text": "tests your fluidity"
+    },
+    {
+      "start": 1794.72,
+      "duration": 5.04,
+      "text": "with calculus and tensor manipulations"
+    },
+    {
+      "start": 1804.159,
+      "duration": 4.321,
+      "text": "there's the the expression i mean if you"
+    },
+    {
+      "start": 1806.88,
+      "duration": 3.519,
+      "text": "look at the the"
+    },
+    {
+      "start": 1808.48,
+      "duration": 3.76,
+      "text": "equation for the variation of the length"
+    },
+    {
+      "start": 1810.399,
+      "duration": 4.241,
+      "text": "you should hopefully convince yourself"
+    },
+    {
+      "start": 1812.24,
+      "duration": 4.0,
+      "text": "right that um the variation of the"
+    },
+    {
+      "start": 1814.64,
+      "duration": 3.2,
+      "text": "length"
+    },
+    {
+      "start": 1816.24,
+      "duration": 3.439,
+      "text": "uh has some derivatives in it and you"
+    },
+    {
+      "start": 1817.84,
+      "duration": 3.199,
+      "text": "should know about integrating like parts"
+    },
+    {
+      "start": 1819.679,
+      "duration": 2.88,
+      "text": "to get rid of derivatives of the"
+    },
+    {
+      "start": 1821.039,
+      "duration": 4.961,
+      "text": "variation and then you try you should"
+    },
+    {
+      "start": 1822.559,
+      "duration": 6.72,
+      "text": "try and make it true for all variations"
+    },
+    {
+      "start": 1826.0,
+      "duration": 5.36,
+      "text": "um and then you should end up with the"
+    },
+    {
+      "start": 1829.279,
+      "duration": 4.161,
+      "text": "equation i've just drawn here so"
+    },
+    {
+      "start": 1831.36,
+      "duration": 3.439,
+      "text": "i'll actually put that extra melody"
+    },
+    {
+      "start": 1833.44,
+      "duration": 3.76,
+      "text": "means dl is zero"
+    },
+    {
+      "start": 1834.799,
+      "duration": 3.76,
+      "text": "for all variations right i didn't really"
+    },
+    {
+      "start": 1837.2,
+      "duration": 2.079,
+      "text": "say that explicitly but i hope that's"
+    },
+    {
+      "start": 1838.559,
+      "duration": 4.0,
+      "text": "kind of"
+    },
+    {
+      "start": 1839.279,
+      "duration": 7.841,
+      "text": "implicitly clear was implicitly clear"
+    },
+    {
+      "start": 1842.559,
+      "duration": 7.36,
+      "text": "that if you you vary the curve"
+    },
+    {
+      "start": 1847.12,
+      "duration": 5.52,
+      "text": "the the length is extremal if no matter"
+    },
+    {
+      "start": 1849.919,
+      "duration": 3.281,
+      "text": "how you vary so for all variations dx"
+    },
+    {
+      "start": 1852.64,
+      "duration": 3.2,
+      "text": "alpha"
+    },
+    {
+      "start": 1853.2,
+      "duration": 3.12,
+      "text": "that you get dl equals zero so imposing"
+    },
+    {
+      "start": 1855.84,
+      "duration": 2.24,
+      "text": "that"
+    },
+    {
+      "start": 1856.32,
+      "duration": 4.079,
+      "text": "should convince you that the following"
+    },
+    {
+      "start": 1858.08,
+      "duration": 7.76,
+      "text": "equation is true"
+    },
+    {
+      "start": 1860.399,
+      "duration": 5.441,
+      "text": "but this is just the geodesic equation"
+    },
+    {
+      "start": 1871.84,
+      "duration": 4.0,
+      "text": "so if you have a geodesic then certainly"
+    },
+    {
+      "start": 1874.64,
+      "duration": 4.0,
+      "text": "it extremizes"
+    },
+    {
+      "start": 1875.84,
+      "duration": 3.439,
+      "text": "the length between two points and if you"
+    },
+    {
+      "start": 1878.64,
+      "duration": 3.68,
+      "text": "have"
+    },
+    {
+      "start": 1879.279,
+      "duration": 4.4,
+      "text": "a uh if you want to extreme as the"
+    },
+    {
+      "start": 1882.32,
+      "duration": 4.4,
+      "text": "length then the curve that"
+    },
+    {
+      "start": 1883.679,
+      "duration": 4.401,
+      "text": "does that is a geodesic so this is"
+    },
+    {
+      "start": 1886.72,
+      "duration": 3.52,
+      "text": "an equivalent characterization of"
+    },
+    {
+      "start": 1888.08,
+      "duration": 5.76,
+      "text": "geodesics one that's potentially"
+    },
+    {
+      "start": 1890.24,
+      "duration": 3.6,
+      "text": "intuitively nicer"
+    },
+    {
+      "start": 1896.64,
+      "duration": 6.399,
+      "text": "let's write that out a curve"
+    },
+    {
+      "start": 1900.039,
+      "duration": 3.0,
+      "text": "extremizes"
+    },
+    {
+      "start": 1903.76,
+      "duration": 6.32,
+      "text": "the length if and only if"
+    },
+    {
+      "start": 1906.96,
+      "duration": 3.12,
+      "text": "it is a geodesic"
+    },
+    {
+      "start": 1912.559,
+      "duration": 4.24,
+      "text": "okay that's pretty cool and there's"
+    },
+    {
+      "start": 1915.919,
+      "duration": 3.921,
+      "text": "something really"
+    },
+    {
+      "start": 1916.799,
+      "duration": 5.6,
+      "text": "magical about this and that is that"
+    },
+    {
+      "start": 1919.84,
+      "duration": 6.719,
+      "text": "let's go back to this picture"
+    },
+    {
+      "start": 1922.399,
+      "duration": 6.561,
+      "text": "up here now let's go to the one here"
+    },
+    {
+      "start": 1926.559,
+      "duration": 4.401,
+      "text": "so you've got two points on the manifold"
+    },
+    {
+      "start": 1928.96,
+      "duration": 2.64,
+      "text": "m and you've got a curve on the manifold"
+    },
+    {
+      "start": 1930.96,
+      "duration": 4.079,
+      "text": "in"
+    },
+    {
+      "start": 1931.6,
+      "duration": 4.88,
+      "text": "joining the two points and we just"
+    },
+    {
+      "start": 1935.039,
+      "duration": 3.921,
+      "text": "concluded that"
+    },
+    {
+      "start": 1936.48,
+      "duration": 4.24,
+      "text": "if you draw a curve between p and q of"
+    },
+    {
+      "start": 1938.96,
+      "duration": 5.36,
+      "text": "minimum length"
+    },
+    {
+      "start": 1940.72,
+      "duration": 5.199,
+      "text": "then it's a geodesic uh it's sorry"
+    },
+    {
+      "start": 1944.32,
+      "duration": 2.959,
+      "text": "extremal length and this is the this is"
+    },
+    {
+      "start": 1945.919,
+      "duration": 2.721,
+      "text": "the key point that i do want to get back"
+    },
+    {
+      "start": 1947.279,
+      "duration": 3.601,
+      "text": "to in a minute"
+    },
+    {
+      "start": 1948.64,
+      "duration": 4.159,
+      "text": "if the curvy draw between p and q is"
+    },
+    {
+      "start": 1950.88,
+      "duration": 4.48,
+      "text": "extremal"
+    },
+    {
+      "start": 1952.799,
+      "duration": 4.88,
+      "text": "then it's a geodesic but a geodesic"
+    },
+    {
+      "start": 1955.36,
+      "duration": 7.84,
+      "text": "satisfies a local equation"
+    },
+    {
+      "start": 1957.679,
+      "duration": 8.561,
+      "text": "right you can start at p and"
+    },
+    {
+      "start": 1963.2,
+      "duration": 4.56,
+      "text": "you can solve for the geodesic that goes"
+    },
+    {
+      "start": 1966.24,
+      "duration": 3.2,
+      "text": "from p to q as long as you know the"
+    },
+    {
+      "start": 1967.76,
+      "duration": 3.759,
+      "text": "tangent vector the right tangent vector"
+    },
+    {
+      "start": 1969.44,
+      "duration": 4.32,
+      "text": "poking out from p"
+    },
+    {
+      "start": 1971.519,
+      "duration": 4.081,
+      "text": "you can solve for the the whole curve"
+    },
+    {
+      "start": 1973.76,
+      "duration": 3.84,
+      "text": "locally you know bit by bit"
+    },
+    {
+      "start": 1975.6,
+      "duration": 3.439,
+      "text": "so somehow the geodesic equation knows"
+    },
+    {
+      "start": 1977.6,
+      "duration": 4.48,
+      "text": "about the global"
+    },
+    {
+      "start": 1979.039,
+      "duration": 4.321,
+      "text": "structure of the manifold now"
+    },
+    {
+      "start": 1982.08,
+      "duration": 2.8,
+      "text": "it's not strictly true right because you"
+    },
+    {
+      "start": 1983.36,
+      "duration": 3.12,
+      "text": "needed to know that starting tangent"
+    },
+    {
+      "start": 1984.88,
+      "duration": 2.159,
+      "text": "vector you need to know which direction"
+    },
+    {
+      "start": 1986.48,
+      "duration": 3.439,
+      "text": "to to"
+    },
+    {
+      "start": 1987.039,
+      "duration": 3.201,
+      "text": "exit from p so that you'll land on q so"
+    },
+    {
+      "start": 1989.919,
+      "duration": 2.88,
+      "text": "that"
+    },
+    {
+      "start": 1990.24,
+      "duration": 4.319,
+      "text": "that's that is implicit in a little bit"
+    },
+    {
+      "start": 1992.799,
+      "duration": 2.72,
+      "text": "of global information about the manifold"
+    },
+    {
+      "start": 1994.559,
+      "duration": 3.12,
+      "text": "but it's still"
+    },
+    {
+      "start": 1995.519,
+      "duration": 3.441,
+      "text": "really striking that a local in"
+    },
+    {
+      "start": 1997.679,
+      "duration": 5.201,
+      "text": "parameter equation"
+    },
+    {
+      "start": 1998.96,
+      "duration": 6.079,
+      "text": "the geodesic equation can somehow know"
+    },
+    {
+      "start": 2002.88,
+      "duration": 3.76,
+      "text": "with very minimal data about the the"
+    },
+    {
+      "start": 2005.039,
+      "duration": 2.561,
+      "text": "general structure of the manifold around"
+    },
+    {
+      "start": 2006.64,
+      "duration": 2.639,
+      "text": "the point"
+    },
+    {
+      "start": 2007.6,
+      "duration": 4.559,
+      "text": "where you're exiting from i still find"
+    },
+    {
+      "start": 2009.279,
+      "duration": 2.88,
+      "text": "that kind of magical"
+    },
+    {
+      "start": 2012.96,
+      "duration": 6.24,
+      "text": "so there's some"
+    },
+    {
+      "start": 2016.48,
+      "duration": 5.36,
+      "text": "neater things to to to to know about"
+    },
+    {
+      "start": 2019.2,
+      "duration": 2.64,
+      "text": "geodesics"
+    },
+    {
+      "start": 2022.48,
+      "duration": 3.199,
+      "text": "so you didn't have to use the length you"
+    },
+    {
+      "start": 2024.08,
+      "duration": 5.36,
+      "text": "know you can extremize not only the"
+    },
+    {
+      "start": 2025.679,
+      "duration": 3.761,
+      "text": "length to get a geodesic but actually"
+    },
+    {
+      "start": 2030.799,
+      "duration": 4.88,
+      "text": "you can get the geodesic equation from"
+    },
+    {
+      "start": 2032.559,
+      "duration": 3.12,
+      "text": "other functionals"
+    },
+    {
+      "start": 2039.36,
+      "duration": 8.48,
+      "text": "you can get the geodesic equation by"
+    },
+    {
+      "start": 2041.2,
+      "duration": 6.64,
+      "text": "varying the following lagrangian"
+    },
+    {
+      "start": 2066.399,
+      "duration": 4.401,
+      "text": "so the following lagrangian so this is"
+    },
+    {
+      "start": 2068.159,
+      "duration": 2.641,
+      "text": "this the grunge"
+    },
+    {
+      "start": 2072.56,
+      "duration": 4.4,
+      "text": "is super simple you just take the the"
+    },
+    {
+      "start": 2074.96,
+      "duration": 4.24,
+      "text": "tangent vectors to the curve and compute"
+    },
+    {
+      "start": 2076.96,
+      "duration": 2.24,
+      "text": "the"
+    },
+    {
+      "start": 2081.52,
+      "duration": 6.639,
+      "text": "inner product and by varying"
+    },
+    {
+      "start": 2084.56,
+      "duration": 4.88,
+      "text": "this lagrangian obviously you have to"
+    },
+    {
+      "start": 2088.159,
+      "duration": 5.361,
+      "text": "integrate it along"
+    },
+    {
+      "start": 2089.44,
+      "duration": 6.8,
+      "text": "s or t sorry the curve parameter"
+    },
+    {
+      "start": 2093.52,
+      "duration": 4.16,
+      "text": "you also get the geodesic equation is"
+    },
+    {
+      "start": 2096.24,
+      "duration": 2.4,
+      "text": "satisfied so the minimum of the"
+    },
+    {
+      "start": 2097.68,
+      "duration": 2.96,
+      "text": "extremized"
+    },
+    {
+      "start": 2098.64,
+      "duration": 3.6,
+      "text": "the extremizer of the length is the same"
+    },
+    {
+      "start": 2100.64,
+      "duration": 2.16,
+      "text": "as the extremizer of that lagrangian"
+    },
+    {
+      "start": 2102.24,
+      "duration": 4.56,
+      "text": "there"
+    },
+    {
+      "start": 2102.8,
+      "duration": 5.92,
+      "text": "and why do we like this um"
+    },
+    {
+      "start": 2106.8,
+      "duration": 4.96,
+      "text": "because this can this is really useful"
+    },
+    {
+      "start": 2108.72,
+      "duration": 3.04,
+      "text": "it can be really useful"
+    },
+    {
+      "start": 2113.599,
+      "duration": 4.24,
+      "text": "because it can give a very efficient way"
+    },
+    {
+      "start": 2119.04,
+      "duration": 4.559,
+      "text": "to compute some quick to compute"
+    },
+    {
+      "start": 2120.72,
+      "duration": 2.879,
+      "text": "christopher symbols"
+    },
+    {
+      "start": 2129.119,
+      "duration": 3.921,
+      "text": "it's one of these little tricks you"
+    },
+    {
+      "start": 2130.32,
+      "duration": 4.16,
+      "text": "should bear in mind"
+    },
+    {
+      "start": 2133.04,
+      "duration": 3.12,
+      "text": "so you know how to extremize the"
+    },
+    {
+      "start": 2134.48,
+      "duration": 2.8,
+      "text": "lagrangian right you need the lagrange"
+    },
+    {
+      "start": 2136.16,
+      "duration": 8.64,
+      "text": "equations dl"
+    },
+    {
+      "start": 2137.28,
+      "duration": 10.799,
+      "text": "dx mu minus d dt"
+    },
+    {
+      "start": 2144.8,
+      "duration": 7.76,
+      "text": "uh d l d"
+    },
+    {
+      "start": 2148.079,
+      "duration": 4.481,
+      "text": "x whatever d mu d t"
+    },
+    {
+      "start": 2152.72,
+      "duration": 4.08,
+      "text": "so that's how to extremize a lagrangian"
+    },
+    {
+      "start": 2155.359,
+      "duration": 4.161,
+      "text": "and that's like a pretty"
+    },
+    {
+      "start": 2156.8,
+      "duration": 3.76,
+      "text": "you know if you've got the the metric"
+    },
+    {
+      "start": 2159.52,
+      "duration": 3.44,
+      "text": "and"
+    },
+    {
+      "start": 2160.56,
+      "duration": 4.72,
+      "text": "you look at that expression then that"
+    },
+    {
+      "start": 2162.96,
+      "duration": 4.159,
+      "text": "that might be an easier task right"
+    },
+    {
+      "start": 2165.28,
+      "duration": 5.2,
+      "text": "than going in and just directly"
+    },
+    {
+      "start": 2167.119,
+      "duration": 3.361,
+      "text": "computing the christopher symbols"
+    },
+    {
+      "start": 2171.04,
+      "duration": 3.44,
+      "text": "now i want to talk about the word"
+    },
+    {
+      "start": 2172.64,
+      "duration": 3.92,
+      "text": "extremize versus minimize"
+    },
+    {
+      "start": 2174.48,
+      "duration": 4.16,
+      "text": "so extremize right this is a really"
+    },
+    {
+      "start": 2176.56,
+      "duration": 5.36,
+      "text": "important difference"
+    },
+    {
+      "start": 2178.64,
+      "duration": 5.28,
+      "text": "versus minimize"
+    },
+    {
+      "start": 2181.92,
+      "duration": 3.28,
+      "text": "so extremizing sounds like minimizing"
+    },
+    {
+      "start": 2183.92,
+      "duration": 4.48,
+      "text": "but it's very different"
+    },
+    {
+      "start": 2185.2,
+      "duration": 6.0,
+      "text": "so if you've got a"
+    },
+    {
+      "start": 2188.4,
+      "duration": 4.32,
+      "text": "function even in one dimensional minute"
+    },
+    {
+      "start": 2191.2,
+      "duration": 2.24,
+      "text": "function minimization you should see the"
+    },
+    {
+      "start": 2192.72,
+      "duration": 3.52,
+      "text": "difference"
+    },
+    {
+      "start": 2193.44,
+      "duration": 2.8,
+      "text": "here's a function"
+    },
+    {
+      "start": 2197.119,
+      "duration": 5.841,
+      "text": "um this last bit i want to get right so"
+    },
+    {
+      "start": 2201.119,
+      "duration": 3.681,
+      "text": "it goes up it goes down and then it has"
+    },
+    {
+      "start": 2202.96,
+      "duration": 5.04,
+      "text": "a"
+    },
+    {
+      "start": 2204.8,
+      "duration": 3.2,
+      "text": "turning point like that yep"
+    },
+    {
+      "start": 2208.32,
+      "duration": 4.4,
+      "text": "where are the extrema for this function"
+    },
+    {
+      "start": 2211.119,
+      "duration": 3.361,
+      "text": "here well the extrema"
+    },
+    {
+      "start": 2212.72,
+      "duration": 3.6,
+      "text": "is where the function doesn't change"
+    },
+    {
+      "start": 2214.48,
+      "duration": 4.16,
+      "text": "anymore so this is where df"
+    },
+    {
+      "start": 2216.32,
+      "duration": 3.519,
+      "text": "equals zero so this is the graph of f"
+    },
+    {
+      "start": 2218.64,
+      "duration": 4.8,
+      "text": "versus say"
+    },
+    {
+      "start": 2219.839,
+      "duration": 4.321,
+      "text": "x or t and here's another extreme and"
+    },
+    {
+      "start": 2223.44,
+      "duration": 3.04,
+      "text": "down here d"
+    },
+    {
+      "start": 2224.16,
+      "duration": 3.199,
+      "text": "f is zero and here's an extrema here i"
+    },
+    {
+      "start": 2226.48,
+      "duration": 2.4,
+      "text": "didn't really try"
+    },
+    {
+      "start": 2227.359,
+      "duration": 4.0,
+      "text": "i didn't really do a good job of drawing"
+    },
+    {
+      "start": 2228.88,
+      "duration": 2.479,
+      "text": "it but um"
+    },
+    {
+      "start": 2234.16,
+      "duration": 3.439,
+      "text": "no i didn't do a good job of drawing it"
+    },
+    {
+      "start": 2235.76,
+      "duration": 4.88,
+      "text": "well let's just let's just stick with"
+    },
+    {
+      "start": 2237.599,
+      "duration": 4.081,
+      "text": "with the with the even this is enough to"
+    },
+    {
+      "start": 2240.64,
+      "duration": 4.56,
+      "text": "make the point"
+    },
+    {
+      "start": 2241.68,
+      "duration": 4.8,
+      "text": "right you have a function like that"
+    },
+    {
+      "start": 2245.2,
+      "duration": 4.48,
+      "text": "there's two extrema"
+    },
+    {
+      "start": 2246.48,
+      "duration": 3.2,
+      "text": "only one of them is the minima"
+    },
+    {
+      "start": 2249.839,
+      "duration": 4.0,
+      "text": "and things can get really bad so you"
+    },
+    {
+      "start": 2252.16,
+      "duration": 3.36,
+      "text": "think okay i've extremized the function"
+    },
+    {
+      "start": 2253.839,
+      "duration": 5.121,
+      "text": "therefore i found the minimum no no"
+    },
+    {
+      "start": 2255.52,
+      "duration": 5.28,
+      "text": "no no right you found a maximum maybe"
+    },
+    {
+      "start": 2258.96,
+      "duration": 3.92,
+      "text": "or you found a minimum or you may have"
+    },
+    {
+      "start": 2260.8,
+      "duration": 3.92,
+      "text": "found one of many local minima the"
+    },
+    {
+      "start": 2262.88,
+      "duration": 5.199,
+      "text": "function could look like that"
+    },
+    {
+      "start": 2264.72,
+      "duration": 5.2,
+      "text": "and you can have arbitrarily nasty many"
+    },
+    {
+      "start": 2268.079,
+      "duration": 3.681,
+      "text": "local minima these are all extremas here"
+    },
+    {
+      "start": 2269.92,
+      "duration": 3.04,
+      "text": "that are drawn"
+    },
+    {
+      "start": 2271.76,
+      "duration": 3.12,
+      "text": "you could have ended up in one of these"
+    },
+    {
+      "start": 2272.96,
+      "duration": 2.399,
+      "text": "local minima when you extremize right"
+    },
+    {
+      "start": 2274.88,
+      "duration": 2.719,
+      "text": "this is"
+    },
+    {
+      "start": 2275.359,
+      "duration": 3.281,
+      "text": "all these points here satisfy df equals"
+    },
+    {
+      "start": 2277.599,
+      "duration": 2.721,
+      "text": "zero so"
+    },
+    {
+      "start": 2278.64,
+      "duration": 4.08,
+      "text": "it's a necessary but not sufficient"
+    },
+    {
+      "start": 2280.32,
+      "duration": 5.519,
+      "text": "condition to be at a minimum"
+    },
+    {
+      "start": 2282.72,
+      "duration": 3.119,
+      "text": "to extremize something"
+    },
+    {
+      "start": 2287.599,
+      "duration": 5.041,
+      "text": "and let's for the specific case of"
+    },
+    {
+      "start": 2291.52,
+      "duration": 7.36,
+      "text": "laurentian"
+    },
+    {
+      "start": 2292.64,
+      "duration": 9.6,
+      "text": "manifold so for lorenz"
+    },
+    {
+      "start": 2298.88,
+      "duration": 3.36,
+      "text": "signature manifolds"
+    },
+    {
+      "start": 2302.72,
+      "duration": 3.52,
+      "text": "i'll just tell you a little bit about"
+    },
+    {
+      "start": 2304.48,
+      "duration": 4.48,
+      "text": "what extremal"
+    },
+    {
+      "start": 2306.24,
+      "duration": 2.72,
+      "text": "curves look like"
+    },
+    {
+      "start": 2311.44,
+      "duration": 4.399,
+      "text": "so you might think that you found a"
+    },
+    {
+      "start": 2313.44,
+      "duration": 13.6,
+      "text": "curve with minimum"
+    },
+    {
+      "start": 2315.839,
+      "duration": 13.681,
+      "text": "time like"
+    },
+    {
+      "start": 2327.04,
+      "duration": 2.48,
+      "text": "distance"
+    },
+    {
+      "start": 2331.52,
+      "duration": 3.28,
+      "text": "but note the following"
+    },
+    {
+      "start": 2337.839,
+      "duration": 6.24,
+      "text": "it turns out that if you've got two"
+    },
+    {
+      "start": 2340.64,
+      "duration": 15.199,
+      "text": "points that time like separated"
+    },
+    {
+      "start": 2344.079,
+      "duration": 11.76,
+      "text": "then they may have arbitrarily small"
+    },
+    {
+      "start": 2356.16,
+      "duration": 5.04,
+      "text": "proper time so proper time"
+    },
+    {
+      "start": 2359.52,
+      "duration": 3.28,
+      "text": "if you try you can always minimize the"
+    },
+    {
+      "start": 2361.2,
+      "duration": 4.0,
+      "text": "proper time you bring it down to"
+    },
+    {
+      "start": 2362.8,
+      "duration": 4.799,
+      "text": "essentially zero always and how does the"
+    },
+    {
+      "start": 2365.2,
+      "duration": 4.48,
+      "text": "argument go well suppose you have"
+    },
+    {
+      "start": 2367.599,
+      "duration": 3.681,
+      "text": "two points and the time-like separated"
+    },
+    {
+      "start": 2369.68,
+      "duration": 3.04,
+      "text": "so pq"
+    },
+    {
+      "start": 2371.28,
+      "duration": 3.28,
+      "text": "i'm not going to draw the light cone on"
+    },
+    {
+      "start": 2372.72,
+      "duration": 3.68,
+      "text": "there you just have to imagine"
+    },
+    {
+      "start": 2374.56,
+      "duration": 4.32,
+      "text": "that the time-lapse separated okay"
+    },
+    {
+      "start": 2376.4,
+      "duration": 4.56,
+      "text": "here's a curve that joins p and q"
+    },
+    {
+      "start": 2378.88,
+      "duration": 4.32,
+      "text": "that's going to have a non-zero proper"
+    },
+    {
+      "start": 2380.96,
+      "duration": 4.639,
+      "text": "time this curve"
+    },
+    {
+      "start": 2383.2,
+      "duration": 3.2,
+      "text": "but look at this radical curve i'm about"
+    },
+    {
+      "start": 2385.599,
+      "duration": 3.52,
+      "text": "to draw here"
+    },
+    {
+      "start": 2386.4,
+      "duration": 3.28,
+      "text": "this is also a curve joining p and q and"
+    },
+    {
+      "start": 2389.119,
+      "duration": 4.24,
+      "text": "it's"
+    },
+    {
+      "start": 2389.68,
+      "duration": 5.919,
+      "text": "it's uh it's physical"
+    },
+    {
+      "start": 2393.359,
+      "duration": 4.321,
+      "text": "it's nearly null and then it flips"
+    },
+    {
+      "start": 2395.599,
+      "duration": 3.041,
+      "text": "around to pointing nearly at the speed"
+    },
+    {
+      "start": 2397.68,
+      "duration": 2.72,
+      "text": "of light here"
+    },
+    {
+      "start": 2398.64,
+      "duration": 3.04,
+      "text": "and then goes flips around to going"
+    },
+    {
+      "start": 2400.4,
+      "duration": 1.84,
+      "text": "nearly the speed of light here and then"
+    },
+    {
+      "start": 2401.68,
+      "duration": 1.84,
+      "text": "goes up and"
+    },
+    {
+      "start": 2402.24,
+      "duration": 4.079,
+      "text": "goes nearly the speed of light here that"
+    },
+    {
+      "start": 2403.52,
+      "duration": 5.04,
+      "text": "actually has a lower proper time"
+    },
+    {
+      "start": 2406.319,
+      "duration": 4.0,
+      "text": "because along these nearly null segments"
+    },
+    {
+      "start": 2408.56,
+      "duration": 2.559,
+      "text": "the proper time is arbitrarily small"
+    },
+    {
+      "start": 2410.319,
+      "duration": 4.161,
+      "text": "here"
+    },
+    {
+      "start": 2411.119,
+      "duration": 6.96,
+      "text": "here and here so"
+    },
+    {
+      "start": 2414.48,
+      "duration": 10.32,
+      "text": "this gray curve has"
+    },
+    {
+      "start": 2418.079,
+      "duration": 10.0,
+      "text": "arbitrarily has smaller proper time"
+    },
+    {
+      "start": 2424.8,
+      "duration": 5.2,
+      "text": "so beware of thinking of proper of the"
+    },
+    {
+      "start": 2428.079,
+      "duration": 2.801,
+      "text": "proper time as somehow measuring the"
+    },
+    {
+      "start": 2430.0,
+      "duration": 4.64,
+      "text": "length of the"
+    },
+    {
+      "start": 2430.88,
+      "duration": 5.6,
+      "text": "nice smooth geodesic curves that"
+    },
+    {
+      "start": 2434.64,
+      "duration": 3.04,
+      "text": "lower the make the proper time lower can"
+    },
+    {
+      "start": 2436.48,
+      "duration": 4.32,
+      "text": "be made quite"
+    },
+    {
+      "start": 2437.68,
+      "duration": 5.439,
+      "text": "nasty by making them nearly the speed of"
+    },
+    {
+      "start": 2440.8,
+      "duration": 2.319,
+      "text": "light"
+    },
+    {
+      "start": 2444.079,
+      "duration": 4.401,
+      "text": "so i'm not going to prove that statement"
+    },
+    {
+      "start": 2446.8,
+      "duration": 3.92,
+      "text": "it's just an observation that you'll"
+    },
+    {
+      "start": 2448.48,
+      "duration": 5.04,
+      "text": "have to believe or"
+    },
+    {
+      "start": 2450.72,
+      "duration": 3.2,
+      "text": "investigate yourself so what what do you"
+    },
+    {
+      "start": 2453.52,
+      "duration": 2.4,
+      "text": "get"
+    },
+    {
+      "start": 2453.92,
+      "duration": 4.88,
+      "text": "when you you compute the geodesic"
+    },
+    {
+      "start": 2455.92,
+      "duration": 7.6,
+      "text": "equation for a time-like curve"
+    },
+    {
+      "start": 2458.8,
+      "duration": 9.039,
+      "text": "so a time-like curve is a geodesic"
+    },
+    {
+      "start": 2463.52,
+      "duration": 4.319,
+      "text": "if it has the greatest possible time"
+    },
+    {
+      "start": 2472.319,
+      "duration": 3.921,
+      "text": "oh sorry i said it the wrong way around"
+    },
+    {
+      "start": 2474.72,
+      "duration": 5.44,
+      "text": "so if a curve"
+    },
+    {
+      "start": 2476.24,
+      "duration": 6.24,
+      "text": "has of greatest proper time exists that"
+    },
+    {
+      "start": 2480.16,
+      "duration": 3.84,
+      "text": "extremizes the proper time right because"
+    },
+    {
+      "start": 2482.48,
+      "duration": 4.35,
+      "text": "it's the greatest the greatest means"
+    },
+    {
+      "start": 2484.0,
+      "duration": 3.92,
+      "text": "that any variation can't get bigger"
+    },
+    {
+      "start": 2486.83,
+      "duration": 9.009,
+      "text": "[Music]"
+    },
+    {
+      "start": 2487.92,
+      "duration": 7.919,
+      "text": "it must be a time like geodesic"
+    },
+    {
+      "start": 2503.839,
+      "duration": 3.76,
+      "text": "because of this very simple"
+    },
+    {
+      "start": 2505.76,
+      "duration": 3.12,
+      "text": "one-dimensional calculus commentary"
+    },
+    {
+      "start": 2507.599,
+      "duration": 3.52,
+      "text": "above"
+    },
+    {
+      "start": 2508.88,
+      "duration": 3.28,
+      "text": "just because a you have a geodesic"
+    },
+    {
+      "start": 2511.119,
+      "duration": 5.281,
+      "text": "doesn't mean that"
+    },
+    {
+      "start": 2512.16,
+      "duration": 4.24,
+      "text": "it is the curve with the greatest proper"
+    },
+    {
+      "start": 2520.839,
+      "duration": 5.401,
+      "text": "time"
+    },
+    {
+      "start": 2523.04,
+      "duration": 5.279,
+      "text": "so the any if you have a g s geodesic"
+    },
+    {
+      "start": 2526.24,
+      "duration": 11.599,
+      "text": "that goes from p to q"
+    },
+    {
+      "start": 2528.319,
+      "duration": 9.52,
+      "text": "it need not maximize the proper time"
+    },
+    {
+      "start": 2549.2,
+      "duration": 4.639,
+      "text": "okay that's just some warnings about"
+    },
+    {
+      "start": 2551.76,
+      "duration": 3.68,
+      "text": "variation of calculus and maximizing and"
+    },
+    {
+      "start": 2553.839,
+      "duration": 5.201,
+      "text": "minimizing things"
+    },
+    {
+      "start": 2555.44,
+      "duration": 7.679,
+      "text": "be careful about thinking that"
+    },
+    {
+      "start": 2559.04,
+      "duration": 5.84,
+      "text": "extremal points are minima or maxima"
+    },
+    {
+      "start": 2563.119,
+      "duration": 4.641,
+      "text": "or quite often they're just local minima"
+    },
+    {
+      "start": 2564.88,
+      "duration": 2.88,
+      "text": "or local maxima"
+    },
+    {
+      "start": 2568.4,
+      "duration": 4.0,
+      "text": "our next topic is that of curvature of"
+    },
+    {
+      "start": 2571.2,
+      "duration": 2.8,
+      "text": "manifolds"
+    },
+    {
+      "start": 2572.4,
+      "duration": 4.4,
+      "text": "so we've now reached the point where"
+    },
+    {
+      "start": 2574.0,
+      "duration": 5.28,
+      "text": "we've assembled enough mathematical"
+    },
+    {
+      "start": 2576.8,
+      "duration": 4.48,
+      "text": "foundations to be able to discuss in an"
+    },
+    {
+      "start": 2579.28,
+      "duration": 3.2,
+      "text": "intrinsic fashion the curvature of a"
+    },
+    {
+      "start": 2581.28,
+      "duration": 3.039,
+      "text": "manifold"
+    },
+    {
+      "start": 2582.48,
+      "duration": 4.72,
+      "text": "and this is a key ingredient in"
+    },
+    {
+      "start": 2584.319,
+      "duration": 6.961,
+      "text": "einstein's general theory of relativity"
+    },
+    {
+      "start": 2587.2,
+      "duration": 6.24,
+      "text": "so for the next lecture we will"
+    },
+    {
+      "start": 2591.28,
+      "duration": 3.92,
+      "text": "discuss curvature and i'll give you two"
+    },
+    {
+      "start": 2593.44,
+      "duration": 4.24,
+      "text": "characterizations of curvature"
+    },
+    {
+      "start": 2595.2,
+      "duration": 4.48,
+      "text": "that are intrinsic to the manifold don't"
+    },
+    {
+      "start": 2597.68,
+      "duration": 5.04,
+      "text": "require that we know the embedding"
+    },
+    {
+      "start": 2599.68,
+      "duration": 6.08,
+      "text": "space in which the manifold lives"
+    },
+    {
+      "start": 2602.72,
+      "duration": 6.08,
+      "text": "and at the end of the next lecture we'll"
+    },
+    {
+      "start": 2605.76,
+      "duration": 4.559,
+      "text": "have assembled enough mathematical"
+    },
+    {
+      "start": 2608.8,
+      "duration": 3.36,
+      "text": "constructions and definitions that we'll"
+    },
+    {
+      "start": 2610.319,
+      "duration": 4.321,
+      "text": "be able to finally"
+    },
+    {
+      "start": 2612.16,
+      "duration": 5.6,
+      "text": "move on to discussing einshein's general"
+    },
+    {
+      "start": 2614.64,
+      "duration": 3.12,
+      "text": "theory of relativity"
+    },
+    {
+      "start": 2618.16,
+      "duration": 4.4,
+      "text": "so the main observation and i've said it"
+    },
+    {
+      "start": 2621.04,
+      "duration": 4.0,
+      "text": "enough times"
+    },
+    {
+      "start": 2622.56,
+      "duration": 3.759,
+      "text": "uh in the past but it's worth"
+    },
+    {
+      "start": 2625.04,
+      "duration": 4.799,
+      "text": "emphasizing"
+    },
+    {
+      "start": 2626.319,
+      "duration": 5.441,
+      "text": "because it's such a key ingredient that"
+    },
+    {
+      "start": 2629.839,
+      "duration": 4.321,
+      "text": "the main characterization of curvature"
+    },
+    {
+      "start": 2631.76,
+      "duration": 5.12,
+      "text": "that we're going to use is that the path"
+    },
+    {
+      "start": 2634.16,
+      "duration": 5.28,
+      "text": "that parallel transport may be path"
+    },
+    {
+      "start": 2636.88,
+      "duration": 2.56,
+      "text": "dependent"
+    },
+    {
+      "start": 2641.44,
+      "duration": 4.32,
+      "text": "and that the path dependence of parallel"
+    },
+    {
+      "start": 2644.48,
+      "duration": 4.48,
+      "text": "transport is"
+    },
+    {
+      "start": 2645.76,
+      "duration": 5.76,
+      "text": "a key intrinsic signature of"
+    },
+    {
+      "start": 2648.96,
+      "duration": 2.56,
+      "text": "curvature"
+    },
+    {
+      "start": 2653.119,
+      "duration": 3.681,
+      "text": "so if you parallel transport a vector"
+    },
+    {
+      "start": 2658.4,
+      "duration": 6.959,
+      "text": "from the tangent space"
+    },
+    {
+      "start": 2662.24,
+      "duration": 3.839,
+      "text": "at some point p to the tangent space at"
+    },
+    {
+      "start": 2665.359,
+      "duration": 4.72,
+      "text": "some point"
+    },
+    {
+      "start": 2666.079,
+      "duration": 4.0,
+      "text": "q then this gives"
+    },
+    {
+      "start": 2670.319,
+      "duration": 4.241,
+      "text": "an intrinsic right it doesn't depend"
+    },
+    {
+      "start": 2672.96,
+      "duration": 3.359,
+      "text": "parallel transport doesn't depend and"
+    },
+    {
+      "start": 2674.56,
+      "duration": 3.2,
+      "text": "vectors don't depend on knowing"
+    },
+    {
+      "start": 2676.319,
+      "duration": 4.161,
+      "text": "if your manifold is embedded in some"
+    },
+    {
+      "start": 2677.76,
+      "duration": 2.72,
+      "text": "other manifold"
+    },
+    {
+      "start": 2680.96,
+      "duration": 9.76,
+      "text": "it's an intrinsic proxy or signature"
+    },
+    {
+      "start": 2684.96,
+      "duration": 8.56,
+      "text": "for curvature of m"
+    },
+    {
+      "start": 2690.72,
+      "duration": 4.0,
+      "text": "and that's the main the main uh"
+    },
+    {
+      "start": 2693.52,
+      "duration": 3.12,
+      "text": "observation that"
+    },
+    {
+      "start": 2694.72,
+      "duration": 3.2,
+      "text": "forms the basis for the remane and"
+    },
+    {
+      "start": 2696.64,
+      "duration": 2.24,
+      "text": "characterization of curvature of"
+    },
+    {
+      "start": 2697.92,
+      "duration": 2.0,
+      "text": "manifolds"
+    },
+    {
+      "start": 2698.88,
+      "duration": 3.52,
+      "text": "so what we're going to do is we're going"
+    },
+    {
+      "start": 2699.92,
+      "duration": 5.679,
+      "text": "to define a measure of curvature"
+    },
+    {
+      "start": 2702.4,
+      "duration": 4.4,
+      "text": "like how curved is a manifold as the"
+    },
+    {
+      "start": 2705.599,
+      "duration": 2.561,
+      "text": "failure we're going to define this"
+    },
+    {
+      "start": 2706.8,
+      "duration": 3.36,
+      "text": "measure to be the failure of successive"
+    },
+    {
+      "start": 2708.16,
+      "duration": 3.84,
+      "text": "parallel transporting operations to"
+    },
+    {
+      "start": 2710.16,
+      "duration": 4.32,
+      "text": "commute"
+    },
+    {
+      "start": 2712.0,
+      "duration": 3.28,
+      "text": "and that'll define we'll find a way to"
+    },
+    {
+      "start": 2714.48,
+      "duration": 3.52,
+      "text": "to"
+    },
+    {
+      "start": 2715.28,
+      "duration": 6.4,
+      "text": "obtain a tensorial quantity so the"
+    },
+    {
+      "start": 2718.0,
+      "duration": 7.839,
+      "text": "riemann curvature tensor"
+    },
+    {
+      "start": 2721.68,
+      "duration": 4.159,
+      "text": "is going to be that thing defined by"
+    },
+    {
+      "start": 2726.72,
+      "duration": 2.72,
+      "text": "the failure"
+    },
+    {
+      "start": 2731.359,
+      "duration": 3.441,
+      "text": "of successive"
+    },
+    {
+      "start": 2736.16,
+      "duration": 11.679,
+      "text": "parallel transport operations to commute"
+    },
+    {
+      "start": 2748.48,
+      "duration": 3.44,
+      "text": "that's how we're going to define the"
+    },
+    {
+      "start": 2749.92,
+      "duration": 4.56,
+      "text": "riemann curvature we'll find a way to do"
+    },
+    {
+      "start": 2751.92,
+      "duration": 5.439,
+      "text": "that mathematically"
+    },
+    {
+      "start": 2754.48,
+      "duration": 2.879,
+      "text": "and we'll do this"
+    },
+    {
+      "start": 2757.92,
+      "duration": 4.159,
+      "text": "i'm going to do this derivation one time"
+    },
+    {
+      "start": 2760.64,
+      "duration": 1.92,
+      "text": "with derivative operators and then i'm"
+    },
+    {
+      "start": 2762.079,
+      "duration": 2.0,
+      "text": "going to"
+    },
+    {
+      "start": 2762.56,
+      "duration": 3.36,
+      "text": "effectively do the derivation a second"
+    },
+    {
+      "start": 2764.079,
+      "duration": 3.441,
+      "text": "time with uh successive parallel"
+    },
+    {
+      "start": 2765.92,
+      "duration": 4.72,
+      "text": "transport operations"
+    },
+    {
+      "start": 2767.52,
+      "duration": 4.799,
+      "text": "so uh that's the physical intuition that"
+    },
+    {
+      "start": 2770.64,
+      "duration": 3.12,
+      "text": "lies behind the riemann curvature tensor"
+    },
+    {
+      "start": 2772.319,
+      "duration": 2.721,
+      "text": "it's the failure of successive parallel"
+    },
+    {
+      "start": 2773.76,
+      "duration": 2.64,
+      "text": "transport operations the compute the"
+    },
+    {
+      "start": 2775.04,
+      "duration": 2.799,
+      "text": "actual mathematical definition of the"
+    },
+    {
+      "start": 2776.4,
+      "duration": 3.919,
+      "text": "riemann curvature tensor"
+    },
+    {
+      "start": 2777.839,
+      "duration": 3.921,
+      "text": "is in terms of derivative operators the"
+    },
+    {
+      "start": 2780.319,
+      "duration": 2.641,
+      "text": "way to translate between these two"
+    },
+    {
+      "start": 2781.76,
+      "duration": 4.48,
+      "text": "definitions"
+    },
+    {
+      "start": 2782.96,
+      "duration": 5.52,
+      "text": "is to think of parallel"
+    },
+    {
+      "start": 2786.24,
+      "duration": 3.2,
+      "text": "of parallel transport operations is"
+    },
+    {
+      "start": 2788.48,
+      "duration": 2.4,
+      "text": "being"
+    },
+    {
+      "start": 2789.44,
+      "duration": 2.56,
+      "text": "infinitesimal parallel transport"
+    },
+    {
+      "start": 2790.88,
+      "duration": 3.12,
+      "text": "operations as being one-to-one"
+    },
+    {
+      "start": 2792.0,
+      "duration": 5.68,
+      "text": "correspondence with derivative operators"
+    },
+    {
+      "start": 2794.0,
+      "duration": 9.839,
+      "text": "so what we can do is we're going to"
+    },
+    {
+      "start": 2797.68,
+      "duration": 6.159,
+      "text": "start by studying"
+    },
+    {
+      "start": 2804.56,
+      "duration": 7.12,
+      "text": "and the action of not one but"
+    },
+    {
+      "start": 2808.079,
+      "duration": 8.561,
+      "text": "two covering derivative"
+    },
+    {
+      "start": 2811.68,
+      "duration": 8.0,
+      "text": "derivative operators"
+    },
+    {
+      "start": 2816.64,
+      "duration": 3.04,
+      "text": "on an arbitrary"
+    },
+    {
+      "start": 2821.2,
+      "duration": 2.96,
+      "text": "dual vector field"
+    },
+    {
+      "start": 2824.96,
+      "duration": 7.2,
+      "text": "omega well i know c and"
+    },
+    {
+      "start": 2828.8,
+      "duration": 4.559,
+      "text": "to make this uh conclusions to bring"
+    },
+    {
+      "start": 2832.16,
+      "duration": 3.04,
+      "text": "them up the quickest we're going to"
+    },
+    {
+      "start": 2833.359,
+      "duration": 4.641,
+      "text": "suppose we additionally have a"
+    },
+    {
+      "start": 2835.2,
+      "duration": 4.639,
+      "text": "arbitrary smooth function f so you"
+    },
+    {
+      "start": 2838.0,
+      "duration": 3.68,
+      "text": "really got to think of delta a delta b"
+    },
+    {
+      "start": 2839.839,
+      "duration": 6.0,
+      "text": "as kind of being two infinitesimal"
+    },
+    {
+      "start": 2841.68,
+      "duration": 4.159,
+      "text": "parallel transports"
+    },
+    {
+      "start": 2846.0,
+      "duration": 2.8,
+      "text": "so let's consider"
+    },
+    {
+      "start": 2852.48,
+      "duration": 6.879,
+      "text": "the following expressions delta a"
+    },
+    {
+      "start": 2855.76,
+      "duration": 5.28,
+      "text": "delta b applied to f omega c"
+    },
+    {
+      "start": 2859.359,
+      "duration": 4.081,
+      "text": "so if c is a dual vector field then f"
+    },
+    {
+      "start": 2861.04,
+      "duration": 4.48,
+      "text": "times omega c is the dual vector field"
+    },
+    {
+      "start": 2863.44,
+      "duration": 5.76,
+      "text": "and we're going to apply we're going to"
+    },
+    {
+      "start": 2865.52,
+      "duration": 5.44,
+      "text": "try and parallel transport it along"
+    },
+    {
+      "start": 2869.2,
+      "duration": 3.68,
+      "text": "one vector direction which is indexed by"
+    },
+    {
+      "start": 2870.96,
+      "duration": 2.24,
+      "text": "slot a and another vector direction"
+    },
+    {
+      "start": 2872.88,
+      "duration": 3.679,
+      "text": "which"
+    },
+    {
+      "start": 2873.2,
+      "duration": 4.96,
+      "text": "is indexed by slot b and"
+    },
+    {
+      "start": 2876.559,
+      "duration": 4.401,
+      "text": "to carry out this computation we just"
+    },
+    {
+      "start": 2878.16,
+      "duration": 4.88,
+      "text": "use several properties of the"
+    },
+    {
+      "start": 2880.96,
+      "duration": 3.599,
+      "text": "the derivative operator delta a firstly"
+    },
+    {
+      "start": 2883.04,
+      "duration": 3.12,
+      "text": "we're going to use the leibniz property"
+    },
+    {
+      "start": 2884.559,
+      "duration": 5.04,
+      "text": "and the fact that on scalar functions it"
+    },
+    {
+      "start": 2886.16,
+      "duration": 3.439,
+      "text": "reduces to the normal derivative"
+    },
+    {
+      "start": 2895.599,
+      "duration": 3.921,
+      "text": "in fact no we're not even going to"
+    },
+    {
+      "start": 2896.64,
+      "duration": 4.4,
+      "text": "bother using that we're going to use"
+    },
+    {
+      "start": 2899.52,
+      "duration": 2.64,
+      "text": "adjust the likeness property here in the"
+    },
+    {
+      "start": 2901.04,
+      "duration": 3.12,
+      "text": "first line and then we just use"
+    },
+    {
+      "start": 2902.16,
+      "duration": 5.04,
+      "text": "leibniz's property again"
+    },
+    {
+      "start": 2904.16,
+      "duration": 3.04,
+      "text": "in the second line here"
+    },
+    {
+      "start": 2909.599,
+      "duration": 6.24,
+      "text": "so we can get four terms depending on"
+    },
+    {
+      "start": 2911.28,
+      "duration": 4.559,
+      "text": "where this delta operator lands"
+    },
+    {
+      "start": 2926.839,
+      "duration": 7.081,
+      "text": "okay and"
+    },
+    {
+      "start": 2929.839,
+      "duration": 4.561,
+      "text": "note that this is this is going to enjoy"
+    },
+    {
+      "start": 2933.92,
+      "duration": 2.24,
+      "text": "some"
+    },
+    {
+      "start": 2934.4,
+      "duration": 3.04,
+      "text": "interesting properties in particular the"
+    },
+    {
+      "start": 2936.16,
+      "duration": 2.72,
+      "text": "first term here because"
+    },
+    {
+      "start": 2937.44,
+      "duration": 3.36,
+      "text": "we've assumed our derivative operator is"
+    },
+    {
+      "start": 2938.88,
+      "duration": 3.76,
+      "text": "torsion free we know that delta a delta"
+    },
+    {
+      "start": 2940.8,
+      "duration": 4.16,
+      "text": "b bf will be the same as delta b delta"
+    },
+    {
+      "start": 2942.64,
+      "duration": 2.32,
+      "text": "af"
+    },
+    {
+      "start": 2945.119,
+      "duration": 3.521,
+      "text": "and the the two terms in the middle had"
+    },
+    {
+      "start": 2947.839,
+      "duration": 3.041,
+      "text": "we done b"
+    },
+    {
+      "start": 2948.64,
+      "duration": 3.679,
+      "text": "then a well we would have gotten the"
+    },
+    {
+      "start": 2950.88,
+      "duration": 4.959,
+      "text": "same two terms in the middle"
+    },
+    {
+      "start": 2952.319,
+      "duration": 5.28,
+      "text": "and in fact the only term that would"
+    },
+    {
+      "start": 2955.839,
+      "duration": 3.28,
+      "text": "uh between if we change the order of"
+    },
+    {
+      "start": 2957.599,
+      "duration": 2.641,
+      "text": "these parallel transport operations as"
+    },
+    {
+      "start": 2959.119,
+      "duration": 3.601,
+      "text": "the last one"
+    },
+    {
+      "start": 2960.24,
+      "duration": 4.64,
+      "text": "so that's i've already essentially given"
+    },
+    {
+      "start": 2962.72,
+      "duration": 3.44,
+      "text": "you the proof"
+    },
+    {
+      "start": 2964.88,
+      "duration": 3.04,
+      "text": "of the next statement the one that"
+    },
+    {
+      "start": 2966.16,
+      "duration": 2.88,
+      "text": "really will characterize the riemann"
+    },
+    {
+      "start": 2967.92,
+      "duration": 3.6,
+      "text": "curvature tensor"
+    },
+    {
+      "start": 2969.04,
+      "duration": 4.48,
+      "text": "let's consider the difference of doing a"
+    },
+    {
+      "start": 2971.52,
+      "duration": 3.28,
+      "text": "teeny infinitesimal parallel transport"
+    },
+    {
+      "start": 2973.52,
+      "duration": 4.0,
+      "text": "along the a slot"
+    },
+    {
+      "start": 2974.8,
+      "duration": 4.319,
+      "text": "vector and the b slot vector the"
+    },
+    {
+      "start": 2977.52,
+      "duration": 3.839,
+      "text": "difference of doing it one way and the"
+    },
+    {
+      "start": 2979.119,
+      "duration": 2.24,
+      "text": "other"
+    },
+    {
+      "start": 2982.0,
+      "duration": 3.599,
+      "text": "well it's a little exercise where i"
+    },
+    {
+      "start": 2983.68,
+      "duration": 7.04,
+      "text": "basically told you how to do it"
+    },
+    {
+      "start": 2985.599,
+      "duration": 5.121,
+      "text": "um you know that this is true right"
+    },
+    {
+      "start": 2993.28,
+      "duration": 3.2,
+      "text": "you see that the difference of these two"
+    },
+    {
+      "start": 2994.8,
+      "duration": 2.319,
+      "text": "derivative operators when applied to f"
+    },
+    {
+      "start": 2996.48,
+      "duration": 2.32,
+      "text": "omega c"
+    },
+    {
+      "start": 2997.119,
+      "duration": 3.2,
+      "text": "is the same as f of these derivative"
+    },
+    {
+      "start": 2998.8,
+      "duration": 3.519,
+      "text": "operators applied to omega c"
+    },
+    {
+      "start": 3000.319,
+      "duration": 4.481,
+      "text": "but we've seen that before this kind of"
+    },
+    {
+      "start": 3002.319,
+      "duration": 2.481,
+      "text": "structure"
+    },
+    {
+      "start": 3005.359,
+      "duration": 4.081,
+      "text": "um you know we've when we were talking"
+    },
+    {
+      "start": 3007.52,
+      "duration": 3.039,
+      "text": "about derivative operators we considered"
+    },
+    {
+      "start": 3009.44,
+      "duration": 4.879,
+      "text": "their actions"
+    },
+    {
+      "start": 3010.559,
+      "duration": 5.52,
+      "text": "on on scalar functions"
+    },
+    {
+      "start": 3014.319,
+      "duration": 3.441,
+      "text": "multiplied by dual vector fields and we"
+    },
+    {
+      "start": 3016.079,
+      "duration": 3.441,
+      "text": "saw that the action of a derivative"
+    },
+    {
+      "start": 3017.76,
+      "duration": 2.48,
+      "text": "operator commutes with a scalar function"
+    },
+    {
+      "start": 3019.52,
+      "duration": 3.36,
+      "text": "f"
+    },
+    {
+      "start": 3020.24,
+      "duration": 3.44,
+      "text": "and then we applied a intermediate mean"
+    },
+    {
+      "start": 3022.88,
+      "duration": 4.16,
+      "text": "value type"
+    },
+    {
+      "start": 3023.68,
+      "duration": 6.8,
+      "text": "argument to show that delta a"
+    },
+    {
+      "start": 3027.04,
+      "duration": 4.88,
+      "text": "omega b depends only on the value of the"
+    },
+    {
+      "start": 3030.48,
+      "duration": 3.359,
+      "text": "dual vector field at the point"
+    },
+    {
+      "start": 3031.92,
+      "duration": 4.56,
+      "text": "p under consideration the same reasoning"
+    },
+    {
+      "start": 3033.839,
+      "duration": 2.641,
+      "text": "applies here"
+    },
+    {
+      "start": 3039.44,
+      "duration": 9.28,
+      "text": "so since this is true"
+    },
+    {
+      "start": 3044.24,
+      "duration": 8.72,
+      "text": "for all f we learn that"
+    },
+    {
+      "start": 3048.72,
+      "duration": 7.119,
+      "text": "delta a delta b minus delta b delta a"
+    },
+    {
+      "start": 3052.96,
+      "duration": 2.879,
+      "text": "omega c"
+    },
+    {
+      "start": 3056.0,
+      "duration": 3.04,
+      "text": "only depends"
+    },
+    {
+      "start": 3059.92,
+      "duration": 5.52,
+      "text": "on the value of"
+    },
+    {
+      "start": 3063.52,
+      "duration": 3.76,
+      "text": "omega c at the point p where you are"
+    },
+    {
+      "start": 3065.44,
+      "duration": 5.679,
+      "text": "right that's the key"
+    },
+    {
+      "start": 3067.28,
+      "duration": 3.839,
+      "text": "consequence of this little computation"
+    },
+    {
+      "start": 3071.68,
+      "duration": 5.52,
+      "text": "so uh now we learn that the commutator"
+    },
+    {
+      "start": 3074.4,
+      "duration": 2.8,
+      "text": "of these derivatives"
+    },
+    {
+      "start": 3079.52,
+      "duration": 4.319,
+      "text": "uh defines a map"
+    },
+    {
+      "start": 3086.0,
+      "duration": 5.359,
+      "text": "i'll just write it out as a map from"
+    },
+    {
+      "start": 3089.119,
+      "duration": 3.281,
+      "text": "tenses of type zero one to tenses of"
+    },
+    {
+      "start": 3091.359,
+      "duration": 6.0,
+      "text": "type"
+    },
+    {
+      "start": 3092.4,
+      "duration": 8.24,
+      "text": "zero three"
+    },
+    {
+      "start": 3097.359,
+      "duration": 5.041,
+      "text": "and in other words"
+    },
+    {
+      "start": 3100.64,
+      "duration": 11.199,
+      "text": "there exists a matrix representation for"
+    },
+    {
+      "start": 3102.4,
+      "duration": 13.84,
+      "text": "this linear map"
+    },
+    {
+      "start": 3111.839,
+      "duration": 6.72,
+      "text": "r a b c d which is a tensor of type 1"
+    },
+    {
+      "start": 3116.24,
+      "duration": 2.319,
+      "text": "3"
+    },
+    {
+      "start": 3119.359,
+      "duration": 6.48,
+      "text": "such that for all"
+    },
+    {
+      "start": 3122.64,
+      "duration": 3.199,
+      "text": "dual fields"
+    },
+    {
+      "start": 3126.0,
+      "duration": 13.839,
+      "text": "we have the following representation"
+    },
+    {
+      "start": 3143.359,
+      "duration": 10.48,
+      "text": "and now i've just defined for you the"
+    },
+    {
+      "start": 3145.2,
+      "duration": 8.639,
+      "text": "riemann curvature tensor"
+    },
+    {
+      "start": 3154.24,
+      "duration": 3.76,
+      "text": "it does turn out to be tension in this"
+    },
+    {
+      "start": 3164.839,
+      "duration": 3.0,
+      "text": "case"
+    },
+    {
+      "start": 3169.2,
+      "duration": 3.6,
+      "text": "so our abcd is something called the"
+    },
+    {
+      "start": 3170.96,
+      "duration": 4.56,
+      "text": "riemann curvature tensor"
+    },
+    {
+      "start": 3172.8,
+      "duration": 3.6,
+      "text": "and mathematically you can see it sort"
+    },
+    {
+      "start": 3175.52,
+      "duration": 4.079,
+      "text": "of"
+    },
+    {
+      "start": 3176.4,
+      "duration": 4.8,
+      "text": "measures the difference in parallel"
+    },
+    {
+      "start": 3179.599,
+      "duration": 3.041,
+      "text": "making little infinitesimal parallel"
+    },
+    {
+      "start": 3181.2,
+      "duration": 4.56,
+      "text": "transports"
+    },
+    {
+      "start": 3182.64,
+      "duration": 6.32,
+      "text": "along two directions"
+    },
+    {
+      "start": 3185.76,
+      "duration": 4.72,
+      "text": "now that that intuitive interpretation"
+    },
+    {
+      "start": 3188.96,
+      "duration": 2.8,
+      "text": "of this mathematical equation can be"
+    },
+    {
+      "start": 3190.48,
+      "duration": 4.879,
+      "text": "made more precise and that's what we're"
+    },
+    {
+      "start": 3191.76,
+      "duration": 6.64,
+      "text": "going to do now"
+    },
+    {
+      "start": 3195.359,
+      "duration": 4.0,
+      "text": "so i'm going to give we're going to i'll"
+    },
+    {
+      "start": 3198.4,
+      "duration": 4.8,
+      "text": "give a"
+    },
+    {
+      "start": 3199.359,
+      "duration": 3.841,
+      "text": "argument now to you that will relate"
+    },
+    {
+      "start": 3204.24,
+      "duration": 18.56,
+      "text": "our abcd to the failure"
+    },
+    {
+      "start": 3208.96,
+      "duration": 16.24,
+      "text": "of successive parallel transports"
+    },
+    {
+      "start": 3222.8,
+      "duration": 5.36,
+      "text": "and to do that i'm going to draw for you"
+    },
+    {
+      "start": 3225.2,
+      "duration": 12.639,
+      "text": "a picture"
+    },
+    {
+      "start": 3228.16,
+      "duration": 14.72,
+      "text": "to explain this"
+    },
+    {
+      "start": 3237.839,
+      "duration": 6.801,
+      "text": "so we'll put a slightly orange"
+    },
+    {
+      "start": 3242.88,
+      "duration": 3.679,
+      "text": "now what you've got to imagine here is"
+    },
+    {
+      "start": 3244.64,
+      "duration": 4.959,
+      "text": "that we've got a manifold"
+    },
+    {
+      "start": 3246.559,
+      "duration": 4.161,
+      "text": "m which is this which i've now drawn as"
+    },
+    {
+      "start": 3249.599,
+      "duration": 6.161,
+      "text": "a three-dimensional"
+    },
+    {
+      "start": 3250.72,
+      "duration": 5.04,
+      "text": "manifold here m is"
+    },
+    {
+      "start": 3257.28,
+      "duration": 2.88,
+      "text": "for this for the next part of this"
+    },
+    {
+      "start": 3258.559,
+      "duration": 2.321,
+      "text": "argument you've got to imagine it's"
+    },
+    {
+      "start": 3260.16,
+      "duration": 3.439,
+      "text": "important"
+    },
+    {
+      "start": 3260.88,
+      "duration": 3.439,
+      "text": "that we have you think of the manifold"
+    },
+    {
+      "start": 3263.599,
+      "duration": 4.96,
+      "text": "as being"
+    },
+    {
+      "start": 3264.319,
+      "duration": 8.721,
+      "text": "um higher dimensional than just"
+    },
+    {
+      "start": 3268.559,
+      "duration": 8.28,
+      "text": "uh one so in particular"
+    },
+    {
+      "start": 3273.04,
+      "duration": 5.2,
+      "text": "it's very important that m in this"
+    },
+    {
+      "start": 3276.839,
+      "duration": 6.28,
+      "text": "characterization"
+    },
+    {
+      "start": 3278.24,
+      "duration": 4.879,
+      "text": "looks maybe arbitrary dimensional"
+    },
+    {
+      "start": 3285.04,
+      "duration": 2.88,
+      "text": "so m here"
+    },
+    {
+      "start": 3289.119,
+      "duration": 6.401,
+      "text": "is this orange surface sorry orange"
+    },
+    {
+      "start": 3292.48,
+      "duration": 4.639,
+      "text": "volume right in this in this story and"
+    },
+    {
+      "start": 3295.52,
+      "duration": 2.799,
+      "text": "then what's going to happen"
+    },
+    {
+      "start": 3297.119,
+      "duration": 3.361,
+      "text": "is we're going to talk about"
+    },
+    {
+      "start": 3298.319,
+      "duration": 4.081,
+      "text": "successively parallel transporting a"
+    },
+    {
+      "start": 3300.48,
+      "duration": 4.639,
+      "text": "vector"
+    },
+    {
+      "start": 3302.4,
+      "duration": 4.8,
+      "text": "in two different ways so we're going to"
+    },
+    {
+      "start": 3305.119,
+      "duration": 5.121,
+      "text": "start with some point p"
+    },
+    {
+      "start": 3307.2,
+      "duration": 6.56,
+      "text": "and p is in a surface"
+    },
+    {
+      "start": 3310.24,
+      "duration": 4.96,
+      "text": "s it's also in a big manifold here"
+    },
+    {
+      "start": 3313.76,
+      "duration": 4.0,
+      "text": "and we're going to imagine is we start"
+    },
+    {
+      "start": 3315.2,
+      "duration": 5.119,
+      "text": "at p and we"
+    },
+    {
+      "start": 3317.76,
+      "duration": 3.599,
+      "text": "and that there is some two-dimensional"
+    },
+    {
+      "start": 3320.319,
+      "duration": 4.24,
+      "text": "surface"
+    },
+    {
+      "start": 3321.359,
+      "duration": 5.041,
+      "text": "s that p lies in as well this is really"
+    },
+    {
+      "start": 3324.559,
+      "duration": 3.28,
+      "text": "important"
+    },
+    {
+      "start": 3326.4,
+      "duration": 3.6,
+      "text": "and we're going to parallel transport"
+    },
+    {
+      "start": 3327.839,
+      "duration": 4.401,
+      "text": "our vector along"
+    },
+    {
+      "start": 3330.0,
+      "duration": 3.76,
+      "text": "one curve in s along another curviness"
+    },
+    {
+      "start": 3332.24,
+      "duration": 4.24,
+      "text": "along another one and then back to where"
+    },
+    {
+      "start": 3333.76,
+      "duration": 2.72,
+      "text": "it started from"
+    },
+    {
+      "start": 3340.48,
+      "duration": 4.96,
+      "text": "so suppose you have a vector v"
+    },
+    {
+      "start": 3346.4,
+      "duration": 3.36,
+      "text": "at p and then you parallel transport it"
+    },
+    {
+      "start": 3348.72,
+      "duration": 2.639,
+      "text": "along like"
+    },
+    {
+      "start": 3349.76,
+      "duration": 4.24,
+      "text": "one direction in your your"
+    },
+    {
+      "start": 3351.359,
+      "duration": 5.2,
+      "text": "two-dimensional surface"
+    },
+    {
+      "start": 3354.0,
+      "duration": 4.16,
+      "text": "and then you parallel transport along"
+    },
+    {
+      "start": 3356.559,
+      "duration": 3.201,
+      "text": "this next part of a little square that"
+    },
+    {
+      "start": 3358.16,
+      "duration": 3.36,
+      "text": "you've drawn in your surface"
+    },
+    {
+      "start": 3359.76,
+      "duration": 4.079,
+      "text": "and then so on your parallel transport"
+    },
+    {
+      "start": 3361.52,
+      "duration": 2.319,
+      "text": "it back"
+    },
+    {
+      "start": 3364.4,
+      "duration": 3.199,
+      "text": "and then i don't know at the end of it"
+    },
+    {
+      "start": 3365.92,
+      "duration": 5.84,
+      "text": "you end up with a new vector v"
+    },
+    {
+      "start": 3367.599,
+      "duration": 6.72,
+      "text": "prime which is the result"
+    },
+    {
+      "start": 3371.76,
+      "duration": 4.24,
+      "text": "of having parallel transported your"
+    },
+    {
+      "start": 3374.319,
+      "duration": 5.841,
+      "text": "vector around this little square"
+    },
+    {
+      "start": 3376.0,
+      "duration": 7.2,
+      "text": "inside this surface s of dimension"
+    },
+    {
+      "start": 3380.16,
+      "duration": 6.0,
+      "text": "two so you've got four portions to this"
+    },
+    {
+      "start": 3383.2,
+      "duration": 2.96,
+      "text": "parallel transport"
+    },
+    {
+      "start": 3388.64,
+      "duration": 4.24,
+      "text": "depending on where you're going around"
+    },
+    {
+      "start": 3390.079,
+      "duration": 2.801,
+      "text": "this little square"
+    },
+    {
+      "start": 3393.28,
+      "duration": 3.279,
+      "text": "and we're going to to make things a"
+    },
+    {
+      "start": 3395.76,
+      "duration": 1.76,
+      "text": "little bit easier we're going to"
+    },
+    {
+      "start": 3396.559,
+      "duration": 3.361,
+      "text": "coordinate"
+    },
+    {
+      "start": 3397.52,
+      "duration": 4.799,
+      "text": "our manifold and say that these portions"
+    },
+    {
+      "start": 3399.92,
+      "duration": 2.399,
+      "text": "are on"
+    },
+    {
+      "start": 3402.4,
+      "duration": 3.439,
+      "text": "constant coordinate"
+    },
+    {
+      "start": 3407.04,
+      "duration": 7.039,
+      "text": "lines so that this little square is"
+    },
+    {
+      "start": 3410.079,
+      "duration": 4.0,
+      "text": "is in uh"
+    },
+    {
+      "start": 3414.72,
+      "duration": 6.399,
+      "text": "this little square is"
+    },
+    {
+      "start": 3417.76,
+      "duration": 5.839,
+      "text": "realized by doing a little"
+    },
+    {
+      "start": 3421.119,
+      "duration": 3.361,
+      "text": "transports along constant coordinate"
+    },
+    {
+      "start": 3423.599,
+      "duration": 2.72,
+      "text": "curves"
+    },
+    {
+      "start": 3424.48,
+      "duration": 3.68,
+      "text": "in the surface s i'll write this out in"
+    },
+    {
+      "start": 3426.319,
+      "duration": 4.8,
+      "text": "equations in a minute"
+    },
+    {
+      "start": 3428.16,
+      "duration": 5.04,
+      "text": "so the coordinate of the point p is 0"
+    },
+    {
+      "start": 3431.119,
+      "duration": 4.0,
+      "text": "zero the coordinate of the first"
+    },
+    {
+      "start": 3433.2,
+      "duration": 5.2,
+      "text": "point on the journey is zero comma delta"
+    },
+    {
+      "start": 3435.119,
+      "duration": 3.281,
+      "text": "t so we have two coordinates"
+    },
+    {
+      "start": 3441.839,
+      "duration": 4.641,
+      "text": "of the surface s now of course m has n"
+    },
+    {
+      "start": 3444.72,
+      "duration": 3.359,
+      "text": "coordinates but s is a two dimensional"
+    },
+    {
+      "start": 3446.48,
+      "duration": 4.0,
+      "text": "surface defined by"
+    },
+    {
+      "start": 3448.079,
+      "duration": 4.48,
+      "text": "by two coordinates just to call them a"
+    },
+    {
+      "start": 3450.48,
+      "duration": 4.72,
+      "text": "little less little t so this is"
+    },
+    {
+      "start": 3452.559,
+      "duration": 2.641,
+      "text": "big s"
+    },
+    {
+      "start": 3456.72,
+      "duration": 3.68,
+      "text": "and the second point on our journey is"
+    },
+    {
+      "start": 3459.28,
+      "duration": 5.039,
+      "text": "delta s"
+    },
+    {
+      "start": 3460.4,
+      "duration": 6.959,
+      "text": "delta t i could put deltas in there"
+    },
+    {
+      "start": 3464.319,
+      "duration": 3.04,
+      "text": "sorry i shouldn't have done that"
+    },
+    {
+      "start": 3468.799,
+      "duration": 3.441,
+      "text": "uh the second point in our journey is"
+    },
+    {
+      "start": 3470.16,
+      "duration": 4.48,
+      "text": "delta s delta t the third point in our"
+    },
+    {
+      "start": 3472.24,
+      "duration": 5.839,
+      "text": "journey is delta s comma zero"
+    },
+    {
+      "start": 3474.64,
+      "duration": 6.0,
+      "text": "and the starting point is zero zero"
+    },
+    {
+      "start": 3478.079,
+      "duration": 3.52,
+      "text": "so we take now you see the data what do"
+    },
+    {
+      "start": 3480.64,
+      "duration": 2.959,
+      "text": "we need to"
+    },
+    {
+      "start": 3481.599,
+      "duration": 4.641,
+      "text": "you know what what data is required to"
+    },
+    {
+      "start": 3483.599,
+      "duration": 5.281,
+      "text": "even set up the scenario we need to have"
+    },
+    {
+      "start": 3486.24,
+      "duration": 3.359,
+      "text": "uh a surface a surface is defined by"
+    },
+    {
+      "start": 3488.88,
+      "duration": 2.64,
+      "text": "maybe"
+    },
+    {
+      "start": 3489.599,
+      "duration": 3.601,
+      "text": "two vectors or you can imagine that it's"
+    },
+    {
+      "start": 3491.52,
+      "duration": 2.72,
+      "text": "a kind of flat surface defined by two"
+    },
+    {
+      "start": 3493.2,
+      "duration": 2.56,
+      "text": "vectors so"
+    },
+    {
+      "start": 3494.24,
+      "duration": 2.96,
+      "text": "to even talk about a surface in a"
+    },
+    {
+      "start": 3495.76,
+      "duration": 4.48,
+      "text": "manifold you need the data of at least"
+    },
+    {
+      "start": 3497.2,
+      "duration": 4.72,
+      "text": "say two vectors right"
+    },
+    {
+      "start": 3500.24,
+      "duration": 3.119,
+      "text": "you also need the data of another vector"
+    },
+    {
+      "start": 3501.92,
+      "duration": 2.879,
+      "text": "v"
+    },
+    {
+      "start": 3503.359,
+      "duration": 3.76,
+      "text": "that's the vector that's being parallel"
+    },
+    {
+      "start": 3504.799,
+      "duration": 5.361,
+      "text": "transported around the surface"
+    },
+    {
+      "start": 3507.119,
+      "duration": 4.561,
+      "text": "and uh you need the metric and you need"
+    },
+    {
+      "start": 3510.16,
+      "duration": 3.199,
+      "text": "a parallel and your covariant derivative"
+    },
+    {
+      "start": 3511.68,
+      "duration": 3.36,
+      "text": "operator to talk about this scenario"
+    },
+    {
+      "start": 3513.359,
+      "duration": 2.24,
+      "text": "here so now let's write out that's the"
+    },
+    {
+      "start": 3515.04,
+      "duration": 2.24,
+      "text": "picture"
+    },
+    {
+      "start": 3515.599,
+      "duration": 4.161,
+      "text": "of the scenario i'm now about to"
+    },
+    {
+      "start": 3517.28,
+      "duration": 2.48,
+      "text": "describe"
+    },
+    {
+      "start": 3520.799,
+      "duration": 8.04,
+      "text": "so in slightly more precise"
+    },
+    {
+      "start": 3525.119,
+      "duration": 6.72,
+      "text": "words and equations so we consider a"
+    },
+    {
+      "start": 3528.839,
+      "duration": 3.0,
+      "text": "loop"
+    },
+    {
+      "start": 3532.72,
+      "duration": 6.24,
+      "text": "starting at some point p in the manifold"
+    },
+    {
+      "start": 3535.44,
+      "duration": 3.52,
+      "text": "and this loop is defined"
+    },
+    {
+      "start": 3543.04,
+      "duration": 5.12,
+      "text": "by a two-dimensional surface"
+    },
+    {
+      "start": 3548.96,
+      "duration": 2.159,
+      "text": "s"
+    },
+    {
+      "start": 3552.16,
+      "duration": 6.48,
+      "text": "through p and so the coordinates"
+    },
+    {
+      "start": 3556.799,
+      "duration": 4.56,
+      "text": "we can choose some coordinates that we"
+    },
+    {
+      "start": 3558.64,
+      "duration": 2.719,
+      "text": "like for s"
+    },
+    {
+      "start": 3563.28,
+      "duration": 4.799,
+      "text": "let's just call our coordinate system"
+    },
+    {
+      "start": 3564.799,
+      "duration": 3.28,
+      "text": "whatever s comma t"
+    },
+    {
+      "start": 3569.44,
+      "duration": 5.76,
+      "text": "and of course in the picture above i've"
+    },
+    {
+      "start": 3571.839,
+      "duration": 4.641,
+      "text": "made it clear that the coordinate system"
+    },
+    {
+      "start": 3575.2,
+      "duration": 5.04,
+      "text": "that the origin of this coordinate"
+    },
+    {
+      "start": 3576.48,
+      "duration": 3.76,
+      "text": "system is exactly the point p"
+    },
+    {
+      "start": 3580.64,
+      "duration": 3.439,
+      "text": "then the loop that we're going to"
+    },
+    {
+      "start": 3582.799,
+      "duration": 5.04,
+      "text": "parallel transport our"
+    },
+    {
+      "start": 3584.079,
+      "duration": 3.76,
+      "text": "vector around"
+    },
+    {
+      "start": 3590.64,
+      "duration": 4.4,
+      "text": "is defined by the following four steps"
+    },
+    {
+      "start": 3593.2,
+      "duration": 4.399,
+      "text": "we start at the point zero zero in"
+    },
+    {
+      "start": 3595.04,
+      "duration": 4.079,
+      "text": "coordinates on s we go to the location"
+    },
+    {
+      "start": 3597.599,
+      "duration": 4.161,
+      "text": "zero delta t"
+    },
+    {
+      "start": 3599.119,
+      "duration": 3.521,
+      "text": "by path parallel transport operation one"
+    },
+    {
+      "start": 3601.76,
+      "duration": 4.24,
+      "text": "we go to"
+    },
+    {
+      "start": 3602.64,
+      "duration": 6.4,
+      "text": "the location delta s delta t uh"
+    },
+    {
+      "start": 3606.0,
+      "duration": 7.359,
+      "text": "by parallel transport two we get"
+    },
+    {
+      "start": 3609.04,
+      "duration": 6.799,
+      "text": "two delta s comma zero by three"
+    },
+    {
+      "start": 3613.359,
+      "duration": 6.0,
+      "text": "and then we finally end up at zero zero"
+    },
+    {
+      "start": 3615.839,
+      "duration": 3.52,
+      "text": "by parallel transport four"
+    },
+    {
+      "start": 3620.079,
+      "duration": 3.441,
+      "text": "finishing our path"
+    },
+    {
+      "start": 3624.64,
+      "duration": 4.159,
+      "text": "so to do this parallel transport well"
+    },
+    {
+      "start": 3627.28,
+      "duration": 6.24,
+      "text": "we're going to need a vector"
+    },
+    {
+      "start": 3628.799,
+      "duration": 4.721,
+      "text": "so that v be a vector"
+    },
+    {
+      "start": 3634.16,
+      "duration": 9.679,
+      "text": "an arbitrary vector right not just any"
+    },
+    {
+      "start": 3635.839,
+      "duration": 8.0,
+      "text": "vector an arbitrary vector"
+    },
+    {
+      "start": 3648.559,
+      "duration": 9.28,
+      "text": "and we're going to parallel transport it"
+    },
+    {
+      "start": 3659.359,
+      "duration": 2.641,
+      "text": "around the loop"
+    },
+    {
+      "start": 3663.2,
+      "duration": 3.84,
+      "text": "and to make the computation a bit easier"
+    },
+    {
+      "start": 3667.76,
+      "duration": 6.4,
+      "text": "we're going to suppose we have"
+    },
+    {
+      "start": 3671.359,
+      "duration": 2.801,
+      "text": "an arbitrary"
+    },
+    {
+      "start": 3674.88,
+      "duration": 4.88,
+      "text": "dual vector field defined everywhere on"
+    },
+    {
+      "start": 3678.16,
+      "duration": 7.679,
+      "text": "the manifold this is just helpful for"
+    },
+    {
+      "start": 3679.76,
+      "duration": 6.079,
+      "text": "the computation you don't need it"
+    },
+    {
+      "start": 3687.68,
+      "duration": 3.28,
+      "text": "what the the the style of argument we're"
+    },
+    {
+      "start": 3689.68,
+      "duration": 2.96,
+      "text": "going to use is we're going to construct"
+    },
+    {
+      "start": 3690.96,
+      "duration": 3.44,
+      "text": "a scalar quantity"
+    },
+    {
+      "start": 3692.64,
+      "duration": 3.679,
+      "text": "and consider that and then parallel"
+    },
+    {
+      "start": 3694.4,
+      "duration": 3.919,
+      "text": "transport the scalar quantity around and"
+    },
+    {
+      "start": 3696.319,
+      "duration": 3.601,
+      "text": "it just is easier to do the computation"
+    },
+    {
+      "start": 3698.319,
+      "duration": 3.76,
+      "text": "then at the end we let omega a be"
+    },
+    {
+      "start": 3699.92,
+      "duration": 3.84,
+      "text": "arbitrary and cancel it out"
+    },
+    {
+      "start": 3702.079,
+      "duration": 4.161,
+      "text": "so omega a just plays the role of"
+    },
+    {
+      "start": 3703.76,
+      "duration": 8.319,
+      "text": "turning of of"
+    },
+    {
+      "start": 3706.24,
+      "duration": 6.879,
+      "text": "of like an arbitrary test dual vector so"
+    },
+    {
+      "start": 3712.079,
+      "duration": 3.601,
+      "text": "now can"
+    },
+    {
+      "start": 3713.119,
+      "duration": 3.601,
+      "text": "to actually do our computation we"
+    },
+    {
+      "start": 3715.68,
+      "duration": 3.679,
+      "text": "consider"
+    },
+    {
+      "start": 3716.72,
+      "duration": 3.119,
+      "text": "v a omega a and now that's a scalar"
+    },
+    {
+      "start": 3719.359,
+      "duration": 1.921,
+      "text": "function"
+    },
+    {
+      "start": 3719.839,
+      "duration": 4.801,
+      "text": "on the manifold and that makes some"
+    },
+    {
+      "start": 3721.28,
+      "duration": 3.36,
+      "text": "operations a bit easier to do"
+    },
+    {
+      "start": 3724.839,
+      "duration": 3.401,
+      "text": "mathematically"
+    },
+    {
+      "start": 3726.799,
+      "duration": 4.32,
+      "text": "now let's look at the change in this"
+    },
+    {
+      "start": 3728.24,
+      "duration": 2.879,
+      "text": "scalar function"
+    },
+    {
+      "start": 3737.839,
+      "duration": 5.041,
+      "text": "along the first part of our little loop"
+    },
+    {
+      "start": 3745.2,
+      "duration": 5.359,
+      "text": "how is it defined well we're going to"
+    },
+    {
+      "start": 3747.119,
+      "duration": 3.44,
+      "text": "make an infinitesimal loop"
+    },
+    {
+      "start": 3752.16,
+      "duration": 6.159,
+      "text": "or i said equivalently we just"
+    },
+    {
+      "start": 3754.64,
+      "duration": 3.679,
+      "text": "considered things to first order"
+    },
+    {
+      "start": 3758.64,
+      "duration": 11.199,
+      "text": "and now here's something that may"
+    },
+    {
+      "start": 3761.28,
+      "duration": 8.559,
+      "text": "through you for a second um"
+    },
+    {
+      "start": 3771.68,
+      "duration": 4.32,
+      "text": "we're going to evaluate the first order"
+    },
+    {
+      "start": 3773.52,
+      "duration": 3.68,
+      "text": "change at the midpoint between"
+    },
+    {
+      "start": 3776.0,
+      "duration": 3.599,
+      "text": "the point where we are where we're going"
+    },
+    {
+      "start": 3777.2,
+      "duration": 2.399,
+      "text": "to end up"
+    },
+    {
+      "start": 3781.76,
+      "duration": 3.76,
+      "text": "of now i said first order up to now but"
+    },
+    {
+      "start": 3783.68,
+      "duration": 3.359,
+      "text": "i lied in fact we're going to do this"
+    },
+    {
+      "start": 3785.52,
+      "duration": 3.36,
+      "text": "computation to second order this is one"
+    },
+    {
+      "start": 3787.039,
+      "duration": 4.0,
+      "text": "of these"
+    },
+    {
+      "start": 3788.88,
+      "duration": 8.959,
+      "text": "uh rare occasions where you do need to"
+    },
+    {
+      "start": 3791.039,
+      "duration": 6.8,
+      "text": "go to second order"
+    },
+    {
+      "start": 3803.039,
+      "duration": 4.8,
+      "text": "so evaluating this expression for the"
+    },
+    {
+      "start": 3805.839,
+      "duration": 2.561,
+      "text": "the change delta 1 in the scalar"
+    },
+    {
+      "start": 3807.839,
+      "duration": 2.641,
+      "text": "function v"
+    },
+    {
+      "start": 3808.4,
+      "duration": 3.52,
+      "text": "a omega a if you evaluate that at the"
+    },
+    {
+      "start": 3810.48,
+      "duration": 4.8,
+      "text": "midpoint you actually get an expression"
+    },
+    {
+      "start": 3811.92,
+      "duration": 3.36,
+      "text": "that's correct to second order"
+    },
+    {
+      "start": 3816.559,
+      "duration": 5.76,
+      "text": "even the second order term is correct"
+    },
+    {
+      "start": 3819.92,
+      "duration": 3.84,
+      "text": "that's a handy trick to know if you want"
+    },
+    {
+      "start": 3822.319,
+      "duration": 2.081,
+      "text": "if you have to do a calculation that's"
+    },
+    {
+      "start": 3823.76,
+      "duration": 2.72,
+      "text": "correct"
+    },
+    {
+      "start": 3824.4,
+      "duration": 3.919,
+      "text": "to second order you could either include"
+    },
+    {
+      "start": 3826.48,
+      "duration": 2.72,
+      "text": "the second order term and evaluate it at"
+    },
+    {
+      "start": 3828.319,
+      "duration": 2.641,
+      "text": "the end point"
+    },
+    {
+      "start": 3829.2,
+      "duration": 3.919,
+      "text": "or you could take just the first order"
+    },
+    {
+      "start": 3830.96,
+      "duration": 5.04,
+      "text": "term and insert the midpoint here"
+    },
+    {
+      "start": 3833.119,
+      "duration": 4.561,
+      "text": "it's pretty a neat and handy trick for"
+    },
+    {
+      "start": 3836.0,
+      "duration": 3.599,
+      "text": "doing calculations the second order that"
+    },
+    {
+      "start": 3837.68,
+      "duration": 5.439,
+      "text": "you should remember"
+    },
+    {
+      "start": 3839.599,
+      "duration": 3.52,
+      "text": "so delta 1 is"
+    },
+    {
+      "start": 3843.2,
+      "duration": 7.2,
+      "text": "big delta t t b d"
+    },
+    {
+      "start": 3846.319,
+      "duration": 6.8,
+      "text": "delta b v a omega i'm just using the"
+    },
+    {
+      "start": 3850.4,
+      "duration": 5.12,
+      "text": "fact that on scalar functions"
+    },
+    {
+      "start": 3853.119,
+      "duration": 3.521,
+      "text": "the derivative operator reduces on"
+    },
+    {
+      "start": 3855.52,
+      "duration": 4.64,
+      "text": "scalar functions"
+    },
+    {
+      "start": 3856.64,
+      "duration": 3.52,
+      "text": "to the normal derivative operator"
+    },
+    {
+      "start": 3862.24,
+      "duration": 3.119,
+      "text": "and then if we just apply leibniz"
+    },
+    {
+      "start": 3864.24,
+      "duration": 3.44,
+      "text": "property"
+    },
+    {
+      "start": 3865.359,
+      "duration": 4.161,
+      "text": "and use the fact that va is parallel"
+    },
+    {
+      "start": 3867.68,
+      "duration": 14.159,
+      "text": "transported"
+    },
+    {
+      "start": 3869.52,
+      "duration": 12.319,
+      "text": "then we get the following expression"
+    },
+    {
+      "start": 3890.96,
+      "duration": 8.399,
+      "text": "okay delta one has this expression"
+    },
+    {
+      "start": 3895.44,
+      "duration": 6.08,
+      "text": "oh i mean maybe not"
+    },
+    {
+      "start": 3899.359,
+      "duration": 3.921,
+      "text": "i better make it explicit here ta is a"
+    },
+    {
+      "start": 3901.52,
+      "duration": 8.319,
+      "text": "tangent vector"
+    },
+    {
+      "start": 3903.28,
+      "duration": 6.559,
+      "text": "it's not a it's the"
+    },
+    {
+      "start": 3912.88,
+      "duration": 9.36,
+      "text": "is the tangent vector to the curve with"
+    },
+    {
+      "start": 3917.2,
+      "duration": 7.52,
+      "text": "constant s coordinate"
+    },
+    {
+      "start": 3922.24,
+      "duration": 5.119,
+      "text": "and parallel transport operation means"
+    },
+    {
+      "start": 3924.72,
+      "duration": 2.639,
+      "text": "that ta"
+    },
+    {
+      "start": 3933.839,
+      "duration": 4.0,
+      "text": "yeah so"
+    },
+    {
+      "start": 3939.92,
+      "duration": 2.639,
+      "text": "similarly"
+    },
+    {
+      "start": 3943.359,
+      "duration": 10.48,
+      "text": "just do the same argument"
+    },
+    {
+      "start": 3950.72,
+      "duration": 6.56,
+      "text": "we obtain uh for the change along the"
+    },
+    {
+      "start": 3953.839,
+      "duration": 3.441,
+      "text": "third part of our journey"
+    },
+    {
+      "start": 3958.24,
+      "duration": 3.04,
+      "text": "the following expression right on parts"
+    },
+    {
+      "start": 3960.64,
+      "duration": 2.159,
+      "text": "one and two"
+    },
+    {
+      "start": 3961.28,
+      "duration": 3.36,
+      "text": "one and three of our journey we're"
+    },
+    {
+      "start": 3962.799,
+      "duration": 5.04,
+      "text": "changing"
+    },
+    {
+      "start": 3964.64,
+      "duration": 3.199,
+      "text": "t the t coordinate"
+    },
+    {
+      "start": 3969.68,
+      "duration": 4.72,
+      "text": "so all the changes between these two"
+    },
+    {
+      "start": 3971.28,
+      "duration": 6.4,
+      "text": "expressions is where you evaluate them"
+    },
+    {
+      "start": 3974.4,
+      "duration": 5.84,
+      "text": "namely at the midpoint of these two"
+    },
+    {
+      "start": 3977.68,
+      "duration": 2.56,
+      "text": "coordinates"
+    },
+    {
+      "start": 3984.64,
+      "duration": 3.439,
+      "text": "so then what we're going to do is we've"
+    },
+    {
+      "start": 3985.92,
+      "duration": 4.48,
+      "text": "got two parts of the change"
+    },
+    {
+      "start": 3988.079,
+      "duration": 3.76,
+      "text": "in our function along our parallel"
+    },
+    {
+      "start": 3990.4,
+      "duration": 3.36,
+      "text": "transport around the loop"
+    },
+    {
+      "start": 3991.839,
+      "duration": 5.441,
+      "text": "let's combine them and then i'll leave"
+    },
+    {
+      "start": 3993.76,
+      "duration": 4.88,
+      "text": "the other two to as an exercise"
+    },
+    {
+      "start": 3997.28,
+      "duration": 10.559,
+      "text": "it's just going to be an exercise in"
+    },
+    {
+      "start": 3998.64,
+      "duration": 9.199,
+      "text": "changing esses with tees"
+    },
+    {
+      "start": 4007.92,
+      "duration": 3.76,
+      "text": "so i'm just going to add them up"
+    },
+    {
+      "start": 4009.92,
+      "duration": 5.119,
+      "text": "subtract them sorry"
+    },
+    {
+      "start": 4011.68,
+      "duration": 10.159,
+      "text": "or add up the first term and to the"
+    },
+    {
+      "start": 4015.039,
+      "duration": 6.8,
+      "text": "inverse of the second term"
+    },
+    {
+      "start": 4031.839,
+      "duration": 4.0,
+      "text": "and we're going to call this stuff"
+    },
+    {
+      "start": 4038.96,
+      "duration": 3.44,
+      "text": "later i'm going to give it a name right"
+    },
+    {
+      "start": 4040.799,
+      "duration": 3.361,
+      "text": "now we're not and we're just going to"
+    },
+    {
+      "start": 4042.4,
+      "duration": 4.08,
+      "text": "notice one thing about this expression"
+    },
+    {
+      "start": 4044.16,
+      "duration": 18.32,
+      "text": "right as a function of delta s"
+    },
+    {
+      "start": 4046.48,
+      "duration": 17.68,
+      "text": "this vanishes as delta s goes to zero"
+    },
+    {
+      "start": 4062.48,
+      "duration": 3.28,
+      "text": "as it should do right you know if you"
+    },
+    {
+      "start": 4064.16,
+      "duration": 3.04,
+      "text": "parallel transport along the curve and"
+    },
+    {
+      "start": 4065.76,
+      "duration": 3.839,
+      "text": "go back the way you came you better get"
+    },
+    {
+      "start": 4067.2,
+      "duration": 2.399,
+      "text": "zero"
+    },
+    {
+      "start": 4074.64,
+      "duration": 3.199,
+      "text": "and interestingly"
+    },
+    {
+      "start": 4079.76,
+      "duration": 3.839,
+      "text": "if you go through the computation and"
+    },
+    {
+      "start": 4081.119,
+      "duration": 2.48,
+      "text": "work out"
+    },
+    {
+      "start": 4084.079,
+      "duration": 7.76,
+      "text": "d2 plus d4"
+    },
+    {
+      "start": 4092.64,
+      "duration": 4.48,
+      "text": "then you see that it goes to zero as"
+    },
+    {
+      "start": 4094.4,
+      "duration": 4.72,
+      "text": "delta t goes to zero"
+    },
+    {
+      "start": 4097.12,
+      "duration": 3.76,
+      "text": "so actually what we've learned is that"
+    },
+    {
+      "start": 4099.12,
+      "duration": 2.239,
+      "text": "parallel transport around the loop is"
+    },
+    {
+      "start": 4100.88,
+      "duration": 4.959,
+      "text": "path"
+    },
+    {
+      "start": 4101.359,
+      "duration": 4.48,
+      "text": "independent to first order"
+    },
+    {
+      "start": 4141.199,
+      "duration": 6.64,
+      "text": "so parallel transport around a loop is"
+    },
+    {
+      "start": 4143.04,
+      "duration": 4.799,
+      "text": "path independent"
+    },
+    {
+      "start": 4150.159,
+      "duration": 3.6,
+      "text": "to first order i mean it's definitely"
+    },
+    {
+      "start": 4152.08,
+      "duration": 5.119,
+      "text": "path dependent it's just path"
+    },
+    {
+      "start": 4153.759,
+      "duration": 8.08,
+      "text": "independent to first order so the path"
+    },
+    {
+      "start": 4157.199,
+      "duration": 4.64,
+      "text": "of dependence appears in second order"
+    },
+    {
+      "start": 4177.679,
+      "duration": 4.401,
+      "text": "so now our goal is to get the path uh"
+    },
+    {
+      "start": 4180.239,
+      "duration": 4.881,
+      "text": "depend the second order dependence on"
+    },
+    {
+      "start": 4182.08,
+      "duration": 6.8,
+      "text": "parallel transport to second order"
+    },
+    {
+      "start": 4185.12,
+      "duration": 5.28,
+      "text": "by explicitly isolating out the second"
+    },
+    {
+      "start": 4188.88,
+      "duration": 3.76,
+      "text": "order terms"
+    },
+    {
+      "start": 4190.4,
+      "duration": 3.6,
+      "text": "so to get second order dependence"
+    },
+    {
+      "start": 4192.64,
+      "duration": 4.16,
+      "text": "consider the parallel"
+    },
+    {
+      "start": 4194.0,
+      "duration": 2.8,
+      "text": "transport"
+    },
+    {
+      "start": 4199.76,
+      "duration": 4.08,
+      "text": "of our vector va"
+    },
+    {
+      "start": 4204.32,
+      "duration": 3.28,
+      "text": "and of a second vector which you can"
+    },
+    {
+      "start": 4206.96,
+      "duration": 4.56,
+      "text": "define"
+    },
+    {
+      "start": 4207.6,
+      "duration": 3.92,
+      "text": "a covector dual vector"
+    },
+    {
+      "start": 4214.0,
+      "duration": 5.44,
+      "text": "along t equals delta t or along"
+    },
+    {
+      "start": 4221.679,
+      "duration": 2.881,
+      "text": "this is a weird device what we're about"
+    },
+    {
+      "start": 4223.12,
+      "duration": 2.0,
+      "text": "to use but i'll draw a picture to try"
+    },
+    {
+      "start": 4224.56,
+      "duration": 6.159,
+      "text": "and"
+    },
+    {
+      "start": 4225.12,
+      "duration": 8.0,
+      "text": "explain the construction here"
+    },
+    {
+      "start": 4230.719,
+      "duration": 6.401,
+      "text": "so here's our vector v that we've"
+    },
+    {
+      "start": 4233.12,
+      "duration": 4.0,
+      "text": "parallel transported up to the midpoint"
+    },
+    {
+      "start": 4241.52,
+      "duration": 5.12,
+      "text": "and then we're going to parallel"
+    },
+    {
+      "start": 4242.4,
+      "duration": 4.24,
+      "text": "transport along this dotted line here"
+    },
+    {
+      "start": 4257.76,
+      "duration": 7.12,
+      "text": "and this dotted line is"
+    },
+    {
+      "start": 4261.04,
+      "duration": 6.88,
+      "text": "the curve t is delta t over two"
+    },
+    {
+      "start": 4264.88,
+      "duration": 3.04,
+      "text": "not delta t see"
+    },
+    {
+      "start": 4268.0,
+      "duration": 3.52,
+      "text": "here's the point delta t zero delta t"
+    },
+    {
+      "start": 4270.08,
+      "duration": 4.8,
+      "text": "here's the point delta s"
+    },
+    {
+      "start": 4271.52,
+      "duration": 4.32,
+      "text": "delta t up here here's the coordinate"
+    },
+    {
+      "start": 4274.88,
+      "duration": 3.04,
+      "text": "zero zero"
+    },
+    {
+      "start": 4275.84,
+      "duration": 3.44,
+      "text": "so we're parallel transporting va along"
+    },
+    {
+      "start": 4277.92,
+      "duration": 2.72,
+      "text": "this mid curve"
+    },
+    {
+      "start": 4279.28,
+      "duration": 2.64,
+      "text": "so we're not going to parallel transport"
+    },
+    {
+      "start": 4280.64,
+      "duration": 2.32,
+      "text": "it all the way around the loop we're"
+    },
+    {
+      "start": 4281.92,
+      "duration": 4.08,
+      "text": "just gonna"
+    },
+    {
+      "start": 4282.96,
+      "duration": 5.12,
+      "text": "send it up to the up to the mid"
+    },
+    {
+      "start": 4286.0,
+      "duration": 3.44,
+      "text": "curve and we're also going to parallel"
+    },
+    {
+      "start": 4288.08,
+      "duration": 3.84,
+      "text": "transport this other vector"
+    },
+    {
+      "start": 4289.44,
+      "duration": 4.719,
+      "text": "this covac dual vector tb omega a along"
+    },
+    {
+      "start": 4291.92,
+      "duration": 5.12,
+      "text": "the same curve"
+    },
+    {
+      "start": 4294.159,
+      "duration": 7.121,
+      "text": "um why are we doing that well because if"
+    },
+    {
+      "start": 4297.04,
+      "duration": 6.32,
+      "text": "you look here at the difference"
+    },
+    {
+      "start": 4301.28,
+      "duration": 3.919,
+      "text": "delta 1 delta 2 you notice that we're"
+    },
+    {
+      "start": 4303.36,
+      "duration": 4.0,
+      "text": "evaluating things at midpoints right and"
+    },
+    {
+      "start": 4305.199,
+      "duration": 5.121,
+      "text": "what we want to do is we want to compute"
+    },
+    {
+      "start": 4307.36,
+      "duration": 2.96,
+      "text": "the difference between"
+    },
+    {
+      "start": 4310.56,
+      "duration": 3.44,
+      "text": "these two terms that i've highlighted in"
+    },
+    {
+      "start": 4312.239,
+      "duration": 5.92,
+      "text": "yellow va is is"
+    },
+    {
+      "start": 4314.0,
+      "duration": 4.159,
+      "text": "this is of course common here"
+    },
+    {
+      "start": 4319.04,
+      "duration": 3.84,
+      "text": "so you pull it out as a common factor we"
+    },
+    {
+      "start": 4321.44,
+      "duration": 4.0,
+      "text": "want to evaluate the difference"
+    },
+    {
+      "start": 4322.88,
+      "duration": 3.96,
+      "text": "of these two yellow highlighted terms"
+    },
+    {
+      "start": 4325.44,
+      "duration": 3.84,
+      "text": "and"
+    },
+    {
+      "start": 4326.84,
+      "duration": 5.8,
+      "text": "well they're evaluated"
+    },
+    {
+      "start": 4329.28,
+      "duration": 5.36,
+      "text": "at uh different points in the loop"
+    },
+    {
+      "start": 4332.64,
+      "duration": 3.76,
+      "text": "in fact va although va i said it's"
+    },
+    {
+      "start": 4334.64,
+      "duration": 3.92,
+      "text": "common of course it isn't right va here"
+    },
+    {
+      "start": 4336.4,
+      "duration": 5.2,
+      "text": "the second blue one"
+    },
+    {
+      "start": 4338.56,
+      "duration": 4.159,
+      "text": "is evaluated at the other point in the"
+    },
+    {
+      "start": 4341.6,
+      "duration": 4.639,
+      "text": "curve"
+    },
+    {
+      "start": 4342.719,
+      "duration": 3.52,
+      "text": "so but i'm highlighted in green"
+    },
+    {
+      "start": 4348.8,
+      "duration": 3.919,
+      "text": "so we want to get in order to actually"
+    },
+    {
+      "start": 4351.28,
+      "duration": 2.24,
+      "text": "compare these two quantities well we"
+    },
+    {
+      "start": 4352.719,
+      "duration": 3.52,
+      "text": "need to"
+    },
+    {
+      "start": 4353.52,
+      "duration": 4.4,
+      "text": "evaluate them at the same point and"
+    },
+    {
+      "start": 4356.239,
+      "duration": 2.561,
+      "text": "here's a trick to doing that so we"
+    },
+    {
+      "start": 4357.92,
+      "duration": 2.88,
+      "text": "imagine"
+    },
+    {
+      "start": 4358.8,
+      "duration": 3.12,
+      "text": "we're going to parallel transport the"
+    },
+    {
+      "start": 4360.8,
+      "duration": 2.96,
+      "text": "yellow dual vector"
+    },
+    {
+      "start": 4361.92,
+      "duration": 3.44,
+      "text": "yellow highlighted dual vector to the"
+    },
+    {
+      "start": 4363.76,
+      "duration": 6.08,
+      "text": "midpoint of the"
+    },
+    {
+      "start": 4365.36,
+      "duration": 6.08,
+      "text": "the part 3 of our parallel transport"
+    },
+    {
+      "start": 4369.84,
+      "duration": 4.56,
+      "text": "then we'll just mathematically subtract"
+    },
+    {
+      "start": 4371.44,
+      "duration": 2.96,
+      "text": "them at that point there"
+    },
+    {
+      "start": 4377.52,
+      "duration": 8.32,
+      "text": "now we've already determined that to"
+    },
+    {
+      "start": 4379.76,
+      "duration": 6.08,
+      "text": "first order"
+    },
+    {
+      "start": 4387.28,
+      "duration": 7.04,
+      "text": "the vector v a at delta s"
+    },
+    {
+      "start": 4390.64,
+      "duration": 8.16,
+      "text": "delta t over 2 is"
+    },
+    {
+      "start": 4394.32,
+      "duration": 8.16,
+      "text": "equal to v a at"
+    },
+    {
+      "start": 4398.8,
+      "duration": 7.04,
+      "text": "delta oops at zero delta t"
+    },
+    {
+      "start": 4402.48,
+      "duration": 6.96,
+      "text": "over two because parallel transport is"
+    },
+    {
+      "start": 4405.84,
+      "duration": 3.6,
+      "text": "path independent to first order"
+    },
+    {
+      "start": 4411.12,
+      "duration": 8.4,
+      "text": "so the the only quantity that does"
+    },
+    {
+      "start": 4415.6,
+      "duration": 3.92,
+      "text": "change along the red dotted curve"
+    },
+    {
+      "start": 4422.56,
+      "duration": 7.44,
+      "text": "is t t b delta b omega c"
+    },
+    {
+      "start": 4427.44,
+      "duration": 2.56,
+      "text": "omega a"
+    },
+    {
+      "start": 4432.0,
+      "duration": 4.08,
+      "text": "so at delta t over 2 it differs"
+    },
+    {
+      "start": 4439.44,
+      "duration": 6.239,
+      "text": "from the same"
+    },
+    {
+      "start": 4442.56,
+      "duration": 5.92,
+      "text": "joule vector evaluated"
+    },
+    {
+      "start": 4445.679,
+      "duration": 3.361,
+      "text": "at delta t oops did it the wrong way"
+    },
+    {
+      "start": 4448.48,
+      "duration": 7.36,
+      "text": "around here"
+    },
+    {
+      "start": 4449.04,
+      "duration": 6.8,
+      "text": "put the delta s first"
+    },
+    {
+      "start": 4457.92,
+      "duration": 2.88,
+      "text": "all right these two quantities"
+    },
+    {
+      "start": 4459.199,
+      "duration": 3.04,
+      "text": "potentially differ in fact they almost"
+    },
+    {
+      "start": 4460.8,
+      "duration": 5.28,
+      "text": "certainly differ because omega is an"
+    },
+    {
+      "start": 4462.239,
+      "duration": 3.841,
+      "text": "arbitrary dual vector field on the loop"
+    },
+    {
+      "start": 4467.679,
+      "duration": 4.161,
+      "text": "and this quantity differs from yeah"
+    },
+    {
+      "start": 4470.56,
+      "duration": 2.8,
+      "text": "obviously differs that but it's"
+    },
+    {
+      "start": 4471.84,
+      "duration": 2.64,
+      "text": "we can't compare these two quantities"
+    },
+    {
+      "start": 4473.36,
+      "duration": 3.12,
+      "text": "yet there are different places so we"
+    },
+    {
+      "start": 4474.48,
+      "duration": 5.199,
+      "text": "have to parallel transport them"
+    },
+    {
+      "start": 4476.48,
+      "duration": 5.44,
+      "text": "so it it also differs"
+    },
+    {
+      "start": 4479.679,
+      "duration": 4.161,
+      "text": "from this dual vector field parallel"
+    },
+    {
+      "start": 4481.92,
+      "duration": 5.36,
+      "text": "transported to"
+    },
+    {
+      "start": 4483.84,
+      "duration": 6.8,
+      "text": "delta s delta t over two"
+    },
+    {
+      "start": 4487.28,
+      "duration": 3.36,
+      "text": "and how does it differ well"
+    },
+    {
+      "start": 4490.88,
+      "duration": 5.12,
+      "text": "just go back to your defining properties"
+    },
+    {
+      "start": 4494.239,
+      "duration": 3.361,
+      "text": "of parallel transport and work out"
+    },
+    {
+      "start": 4496.0,
+      "duration": 4.159,
+      "text": "that the first order the parallel"
+    },
+    {
+      "start": 4497.6,
+      "duration": 2.559,
+      "text": "transport"
+    },
+    {
+      "start": 4504.32,
+      "duration": 7.52,
+      "text": "of the dual vector is given by the"
+    },
+    {
+      "start": 4508.84,
+      "duration": 3.0,
+      "text": "formula"
+    },
+    {
+      "start": 4511.92,
+      "duration": 4.239,
+      "text": "the first order is given by uh"
+    },
+    {
+      "start": 4513.76,
+      "duration": 4.32,
+      "text": "integrating the the equation of motion"
+    },
+    {
+      "start": 4516.159,
+      "duration": 5.52,
+      "text": "for the parallel transport of a dual"
+    },
+    {
+      "start": 4518.08,
+      "duration": 7.76,
+      "text": "vector you can do it to first order"
+    },
+    {
+      "start": 4521.679,
+      "duration": 4.161,
+      "text": "so i'll just leave that as an exercise"
+    },
+    {
+      "start": 4526.0,
+      "duration": 5.04,
+      "text": "and we're now parallel transporting"
+    },
+    {
+      "start": 4527.76,
+      "duration": 3.28,
+      "text": "along the constant s"
+    },
+    {
+      "start": 4536.84,
+      "duration": 4.52,
+      "text": "coordinate"
+    },
+    {
+      "start": 4538.239,
+      "duration": 3.121,
+      "text": "a concert t sorry"
+    },
+    {
+      "start": 4547.76,
+      "duration": 6.08,
+      "text": "call the star star"
+    },
+    {
+      "start": 4564.84,
+      "duration": 3.879,
+      "text": "substituting"
+    },
+    {
+      "start": 4566.0,
+      "duration": 2.719,
+      "text": "star star"
+    },
+    {
+      "start": 4569.04,
+      "duration": 5.199,
+      "text": "into the expression for delta 1 plus"
+    },
+    {
+      "start": 4571.6,
+      "duration": 2.639,
+      "text": "delta 3"
+    },
+    {
+      "start": 4574.48,
+      "duration": 7.36,
+      "text": "now gives us our desired second order"
+    },
+    {
+      "start": 4578.84,
+      "duration": 3.0,
+      "text": "dependence"
+    },
+    {
+      "start": 4592.84,
+      "duration": 6.44,
+      "text": "and similarly for delta two plus delta"
+    },
+    {
+      "start": 4597.04,
+      "duration": 2.24,
+      "text": "four"
+    },
+    {
+      "start": 4606.8,
+      "duration": 4.56,
+      "text": "now let's put them all together right we"
+    },
+    {
+      "start": 4608.4,
+      "duration": 2.96,
+      "text": "need to understand"
+    },
+    {
+      "start": 4612.48,
+      "duration": 3.199,
+      "text": "what the total change is as we go around"
+    },
+    {
+      "start": 4614.8,
+      "duration": 4.32,
+      "text": "the whole loop"
+    },
+    {
+      "start": 4615.679,
+      "duration": 8.161,
+      "text": "of our quantity va"
+    },
+    {
+      "start": 4619.12,
+      "duration": 8.96,
+      "text": "omega a"
+    },
+    {
+      "start": 4623.84,
+      "duration": 4.24,
+      "text": "and well exercise"
+    },
+    {
+      "start": 4629.76,
+      "duration": 6.64,
+      "text": "it turns out that that"
+    },
+    {
+      "start": 4632.8,
+      "duration": 7.84,
+      "text": "when you add up the change over all"
+    },
+    {
+      "start": 4636.4,
+      "duration": 4.24,
+      "text": "the four legs of the journey"
+    },
+    {
+      "start": 4640.719,
+      "duration": 3.281,
+      "text": "that you end up with the following"
+    },
+    {
+      "start": 4648.84,
+      "duration": 3.0,
+      "text": "expression"
+    },
+    {
+      "start": 4654.0,
+      "duration": 3.52,
+      "text": "i think i've got a bracket too many"
+    },
+    {
+      "start": 4659.679,
+      "duration": 6.161,
+      "text": "no looks right"
+    },
+    {
+      "start": 4666.719,
+      "duration": 4.641,
+      "text": "and now let's rearrange things"
+    },
+    {
+      "start": 4675.199,
+      "duration": 4.241,
+      "text": "and we'll see that we get quite a"
+    },
+    {
+      "start": 4680.0,
+      "duration": 3.04,
+      "text": "familiar expression"
+    },
+    {
+      "start": 4686.159,
+      "duration": 4.241,
+      "text": "namely we get the commutator of these"
+    },
+    {
+      "start": 4687.92,
+      "duration": 5.92,
+      "text": "two derivative operators applied to the"
+    },
+    {
+      "start": 4690.4,
+      "duration": 3.44,
+      "text": "dual vector"
+    },
+    {
+      "start": 4703.04,
+      "duration": 5.199,
+      "text": "now the reason why i could go from the"
+    },
+    {
+      "start": 4704.96,
+      "duration": 3.279,
+      "text": "first line to the second line"
+    },
+    {
+      "start": 4709.04,
+      "duration": 3.36,
+      "text": "but i'll get to that in a sec but i want"
+    },
+    {
+      "start": 4710.48,
+      "duration": 2.48,
+      "text": "to highlight of course that what comes"
+    },
+    {
+      "start": 4712.4,
+      "duration": 3.92,
+      "text": "out"
+    },
+    {
+      "start": 4712.96,
+      "duration": 6.239,
+      "text": "is that the the second order dependence"
+    },
+    {
+      "start": 4716.32,
+      "duration": 3.919,
+      "text": "of the change in parallel transport of"
+    },
+    {
+      "start": 4719.199,
+      "duration": 3.601,
+      "text": "vector v"
+    },
+    {
+      "start": 4720.239,
+      "duration": 5.841,
+      "text": "is dependent it is controlled by the"
+    },
+    {
+      "start": 4722.8,
+      "duration": 3.28,
+      "text": "riemann curvature tensor"
+    },
+    {
+      "start": 4726.64,
+      "duration": 4.72,
+      "text": "so but how did i go from lines one to"
+    },
+    {
+      "start": 4732.84,
+      "duration": 7.48,
+      "text": "two"
+    },
+    {
+      "start": 4734.8,
+      "duration": 5.52,
+      "text": "so here we used the fact"
+    },
+    {
+      "start": 4740.48,
+      "duration": 10.4,
+      "text": "that for coordinate vector fields that"
+    },
+    {
+      "start": 4748.08,
+      "duration": 2.8,
+      "text": "the lead record"
+    },
+    {
+      "start": 4760.84,
+      "duration": 3.0,
+      "text": "vanishes"
+    },
+    {
+      "start": 4774.64,
+      "duration": 4.559,
+      "text": "which in our case was dds ddt"
+    },
+    {
+      "start": 4785.28,
+      "duration": 7.68,
+      "text": "so we've learned that this variation"
+    },
+    {
+      "start": 4794.239,
+      "duration": 4.081,
+      "text": "delta v a omega a"
+    },
+    {
+      "start": 4800.0,
+      "duration": 5.84,
+      "text": "now is a bit where we cancel off this"
+    },
+    {
+      "start": 4801.52,
+      "duration": 4.32,
+      "text": "dual vector field it can hold for all"
+    },
+    {
+      "start": 4809.44,
+      "duration": 4.08,
+      "text": "omega a only"
+    },
+    {
+      "start": 4816.84,
+      "duration": 5.96,
+      "text": "if"
+    },
+    {
+      "start": 4819.199,
+      "duration": 3.841,
+      "text": "to first order or in delta s and d delta"
+    },
+    {
+      "start": 4822.8,
+      "duration": 2.64,
+      "text": "t"
+    },
+    {
+      "start": 4823.04,
+      "duration": 3.36,
+      "text": "separately or more correctly to second"
+    },
+    {
+      "start": 4825.44,
+      "duration": 4.799,
+      "text": "order"
+    },
+    {
+      "start": 4826.4,
+      "duration": 7.6,
+      "text": "in delta s delta delta s"
+    },
+    {
+      "start": 4830.239,
+      "duration": 6.801,
+      "text": "and delta t uh that the"
+    },
+    {
+      "start": 4834.0,
+      "duration": 4.639,
+      "text": "variation the the the path the"
+    },
+    {
+      "start": 4837.04,
+      "duration": 2.24,
+      "text": "difference in the parallel transport of"
+    },
+    {
+      "start": 4838.639,
+      "duration": 3.441,
+      "text": "delta"
+    },
+    {
+      "start": 4839.28,
+      "duration": 3.76,
+      "text": "of va around these two legs or around"
+    },
+    {
+      "start": 4842.08,
+      "duration": 5.76,
+      "text": "the whole loop"
+    },
+    {
+      "start": 4843.04,
+      "duration": 4.8,
+      "text": "obeys this equation here"
+    },
+    {
+      "start": 4848.4,
+      "duration": 3.759,
+      "text": "and this gives us our second"
+    },
+    {
+      "start": 4850.56,
+      "duration": 3.44,
+      "text": "interpretation"
+    },
+    {
+      "start": 4852.159,
+      "duration": 3.361,
+      "text": "of the riemann curvature tensor you know"
+    },
+    {
+      "start": 4854.0,
+      "duration": 2.96,
+      "text": "the first was really as a mathematical"
+    },
+    {
+      "start": 4855.52,
+      "duration": 4.56,
+      "text": "definition the second here"
+    },
+    {
+      "start": 4856.96,
+      "duration": 5.36,
+      "text": "is as the failure"
+    },
+    {
+      "start": 4860.08,
+      "duration": 3.76,
+      "text": "of parallel successive parallel"
+    },
+    {
+      "start": 4862.32,
+      "duration": 4.08,
+      "text": "transformation operations"
+    },
+    {
+      "start": 4863.84,
+      "duration": 2.56,
+      "text": "to commute"
+    },
+    {
+      "start": 4868.08,
+      "duration": 3.68,
+      "text": "so this concludes this lecture on"
+    },
+    {
+      "start": 4870.8,
+      "duration": 2.48,
+      "text": "geodesics"
+    },
+    {
+      "start": 4871.76,
+      "duration": 3.6,
+      "text": "and the riemann curvature tensor in the"
+    },
+    {
+      "start": 4873.28,
+      "duration": 4.56,
+      "text": "next lecture we're going to"
+    },
+    {
+      "start": 4875.36,
+      "duration": 3.68,
+      "text": "continue our discussion of curvature and"
+    },
+    {
+      "start": 4877.84,
+      "duration": 2.96,
+      "text": "establish a whole bunch"
+    },
+    {
+      "start": 4879.04,
+      "duration": 3.52,
+      "text": "of properties of the riemann curvature"
+    },
+    {
+      "start": 4880.8,
+      "duration": 3.359,
+      "text": "tensor we're going to introduce some"
+    },
+    {
+      "start": 4882.56,
+      "duration": 4.639,
+      "text": "derived quantities"
+    },
+    {
+      "start": 4884.159,
+      "duration": 4.721,
+      "text": "and we're going to relate in the most"
+    },
+    {
+      "start": 4887.199,
+      "duration": 3.52,
+      "text": "important consequence"
+    },
+    {
+      "start": 4888.88,
+      "duration": 3.92,
+      "text": "of uh this discussion we're going to"
+    },
+    {
+      "start": 4890.719,
+      "duration": 5.041,
+      "text": "relate the green montgomery tensor"
+    },
+    {
+      "start": 4892.8,
+      "duration": 4.0,
+      "text": "to the divergence of nearby geodesics"
+    },
+    {
+      "start": 4895.76,
+      "duration": 4.8,
+      "text": "but that's it for now"
+    },
+    {
+      "start": 4896.8,
+      "duration": 3.76,
+      "text": "thank you and goodbye"
+    }
+  ]
+}

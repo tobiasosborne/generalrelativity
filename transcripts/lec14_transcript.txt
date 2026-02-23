@@ -1,0 +1,920 @@
+# General Relativity, Lecture 14: solving linearised Einstein's field equations
+# YouTube: https://www.youtube.com/watch?v=aQKrBNEwlBA
+# Auto-generated transcript
+
+[00:00.64] hello and welcome back to introduction
+[00:02.32] to general relativity
+[00:03.68] in the previous lecture we left off
+[00:06.00] discussing
+[00:06.80] linearized gravity that is solutions
+[00:09.44] untransferred equations where we
+[00:11.68] consider the perturbations in the
+[00:13.92] geometry to
+[00:15.28] only to linear order in the perturbation
+[00:19.28] around a flat space-time solution well
+[00:21.44] that's the objective
+[00:23.12] in this lecture and in that previous
+[00:25.44] lecture we ended off
+[00:26.56] discussing diffiomorphisms and
+[00:28.40] isometries and the reason we were
+[00:30.32] looking at
+[00:30.96] this topic was because we wanted to
+[00:32.72] understand the gauge freedom of
+[00:33.92] einstein's general theory of relativity
+[00:35.68] and how we can use it
+[00:36.88] to simplify the linearized equations of
+[00:39.28] motion that arise
+[00:40.72] from linearizing einstein's field
+[00:42.40] equations
+[00:43.76] so in today's lecture we're going to
+[00:45.36] continue our discussion of
+[00:46.92] diviomorphisms and isometries and in
+[00:49.60] particular look at infinitesimal
+[00:51.36] diffumorphisms and isometries and
+[00:53.76] show how they can be exploited to
+[00:55.52] simplify the linearized einstein's field
+[00:57.44] equations
+[00:59.76] before that we just have to spend a
+[01:01.60] little bit more time discussing
+[01:03.20] uh diffumorphisms and the gauge
+[01:05.84] structure of general relativity before
+[01:07.20] we look at infinitesimal diffumorphisms
+[01:10.48] so if we have a diphymorphism
+[01:15.60] phi between two manifolds m and n
+[01:20.08] then as i emphasized in a very early
+[01:22.64] lecture in this course
+[01:25.44] the manifolds m and n have identical
+[01:29.52] manifold structure
+[01:39.04] okay that's just the the in other words
+[01:41.28] diffumorphisms are the morphisms in the
+[01:43.20] category of smooth manifolds
+[01:47.04] and this means that the the topologies
+[01:49.12] you get induced on the manifolds
+[01:51.84] are equivalent and also the
+[01:55.52] the smoothness structures and so on
+[02:00.48] now you have to observe that general
+[02:03.28] relativity
+[02:04.96] describes nature
+[02:11.28] in terms of a manifold right
+[02:21.04] in terms of a manifold m and
+[02:24.08] right there's some additional data it's
+[02:25.76] not just that you have a manifold
+[02:27.20] structure that encodes
+[02:28.40] all of the space time
+[02:31.84] you you have some additional tensor
+[02:34.84] fields
+[02:36.64] in general relativity uh a list of
+[02:39.84] tensor fields i've written t
+[02:41.52] subscript with j in brackets to indicate
+[02:43.60] there's more than one such tensor field
+[02:48.24] and the point is that in general
+[02:49.68] relativity we don't just have the
+[02:50.64] manifold structure of course we have
+[02:52.24] uh a couple of tensor fields that are
+[02:53.76] highly relevant for einstein's field
+[02:55.52] equations the ritchie tensor
+[02:57.20] the richie scala the einstein tensor we
+[02:59.60] also have the stress energy tensor these
+[03:01.12] tenses all play a key
+[03:03.52] role in the destruction in the
+[03:05.76] description of nature
+[03:09.36] so since general relativity describes
+[03:11.60] nature in terms of
+[03:12.64] of a manifold and some tensor fields
+[03:14.88] that write them tj's just a list of
+[03:17.12] sensor fields
+[03:19.76] then if some manifold and the requisite
+[03:23.12] list of appropriate tensors
+[03:25.04] fields and another manifold say n
+[03:28.64] with a push pulled back
+[03:31.92] as appropriate list of tensorfields uh
+[03:35.28] have physical identical properties
+[03:45.36] there's no if there i'll rewrite that
+[03:59.04] so here we are getting into the gauge
+[04:00.64] structure of general relativity so if we
+[04:02.24] have a manifold with some tensorfields
+[04:04.08] on it dj
+[04:04.88] then endodymorphism phi then
+[04:08.40] the argument is that m and its list of
+[04:11.76] tensorfields tj
+[04:13.36] and n the image of the diffumorphism and
+[04:16.24] the appropriately pushed forward
+[04:18.16] uh tensorfields 5 star tj have
+[04:20.96] identically physically identical
+[04:22.64] properties
+[04:23.76] and the reason is
+[04:27.84] because this is because right
+[04:34.96] uh all operational quantities
+[04:43.44] in general relativity
+[04:49.44] are built operational means you can
+[04:51.36] design an experiment to measure them
+[04:53.44] are built from these tensor fields tj
+[04:57.36] in a coordinate free manner
+[05:08.48] and what does that mean well that means
+[05:10.56] that jacobian factors cancel
+[05:18.80] under contraction
+[05:25.68] tensor operations or tensor
+[05:36.84] transformations
+[05:40.16] so in this way like
+[05:43.76] it's a very simple argument ultimately
+[05:46.64] uh
+[05:50.84] diffiomorphisms
+[05:53.44] comprise
+[05:57.28] the gauge freedom of general relativity
+[06:10.80] now that's a fairly general argument but
+[06:12.80] it doesn't actually help us in the
+[06:14.00] discussion we may have now of the
+[06:15.84] linearized einstein
+[06:17.52] field equations and the reason is is
+[06:19.44] that we want a slightly more
+[06:21.52] specific uh form of diffiomorphism that
+[06:24.96] we want to focus on maybe
+[06:25.92] infinitesimally small or
+[06:27.52] near identity diffumorphisms and those
+[06:29.68] are the ones that we'll use to simplify
+[06:30.96] the linearized einstein field equations
+[06:33.12] to talk about infinitesimal
+[06:34.92] diffumorphisms
+[06:42.88] leads us to the topic of the lead
+[06:44.64] derivative and
+[06:46.00] killing vector fields
+[06:59.52] so we're going to introduce some
+[07:00.72] additional mathematical infrastructure
+[07:02.80] and in order to describe quantitatively
+[07:06.32] infinitesimally small
+[07:14.84] diphymorphisms
+[07:17.36] okay we start as before with a manifold
+[07:19.28] m and now
+[07:20.88] we suppose we have a not one
+[07:23.20] diffumorphism
+[07:25.20] but a one parameter group of
+[07:28.84] diffumorphisms
+[07:41.92] and uh we can note that
+[07:47.20] such a flow phi
+[07:52.00] is generated by a vector field
+[07:56.84] v okay that's something that i
+[08:00.48] discussed previously in earlier lectures
+[08:04.80] but now we've got a general group of
+[08:07.72] diffiomorphisms
+[08:10.00] we are perfectly able to apply
+[08:13.68] the action of this group of diffultisms
+[08:16.16] to tensorfields
+[08:18.96] so we can use
+[08:22.64] phi star t right this is the map induced
+[08:26.72] on tensor fields
+[08:32.96] to define well so what we could define a
+[08:36.48] flow intensive field but we can also use
+[08:38.72] phi star of t to define
+[08:40.08] a derivative type operator
+[08:48.72] different or distinct from the
+[08:50.64] covariance derivative that we've been
+[08:51.92] discussing so far
+[08:54.64] and this derivative operator is called
+[08:57.60] the lead derivative
+[09:07.68] on tenses and the the point about
+[09:13.68] this derivative operator is that it's
+[09:15.52] with respect to this vector field v
+[09:17.28] if you don't have the vector field v
+[09:18.48] then you can't make sense of a um
+[09:20.40] the derivative and how is it defined
+[09:22.72] well uh as
+[09:24.00] all good derivatives infinitesimally
+[09:27.84] the way it's defined is you you think of
+[09:31.20] the
+[09:31.60] flow phi star as
+[09:34.64] generating a kind of translation
+[09:39.04] and then that that translation depends
+[09:41.60] on a parameter t
+[09:43.12] so you translate a bit in the reverse
+[09:45.36] direction
+[09:46.16] and then you subtract away the
+[09:47.28] untranslated object
+[09:49.52] so in particular
+[09:53.68] we define the lead derivative of a
+[09:55.44] tensor field a1 through decay
+[09:57.36] b1 through to bl as the difference of
+[10:00.32] two tensors
+[10:02.00] one tensor is located that is the
+[10:04.64] difference of two tensors
+[10:06.72] they both arrive from a tensor field t
+[10:10.88] um but
+[10:14.16] this tensor here in yellow
+[10:19.12] is evaluated
+[10:22.24] at the point phi t
+[10:25.84] of some point p and
+[10:29.60] this one in blue here
+[10:38.48] is evaluated
+[10:43.12] at p so that way the tensor in yellow
+[10:46.88] after being after phi star
+[10:50.24] minus dx on it is at the same point
+[10:53.76] as the tensor and t in blue
+[10:59.52] so you can uh i won't draw too much on
+[11:03.12] the mathematical details of
+[11:06.48] the lead derivative uh you should as a
+[11:09.04] good exercise check that l v
+[11:10.80] t is a tensor field
+[11:18.40] so um and that you got to check that
+[11:21.44] lv obeys the liveness property
+[11:31.12] and of course the that is linear
+[11:38.72] okay all these properties are vital if
+[11:40.88] you want to
+[11:42.16] regard l as a kind of derivative
+[11:43.76] operator
+[11:46.64] so there's a remark we can make at this
+[11:48.40] stage before
+[11:49.84] progressing and discussing more
+[11:51.28] properties of the lead derivative
+[11:53.36] it's defined also for scalar functions
+[11:59.44] by
+[12:00.44] [Music]
+[12:02.56] following formula
+[12:07.60] namely that the lead derivative applied
+[12:10.96] to
+[12:11.28] a scalar function is just the vector v
+[12:14.08] applied to the scalar function at the
+[12:15.52] point p
+[12:19.12] now here's a homework
+[12:24.96] uh argue
+[12:28.96] that the lead derivative v of a vector
+[12:31.92] field
+[12:32.56] component w a is none other than the
+[12:36.24] commutator of v and w the eighth
+[12:38.24] component of the commutator of a
+[12:39.60] v and w so that's a very important
+[12:42.00] homework exercise we're going to build
+[12:43.28] on this when we discuss
+[12:46.08] the action of the lead derivative on
+[12:48.56] more complicated tensor fields
+[12:55.36] so now we're going to describe
+[12:58.40] we're going to derive an alternative
+[12:59.84] formula you know right you know
+[13:01.44] i've got a formula now for the lead
+[13:02.64] derivative right it's this thing with
+[13:03.84] the blue and yellow tenses
+[13:05.60] but we it's not so helpful if you want
+[13:07.76] to talk about
+[13:08.72] the the action of l on composite tensor
+[13:11.12] fields
+[13:12.24] or you want the specific action uh on a
+[13:15.36] specific tensor field in terms of
+[13:16.96] objects you can already compute
+[13:18.80] it's our goal now so now note that for
+[13:21.84] all dual vectors
+[13:23.04] mu in the dual vector space vp star
+[13:27.60] and all vector vectors vp
+[13:32.64] so because of the the action of
+[13:36.08] the lead derivative on scalar functions
+[13:38.40] we have that when you contract a dual
+[13:40.08] vector against the normal vector you get
+[13:41.92] well that's a scalar function right
+[13:43.52] so the lead derivative of that there's a
+[13:45.20] formula for that that's just applying
+[13:48.64] v to this contraction
+[13:53.44] and we may as well give this thing a
+[13:54.80] name star
+[14:00.00] but there's also a second way to compute
+[14:02.56] uh
+[14:05.12] the action of a vector field on a scalar
+[14:07.12] function
+[14:08.40] and that involves the covariance
+[14:09.68] derivative associated to the metric that
+[14:11.44] we have implicitly
+[14:12.56] lying around here um so this is the
+[14:16.08] second formula for the action
+[14:17.84] of a vector on a scalar field is true
+[14:20.00] not just for the one that we have
+[14:21.60] for the metric under um consideration
+[14:24.32] it's actually true for all
+[14:26.48] covariance derivatives
+[14:29.68] which is kind of interesting right um
+[14:33.60] now that's one way of computing the lead
+[14:35.20] derivative
+[14:36.72] of this of the scalar contraction but
+[14:38.96] there is another way right and that's
+[14:40.48] because
+[14:40.88] leibniz property uh allows us
+[14:47.60] to compute the lead derivative
+[14:52.64] by
+[14:56.80] separately applying the lead derivative
+[15:00.32] to the dual vector and to w
+[15:05.20] so i need to name this second equation
+[15:07.12] here that we're going to make use of
+[15:10.72] here we go so the leibniz property
+[15:12.64] allows us to to compute the lead
+[15:14.24] derivative
+[15:14.88] first to the dual vector mu then to the
+[15:17.04] dual vector to the normal vector w
+[15:19.36] so we have that l v of mu a w a
+[15:22.64] is none other than w a
+[15:26.16] and do l of v on mu a first
+[15:30.48] uh plus then do mu of a on l of
+[15:33.68] v on w but remember star star
+[15:36.80] tells us that that's equal to the eighth
+[15:40.16] component of the commutator of
+[15:46.80] v and w
+[15:51.44] so we've combined two different lines of
+[15:53.92] derivation into one
+[15:55.36] and that actually determines the action
+[15:57.04] of the lead derivative on dual vectors
+[16:06.84] explicitly
+[16:11.60] firstly apply the vector field v a v to
+[16:14.72] the contraction of mu a and w a
+[16:30.96] using the leibniz property of the
+[16:32.96] covariant derivative so we've got two
+[16:34.32] kinds of
+[16:36.08] derivative operators here and also
+[16:39.12] note that the commutator of v and w the
+[16:41.44] eighth component
+[16:42.40] also has another expression in terms of
+[16:45.20] covariance derivative operators that we
+[16:48.84] derived
+[17:00.96] so we find
+[17:07.76] noting these two formulae
+[17:12.88] we find that the action of the
+[17:16.80] the derivative on a joule vector mu a
+[17:19.92] is given by v b delta b
+[17:23.44] on mu a plus mu b
+[17:26.56] delta a on vb
+[17:31.68] so we love the explicit formula now for
+[17:33.84] the action of the lead derivative
+[17:35.44] on a dual vector it involves
+[17:38.72] the usual derivative operator delta
+[17:41.84] now you can repeat this argument do an
+[17:43.52] induction um
+[17:45.60] by induction that for general
+[17:50.32] tensorfield t the lead derivative
+[17:54.48] has the following form
+[18:12.56] so i'll leave that as an exercise
+[18:53.52] and this formula is true for all
+[18:55.68] derivative operators delta
+[19:21.20] and now we're actually in a position to
+[19:24.32] derive the gauge freedom of general of
+[19:27.12] linearized general relativity
+[19:29.36] so the gauge freedom of general
+[19:30.64] relativity is that of divimorphisms
+[19:32.88] but that of linearized general
+[19:34.16] relativity will turn out to be well
+[19:35.84] infinite
+[19:37.04] muscle is implementedly close to the
+[19:39.04] identity
+[19:43.20] so let's actually derive that now so if
+[19:45.36] phi lambda
+[19:49.44] is a one parameter group of
+[19:50.84] diffumorphisms
+[20:07.84] then as i argued just before m
+[20:10.88] with the tensorflow of the metric and
+[20:13.68] all the other
+[20:15.12] tensor fields and m
+[20:18.32] with the metric phi lambda star
+[20:21.76] applied to the metric right you know m
+[20:24.40] is the same right we're applying a
+[20:25.92] diffumorphism from the manifold to
+[20:27.52] itself
+[20:30.32] these two pairs represent
+[20:34.16] the same
+[20:37.68] space time
+[20:44.72] so if
+[20:48.48] further
+[20:53.28] we allow the metric
+[21:00.84] g
+[21:04.40] to depend smoothly on some parameter
+[21:11.28] we'll name this parameter also lambda
+[21:24.96] then we can
+[21:28.16] ask what perturbations and this is the
+[21:30.40] key point
+[21:36.24] around the metric
+[21:39.44] uh gab 0 lambda equals 0 which just
+[21:43.36] equals our original metric gab
+[21:46.00] we can ask what kinds of perturbations
+[21:47.84] of a metric
+[21:49.52] uh look like local diffumorphisms
+[21:55.60] so we're going to name these
+[21:56.72] perturbations and call it gamma a b
+[21:59.76] so the perturbations of a general
+[22:02.72] perturbation of a metric
+[22:04.72] we'll call gamma a b and you just get
+[22:07.68] them by differentiating g
+[22:09.76] with respect to lambda and then setting
+[22:11.12] lambda equals zero
+[22:12.96] we're going to ask what perturbations of
+[22:15.68] this form
+[22:17.44] are of the form or are actually
+[22:22.16] just infinitesimal
+[22:26.60] diffumorphisms
+[22:37.28] i.e perturbations
+[22:42.64] of the form gamma a b
+[22:46.48] prime is of the form of d d lambda no
+[22:49.84] longer of g
+[22:50.40] a b lambda not a general perturbation
+[22:54.40] dimension but ones that are
+[22:55.68] infinitesimal results of acting
+[22:59.12] with our one parameter group of
+[23:00.72] diffumorphisms
+[23:02.32] around lambda equals zero
+[23:07.76] so it's an exercise
+[23:10.88] of just writing out the flow
+[23:21.44] we see that
+[23:28.72] exactly gamma prime is exactly a
+[23:32.16] perturbation arising from a morphism
+[23:35.44] when gamma a b
+[23:36.32] prime equals gamma a b minus lv
+[23:39.68] times g a b
+[23:45.60] where v right there's a v mentioned here
+[23:48.64] and the v is is the vector field
+[23:50.88] generating
+[24:02.84] phi
+[24:05.36] oops florify lambda
+[24:18.00] there you go we have now a definitive
+[24:19.36] answer uh for what
+[24:21.52] perturbation generated by infinitesimal
+[24:24.00] different moles looks like and
+[24:25.20] hence these perturbations are precisely
+[24:28.16] the gauge freedom of linearized general
+[24:29.76] relativity we have an answer
+[24:31.68] but there's we want a slightly more
+[24:33.60] convenient formula for this
+[24:35.12] and we can get that by applying
+[24:39.28] this formula that we derived earlier
+[24:41.68] let's call it triple star maybe
+[24:54.32] we can actually get a slightly more
+[24:55.52] explicit formula
+[24:57.09] [Music]
+[24:59.20] for the action of the the derivative of
+[25:01.92] the metric gab
+[25:05.52] and we get v of c delta c
+[25:09.44] g a b plus g c
+[25:12.56] b delta a v c plus
+[25:15.76] of course the action of
+[25:18.96] the lead derivative
+[25:22.00] of the covariance derivative on the
+[25:23.68] vector field itself
+[25:25.52] but if you note here one of these terms
+[25:28.88] will vanish because if we use the metric
+[25:32.96] if we use the derivative operator
+[25:35.04] determined by the metric which we will
+[25:37.12] right in general relativity then the
+[25:40.16] covariant derivative of the metric is
+[25:41.60] zero right it's one of the key
+[25:42.72] properties that defines
+[25:44.96] the covariant derivative so we're only
+[25:47.84] left with two terms
+[25:49.60] and we see that
+[25:52.80] infinitesimal diffumorphism so this very
+[25:56.24] particular form involving the curvature
+[25:57.92] derivative
+[25:58.72] applied to v so now we can actually
+[26:05.12] say what a gauge transformation
+[26:10.00] explicitly of linearized
+[26:16.32] generate relativity looks like it
+[26:19.60] is then a
+[26:22.96] transformation of the form where the
+[26:26.16] gamma a b gets mapped to gamma a b prime
+[26:30.40] which is just equal to gamma a b minus
+[26:32.88] delta a
+[26:33.92] v b minus delta b v a
+[26:42.72] and we can write that slightly more
+[26:44.48] compactly
+[26:47.36] using bracket notation there it's a
+[26:50.16] symmetrized
+[26:50.96] application of the derivative operator
+[26:58.00] so if
+[27:01.52] if this vanishes
+[27:11.60] then we've got a particularly special
+[27:13.20] form of
+[27:14.80] uh infinitesimal gauge transformation
+[27:17.28] namely we have an infinitesimal isometry
+[27:18.96] right we just mean that the metric
+[27:20.24] doesn't change
+[27:45.60] and we have a name for such a thing
+[27:53.60] and that is va is called
+[27:58.32] a killing vector field
+[28:07.04] these will turn up in a handful of
+[28:08.40] contexts in the future
+[28:11.20] and further more this equation which
+[28:13.36] i've actually mentioned before
+[28:18.88] killing's equation
+[28:22.40] is precisely this condition that v
+[28:25.28] generates
+[28:25.92] an infinitesimal isometry
+[28:29.52] now that we've got the precise
+[28:32.72] linearized gauge degrees of freedom of
+[28:35.04] linearized
+[28:37.20] general relativity in hand we're in a
+[28:38.96] position to simplify the linearized
+[28:41.12] einstein equation
+[28:42.24] and substantially simplify it to the
+[28:44.24] point where we can
+[28:45.60] pretty explicitly solve it without too
+[28:48.08] much pain
+[28:53.68] so let's return now to our discussion of
+[28:57.52] the linearized einstein
+[29:02.40] equation and if you recall
+[29:06.24] a linearized einstein equation called i
+[29:09.68] has the form of gab1 so the linearized
+[29:13.36] einstein tensor which is dc dc
+[29:17.60] gamma bar a b plus dc
+[29:21.36] d b gamma a
+[29:25.44] c bar
+[29:30.16] minus a half a to b a b d c
+[29:33.36] d d gamma c d bar and that's all got to
+[29:36.96] equal
+[29:37.84] the stress energy tensor
+[29:43.04] and the aim now i mean this is a pretty
+[29:45.04] complicated i mean it's linear
+[29:46.64] right it's linear in gamma a b bar
+[29:49.92] so what are we complaining about well
+[29:53.36] uh nothing really i mean you could solve
+[29:56.32] linear pdes pretty easily
+[29:57.84] but you don't want to right you don't
+[29:59.12] want to solve a complicated linear pde
+[30:01.12] when you can solve a simpler linear pde
+[30:02.96] so that's just
+[30:04.80] and we can we're in a position where we
+[30:06.64] might be able to do this
+[30:09.28] because we aim we can use this
+[30:11.20] linearized gauge freedom that we have to
+[30:12.72] just re
+[30:13.36] find a new gauge just do a diffumorphism
+[30:15.68] until this equation looks a bit simpler
+[30:25.92] so the aim of the game now is to find a
+[30:28.08] linearized
+[30:29.60] infinitesimal diphymorphism
+[30:36.40] which simplifies one
+[30:42.16] you know obviously there is one right i
+[30:45.52] wouldn't go through all this trouble if
+[30:46.56] there wasn't one
+[30:53.60] so what are we doing we're looking for a
+[30:55.20] vector field
+[30:57.04] which generates an infinitesimal
+[31:01.12] anamorphism let's call this vector field
+[31:03.12] psi a
+[31:05.20] such that what is this vector field got
+[31:07.20] to do well when we do this gauge
+[31:09.04] transformation when we rewrite the
+[31:10.72] metric in terms of the new
+[31:13.20] slightly perturbed but gauge equivalent
+[31:16.56] metric
+[31:17.52] we want that the the thingy that we get
+[31:19.84] out
+[31:21.44] the new metric we know that it's a bit
+[31:24.32] it simplifies equation one
+[31:31.60] okay that'll be pretty pretty great if
+[31:33.12] we could do that
+[31:35.92] and how do we do it well
+[31:40.32] there's a pretty simple condition
+[31:47.76] i mean let's just go back to the
+[31:48.88] equation and sort of guess what it might
+[31:50.40] be
+[31:51.36] a helpful thing to do um you know
+[31:54.24] several places
+[31:55.44] in this equation you see the combination
+[31:57.44] of a
+[31:59.20] derivative operator applied to the
+[32:00.88] metric like here so there's the
+[32:02.32] derivative operator applied to the
+[32:03.84] metric
+[32:04.64] here the derivative operator is applied
+[32:06.24] to the metric again
+[32:07.92] so maybe you could arrange for the first
+[32:09.84] derivative of the metric to vanish
+[32:28.48] and you're going to see in a second how
+[32:29.76] this equation actually helps us achieve
+[32:31.28] this goal
+[32:44.08] so equation two
+[32:53.12] then ensures
+[32:57.04] that and
+[33:08.32] that combination actually vanishes okay
+[33:10.56] that's a
+[33:12.88] little exercise just go through and
+[33:15.36] substitute for gamma bar
+[33:19.60] substitute uh this gauge transformed
+[33:23.68] gamma a b into the expression for gamma
+[33:25.84] by a b and then convince yourself that
+[33:27.76] that's the case
+[33:32.80] so in this now we've chosen a gauge
+[33:36.16] a simpler parametrization of the
+[33:39.36] manifold
+[33:42.40] and many terms in the linearized
+[33:43.92] einstein's equation vanish now
+[33:53.84] and it becomes super simple now so
+[33:55.60] linearized einstein's equation becomes
+[33:57.84] dc dc gamma a b bar equals minus 16
+[34:01.92] pi tab
+[34:05.12] it's almost as simple as it can be
+[34:10.24] this is like a four-dimensional version
+[34:12.08] of poisson's equation
+[34:21.92] and it's kind of interesting to note
+[34:23.60] that the this has uh
+[34:32.84] includes
+[34:34.00] in the vacuum case where tab equals zero
+[34:41.44] this is exactly the field equations for
+[34:44.56] a spin
+[34:45.36] two field
+[35:02.40] it's pretty interesting massless
+[35:05.92] and that's why people talk about uh the
+[35:08.40] field equations of quantum gravity being
+[35:10.24] for a spin to
+[35:12.48] graviton field
+[35:17.60] all right now we've got this linearized
+[35:19.60] einstein equation
+[35:20.64] we've massaged it into a form which is
+[35:22.32] sufficiently simple that we might be
+[35:23.68] able to really go ahead and solve it in
+[35:25.04] some special cases
+[35:26.48] well now let's go ahead and solve it in
+[35:28.48] some special cases
+[35:30.00] so we're going to take a look at one
+[35:31.28] particular limit this is really a vital
+[35:33.12] limit if we're to have any faith
+[35:34.96] in general relativity as being an
+[35:37.12] extension of
+[35:39.52] our known laws of physics applicable in
+[35:42.32] the classical non-relativistic domain
+[35:44.56] namely we want to check out if general
+[35:46.48] relativity is consistent with newtonian
+[35:49.12] gravity when gravity is weak and the
+[35:52.16] relative motion of sources is much
+[35:54.00] smaller than c
+[35:58.16] so this is uh
+[36:01.92] newtonian limit is the limit where
+[36:06.08] one let's say ah
+[36:12.56] gravity is weak we don't want super
+[36:14.40] strong gravitational fields
+[36:15.92] to talk about the newtonian limit
+[36:19.28] uh we want relative motion of the
+[36:21.84] sources
+[36:22.40] being quite small you don't want things
+[36:26.32] zooming by neither speed of light or
+[36:28.96] orbiting each other
+[36:30.16] the orbital velocity that's close to the
+[36:33.76] speed of light
+[36:37.92] and see uh the material stresses
+[36:46.40] have to be pretty small as well
+[36:55.44] you know most of the mass energy density
+[36:57.60] has to be in the form of mass energy
+[36:59.20] density rather than material stress
+[37:03.20] you can't have the material made up of
+[37:04.72] little particles zooming around at the
+[37:06.08] speed near the speed of light
+[37:10.96] okay these assumptions
+[37:20.96] allow us to do some simplifications
+[37:33.68] they not only allow us to
+[37:36.88] infer the existence of a global
+[37:38.88] coordinates in
+[37:40.32] global coordinate system i mean that's
+[37:42.48] in
+[37:43.36] implicit or explicitly stated at the
+[37:45.36] beginning of our discussion of
+[37:46.24] linearized einstein's field equations
+[37:49.92] but
+[37:50.40] the it's they allow us to infer the
+[37:52.40] existence of a global inertial
+[37:56.24] coordinate system
+[38:03.20] of the flat metric such
+[38:06.24] that it's all very well to have a global
+[38:08.72] initial coordinate system
+[38:10.40] but furthermore such that uh
+[38:15.60] the stress energy tensor has essentially
+[38:17.44] just got the
+[38:18.64] time time component
+[38:22.48] so all the other 15 components are
+[38:30.84] vanishing
+[38:41.44] so this tab is the unit
+[38:44.56] tangent vector pointing in the time
+[38:49.28] direction
+[38:54.72] uh so that's an additional assumption
+[39:00.16] that these assumptions may allow us to
+[39:01.76] make this additional simplification of
+[39:03.76] the stress energy tensor
+[39:07.20] and what does it mean well
+[39:14.40] approximation two means
+[39:19.12] that the momentum densities are small
+[39:32.00] and the stresses are small
+[39:40.84] and uh sources are slowly moving
+[39:46.88] well yeah we've already assumed that
+[39:49.92] right
+[39:50.56] since the sort however what's a
+[39:52.40] consequence of that assumption
+[40:02.56] since the sources are slowly moving
+[40:07.44] what we're going to do is we're going to
+[40:08.56] exploit that to look for
+[40:11.28] solutions where the metric basically
+[40:14.88] doesn't change
+[40:26.72] so that's what does that mean that the
+[40:28.40] time derivatives
+[40:30.64] of gamma a b are
+[40:33.84] neglected right so if the sources are
+[40:36.32] sufficiently slowly moving
+[40:38.24] then we just assume that the
+[40:40.08] gravitational field is
+[40:41.52] instantaneously responded to the
+[40:45.20] to the sources and hence the time
+[40:50.84] derivatives uh
+[40:52.40] vanishing
+[40:58.16] so a whole bunch of coordinates
+[41:01.36] uh components sorry
+[41:06.24] of the linearized einstein field
+[41:08.48] equation will vanish
+[41:11.68] so here's the linearized linear field
+[41:13.28] equation in the gauge where everything
+[41:14.64] is nice and simple
+[41:17.20] so gamma bar a b minus 16 pi
+[41:20.56] t a b
+[41:26.00] so in this new coordinate system
+[41:30.16] a whole bunch of components
+[41:33.28] will vanish
+[41:56.08] a whole bunch of components on the right
+[41:57.36] hand side vanish
+[42:03.20] the only time the right hand side where
+[42:04.88] the stress energy tensor is
+[42:06.56] appears is
+[42:10.80] in the zero zero component
+[42:25.20] and in that case we get
+[42:28.48] minus 16 pi rho on the right hand side
+[42:37.52] now this i've drawn this delta squared
+[42:39.36] here now this
+[42:40.56] i guess it's worth flagging this right
+[42:47.76] this has got nothing to do with the
+[42:49.12] covariance derivative
+[42:54.56] this is the usual laplace operator
+[43:01.84] your original three-dimensional laplace
+[43:05.12] operator
+[43:06.56] because the time derivatives are
+[43:07.84] vanished the dc dc
+[43:10.40] here simplifies to the the plus
+[43:14.24] operator right there's no fourth time
+[43:16.24] component so that that's pretty
+[43:17.92] convenient
+[43:20.08] so we're left with solving well a whole
+[43:23.12] bunch of independent poisson
+[43:24.64] equations some with the source one term
+[43:26.72] of the source and 15 without
+[43:32.88] so the solution let's just solve it
+[43:34.56] right we know to solve poisson's
+[43:35.84] equation that's like
+[43:37.76] you should be able to do it you sleep by
+[43:39.04] now
+[43:42.88] so the solution to poisson's equation
+[43:45.04] here
+[43:48.56] and what we're going to call this
+[43:52.84] equation
+[43:54.00] just rewrite it rather than introducing
+[43:56.16] yet another equation label
+[43:57.60] so the solution of this equation well
+[44:00.88] under the assumption right that the
+[44:02.64] metric vanishes the metric perturbation
+[44:04.56] vanishes as we go to infinity
+[44:11.28] well that's pretty easy there's not many
+[44:13.20] solutions that have that property of
+[44:14.40] poisson's equivalent equation
+[44:16.80] namely the metric components themselves
+[44:18.64] have to vanish it's pretty much the only
+[44:20.32] way you can get it to work
+[44:28.24] and now we can use this information
+[44:33.04] and further solve the final
+[44:37.20] poisson equation
+[44:50.64] namely we find that we can express the
+[44:54.40] solution in the following terms
+[45:00.88] so t is this timeline unit vector
+[45:04.08] pointing in the time as
+[45:05.52] is the unit vector pointing in the time
+[45:07.36] direction
+[45:08.72] and we've introduced this phi what's phi
+[45:10.80] well phi is just
+[45:12.32] well a solution to the poisson equation
+[45:15.92] so we sort of
+[45:34.96] fine okay so we've got this
+[45:41.12] solution now to the full linearized
+[45:44.64] einstein equations
+[45:47.52] so we're done right so this is
+[45:51.28] phi here is just the usual gravitational
+[45:52.88] potential of newton's theory
+[45:56.16] well let's see are we done i mean like
+[45:58.08] okay that's very good we've we've solved
+[46:02.80] einstein's uh linearized einstein
+[46:05.28] equations
+[46:06.88] in this particular limit and we've found
+[46:08.48] something that looks suspiciously like
+[46:09.84] newtonian theory but we haven't actually
+[46:11.36] deduced that it's
+[46:12.40] newtonian reduced to the newtonian limit
+[46:15.44] to do that we need to understand
+[46:18.88] the motion of test particles
+[46:24.40] you know how do test particles move in
+[46:26.72] this this particular geometry
+[46:31.84] well according to the the fundamental
+[46:34.48] assumption of general relativity we have
+[46:36.00] to solve the geodesic equation to get
+[46:37.68] that their motion
+[46:40.08] the motion of test particles
+[46:43.84] and the geodesic equation well that's
+[46:46.32] you know
+[46:47.12] an equation we've talked about several
+[46:48.96] times now in this lecture course
+[46:51.12] in this particular context we can write
+[46:53.36] it out in terms of
+[46:54.64] crystal symbols
+[47:00.16] as follows
+[47:07.52] so that's the geodesic equation and now
+[47:10.08] that we've got the metric we can work
+[47:11.44] out gamma
+[47:12.24] and we can then thereby write out this
+[47:14.24] differential equation and solve it and
+[47:15.76] find the motion of test bodies
+[47:22.64] and this is with respect to global
+[47:24.00] inertial coordinates
+[47:34.64] so but we don't have to just tediously
+[47:36.72] do all
+[47:39.44] hundreds of calculations here we can use
+[47:41.44] a lot of simplifications to do this
+[47:43.04] calculation quite quickly
+[47:44.88] and the first assumption we're going to
+[47:46.16] make to simplify our lives is
+[47:48.00] that of assuming that the test body
+[47:49.84] moves slowly
+[47:53.12] with respect to the speed of light
+[47:56.48] so that uh the derivative or the
+[47:59.12] velocity of our test particle
+[48:01.68] is really one zero zero zero right
+[48:04.56] that's the simplest assumption we can
+[48:06.00] make about our test body
+[48:08.56] that it's moving basically not moving at
+[48:11.68] all
+[48:13.28] and that the the coordinate time
+[48:17.04] is equal to the proper time
+[48:22.08] or is approximately the same as the
+[48:23.60] proper time
+[48:27.84] and when we make that assumption we see
+[48:29.28] that loads of equations here vanish
+[48:31.36] right we don't have to hardly any of the
+[48:33.20] components here are going to matter
+[48:35.36] for the calculation of the acceleration
+[48:39.04] of our test particle
+[48:42.96] so the geodesic equation simplifies
+[48:46.84] beautifully
+[48:53.20] and we only have to deal with these four
+[48:54.80] components of the
+[48:56.64] crystal symbols
+[49:01.04] and you can work out those components
+[49:05.76] in terms of gamma
+[49:11.92] these four components here are just
+[49:14.08] given by a minus a half d
+[49:16.32] d x mu gamma naught naught
+[49:19.92] um but that simplifies to d phi d x mu
+[49:25.36] for the three components that are really
+[49:27.12] important to us
+[49:30.96] so you know time derivatives are
+[49:32.88] neglected here
+[49:46.72] and so the motion we've now simplified
+[49:49.52] things
+[49:49.92] sufficiently to be able to express the
+[49:53.44] motion of the test particle
+[49:58.64] in terms of the gravitational potential
+[50:02.08] or in terms of a quantity that we can
+[50:03.68] now interpret as a gravitational
+[50:05.12] potential
+[50:05.92] it's minus grad phi
+[50:13.28] and this a vector is none other than the
+[50:15.28] derivative of the position
+[50:18.88] twice with respect to t
+[50:31.20] so the a the acceleration of the
+[50:32.80] particle is defined with respect to the
+[50:34.24] global
+[50:34.80] inertial coordinate system so we've
+[50:37.68] managed to obtain
+[50:38.80] exactly the acceleration of a test
+[50:41.52] particle with respect to the
+[50:42.64] gravitational field
+[50:45.60] of a heavenly body in the newtonian
+[50:48.56] limit
+[50:50.24] however it's worth stressing that the
+[50:51.60] interpretation of the solution and
+[50:53.04] general relativity
+[50:54.72] is is vastly different than in newtonian
+[50:57.68] theory
+[50:59.28] so you know imagine we have a heavenly
+[51:01.60] body like the sun
+[51:02.96] well in general relativity it curves
+[51:05.20] space time by the mass energy density
+[51:08.40] the earth which is in our case the test
+[51:10.88] body
+[51:12.08] is in free fall and it moves on the
+[51:14.48] geodesics of the curve space time
+[51:17.36] metric given by the sun which is
+[51:20.96] gab which sold
+[51:24.08] einstein's field equations and because
+[51:26.72] space-time is now curved
+[51:28.48] the uh the the geodesic
+[51:31.76] motion of the test body actually closes
+[51:34.96] and forms an orbit and the final note is
+[51:38.88] that the background inertial observers
+[51:40.80] which
+[51:41.28] define the global inertial coordinate
+[51:42.96] system um
+[51:44.48] they're the ones in general relativity
+[51:46.32] which are undergoing acceleration that's
+[51:48.16] in stark contrast to the newtonian
+[51:50.96] special relativity type picture that
+[51:54.08] one has had previously okay but that's
+[51:56.88] it for today for this lecture today
+[51:58.88] thank you very much and good bye

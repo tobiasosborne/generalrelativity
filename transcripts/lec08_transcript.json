@@ -1,0 +1,5947 @@
+{
+  "title": "General Relativity, Lecture 8: covariant derivatives and parallel transport",
+  "video_id": "xrtxUHkJRk0",
+  "url": "https://www.youtube.com/watch?v=xrtxUHkJRk0",
+  "transcript": [
+    {
+      "start": 0.399,
+      "duration": 3.201,
+      "text": "hello and welcome back to introduction"
+    },
+    {
+      "start": 2.0,
+      "duration": 4.56,
+      "text": "to general relativity"
+    },
+    {
+      "start": 3.6,
+      "duration": 5.039,
+      "text": "in the previous lecture we discussed"
+    },
+    {
+      "start": 6.56,
+      "duration": 3.52,
+      "text": "parallel transport from a slightly"
+    },
+    {
+      "start": 8.639,
+      "duration": 3.521,
+      "text": "heuristic perspective"
+    },
+    {
+      "start": 10.08,
+      "duration": 3.84,
+      "text": "and i argued that there should be a"
+    },
+    {
+      "start": 12.16,
+      "duration": 3.92,
+      "text": "correspondence between parallel"
+    },
+    {
+      "start": 13.92,
+      "duration": 3.199,
+      "text": "transport operations and derivative type"
+    },
+    {
+      "start": 16.08,
+      "duration": 3.279,
+      "text": "operators"
+    },
+    {
+      "start": 17.119,
+      "duration": 3.441,
+      "text": "the goal for today's lecture is to take"
+    },
+    {
+      "start": 19.359,
+      "duration": 3.441,
+      "text": "these arguments"
+    },
+    {
+      "start": 20.56,
+      "duration": 3.76,
+      "text": "and these ideas and build an abstract"
+    },
+    {
+      "start": 22.8,
+      "duration": 4.239,
+      "text": "and intrinsic notion"
+    },
+    {
+      "start": 24.32,
+      "duration": 6.0,
+      "text": "of a derivative type operator"
+    },
+    {
+      "start": 27.039,
+      "duration": 6.481,
+      "text": "corresponding to a parallel transporter"
+    },
+    {
+      "start": 30.32,
+      "duration": 4.96,
+      "text": "an infinitesimal parallel transporter"
+    },
+    {
+      "start": 33.52,
+      "duration": 2.96,
+      "text": "these derivative type operators will be"
+    },
+    {
+      "start": 35.28,
+      "duration": 3.119,
+      "text": "giving them a name in this lecture"
+    },
+    {
+      "start": 36.48,
+      "duration": 5.12,
+      "text": "they'll be called covariant derivative"
+    },
+    {
+      "start": 38.399,
+      "duration": 5.361,
+      "text": "operators and our strategy in this"
+    },
+    {
+      "start": 41.6,
+      "duration": 3.76,
+      "text": "lecture is to abstractly an engine"
+    },
+    {
+      "start": 43.76,
+      "duration": 2.959,
+      "text": "intrinsically characterize those"
+    },
+    {
+      "start": 45.36,
+      "duration": 3.76,
+      "text": "properties that we would like a"
+    },
+    {
+      "start": 46.719,
+      "duration": 4.32,
+      "text": "covariant derivative operator to have"
+    },
+    {
+      "start": 49.12,
+      "duration": 3.36,
+      "text": "and then we're also going to call these"
+    },
+    {
+      "start": 51.039,
+      "duration": 4.081,
+      "text": "things affine connections"
+    },
+    {
+      "start": 52.48,
+      "duration": 4.399,
+      "text": "and then we are going to explore what"
+    },
+    {
+      "start": 55.12,
+      "duration": 2.48,
+      "text": "freedom we have in these derivative"
+    },
+    {
+      "start": 56.879,
+      "duration": 4.401,
+      "text": "operators"
+    },
+    {
+      "start": 57.6,
+      "duration": 6.639,
+      "text": "after we've listed a bunch of uh"
+    },
+    {
+      "start": 61.28,
+      "duration": 4.8,
+      "text": "abstract uh properties that we would"
+    },
+    {
+      "start": 64.239,
+      "duration": 2.401,
+      "text": "demand that any reasonable covarian"
+    },
+    {
+      "start": 66.08,
+      "duration": 3.28,
+      "text": "derivative"
+    },
+    {
+      "start": 66.64,
+      "duration": 6.479,
+      "text": "operator should have so from now on"
+    },
+    {
+      "start": 69.36,
+      "duration": 6.24,
+      "text": "we're gonna donate"
+    },
+    {
+      "start": 73.119,
+      "duration": 5.281,
+      "text": "denote a derivative operator with like a"
+    },
+    {
+      "start": 75.6,
+      "duration": 2.8,
+      "text": "nabla symbol"
+    },
+    {
+      "start": 79.68,
+      "duration": 6.479,
+      "text": "so now"
+    },
+    {
+      "start": 82.88,
+      "duration": 7.04,
+      "text": "object of study today is a so-called"
+    },
+    {
+      "start": 86.159,
+      "duration": 3.761,
+      "text": "covariant derivative operator"
+    },
+    {
+      "start": 92.96,
+      "duration": 3.6,
+      "text": "denoted with this nabla symbol and we"
+    },
+    {
+      "start": 95.92,
+      "duration": 4.879,
+      "text": "also"
+    },
+    {
+      "start": 96.56,
+      "duration": 6.96,
+      "text": "uh we'll probably call these affine"
+    },
+    {
+      "start": 100.799,
+      "duration": 2.721,
+      "text": "connections"
+    },
+    {
+      "start": 103.68,
+      "duration": 4.0,
+      "text": "so that's our goal today to characterize"
+    },
+    {
+      "start": 108.88,
+      "duration": 8.08,
+      "text": "so this is just the notation"
+    },
+    {
+      "start": 115.04,
+      "duration": 4.16,
+      "text": "to characterize these things abstractly"
+    },
+    {
+      "start": 116.96,
+      "duration": 5.199,
+      "text": "and intrinsically"
+    },
+    {
+      "start": 119.2,
+      "duration": 4.4,
+      "text": "now uh some further notation i'll"
+    },
+    {
+      "start": 122.159,
+      "duration": 2.721,
+      "text": "probably use it"
+    },
+    {
+      "start": 123.6,
+      "duration": 3.119,
+      "text": "here and there you may as well get used"
+    },
+    {
+      "start": 124.88,
+      "duration": 5.92,
+      "text": "to it so get let"
+    },
+    {
+      "start": 126.719,
+      "duration": 4.081,
+      "text": "m be a manifold"
+    },
+    {
+      "start": 132.64,
+      "duration": 10.319,
+      "text": "and then we are going to denote"
+    },
+    {
+      "start": 137.599,
+      "duration": 8.481,
+      "text": "by x m"
+    },
+    {
+      "start": 142.959,
+      "duration": 7.36,
+      "text": "the space"
+    },
+    {
+      "start": 146.08,
+      "duration": 4.239,
+      "text": "of smooth vector fields"
+    },
+    {
+      "start": 153.76,
+      "duration": 4.08,
+      "text": "on m"
+    },
+    {
+      "start": 158.0,
+      "duration": 3.12,
+      "text": "okay with that notation with this"
+    },
+    {
+      "start": 160.0,
+      "duration": 3.84,
+      "text": "notation in hand"
+    },
+    {
+      "start": 161.12,
+      "duration": 4.24,
+      "text": "i'm now going to tell you what a uh"
+    },
+    {
+      "start": 163.84,
+      "duration": 2.32,
+      "text": "affine connection or a covering"
+    },
+    {
+      "start": 165.36,
+      "duration": 6.48,
+      "text": "derivative"
+    },
+    {
+      "start": 166.16,
+      "duration": 5.68,
+      "text": "should do what do we demand from it"
+    },
+    {
+      "start": 173.2,
+      "duration": 5.84,
+      "text": "here it is we get the main definition"
+    },
+    {
+      "start": 174.8,
+      "duration": 4.24,
+      "text": "now so an affine connection"
+    },
+    {
+      "start": 182.0,
+      "duration": 4.959,
+      "text": "delta well first we"
+    },
+    {
+      "start": 185.12,
+      "duration": 3.68,
+      "text": "discussing a mathematical operator so we"
+    },
+    {
+      "start": 186.959,
+      "duration": 5.601,
+      "text": "should say what it acts on and what it"
+    },
+    {
+      "start": 188.8,
+      "duration": 8.159,
+      "text": "produces is a"
+    },
+    {
+      "start": 192.56,
+      "duration": 6.8,
+      "text": "map delta going from"
+    },
+    {
+      "start": 196.959,
+      "duration": 3.28,
+      "text": "smooth vector fields cross smooth vector"
+    },
+    {
+      "start": 199.36,
+      "duration": 3.28,
+      "text": "fields so it takes"
+    },
+    {
+      "start": 200.239,
+      "duration": 3.121,
+      "text": "two smooth vector field entries and"
+    },
+    {
+      "start": 202.64,
+      "duration": 4.48,
+      "text": "produces"
+    },
+    {
+      "start": 203.36,
+      "duration": 6.239,
+      "text": "one smooth vector field uh"
+    },
+    {
+      "start": 207.12,
+      "duration": 2.479,
+      "text": "output"
+    },
+    {
+      "start": 210.84,
+      "duration": 7.8,
+      "text": "and but what we will do"
+    },
+    {
+      "start": 214.879,
+      "duration": 6.241,
+      "text": "is we will immediately"
+    },
+    {
+      "start": 218.64,
+      "duration": 2.48,
+      "text": "extend"
+    },
+    {
+      "start": 221.76,
+      "duration": 6.08,
+      "text": "domain of definition"
+    },
+    {
+      "start": 229.76,
+      "duration": 3.44,
+      "text": "because it turns out that the axioms i'm"
+    },
+    {
+      "start": 231.68,
+      "duration": 6.72,
+      "text": "going to list will just"
+    },
+    {
+      "start": 233.2,
+      "duration": 5.2,
+      "text": "be easiest to phrase in a wider setting"
+    },
+    {
+      "start": 239.68,
+      "duration": 5.839,
+      "text": "namely to the setting where delta"
+    },
+    {
+      "start": 242.959,
+      "duration": 4.0,
+      "text": "takes as an argument one smooth vector"
+    },
+    {
+      "start": 245.519,
+      "duration": 4.241,
+      "text": "field"
+    },
+    {
+      "start": 246.959,
+      "duration": 5.761,
+      "text": "but as its second argument it just takes"
+    },
+    {
+      "start": 249.76,
+      "duration": 5.839,
+      "text": "an arbitrary tensor field of type kl"
+    },
+    {
+      "start": 252.72,
+      "duration": 5.28,
+      "text": "and produces an arbitrary tensor of type"
+    },
+    {
+      "start": 255.599,
+      "duration": 2.401,
+      "text": "kl"
+    },
+    {
+      "start": 258.56,
+      "duration": 3.919,
+      "text": "so basically everything i write in the"
+    },
+    {
+      "start": 260.4,
+      "duration": 5.519,
+      "text": "following list of abstract"
+    },
+    {
+      "start": 262.479,
+      "duration": 5.521,
+      "text": "requirements of our tensor about"
+    },
+    {
+      "start": 265.919,
+      "duration": 3.921,
+      "text": "covariance derivative or f1 connection"
+    },
+    {
+      "start": 268.0,
+      "duration": 2.4,
+      "text": "can immediately be extended to tensor"
+    },
+    {
+      "start": 269.84,
+      "duration": 1.6,
+      "text": "fields"
+    },
+    {
+      "start": 270.4,
+      "duration": 3.76,
+      "text": "where the second argument is"
+    },
+    {
+      "start": 271.44,
+      "duration": 2.72,
+      "text": "tensorfields"
+    },
+    {
+      "start": 274.56,
+      "duration": 3.52,
+      "text": "all right so what are some requirements"
+    },
+    {
+      "start": 276.479,
+      "duration": 4.481,
+      "text": "that we demand of our"
+    },
+    {
+      "start": 278.08,
+      "duration": 3.44,
+      "text": "abstract covarian derivative operator"
+    },
+    {
+      "start": 280.96,
+      "duration": 2.88,
+      "text": "well"
+    },
+    {
+      "start": 281.52,
+      "duration": 3.04,
+      "text": "there's a couple of really very simple"
+    },
+    {
+      "start": 283.84,
+      "duration": 3.52,
+      "text": "uh"
+    },
+    {
+      "start": 284.56,
+      "duration": 4.32,
+      "text": "zeroth requirements that aren't listed"
+    },
+    {
+      "start": 287.36,
+      "duration": 3.839,
+      "text": "in wald's textbook but"
+    },
+    {
+      "start": 288.88,
+      "duration": 4.08,
+      "text": "uh are required if you want to make"
+    },
+    {
+      "start": 291.199,
+      "duration": 5.121,
+      "text": "sense of this thing"
+    },
+    {
+      "start": 292.96,
+      "duration": 7.84,
+      "text": "as a linear map so sup and they"
+    },
+    {
+      "start": 296.32,
+      "duration": 7.76,
+      "text": "these requirements are as follows uh so"
+    },
+    {
+      "start": 300.8,
+      "duration": 7.2,
+      "text": "let x y be"
+    },
+    {
+      "start": 304.08,
+      "duration": 7.119,
+      "text": "uh be vector fields"
+    },
+    {
+      "start": 308.0,
+      "duration": 5.12,
+      "text": "and z just the tensorfield"
+    },
+    {
+      "start": 311.199,
+      "duration": 4.0,
+      "text": "so it could itself be a vector field"
+    },
+    {
+      "start": 313.12,
+      "duration": 6.4,
+      "text": "right"
+    },
+    {
+      "start": 315.199,
+      "duration": 4.321,
+      "text": "then um we demand"
+    },
+    {
+      "start": 322.84,
+      "duration": 2.919,
+      "text": "that"
+    },
+    {
+      "start": 324.16,
+      "duration": 2.72,
+      "text": "this covarian derivative operator you've"
+    },
+    {
+      "start": 325.759,
+      "duration": 2.0,
+      "text": "got to think of a converting derivative"
+    },
+    {
+      "start": 326.88,
+      "duration": 2.0,
+      "text": "it's kind of like a directional"
+    },
+    {
+      "start": 327.759,
+      "duration": 3.361,
+      "text": "derivative operator"
+    },
+    {
+      "start": 328.88,
+      "duration": 4.24,
+      "text": "if you take a directional derivative in"
+    },
+    {
+      "start": 331.12,
+      "duration": 4.0,
+      "text": "directions x plus y of z"
+    },
+    {
+      "start": 333.12,
+      "duration": 3.919,
+      "text": "then that's just going to be it's got to"
+    },
+    {
+      "start": 335.12,
+      "duration": 5.76,
+      "text": "be the same as doing it with respect to"
+    },
+    {
+      "start": 337.039,
+      "duration": 5.281,
+      "text": "x on z y on z"
+    },
+    {
+      "start": 340.88,
+      "duration": 3.68,
+      "text": "and then there's a second zeroth"
+    },
+    {
+      "start": 342.32,
+      "duration": 5.52,
+      "text": "requirement"
+    },
+    {
+      "start": 344.56,
+      "duration": 5.68,
+      "text": "namely uh for all f for all smooth"
+    },
+    {
+      "start": 347.84,
+      "duration": 2.4,
+      "text": "functions"
+    },
+    {
+      "start": 350.84,
+      "duration": 4.68,
+      "text": "f"
+    },
+    {
+      "start": 352.24,
+      "duration": 3.28,
+      "text": "uh we are going to"
+    },
+    {
+      "start": 356.8,
+      "duration": 4.32,
+      "text": "also demand that delta of f times x"
+    },
+    {
+      "start": 359.52,
+      "duration": 4.88,
+      "text": "which is also a smooth vector field"
+    },
+    {
+      "start": 361.12,
+      "duration": 6.639,
+      "text": "on y is"
+    },
+    {
+      "start": 364.4,
+      "duration": 6.72,
+      "text": "f delta x on y"
+    },
+    {
+      "start": 367.759,
+      "duration": 6.641,
+      "text": "so x here is is a smooth vector field"
+    },
+    {
+      "start": 371.12,
+      "duration": 5.28,
+      "text": "and y is a tensor field so we really do"
+    },
+    {
+      "start": 374.4,
+      "duration": 4.48,
+      "text": "need these zeros and zero prime"
+    },
+    {
+      "start": 376.4,
+      "duration": 4.239,
+      "text": "conditions because we want to deploy"
+    },
+    {
+      "start": 378.88,
+      "duration": 3.759,
+      "text": "abstract index notation as soon as"
+    },
+    {
+      "start": 380.639,
+      "duration": 4.0,
+      "text": "possible to talk about this thing"
+    },
+    {
+      "start": 382.639,
+      "duration": 3.361,
+      "text": "or the way it acts on things and for"
+    },
+    {
+      "start": 384.639,
+      "duration": 1.921,
+      "text": "that we're actually going to implicitly"
+    },
+    {
+      "start": 386.0,
+      "duration": 3.039,
+      "text": "need these"
+    },
+    {
+      "start": 386.56,
+      "duration": 3.52,
+      "text": "these linearity in the first argument"
+    },
+    {
+      "start": 389.039,
+      "duration": 4.641,
+      "text": "type"
+    },
+    {
+      "start": 390.08,
+      "duration": 5.76,
+      "text": "properties so let's now come to"
+    },
+    {
+      "start": 393.68,
+      "duration": 2.16,
+      "text": "the"
+    },
+    {
+      "start": 397.6,
+      "duration": 7.039,
+      "text": "the the first major requirement"
+    },
+    {
+      "start": 401.12,
+      "duration": 6.96,
+      "text": "namely linearity so delta x"
+    },
+    {
+      "start": 404.639,
+      "duration": 6.641,
+      "text": "of a plus b it better be the same"
+    },
+    {
+      "start": 408.08,
+      "duration": 5.6,
+      "text": "as delta x of a plus delta x of"
+    },
+    {
+      "start": 411.28,
+      "duration": 4.319,
+      "text": "b that any decent derivative operator is"
+    },
+    {
+      "start": 413.68,
+      "duration": 5.359,
+      "text": "linear in this sense"
+    },
+    {
+      "start": 415.599,
+      "duration": 7.521,
+      "text": "and and in this case uh a"
+    },
+    {
+      "start": 419.039,
+      "duration": 5.361,
+      "text": "and b are tenses and x is a vector"
+    },
+    {
+      "start": 423.12,
+      "duration": 3.6,
+      "text": "let's move that down and write that"
+    },
+    {
+      "start": 424.4,
+      "duration": 4.639,
+      "text": "clearly"
+    },
+    {
+      "start": 426.72,
+      "duration": 2.319,
+      "text": "here"
+    },
+    {
+      "start": 433.919,
+      "duration": 4.56,
+      "text": "we demand that now because of zero and"
+    },
+    {
+      "start": 436.639,
+      "duration": 2.96,
+      "text": "zero prime we're able to express this"
+    },
+    {
+      "start": 438.479,
+      "duration": 4.481,
+      "text": "requirement in"
+    },
+    {
+      "start": 439.599,
+      "duration": 3.361,
+      "text": "abstract index notation"
+    },
+    {
+      "start": 443.28,
+      "duration": 4.72,
+      "text": "so we can actually write this out as"
+    },
+    {
+      "start": 446.24,
+      "duration": 3.44,
+      "text": "follows"
+    },
+    {
+      "start": 448.0,
+      "duration": 4.8,
+      "text": "[Music]"
+    },
+    {
+      "start": 449.68,
+      "duration": 6.48,
+      "text": "namely by"
+    },
+    {
+      "start": 452.8,
+      "duration": 8.16,
+      "text": "noting that the"
+    },
+    {
+      "start": 456.16,
+      "duration": 8.479,
+      "text": "abstract that delta x"
+    },
+    {
+      "start": 460.96,
+      "duration": 9.679,
+      "text": "is think of delta x as a thing"
+    },
+    {
+      "start": 464.639,
+      "duration": 6.0,
+      "text": "that eats tensor and produces a tensor"
+    },
+    {
+      "start": 472.56,
+      "duration": 8.4,
+      "text": "so itself delta x should be a tensor"
+    },
+    {
+      "start": 478.08,
+      "duration": 2.88,
+      "text": "of a different type"
+    },
+    {
+      "start": 485.12,
+      "duration": 3.84,
+      "text": "and we're going to"
+    },
+    {
+      "start": 489.28,
+      "duration": 5.84,
+      "text": "express this in abstract index notation"
+    },
+    {
+      "start": 491.599,
+      "duration": 3.521,
+      "text": "as follows we're going to introduce"
+    },
+    {
+      "start": 495.199,
+      "duration": 3.84,
+      "text": "the following notation to to denote the"
+    },
+    {
+      "start": 498.319,
+      "duration": 2.241,
+      "text": "covariant"
+    },
+    {
+      "start": 499.039,
+      "duration": 3.121,
+      "text": "derivative operator with respect to"
+    },
+    {
+      "start": 500.56,
+      "duration": 2.479,
+      "text": "abstract index notation so whenever you"
+    },
+    {
+      "start": 502.16,
+      "duration": 4.0,
+      "text": "see"
+    },
+    {
+      "start": 503.039,
+      "duration": 4.481,
+      "text": "x a contracted with delta a you me you"
+    },
+    {
+      "start": 506.16,
+      "duration": 4.8,
+      "text": "know that that means that"
+    },
+    {
+      "start": 507.52,
+      "duration": 5.759,
+      "text": "delta we're talking about delta x"
+    },
+    {
+      "start": 510.96,
+      "duration": 3.759,
+      "text": "and so this uh with respect to this"
+    },
+    {
+      "start": 513.279,
+      "duration": 2.961,
+      "text": "abstract index notation we can write"
+    },
+    {
+      "start": 514.719,
+      "duration": 3.601,
+      "text": "this linearity condition as follows"
+    },
+    {
+      "start": 516.24,
+      "duration": 5.2,
+      "text": "right we can write it as"
+    },
+    {
+      "start": 518.32,
+      "duration": 7.36,
+      "text": "uh delta c of a"
+    },
+    {
+      "start": 521.44,
+      "duration": 9.68,
+      "text": "a1 through to ak b1 through to bl"
+    },
+    {
+      "start": 525.68,
+      "duration": 10.159,
+      "text": "plus ba1 through to ak b1 through to bl"
+    },
+    {
+      "start": 531.12,
+      "duration": 4.719,
+      "text": "is equal"
+    },
+    {
+      "start": 539.2,
+      "duration": 11.52,
+      "text": "to the linear combinations"
+    },
+    {
+      "start": 548.0,
+      "duration": 4.959,
+      "text": "okay so that's the linearity property of"
+    },
+    {
+      "start": 550.72,
+      "duration": 4.08,
+      "text": "uh"
+    },
+    {
+      "start": 552.959,
+      "duration": 3.601,
+      "text": "the covariant derivative operator"
+    },
+    {
+      "start": 554.8,
+      "duration": 2.8,
+      "text": "expressed in abstract index notation you"
+    },
+    {
+      "start": 556.56,
+      "duration": 3.52,
+      "text": "can see that these two things are"
+    },
+    {
+      "start": 557.6,
+      "duration": 6.08,
+      "text": "equivalent according to this"
+    },
+    {
+      "start": 560.08,
+      "duration": 4.16,
+      "text": "this notation whereby delta x defines"
+    },
+    {
+      "start": 563.68,
+      "duration": 3.12,
+      "text": "this thing"
+    },
+    {
+      "start": 564.24,
+      "duration": 2.56,
+      "text": "delta a"
+    },
+    {
+      "start": 567.519,
+      "duration": 4.561,
+      "text": "two the second thing you want any decent"
+    },
+    {
+      "start": 570.24,
+      "duration": 3.2,
+      "text": "derivative operator to satisfy is the"
+    },
+    {
+      "start": 572.08,
+      "duration": 5.84,
+      "text": "leibniz property"
+    },
+    {
+      "start": 573.44,
+      "duration": 7.92,
+      "text": "leibniz rule so"
+    },
+    {
+      "start": 577.92,
+      "duration": 5.039,
+      "text": "for all a and b oops now they're in"
+    },
+    {
+      "start": 581.36,
+      "duration": 4.8,
+      "text": "different places"
+    },
+    {
+      "start": 582.959,
+      "duration": 6.32,
+      "text": "tensor k l so all t k"
+    },
+    {
+      "start": 586.16,
+      "duration": 7.28,
+      "text": "a tensor fields of type k l and all b"
+    },
+    {
+      "start": 589.279,
+      "duration": 7.761,
+      "text": "tensor fields of type k prime l prime"
+    },
+    {
+      "start": 593.44,
+      "duration": 7.44,
+      "text": "we want that delta x applied to a"
+    },
+    {
+      "start": 597.04,
+      "duration": 8.799,
+      "text": "outer product b is the same as delta x"
+    },
+    {
+      "start": 600.88,
+      "duration": 4.959,
+      "text": "applied to a outer product b"
+    },
+    {
+      "start": 606.64,
+      "duration": 5.36,
+      "text": "plus a tensor delta x"
+    },
+    {
+      "start": 609.76,
+      "duration": 2.24,
+      "text": "b"
+    },
+    {
+      "start": 612.959,
+      "duration": 5.12,
+      "text": "so actually i'll just highlight these"
+    },
+    {
+      "start": 615.76,
+      "duration": 5.12,
+      "text": "various requirements as we go just so"
+    },
+    {
+      "start": 618.079,
+      "duration": 6.641,
+      "text": "you can see them in the notes later"
+    },
+    {
+      "start": 620.88,
+      "duration": 3.84,
+      "text": "a bit better in the notes than later"
+    },
+    {
+      "start": 627.68,
+      "duration": 5.76,
+      "text": "here's the first two the first"
+    },
+    {
+      "start": 630.88,
+      "duration": 5.28,
+      "text": "zeroth requirements establish the"
+    },
+    {
+      "start": 633.44,
+      "duration": 4.72,
+      "text": "linearity in the first argument"
+    },
+    {
+      "start": 636.16,
+      "duration": 4.239,
+      "text": "the first requirement establishes"
+    },
+    {
+      "start": 638.16,
+      "duration": 9.679,
+      "text": "linearity"
+    },
+    {
+      "start": 640.399,
+      "duration": 11.361,
+      "text": "in the second argument"
+    },
+    {
+      "start": 647.839,
+      "duration": 5.201,
+      "text": "and the second criteria here that we"
+    },
+    {
+      "start": 651.76,
+      "duration": 4.0,
+      "text": "demand of a good"
+    },
+    {
+      "start": 653.04,
+      "duration": 7.44,
+      "text": "decent covariant derivative operator is"
+    },
+    {
+      "start": 655.76,
+      "duration": 6.319,
+      "text": "that it obeys a leibniz property"
+    },
+    {
+      "start": 660.48,
+      "duration": 3.52,
+      "text": "and we can also write that in abstract"
+    },
+    {
+      "start": 662.079,
+      "duration": 5.76,
+      "text": "index notation"
+    },
+    {
+      "start": 664.0,
+      "duration": 5.68,
+      "text": "or represent this in abstract index"
+    },
+    {
+      "start": 667.839,
+      "duration": 6.481,
+      "text": "notation as follows"
+    },
+    {
+      "start": 669.68,
+      "duration": 8.56,
+      "text": "so delta c a a 1 through to a k"
+    },
+    {
+      "start": 674.32,
+      "duration": 5.36,
+      "text": "b 1 through the b l outer product"
+    },
+    {
+      "start": 678.24,
+      "duration": 3.279,
+      "text": "right which is just represented by"
+    },
+    {
+      "start": 679.68,
+      "duration": 8.719,
+      "text": "concatenation"
+    },
+    {
+      "start": 681.519,
+      "duration": 8.56,
+      "text": "in abstract index notation"
+    },
+    {
+      "start": 688.399,
+      "duration": 3.361,
+      "text": "that's equal to doing the derivative"
+    },
+    {
+      "start": 690.079,
+      "duration": 4.561,
+      "text": "operator on the first argument and"
+    },
+    {
+      "start": 691.76,
+      "duration": 2.88,
+      "text": "concatenating"
+    },
+    {
+      "start": 696.959,
+      "duration": 7.681,
+      "text": "and with the second tensor field"
+    },
+    {
+      "start": 702.24,
+      "duration": 4.0,
+      "text": "plus doing uh concatenating the first"
+    },
+    {
+      "start": 704.64,
+      "duration": 5.12,
+      "text": "tensor field"
+    },
+    {
+      "start": 706.24,
+      "duration": 6.719,
+      "text": "and concatenating it with"
+    },
+    {
+      "start": 709.76,
+      "duration": 4.24,
+      "text": "the second oh i wrote c here that's"
+    },
+    {
+      "start": 712.959,
+      "duration": 4.161,
+      "text": "probably which"
+    },
+    {
+      "start": 714.0,
+      "duration": 17.44,
+      "text": "poor choice"
+    },
+    {
+      "start": 717.12,
+      "duration": 16.08,
+      "text": "delta e"
+    },
+    {
+      "start": 731.44,
+      "duration": 3.92,
+      "text": "okay so that's the leibniz rule in"
+    },
+    {
+      "start": 733.2,
+      "duration": 4.0,
+      "text": "abstract index notation"
+    },
+    {
+      "start": 735.36,
+      "duration": 3.76,
+      "text": "there's another condition that we had"
+    },
+    {
+      "start": 737.2,
+      "duration": 4.079,
+      "text": "better demand you almost wouldn't notice"
+    },
+    {
+      "start": 739.12,
+      "duration": 2.159,
+      "text": "it"
+    },
+    {
+      "start": 742.32,
+      "duration": 3.759,
+      "text": "but you have to demand that it is a"
+    },
+    {
+      "start": 743.839,
+      "duration": 5.921,
+      "text": "condition commutativity"
+    },
+    {
+      "start": 746.079,
+      "duration": 3.681,
+      "text": "with contraction"
+    },
+    {
+      "start": 753.92,
+      "duration": 4.0,
+      "text": "so if you covarian derivative something"
+    },
+    {
+      "start": 756.399,
+      "duration": 2.961,
+      "text": "and then contract versus contract and"
+    },
+    {
+      "start": 757.92,
+      "duration": 4.0,
+      "text": "then convert derivative it better be the"
+    },
+    {
+      "start": 759.36,
+      "duration": 2.56,
+      "text": "same thing"
+    },
+    {
+      "start": 763.92,
+      "duration": 5.12,
+      "text": "so in abstract sorry in non-abstract"
+    },
+    {
+      "start": 767.04,
+      "duration": 4.96,
+      "text": "index notation so if i contract"
+    },
+    {
+      "start": 769.04,
+      "duration": 3.52,
+      "text": "the jth and the j prime entries of a"
+    },
+    {
+      "start": 772.0,
+      "duration": 5.44,
+      "text": "tensor"
+    },
+    {
+      "start": 772.56,
+      "duration": 8.399,
+      "text": "field a i better get the same as if i"
+    },
+    {
+      "start": 777.44,
+      "duration": 6.16,
+      "text": "uh contracted"
+    },
+    {
+      "start": 780.959,
+      "duration": 4.081,
+      "text": "those entries of the tensor field after"
+    },
+    {
+      "start": 783.6,
+      "duration": 3.039,
+      "text": "the covariance derivative but because"
+    },
+    {
+      "start": 785.04,
+      "duration": 5.52,
+      "text": "we've introduced a new"
+    },
+    {
+      "start": 786.639,
+      "duration": 3.921,
+      "text": "entry i'm going to write it like so"
+    },
+    {
+      "start": 794.959,
+      "duration": 3.841,
+      "text": "okay that's commutativity with"
+    },
+    {
+      "start": 798.839,
+      "duration": 3.0,
+      "text": "contraction"
+    },
+    {
+      "start": 802.48,
+      "duration": 5.12,
+      "text": "semi-obvious if you've got linearity in"
+    },
+    {
+      "start": 804.639,
+      "duration": 2.961,
+      "text": "the second argument"
+    },
+    {
+      "start": 808.639,
+      "duration": 3.361,
+      "text": "already and we can write that out in"
+    },
+    {
+      "start": 810.8,
+      "duration": 4.64,
+      "text": "abstract internet"
+    },
+    {
+      "start": 812.0,
+      "duration": 5.839,
+      "text": "abstract in index notation what's how"
+    },
+    {
+      "start": 815.44,
+      "duration": 5.759,
+      "text": "how do we represent that in the ain"
+    },
+    {
+      "start": 817.839,
+      "duration": 3.36,
+      "text": "well we're going to use"
+    },
+    {
+      "start": 824.959,
+      "duration": 4.88,
+      "text": "we'll represent it so"
+    },
+    {
+      "start": 844.16,
+      "duration": 4.4,
+      "text": "okay now the fourth condition that we"
+    },
+    {
+      "start": 848.0,
+      "duration": 3.76,
+      "text": "want"
+    },
+    {
+      "start": 848.56,
+      "duration": 5.04,
+      "text": "uh just tells us that if we"
+    },
+    {
+      "start": 851.76,
+      "duration": 3.36,
+      "text": "apply our derivative our covariance"
+    },
+    {
+      "start": 853.6,
+      "duration": 3.599,
+      "text": "derivative to something where there is a"
+    },
+    {
+      "start": 855.12,
+      "duration": 5.44,
+      "text": "unique notion of derivative namely"
+    },
+    {
+      "start": 857.199,
+      "duration": 5.681,
+      "text": "um on scalar fields and smooth vector"
+    },
+    {
+      "start": 860.56,
+      "duration": 3.92,
+      "text": "and smooth scalar functions then it"
+    },
+    {
+      "start": 862.88,
+      "duration": 3.519,
+      "text": "better do the same thing"
+    },
+    {
+      "start": 864.48,
+      "duration": 4.88,
+      "text": "you know we haven't invented reinvented"
+    },
+    {
+      "start": 866.399,
+      "duration": 6.481,
+      "text": "the wheel so reduction"
+    },
+    {
+      "start": 869.36,
+      "duration": 3.52,
+      "text": "to vector fields"
+    },
+    {
+      "start": 872.959,
+      "duration": 4.721,
+      "text": "on scalar functions we know that"
+    },
+    {
+      "start": 876.56,
+      "duration": 2.8,
+      "text": "directional derivatives are in"
+    },
+    {
+      "start": 877.68,
+      "duration": 3.36,
+      "text": "one-to-one correspondence with"
+    },
+    {
+      "start": 879.36,
+      "duration": 3.919,
+      "text": "vector fields when applied to scalar"
+    },
+    {
+      "start": 881.04,
+      "duration": 5.12,
+      "text": "functions so our delta better be"
+    },
+    {
+      "start": 883.279,
+      "duration": 4.641,
+      "text": "doing that or better be consistent with"
+    },
+    {
+      "start": 886.16,
+      "duration": 3.6,
+      "text": "that"
+    },
+    {
+      "start": 887.92,
+      "duration": 3.52,
+      "text": "so if f is a smooth function on the"
+    },
+    {
+      "start": 889.76,
+      "duration": 4.24,
+      "text": "manifold n"
+    },
+    {
+      "start": 891.44,
+      "duration": 3.759,
+      "text": "then it better be the case that if i do"
+    },
+    {
+      "start": 894.0,
+      "duration": 3.6,
+      "text": "the covariance derivative"
+    },
+    {
+      "start": 895.199,
+      "duration": 3.041,
+      "text": "in the direction of the vector field x"
+    },
+    {
+      "start": 897.6,
+      "duration": 2.08,
+      "text": "on f"
+    },
+    {
+      "start": 898.24,
+      "duration": 3.2,
+      "text": "that's really just the same as applying"
+    },
+    {
+      "start": 899.68,
+      "duration": 2.959,
+      "text": "the vector field to the scalar function"
+    },
+    {
+      "start": 901.44,
+      "duration": 4.639,
+      "text": "so"
+    },
+    {
+      "start": 902.639,
+      "duration": 6.88,
+      "text": "okay this note this operator is"
+    },
+    {
+      "start": 906.079,
+      "duration": 5.041,
+      "text": "exactly does the same thing when"
+    },
+    {
+      "start": 909.519,
+      "duration": 4.32,
+      "text": "restricted to"
+    },
+    {
+      "start": 911.12,
+      "duration": 2.719,
+      "text": "the functions"
+    },
+    {
+      "start": 914.48,
+      "duration": 6.4,
+      "text": "and in abstract index notation we"
+    },
+    {
+      "start": 917.839,
+      "duration": 3.041,
+      "text": "denote that as"
+    },
+    {
+      "start": 924.839,
+      "duration": 4.12,
+      "text": "follows"
+    },
+    {
+      "start": 926.16,
+      "duration": 3.919,
+      "text": "finally the fifth condition is not"
+    },
+    {
+      "start": 928.959,
+      "duration": 4.0,
+      "text": "necessary but"
+    },
+    {
+      "start": 930.079,
+      "duration": 3.841,
+      "text": "we do assume it in many parts of general"
+    },
+    {
+      "start": 932.959,
+      "duration": 4.56,
+      "text": "relativity"
+    },
+    {
+      "start": 933.92,
+      "duration": 3.599,
+      "text": "we demand that the"
+    },
+    {
+      "start": 938.56,
+      "duration": 3.76,
+      "text": "derivative covariance derivative"
+    },
+    {
+      "start": 940.24,
+      "duration": 3.44,
+      "text": "operator is so-called torsion free which"
+    },
+    {
+      "start": 942.32,
+      "duration": 4.56,
+      "text": "means that for all"
+    },
+    {
+      "start": 943.68,
+      "duration": 4.64,
+      "text": "smooth functions f in m"
+    },
+    {
+      "start": 946.88,
+      "duration": 4.639,
+      "text": "wait i'll do it the other way around"
+    },
+    {
+      "start": 948.32,
+      "duration": 3.199,
+      "text": "first which which"
+    },
+    {
+      "start": 951.6,
+      "duration": 6.32,
+      "text": "says that says the following object"
+    },
+    {
+      "start": 954.959,
+      "duration": 2.961,
+      "text": "which is a tensor"
+    },
+    {
+      "start": 959.6,
+      "duration": 2.56,
+      "text": "is zero"
+    },
+    {
+      "start": 966.079,
+      "duration": 5.2,
+      "text": "so this condition is not necessary"
+    },
+    {
+      "start": 969.44,
+      "duration": 5.12,
+      "text": "but is very convenient for many parts of"
+    },
+    {
+      "start": 971.279,
+      "duration": 3.281,
+      "text": "general relativity to assume"
+    },
+    {
+      "start": 975.759,
+      "duration": 3.281,
+      "text": "so if we take the covariant derivative"
+    },
+    {
+      "start": 978.079,
+      "duration": 3.12,
+      "text": "in the direction x"
+    },
+    {
+      "start": 979.04,
+      "duration": 3.12,
+      "text": "of a vector field y and subtract from"
+    },
+    {
+      "start": 981.199,
+      "duration": 4.241,
+      "text": "the covariance derivative"
+    },
+    {
+      "start": 982.16,
+      "duration": 7.039,
+      "text": "of x in the direction y"
+    },
+    {
+      "start": 985.44,
+      "duration": 5.519,
+      "text": "and then subtract from that um"
+    },
+    {
+      "start": 989.199,
+      "duration": 4.241,
+      "text": "the commutator of these two things then"
+    },
+    {
+      "start": 990.959,
+      "duration": 4.56,
+      "text": "we should get zero this is a bit sort of"
+    },
+    {
+      "start": 993.44,
+      "duration": 4.399,
+      "text": "opaque the interpretation of this but in"
+    },
+    {
+      "start": 995.519,
+      "duration": 2.32,
+      "text": "abstract"
+    },
+    {
+      "start": 998.079,
+      "duration": 3.841,
+      "text": "index notation you can show that this"
+    },
+    {
+      "start": 1000.24,
+      "duration": 2.32,
+      "text": "condition is equivalent to the following"
+    },
+    {
+      "start": 1001.92,
+      "duration": 3.24,
+      "text": "which is"
+    },
+    {
+      "start": 1002.56,
+      "duration": 4.48,
+      "text": "somehow much has a"
+    },
+    {
+      "start": 1005.16,
+      "duration": 6.599,
+      "text": "[Music]"
+    },
+    {
+      "start": 1007.04,
+      "duration": 6.88,
+      "text": "much more intuitive meaning"
+    },
+    {
+      "start": 1011.759,
+      "duration": 3.52,
+      "text": "namely that for all smooth scalar"
+    },
+    {
+      "start": 1013.92,
+      "duration": 4.4,
+      "text": "functions on the manifold"
+    },
+    {
+      "start": 1015.279,
+      "duration": 4.24,
+      "text": "m if uh you"
+    },
+    {
+      "start": 1018.32,
+      "duration": 3.04,
+      "text": "take the covariance derivative in"
+    },
+    {
+      "start": 1019.519,
+      "duration": 3.44,
+      "text": "direction a and then b that should be"
+    },
+    {
+      "start": 1021.36,
+      "duration": 2.24,
+      "text": "the same as doing it in direction b then"
+    },
+    {
+      "start": 1022.959,
+      "duration": 2.161,
+      "text": "a"
+    },
+    {
+      "start": 1023.6,
+      "duration": 3.599,
+      "text": "on a scalar function smooth scalar"
+    },
+    {
+      "start": 1025.12,
+      "duration": 7.36,
+      "text": "function f so it's much more"
+    },
+    {
+      "start": 1027.199,
+      "duration": 5.281,
+      "text": "easy to understand criterion"
+    },
+    {
+      "start": 1035.199,
+      "duration": 3.76,
+      "text": "so these are the five five plus two"
+    },
+    {
+      "start": 1037.36,
+      "duration": 5.36,
+      "text": "conditions that you might demand"
+    },
+    {
+      "start": 1038.959,
+      "duration": 7.201,
+      "text": "from a covariant derivative operator"
+    },
+    {
+      "start": 1042.72,
+      "duration": 5.92,
+      "text": "are they all independent uh there's"
+    },
+    {
+      "start": 1046.16,
+      "duration": 4.72,
+      "text": "some redundancy in these these axioms"
+    },
+    {
+      "start": 1048.64,
+      "duration": 4.8,
+      "text": "but that's okay i mean you just"
+    },
+    {
+      "start": 1050.88,
+      "duration": 3.2,
+      "text": "we're not out for the most economical"
+    },
+    {
+      "start": 1053.44,
+      "duration": 1.84,
+      "text": "description"
+    },
+    {
+      "start": 1054.08,
+      "duration": 2.56,
+      "text": "of the requirements of a covering"
+    },
+    {
+      "start": 1055.28,
+      "duration": 3.36,
+      "text": "derivative we just want to have a"
+    },
+    {
+      "start": 1056.64,
+      "duration": 5.84,
+      "text": "laundry list of all the properties"
+    },
+    {
+      "start": 1058.64,
+      "duration": 5.44,
+      "text": "that are required that we would we would"
+    },
+    {
+      "start": 1062.48,
+      "duration": 2.96,
+      "text": "require we don't care if there's some"
+    },
+    {
+      "start": 1064.08,
+      "duration": 3.28,
+      "text": "interdependencies as long as they're all"
+    },
+    {
+      "start": 1065.44,
+      "duration": 5.92,
+      "text": "consistent"
+    },
+    {
+      "start": 1067.36,
+      "duration": 4.0,
+      "text": "now there's some simple consequences"
+    },
+    {
+      "start": 1072.88,
+      "duration": 3.12,
+      "text": "of these conditions"
+    },
+    {
+      "start": 1077.28,
+      "duration": 4.0,
+      "text": "that we can immediately deduce so for"
+    },
+    {
+      "start": 1080.24,
+      "duration": 4.799,
+      "text": "example"
+    },
+    {
+      "start": 1081.28,
+      "duration": 8.72,
+      "text": "if you if you"
+    },
+    {
+      "start": 1085.039,
+      "duration": 8.88,
+      "text": "have two vector fields x and y"
+    },
+    {
+      "start": 1090.0,
+      "duration": 5.84,
+      "text": "and a scalar function f"
+    },
+    {
+      "start": 1093.919,
+      "duration": 3.281,
+      "text": "then if you take the covariance"
+    },
+    {
+      "start": 1095.84,
+      "duration": 3.68,
+      "text": "derivative"
+    },
+    {
+      "start": 1097.2,
+      "duration": 4.0,
+      "text": "in the direction x of the scalar"
+    },
+    {
+      "start": 1099.52,
+      "duration": 3.2,
+      "text": "function times by y"
+    },
+    {
+      "start": 1101.2,
+      "duration": 4.24,
+      "text": "then we can apply leibniz and the"
+    },
+    {
+      "start": 1102.72,
+      "duration": 6.56,
+      "text": "reduction to vector fields on scalars to"
+    },
+    {
+      "start": 1105.44,
+      "duration": 6.08,
+      "text": "learn immediately that that"
+    },
+    {
+      "start": 1109.28,
+      "duration": 3.519,
+      "text": "object is also a vector field of the and"
+    },
+    {
+      "start": 1111.52,
+      "duration": 2.72,
+      "text": "can be expressed in the following"
+    },
+    {
+      "start": 1112.799,
+      "duration": 3.281,
+      "text": "fashion"
+    },
+    {
+      "start": 1114.24,
+      "duration": 3.52,
+      "text": "so that's that's an interesting simple"
+    },
+    {
+      "start": 1116.08,
+      "duration": 2.719,
+      "text": "consequence just of leibniz and the"
+    },
+    {
+      "start": 1117.76,
+      "duration": 2.799,
+      "text": "reduction to"
+    },
+    {
+      "start": 1118.799,
+      "duration": 4.0,
+      "text": "vector fields on scalar functions and"
+    },
+    {
+      "start": 1120.559,
+      "duration": 3.761,
+      "text": "the second one is is also"
+    },
+    {
+      "start": 1122.799,
+      "duration": 3.12,
+      "text": "is kind of an interesting way to compute"
+    },
+    {
+      "start": 1124.32,
+      "duration": 3.76,
+      "text": "the commutator of two smooth vector"
+    },
+    {
+      "start": 1125.919,
+      "duration": 4.721,
+      "text": "fields so if you have"
+    },
+    {
+      "start": 1128.08,
+      "duration": 4.56,
+      "text": "two smooth vector fields v in w you can"
+    },
+    {
+      "start": 1130.64,
+      "duration": 4.399,
+      "text": "naturally form the commutator as we"
+    },
+    {
+      "start": 1132.64,
+      "duration": 4.72,
+      "text": "described quite a few lectures ago now"
+    },
+    {
+      "start": 1135.039,
+      "duration": 3.201,
+      "text": "as how do you do it well you just do the"
+    },
+    {
+      "start": 1137.36,
+      "duration": 4.16,
+      "text": "vector field once"
+    },
+    {
+      "start": 1138.24,
+      "duration": 5.36,
+      "text": "then twice and then uh"
+    },
+    {
+      "start": 1141.52,
+      "duration": 5.039,
+      "text": "do it in the opposite order it should be"
+    },
+    {
+      "start": 1143.6,
+      "duration": 5.6,
+      "text": "a minus sign almost certainly"
+    },
+    {
+      "start": 1146.559,
+      "duration": 3.521,
+      "text": "and uh and well there's something rather"
+    },
+    {
+      "start": 1149.2,
+      "duration": 4.0,
+      "text": "interesting right"
+    },
+    {
+      "start": 1150.08,
+      "duration": 5.76,
+      "text": "namely that we can w"
+    },
+    {
+      "start": 1153.2,
+      "duration": 4.08,
+      "text": "of f is a vector field applied to a"
+    },
+    {
+      "start": 1155.84,
+      "duration": 3.6,
+      "text": "scalar function but we could also"
+    },
+    {
+      "start": 1157.28,
+      "duration": 5.2,
+      "text": "interpret that as the covariance"
+    },
+    {
+      "start": 1159.44,
+      "duration": 6.4,
+      "text": "derivative applied"
+    },
+    {
+      "start": 1162.48,
+      "duration": 7.04,
+      "text": "uh to f uh"
+    },
+    {
+      "start": 1165.84,
+      "duration": 3.68,
+      "text": "uh uh contracted with w"
+    },
+    {
+      "start": 1170.0,
+      "duration": 3.919,
+      "text": "that's just that comes immediately from"
+    },
+    {
+      "start": 1175.039,
+      "duration": 6.88,
+      "text": "condition four"
+    },
+    {
+      "start": 1178.4,
+      "duration": 3.519,
+      "text": "right condition 4 says that"
+    },
+    {
+      "start": 1182.08,
+      "duration": 7.599,
+      "text": "and then we can also subsequently apply"
+    },
+    {
+      "start": 1186.72,
+      "duration": 4.72,
+      "text": "the covariance derivative in the other"
+    },
+    {
+      "start": 1189.679,
+      "duration": 5.281,
+      "text": "directions"
+    },
+    {
+      "start": 1191.44,
+      "duration": 6.8,
+      "text": "now why is that interesting well"
+    },
+    {
+      "start": 1194.96,
+      "duration": 5.68,
+      "text": "we can uh now"
+    },
+    {
+      "start": 1198.24,
+      "duration": 3.36,
+      "text": "apply leibniz property so we've got the"
+    },
+    {
+      "start": 1200.64,
+      "duration": 2.24,
+      "text": "the sec"
+    },
+    {
+      "start": 1201.6,
+      "duration": 3.12,
+      "text": "the covariance derivative here with"
+    },
+    {
+      "start": 1202.88,
+      "duration": 3.84,
+      "text": "respect to v and then w we can apply"
+    },
+    {
+      "start": 1204.72,
+      "duration": 5.36,
+      "text": "leibniz onto these"
+    },
+    {
+      "start": 1206.72,
+      "duration": 5.04,
+      "text": "these objects here inside the bracket"
+    },
+    {
+      "start": 1210.08,
+      "duration": 3.2,
+      "text": "and we apply it to the first argument"
+    },
+    {
+      "start": 1211.76,
+      "duration": 2.64,
+      "text": "which is a vector field and we apply it"
+    },
+    {
+      "start": 1213.28,
+      "duration": 1.68,
+      "text": "to the second argument which is the"
+    },
+    {
+      "start": 1214.4,
+      "duration": 3.279,
+      "text": "vector"
+    },
+    {
+      "start": 1214.96,
+      "duration": 3.199,
+      "text": "code vector field using just the leibniz"
+    },
+    {
+      "start": 1217.679,
+      "duration": 2.24,
+      "text": "property"
+    },
+    {
+      "start": 1218.159,
+      "duration": 3.52,
+      "text": "and we obtain the following next line so"
+    },
+    {
+      "start": 1219.919,
+      "duration": 3.041,
+      "text": "we get"
+    },
+    {
+      "start": 1221.679,
+      "duration": 3.681,
+      "text": "we do the apply the covariance"
+    },
+    {
+      "start": 1222.96,
+      "duration": 5.52,
+      "text": "derivative just to the vector field w"
+    },
+    {
+      "start": 1225.36,
+      "duration": 6.24,
+      "text": "and leave the co-vector field delta"
+    },
+    {
+      "start": 1228.48,
+      "duration": 6.72,
+      "text": "b f alone and then we apply it"
+    },
+    {
+      "start": 1231.6,
+      "duration": 4.88,
+      "text": "to the second part of the bracket here"
+    },
+    {
+      "start": 1235.2,
+      "duration": 5.599,
+      "text": "so"
+    },
+    {
+      "start": 1236.48,
+      "duration": 4.319,
+      "text": "to obtain delta a v b"
+    },
+    {
+      "start": 1240.96,
+      "duration": 8.88,
+      "text": "delta b f and then we do the same again"
+    },
+    {
+      "start": 1251.28,
+      "duration": 4.32,
+      "text": "so to be sorry uh the second term here"
+    },
+    {
+      "start": 1254.08,
+      "duration": 4.719,
+      "text": "that i've just written out"
+    },
+    {
+      "start": 1255.6,
+      "duration": 7.199,
+      "text": "is the line is is using leibniz on this"
+    },
+    {
+      "start": 1258.799,
+      "duration": 5.201,
+      "text": "second term in the commutator"
+    },
+    {
+      "start": 1262.799,
+      "duration": 3.041,
+      "text": "and then we've got two more terms that"
+    },
+    {
+      "start": 1264.0,
+      "duration": 5.28,
+      "text": "we have to add in so we've got v a"
+    },
+    {
+      "start": 1265.84,
+      "duration": 6.48,
+      "text": "w b delta a delta b f"
+    },
+    {
+      "start": 1269.28,
+      "duration": 6.879,
+      "text": "that's leibniz on the second term"
+    },
+    {
+      "start": 1272.32,
+      "duration": 5.599,
+      "text": "and v a w b delta b a delta a f"
+    },
+    {
+      "start": 1276.159,
+      "duration": 4.4,
+      "text": "but according to torsion freeness these"
+    },
+    {
+      "start": 1277.919,
+      "duration": 5.521,
+      "text": "two things here are zero right"
+    },
+    {
+      "start": 1280.559,
+      "duration": 2.881,
+      "text": "so they vanish"
+    },
+    {
+      "start": 1285.28,
+      "duration": 3.68,
+      "text": "they don't vanish separately but their"
+    },
+    {
+      "start": 1286.96,
+      "duration": 4.719,
+      "text": "difference vanishes"
+    },
+    {
+      "start": 1288.96,
+      "duration": 4.959,
+      "text": "so we actually can get a formula for the"
+    },
+    {
+      "start": 1291.679,
+      "duration": 5.761,
+      "text": "vector field"
+    },
+    {
+      "start": 1293.919,
+      "duration": 3.521,
+      "text": "just commutate a vector field"
+    },
+    {
+      "start": 1302.88,
+      "duration": 3.2,
+      "text": "interpret this vector field"
+    },
+    {
+      "start": 1308.48,
+      "duration": 2.8,
+      "text": "as the following"
+    },
+    {
+      "start": 1316.84,
+      "duration": 3.0,
+      "text": "tensor"
+    },
+    {
+      "start": 1320.72,
+      "duration": 4.8,
+      "text": "and the following vector field is pretty"
+    },
+    {
+      "start": 1323.28,
+      "duration": 2.24,
+      "text": "neat"
+    },
+    {
+      "start": 1326.559,
+      "duration": 3.6,
+      "text": "now what we've done is just written down"
+    },
+    {
+      "start": 1329.36,
+      "duration": 2.4,
+      "text": "a list of"
+    },
+    {
+      "start": 1330.159,
+      "duration": 3.601,
+      "text": "a wish list right this is just a wish"
+    },
+    {
+      "start": 1331.76,
+      "duration": 3.84,
+      "text": "list we would love a covariance"
+    },
+    {
+      "start": 1333.76,
+      "duration": 2.56,
+      "text": "derivative operator to do this this this"
+    },
+    {
+      "start": 1335.6,
+      "duration": 2.079,
+      "text": "and this is"
+    },
+    {
+      "start": 1336.32,
+      "duration": 3.68,
+      "text": "look we could also ask that the"
+    },
+    {
+      "start": 1337.679,
+      "duration": 3.521,
+      "text": "covariant derivative operator goes"
+    },
+    {
+      "start": 1340.0,
+      "duration": 4.559,
+      "text": "shopping for us"
+    },
+    {
+      "start": 1341.2,
+      "duration": 5.28,
+      "text": "but uh that's it's"
+    },
+    {
+      "start": 1344.559,
+      "duration": 4.801,
+      "text": "all very well to make a laundry list of"
+    },
+    {
+      "start": 1346.48,
+      "duration": 2.88,
+      "text": "things that you would like"
+    },
+    {
+      "start": 1349.6,
+      "duration": 3.6,
+      "text": "the problem is when you make a long list"
+    },
+    {
+      "start": 1351.6,
+      "duration": 3.6,
+      "text": "of things like that you may not have"
+    },
+    {
+      "start": 1353.2,
+      "duration": 2.8,
+      "text": "anything that exists that satisfies such"
+    },
+    {
+      "start": 1355.2,
+      "duration": 2.56,
+      "text": "a long list"
+    },
+    {
+      "start": 1356.0,
+      "duration": 5.6,
+      "text": "or you might have too many things that"
+    },
+    {
+      "start": 1357.76,
+      "duration": 5.279,
+      "text": "obey the list of axioms"
+    },
+    {
+      "start": 1361.6,
+      "duration": 3.199,
+      "text": "in our case it turns out there's more"
+    },
+    {
+      "start": 1363.039,
+      "duration": 3.281,
+      "text": "than one derivative operator which obeys"
+    },
+    {
+      "start": 1364.799,
+      "duration": 5.281,
+      "text": "these conditions"
+    },
+    {
+      "start": 1366.32,
+      "duration": 5.359,
+      "text": "uh that's fine um but now our job is to"
+    },
+    {
+      "start": 1370.08,
+      "duration": 5.76,
+      "text": "understand this arbitrariness and"
+    },
+    {
+      "start": 1371.679,
+      "duration": 4.161,
+      "text": "connect it to geometry"
+    },
+    {
+      "start": 1380.0,
+      "duration": 3.28,
+      "text": "so there's many derivative operators"
+    },
+    {
+      "start": 1382.32,
+      "duration": 5.839,
+      "text": "obeying"
+    },
+    {
+      "start": 1383.28,
+      "duration": 7.2,
+      "text": "these conditions"
+    },
+    {
+      "start": 1388.159,
+      "duration": 3.121,
+      "text": "i gotta at least prove to you one exists"
+    },
+    {
+      "start": 1390.48,
+      "duration": 2.48,
+      "text": "right"
+    },
+    {
+      "start": 1391.28,
+      "duration": 4.32,
+      "text": "otherwise you might disbelieve me that"
+    },
+    {
+      "start": 1392.96,
+      "duration": 5.76,
+      "text": "anything obeys these conditions"
+    },
+    {
+      "start": 1395.6,
+      "duration": 8.24,
+      "text": "uh and uh well"
+    },
+    {
+      "start": 1398.72,
+      "duration": 5.12,
+      "text": "here's an example"
+    },
+    {
+      "start": 1403.919,
+      "duration": 5.841,
+      "text": "namely is the ordinary derivative"
+    },
+    {
+      "start": 1407.36,
+      "duration": 2.4,
+      "text": "operator"
+    },
+    {
+      "start": 1410.64,
+      "duration": 7.2,
+      "text": "in sum chart"
+    },
+    {
+      "start": 1427.12,
+      "duration": 3.919,
+      "text": "and how do we define it was defined as"
+    },
+    {
+      "start": 1428.88,
+      "duration": 3.84,
+      "text": "follows um"
+    },
+    {
+      "start": 1431.039,
+      "duration": 3.681,
+      "text": "we have to pick a chart right this is"
+    },
+    {
+      "start": 1432.72,
+      "duration": 3.6,
+      "text": "the first part so this is coordinate"
+    },
+    {
+      "start": 1434.72,
+      "duration": 3.68,
+      "text": "dependent i'm going to present to you a"
+    },
+    {
+      "start": 1436.32,
+      "duration": 3.92,
+      "text": "derivative operator that is"
+    },
+    {
+      "start": 1438.4,
+      "duration": 3.36,
+      "text": "defined with respect to a coordinate"
+    },
+    {
+      "start": 1440.24,
+      "duration": 5.039,
+      "text": "system"
+    },
+    {
+      "start": 1441.76,
+      "duration": 5.76,
+      "text": "that's okay right but"
+    },
+    {
+      "start": 1445.279,
+      "duration": 4.081,
+      "text": "you might worry that there are there's"
+    },
+    {
+      "start": 1447.52,
+      "duration": 3.84,
+      "text": "no coordinate independent way to work"
+    },
+    {
+      "start": 1449.36,
+      "duration": 5.439,
+      "text": "with derivative operators i'll"
+    },
+    {
+      "start": 1451.36,
+      "duration": 3.439,
+      "text": "subsequently argue that's not the case"
+    },
+    {
+      "start": 1455.36,
+      "duration": 6.4,
+      "text": "so it's defined as follows let"
+    },
+    {
+      "start": 1458.72,
+      "duration": 7.28,
+      "text": "psi be a chart"
+    },
+    {
+      "start": 1461.76,
+      "duration": 7.68,
+      "text": "and t tensor of type kl"
+    },
+    {
+      "start": 1466.0,
+      "duration": 4.72,
+      "text": "with components now right it's uh"
+    },
+    {
+      "start": 1469.44,
+      "duration": 3.44,
+      "text": "we're going to represent this this"
+    },
+    {
+      "start": 1470.72,
+      "duration": 3.68,
+      "text": "tensor in this coordinate system t"
+    },
+    {
+      "start": 1472.88,
+      "duration": 4.08,
+      "text": "mu i'm using greek letters here to"
+    },
+    {
+      "start": 1474.4,
+      "duration": 2.56,
+      "text": "indicate that"
+    },
+    {
+      "start": 1479.12,
+      "duration": 4.4,
+      "text": "so in the coordinate basis it has those"
+    },
+    {
+      "start": 1482.159,
+      "duration": 4.88,
+      "text": "components"
+    },
+    {
+      "start": 1483.52,
+      "duration": 7.68,
+      "text": "and delta acts"
+    },
+    {
+      "start": 1487.039,
+      "duration": 4.161,
+      "text": "via the following so"
+    },
+    {
+      "start": 1492.799,
+      "duration": 4.161,
+      "text": "suppose we encounter this abstract index"
+    },
+    {
+      "start": 1495.6,
+      "duration": 4.0,
+      "text": "notation here"
+    },
+    {
+      "start": 1496.96,
+      "duration": 3.12,
+      "text": "well we interpret that abstract notation"
+    },
+    {
+      "start": 1499.6,
+      "duration": 3.84,
+      "text": "in"
+    },
+    {
+      "start": 1500.08,
+      "duration": 8.56,
+      "text": "the cohort basis the coordinate basis"
+    },
+    {
+      "start": 1503.44,
+      "duration": 5.2,
+      "text": "as this defined by psi as this"
+    },
+    {
+      "start": 1508.88,
+      "duration": 7.12,
+      "text": "tensor field"
+    },
+    {
+      "start": 1514.08,
+      "duration": 3.28,
+      "text": "we've just taken the derivative with"
+    },
+    {
+      "start": 1516.0,
+      "duration": 2.64,
+      "text": "respect the partial derivative with"
+    },
+    {
+      "start": 1517.36,
+      "duration": 4.559,
+      "text": "respect to the sigma"
+    },
+    {
+      "start": 1518.64,
+      "duration": 5.36,
+      "text": "component of these functions"
+    },
+    {
+      "start": 1521.919,
+      "duration": 4.0,
+      "text": "t these components in the coordinate"
+    },
+    {
+      "start": 1524.0,
+      "duration": 6.0,
+      "text": "basis"
+    },
+    {
+      "start": 1525.919,
+      "duration": 4.081,
+      "text": "so this is you know obviously this isn't"
+    },
+    {
+      "start": 1531.6,
+      "duration": 3.199,
+      "text": "it's not defined everywhere"
+    },
+    {
+      "start": 1537.52,
+      "duration": 6.08,
+      "text": "it's only defined in the chart sigma si"
+    },
+    {
+      "start": 1542.08,
+      "duration": 3.36,
+      "text": "it at least establishes that with"
+    },
+    {
+      "start": 1543.6,
+      "duration": 3.679,
+      "text": "respect to one chart"
+    },
+    {
+      "start": 1545.44,
+      "duration": 3.28,
+      "text": "there exists at least one derivative"
+    },
+    {
+      "start": 1547.279,
+      "duration": 2.561,
+      "text": "operator obeying all those conditions"
+    },
+    {
+      "start": 1548.72,
+      "duration": 4.16,
+      "text": "you can"
+    },
+    {
+      "start": 1549.84,
+      "duration": 7.12,
+      "text": "it just check you can check yourself"
+    },
+    {
+      "start": 1552.88,
+      "duration": 7.2,
+      "text": "that um"
+    },
+    {
+      "start": 1556.96,
+      "duration": 5.68,
+      "text": "delta obeys these conditions obeys zero"
+    },
+    {
+      "start": 1560.08,
+      "duration": 2.56,
+      "text": "through five"
+    },
+    {
+      "start": 1562.88,
+      "duration": 4.56,
+      "text": "okay that's an exercise for you so now"
+    },
+    {
+      "start": 1565.36,
+      "duration": 3.52,
+      "text": "let's understand the freedom in"
+    },
+    {
+      "start": 1567.44,
+      "duration": 3.04,
+      "text": "derivative operators you know it looks"
+    },
+    {
+      "start": 1568.88,
+      "duration": 3.919,
+      "text": "like we've got one"
+    },
+    {
+      "start": 1570.48,
+      "duration": 4.319,
+      "text": "two things could happen uh maybe that's"
+    },
+    {
+      "start": 1572.799,
+      "duration": 3.76,
+      "text": "the unique derivative operator or"
+    },
+    {
+      "start": 1574.799,
+      "duration": 3.681,
+      "text": "there's more than one and we want to"
+    },
+    {
+      "start": 1576.559,
+      "duration": 3.201,
+      "text": "understand the arbitrariness in defining"
+    },
+    {
+      "start": 1578.48,
+      "duration": 4.36,
+      "text": "a derivative operator of course the"
+    },
+    {
+      "start": 1579.76,
+      "duration": 6.32,
+      "text": "answer is that there's more than one"
+    },
+    {
+      "start": 1582.84,
+      "duration": 5.079,
+      "text": "so so let's understand the freedom"
+    },
+    {
+      "start": 1586.08,
+      "duration": 3.68,
+      "text": "in in defining derivative operators so"
+    },
+    {
+      "start": 1587.919,
+      "duration": 5.201,
+      "text": "we're going to suppose that we have two"
+    },
+    {
+      "start": 1589.76,
+      "duration": 3.36,
+      "text": "different derivative operators"
+    },
+    {
+      "start": 1597.44,
+      "duration": 5.2,
+      "text": "that obey these conditions so suppose"
+    },
+    {
+      "start": 1600.559,
+      "duration": 5.681,
+      "text": "delta and delta twiddle are two"
+    },
+    {
+      "start": 1602.64,
+      "duration": 3.6,
+      "text": "covariant derivative operators"
+    },
+    {
+      "start": 1607.84,
+      "duration": 6.0,
+      "text": "obeying um zero through five"
+    },
+    {
+      "start": 1614.4,
+      "duration": 4.08,
+      "text": "and we're going to understand the"
+    },
+    {
+      "start": 1617.36,
+      "duration": 4.88,
+      "text": "freedom"
+    },
+    {
+      "start": 1618.48,
+      "duration": 6.4,
+      "text": "in definition that we have"
+    },
+    {
+      "start": 1622.24,
+      "duration": 4.319,
+      "text": "after applying all these these"
+    },
+    {
+      "start": 1624.88,
+      "duration": 2.64,
+      "text": "conditions that a derivative operator"
+    },
+    {
+      "start": 1626.559,
+      "duration": 2.48,
+      "text": "has to obey"
+    },
+    {
+      "start": 1627.52,
+      "duration": 3.68,
+      "text": "what's left over what what degrees of"
+    },
+    {
+      "start": 1629.039,
+      "duration": 5.441,
+      "text": "freedom are left over"
+    },
+    {
+      "start": 1631.2,
+      "duration": 5.92,
+      "text": "so let's start with its action on scalar"
+    },
+    {
+      "start": 1634.48,
+      "duration": 6.079,
+      "text": "functions so as a map"
+    },
+    {
+      "start": 1637.12,
+      "duration": 5.52,
+      "text": "on scalar function smooth functions on"
+    },
+    {
+      "start": 1640.559,
+      "duration": 4.561,
+      "text": "the manifold we learned that the"
+    },
+    {
+      "start": 1642.64,
+      "duration": 5.919,
+      "text": "difference between these two operators"
+    },
+    {
+      "start": 1645.12,
+      "duration": 3.439,
+      "text": "applied to a scalar function"
+    },
+    {
+      "start": 1648.799,
+      "duration": 2.48,
+      "text": "vanishes"
+    },
+    {
+      "start": 1652.88,
+      "duration": 4.159,
+      "text": "right that's just a consequence of"
+    },
+    {
+      "start": 1654.399,
+      "duration": 2.64,
+      "text": "condition for"
+    },
+    {
+      "start": 1657.44,
+      "duration": 3.52,
+      "text": "so there's no freedom on scalar"
+    },
+    {
+      "start": 1659.039,
+      "duration": 3.601,
+      "text": "functions as an operator on"
+    },
+    {
+      "start": 1660.96,
+      "duration": 2.8,
+      "text": "smooth scalar functions on a manifold"
+    },
+    {
+      "start": 1662.64,
+      "duration": 2.56,
+      "text": "there's no difference between two"
+    },
+    {
+      "start": 1663.76,
+      "duration": 2.32,
+      "text": "different individual phrases they're the"
+    },
+    {
+      "start": 1665.2,
+      "duration": 3.599,
+      "text": "same thing"
+    },
+    {
+      "start": 1666.08,
+      "duration": 4.959,
+      "text": "they act the same way but of course"
+    },
+    {
+      "start": 1668.799,
+      "duration": 4.721,
+      "text": "we've defined derivative operators on"
+    },
+    {
+      "start": 1671.039,
+      "duration": 4.401,
+      "text": "to to accept an arbitrary argument of"
+    },
+    {
+      "start": 1673.52,
+      "duration": 5.039,
+      "text": "tensor type kl"
+    },
+    {
+      "start": 1675.44,
+      "duration": 5.119,
+      "text": "we're going to slowly build up uh"
+    },
+    {
+      "start": 1678.559,
+      "duration": 5.281,
+      "text": "and understand the action of the"
+    },
+    {
+      "start": 1680.559,
+      "duration": 3.281,
+      "text": "difference on"
+    },
+    {
+      "start": 1684.0,
+      "duration": 4.08,
+      "text": "as we enlarge the domain of definition"
+    },
+    {
+      "start": 1686.0,
+      "duration": 4.72,
+      "text": "on which these things"
+    },
+    {
+      "start": 1688.08,
+      "duration": 4.8,
+      "text": "act so suppose we act uh our difference"
+    },
+    {
+      "start": 1690.72,
+      "duration": 4.319,
+      "text": "now on a co-vector on a tensor of type"
+    },
+    {
+      "start": 1692.88,
+      "duration": 4.0,
+      "text": "zero comma one"
+    },
+    {
+      "start": 1695.039,
+      "duration": 3.601,
+      "text": "well what can we say well it accepts a"
+    },
+    {
+      "start": 1696.88,
+      "duration": 4.88,
+      "text": "co-vector"
+    },
+    {
+      "start": 1698.64,
+      "duration": 3.12,
+      "text": "the difference of these two"
+    },
+    {
+      "start": 1701.919,
+      "duration": 3.201,
+      "text": "and it produces a tensor of type zero"
+    },
+    {
+      "start": 1704.64,
+      "duration": 6.48,
+      "text": "two"
+    },
+    {
+      "start": 1705.12,
+      "duration": 8.64,
+      "text": "that's just the definition"
+    },
+    {
+      "start": 1711.12,
+      "duration": 5.2,
+      "text": "so delta a remembers the abstract index"
+    },
+    {
+      "start": 1713.76,
+      "duration": 2.56,
+      "text": "notation"
+    },
+    {
+      "start": 1722.84,
+      "duration": 4.76,
+      "text": "so"
+    },
+    {
+      "start": 1724.08,
+      "duration": 3.52,
+      "text": "now uh let"
+    },
+    {
+      "start": 1728.399,
+      "duration": 8.081,
+      "text": "f be a smooth function scalar function"
+    },
+    {
+      "start": 1732.32,
+      "duration": 6.8,
+      "text": "and omega is an arbitrary covacto"
+    },
+    {
+      "start": 1736.48,
+      "duration": 4.799,
+      "text": "dual vector then you know one thing we"
+    },
+    {
+      "start": 1739.12,
+      "duration": 4.08,
+      "text": "can do is we can multiply scalars by"
+    },
+    {
+      "start": 1741.279,
+      "duration": 4.321,
+      "text": "by dual vectors and get other dual"
+    },
+    {
+      "start": 1743.2,
+      "duration": 2.4,
+      "text": "vectors"
+    },
+    {
+      "start": 1747.12,
+      "duration": 3.84,
+      "text": "and now we're gonna we're gonna learn"
+    },
+    {
+      "start": 1749.2,
+      "duration": 2.24,
+      "text": "something from this leibniz property so"
+    },
+    {
+      "start": 1750.96,
+      "duration": 3.439,
+      "text": "this is"
+    },
+    {
+      "start": 1751.44,
+      "duration": 4.88,
+      "text": "this is the key strategy to determining"
+    },
+    {
+      "start": 1754.399,
+      "duration": 3.921,
+      "text": "this difference on"
+    },
+    {
+      "start": 1756.32,
+      "duration": 3.599,
+      "text": "and understanding the freedom of"
+    },
+    {
+      "start": 1758.32,
+      "duration": 4.079,
+      "text": "definition in covariance derivative"
+    },
+    {
+      "start": 1759.919,
+      "duration": 6.0,
+      "text": "operators is this following trick"
+    },
+    {
+      "start": 1762.399,
+      "duration": 5.441,
+      "text": "so form the difference and apply it to"
+    },
+    {
+      "start": 1765.919,
+      "duration": 5.921,
+      "text": "our scala"
+    },
+    {
+      "start": 1767.84,
+      "duration": 4.0,
+      "text": "and then simply do livenitz right"
+    },
+    {
+      "start": 1778.64,
+      "duration": 3.2,
+      "text": "and you'll learn that that this"
+    },
+    {
+      "start": 1780.399,
+      "duration": 3.361,
+      "text": "difference commutes"
+    },
+    {
+      "start": 1781.84,
+      "duration": 4.48,
+      "text": "with f right you can push the the"
+    },
+    {
+      "start": 1783.76,
+      "duration": 4.159,
+      "text": "difference of these two"
+    },
+    {
+      "start": 1786.32,
+      "duration": 3.359,
+      "text": "derivative operators you can move it"
+    },
+    {
+      "start": 1787.919,
+      "duration": 4.721,
+      "text": "backwards and forwards past this any"
+    },
+    {
+      "start": 1789.679,
+      "duration": 6.401,
+      "text": "arbitrary smooth function f"
+    },
+    {
+      "start": 1792.64,
+      "duration": 6.48,
+      "text": "so this is you know uh via"
+    },
+    {
+      "start": 1796.08,
+      "duration": 4.719,
+      "text": "the leibniz property and and condition"
+    },
+    {
+      "start": 1799.12,
+      "duration": 2.96,
+      "text": "4."
+    },
+    {
+      "start": 1800.799,
+      "duration": 3.681,
+      "text": "now that that turns out to be an"
+    },
+    {
+      "start": 1802.08,
+      "duration": 5.199,
+      "text": "extraordinarily restrictive"
+    },
+    {
+      "start": 1804.48,
+      "duration": 4.079,
+      "text": "condition on the behavior of the"
+    },
+    {
+      "start": 1807.279,
+      "duration": 3.76,
+      "text": "difference of these two derivative"
+    },
+    {
+      "start": 1808.559,
+      "duration": 2.48,
+      "text": "operators"
+    },
+    {
+      "start": 1811.6,
+      "duration": 3.12,
+      "text": "and in fact we're going to learn that"
+    },
+    {
+      "start": 1812.88,
+      "duration": 5.36,
+      "text": "this this"
+    },
+    {
+      "start": 1814.72,
+      "duration": 5.36,
+      "text": "uh completely determines"
+    },
+    {
+      "start": 1818.24,
+      "duration": 4.799,
+      "text": "that their difference except at the"
+    },
+    {
+      "start": 1820.08,
+      "duration": 7.44,
+      "text": "point p itself"
+    },
+    {
+      "start": 1823.039,
+      "duration": 9.921,
+      "text": "so this this condition star that i've"
+    },
+    {
+      "start": 1827.52,
+      "duration": 5.44,
+      "text": "highlighted here condition star implies"
+    },
+    {
+      "start": 1835.279,
+      "duration": 2.721,
+      "text": "that uh"
+    },
+    {
+      "start": 1838.399,
+      "duration": 4.16,
+      "text": "delta a twiddle on omega b minus delta a"
+    },
+    {
+      "start": 1841.12,
+      "duration": 4.559,
+      "text": "and omega b"
+    },
+    {
+      "start": 1842.559,
+      "duration": 3.12,
+      "text": "only depends"
+    },
+    {
+      "start": 1847.6,
+      "duration": 4.799,
+      "text": "on the cova dual vector at p itself and"
+    },
+    {
+      "start": 1851.12,
+      "duration": 2.32,
+      "text": "nowhere else not even on the"
+    },
+    {
+      "start": 1852.399,
+      "duration": 3.441,
+      "text": "neighborhood around"
+    },
+    {
+      "start": 1853.44,
+      "duration": 3.76,
+      "text": "the point p now this is weird right this"
+    },
+    {
+      "start": 1855.84,
+      "duration": 2.959,
+      "text": "is not what you would might"
+    },
+    {
+      "start": 1857.2,
+      "duration": 3.68,
+      "text": "initially expect if you have a"
+    },
+    {
+      "start": 1858.799,
+      "duration": 4.641,
+      "text": "derivative operator and you apply it"
+    },
+    {
+      "start": 1860.88,
+      "duration": 3.12,
+      "text": "to a function then it depends on the"
+    },
+    {
+      "start": 1863.44,
+      "duration": 3.52,
+      "text": "first order"
+    },
+    {
+      "start": 1864.0,
+      "duration": 4.64,
+      "text": "neighborhood around that function at the"
+    },
+    {
+      "start": 1866.96,
+      "duration": 3.04,
+      "text": "point p"
+    },
+    {
+      "start": 1868.64,
+      "duration": 2.96,
+      "text": "so we're saying that the difference of"
+    },
+    {
+      "start": 1870.0,
+      "duration": 3.039,
+      "text": "two derivative operators while itself"
+    },
+    {
+      "start": 1871.6,
+      "duration": 4.0,
+      "text": "being a derivative operator"
+    },
+    {
+      "start": 1873.039,
+      "duration": 3.841,
+      "text": "somehow doesn't depend on even the first"
+    },
+    {
+      "start": 1875.6,
+      "duration": 4.64,
+      "text": "order neighborhood of the"
+    },
+    {
+      "start": 1876.88,
+      "duration": 3.36,
+      "text": "the argument around the point p"
+    },
+    {
+      "start": 1881.6,
+      "duration": 3.04,
+      "text": "and uh and how are we going to do this"
+    },
+    {
+      "start": 1883.6,
+      "duration": 2.88,
+      "text": "how are we going to claim"
+    },
+    {
+      "start": 1884.64,
+      "duration": 4.08,
+      "text": "how am i going to demonstrate that that"
+    },
+    {
+      "start": 1886.48,
+      "duration": 6.319,
+      "text": "statement is correct"
+    },
+    {
+      "start": 1888.72,
+      "duration": 6.48,
+      "text": "well um so the strategy will be as"
+    },
+    {
+      "start": 1892.799,
+      "duration": 2.401,
+      "text": "follows"
+    },
+    {
+      "start": 1897.84,
+      "duration": 3.12,
+      "text": "what we're going to do is we're going to"
+    },
+    {
+      "start": 1898.88,
+      "duration": 5.36,
+      "text": "let"
+    },
+    {
+      "start": 1900.96,
+      "duration": 5.12,
+      "text": "omega b prime be another dual vector"
+    },
+    {
+      "start": 1904.24,
+      "duration": 4.08,
+      "text": "field which agrees with omega b at a"
+    },
+    {
+      "start": 1906.08,
+      "duration": 2.24,
+      "text": "point"
+    },
+    {
+      "start": 1918.84,
+      "duration": 3.0,
+      "text": "p"
+    },
+    {
+      "start": 1922.88,
+      "duration": 3.12,
+      "text": "so to find omega b prime to be just some"
+    },
+    {
+      "start": 1925.519,
+      "duration": 5.04,
+      "text": "other"
+    },
+    {
+      "start": 1926.0,
+      "duration": 6.559,
+      "text": "dual vector field that when you uh come"
+    },
+    {
+      "start": 1930.559,
+      "duration": 3.441,
+      "text": "when you look at the point p is"
+    },
+    {
+      "start": 1932.559,
+      "duration": 3.12,
+      "text": "absolutely equal to omega"
+    },
+    {
+      "start": 1934.0,
+      "duration": 4.88,
+      "text": "b but can be different arbitrarily"
+    },
+    {
+      "start": 1935.679,
+      "duration": 3.201,
+      "text": "different elsewheres"
+    },
+    {
+      "start": 1941.36,
+      "duration": 3.6,
+      "text": "and then we claim or we're going to"
+    },
+    {
+      "start": 1943.519,
+      "duration": 5.361,
+      "text": "argue"
+    },
+    {
+      "start": 1944.96,
+      "duration": 5.68,
+      "text": "we will argue"
+    },
+    {
+      "start": 1948.88,
+      "duration": 4.48,
+      "text": "that the difference of these derivative"
+    },
+    {
+      "start": 1950.64,
+      "duration": 12.24,
+      "text": "operators applied to these various"
+    },
+    {
+      "start": 1953.36,
+      "duration": 13.28,
+      "text": "omegas are in fact equal"
+    },
+    {
+      "start": 1962.88,
+      "duration": 6.72,
+      "text": "okay not obvious but we will prove that"
+    },
+    {
+      "start": 1966.64,
+      "duration": 2.96,
+      "text": "we will argue this"
+    },
+    {
+      "start": 1974.32,
+      "duration": 4.88,
+      "text": "now the way to arguing this is to use"
+    },
+    {
+      "start": 1977.039,
+      "duration": 4.48,
+      "text": "this exercise that we had from"
+    },
+    {
+      "start": 1979.2,
+      "duration": 2.319,
+      "text": "uh"
+    },
+    {
+      "start": 1982.48,
+      "duration": 4.24,
+      "text": "this taylor expansion exercise that we"
+    },
+    {
+      "start": 1985.12,
+      "duration": 3.72,
+      "text": "considered i believe in lecture three"
+    },
+    {
+      "start": 1986.72,
+      "duration": 5.12,
+      "text": "already"
+    },
+    {
+      "start": 1988.84,
+      "duration": 3.0,
+      "text": "so"
+    },
+    {
+      "start": 1992.159,
+      "duration": 5.76,
+      "text": "one can find exercise smooth functions"
+    },
+    {
+      "start": 2000.96,
+      "duration": 4.24,
+      "text": "uh f okay yeah"
+    },
+    {
+      "start": 2004.08,
+      "duration": 2.56,
+      "text": "right there's some potential for"
+    },
+    {
+      "start": 2005.2,
+      "duration": 3.12,
+      "text": "confusion with this round bracket"
+    },
+    {
+      "start": 2006.64,
+      "duration": 5.279,
+      "text": "notation let's just say"
+    },
+    {
+      "start": 2008.32,
+      "duration": 6.959,
+      "text": "um f subscript alpha"
+    },
+    {
+      "start": 2011.919,
+      "duration": 6.961,
+      "text": "which uh vanish"
+    },
+    {
+      "start": 2015.279,
+      "duration": 6.721,
+      "text": "at p"
+    },
+    {
+      "start": 2018.88,
+      "duration": 3.12,
+      "text": "and a smooth"
+    },
+    {
+      "start": 2026.559,
+      "duration": 5.6,
+      "text": "dual vectors mu b and i'm going to use a"
+    },
+    {
+      "start": 2029.279,
+      "duration": 4.161,
+      "text": "funny notation for these because i don't"
+    },
+    {
+      "start": 2032.159,
+      "duration": 3.681,
+      "text": "want you to think that these"
+    },
+    {
+      "start": 2033.44,
+      "duration": 3.68,
+      "text": "are tenses of type one one no no they're"
+    },
+    {
+      "start": 2035.84,
+      "duration": 6.0,
+      "text": "just"
+    },
+    {
+      "start": 2037.12,
+      "duration": 4.72,
+      "text": "a list of dual vector fields"
+    },
+    {
+      "start": 2042.32,
+      "duration": 4.079,
+      "text": "such that when you look at the"
+    },
+    {
+      "start": 2044.72,
+      "duration": 2.959,
+      "text": "difference between omega b remember"
+    },
+    {
+      "start": 2046.399,
+      "duration": 3.121,
+      "text": "omega b is our"
+    },
+    {
+      "start": 2047.679,
+      "duration": 3.521,
+      "text": "dual vector field that agrees with omega"
+    },
+    {
+      "start": 2049.52,
+      "duration": 3.04,
+      "text": "omega b prime residual vector"
+    },
+    {
+      "start": 2051.2,
+      "duration": 5.76,
+      "text": "field that agrees with omega b at the"
+    },
+    {
+      "start": 2052.56,
+      "duration": 4.4,
+      "text": "point p well around the point p"
+    },
+    {
+      "start": 2057.119,
+      "duration": 4.72,
+      "text": "we learn that you can represent"
+    },
+    {
+      "start": 2063.2,
+      "duration": 4.32,
+      "text": "this difference of dual vector fields as"
+    },
+    {
+      "start": 2066.0,
+      "duration": 3.119,
+      "text": "a linear combination of dual vector"
+    },
+    {
+      "start": 2067.52,
+      "duration": 1.92,
+      "text": "fields where these coefficient functions"
+    },
+    {
+      "start": 2069.119,
+      "duration": 2.881,
+      "text": "here"
+    },
+    {
+      "start": 2069.44,
+      "duration": 3.12,
+      "text": "vanish at point p should be intuitively"
+    },
+    {
+      "start": 2072.0,
+      "duration": 3.359,
+      "text": "okay"
+    },
+    {
+      "start": 2072.56,
+      "duration": 4.079,
+      "text": "clear it's kind of like a taylor series"
+    },
+    {
+      "start": 2075.359,
+      "duration": 4.48,
+      "text": "to order one"
+    },
+    {
+      "start": 2076.639,
+      "duration": 7.04,
+      "text": "uh and you just use that uh"
+    },
+    {
+      "start": 2079.839,
+      "duration": 5.921,
+      "text": "calculus result that we proved"
+    },
+    {
+      "start": 2083.679,
+      "duration": 3.601,
+      "text": "we didn't prove that we exploited in"
+    },
+    {
+      "start": 2085.76,
+      "duration": 3.119,
+      "text": "arguing that the derivative"
+    },
+    {
+      "start": 2087.28,
+      "duration": 3.28,
+      "text": "coordinate derivatives are a basis for"
+    },
+    {
+      "start": 2088.879,
+      "duration": 3.52,
+      "text": "tangents b so i think that was lecture"
+    },
+    {
+      "start": 2090.56,
+      "duration": 4.88,
+      "text": "three"
+    },
+    {
+      "start": 2092.399,
+      "duration": 4.561,
+      "text": "so we have this representation here this"
+    },
+    {
+      "start": 2095.44,
+      "duration": 4.96,
+      "text": "key representation here"
+    },
+    {
+      "start": 2096.96,
+      "duration": 6.24,
+      "text": "so whenever you have"
+    },
+    {
+      "start": 2100.4,
+      "duration": 4.16,
+      "text": "a pair of vector a dual vector fields"
+    },
+    {
+      "start": 2103.2,
+      "duration": 2.72,
+      "text": "the degree at a point"
+    },
+    {
+      "start": 2104.56,
+      "duration": 3.84,
+      "text": "then you can look at the difference and"
+    },
+    {
+      "start": 2105.92,
+      "duration": 6.24,
+      "text": "it will be expandable in this way"
+    },
+    {
+      "start": 2108.4,
+      "duration": 7.6,
+      "text": "and so f of alpha at p equals zero"
+    },
+    {
+      "start": 2112.16,
+      "duration": 5.52,
+      "text": "and now we're going to apply our"
+    },
+    {
+      "start": 2116.0,
+      "duration": 4.72,
+      "text": "covariant difference of covariance"
+    },
+    {
+      "start": 2117.68,
+      "duration": 3.04,
+      "text": "derivative operators"
+    },
+    {
+      "start": 2125.28,
+      "duration": 3.559,
+      "text": "and we're going to learn something"
+    },
+    {
+      "start": 2126.24,
+      "duration": 5.599,
+      "text": "interesting as a consequence of that"
+    },
+    {
+      "start": 2128.839,
+      "duration": 3.0,
+      "text": "representation"
+    },
+    {
+      "start": 2135.839,
+      "duration": 3.76,
+      "text": "so we exploit the fact that that"
+    },
+    {
+      "start": 2137.599,
+      "duration": 4.48,
+      "text": "difference commutes past scalar"
+    },
+    {
+      "start": 2139.599,
+      "duration": 2.48,
+      "text": "functions"
+    },
+    {
+      "start": 2143.359,
+      "duration": 4.24,
+      "text": "which we established as an exercise just"
+    },
+    {
+      "start": 2145.28,
+      "duration": 2.319,
+      "text": "above"
+    },
+    {
+      "start": 2148.4,
+      "duration": 3.199,
+      "text": "and then we see that uh this has to"
+    },
+    {
+      "start": 2150.8,
+      "duration": 5.6,
+      "text": "equal zero"
+    },
+    {
+      "start": 2151.599,
+      "duration": 7.76,
+      "text": "at p why because"
+    },
+    {
+      "start": 2156.4,
+      "duration": 5.92,
+      "text": "these coefficient functions vanish at p"
+    },
+    {
+      "start": 2159.359,
+      "duration": 2.961,
+      "text": "it's pretty amazing"
+    },
+    {
+      "start": 2164.4,
+      "duration": 7.28,
+      "text": "hence we've learned that delta a"
+    },
+    {
+      "start": 2168.079,
+      "duration": 5.361,
+      "text": "twiddle minus delta a applied to"
+    },
+    {
+      "start": 2171.68,
+      "duration": 4.399,
+      "text": "our alternative dual vector field omega"
+    },
+    {
+      "start": 2173.44,
+      "duration": 6.0,
+      "text": "b prime is equal to delta"
+    },
+    {
+      "start": 2176.079,
+      "duration": 4.0,
+      "text": "a twiddle minus delta a applied to omega"
+    },
+    {
+      "start": 2179.44,
+      "duration": 3.76,
+      "text": "b"
+    },
+    {
+      "start": 2180.079,
+      "duration": 7.28,
+      "text": "at p for all omega b primes"
+    },
+    {
+      "start": 2183.2,
+      "duration": 7.2,
+      "text": "that are equal to omega b at p"
+    },
+    {
+      "start": 2187.359,
+      "duration": 7.041,
+      "text": "so the difference here uh"
+    },
+    {
+      "start": 2190.4,
+      "duration": 4.0,
+      "text": "doesn't depend"
+    },
+    {
+      "start": 2195.04,
+      "duration": 8.079,
+      "text": "on omega b out"
+    },
+    {
+      "start": 2200.4,
+      "duration": 2.719,
+      "text": "away from"
+    },
+    {
+      "start": 2203.839,
+      "duration": 3.681,
+      "text": "the point p it only depends the"
+    },
+    {
+      "start": 2205.839,
+      "duration": 4.481,
+      "text": "difference of these derivative operators"
+    },
+    {
+      "start": 2207.52,
+      "duration": 4.319,
+      "text": "applied to some dual vector field only"
+    },
+    {
+      "start": 2210.32,
+      "duration": 2.88,
+      "text": "depends on the value of the dual vector"
+    },
+    {
+      "start": 2211.839,
+      "duration": 3.28,
+      "text": "field at the point p"
+    },
+    {
+      "start": 2213.2,
+      "duration": 3.44,
+      "text": "and that's pretty amazing right because"
+    },
+    {
+      "start": 2215.119,
+      "duration": 3.761,
+      "text": "what that tells us"
+    },
+    {
+      "start": 2216.64,
+      "duration": 3.92,
+      "text": "is that because we know already that"
+    },
+    {
+      "start": 2218.88,
+      "duration": 2.88,
+      "text": "delta a twitter minus delta a is a"
+    },
+    {
+      "start": 2220.56,
+      "duration": 5.279,
+      "text": "linear map of"
+    },
+    {
+      "start": 2221.76,
+      "duration": 6.319,
+      "text": "of of tenses it's a map of tensors"
+    },
+    {
+      "start": 2225.839,
+      "duration": 3.681,
+      "text": "at that doesn't involve the neighborhood"
+    },
+    {
+      "start": 2228.079,
+      "duration": 2.721,
+      "text": "around the tent so really it's a map of"
+    },
+    {
+      "start": 2229.52,
+      "duration": 4.88,
+      "text": "tenses at the point p"
+    },
+    {
+      "start": 2230.8,
+      "duration": 6.16,
+      "text": "so you can interpret this as a map of"
+    },
+    {
+      "start": 2234.4,
+      "duration": 2.56,
+      "text": "tenses"
+    },
+    {
+      "start": 2239.119,
+      "duration": 4.72,
+      "text": "at each point p"
+    },
+    {
+      "start": 2244.079,
+      "duration": 4.161,
+      "text": "and it's not like it's a map of tensors"
+    },
+    {
+      "start": 2245.839,
+      "duration": 2.401,
+      "text": "of type"
+    },
+    {
+      "start": 2248.96,
+      "duration": 6.08,
+      "text": "zero one at the point p nothing more no"
+    },
+    {
+      "start": 2252.32,
+      "duration": 4.4,
+      "text": "it doesn't depend on any extra data"
+    },
+    {
+      "start": 2255.04,
+      "duration": 3.6,
+      "text": "and it's a linear map because of the the"
+    },
+    {
+      "start": 2256.72,
+      "duration": 4.56,
+      "text": "linearity condition"
+    },
+    {
+      "start": 2258.64,
+      "duration": 3.76,
+      "text": "and so uh what is it it's a linear map"
+    },
+    {
+      "start": 2261.28,
+      "duration": 2.559,
+      "text": "so defining"
+    },
+    {
+      "start": 2262.4,
+      "duration": 3.04,
+      "text": "this difference we'll call it c for the"
+    },
+    {
+      "start": 2263.839,
+      "duration": 4.961,
+      "text": "moment"
+    },
+    {
+      "start": 2265.44,
+      "duration": 6.48,
+      "text": "c takes a dual vector"
+    },
+    {
+      "start": 2268.8,
+      "duration": 5.36,
+      "text": "at point p and gives us"
+    },
+    {
+      "start": 2271.92,
+      "duration": 2.24,
+      "text": "a"
+    },
+    {
+      "start": 2276.96,
+      "duration": 8.879,
+      "text": "element of v p star tensor v"
+    },
+    {
+      "start": 2280.32,
+      "duration": 5.519,
+      "text": "b star"
+    },
+    {
+      "start": 2296.96,
+      "duration": 2.879,
+      "text": "right because"
+    },
+    {
+      "start": 2300.8,
+      "duration": 9.44,
+      "text": "delta takes a dual vector"
+    },
+    {
+      "start": 2305.52,
+      "duration": 6.48,
+      "text": "and produces an object this object here"
+    },
+    {
+      "start": 2310.24,
+      "duration": 4.16,
+      "text": "and this object has in abstract index"
+    },
+    {
+      "start": 2312.0,
+      "duration": 6.0,
+      "text": "notation two indices at the bottom so"
+    },
+    {
+      "start": 2314.4,
+      "duration": 3.6,
+      "text": "it's a tensor of type zero two"
+    },
+    {
+      "start": 2318.96,
+      "duration": 5.6,
+      "text": "so two tenses of type zero two so"
+    },
+    {
+      "start": 2322.079,
+      "duration": 3.681,
+      "text": "c is a map a linear map of vector spaces"
+    },
+    {
+      "start": 2324.56,
+      "duration": 3.36,
+      "text": "like so"
+    },
+    {
+      "start": 2325.76,
+      "duration": 3.52,
+      "text": "now remember you can do this duality"
+    },
+    {
+      "start": 2327.92,
+      "duration": 4.48,
+      "text": "trick where you"
+    },
+    {
+      "start": 2329.28,
+      "duration": 4.64,
+      "text": "by duality remember vp star star is"
+    },
+    {
+      "start": 2332.4,
+      "duration": 7.6,
+      "text": "equivalent to vp"
+    },
+    {
+      "start": 2333.92,
+      "duration": 10.4,
+      "text": "you can interpret uh"
+    },
+    {
+      "start": 2340.0,
+      "duration": 4.32,
+      "text": "can interpret c in a different way"
+    },
+    {
+      "start": 2344.88,
+      "duration": 9.12,
+      "text": "as a map"
+    },
+    {
+      "start": 2348.0,
+      "duration": 9.92,
+      "text": "that goes from"
+    },
+    {
+      "start": 2354.0,
+      "duration": 3.92,
+      "text": "as a as a map from"
+    },
+    {
+      "start": 2358.0,
+      "duration": 7.68,
+      "text": "vp star tensor vp"
+    },
+    {
+      "start": 2361.52,
+      "duration": 8.319,
+      "text": "tensor vp to the reals or"
+    },
+    {
+      "start": 2365.68,
+      "duration": 4.159,
+      "text": "as an element"
+    },
+    {
+      "start": 2371.76,
+      "duration": 8.56,
+      "text": "of the tensor product vector space"
+    },
+    {
+      "start": 2375.44,
+      "duration": 4.88,
+      "text": "v p tensor v p star tensor v p"
+    },
+    {
+      "start": 2380.839,
+      "duration": 4.041,
+      "text": "star"
+    },
+    {
+      "start": 2382.64,
+      "duration": 2.24,
+      "text": "now"
+    },
+    {
+      "start": 2385.68,
+      "duration": 6.159,
+      "text": "we're going to write c abc for its or c"
+    },
+    {
+      "start": 2388.96,
+      "duration": 2.879,
+      "text": "c a b sorry"
+    },
+    {
+      "start": 2392.24,
+      "duration": 7.52,
+      "text": "for the abstract index notation of"
+    },
+    {
+      "start": 2396.48,
+      "duration": 6.8,
+      "text": "c so c is just a tensor field by no"
+    },
+    {
+      "start": 2399.76,
+      "duration": 5.12,
+      "text": "derivative left anymore the difference"
+    },
+    {
+      "start": 2403.28,
+      "duration": 3.6,
+      "text": "in two derivative operators is just a"
+    },
+    {
+      "start": 2404.88,
+      "duration": 3.92,
+      "text": "tensor field it's not a"
+    },
+    {
+      "start": 2406.88,
+      "duration": 4.0,
+      "text": "it's not uh doesn't have any further"
+    },
+    {
+      "start": 2408.8,
+      "duration": 3.84,
+      "text": "action as a derivative operator"
+    },
+    {
+      "start": 2410.88,
+      "duration": 3.68,
+      "text": "so that's pretty cool that's like this"
+    },
+    {
+      "start": 2412.64,
+      "duration": 3.36,
+      "text": "really striking"
+    },
+    {
+      "start": 2414.56,
+      "duration": 4.4,
+      "text": "observation about the difference of two"
+    },
+    {
+      "start": 2416.0,
+      "duration": 2.96,
+      "text": "derivative operators"
+    },
+    {
+      "start": 2419.76,
+      "duration": 6.319,
+      "text": "and just expressing"
+    },
+    {
+      "start": 2423.52,
+      "duration": 3.92,
+      "text": "this information we've gained in one"
+    },
+    {
+      "start": 2426.079,
+      "duration": 4.801,
+      "text": "equation"
+    },
+    {
+      "start": 2427.44,
+      "duration": 6.24,
+      "text": "we learn already how"
+    },
+    {
+      "start": 2430.88,
+      "duration": 3.439,
+      "text": "what the we've completely understood the"
+    },
+    {
+      "start": 2433.68,
+      "duration": 3.2,
+      "text": "freedom"
+    },
+    {
+      "start": 2434.319,
+      "duration": 3.921,
+      "text": "in defining these covariant derivative"
+    },
+    {
+      "start": 2436.88,
+      "duration": 2.8,
+      "text": "operators because"
+    },
+    {
+      "start": 2438.24,
+      "duration": 3.28,
+      "text": "we know that if we have two covariant"
+    },
+    {
+      "start": 2439.68,
+      "duration": 3.679,
+      "text": "derivative operators then the covariance"
+    },
+    {
+      "start": 2441.52,
+      "duration": 3.92,
+      "text": "derivative of the first"
+    },
+    {
+      "start": 2443.359,
+      "duration": 3.841,
+      "text": "type of some dual vector field is the"
+    },
+    {
+      "start": 2445.44,
+      "duration": 3.36,
+      "text": "derivative of the second type minus some"
+    },
+    {
+      "start": 2447.2,
+      "duration": 6.639,
+      "text": "tensor field applied to that"
+    },
+    {
+      "start": 2448.8,
+      "duration": 5.039,
+      "text": "dual vector"
+    },
+    {
+      "start": 2454.16,
+      "duration": 5.36,
+      "text": "so let's uh now we're going to learn"
+    },
+    {
+      "start": 2457.2,
+      "duration": 6.639,
+      "text": "even more dramatically"
+    },
+    {
+      "start": 2459.52,
+      "duration": 7.44,
+      "text": "um how that just that data there"
+    },
+    {
+      "start": 2463.839,
+      "duration": 3.681,
+      "text": "is enough to specify delta on all tensor"
+    },
+    {
+      "start": 2466.96,
+      "duration": 2.56,
+      "text": "fields"
+    },
+    {
+      "start": 2467.52,
+      "duration": 3.28,
+      "text": "learn a sec but before we do that we're"
+    },
+    {
+      "start": 2469.52,
+      "duration": 2.0,
+      "text": "just going to notice something about the"
+    },
+    {
+      "start": 2470.8,
+      "duration": 3.36,
+      "text": "symmetry"
+    },
+    {
+      "start": 2471.52,
+      "duration": 6.0,
+      "text": "so suppose that we're assuming that our"
+    },
+    {
+      "start": 2474.16,
+      "duration": 7.439,
+      "text": "derivative operators are torsion free"
+    },
+    {
+      "start": 2477.52,
+      "duration": 6.319,
+      "text": "then that means that on scalars"
+    },
+    {
+      "start": 2481.599,
+      "duration": 2.24,
+      "text": "on"
+    },
+    {
+      "start": 2487.119,
+      "duration": 4.321,
+      "text": "the following object is symmetric right"
+    },
+    {
+      "start": 2489.92,
+      "duration": 4.72,
+      "text": "delta a delta b"
+    },
+    {
+      "start": 2491.44,
+      "duration": 6.399,
+      "text": "equals delta a delta b"
+    },
+    {
+      "start": 2494.64,
+      "duration": 5.84,
+      "text": "twiddle f minus c c a b"
+    },
+    {
+      "start": 2497.839,
+      "duration": 2.641,
+      "text": "we're just using"
+    },
+    {
+      "start": 2501.359,
+      "duration": 3.921,
+      "text": "the equation above but we notice that"
+    },
+    {
+      "start": 2503.359,
+      "duration": 4.801,
+      "text": "this is symmetric"
+    },
+    {
+      "start": 2505.28,
+      "duration": 3.52,
+      "text": "that's torsion freeness but also by"
+    },
+    {
+      "start": 2508.16,
+      "duration": 3.12,
+      "text": "assumption"
+    },
+    {
+      "start": 2508.8,
+      "duration": 5.279,
+      "text": "because delta twiddle obeys equation"
+    },
+    {
+      "start": 2511.28,
+      "duration": 5.28,
+      "text": "five that's symmetric so that implies"
+    },
+    {
+      "start": 2514.079,
+      "duration": 2.481,
+      "text": "that c"
+    },
+    {
+      "start": 2517.52,
+      "duration": 7.36,
+      "text": "c a b is also symmetric"
+    },
+    {
+      "start": 2522.64,
+      "duration": 4.959,
+      "text": "anyway this can happen as if c c a b is"
+    },
+    {
+      "start": 2524.88,
+      "duration": 2.719,
+      "text": "also symmetric"
+    },
+    {
+      "start": 2531.2,
+      "duration": 5.919,
+      "text": "okay so what we've seen so far"
+    },
+    {
+      "start": 2534.24,
+      "duration": 4.32,
+      "text": "is that we've abstractly characterized"
+    },
+    {
+      "start": 2537.119,
+      "duration": 3.121,
+      "text": "things that we call covarian derivative"
+    },
+    {
+      "start": 2538.56,
+      "duration": 3.36,
+      "text": "operators"
+    },
+    {
+      "start": 2540.24,
+      "duration": 3.2,
+      "text": "and then we've said what if we have two"
+    },
+    {
+      "start": 2541.92,
+      "duration": 2.8,
+      "text": "different coordinate uh covariance"
+    },
+    {
+      "start": 2543.44,
+      "duration": 4.32,
+      "text": "derivative operators"
+    },
+    {
+      "start": 2544.72,
+      "duration": 4.24,
+      "text": "um how different can they really be and"
+    },
+    {
+      "start": 2547.76,
+      "duration": 3.68,
+      "text": "then we've applied the"
+    },
+    {
+      "start": 2548.96,
+      "duration": 3.76,
+      "text": "the various axioms that we demand or"
+    },
+    {
+      "start": 2551.44,
+      "duration": 2.48,
+      "text": "conditions we demand of a covering"
+    },
+    {
+      "start": 2552.72,
+      "duration": 2.56,
+      "text": "derivative operator and we see that"
+    },
+    {
+      "start": 2553.92,
+      "duration": 3.84,
+      "text": "really the difference"
+    },
+    {
+      "start": 2555.28,
+      "duration": 3.44,
+      "text": "of two covariate derivative operators on"
+    },
+    {
+      "start": 2557.76,
+      "duration": 2.64,
+      "text": "a dual vector"
+    },
+    {
+      "start": 2558.72,
+      "duration": 3.68,
+      "text": "can't be that that's strange in fact"
+    },
+    {
+      "start": 2560.4,
+      "duration": 5.6,
+      "text": "it's just um"
+    },
+    {
+      "start": 2562.4,
+      "duration": 5.04,
+      "text": "the difference is just a ordinary old"
+    },
+    {
+      "start": 2566.0,
+      "duration": 4.16,
+      "text": "tensor field of type 1"
+    },
+    {
+      "start": 2567.44,
+      "duration": 4.639,
+      "text": "2 applied to the vector field the dual"
+    },
+    {
+      "start": 2570.16,
+      "duration": 5.28,
+      "text": "vector field omega c itself"
+    },
+    {
+      "start": 2572.079,
+      "duration": 7.28,
+      "text": "now the"
+    },
+    {
+      "start": 2575.44,
+      "duration": 6.56,
+      "text": "further amazing consequence"
+    },
+    {
+      "start": 2579.359,
+      "duration": 3.921,
+      "text": "once we've established this is that"
+    },
+    {
+      "start": 2582.0,
+      "duration": 4.16,
+      "text": "actually that's all the information we"
+    },
+    {
+      "start": 2583.28,
+      "duration": 5.6,
+      "text": "need to completely specify delta on all"
+    },
+    {
+      "start": 2586.16,
+      "duration": 4.72,
+      "text": "tensor fields so the leibniz property"
+    },
+    {
+      "start": 2588.88,
+      "duration": 5.6,
+      "text": "and four"
+    },
+    {
+      "start": 2590.88,
+      "duration": 3.6,
+      "text": "now actually determines this"
+    },
+    {
+      "start": 2595.359,
+      "duration": 12.48,
+      "text": "difference and thereby the freedom of"
+    },
+    {
+      "start": 2598.72,
+      "duration": 9.119,
+      "text": "covering derivatives on all tenses"
+    },
+    {
+      "start": 2608.96,
+      "duration": 3.359,
+      "text": "i'm not going to show it to you for all"
+    },
+    {
+      "start": 2610.24,
+      "duration": 3.599,
+      "text": "tenses um it's just an inductive"
+    },
+    {
+      "start": 2612.319,
+      "duration": 4.0,
+      "text": "argument i'm just going to show you how"
+    },
+    {
+      "start": 2613.839,
+      "duration": 3.841,
+      "text": "this formula in the yellow book the red"
+    },
+    {
+      "start": 2616.319,
+      "duration": 3.201,
+      "text": "box yellow formula here"
+    },
+    {
+      "start": 2617.68,
+      "duration": 3.12,
+      "text": "determines the derivative operator on"
+    },
+    {
+      "start": 2619.52,
+      "duration": 2.64,
+      "text": "all vector fields and then you'll see"
+    },
+    {
+      "start": 2620.8,
+      "duration": 4.319,
+      "text": "the trick once you've seen the trick you"
+    },
+    {
+      "start": 2622.16,
+      "duration": 6.48,
+      "text": "can generalize it"
+    },
+    {
+      "start": 2625.119,
+      "duration": 7.601,
+      "text": "so let omega b be a dual vector field"
+    },
+    {
+      "start": 2628.64,
+      "duration": 7.199,
+      "text": "and and t"
+    },
+    {
+      "start": 2632.72,
+      "duration": 3.119,
+      "text": "a vector field"
+    },
+    {
+      "start": 2638.72,
+      "duration": 3.76,
+      "text": "my other notation for that is x m"
+    },
+    {
+      "start": 2642.72,
+      "duration": 3.92,
+      "text": "so what do we know we know according to"
+    },
+    {
+      "start": 2644.88,
+      "duration": 3.76,
+      "text": "abstract index notation"
+    },
+    {
+      "start": 2646.64,
+      "duration": 4.24,
+      "text": "that omega a tia is the contraction of"
+    },
+    {
+      "start": 2648.64,
+      "duration": 4.64,
+      "text": "omega and t and is therefore a smooth"
+    },
+    {
+      "start": 2650.88,
+      "duration": 2.4,
+      "text": "function"
+    },
+    {
+      "start": 2654.4,
+      "duration": 4.88,
+      "text": "now four says that the delta the"
+    },
+    {
+      "start": 2657.68,
+      "duration": 4.32,
+      "text": "derivative operators commute with"
+    },
+    {
+      "start": 2659.28,
+      "duration": 5.839,
+      "text": "contractions right"
+    },
+    {
+      "start": 2662.0,
+      "duration": 3.119,
+      "text": "so we already learned this"
+    },
+    {
+      "start": 2669.119,
+      "duration": 5.441,
+      "text": "4 already tells us that the difference"
+    },
+    {
+      "start": 2670.96,
+      "duration": 3.6,
+      "text": "applied to a scalar function is 0."
+    },
+    {
+      "start": 2675.76,
+      "duration": 4.4,
+      "text": "sorry four isn't commuting with here it"
+    },
+    {
+      "start": 2678.079,
+      "duration": 2.081,
+      "text": "is"
+    },
+    {
+      "start": 2680.64,
+      "duration": 3.52,
+      "text": "now four is reduction to scalar function"
+    },
+    {
+      "start": 2682.319,
+      "duration": 5.201,
+      "text": "so i apologize"
+    },
+    {
+      "start": 2684.16,
+      "duration": 6.32,
+      "text": "i got confused here so condition four"
+    },
+    {
+      "start": 2687.52,
+      "duration": 4.64,
+      "text": "is the a derivative operator reduces to"
+    },
+    {
+      "start": 2690.48,
+      "duration": 3.04,
+      "text": "a scalar a vector field on a scalar"
+    },
+    {
+      "start": 2692.16,
+      "duration": 2.959,
+      "text": "function"
+    },
+    {
+      "start": 2693.52,
+      "duration": 2.96,
+      "text": "condition three is commutativity with"
+    },
+    {
+      "start": 2695.119,
+      "duration": 3.921,
+      "text": "contraction that's what we're about to"
+    },
+    {
+      "start": 2696.48,
+      "duration": 2.56,
+      "text": "use now"
+    },
+    {
+      "start": 2700.8,
+      "duration": 5.76,
+      "text": "so now we use leibniz"
+    },
+    {
+      "start": 2704.0,
+      "duration": 2.56,
+      "text": "n3"
+    },
+    {
+      "start": 2710.4,
+      "duration": 9.439,
+      "text": "and we learned that"
+    },
+    {
+      "start": 2722.8,
+      "duration": 11.039,
+      "text": "the following expression vanishes"
+    },
+    {
+      "start": 2727.44,
+      "duration": 6.399,
+      "text": "now we substitute the definition of c"
+    },
+    {
+      "start": 2734.48,
+      "duration": 7.04,
+      "text": "and what are we going to learn well we"
+    },
+    {
+      "start": 2737.68,
+      "duration": 8.8,
+      "text": "we find that t b c c a"
+    },
+    {
+      "start": 2741.52,
+      "duration": 6.64,
+      "text": "b omega c plus omega b"
+    },
+    {
+      "start": 2746.48,
+      "duration": 4.0,
+      "text": "and we don't substitute in the second"
+    },
+    {
+      "start": 2748.16,
+      "duration": 5.679,
+      "text": "one actually"
+    },
+    {
+      "start": 2750.48,
+      "duration": 6.56,
+      "text": "we can't sorry because this thing we"
+    },
+    {
+      "start": 2753.839,
+      "duration": 3.201,
+      "text": "don't even know what that is"
+    },
+    {
+      "start": 2758.24,
+      "duration": 3.04,
+      "text": "yet but we definitely know what it is in"
+    },
+    {
+      "start": 2759.68,
+      "duration": 4.399,
+      "text": "the first uh first term"
+    },
+    {
+      "start": 2761.28,
+      "duration": 5.28,
+      "text": "of this expression so but what we have"
+    },
+    {
+      "start": 2764.079,
+      "duration": 4.401,
+      "text": "learned is well we know what that is"
+    },
+    {
+      "start": 2766.56,
+      "duration": 4.0,
+      "text": "this first term here that's just a"
+    },
+    {
+      "start": 2768.48,
+      "duration": 4.48,
+      "text": "contraction of some some tenses"
+    },
+    {
+      "start": 2770.56,
+      "duration": 3.68,
+      "text": "some tensor fields and this is almost"
+    },
+    {
+      "start": 2772.96,
+      "duration": 2.24,
+      "text": "the thing that we want and then we use"
+    },
+    {
+      "start": 2774.24,
+      "duration": 4.96,
+      "text": "the linearity"
+    },
+    {
+      "start": 2775.2,
+      "duration": 5.28,
+      "text": "of these of these uh"
+    },
+    {
+      "start": 2779.2,
+      "duration": 3.2,
+      "text": "derivative operator covariance"
+    },
+    {
+      "start": 2780.48,
+      "duration": 4.08,
+      "text": "derivative operators"
+    },
+    {
+      "start": 2782.4,
+      "duration": 3.199,
+      "text": "and we rearrange this this expression"
+    },
+    {
+      "start": 2784.56,
+      "duration": 5.279,
+      "text": "here and"
+    },
+    {
+      "start": 2785.599,
+      "duration": 4.24,
+      "text": "factor out omega b"
+    },
+    {
+      "start": 2792.4,
+      "duration": 11.439,
+      "text": "to learn"
+    },
+    {
+      "start": 2805.52,
+      "duration": 5.92,
+      "text": "so we're just factoring out omega b here"
+    },
+    {
+      "start": 2808.96,
+      "duration": 4.48,
+      "text": "this expression vanishes or what's"
+    },
+    {
+      "start": 2811.44,
+      "duration": 4.879,
+      "text": "another way of writing this"
+    },
+    {
+      "start": 2813.44,
+      "duration": 3.919,
+      "text": "well another way of writing this is it"
+    },
+    {
+      "start": 2816.319,
+      "duration": 3.201,
+      "text": "tells us how"
+    },
+    {
+      "start": 2817.359,
+      "duration": 3.841,
+      "text": "these derivative operators act on"
+    },
+    {
+      "start": 2819.52,
+      "duration": 12.319,
+      "text": "arbitrary vector fields"
+    },
+    {
+      "start": 2821.2,
+      "duration": 10.639,
+      "text": "in terms of data that we already have"
+    },
+    {
+      "start": 2832.56,
+      "duration": 6.72,
+      "text": "so this trick uh can be applied"
+    },
+    {
+      "start": 2835.92,
+      "duration": 5.28,
+      "text": "inductively to find out now how delta"
+    },
+    {
+      "start": 2839.28,
+      "duration": 3.36,
+      "text": "and delta twiddle act on an arbitrary"
+    },
+    {
+      "start": 2841.2,
+      "duration": 3.6,
+      "text": "tensor field and namely what's the"
+    },
+    {
+      "start": 2842.64,
+      "duration": 5.04,
+      "text": "difference between these two actions"
+    },
+    {
+      "start": 2844.8,
+      "duration": 4.72,
+      "text": "so as an exercise i mean it's not such a"
+    },
+    {
+      "start": 2847.68,
+      "duration": 4.159,
+      "text": "hard exercise"
+    },
+    {
+      "start": 2849.52,
+      "duration": 3.76,
+      "text": "now that you've seen the trick it's just"
+    },
+    {
+      "start": 2851.839,
+      "duration": 2.881,
+      "text": "a bit tedious and you have to get down"
+    },
+    {
+      "start": 2853.28,
+      "duration": 3.52,
+      "text": "there and do it"
+    },
+    {
+      "start": 2854.72,
+      "duration": 3.839,
+      "text": "we learned that the action of a"
+    },
+    {
+      "start": 2856.8,
+      "duration": 3.12,
+      "text": "covariant derivative operator on a"
+    },
+    {
+      "start": 2858.559,
+      "duration": 5.121,
+      "text": "tensor of type"
+    },
+    {
+      "start": 2859.92,
+      "duration": 4.72,
+      "text": "kl is already determined once you know"
+    },
+    {
+      "start": 2863.68,
+      "duration": 8.72,
+      "text": "this"
+    },
+    {
+      "start": 2864.64,
+      "duration": 11.36,
+      "text": "tensorfield c"
+    },
+    {
+      "start": 2872.4,
+      "duration": 3.6,
+      "text": "and what you get is this"
+    },
+    {
+      "start": 2878.559,
+      "duration": 9.28,
+      "text": "expression here"
+    },
+    {
+      "start": 2896.0,
+      "duration": 3.119,
+      "text": "so you get that the action of a"
+    },
+    {
+      "start": 2897.68,
+      "duration": 3.12,
+      "text": "derivative operator on an arbitrary"
+    },
+    {
+      "start": 2899.119,
+      "duration": 3.041,
+      "text": "tensor field is the same as the other"
+    },
+    {
+      "start": 2900.8,
+      "duration": 4.48,
+      "text": "derivative operator"
+    },
+    {
+      "start": 2902.16,
+      "duration": 5.439,
+      "text": "plus all the contracting with the c"
+    },
+    {
+      "start": 2905.28,
+      "duration": 5.52,
+      "text": "tensor in all the places you can"
+    },
+    {
+      "start": 2907.599,
+      "duration": 3.201,
+      "text": "contract it one by one"
+    },
+    {
+      "start": 2911.76,
+      "duration": 4.079,
+      "text": "and summing up the answer"
+    },
+    {
+      "start": 2927.359,
+      "duration": 3.041,
+      "text": "so in other words"
+    },
+    {
+      "start": 2934.4,
+      "duration": 3.6,
+      "text": "the action of delta a"
+    },
+    {
+      "start": 2938.559,
+      "duration": 5.28,
+      "text": "twiddle minus delta a"
+    },
+    {
+      "start": 2944.16,
+      "duration": 3.12,
+      "text": "on arbitrary"
+    },
+    {
+      "start": 2949.28,
+      "duration": 4.24,
+      "text": "tensor fields of type kl is determined"
+    },
+    {
+      "start": 2952.0,
+      "duration": 5.44,
+      "text": "already by"
+    },
+    {
+      "start": 2953.52,
+      "duration": 7.76,
+      "text": "the data of a"
+    },
+    {
+      "start": 2957.44,
+      "duration": 3.84,
+      "text": "tensor field of type um"
+    },
+    {
+      "start": 2961.52,
+      "duration": 2.4,
+      "text": "want to"
+    },
+    {
+      "start": 2966.079,
+      "duration": 4.161,
+      "text": "and the converse is also true right you"
+    },
+    {
+      "start": 2968.0,
+      "duration": 4.0,
+      "text": "know converse if"
+    },
+    {
+      "start": 2970.24,
+      "duration": 3.68,
+      "text": "if someone hands you or if you decide to"
+    },
+    {
+      "start": 2972.0,
+      "duration": 4.72,
+      "text": "hand me a tensor"
+    },
+    {
+      "start": 2973.92,
+      "duration": 2.8,
+      "text": "field of type"
+    },
+    {
+      "start": 2977.2,
+      "duration": 8.639,
+      "text": "c a b"
+    },
+    {
+      "start": 2986.88,
+      "duration": 4.56,
+      "text": "then this determines a derivative"
+    },
+    {
+      "start": 2989.44,
+      "duration": 9.44,
+      "text": "operator"
+    },
+    {
+      "start": 2991.44,
+      "duration": 8.879,
+      "text": "as above"
+    },
+    {
+      "start": 2998.88,
+      "duration": 5.12,
+      "text": "i've just realized something that i have"
+    },
+    {
+      "start": 3000.319,
+      "duration": 3.681,
+      "text": "to correct i'll do that in a second"
+    },
+    {
+      "start": 3010.839,
+      "duration": 3.0,
+      "text": "converse"
+    },
+    {
+      "start": 3015.92,
+      "duration": 4.96,
+      "text": "so given this field of numbers here"
+    },
+    {
+      "start": 3018.0,
+      "duration": 2.88,
+      "text": "functions here"
+    },
+    {
+      "start": 3021.839,
+      "duration": 6.0,
+      "text": "and a derivative operator"
+    },
+    {
+      "start": 3028.559,
+      "duration": 14.241,
+      "text": "delta a twiddle then defining"
+    },
+    {
+      "start": 3046.559,
+      "duration": 4.481,
+      "text": "the delta a defined by"
+    },
+    {
+      "start": 3052.24,
+      "duration": 4.96,
+      "text": "delta a twiddle at sorry by star star"
+    },
+    {
+      "start": 3057.52,
+      "duration": 4.799,
+      "text": "is also a derivative operator"
+    },
+    {
+      "start": 3066.88,
+      "duration": 3.84,
+      "text": "and now i realized there's something"
+    },
+    {
+      "start": 3068.559,
+      "duration": 4.481,
+      "text": "that uh"
+    },
+    {
+      "start": 3070.72,
+      "duration": 3.44,
+      "text": "is slightly incorrect potentially what"
+    },
+    {
+      "start": 3073.04,
+      "duration": 4.24,
+      "text": "i've been writing"
+    },
+    {
+      "start": 3074.16,
+      "duration": 5.12,
+      "text": "so i've been saying that this object"
+    },
+    {
+      "start": 3077.28,
+      "duration": 2.48,
+      "text": "here c is a tensor that was not quite"
+    },
+    {
+      "start": 3079.28,
+      "duration": 1.92,
+      "text": "correct"
+    },
+    {
+      "start": 3079.76,
+      "duration": 3.2,
+      "text": "not a tensor in the sense of general"
+    },
+    {
+      "start": 3081.2,
+      "duration": 4.0,
+      "text": "relativity and i knew this confusion was"
+    },
+    {
+      "start": 3082.96,
+      "duration": 6.8,
+      "text": "going to happen at some point here"
+    },
+    {
+      "start": 3085.2,
+      "duration": 4.56,
+      "text": "and i did it i apologize"
+    },
+    {
+      "start": 3092.079,
+      "duration": 6.321,
+      "text": "i made this mistake so c"
+    },
+    {
+      "start": 3095.359,
+      "duration": 6.161,
+      "text": "c a b is n does not"
+    },
+    {
+      "start": 3098.4,
+      "duration": 4.719,
+      "text": "this is an annoying part of the perhaps"
+    },
+    {
+      "start": 3101.52,
+      "duration": 3.039,
+      "text": "the abstract index notation and the"
+    },
+    {
+      "start": 3103.119,
+      "duration": 2.641,
+      "text": "terminology surrounding differential"
+    },
+    {
+      "start": 3104.559,
+      "duration": 3.04,
+      "text": "geometry c c a b"
+    },
+    {
+      "start": 3105.76,
+      "duration": 3.52,
+      "text": "is a list of functions or you can think"
+    },
+    {
+      "start": 3107.599,
+      "duration": 3.681,
+      "text": "of it uh"
+    },
+    {
+      "start": 3109.28,
+      "duration": 3.279,
+      "text": "alternatively as an element of this"
+    },
+    {
+      "start": 3111.28,
+      "duration": 2.96,
+      "text": "tensor product"
+    },
+    {
+      "start": 3112.559,
+      "duration": 4.161,
+      "text": "vector space here for all points p in"
+    },
+    {
+      "start": 3114.24,
+      "duration": 4.879,
+      "text": "the manifold"
+    },
+    {
+      "start": 3116.72,
+      "duration": 9.119,
+      "text": "very very important warning ccab does"
+    },
+    {
+      "start": 3119.119,
+      "duration": 6.72,
+      "text": "not transform as a tensor of type"
+    },
+    {
+      "start": 3126.319,
+      "duration": 2.721,
+      "text": "uh one two"
+    },
+    {
+      "start": 3130.8,
+      "duration": 4.08,
+      "text": "it actually obeys a different"
+    },
+    {
+      "start": 3131.92,
+      "duration": 2.96,
+      "text": "transformation law"
+    },
+    {
+      "start": 3136.64,
+      "duration": 4.16,
+      "text": "so it doesn't transform as a tensor"
+    },
+    {
+      "start": 3138.4,
+      "duration": 2.4,
+      "text": "field"
+    },
+    {
+      "start": 3143.44,
+      "duration": 10.399,
+      "text": "of type uh 1 2"
+    },
+    {
+      "start": 3147.04,
+      "duration": 6.799,
+      "text": "under change of b coordinates"
+    },
+    {
+      "start": 3155.2,
+      "duration": 4.159,
+      "text": "and so earlier i think i inadvertently"
+    },
+    {
+      "start": 3157.839,
+      "duration": 1.921,
+      "text": "implied that it did so i better go"
+    },
+    {
+      "start": 3159.359,
+      "duration": 2.401,
+      "text": "through"
+    },
+    {
+      "start": 3159.76,
+      "duration": 3.04,
+      "text": "and correct the note so we'll go back"
+    },
+    {
+      "start": 3161.76,
+      "duration": 4.88,
+      "text": "slowly so c"
+    },
+    {
+      "start": 3162.8,
+      "duration": 7.759,
+      "text": "c a b is a list of functions"
+    },
+    {
+      "start": 3166.64,
+      "duration": 6.4,
+      "text": "or it's a element of this vector space"
+    },
+    {
+      "start": 3170.559,
+      "duration": 5.681,
+      "text": "at each point p in the manifold"
+    },
+    {
+      "start": 3173.04,
+      "duration": 6.72,
+      "text": "um okay so far this is"
+    },
+    {
+      "start": 3176.24,
+      "duration": 5.599,
+      "text": "okay what i've written here yeah i don't"
+    },
+    {
+      "start": 3179.76,
+      "duration": 2.079,
+      "text": "think"
+    },
+    {
+      "start": 3184.0,
+      "duration": 4.16,
+      "text": "i think i may have gotten away with it i"
+    },
+    {
+      "start": 3185.44,
+      "duration": 9.28,
+      "text": "don't think i actually wrote ccab"
+    },
+    {
+      "start": 3188.16,
+      "duration": 10.159,
+      "text": "is a tensor of type one two at any point"
+    },
+    {
+      "start": 3194.72,
+      "duration": 5.119,
+      "text": "looks okay so but i'll just i'll"
+    },
+    {
+      "start": 3198.319,
+      "duration": 4.321,
+      "text": "go through these notes here and stress"
+    },
+    {
+      "start": 3199.839,
+      "duration": 6.321,
+      "text": "this point one more time because i can"
+    },
+    {
+      "start": 3202.64,
+      "duration": 6.56,
+      "text": "anticipate that this is confusing"
+    },
+    {
+      "start": 3206.16,
+      "duration": 7.76,
+      "text": "so delta twiddle minus delta"
+    },
+    {
+      "start": 3209.2,
+      "duration": 8.639,
+      "text": "a is a thing it's a map of tensors"
+    },
+    {
+      "start": 3213.92,
+      "duration": 8.56,
+      "text": "of type one zero one at p"
+    },
+    {
+      "start": 3217.839,
+      "duration": 8.081,
+      "text": "this does not uh imply that"
+    },
+    {
+      "start": 3222.48,
+      "duration": 6.079,
+      "text": "c that i've defined down here is a"
+    },
+    {
+      "start": 3225.92,
+      "duration": 4.32,
+      "text": "tensor field it's a linear map of"
+    },
+    {
+      "start": 3228.559,
+      "duration": 4.081,
+      "text": "tensors at each point"
+    },
+    {
+      "start": 3230.24,
+      "duration": 4.599,
+      "text": "p in the manifold so this is all true"
+    },
+    {
+      "start": 3232.64,
+      "duration": 6.24,
+      "text": "here by duality"
+    },
+    {
+      "start": 3234.839,
+      "duration": 7.401,
+      "text": "um c can be interpreted as a map"
+    },
+    {
+      "start": 3238.88,
+      "duration": 7.36,
+      "text": "from v star tensor v p tends to v p to r"
+    },
+    {
+      "start": 3242.24,
+      "duration": 6.599,
+      "text": "or as an element of v p tensor v p star"
+    },
+    {
+      "start": 3246.24,
+      "duration": 4.24,
+      "text": "tends to v b star at all points in the"
+    },
+    {
+      "start": 3248.839,
+      "duration": 3.401,
+      "text": "manifold"
+    },
+    {
+      "start": 3250.48,
+      "duration": 3.44,
+      "text": "if you were to change your coordinate"
+    },
+    {
+      "start": 3252.24,
+      "duration": 3.839,
+      "text": "basis then c"
+    },
+    {
+      "start": 3253.92,
+      "duration": 3.28,
+      "text": "c a b transforms in a way that's not a"
+    },
+    {
+      "start": 3256.079,
+      "duration": 3.76,
+      "text": "tensor field"
+    },
+    {
+      "start": 3257.2,
+      "duration": 4.08,
+      "text": "and that's where one should be a little"
+    },
+    {
+      "start": 3259.839,
+      "duration": 3.0,
+      "text": "bit um"
+    },
+    {
+      "start": 3261.28,
+      "duration": 3.74,
+      "text": "cautious with this abstract index"
+    },
+    {
+      "start": 3262.839,
+      "duration": 4.201,
+      "text": "notation"
+    },
+    {
+      "start": 3265.02,
+      "duration": 5.86,
+      "text": "[Music]"
+    },
+    {
+      "start": 3267.04,
+      "duration": 8.4,
+      "text": "because it sort of implies that"
+    },
+    {
+      "start": 3270.88,
+      "duration": 7.919,
+      "text": "c a b is a tensor field of type one two"
+    },
+    {
+      "start": 3275.44,
+      "duration": 6.56,
+      "text": "so i'll put it in red here but c c a b"
+    },
+    {
+      "start": 3278.799,
+      "duration": 3.201,
+      "text": "is warning"
+    },
+    {
+      "start": 3284.72,
+      "duration": 6.48,
+      "text": "is not a tensor"
+    },
+    {
+      "start": 3288.24,
+      "duration": 5.52,
+      "text": "field right field is the operative word"
+    },
+    {
+      "start": 3291.2,
+      "duration": 5.68,
+      "text": "here"
+    },
+    {
+      "start": 3293.76,
+      "duration": 4.64,
+      "text": "of type t one two why not because if you"
+    },
+    {
+      "start": 3296.88,
+      "duration": 3.52,
+      "text": "were to change coordinate bases and"
+    },
+    {
+      "start": 3298.4,
+      "duration": 4.08,
+      "text": "recalculate c c a b"
+    },
+    {
+      "start": 3300.4,
+      "duration": 3.76,
+      "text": "then you get something that is not what"
+    },
+    {
+      "start": 3302.48,
+      "duration": 3.76,
+      "text": "you would expect from the tensor"
+    },
+    {
+      "start": 3304.16,
+      "duration": 6.24,
+      "text": "transformation law"
+    },
+    {
+      "start": 3306.24,
+      "duration": 4.16,
+      "text": "it transforms in a way just not"
+    },
+    {
+      "start": 3311.2,
+      "duration": 4.159,
+      "text": "it does not transform as a tensor field"
+    },
+    {
+      "start": 3313.92,
+      "duration": 6.08,
+      "text": "of type"
+    },
+    {
+      "start": 3315.359,
+      "duration": 6.881,
+      "text": "t12 in fact you get some extra terms"
+    },
+    {
+      "start": 3320.0,
+      "duration": 4.72,
+      "text": "all right um there's a very important"
+    },
+    {
+      "start": 3322.24,
+      "duration": 2.48,
+      "text": "example"
+    },
+    {
+      "start": 3325.04,
+      "duration": 3.12,
+      "text": "of the application"
+    },
+    {
+      "start": 3330.0,
+      "duration": 7.28,
+      "text": "of these observations"
+    },
+    {
+      "start": 3334.24,
+      "duration": 4.0,
+      "text": "is namely when delta a twiddle is the"
+    },
+    {
+      "start": 3337.28,
+      "duration": 3.2,
+      "text": "ordinary"
+    },
+    {
+      "start": 3338.24,
+      "duration": 4.559,
+      "text": "derivative operator that i introduced"
+    },
+    {
+      "start": 3340.48,
+      "duration": 2.319,
+      "text": "above"
+    },
+    {
+      "start": 3344.079,
+      "duration": 6.161,
+      "text": "so in this case we"
+    },
+    {
+      "start": 3347.119,
+      "duration": 3.121,
+      "text": "just use a different notation"
+    },
+    {
+      "start": 3357.119,
+      "duration": 6.72,
+      "text": "and for these c coefficients functions"
+    },
+    {
+      "start": 3373.52,
+      "duration": 3.279,
+      "text": "and we call them crystal symbols and we"
+    },
+    {
+      "start": 3376.48,
+      "duration": 3.68,
+      "text": "just"
+    },
+    {
+      "start": 3376.799,
+      "duration": 3.361,
+      "text": "write for the"
+    },
+    {
+      "start": 3384.24,
+      "duration": 7.44,
+      "text": "derivative operator we use the following"
+    },
+    {
+      "start": 3388.839,
+      "duration": 4.76,
+      "text": "notation"
+    },
+    {
+      "start": 3391.68,
+      "duration": 4.399,
+      "text": "which in coordinates so if you go to a"
+    },
+    {
+      "start": 3393.599,
+      "duration": 5.76,
+      "text": "coordinate basis"
+    },
+    {
+      "start": 3396.079,
+      "duration": 6.081,
+      "text": "you can then"
+    },
+    {
+      "start": 3399.359,
+      "duration": 2.801,
+      "text": "write the action"
+    },
+    {
+      "start": 3402.64,
+      "duration": 3.12,
+      "text": "of this derivative operator covering"
+    },
+    {
+      "start": 3404.48,
+      "duration": 4.72,
+      "text": "derivative on a"
+    },
+    {
+      "start": 3405.76,
+      "duration": 3.44,
+      "text": "vector field as such"
+    },
+    {
+      "start": 3416.839,
+      "duration": 3.0,
+      "text": "oops"
+    },
+    {
+      "start": 3422.96,
+      "duration": 4.879,
+      "text": "okay that's it for today we've"
+    },
+    {
+      "start": 3425.52,
+      "duration": 5.36,
+      "text": "introduced abstractly"
+    },
+    {
+      "start": 3427.839,
+      "duration": 4.801,
+      "text": "the list of requirements that we"
+    },
+    {
+      "start": 3430.88,
+      "duration": 3.28,
+      "text": "demand from any covariant derivative"
+    },
+    {
+      "start": 3432.64,
+      "duration": 3.6,
+      "text": "operator that we attach"
+    },
+    {
+      "start": 3434.16,
+      "duration": 4.24,
+      "text": "or associate with parallel transport on"
+    },
+    {
+      "start": 3436.24,
+      "duration": 3.68,
+      "text": "a differentiable manifold"
+    },
+    {
+      "start": 3438.4,
+      "duration": 3.12,
+      "text": "in the next lecture we're going to see"
+    },
+    {
+      "start": 3439.92,
+      "duration": 4.32,
+      "text": "how the data of"
+    },
+    {
+      "start": 3441.52,
+      "duration": 3.76,
+      "text": "the metric on a manifold is enough to"
+    },
+    {
+      "start": 3444.24,
+      "duration": 4.24,
+      "text": "complete"
+    },
+    {
+      "start": 3445.28,
+      "duration": 6.4,
+      "text": "uh uniquely uh isolate one particular"
+    },
+    {
+      "start": 3448.48,
+      "duration": 4.24,
+      "text": "special derivative operator and that's"
+    },
+    {
+      "start": 3451.68,
+      "duration": 3.04,
+      "text": "the one that will play"
+    },
+    {
+      "start": 3452.72,
+      "duration": 4.24,
+      "text": "a feature feature a key role in the"
+    },
+    {
+      "start": 3454.72,
+      "duration": 3.839,
+      "text": "formulation of general relativity"
+    },
+    {
+      "start": 3456.96,
+      "duration": 5.04,
+      "text": "but that's it for today thank you very"
+    },
+    {
+      "start": 3458.559,
+      "duration": 3.441,
+      "text": "much and good bye"
+    }
+  ]
+}

@@ -1,0 +1,3267 @@
+{
+  "title": "General Relativity, Lecture 20: the Schwarzschild solution",
+  "video_id": "OKIbkcK7SSw",
+  "url": "https://www.youtube.com/watch?v=OKIbkcK7SSw",
+  "transcript": [
+    {
+      "start": 0.0,
+      "duration": 3.12,
+      "text": "hello and welcome back to introduction"
+    },
+    {
+      "start": 1.76,
+      "duration": 2.88,
+      "text": "to general relativity"
+    },
+    {
+      "start": 3.12,
+      "duration": 3.679,
+      "text": "in the previous lecture we left off"
+    },
+    {
+      "start": 4.64,
+      "duration": 3.76,
+      "text": "discussing and introducing static"
+    },
+    {
+      "start": 6.799,
+      "duration": 3.441,
+      "text": "spherically symmetric solutions like"
+    },
+    {
+      "start": 8.4,
+      "duration": 4.319,
+      "text": "transfield equations"
+    },
+    {
+      "start": 10.24,
+      "duration": 4.08,
+      "text": "this topic naturally leads us to the"
+    },
+    {
+      "start": 12.719,
+      "duration": 3.921,
+      "text": "second and"
+    },
+    {
+      "start": 14.32,
+      "duration": 3.84,
+      "text": "also one of the most celebrated solution"
+    },
+    {
+      "start": 16.64,
+      "duration": 3.44,
+      "text": "of einstein's field equations namely the"
+    },
+    {
+      "start": 18.16,
+      "duration": 3.44,
+      "text": "schwarzschild solution"
+    },
+    {
+      "start": 20.08,
+      "duration": 4.0,
+      "text": "so if you recall in the previous lecture"
+    },
+    {
+      "start": 21.6,
+      "duration": 5.439,
+      "text": "we argued that the metric"
+    },
+    {
+      "start": 24.08,
+      "duration": 4.76,
+      "text": "of a static spherically symmetric"
+    },
+    {
+      "start": 27.039,
+      "duration": 4.801,
+      "text": "rotationally"
+    },
+    {
+      "start": 28.84,
+      "duration": 4.28,
+      "text": "invariant"
+    },
+    {
+      "start": 31.84,
+      "duration": 4.08,
+      "text": "all right that's what spherically"
+    },
+    {
+      "start": 33.12,
+      "duration": 5.759,
+      "text": "symmetric means"
+    },
+    {
+      "start": 35.92,
+      "duration": 4.72,
+      "text": "uh such a metric takes the following"
+    },
+    {
+      "start": 38.879,
+      "duration": 5.601,
+      "text": "form"
+    },
+    {
+      "start": 40.64,
+      "duration": 7.12,
+      "text": "or one can choose a coordinate system"
+    },
+    {
+      "start": 44.48,
+      "duration": 5.52,
+      "text": "where the metric takes the following"
+    },
+    {
+      "start": 47.76,
+      "duration": 2.24,
+      "text": "form"
+    },
+    {
+      "start": 50.64,
+      "duration": 4.64,
+      "text": "so this was the content of the previous"
+    },
+    {
+      "start": 52.96,
+      "duration": 2.32,
+      "text": "lecture"
+    },
+    {
+      "start": 57.039,
+      "duration": 6.081,
+      "text": "and this is the solution that we will"
+    },
+    {
+      "start": 60.32,
+      "duration": 5.199,
+      "text": "we so found now this isn't quite a"
+    },
+    {
+      "start": 63.12,
+      "duration": 4.8,
+      "text": "solution to einstein's field equations"
+    },
+    {
+      "start": 65.519,
+      "duration": 5.201,
+      "text": "rather this is just the application of"
+    },
+    {
+      "start": 67.92,
+      "duration": 2.8,
+      "text": "the symmetries"
+    },
+    {
+      "start": 71.04,
+      "duration": 3.92,
+      "text": "that we demand of the solution on the"
+    },
+    {
+      "start": 73.28,
+      "duration": 4.0,
+      "text": "form of the metric"
+    },
+    {
+      "start": 74.96,
+      "duration": 3.6,
+      "text": "so we've just written down a metric the"
+    },
+    {
+      "start": 77.28,
+      "duration": 2.879,
+      "text": "most general one that's static and"
+    },
+    {
+      "start": 78.56,
+      "duration": 3.68,
+      "text": "spherically symmetric"
+    },
+    {
+      "start": 80.159,
+      "duration": 3.6,
+      "text": "and this is not yet a solution to"
+    },
+    {
+      "start": 82.24,
+      "duration": 2.559,
+      "text": "einstein's field equations we have to"
+    },
+    {
+      "start": 83.759,
+      "duration": 4.0,
+      "text": "deal with two"
+    },
+    {
+      "start": 84.799,
+      "duration": 4.401,
+      "text": "two unknowns here that we'll have to"
+    },
+    {
+      "start": 87.759,
+      "duration": 4.881,
+      "text": "solve for"
+    },
+    {
+      "start": 89.2,
+      "duration": 11.36,
+      "text": "so we've got a function f r"
+    },
+    {
+      "start": 92.64,
+      "duration": 11.119,
+      "text": "and a function hr"
+    },
+    {
+      "start": 100.56,
+      "duration": 4.879,
+      "text": "and our task today is to solve"
+    },
+    {
+      "start": 103.759,
+      "duration": 3.36,
+      "text": "for these two functions they're simple"
+    },
+    {
+      "start": 105.439,
+      "duration": 2.561,
+      "text": "functions of a single variable namely"
+    },
+    {
+      "start": 107.119,
+      "duration": 4.081,
+      "text": "the radial component"
+    },
+    {
+      "start": 108.0,
+      "duration": 5.759,
+      "text": "r and"
+    },
+    {
+      "start": 111.2,
+      "duration": 3.84,
+      "text": "in order to solve for these we need to"
+    },
+    {
+      "start": 113.759,
+      "duration": 2.72,
+      "text": "to substitute"
+    },
+    {
+      "start": 115.04,
+      "duration": 3.84,
+      "text": "the metric into einstein's field"
+    },
+    {
+      "start": 116.479,
+      "duration": 4.161,
+      "text": "equations work out the"
+    },
+    {
+      "start": 118.88,
+      "duration": 3.519,
+      "text": "crystal symbols work out the richie"
+    },
+    {
+      "start": 120.64,
+      "duration": 4.72,
+      "text": "tensor and so on"
+    },
+    {
+      "start": 122.399,
+      "duration": 3.841,
+      "text": "and then also equate it to the stress"
+    },
+    {
+      "start": 125.36,
+      "duration": 2.399,
+      "text": "energy tensor"
+    },
+    {
+      "start": 126.24,
+      "duration": 3.04,
+      "text": "and today we're going to be looking only"
+    },
+    {
+      "start": 127.759,
+      "duration": 3.681,
+      "text": "at the vacuum case"
+    },
+    {
+      "start": 129.28,
+      "duration": 3.92,
+      "text": "so that's where the stress energy tends"
+    },
+    {
+      "start": 131.44,
+      "duration": 3.68,
+      "text": "to be zero so we're going to eventually"
+    },
+    {
+      "start": 133.2,
+      "duration": 3.52,
+      "text": "equate the richie tensor to zero and"
+    },
+    {
+      "start": 135.12,
+      "duration": 2.0,
+      "text": "then we're going to find conditions that"
+    },
+    {
+      "start": 136.72,
+      "duration": 3.2,
+      "text": "uh"
+    },
+    {
+      "start": 137.12,
+      "duration": 4.32,
+      "text": "f and h have to satisfy in order to be a"
+    },
+    {
+      "start": 139.92,
+      "duration": 2.959,
+      "text": "solution or furnish a solution to"
+    },
+    {
+      "start": 141.44,
+      "duration": 6.24,
+      "text": "einstein's field equation"
+    },
+    {
+      "start": 142.879,
+      "duration": 8.161,
+      "text": "in the absence of any stress energy"
+    },
+    {
+      "start": 147.68,
+      "duration": 5.12,
+      "text": "so let's start it's a purely mechanical"
+    },
+    {
+      "start": 151.04,
+      "duration": 2.479,
+      "text": "procedure now we just take the metric"
+    },
+    {
+      "start": 152.8,
+      "duration": 2.719,
+      "text": "and we start"
+    },
+    {
+      "start": 153.519,
+      "duration": 4.881,
+      "text": "computing and that's going to be the"
+    },
+    {
+      "start": 155.519,
+      "duration": 5.041,
+      "text": "goal for the next two lectures"
+    },
+    {
+      "start": 158.4,
+      "duration": 5.44,
+      "text": "so we start by summarizing the"
+    },
+    {
+      "start": 160.56,
+      "duration": 3.28,
+      "text": "components of the metric"
+    },
+    {
+      "start": 166.08,
+      "duration": 7.36,
+      "text": "so we've got the metric written"
+    },
+    {
+      "start": 169.44,
+      "duration": 4.0,
+      "text": "in this differential form up above"
+    },
+    {
+      "start": 173.519,
+      "duration": 3.681,
+      "text": "but it's also convenient just to write"
+    },
+    {
+      "start": 175.599,
+      "duration": 3.041,
+      "text": "out the components of the metric in"
+    },
+    {
+      "start": 177.2,
+      "duration": 4.08,
+      "text": "component form"
+    },
+    {
+      "start": 178.64,
+      "duration": 3.44,
+      "text": "so we only have four nonzero components"
+    },
+    {
+      "start": 181.28,
+      "duration": 3.84,
+      "text": "we have the time"
+    },
+    {
+      "start": 182.08,
+      "duration": 6.72,
+      "text": "time component which is minus fr we have"
+    },
+    {
+      "start": 185.12,
+      "duration": 7.039,
+      "text": "the radial radial component which is hr"
+    },
+    {
+      "start": 188.8,
+      "duration": 4.719,
+      "text": "we have the theta theta component which"
+    },
+    {
+      "start": 192.159,
+      "duration": 4.8,
+      "text": "is r squared"
+    },
+    {
+      "start": 193.519,
+      "duration": 3.681,
+      "text": "and we have the phi phi component which"
+    },
+    {
+      "start": 196.959,
+      "duration": 4.881,
+      "text": "is"
+    },
+    {
+      "start": 197.2,
+      "duration": 5.92,
+      "text": "r squared sine squared theta"
+    },
+    {
+      "start": 201.84,
+      "duration": 2.88,
+      "text": "now that we have the metric and it's"
+    },
+    {
+      "start": 203.12,
+      "duration": 3.119,
+      "text": "diagonal right that's kind of really"
+    },
+    {
+      "start": 204.72,
+      "duration": 2.56,
+      "text": "nice that if you were to put this in"
+    },
+    {
+      "start": 206.239,
+      "duration": 2.481,
+      "text": "matrix form"
+    },
+    {
+      "start": 207.28,
+      "duration": 3.039,
+      "text": "you would see that this is a diagonal"
+    },
+    {
+      "start": 208.72,
+      "duration": 4.56,
+      "text": "4x4 matrix"
+    },
+    {
+      "start": 210.319,
+      "duration": 4.64,
+      "text": "then we can easily invert the the metric"
+    },
+    {
+      "start": 213.28,
+      "duration": 5.12,
+      "text": "to find its components"
+    },
+    {
+      "start": 214.959,
+      "duration": 6.481,
+      "text": "the inverse matrix components and"
+    },
+    {
+      "start": 218.4,
+      "duration": 6.24,
+      "text": "we easily"
+    },
+    {
+      "start": 221.44,
+      "duration": 5.12,
+      "text": "find that the inverse metric has the"
+    },
+    {
+      "start": 224.64,
+      "duration": 4.239,
+      "text": "following components"
+    },
+    {
+      "start": 226.56,
+      "duration": 2.319,
+      "text": "here"
+    },
+    {
+      "start": 230.0,
+      "duration": 4.159,
+      "text": "it's also a diagonal matrix of course"
+    },
+    {
+      "start": 238.159,
+      "duration": 3.121,
+      "text": "so now we've got the components of the"
+    },
+    {
+      "start": 239.519,
+      "duration": 4.321,
+      "text": "metric both the"
+    },
+    {
+      "start": 241.28,
+      "duration": 3.28,
+      "text": "metric and its inverse we can go ahead"
+    },
+    {
+      "start": 243.84,
+      "duration": 2.399,
+      "text": "and compute"
+    },
+    {
+      "start": 244.56,
+      "duration": 3.36,
+      "text": "the christopher symbols it's the next"
+    },
+    {
+      "start": 246.239,
+      "duration": 4.881,
+      "text": "part of our task"
+    },
+    {
+      "start": 247.92,
+      "duration": 3.2,
+      "text": "to get at the"
+    },
+    {
+      "start": 251.28,
+      "duration": 4.56,
+      "text": "britchy tensor for this metric"
+    },
+    {
+      "start": 256.239,
+      "duration": 3.84,
+      "text": "so this is well a little bit of an"
+    },
+    {
+      "start": 259.04,
+      "duration": 3.76,
+      "text": "exercise"
+    },
+    {
+      "start": 260.079,
+      "duration": 4.161,
+      "text": "it's not the world's most complicated"
+    },
+    {
+      "start": 262.8,
+      "duration": 3.6,
+      "text": "computation"
+    },
+    {
+      "start": 264.24,
+      "duration": 3.44,
+      "text": "but you know there's a little bit of"
+    },
+    {
+      "start": 266.4,
+      "duration": 4.64,
+      "text": "hard work involved here"
+    },
+    {
+      "start": 267.68,
+      "duration": 5.44,
+      "text": "in working out the crystal symbols"
+    },
+    {
+      "start": 271.04,
+      "duration": 4.32,
+      "text": "you have to do some partial derivatives"
+    },
+    {
+      "start": 273.12,
+      "duration": 2.24,
+      "text": "and"
+    },
+    {
+      "start": 275.52,
+      "duration": 3.44,
+      "text": "work out which components are"
+    },
+    {
+      "start": 280.84,
+      "duration": 3.0,
+      "text": "non-trivial"
+    },
+    {
+      "start": 282.4,
+      "duration": 3.12,
+      "text": "but essentially it's a mechanical"
+    },
+    {
+      "start": 283.84,
+      "duration": 4.24,
+      "text": "computation that you can"
+    },
+    {
+      "start": 285.52,
+      "duration": 3.679,
+      "text": "put into your favorite algebra program"
+    },
+    {
+      "start": 288.08,
+      "duration": 4.8,
+      "text": "if you don't care to do"
+    },
+    {
+      "start": 289.199,
+      "duration": 4.321,
+      "text": "the computation uh there are more"
+    },
+    {
+      "start": 292.88,
+      "duration": 2.879,
+      "text": "elegant"
+    },
+    {
+      "start": 293.52,
+      "duration": 4.0,
+      "text": "ways to compute the richie tensor it"
+    },
+    {
+      "start": 295.759,
+      "duration": 3.44,
+      "text": "must be said we could use the tetrad"
+    },
+    {
+      "start": 297.52,
+      "duration": 3.119,
+      "text": "formalism which i didn't cover in this"
+    },
+    {
+      "start": 299.199,
+      "duration": 3.28,
+      "text": "course"
+    },
+    {
+      "start": 300.639,
+      "duration": 3.28,
+      "text": "that's probably better best left for a"
+    },
+    {
+      "start": 302.479,
+      "duration": 3.361,
+      "text": "more advanced course"
+    },
+    {
+      "start": 303.919,
+      "duration": 5.761,
+      "text": "so in the tetrad formalism there is"
+    },
+    {
+      "start": 305.84,
+      "duration": 6.639,
+      "text": "another way to get at the ritchie tensor"
+    },
+    {
+      "start": 309.68,
+      "duration": 4.4,
+      "text": "i won't be uh doing i'll just show you"
+    },
+    {
+      "start": 312.479,
+      "duration": 4.801,
+      "text": "the most direct way"
+    },
+    {
+      "start": 314.08,
+      "duration": 3.76,
+      "text": "um because this minimizes the amount of"
+    },
+    {
+      "start": 317.28,
+      "duration": 2.56,
+      "text": "magic"
+    },
+    {
+      "start": 317.84,
+      "duration": 8.0,
+      "text": "involved in in the computation you see"
+    },
+    {
+      "start": 319.84,
+      "duration": 6.0,
+      "text": "that is purely a mechanical procedure"
+    },
+    {
+      "start": 326.08,
+      "duration": 3.6,
+      "text": "so it's now an exercise to show that all"
+    },
+    {
+      "start": 328.24,
+      "duration": 3.12,
+      "text": "the christopherson"
+    },
+    {
+      "start": 329.68,
+      "duration": 3.6,
+      "text": "the only non-zero crystal symbols are"
+    },
+    {
+      "start": 331.36,
+      "duration": 8.48,
+      "text": "the following ones"
+    },
+    {
+      "start": 333.28,
+      "duration": 6.56,
+      "text": "so we've got a long list"
+    },
+    {
+      "start": 344.0,
+      "duration": 3.68,
+      "text": "so it's more really a bookkeeping"
+    },
+    {
+      "start": 345.6,
+      "duration": 4.8,
+      "text": "problem i don't think any single crystal"
+    },
+    {
+      "start": 347.68,
+      "duration": 4.079,
+      "text": "symbol is difficult to compute"
+    },
+    {
+      "start": 350.4,
+      "duration": 3.519,
+      "text": "certainly you could leave this as a"
+    },
+    {
+      "start": 351.759,
+      "duration": 6.081,
+      "text": "homework in a first year"
+    },
+    {
+      "start": 353.919,
+      "duration": 6.241,
+      "text": "calculus course but"
+    },
+    {
+      "start": 357.84,
+      "duration": 3.04,
+      "text": "the main task is more the the"
+    },
+    {
+      "start": 360.16,
+      "duration": 2.96,
+      "text": "bookkeeping"
+    },
+    {
+      "start": 360.88,
+      "duration": 3.2,
+      "text": "keeping track of all these symbols so"
+    },
+    {
+      "start": 363.12,
+      "duration": 4.32,
+      "text": "you don't"
+    },
+    {
+      "start": 364.08,
+      "duration": 5.839,
+      "text": "don't mislabel one forget one"
+    },
+    {
+      "start": 367.44,
+      "duration": 4.96,
+      "text": "that's zero when it should be non-zero"
+    },
+    {
+      "start": 369.919,
+      "duration": 2.481,
+      "text": "or whatever"
+    },
+    {
+      "start": 379.12,
+      "duration": 6.16,
+      "text": "so as always there's some probability"
+    },
+    {
+      "start": 381.68,
+      "duration": 3.6,
+      "text": "that i make a transcription error"
+    },
+    {
+      "start": 386.16,
+      "duration": 3.68,
+      "text": "so it's not only an exercise for the"
+    },
+    {
+      "start": 388.479,
+      "duration": 3.84,
+      "text": "good of your soul"
+    },
+    {
+      "start": 389.84,
+      "duration": 4.0,
+      "text": "to work out these christopher symbols"
+    },
+    {
+      "start": 392.319,
+      "duration": 2.641,
+      "text": "it's also a great form of error"
+    },
+    {
+      "start": 393.84,
+      "duration": 3.44,
+      "text": "correction"
+    },
+    {
+      "start": 394.96,
+      "duration": 5.359,
+      "text": "to ensure that i haven't made a mistake"
+    },
+    {
+      "start": 397.28,
+      "duration": 5.28,
+      "text": "in writing down these crystal symbols"
+    },
+    {
+      "start": 400.319,
+      "duration": 6.081,
+      "text": "so i highly encourage you to work out at"
+    },
+    {
+      "start": 402.56,
+      "duration": 3.84,
+      "text": "least one or two maybe take a random"
+    },
+    {
+      "start": 406.84,
+      "duration": 3.479,
+      "text": "sample"
+    },
+    {
+      "start": 408.08,
+      "duration": 3.44,
+      "text": "and uh convince yourself that either"
+    },
+    {
+      "start": 410.319,
+      "duration": 4.0,
+      "text": "i've written the right christopher"
+    },
+    {
+      "start": 411.52,
+      "duration": 6.239,
+      "text": "symbols down or the wrong ones"
+    },
+    {
+      "start": 414.319,
+      "duration": 3.44,
+      "text": "and then tell me in the comments"
+    },
+    {
+      "start": 420.4,
+      "duration": 6.72,
+      "text": "okay hopefully though i've written down"
+    },
+    {
+      "start": 424.08,
+      "duration": 3.04,
+      "text": "the correct ones and then"
+    },
+    {
+      "start": 427.44,
+      "duration": 3.92,
+      "text": "and then we have all the information we"
+    },
+    {
+      "start": 429.52,
+      "duration": 3.28,
+      "text": "now need to start computing the rigid"
+    },
+    {
+      "start": 431.36,
+      "duration": 4.72,
+      "text": "tensor"
+    },
+    {
+      "start": 432.8,
+      "duration": 4.239,
+      "text": "so you know i've i i've uh"
+    },
+    {
+      "start": 436.08,
+      "duration": 2.32,
+      "text": "implied that there are more"
+    },
+    {
+      "start": 437.039,
+      "duration": 2.241,
+      "text": "sophisticated ways to write down the"
+    },
+    {
+      "start": 438.4,
+      "duration": 2.16,
+      "text": "rigid tensor"
+    },
+    {
+      "start": 439.28,
+      "duration": 3.28,
+      "text": "well we're going to take the least"
+    },
+    {
+      "start": 440.56,
+      "duration": 4.88,
+      "text": "sophisticated route"
+    },
+    {
+      "start": 442.56,
+      "duration": 4.24,
+      "text": "in order to not obscure the physics here"
+    },
+    {
+      "start": 445.44,
+      "duration": 3.039,
+      "text": "and at least"
+    },
+    {
+      "start": 446.8,
+      "duration": 3.2,
+      "text": "the least sophisticated route to"
+    },
+    {
+      "start": 448.479,
+      "duration": 3.601,
+      "text": "computing the ritchie tensor is just to"
+    },
+    {
+      "start": 450.0,
+      "duration": 3.919,
+      "text": "go to the component formalism for the"
+    },
+    {
+      "start": 452.08,
+      "duration": 4.64,
+      "text": "riemann tensor"
+    },
+    {
+      "start": 453.919,
+      "duration": 2.801,
+      "text": "and then contract"
+    },
+    {
+      "start": 460.08,
+      "duration": 4.239,
+      "text": "and in particular if you look at the the"
+    },
+    {
+      "start": 463.039,
+      "duration": 4.241,
+      "text": "lecture that i gave at the"
+    },
+    {
+      "start": 464.319,
+      "duration": 5.361,
+      "text": "end of the discussion of differential"
+    },
+    {
+      "start": 467.28,
+      "duration": 5.599,
+      "text": "geometry you'll be able to find"
+    },
+    {
+      "start": 469.68,
+      "duration": 3.199,
+      "text": "this formula here"
+    },
+    {
+      "start": 475.68,
+      "duration": 5.199,
+      "text": "which is just a contracted form of the"
+    },
+    {
+      "start": 478.08,
+      "duration": 2.799,
+      "text": "riemann tensor"
+    },
+    {
+      "start": 482.24,
+      "duration": 4.0,
+      "text": "so we have at our disposal now all the"
+    },
+    {
+      "start": 484.56,
+      "duration": 2.96,
+      "text": "crystal symbols now we just have to go"
+    },
+    {
+      "start": 486.24,
+      "duration": 4.88,
+      "text": "through the tedious task"
+    },
+    {
+      "start": 487.52,
+      "duration": 8.0,
+      "text": "of carrying out"
+    },
+    {
+      "start": 491.12,
+      "duration": 4.4,
+      "text": "these contractions and multiplications"
+    },
+    {
+      "start": 499.039,
+      "duration": 3.681,
+      "text": "and that's another exercise"
+    },
+    {
+      "start": 505.36,
+      "duration": 3.6,
+      "text": "um you should uh"
+    },
+    {
+      "start": 509.84,
+      "duration": 3.759,
+      "text": "should find actually that the answer is"
+    },
+    {
+      "start": 511.52,
+      "duration": 5.28,
+      "text": "pretty simple so"
+    },
+    {
+      "start": 513.599,
+      "duration": 5.281,
+      "text": "maybe the easiest way to to start this"
+    },
+    {
+      "start": 516.8,
+      "duration": 4.32,
+      "text": "exercise is to first convince yourself"
+    },
+    {
+      "start": 518.88,
+      "duration": 5.44,
+      "text": "that the riemann tensor is zero"
+    },
+    {
+      "start": 521.12,
+      "duration": 4.64,
+      "text": "as long as mu is not equal to nu okay so"
+    },
+    {
+      "start": 524.32,
+      "duration": 6.639,
+      "text": "that only leaves you with four"
+    },
+    {
+      "start": 525.76,
+      "duration": 5.199,
+      "text": "four things to actually compute and then"
+    },
+    {
+      "start": 532.32,
+      "duration": 4.56,
+      "text": "you can look at the four components of"
+    },
+    {
+      "start": 534.08,
+      "duration": 15.759,
+      "text": "the richie tensor then"
+    },
+    {
+      "start": 536.88,
+      "duration": 12.959,
+      "text": "in turn"
+    },
+    {
+      "start": 555.12,
+      "duration": 3.68,
+      "text": "and these are you know not uncon not"
+    },
+    {
+      "start": 557.68,
+      "duration": 5.04,
+      "text": "uncomplicated"
+    },
+    {
+      "start": 558.8,
+      "duration": 5.76,
+      "text": "but again this is"
+    },
+    {
+      "start": 562.72,
+      "duration": 3.2,
+      "text": "calculus straightforward calculus"
+    },
+    {
+      "start": 564.56,
+      "duration": 13.279,
+      "text": "there's no sophisticated"
+    },
+    {
+      "start": 565.92,
+      "duration": 11.919,
+      "text": "anything's going on here"
+    },
+    {
+      "start": 588.839,
+      "duration": 3.0,
+      "text": "um"
+    },
+    {
+      "start": 605.76,
+      "duration": 4.16,
+      "text": "and we come to the fourth and final"
+    },
+    {
+      "start": 607.839,
+      "duration": 5.12,
+      "text": "component non-trivial component"
+    },
+    {
+      "start": 609.92,
+      "duration": 3.039,
+      "text": "of the rigid tensor"
+    },
+    {
+      "start": 615.12,
+      "duration": 4.719,
+      "text": "which is the time time component which i"
+    },
+    {
+      "start": 616.8,
+      "duration": 3.039,
+      "text": "read down last"
+    },
+    {
+      "start": 626.399,
+      "duration": 5.601,
+      "text": "so they're starting to look well"
+    },
+    {
+      "start": 629.68,
+      "duration": 4.96,
+      "text": "a bit intricate lots of f's and r's and"
+    },
+    {
+      "start": 632.0,
+      "duration": 2.64,
+      "text": "their derivatives"
+    },
+    {
+      "start": 634.8,
+      "duration": 4.88,
+      "text": "but actually the remarkable thing about"
+    },
+    {
+      "start": 637.68,
+      "duration": 4.48,
+      "text": "the schwarzschild solution is how easy"
+    },
+    {
+      "start": 639.68,
+      "duration": 6.399,
+      "text": "the actual"
+    },
+    {
+      "start": 642.16,
+      "duration": 6.08,
+      "text": "equations are to solve in the end"
+    },
+    {
+      "start": 646.079,
+      "duration": 5.2,
+      "text": "so there we go we've summarized the"
+    },
+    {
+      "start": 648.24,
+      "duration": 5.76,
+      "text": "non-trivial components of the riemann"
+    },
+    {
+      "start": 651.279,
+      "duration": 9.521,
+      "text": "of the richie tensor and that's what we"
+    },
+    {
+      "start": 654.0,
+      "duration": 7.839,
+      "text": "need now to apply einstein's equations"
+    },
+    {
+      "start": 660.8,
+      "duration": 2.4,
+      "text": "and that's what we're going to do next"
+    },
+    {
+      "start": 661.839,
+      "duration": 2.24,
+      "text": "right so what we're going to what we're"
+    },
+    {
+      "start": 663.2,
+      "duration": 3.28,
+      "text": "trying to do here"
+    },
+    {
+      "start": 664.079,
+      "duration": 3.921,
+      "text": "at this stage is model the gravitational"
+    },
+    {
+      "start": 666.48,
+      "duration": 5.359,
+      "text": "field outside"
+    },
+    {
+      "start": 668.0,
+      "duration": 5.76,
+      "text": "of some spherical source"
+    },
+    {
+      "start": 671.839,
+      "duration": 3.041,
+      "text": "we'll get to the inside part in the next"
+    },
+    {
+      "start": 673.76,
+      "duration": 3.759,
+      "text": "lecture so"
+    },
+    {
+      "start": 674.88,
+      "duration": 4.399,
+      "text": "outside of a spherically symmetric"
+    },
+    {
+      "start": 677.519,
+      "duration": 4.161,
+      "text": "distribution of stress energy"
+    },
+    {
+      "start": 679.279,
+      "duration": 3.761,
+      "text": "the gravitational field should be"
+    },
+    {
+      "start": 681.68,
+      "duration": 4.64,
+      "text": "spherically symmetric"
+    },
+    {
+      "start": 683.04,
+      "duration": 5.2,
+      "text": "right and outside this source"
+    },
+    {
+      "start": 686.32,
+      "duration": 3.04,
+      "text": "the stress energy tends to zero so"
+    },
+    {
+      "start": 688.24,
+      "duration": 2.48,
+      "text": "that's what we're going to do first so"
+    },
+    {
+      "start": 689.36,
+      "duration": 2.24,
+      "text": "you've got to imagine you know we have"
+    },
+    {
+      "start": 690.72,
+      "duration": 3.679,
+      "text": "some"
+    },
+    {
+      "start": 691.6,
+      "duration": 3.919,
+      "text": "celestial body a star indeed that's"
+    },
+    {
+      "start": 694.399,
+      "duration": 3.68,
+      "text": "pretty much all we're going to"
+    },
+    {
+      "start": 695.519,
+      "duration": 3.841,
+      "text": "focus on in this course is a star so"
+    },
+    {
+      "start": 698.079,
+      "duration": 4.481,
+      "text": "here it is there's a big"
+    },
+    {
+      "start": 699.36,
+      "duration": 6.479,
+      "text": "hot liquid gas thing"
+    },
+    {
+      "start": 702.56,
+      "duration": 6.399,
+      "text": "and the gravitation you know the star"
+    },
+    {
+      "start": 705.839,
+      "duration": 5.921,
+      "text": "deforms the gravitational field thanks"
+    },
+    {
+      "start": 708.959,
+      "duration": 4.481,
+      "text": "to einstein's field equation this is my"
+    },
+    {
+      "start": 711.76,
+      "duration": 6.079,
+      "text": "cartoon for the gravitational field"
+    },
+    {
+      "start": 713.44,
+      "duration": 4.399,
+      "text": "these blue lines here"
+    },
+    {
+      "start": 718.639,
+      "duration": 6.0,
+      "text": "and we assume that there's no"
+    },
+    {
+      "start": 721.839,
+      "duration": 3.841,
+      "text": "part of the star outside of the the body"
+    },
+    {
+      "start": 724.639,
+      "duration": 3.841,
+      "text": "of the star right"
+    },
+    {
+      "start": 725.68,
+      "duration": 5.04,
+      "text": "there's no atoms or any stress form of"
+    },
+    {
+      "start": 728.48,
+      "duration": 5.84,
+      "text": "stress energy outside of the start"
+    },
+    {
+      "start": 730.72,
+      "duration": 3.6,
+      "text": "and we're we're at the currently"
+    },
+    {
+      "start": 734.56,
+      "duration": 5.76,
+      "text": "we're solving for the gravitational"
+    },
+    {
+      "start": 737.04,
+      "duration": 3.28,
+      "text": "field which is just the metric"
+    },
+    {
+      "start": 741.2,
+      "duration": 4.319,
+      "text": "what we're going to do in the next"
+    },
+    {
+      "start": 744.0,
+      "duration": 2.16,
+      "text": "lecture is to solve the gravitational"
+    },
+    {
+      "start": 745.519,
+      "duration": 6.081,
+      "text": "field"
+    },
+    {
+      "start": 746.16,
+      "duration": 5.44,
+      "text": "outside the celestial body"
+    },
+    {
+      "start": 753.68,
+      "duration": 6.88,
+      "text": "and the the gravitational field"
+    },
+    {
+      "start": 758.0,
+      "duration": 2.56,
+      "text": "inside"
+    },
+    {
+      "start": 761.519,
+      "duration": 12.32,
+      "text": "the interior solution we'll do"
+    },
+    {
+      "start": 766.079,
+      "duration": 7.76,
+      "text": "in the next lecture"
+    },
+    {
+      "start": 774.72,
+      "duration": 4.88,
+      "text": "so in order to solve for the"
+    },
+    {
+      "start": 778.24,
+      "duration": 4.719,
+      "text": "gravitational field outside the star we"
+    },
+    {
+      "start": 779.6,
+      "duration": 3.359,
+      "text": "need the vacuum einstein's field"
+    },
+    {
+      "start": 784.839,
+      "duration": 3.0,
+      "text": "equations"
+    },
+    {
+      "start": 806.959,
+      "duration": 3.12,
+      "text": "and then we're going to find in the next"
+    },
+    {
+      "start": 808.24,
+      "duration": 4.32,
+      "text": "lecture the interior solution with the"
+    },
+    {
+      "start": 810.079,
+      "duration": 3.921,
+      "text": "the usual non-vacuum einstein field"
+    },
+    {
+      "start": 812.56,
+      "duration": 4.24,
+      "text": "equations i'm going to paste the two"
+    },
+    {
+      "start": 814.0,
+      "duration": 2.8,
+      "text": "solutions together"
+    },
+    {
+      "start": 817.04,
+      "duration": 3.2,
+      "text": "now we won't quite use just the vacuum"
+    },
+    {
+      "start": 818.959,
+      "duration": 2.961,
+      "text": "einstein's field equation it's actually"
+    },
+    {
+      "start": 820.24,
+      "duration": 2.08,
+      "text": "going to use the trace free form or"
+    },
+    {
+      "start": 821.92,
+      "duration": 2.32,
+      "text": "trace"
+    },
+    {
+      "start": 822.32,
+      "duration": 4.519,
+      "text": "sorry not tracer3 the trace reversed"
+    },
+    {
+      "start": 824.24,
+      "duration": 6.64,
+      "text": "form so recall"
+    },
+    {
+      "start": 826.839,
+      "duration": 4.041,
+      "text": "from lecture 13"
+    },
+    {
+      "start": 832.079,
+      "duration": 5.681,
+      "text": "the uh what you could call trace"
+    },
+    {
+      "start": 834.8,
+      "duration": 2.96,
+      "text": "reversed form"
+    },
+    {
+      "start": 840.16,
+      "duration": 5.2,
+      "text": "of einstein's field equations which read"
+    },
+    {
+      "start": 842.32,
+      "duration": 5.519,
+      "text": "r mu nu equals eight pi"
+    },
+    {
+      "start": 845.36,
+      "duration": 5.919,
+      "text": "and we've gotten rid of the metric from"
+    },
+    {
+      "start": 847.839,
+      "duration": 5.281,
+      "text": "einstein's tensor and then we replace"
+    },
+    {
+      "start": 851.279,
+      "duration": 3.12,
+      "text": "that contribution with the contribution"
+    },
+    {
+      "start": 853.12,
+      "duration": 3.04,
+      "text": "coming from the trace of the stress"
+    },
+    {
+      "start": 854.399,
+      "duration": 3.201,
+      "text": "energy tensor so this is a completely"
+    },
+    {
+      "start": 856.16,
+      "duration": 2.64,
+      "text": "equivalent form of insurance field"
+    },
+    {
+      "start": 857.6,
+      "duration": 5.76,
+      "text": "equations"
+    },
+    {
+      "start": 858.8,
+      "duration": 4.56,
+      "text": "and and the reason we like this form"
+    },
+    {
+      "start": 863.92,
+      "duration": 3.039,
+      "text": "is that in a vacuum"
+    },
+    {
+      "start": 869.36,
+      "duration": 6.08,
+      "text": "uh t minu equals zero"
+    },
+    {
+      "start": 872.56,
+      "duration": 3.44,
+      "text": "and therefore of course so does t so"
+    },
+    {
+      "start": 875.44,
+      "duration": 3.04,
+      "text": "actually"
+    },
+    {
+      "start": 876.0,
+      "duration": 3.839,
+      "text": "uh the einstein's field equations in a"
+    },
+    {
+      "start": 878.48,
+      "duration": 2.96,
+      "text": "vacuum are super simple right it just"
+    },
+    {
+      "start": 879.839,
+      "duration": 2.721,
+      "text": "says that the ritchie tensor they just"
+    },
+    {
+      "start": 881.44,
+      "duration": 4.72,
+      "text": "say the rigid tensor"
+    },
+    {
+      "start": 882.56,
+      "duration": 6.719,
+      "text": "is zero and since we've already got four"
+    },
+    {
+      "start": 886.16,
+      "duration": 4.479,
+      "text": "components of the richie tensor"
+    },
+    {
+      "start": 889.279,
+      "duration": 4.641,
+      "text": "we just have to equate these four"
+    },
+    {
+      "start": 890.639,
+      "duration": 5.521,
+      "text": "components to zero and so"
+    },
+    {
+      "start": 893.92,
+      "duration": 5.919,
+      "text": "uh that makes our life super easy right"
+    },
+    {
+      "start": 896.16,
+      "duration": 3.679,
+      "text": "it just suffices"
+    },
+    {
+      "start": 900.639,
+      "duration": 4.161,
+      "text": "to set just three equations to zero"
+    },
+    {
+      "start": 910.72,
+      "duration": 3.119,
+      "text": "y3 well if you look back up at the"
+    },
+    {
+      "start": 912.32,
+      "duration": 3.28,
+      "text": "ritchie tensor here the"
+    },
+    {
+      "start": 913.839,
+      "duration": 3.12,
+      "text": "the the phi phi component is just"
+    },
+    {
+      "start": 915.6,
+      "duration": 2.72,
+      "text": "proportional to the theta theta"
+    },
+    {
+      "start": 916.959,
+      "duration": 4.401,
+      "text": "component so"
+    },
+    {
+      "start": 918.32,
+      "duration": 3.04,
+      "text": "you know you get it for free"
+    },
+    {
+      "start": 922.72,
+      "duration": 4.4,
+      "text": "um and well you could just go through"
+    },
+    {
+      "start": 925.04,
+      "duration": 3.919,
+      "text": "and do that"
+    },
+    {
+      "start": 927.12,
+      "duration": 4.24,
+      "text": "so let's you know you take the ritchie"
+    },
+    {
+      "start": 928.959,
+      "duration": 4.8,
+      "text": "tensor you take these components"
+    },
+    {
+      "start": 931.36,
+      "duration": 4.479,
+      "text": "then you set them to zero and then you"
+    },
+    {
+      "start": 933.759,
+      "duration": 3.601,
+      "text": "you set about the task of solving this"
+    },
+    {
+      "start": 935.839,
+      "duration": 3.281,
+      "text": "coupled sort of nonlinear differential"
+    },
+    {
+      "start": 937.36,
+      "duration": 3.039,
+      "text": "equations and the first thing you might"
+    },
+    {
+      "start": 939.12,
+      "duration": 4.399,
+      "text": "do is start to eliminate"
+    },
+    {
+      "start": 940.399,
+      "duration": 4.8,
+      "text": "you know epson h's and uh i'll save you"
+    },
+    {
+      "start": 943.519,
+      "duration": 5.12,
+      "text": "the bother"
+    },
+    {
+      "start": 945.199,
+      "duration": 5.841,
+      "text": "and just point out that you can you can"
+    },
+    {
+      "start": 948.639,
+      "duration": 2.401,
+      "text": "do that"
+    },
+    {
+      "start": 952.56,
+      "duration": 4.079,
+      "text": "by you can eliminate the"
+    },
+    {
+      "start": 957.519,
+      "duration": 4.481,
+      "text": "uh you don't quite eliminate the f's and"
+    },
+    {
+      "start": 961.12,
+      "duration": 3.839,
+      "text": "the h's"
+    },
+    {
+      "start": 962.0,
+      "duration": 4.399,
+      "text": "but you can place you can exploit the"
+    },
+    {
+      "start": 964.959,
+      "duration": 3.281,
+      "text": "the three equations that are now"
+    },
+    {
+      "start": 966.399,
+      "duration": 5.36,
+      "text": "einstein's field equations"
+    },
+    {
+      "start": 968.24,
+      "duration": 6.64,
+      "text": "to derive a very simple form"
+    },
+    {
+      "start": 971.759,
+      "duration": 11.76,
+      "text": "or to derive a very simple"
+    },
+    {
+      "start": 974.88,
+      "duration": 11.44,
+      "text": "equation that needs to be satisfied"
+    },
+    {
+      "start": 983.519,
+      "duration": 4.32,
+      "text": "and this particular equation relates f"
+    },
+    {
+      "start": 986.32,
+      "duration": 3.92,
+      "text": "the derivative of f and the derivative"
+    },
+    {
+      "start": 987.839,
+      "duration": 2.401,
+      "text": "of h"
+    },
+    {
+      "start": 991.519,
+      "duration": 4.88,
+      "text": "right this equation is going to be zero"
+    },
+    {
+      "start": 993.92,
+      "duration": 5.52,
+      "text": "and so if you add these two particular"
+    },
+    {
+      "start": 996.399,
+      "duration": 4.961,
+      "text": "combinations of rtt and r and then you"
+    },
+    {
+      "start": 999.44,
+      "duration": 4.319,
+      "text": "see that you get this equation"
+    },
+    {
+      "start": 1001.36,
+      "duration": 3.039,
+      "text": "on the right and of course the the r"
+    },
+    {
+      "start": 1003.759,
+      "duration": 4.08,
+      "text": "over"
+    },
+    {
+      "start": 1004.399,
+      "duration": 4.481,
+      "text": "the one over r times h our component"
+    },
+    {
+      "start": 1007.839,
+      "duration": 2.881,
+      "text": "cancels out and you're left with the"
+    },
+    {
+      "start": 1008.88,
+      "duration": 3.84,
+      "text": "incredibly simple equation right you're"
+    },
+    {
+      "start": 1010.72,
+      "duration": 5.359,
+      "text": "left with f prime over f"
+    },
+    {
+      "start": 1012.72,
+      "duration": 6.559,
+      "text": "plus h prime over h is zero"
+    },
+    {
+      "start": 1016.079,
+      "duration": 6.56,
+      "text": "well another way of writing that is that"
+    },
+    {
+      "start": 1019.279,
+      "duration": 6.24,
+      "text": "f is just equal to a constant times by h"
+    },
+    {
+      "start": 1022.639,
+      "duration": 2.88,
+      "text": "to the minus 1."
+    },
+    {
+      "start": 1026.64,
+      "duration": 4.72,
+      "text": "so that's pretty cool you know we've"
+    },
+    {
+      "start": 1029.439,
+      "duration": 9.36,
+      "text": "already completely eliminated"
+    },
+    {
+      "start": 1031.36,
+      "duration": 10.079,
+      "text": "h from the story"
+    },
+    {
+      "start": 1038.799,
+      "duration": 4.961,
+      "text": "and this constant well we can rescale"
+    },
+    {
+      "start": 1041.439,
+      "duration": 2.321,
+      "text": "time"
+    },
+    {
+      "start": 1044.319,
+      "duration": 3.12,
+      "text": "to get rid of that constant"
+    },
+    {
+      "start": 1050.799,
+      "duration": 4.161,
+      "text": "so if we take t goes to root k t"
+    },
+    {
+      "start": 1055.16,
+      "duration": 6.759,
+      "text": "[Music]"
+    },
+    {
+      "start": 1056.72,
+      "duration": 5.199,
+      "text": "we may just simply set k equal to one"
+    },
+    {
+      "start": 1063.2,
+      "duration": 5.68,
+      "text": "now uh well we may as well use the"
+    },
+    {
+      "start": 1065.76,
+      "duration": 3.12,
+      "text": "information we have at hand"
+    },
+    {
+      "start": 1071.52,
+      "duration": 4.88,
+      "text": "namely r theta theta is in r theta theta"
+    },
+    {
+      "start": 1079.6,
+      "duration": 2.959,
+      "text": "to get the following consequence if we"
+    },
+    {
+      "start": 1080.96,
+      "duration": 3.28,
+      "text": "go back to r t to theta so if you look"
+    },
+    {
+      "start": 1082.559,
+      "duration": 3.041,
+      "text": "at r theta theta here and you use the"
+    },
+    {
+      "start": 1084.24,
+      "duration": 4.48,
+      "text": "fact that"
+    },
+    {
+      "start": 1085.6,
+      "duration": 7.84,
+      "text": "well you know f"
+    },
+    {
+      "start": 1088.72,
+      "duration": 4.72,
+      "text": "is minus one over h"
+    },
+    {
+      "start": 1093.6,
+      "duration": 4.72,
+      "text": "sorry f is 1 over h then"
+    },
+    {
+      "start": 1096.64,
+      "duration": 5.039,
+      "text": "then things simplify pretty pretty"
+    },
+    {
+      "start": 1098.32,
+      "duration": 6.4,
+      "text": "dramatically and we're left with"
+    },
+    {
+      "start": 1101.679,
+      "duration": 3.281,
+      "text": "this rather simple equation namely minus"
+    },
+    {
+      "start": 1104.72,
+      "duration": 3.28,
+      "text": "f"
+    },
+    {
+      "start": 1104.96,
+      "duration": 6.959,
+      "text": "prime plus 1 minus f over r is"
+    },
+    {
+      "start": 1108.0,
+      "duration": 5.52,
+      "text": "zero and that you can totally"
+    },
+    {
+      "start": 1111.919,
+      "duration": 4.161,
+      "text": "you can rearrange to get a total"
+    },
+    {
+      "start": 1113.52,
+      "duration": 2.56,
+      "text": "derivative"
+    },
+    {
+      "start": 1118.16,
+      "duration": 7.519,
+      "text": "and uh well that you can integrate"
+    },
+    {
+      "start": 1122.799,
+      "duration": 5.361,
+      "text": "to get that f is one plus some constant"
+    },
+    {
+      "start": 1125.679,
+      "duration": 2.481,
+      "text": "over r"
+    },
+    {
+      "start": 1135.679,
+      "duration": 16.161,
+      "text": "and what we've just done is we've"
+    },
+    {
+      "start": 1136.88,
+      "duration": 14.96,
+      "text": "actually just solved for the metric"
+    },
+    {
+      "start": 1153.28,
+      "duration": 4.96,
+      "text": "now we'll just substitute in what we've"
+    },
+    {
+      "start": 1155.039,
+      "duration": 3.201,
+      "text": "obtained for f and"
+    },
+    {
+      "start": 1162.84,
+      "duration": 3.0,
+      "text": "h"
+    },
+    {
+      "start": 1171.039,
+      "duration": 3.76,
+      "text": "and then we'll see we've reduced"
+    },
+    {
+      "start": 1172.08,
+      "duration": 5.52,
+      "text": "everything down to one"
+    },
+    {
+      "start": 1174.799,
+      "duration": 3.361,
+      "text": "undetermined constant which we will"
+    },
+    {
+      "start": 1177.6,
+      "duration": 4.16,
+      "text": "determine"
+    },
+    {
+      "start": 1178.16,
+      "duration": 3.6,
+      "text": "in the course of the next minutes"
+    },
+    {
+      "start": 1188.4,
+      "duration": 5.44,
+      "text": "so we've used an abbreviation here"
+    },
+    {
+      "start": 1200.08,
+      "duration": 4.719,
+      "text": "and this particular solution this is"
+    },
+    {
+      "start": 1202.24,
+      "duration": 5.6,
+      "text": "what we call"
+    },
+    {
+      "start": 1204.799,
+      "duration": 3.041,
+      "text": "the schwarzschild metric"
+    },
+    {
+      "start": 1213.36,
+      "duration": 4.08,
+      "text": "and it was obtained in 1916"
+    },
+    {
+      "start": 1218.84,
+      "duration": 3.48,
+      "text": "by"
+    },
+    {
+      "start": 1220.24,
+      "duration": 3.52,
+      "text": "so we have this constant c inside the"
+    },
+    {
+      "start": 1222.32,
+      "duration": 4.479,
+      "text": "the schwarzschild metric"
+    },
+    {
+      "start": 1223.76,
+      "duration": 4.08,
+      "text": "and you know what should that constant"
+    },
+    {
+      "start": 1226.799,
+      "duration": 3.041,
+      "text": "be"
+    },
+    {
+      "start": 1227.84,
+      "duration": 4.079,
+      "text": "you know there's since we're talking"
+    },
+    {
+      "start": 1229.84,
+      "duration": 4.319,
+      "text": "about a celestial body"
+    },
+    {
+      "start": 1231.919,
+      "duration": 3.201,
+      "text": "as a source for this uh gravitational"
+    },
+    {
+      "start": 1234.159,
+      "duration": 3.76,
+      "text": "field"
+    },
+    {
+      "start": 1235.12,
+      "duration": 4.48,
+      "text": "um there's not many constants you might"
+    },
+    {
+      "start": 1237.919,
+      "duration": 3.76,
+      "text": "attach to a celestial body"
+    },
+    {
+      "start": 1239.6,
+      "duration": 3.439,
+      "text": "and so the first guess and the correct"
+    },
+    {
+      "start": 1241.679,
+      "duration": 4.401,
+      "text": "guess right is that c is somehow"
+    },
+    {
+      "start": 1243.039,
+      "duration": 6.0,
+      "text": "proportional to the mass"
+    },
+    {
+      "start": 1246.08,
+      "duration": 5.52,
+      "text": "and and that we'll interpret in a second"
+    },
+    {
+      "start": 1249.039,
+      "duration": 4.561,
+      "text": "or that we'll argue in a second"
+    },
+    {
+      "start": 1251.6,
+      "duration": 3.04,
+      "text": "and uh but before we do that i just want"
+    },
+    {
+      "start": 1253.6,
+      "duration": 3.439,
+      "text": "to point out that you know"
+    },
+    {
+      "start": 1254.64,
+      "duration": 4.8,
+      "text": "this went rather painlessly this uh"
+    },
+    {
+      "start": 1257.039,
+      "duration": 5.361,
+      "text": "solution of einstein's field equations"
+    },
+    {
+      "start": 1259.44,
+      "duration": 3.599,
+      "text": "and unfortunately this is not the nature"
+    },
+    {
+      "start": 1262.4,
+      "duration": 3.12,
+      "text": "of things"
+    },
+    {
+      "start": 1263.039,
+      "duration": 3.841,
+      "text": "uh it's not easy to solve einstein's"
+    },
+    {
+      "start": 1265.52,
+      "duration": 3.6,
+      "text": "field equations on the on"
+    },
+    {
+      "start": 1266.88,
+      "duration": 3.12,
+      "text": "the contrary it's an extraordinarily"
+    },
+    {
+      "start": 1269.12,
+      "duration": 3.76,
+      "text": "intricate and"
+    },
+    {
+      "start": 1270.0,
+      "duration": 4.88,
+      "text": "uh involved task to actually solve one"
+    },
+    {
+      "start": 1272.88,
+      "duration": 4.08,
+      "text": "shots field occasions in general"
+    },
+    {
+      "start": 1274.88,
+      "duration": 4.08,
+      "text": "we've just selected in this course out"
+    },
+    {
+      "start": 1276.96,
+      "duration": 5.199,
+      "text": "the very best two solutions"
+    },
+    {
+      "start": 1278.96,
+      "duration": 3.199,
+      "text": "that really uh"
+    },
+    {
+      "start": 1282.24,
+      "duration": 4.96,
+      "text": "illustrate the illustrate some"
+    },
+    {
+      "start": 1285.679,
+      "duration": 3.921,
+      "text": "extraordinary amounts of physics with an"
+    },
+    {
+      "start": 1287.2,
+      "duration": 5.52,
+      "text": "extraordinary little amount of work"
+    },
+    {
+      "start": 1289.6,
+      "duration": 4.16,
+      "text": "by exploiting certain symmetries in"
+    },
+    {
+      "start": 1292.72,
+      "duration": 4.0,
+      "text": "particular"
+    },
+    {
+      "start": 1293.76,
+      "duration": 4.56,
+      "text": "spherical symmetry in this case here so"
+    },
+    {
+      "start": 1296.72,
+      "duration": 2.8,
+      "text": "the schwarzschild solution should be you"
+    },
+    {
+      "start": 1298.32,
+      "duration": 4.0,
+      "text": "know you should think of this as kind of"
+    },
+    {
+      "start": 1299.52,
+      "duration": 5.279,
+      "text": "like the hydrogen atom"
+    },
+    {
+      "start": 1302.32,
+      "duration": 3.12,
+      "text": "of general relativity or hydrogen atom"
+    },
+    {
+      "start": 1304.799,
+      "duration": 2.081,
+      "text": "is the"
+    },
+    {
+      "start": 1305.44,
+      "duration": 3.359,
+      "text": "solution of quantum mechanics if you"
+    },
+    {
+      "start": 1306.88,
+      "duration": 3.12,
+      "text": "like um"
+    },
+    {
+      "start": 1308.799,
+      "duration": 3.36,
+      "text": "they both pertain to spherically"
+    },
+    {
+      "start": 1310.0,
+      "duration": 5.12,
+      "text": "symmetric um"
+    },
+    {
+      "start": 1312.159,
+      "duration": 7.681,
+      "text": "entities and they both are extremely"
+    },
+    {
+      "start": 1315.12,
+      "duration": 7.36,
+      "text": "important in cosmology"
+    },
+    {
+      "start": 1319.84,
+      "duration": 3.28,
+      "text": "now we want to interpret this constant c"
+    },
+    {
+      "start": 1322.48,
+      "duration": 2.72,
+      "text": "right"
+    },
+    {
+      "start": 1323.12,
+      "duration": 3.6,
+      "text": "so how we're going to do that well you"
+    },
+    {
+      "start": 1325.2,
+      "duration": 2.479,
+      "text": "know one is just by saying what else"
+    },
+    {
+      "start": 1326.72,
+      "duration": 3.92,
+      "text": "could it be"
+    },
+    {
+      "start": 1327.679,
+      "duration": 4.48,
+      "text": "that's one way to interpret it well"
+    },
+    {
+      "start": 1330.64,
+      "duration": 4.64,
+      "text": "that's not quite as satisfying"
+    },
+    {
+      "start": 1332.159,
+      "duration": 4.161,
+      "text": "uh you you maybe gotta work a little"
+    },
+    {
+      "start": 1335.28,
+      "duration": 3.84,
+      "text": "harder"
+    },
+    {
+      "start": 1336.32,
+      "duration": 4.239,
+      "text": "and one way to do this is to just argue"
+    },
+    {
+      "start": 1339.12,
+      "duration": 2.559,
+      "text": "about what happens as r tends to"
+    },
+    {
+      "start": 1340.559,
+      "duration": 2.801,
+      "text": "infinity well"
+    },
+    {
+      "start": 1341.679,
+      "duration": 3.601,
+      "text": "in the limit r tends to infinity right"
+    },
+    {
+      "start": 1343.36,
+      "duration": 3.84,
+      "text": "just set r is infinity in this metric"
+    },
+    {
+      "start": 1345.28,
+      "duration": 3.759,
+      "text": "here i know it's not well defined but"
+    },
+    {
+      "start": 1347.2,
+      "duration": 3.599,
+      "text": "take a look at the first two terms"
+    },
+    {
+      "start": 1349.039,
+      "duration": 4.161,
+      "text": "you'll see that they both"
+    },
+    {
+      "start": 1350.799,
+      "duration": 4.321,
+      "text": "basically tend down the first two terms"
+    },
+    {
+      "start": 1353.2,
+      "duration": 4.8,
+      "text": "in the solution 10 to minus dt squared"
+    },
+    {
+      "start": 1355.12,
+      "duration": 2.88,
+      "text": "plus tr squared"
+    },
+    {
+      "start": 1358.88,
+      "duration": 3.2,
+      "text": "and so in that case you can say that the"
+    },
+    {
+      "start": 1361.28,
+      "duration": 2.32,
+      "text": "metric is a"
+    },
+    {
+      "start": 1362.08,
+      "duration": 2.959,
+      "text": "is approaching i mean to make this"
+    },
+    {
+      "start": 1363.6,
+      "duration": 2.48,
+      "text": "rigorous you do need to work a little"
+    },
+    {
+      "start": 1365.039,
+      "duration": 3.921,
+      "text": "harder but"
+    },
+    {
+      "start": 1366.08,
+      "duration": 3.36,
+      "text": "uh this is already sufficient actually"
+    },
+    {
+      "start": 1368.96,
+      "duration": 3.68,
+      "text": "for"
+    },
+    {
+      "start": 1369.44,
+      "duration": 5.28,
+      "text": "um identifying the constant"
+    },
+    {
+      "start": 1372.64,
+      "duration": 4.24,
+      "text": "so in the limit that r tends to infinity"
+    },
+    {
+      "start": 1374.72,
+      "duration": 5.12,
+      "text": "this this metric actually approaches the"
+    },
+    {
+      "start": 1376.88,
+      "duration": 2.96,
+      "text": "minkowski metric"
+    },
+    {
+      "start": 1383.039,
+      "duration": 6.801,
+      "text": "uh and you should think of these c over"
+    },
+    {
+      "start": 1386.0,
+      "duration": 3.84,
+      "text": "r terms as like a perturbation"
+    },
+    {
+      "start": 1398.08,
+      "duration": 6.0,
+      "text": "and there is a place where you can"
+    },
+    {
+      "start": 1401.919,
+      "duration": 3.681,
+      "text": "understand"
+    },
+    {
+      "start": 1404.08,
+      "duration": 4.4,
+      "text": "perturbations and general relativity"
+    },
+    {
+      "start": 1405.6,
+      "duration": 2.88,
+      "text": "right we covered that"
+    },
+    {
+      "start": 1411.52,
+      "duration": 4.88,
+      "text": "when we looked at linearized general"
+    },
+    {
+      "start": 1414.84,
+      "duration": 3.48,
+      "text": "relativity"
+    },
+    {
+      "start": 1416.4,
+      "duration": 4.24,
+      "text": "or general relativity in perturbation"
+    },
+    {
+      "start": 1418.32,
+      "duration": 2.32,
+      "text": "theory"
+    },
+    {
+      "start": 1421.919,
+      "duration": 3.201,
+      "text": "and we derived a pretty general formula"
+    },
+    {
+      "start": 1424.48,
+      "duration": 5.84,
+      "text": "for"
+    },
+    {
+      "start": 1425.12,
+      "duration": 8.32,
+      "text": "the metric in perturbation theory"
+    },
+    {
+      "start": 1430.32,
+      "duration": 3.12,
+      "text": "in the newtonian limit"
+    },
+    {
+      "start": 1439.279,
+      "duration": 2.801,
+      "text": "and so what we're going to do is we're"
+    },
+    {
+      "start": 1440.24,
+      "duration": 3.6,
+      "text": "going to compare the motion of a test"
+    },
+    {
+      "start": 1442.08,
+      "duration": 3.04,
+      "text": "body in the newtonian limit with the"
+    },
+    {
+      "start": 1443.84,
+      "duration": 3.199,
+      "text": "motion of a test body in the"
+    },
+    {
+      "start": 1445.12,
+      "duration": 4.159,
+      "text": "schwarzschild solution here"
+    },
+    {
+      "start": 1447.039,
+      "duration": 12.801,
+      "text": "and then then we'll be able to interpret"
+    },
+    {
+      "start": 1449.279,
+      "duration": 10.561,
+      "text": "that constant directly"
+    },
+    {
+      "start": 1472.0,
+      "duration": 4.08,
+      "text": "so we're all doing this in the weak"
+    },
+    {
+      "start": 1473.279,
+      "duration": 2.801,
+      "text": "field limit right"
+    },
+    {
+      "start": 1478.559,
+      "duration": 3.681,
+      "text": "this is an excellent exercise for you"
+    },
+    {
+      "start": 1485.6,
+      "duration": 4.48,
+      "text": "all right this should test your"
+    },
+    {
+      "start": 1488.4,
+      "duration": 5.68,
+      "text": "knowledge of the newtonian theory"
+    },
+    {
+      "start": 1490.08,
+      "duration": 4.0,
+      "text": "of the schwarzschild solution"
+    },
+    {
+      "start": 1498.0,
+      "duration": 5.36,
+      "text": "this is equation star by the way"
+    },
+    {
+      "start": 1501.039,
+      "duration": 4.161,
+      "text": "and what you should conclude after your"
+    },
+    {
+      "start": 1503.36,
+      "duration": 3.6,
+      "text": "exercise is that the constant"
+    },
+    {
+      "start": 1505.2,
+      "duration": 4.079,
+      "text": "should be to be consistent with the"
+    },
+    {
+      "start": 1506.96,
+      "duration": 4.4,
+      "text": "newtonian weak field limit"
+    },
+    {
+      "start": 1509.279,
+      "duration": 6.561,
+      "text": "the constant should be minus 2m where m"
+    },
+    {
+      "start": 1511.36,
+      "duration": 4.48,
+      "text": "is the mass of the celestial body"
+    },
+    {
+      "start": 1529.6,
+      "duration": 4.8,
+      "text": "and setting c is this constant"
+    },
+    {
+      "start": 1537.279,
+      "duration": 6.561,
+      "text": "gives us the final form of the solution"
+    },
+    {
+      "start": 1569.279,
+      "duration": 3.28,
+      "text": "and that's it that's pretty pretty"
+    },
+    {
+      "start": 1570.799,
+      "duration": 4.88,
+      "text": "awesome an amazing"
+    },
+    {
+      "start": 1572.559,
+      "duration": 4.161,
+      "text": "accomplishment uh this this metric does"
+    },
+    {
+      "start": 1575.679,
+      "duration": 3.681,
+      "text": "indeed differ"
+    },
+    {
+      "start": 1576.72,
+      "duration": 4.16,
+      "text": "from the newtonian theory especially for"
+    },
+    {
+      "start": 1579.36,
+      "duration": 4.0,
+      "text": "large m"
+    },
+    {
+      "start": 1580.88,
+      "duration": 3.279,
+      "text": "and we're going to investigate in the"
+    },
+    {
+      "start": 1583.36,
+      "duration": 2.799,
+      "text": "next lecture"
+    },
+    {
+      "start": 1584.159,
+      "duration": 3.041,
+      "text": "and in the following lectures the motion"
+    },
+    {
+      "start": 1586.159,
+      "duration": 3.921,
+      "text": "of test bodies"
+    },
+    {
+      "start": 1587.2,
+      "duration": 3.28,
+      "text": "in the presence of this metric and we'll"
+    },
+    {
+      "start": 1590.08,
+      "duration": 2.56,
+      "text": "see"
+    },
+    {
+      "start": 1590.48,
+      "duration": 3.52,
+      "text": "that this leads to some of the most"
+    },
+    {
+      "start": 1592.64,
+      "duration": 3.44,
+      "text": "celebrated uh"
+    },
+    {
+      "start": 1594.0,
+      "duration": 5.76,
+      "text": "predictions and verify now verified"
+    },
+    {
+      "start": 1596.08,
+      "duration": 6.16,
+      "text": "experimentally of general relativity"
+    },
+    {
+      "start": 1599.76,
+      "duration": 3.68,
+      "text": "so before we we finish the discussion of"
+    },
+    {
+      "start": 1602.24,
+      "duration": 4.24,
+      "text": "the schwarzschild metric"
+    },
+    {
+      "start": 1603.44,
+      "duration": 5.08,
+      "text": "the external vacuum solution"
+    },
+    {
+      "start": 1606.48,
+      "duration": 5.52,
+      "text": "i want to point out that there are some"
+    },
+    {
+      "start": 1608.52,
+      "duration": 6.12,
+      "text": "peculiarities about this solution"
+    },
+    {
+      "start": 1612.0,
+      "duration": 2.64,
+      "text": "there are"
+    },
+    {
+      "start": 1618.159,
+      "duration": 3.041,
+      "text": "two singularities"
+    },
+    {
+      "start": 1624.64,
+      "duration": 3.039,
+      "text": "in the solution right you should be at a"
+    },
+    {
+      "start": 1626.24,
+      "duration": 3.2,
+      "text": "spot where they are right what happens"
+    },
+    {
+      "start": 1627.679,
+      "duration": 2.48,
+      "text": "when r is zero well that doesn't look so"
+    },
+    {
+      "start": 1629.44,
+      "duration": 2.479,
+      "text": "good does it"
+    },
+    {
+      "start": 1630.159,
+      "duration": 3.841,
+      "text": "um you've got like infinite minus"
+    },
+    {
+      "start": 1631.919,
+      "duration": 5.76,
+      "text": "infinity times dt squared and"
+    },
+    {
+      "start": 1634.0,
+      "duration": 5.76,
+      "text": "minus infinity times d uh sorry"
+    },
+    {
+      "start": 1637.679,
+      "duration": 3.921,
+      "text": "um just just one single singularity on"
+    },
+    {
+      "start": 1639.76,
+      "duration": 6.639,
+      "text": "the time component"
+    },
+    {
+      "start": 1641.6,
+      "duration": 4.799,
+      "text": "and uh and so that doesn't look good um"
+    },
+    {
+      "start": 1646.88,
+      "duration": 4.159,
+      "text": "and there's also a second one right what"
+    },
+    {
+      "start": 1648.159,
+      "duration": 6.64,
+      "text": "happens if r is 2m"
+    },
+    {
+      "start": 1651.039,
+      "duration": 8.24,
+      "text": "it'll also make things go infinite"
+    },
+    {
+      "start": 1654.799,
+      "duration": 7.281,
+      "text": "so we have to think about these"
+    },
+    {
+      "start": 1659.279,
+      "duration": 2.801,
+      "text": "singularities"
+    },
+    {
+      "start": 1664.48,
+      "duration": 3.919,
+      "text": "and try and interpret them are they real"
+    },
+    {
+      "start": 1666.32,
+      "duration": 3.12,
+      "text": "singularities or are they just simply"
+    },
+    {
+      "start": 1668.399,
+      "duration": 3.52,
+      "text": "the results of"
+    },
+    {
+      "start": 1669.44,
+      "duration": 3.2,
+      "text": "a bad coordinate patch right you know it"
+    },
+    {
+      "start": 1671.919,
+      "duration": 2.321,
+      "text": "could be"
+    },
+    {
+      "start": 1672.64,
+      "duration": 3.2,
+      "text": "either space time is a manifold we've"
+    },
+    {
+      "start": 1674.24,
+      "duration": 2.319,
+      "text": "chosen the coordinate patch for our"
+    },
+    {
+      "start": 1675.84,
+      "duration": 3.76,
+      "text": "manifold"
+    },
+    {
+      "start": 1676.559,
+      "duration": 3.921,
+      "text": "perhaps our chart just simply breaks"
+    },
+    {
+      "start": 1679.6,
+      "duration": 3.52,
+      "text": "down"
+    },
+    {
+      "start": 1680.48,
+      "duration": 3.919,
+      "text": "at one of these points and actually the"
+    },
+    {
+      "start": 1683.12,
+      "duration": 2.88,
+      "text": "the manifold itself"
+    },
+    {
+      "start": 1684.399,
+      "duration": 3.681,
+      "text": "is the full solution is nice and smooth"
+    },
+    {
+      "start": 1686.0,
+      "duration": 6.159,
+      "text": "and there are no problems"
+    },
+    {
+      "start": 1688.08,
+      "duration": 4.079,
+      "text": "well that actually is the case"
+    },
+    {
+      "start": 1693.2,
+      "duration": 7.199,
+      "text": "in in for the singularity at r equals 2m"
+    },
+    {
+      "start": 1698.48,
+      "duration": 5.52,
+      "text": "that is a coordinate singularity i mean"
+    },
+    {
+      "start": 1700.399,
+      "duration": 3.601,
+      "text": "it's a little bit complicated to argue"
+    },
+    {
+      "start": 1708.84,
+      "duration": 3.0,
+      "text": "that"
+    },
+    {
+      "start": 1717.52,
+      "duration": 3.759,
+      "text": "it's a little bit uh uh complicated to"
+    },
+    {
+      "start": 1720.64,
+      "duration": 4.399,
+      "text": "organize"
+    },
+    {
+      "start": 1721.279,
+      "duration": 7.921,
+      "text": "a little bit complicated to argue that"
+    },
+    {
+      "start": 1725.039,
+      "duration": 4.161,
+      "text": "so we won't actually argue this here"
+    },
+    {
+      "start": 1734.24,
+      "duration": 3.84,
+      "text": "um because in a way it turns out to be"
+    },
+    {
+      "start": 1737.36,
+      "duration": 2.48,
+      "text": "not relevant"
+    },
+    {
+      "start": 1738.08,
+      "duration": 3.599,
+      "text": "we will actually paste on this"
+    },
+    {
+      "start": 1739.84,
+      "duration": 3.12,
+      "text": "coordinate patch with the interior"
+    },
+    {
+      "start": 1741.679,
+      "duration": 3.681,
+      "text": "solution and the reason why"
+    },
+    {
+      "start": 1742.96,
+      "duration": 2.4,
+      "text": "is this"
+    },
+    {
+      "start": 1746.559,
+      "duration": 6.081,
+      "text": "it's the following so for usual objects"
+    },
+    {
+      "start": 1748.72,
+      "duration": 7.92,
+      "text": "right you know"
+    },
+    {
+      "start": 1752.64,
+      "duration": 7.2,
+      "text": "um eg"
+    },
+    {
+      "start": 1756.64,
+      "duration": 3.2,
+      "text": "not black holes"
+    },
+    {
+      "start": 1763.2,
+      "duration": 4.079,
+      "text": "this radius r equals 2m where is it you"
+    },
+    {
+      "start": 1766.08,
+      "duration": 5.44,
+      "text": "might wonder where is this"
+    },
+    {
+      "start": 1767.279,
+      "duration": 7.841,
+      "text": "this this singularity"
+    },
+    {
+      "start": 1771.52,
+      "duration": 6.8,
+      "text": "well if you reintroduce big g uh"
+    },
+    {
+      "start": 1775.12,
+      "duration": 5.52,
+      "text": "the the the this point r equals 2m"
+    },
+    {
+      "start": 1778.32,
+      "duration": 4.8,
+      "text": "usually lies very deep within the object"
+    },
+    {
+      "start": 1780.64,
+      "duration": 2.48,
+      "text": "itself"
+    },
+    {
+      "start": 1785.279,
+      "duration": 4.081,
+      "text": "so for example for the sun"
+    },
+    {
+      "start": 1791.6,
+      "duration": 4.24,
+      "text": "rs this breakdown point"
+    },
+    {
+      "start": 1799.36,
+      "duration": 4.96,
+      "text": "uh where does that lie well it lies at"
+    },
+    {
+      "start": 1801.039,
+      "duration": 3.281,
+      "text": "about 2.95"
+    },
+    {
+      "start": 1806.84,
+      "duration": 3.079,
+      "text": "kilometers"
+    },
+    {
+      "start": 1808.08,
+      "duration": 3.12,
+      "text": "is well you know right in the center of"
+    },
+    {
+      "start": 1809.919,
+      "duration": 3.681,
+      "text": "the sun but that's"
+    },
+    {
+      "start": 1811.2,
+      "duration": 3.839,
+      "text": "exactly where the vacuum einstein the"
+    },
+    {
+      "start": 1813.6,
+      "duration": 10.24,
+      "text": "field equations aren't meant"
+    },
+    {
+      "start": 1815.039,
+      "duration": 8.801,
+      "text": "to apply"
+    },
+    {
+      "start": 1832.96,
+      "duration": 4.959,
+      "text": "the same holds for the singularity"
+    },
+    {
+      "start": 1834.48,
+      "duration": 5.12,
+      "text": "obviously at rs0 the only place"
+    },
+    {
+      "start": 1837.919,
+      "duration": 4.561,
+      "text": "where we have to take really care about"
+    },
+    {
+      "start": 1839.6,
+      "duration": 5.679,
+      "text": "these singularities is of course for"
+    },
+    {
+      "start": 1842.48,
+      "duration": 4.48,
+      "text": "more exotic objects in our universe"
+    },
+    {
+      "start": 1845.279,
+      "duration": 3.921,
+      "text": "namely black holes"
+    },
+    {
+      "start": 1846.96,
+      "duration": 3.92,
+      "text": "in that case one has to take more care"
+    },
+    {
+      "start": 1849.2,
+      "duration": 4.24,
+      "text": "about"
+    },
+    {
+      "start": 1850.88,
+      "duration": 4.08,
+      "text": "the schwarzschild solution but that is"
+    },
+    {
+      "start": 1853.44,
+      "duration": 3.04,
+      "text": "not unfortunately a topic for this"
+    },
+    {
+      "start": 1854.96,
+      "duration": 4.559,
+      "text": "course it's an advanced topic"
+    },
+    {
+      "start": 1856.48,
+      "duration": 6.72,
+      "text": "a highly interesting topic which we will"
+    },
+    {
+      "start": 1859.519,
+      "duration": 7.121,
+      "text": "i will postpone to the advanced"
+    },
+    {
+      "start": 1863.2,
+      "duration": 6.0,
+      "text": "course on general relativity um"
+    },
+    {
+      "start": 1866.64,
+      "duration": 3.84,
+      "text": "and instead we'll move on in the next"
+    },
+    {
+      "start": 1869.2,
+      "duration": 3.52,
+      "text": "lecture"
+    },
+    {
+      "start": 1870.48,
+      "duration": 4.079,
+      "text": "to discussing interior solutions so what"
+    },
+    {
+      "start": 1872.72,
+      "duration": 3.679,
+      "text": "the"
+    },
+    {
+      "start": 1874.559,
+      "duration": 2.881,
+      "text": "what is the solution to einstein's field"
+    },
+    {
+      "start": 1876.399,
+      "duration": 4.321,
+      "text": "equation look like for a static"
+    },
+    {
+      "start": 1877.44,
+      "duration": 3.28,
+      "text": "spherically symmetric body"
+    },
+    {
+      "start": 1880.799,
+      "duration": 4.321,
+      "text": "with spherical symmetric distribution of"
+    },
+    {
+      "start": 1883.6,
+      "duration": 2.64,
+      "text": "stress and energy"
+    },
+    {
+      "start": 1885.12,
+      "duration": 3.52,
+      "text": "and we'll derive that in the next"
+    },
+    {
+      "start": 1886.24,
+      "duration": 5.039,
+      "text": "lecture and"
+    },
+    {
+      "start": 1888.64,
+      "duration": 3.36,
+      "text": "then we'll commence the discussions the"
+    },
+    {
+      "start": 1891.279,
+      "duration": 3.28,
+      "text": "discussion"
+    },
+    {
+      "start": 1892.0,
+      "duration": 3.76,
+      "text": "of the motion of test bodies in the"
+    },
+    {
+      "start": 1894.559,
+      "duration": 3.12,
+      "text": "presence"
+    },
+    {
+      "start": 1895.76,
+      "duration": 3.44,
+      "text": "of the schwarzschild solution but that's"
+    },
+    {
+      "start": 1897.679,
+      "duration": 4.72,
+      "text": "a topic"
+    },
+    {
+      "start": 1899.2,
+      "duration": 6.719,
+      "text": "for next week for now that's it"
+    },
+    {
+      "start": 1902.399,
+      "duration": 3.52,
+      "text": "until next time goodbye"
+    }
+  ]
+}

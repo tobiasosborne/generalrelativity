@@ -1,0 +1,6852 @@
+{
+  "title": "General Relativity, Lecture 1: mass, universality of free fall, and prerelativity gravitation",
+  "video_id": "hyW4m4Z-9pY",
+  "url": "https://www.youtube.com/watch?v=hyW4m4Z-9pY",
+  "transcript": [
+    {
+      "start": 0.16,
+      "duration": 4.8,
+      "text": "g'day my name is tobias osborne welcome"
+    },
+    {
+      "start": 2.72,
+      "duration": 4.48,
+      "text": "to introduction to general relativity"
+    },
+    {
+      "start": 4.96,
+      "duration": 3.76,
+      "text": "i'm looking forward to you joining me on"
+    },
+    {
+      "start": 7.2,
+      "duration": 4.08,
+      "text": "this journey through physics most"
+    },
+    {
+      "start": 8.72,
+      "duration": 5.68,
+      "text": "elegant and beautiful of theories"
+    },
+    {
+      "start": 11.28,
+      "duration": 3.92,
+      "text": "i vividly recall the lecture in my first"
+    },
+    {
+      "start": 14.4,
+      "duration": 2.879,
+      "text": "year physics"
+    },
+    {
+      "start": 15.2,
+      "duration": 3.28,
+      "text": "degree where i first encountered general"
+    },
+    {
+      "start": 17.279,
+      "duration": 3.441,
+      "text": "relativity"
+    },
+    {
+      "start": 18.48,
+      "duration": 3.84,
+      "text": "at the time i was strongly contemplating"
+    },
+    {
+      "start": 20.72,
+      "duration": 4.0,
+      "text": "a move to computer science"
+    },
+    {
+      "start": 22.32,
+      "duration": 4.32,
+      "text": "but after that lecture i was hooked i"
+    },
+    {
+      "start": 24.72,
+      "duration": 3.92,
+      "text": "remember being amazed at the connection"
+    },
+    {
+      "start": 26.64,
+      "duration": 5.68,
+      "text": "between the curvature of space-time and"
+    },
+    {
+      "start": 28.64,
+      "duration": 3.68,
+      "text": "the motion of freely falling bodies"
+    },
+    {
+      "start": 32.64,
+      "duration": 3.759,
+      "text": "this is really the subject that drew me"
+    },
+    {
+      "start": 34.32,
+      "duration": 3.759,
+      "text": "into physics in the first place"
+    },
+    {
+      "start": 36.399,
+      "duration": 3.041,
+      "text": "it's not the one that kept me here but"
+    },
+    {
+      "start": 38.079,
+      "duration": 2.64,
+      "text": "it's certainly the one that drew me to"
+    },
+    {
+      "start": 39.44,
+      "duration": 3.2,
+      "text": "him"
+    },
+    {
+      "start": 40.719,
+      "duration": 4.32,
+      "text": "and i'm looking forward to teaching you"
+    },
+    {
+      "start": 42.64,
+      "duration": 3.36,
+      "text": "this most amazing and elegant of"
+    },
+    {
+      "start": 45.039,
+      "duration": 4.0,
+      "text": "theories"
+    },
+    {
+      "start": 46.0,
+      "duration": 5.28,
+      "text": "it's really no exaggeration that"
+    },
+    {
+      "start": 49.039,
+      "duration": 3.68,
+      "text": "physicists regard general relativity as"
+    },
+    {
+      "start": 51.28,
+      "duration": 4.72,
+      "text": "one of the most beautiful"
+    },
+    {
+      "start": 52.719,
+      "duration": 4.401,
+      "text": "physical theories that we have the words"
+    },
+    {
+      "start": 56.0,
+      "duration": 4.719,
+      "text": "elegant"
+    },
+    {
+      "start": 57.12,
+      "duration": 5.2,
+      "text": "and beautiful very appropriately"
+    },
+    {
+      "start": 60.719,
+      "duration": 3.52,
+      "text": "describe the theory of general"
+    },
+    {
+      "start": 62.32,
+      "duration": 3.44,
+      "text": "relativity indeed there's somehow an"
+    },
+    {
+      "start": 64.239,
+      "duration": 3.92,
+      "text": "element of the divine"
+    },
+    {
+      "start": 65.76,
+      "duration": 4.48,
+      "text": "in the way that general relativity works"
+    },
+    {
+      "start": 68.159,
+      "duration": 4.32,
+      "text": "and holds together"
+    },
+    {
+      "start": 70.24,
+      "duration": 3.76,
+      "text": "and i'm very much looking forward to"
+    },
+    {
+      "start": 72.479,
+      "duration": 3.521,
+      "text": "sharing all of this with you in the"
+    },
+    {
+      "start": 74.0,
+      "duration": 4.08,
+      "text": "coming course"
+    },
+    {
+      "start": 76.0,
+      "duration": 3.6,
+      "text": "but i should say before we go too much"
+    },
+    {
+      "start": 78.08,
+      "duration": 3.28,
+      "text": "into this course"
+    },
+    {
+      "start": 79.6,
+      "duration": 3.36,
+      "text": "it must be said that general relativity"
+    },
+    {
+      "start": 81.36,
+      "duration": 4.16,
+      "text": "is wrong"
+    },
+    {
+      "start": 82.96,
+      "duration": 3.36,
+      "text": "it's wrong because as far as we know it"
+    },
+    {
+      "start": 85.52,
+      "duration": 2.88,
+      "text": "does is not"
+    },
+    {
+      "start": 86.32,
+      "duration": 3.759,
+      "text": "compatible with the theory of quantum"
+    },
+    {
+      "start": 88.4,
+      "duration": 4.96,
+      "text": "mechanics or at least"
+    },
+    {
+      "start": 90.079,
+      "duration": 4.241,
+      "text": "not in a way that's compelling so we"
+    },
+    {
+      "start": 93.36,
+      "duration": 4.88,
+      "text": "need to correct"
+    },
+    {
+      "start": 94.32,
+      "duration": 7.04,
+      "text": "or find a deeper more underlying theory"
+    },
+    {
+      "start": 98.24,
+      "duration": 4.559,
+      "text": "for the the physics of nature itself"
+    },
+    {
+      "start": 101.36,
+      "duration": 3.039,
+      "text": "nonetheless even though general"
+    },
+    {
+      "start": 102.799,
+      "duration": 3.28,
+      "text": "relativity is wrong"
+    },
+    {
+      "start": 104.399,
+      "duration": 4.481,
+      "text": "it has proven to be spectacularly"
+    },
+    {
+      "start": 106.079,
+      "duration": 5.68,
+      "text": "successful in almost all cosmological"
+    },
+    {
+      "start": 108.88,
+      "duration": 4.239,
+      "text": "uh areas the predictions of general"
+    },
+    {
+      "start": 111.759,
+      "duration": 3.36,
+      "text": "relativity have been"
+    },
+    {
+      "start": 113.119,
+      "duration": 5.121,
+      "text": "confirmed to an extraordinary level of"
+    },
+    {
+      "start": 115.119,
+      "duration": 3.121,
+      "text": "degree of accuracy"
+    },
+    {
+      "start": 118.479,
+      "duration": 4.561,
+      "text": "what's the format of this lecture so"
+    },
+    {
+      "start": 120.799,
+      "duration": 4.64,
+      "text": "this lecture series will cover some"
+    },
+    {
+      "start": 123.04,
+      "duration": 4.56,
+      "text": "10 to 13 weeks there will be"
+    },
+    {
+      "start": 125.439,
+      "duration": 4.001,
+      "text": "approximately two lectures a week"
+    },
+    {
+      "start": 127.6,
+      "duration": 3.12,
+      "text": "i will record the videos for the"
+    },
+    {
+      "start": 129.44,
+      "duration": 3.2,
+      "text": "lectures it will be presented"
+    },
+    {
+      "start": 130.72,
+      "duration": 2.56,
+      "text": "asynchronously and i will upload the"
+    },
+    {
+      "start": 132.64,
+      "duration": 5.2,
+      "text": "lectures"
+    },
+    {
+      "start": 133.28,
+      "duration": 4.56,
+      "text": "usually on monday or tuesday in the week"
+    },
+    {
+      "start": 137.92,
+      "duration": 3.52,
+      "text": "for students at the leibniz university"
+    },
+    {
+      "start": 140.48,
+      "duration": 3.36,
+      "text": "of hanover"
+    },
+    {
+      "start": 141.44,
+      "duration": 3.92,
+      "text": "you can find all information regarding"
+    },
+    {
+      "start": 143.84,
+      "duration": 3.52,
+      "text": "the organization"
+    },
+    {
+      "start": 145.36,
+      "duration": 3.12,
+      "text": "and the examination requirements for"
+    },
+    {
+      "start": 147.36,
+      "duration": 5.28,
+      "text": "this course"
+    },
+    {
+      "start": 148.48,
+      "duration": 4.16,
+      "text": "on the study p webpage"
+    },
+    {
+      "start": 155.36,
+      "duration": 4.0,
+      "text": "there will be a textbook that i will be"
+    },
+    {
+      "start": 157.519,
+      "duration": 2.72,
+      "text": "following for this course the textbook"
+    },
+    {
+      "start": 159.36,
+      "duration": 4.239,
+      "text": "will be that of"
+    },
+    {
+      "start": 160.239,
+      "duration": 11.601,
+      "text": "uh wald this is world's"
+    },
+    {
+      "start": 163.599,
+      "duration": 8.241,
+      "text": "general relativity textbook"
+    },
+    {
+      "start": 172.4,
+      "duration": 3.6,
+      "text": "this is world's general relativity"
+    },
+    {
+      "start": 174.08,
+      "duration": 4.56,
+      "text": "textbook that we will be following"
+    },
+    {
+      "start": 176.0,
+      "duration": 2.64,
+      "text": "in this course"
+    },
+    {
+      "start": 179.12,
+      "duration": 3.52,
+      "text": "um however i won't be following it to"
+    },
+    {
+      "start": 181.92,
+      "duration": 3.84,
+      "text": "the page"
+    },
+    {
+      "start": 182.64,
+      "duration": 3.92,
+      "text": "or the letter and i will deviate"
+    },
+    {
+      "start": 185.76,
+      "duration": 3.199,
+      "text": "occasionally"
+    },
+    {
+      "start": 186.56,
+      "duration": 3.28,
+      "text": "indeed straight away from the book to"
+    },
+    {
+      "start": 188.959,
+      "duration": 3.441,
+      "text": "introduce"
+    },
+    {
+      "start": 189.84,
+      "duration": 4.08,
+      "text": "material from other sources i think it's"
+    },
+    {
+      "start": 192.4,
+      "duration": 4.32,
+      "text": "worth mentioning"
+    },
+    {
+      "start": 193.92,
+      "duration": 5.92,
+      "text": "uh two two sources in particular that i"
+    },
+    {
+      "start": 196.72,
+      "duration": 3.12,
+      "text": "will be"
+    },
+    {
+      "start": 202.239,
+      "duration": 4.801,
+      "text": "i will spend i i will consult for"
+    },
+    {
+      "start": 205.12,
+      "duration": 5.6,
+      "text": "additional material"
+    },
+    {
+      "start": 207.04,
+      "duration": 6.0,
+      "text": "there's the so-called telephone book"
+    },
+    {
+      "start": 210.72,
+      "duration": 4.96,
+      "text": "messenger thorne and wheeler"
+    },
+    {
+      "start": 213.04,
+      "duration": 3.68,
+      "text": "this massive book is a fantastic"
+    },
+    {
+      "start": 215.68,
+      "duration": 3.36,
+      "text": "discussion"
+    },
+    {
+      "start": 216.72,
+      "duration": 5.76,
+      "text": "of general aspects of general relativity"
+    },
+    {
+      "start": 219.04,
+      "duration": 3.44,
+      "text": "i will certainly be consulting"
+    },
+    {
+      "start": 223.28,
+      "duration": 5.519,
+      "text": "this book on occasion and also"
+    },
+    {
+      "start": 226.08,
+      "duration": 4.64,
+      "text": "weinberg's gravitation and cosmology"
+    },
+    {
+      "start": 228.799,
+      "duration": 5.041,
+      "text": "is really a fantastic resource for"
+    },
+    {
+      "start": 230.72,
+      "duration": 3.12,
+      "text": "explicit calculations"
+    },
+    {
+      "start": 234.239,
+      "duration": 6.961,
+      "text": "now the presentation or the rather the"
+    },
+    {
+      "start": 238.0,
+      "duration": 5.28,
+      "text": "structure of this course"
+    },
+    {
+      "start": 241.2,
+      "duration": 3.679,
+      "text": "the emphasis in this course will be over"
+    },
+    {
+      "start": 243.28,
+      "duration": 5.039,
+      "text": "mathematical methods"
+    },
+    {
+      "start": 244.879,
+      "duration": 6.801,
+      "text": "over the physics so"
+    },
+    {
+      "start": 248.319,
+      "duration": 3.361,
+      "text": "my ultimate goal"
+    },
+    {
+      "start": 252.08,
+      "duration": 6.64,
+      "text": "is to introduce to you the mathematics"
+    },
+    {
+      "start": 256.4,
+      "duration": 5.119,
+      "text": "and the mathematical methods underlying"
+    },
+    {
+      "start": 258.72,
+      "duration": 5.6,
+      "text": "general relativity of course i will"
+    },
+    {
+      "start": 261.519,
+      "duration": 3.12,
+      "text": "not be neglecting the physics and i will"
+    },
+    {
+      "start": 264.32,
+      "duration": 3.28,
+      "text": "be"
+    },
+    {
+      "start": 264.639,
+      "duration": 3.441,
+      "text": "indeed spending a long time talking"
+    },
+    {
+      "start": 267.6,
+      "duration": 2.24,
+      "text": "about"
+    },
+    {
+      "start": 268.08,
+      "duration": 5.04,
+      "text": "the physical basis for the general"
+    },
+    {
+      "start": 269.84,
+      "duration": 5.84,
+      "text": "relativity but it is certainly my goal"
+    },
+    {
+      "start": 273.12,
+      "duration": 4.48,
+      "text": "to spend a long time introducing you to"
+    },
+    {
+      "start": 275.68,
+      "duration": 2.88,
+      "text": "the mathematical methods of general"
+    },
+    {
+      "start": 277.6,
+      "duration": 2.879,
+      "text": "relativity"
+    },
+    {
+      "start": 278.56,
+      "duration": 3.76,
+      "text": "and there's multiple reasons why one"
+    },
+    {
+      "start": 280.479,
+      "duration": 3.921,
+      "text": "might want to do that"
+    },
+    {
+      "start": 282.32,
+      "duration": 3.12,
+      "text": "although i mean you can discuss general"
+    },
+    {
+      "start": 284.4,
+      "duration": 3.68,
+      "text": "relativity"
+    },
+    {
+      "start": 285.44,
+      "duration": 4.16,
+      "text": "practically without ever really"
+    },
+    {
+      "start": 288.08,
+      "duration": 2.88,
+      "text": "seriously getting in delving into"
+    },
+    {
+      "start": 289.6,
+      "duration": 3.76,
+      "text": "differential geometry"
+    },
+    {
+      "start": 290.96,
+      "duration": 4.0,
+      "text": "you can work most of the time with one"
+    },
+    {
+      "start": 293.36,
+      "duration": 3.76,
+      "text": "coordinate patch as we'll see"
+    },
+    {
+      "start": 294.96,
+      "duration": 3.44,
+      "text": "in one coordinate system you can talk"
+    },
+    {
+      "start": 297.12,
+      "duration": 4.4,
+      "text": "about the motion"
+    },
+    {
+      "start": 298.4,
+      "duration": 5.6,
+      "text": "of particles in a curve space time"
+    },
+    {
+      "start": 301.52,
+      "duration": 4.239,
+      "text": "without making reference to geodesic"
+    },
+    {
+      "start": 304.0,
+      "duration": 2.88,
+      "text": "equations in coordinate free notation"
+    },
+    {
+      "start": 305.759,
+      "duration": 3.521,
+      "text": "blah blah blah"
+    },
+    {
+      "start": 306.88,
+      "duration": 3.92,
+      "text": "we can do general relativity in a very"
+    },
+    {
+      "start": 309.28,
+      "duration": 2.88,
+      "text": "concrete and explicit way"
+    },
+    {
+      "start": 310.8,
+      "duration": 3.52,
+      "text": "you will certainly find references and"
+    },
+    {
+      "start": 312.16,
+      "duration": 5.039,
+      "text": "resources where that's the case"
+    },
+    {
+      "start": 314.32,
+      "duration": 4.0,
+      "text": "however i do want to spend some time"
+    },
+    {
+      "start": 317.199,
+      "duration": 2.481,
+      "text": "getting you familiar with the"
+    },
+    {
+      "start": 318.32,
+      "duration": 2.4,
+      "text": "mathematical methods of general"
+    },
+    {
+      "start": 319.68,
+      "duration": 3.12,
+      "text": "relativity"
+    },
+    {
+      "start": 320.72,
+      "duration": 4.479,
+      "text": "in particular the mathematical methods"
+    },
+    {
+      "start": 322.8,
+      "duration": 4.88,
+      "text": "of differential geometry"
+    },
+    {
+      "start": 325.199,
+      "duration": 3.921,
+      "text": "for many of you this is the first time"
+    },
+    {
+      "start": 327.68,
+      "duration": 4.64,
+      "text": "you will see"
+    },
+    {
+      "start": 329.12,
+      "duration": 5.84,
+      "text": "differential geometry and uh and"
+    },
+    {
+      "start": 332.32,
+      "duration": 3.36,
+      "text": "use these tools in earnest differential"
+    },
+    {
+      "start": 334.96,
+      "duration": 3.2,
+      "text": "geometry"
+    },
+    {
+      "start": 335.68,
+      "duration": 4.16,
+      "text": "isn't really necessary to describe much"
+    },
+    {
+      "start": 338.16,
+      "duration": 4.0,
+      "text": "of the phenomenon physics"
+    },
+    {
+      "start": 339.84,
+      "duration": 3.76,
+      "text": "the up to now in your your degree in"
+    },
+    {
+      "start": 342.16,
+      "duration": 3.759,
+      "text": "your studies of physics"
+    },
+    {
+      "start": 343.6,
+      "duration": 4.48,
+      "text": "however you will find that if you want"
+    },
+    {
+      "start": 345.919,
+      "duration": 6.401,
+      "text": "to go further in physics"
+    },
+    {
+      "start": 348.08,
+      "duration": 6.32,
+      "text": "that it underlies multiple"
+    },
+    {
+      "start": 352.32,
+      "duration": 3.92,
+      "text": "it underlies multiple uh current"
+    },
+    {
+      "start": 354.4,
+      "duration": 5.519,
+      "text": "research areas in"
+    },
+    {
+      "start": 356.24,
+      "duration": 5.12,
+      "text": "in physics and most most notably"
+    },
+    {
+      "start": 359.919,
+      "duration": 4.881,
+      "text": "anytime you want to do anything with"
+    },
+    {
+      "start": 361.36,
+      "duration": 6.64,
+      "text": "quantum gravity and string theory"
+    },
+    {
+      "start": 364.8,
+      "duration": 6.64,
+      "text": "you'd better be sure"
+    },
+    {
+      "start": 368.0,
+      "duration": 7.039,
+      "text": "that you are up to date with your"
+    },
+    {
+      "start": 371.44,
+      "duration": 6.72,
+      "text": "differential geometry knowledge and also"
+    },
+    {
+      "start": 375.039,
+      "duration": 5.28,
+      "text": "uh the the basic methods theorems and"
+    },
+    {
+      "start": 378.16,
+      "duration": 4.159,
+      "text": "results from differential geometry"
+    },
+    {
+      "start": 380.319,
+      "duration": 3.281,
+      "text": "so that's why we're going to spend a lot"
+    },
+    {
+      "start": 382.319,
+      "duration": 4.081,
+      "text": "of time in this course"
+    },
+    {
+      "start": 383.6,
+      "duration": 3.599,
+      "text": "building this theory up the theory isn't"
+    },
+    {
+      "start": 386.4,
+      "duration": 2.48,
+      "text": "in all of its"
+    },
+    {
+      "start": 387.199,
+      "duration": 3.521,
+      "text": "its breadth and depth isn't strictly"
+    },
+    {
+      "start": 388.88,
+      "duration": 3.599,
+      "text": "needed to describe most of"
+    },
+    {
+      "start": 390.72,
+      "duration": 4.64,
+      "text": "the content of general relativity"
+    },
+    {
+      "start": 392.479,
+      "duration": 5.121,
+      "text": "however you will need it for any further"
+    },
+    {
+      "start": 395.36,
+      "duration": 4.08,
+      "text": "studies in physics and certainly if you"
+    },
+    {
+      "start": 397.6,
+      "duration": 2.48,
+      "text": "wish to pursue a research career in"
+    },
+    {
+      "start": 399.44,
+      "duration": 2.24,
+      "text": "physics"
+    },
+    {
+      "start": 400.08,
+      "duration": 3.36,
+      "text": "a knowledge of differential geometry can"
+    },
+    {
+      "start": 401.68,
+      "duration": 4.48,
+      "text": "do no wrong"
+    },
+    {
+      "start": 403.44,
+      "duration": 4.72,
+      "text": "i should mention that there's some"
+    },
+    {
+      "start": 406.16,
+      "duration": 4.319,
+      "text": "additional resources"
+    },
+    {
+      "start": 408.16,
+      "duration": 2.319,
+      "text": "there's"
+    },
+    {
+      "start": 411.68,
+      "duration": 3.6,
+      "text": "perhaps my favorite video reference"
+    },
+    {
+      "start": 414.479,
+      "duration": 2.401,
+      "text": "would be the"
+    },
+    {
+      "start": 415.28,
+      "duration": 4.479,
+      "text": "videos of lenny suskin on general"
+    },
+    {
+      "start": 416.88,
+      "duration": 4.48,
+      "text": "relativity uh do check them out he has"
+    },
+    {
+      "start": 419.759,
+      "duration": 2.241,
+      "text": "an absolutely different perspective to"
+    },
+    {
+      "start": 421.36,
+      "duration": 2.0,
+      "text": "the perspective"
+    },
+    {
+      "start": 422.0,
+      "duration": 3.36,
+      "text": "that i'll be presenting here and i would"
+    },
+    {
+      "start": 423.36,
+      "duration": 4.8,
+      "text": "say completely complementary perspective"
+    },
+    {
+      "start": 425.36,
+      "duration": 3.76,
+      "text": "to the perspective i'm presenting here"
+    },
+    {
+      "start": 428.16,
+      "duration": 2.72,
+      "text": "so do check out"
+    },
+    {
+      "start": 429.12,
+      "duration": 4.4,
+      "text": "lenny suskin's videos on general"
+    },
+    {
+      "start": 430.88,
+      "duration": 2.64,
+      "text": "relativity"
+    },
+    {
+      "start": 434.56,
+      "duration": 3.199,
+      "text": "so that's it for the basic"
+    },
+    {
+      "start": 436.0,
+      "duration": 4.88,
+      "text": "organizational uh"
+    },
+    {
+      "start": 437.759,
+      "duration": 3.681,
+      "text": "announcements for this course from now"
+    },
+    {
+      "start": 440.88,
+      "duration": 3.92,
+      "text": "on"
+    },
+    {
+      "start": 441.44,
+      "duration": 6.0,
+      "text": "we will be commencing"
+    },
+    {
+      "start": 444.8,
+      "duration": 4.64,
+      "text": "our studies of einstein's theory of"
+    },
+    {
+      "start": 447.44,
+      "duration": 4.319,
+      "text": "general relativity"
+    },
+    {
+      "start": 449.44,
+      "duration": 3.28,
+      "text": "and in particular we're going to"
+    },
+    {
+      "start": 451.759,
+      "duration": 4.081,
+      "text": "commence"
+    },
+    {
+      "start": 452.72,
+      "duration": 6.879,
+      "text": "today in lecture one with"
+    },
+    {
+      "start": 455.84,
+      "duration": 3.759,
+      "text": "pre-relativity gravitation"
+    },
+    {
+      "start": 462.479,
+      "duration": 8.16,
+      "text": "so how is it is a short review"
+    },
+    {
+      "start": 466.479,
+      "duration": 8.16,
+      "text": "of gravitation the theory of gravitation"
+    },
+    {
+      "start": 470.639,
+      "duration": 4.0,
+      "text": "before relativity"
+    },
+    {
+      "start": 475.36,
+      "duration": 3.679,
+      "text": "before the uh it was combined with a"
+    },
+    {
+      "start": 477.84,
+      "duration": 4.639,
+      "text": "theory of relativity"
+    },
+    {
+      "start": 479.039,
+      "duration": 6.321,
+      "text": "by einstein now i should point out"
+    },
+    {
+      "start": 482.479,
+      "duration": 4.321,
+      "text": "that i'm assuming before i go on i"
+    },
+    {
+      "start": 485.36,
+      "duration": 2.959,
+      "text": "realize i should point out"
+    },
+    {
+      "start": 486.8,
+      "duration": 3.36,
+      "text": "that i'm going to assume some prior"
+    },
+    {
+      "start": 488.319,
+      "duration": 4.241,
+      "text": "knowledge i'm going to assume"
+    },
+    {
+      "start": 490.16,
+      "duration": 3.68,
+      "text": "that you know in particular there's one"
+    },
+    {
+      "start": 492.56,
+      "duration": 3.919,
+      "text": "thing i really assume"
+    },
+    {
+      "start": 493.84,
+      "duration": 4.4,
+      "text": "and that is that you've you've"
+    },
+    {
+      "start": 496.479,
+      "duration": 3.361,
+      "text": "self-studied or you've seen a course or"
+    },
+    {
+      "start": 498.24,
+      "duration": 3.28,
+      "text": "you've participated in a course on"
+    },
+    {
+      "start": 499.84,
+      "duration": 4.799,
+      "text": "special relativity"
+    },
+    {
+      "start": 501.52,
+      "duration": 5.44,
+      "text": "this is really vital i will not pause"
+    },
+    {
+      "start": 504.639,
+      "duration": 3.521,
+      "text": "to review most of the concepts of"
+    },
+    {
+      "start": 506.96,
+      "duration": 2.32,
+      "text": "special relativity we're going to go"
+    },
+    {
+      "start": 508.16,
+      "duration": 4.48,
+      "text": "straight in"
+    },
+    {
+      "start": 509.28,
+      "duration": 4.8,
+      "text": "and be discussing all aspects of general"
+    },
+    {
+      "start": 512.64,
+      "duration": 4.16,
+      "text": "relativity"
+    },
+    {
+      "start": 514.08,
+      "duration": 4.319,
+      "text": "without too much review of the special"
+    },
+    {
+      "start": 516.8,
+      "duration": 3.76,
+      "text": "relativity foundations"
+    },
+    {
+      "start": 518.399,
+      "duration": 4.32,
+      "text": "do make sure you know this stuff you can"
+    },
+    {
+      "start": 520.56,
+      "duration": 2.8,
+      "text": "get this in a multitude of places now"
+    },
+    {
+      "start": 522.719,
+      "duration": 3.68,
+      "text": "videos"
+    },
+    {
+      "start": 523.36,
+      "duration": 5.2,
+      "text": "books tutorials um if you speak german"
+    },
+    {
+      "start": 526.399,
+      "duration": 5.12,
+      "text": "then you can certainly take a look at my"
+    },
+    {
+      "start": 528.56,
+      "duration": 3.52,
+      "text": "tv show physique ah videos in particular"
+    },
+    {
+      "start": 531.519,
+      "duration": 3.921,
+      "text": "the last"
+    },
+    {
+      "start": 532.08,
+      "duration": 5.759,
+      "text": "couple of videos in that course"
+    },
+    {
+      "start": 535.44,
+      "duration": 3.839,
+      "text": "i gave an introduction to special"
+    },
+    {
+      "start": 537.839,
+      "duration": 3.041,
+      "text": "relativity actually"
+    },
+    {
+      "start": 539.279,
+      "duration": 4.0,
+      "text": "it's probably the material i discussed"
+    },
+    {
+      "start": 540.88,
+      "duration": 5.04,
+      "text": "there would be sufficient"
+    },
+    {
+      "start": 543.279,
+      "duration": 4.0,
+      "text": "basis for this course furthermore i'm"
+    },
+    {
+      "start": 545.92,
+      "duration": 2.4,
+      "text": "going to assume a little bit more"
+    },
+    {
+      "start": 547.279,
+      "duration": 3.441,
+      "text": "i'm going to assume that you know"
+    },
+    {
+      "start": 548.32,
+      "duration": 4.8,
+      "text": "calculus"
+    },
+    {
+      "start": 550.72,
+      "duration": 4.0,
+      "text": "that that's extremely vital we can't do"
+    },
+    {
+      "start": 553.12,
+      "duration": 3.52,
+      "text": "calculus or manifolds if we don't know"
+    },
+    {
+      "start": 554.72,
+      "duration": 4.559,
+      "text": "calculus you've got to know that"
+    },
+    {
+      "start": 556.64,
+      "duration": 6.72,
+      "text": "learn that and also it's vital that you"
+    },
+    {
+      "start": 559.279,
+      "duration": 6.721,
+      "text": "know linear algebra"
+    },
+    {
+      "start": 563.36,
+      "duration": 4.88,
+      "text": "in physics a knowledge of calculus and"
+    },
+    {
+      "start": 566.0,
+      "duration": 5.92,
+      "text": "linear algebra is absolutely essential"
+    },
+    {
+      "start": 568.24,
+      "duration": 3.68,
+      "text": "there's a hidden fourth"
+    },
+    {
+      "start": 573.12,
+      "duration": 6.88,
+      "text": "prerequisite in all the physical courses"
+    },
+    {
+      "start": 576.24,
+      "duration": 5.2,
+      "text": "and that's the subject of combinatorics"
+    },
+    {
+      "start": 580.0,
+      "duration": 2.8,
+      "text": "unless you're doing some kind of hard"
+    },
+    {
+      "start": 581.44,
+      "duration": 3.36,
+      "text": "combinatorics at the end you probably"
+    },
+    {
+      "start": 582.8,
+      "duration": 3.52,
+      "text": "haven't done any science so it's vital"
+    },
+    {
+      "start": 584.8,
+      "duration": 3.28,
+      "text": "that you also are familiar with some"
+    },
+    {
+      "start": 586.32,
+      "duration": 4.0,
+      "text": "basic notions from combinatorics"
+    },
+    {
+      "start": 588.08,
+      "duration": 4.48,
+      "text": "counting things pigeonhole principles"
+    },
+    {
+      "start": 590.32,
+      "duration": 3.04,
+      "text": "that can't hurt we won't explicitly use"
+    },
+    {
+      "start": 592.56,
+      "duration": 1.92,
+      "text": "these techniques"
+    },
+    {
+      "start": 593.36,
+      "duration": 2.8,
+      "text": "in this course but there will be"
+    },
+    {
+      "start": 594.48,
+      "duration": 4.16,
+      "text": "occasion that sometimes our problems"
+    },
+    {
+      "start": 596.16,
+      "duration": 4.08,
+      "text": "will reduce the counting problems"
+    },
+    {
+      "start": 598.64,
+      "duration": 2.96,
+      "text": "so these are the three core"
+    },
+    {
+      "start": 600.24,
+      "duration": 2.08,
+      "text": "prerequisites make sure you know your"
+    },
+    {
+      "start": 601.6,
+      "duration": 2.72,
+      "text": "calculus"
+    },
+    {
+      "start": 602.32,
+      "duration": 3.6,
+      "text": "well fundamental theorem of calculus"
+    },
+    {
+      "start": 604.32,
+      "duration": 2.8,
+      "text": "multivariable calculus you need to know"
+    },
+    {
+      "start": 605.92,
+      "duration": 4.08,
+      "text": "how to change variables"
+    },
+    {
+      "start": 607.12,
+      "duration": 4.24,
+      "text": "in a multi-dimensional integral you need"
+    },
+    {
+      "start": 610.0,
+      "duration": 3.6,
+      "text": "to know linear algebra"
+    },
+    {
+      "start": 611.36,
+      "duration": 4.0,
+      "text": "do you know what a matrix is as a linear"
+    },
+    {
+      "start": 613.6,
+      "duration": 2.96,
+      "text": "mapping how do what's an eigenvalue"
+    },
+    {
+      "start": 615.36,
+      "duration": 3.039,
+      "text": "what's an eigenvector"
+    },
+    {
+      "start": 616.56,
+      "duration": 3.6,
+      "text": "make sure you know that stuff and"
+    },
+    {
+      "start": 618.399,
+      "duration": 3.601,
+      "text": "combinatorics to the extent that you"
+    },
+    {
+      "start": 620.16,
+      "duration": 5.359,
+      "text": "know about basic counting"
+    },
+    {
+      "start": 622.0,
+      "duration": 6.0,
+      "text": "finite sets perhaps finite graphs these"
+    },
+    {
+      "start": 625.519,
+      "duration": 4.161,
+      "text": "prerequisites are vital we can't i would"
+    },
+    {
+      "start": 628.0,
+      "duration": 2.079,
+      "text": "suggest that you pause this video right"
+    },
+    {
+      "start": 629.68,
+      "duration": 1.76,
+      "text": "now"
+    },
+    {
+      "start": 630.079,
+      "duration": 3.361,
+      "text": "and make sure you're familiar with these"
+    },
+    {
+      "start": 631.44,
+      "duration": 5.36,
+      "text": "things"
+    },
+    {
+      "start": 633.44,
+      "duration": 4.0,
+      "text": "before listening on all right let's get"
+    },
+    {
+      "start": 636.8,
+      "duration": 3.76,
+      "text": "started"
+    },
+    {
+      "start": 637.44,
+      "duration": 7.76,
+      "text": "with a quick overview today"
+    },
+    {
+      "start": 640.56,
+      "duration": 7.68,
+      "text": "on gravity pre-relativity"
+    },
+    {
+      "start": 645.2,
+      "duration": 4.0,
+      "text": "so we'll start with the underlying"
+    },
+    {
+      "start": 648.24,
+      "duration": 4.8,
+      "text": "assumption of"
+    },
+    {
+      "start": 649.2,
+      "duration": 3.84,
+      "text": "newtonian physics so"
+    },
+    {
+      "start": 653.76,
+      "duration": 7.04,
+      "text": "gravity pre einstein was"
+    },
+    {
+      "start": 656.959,
+      "duration": 6.961,
+      "text": "that of newton and in"
+    },
+    {
+      "start": 660.8,
+      "duration": 5.279,
+      "text": "newtonian physics one can uh summarize"
+    },
+    {
+      "start": 663.92,
+      "duration": 2.159,
+      "text": "or"
+    },
+    {
+      "start": 666.24,
+      "duration": 4.159,
+      "text": "quantify or extract the fundamental"
+    },
+    {
+      "start": 669.04,
+      "duration": 4.239,
+      "text": "assumptions underlying"
+    },
+    {
+      "start": 670.399,
+      "duration": 4.241,
+      "text": "newtonian physics and the underlying"
+    },
+    {
+      "start": 673.279,
+      "duration": 3.521,
+      "text": "assumption"
+    },
+    {
+      "start": 674.64,
+      "duration": 5.199,
+      "text": "that we will break and so this is really"
+    },
+    {
+      "start": 676.8,
+      "duration": 5.52,
+      "text": "a a common thread in all of physics"
+    },
+    {
+      "start": 679.839,
+      "duration": 3.921,
+      "text": "is that one makes assumptions or"
+    },
+    {
+      "start": 682.32,
+      "duration": 3.6,
+      "text": "implicitly makes assumptions"
+    },
+    {
+      "start": 683.76,
+      "duration": 3.759,
+      "text": "in physical theories and that as one"
+    },
+    {
+      "start": 685.92,
+      "duration": 2.24,
+      "text": "learns more about the universe one is"
+    },
+    {
+      "start": 687.519,
+      "duration": 3.121,
+      "text": "forced to"
+    },
+    {
+      "start": 688.16,
+      "duration": 3.84,
+      "text": "re-evaluate and potentially change or"
+    },
+    {
+      "start": 690.64,
+      "duration": 2.24,
+      "text": "break these assumptions and that's"
+    },
+    {
+      "start": 692.0,
+      "duration": 3.279,
+      "text": "certainly the case"
+    },
+    {
+      "start": 692.88,
+      "duration": 3.6,
+      "text": "in the development of general relativity"
+    },
+    {
+      "start": 695.279,
+      "duration": 4.56,
+      "text": "and the core assumption"
+    },
+    {
+      "start": 696.48,
+      "duration": 3.919,
+      "text": "that will be broken in the transition"
+    },
+    {
+      "start": 699.839,
+      "duration": 3.201,
+      "text": "from"
+    },
+    {
+      "start": 700.399,
+      "duration": 4.88,
+      "text": "pre-relativity to relativity physics is"
+    },
+    {
+      "start": 703.04,
+      "duration": 5.28,
+      "text": "that of the assumption of the existence"
+    },
+    {
+      "start": 705.279,
+      "duration": 5.521,
+      "text": "of a preferred reference frame"
+    },
+    {
+      "start": 708.32,
+      "duration": 3.44,
+      "text": "so in newtonian physics underlying it"
+    },
+    {
+      "start": 710.8,
+      "duration": 4.24,
+      "text": "all"
+    },
+    {
+      "start": 711.76,
+      "duration": 6.079,
+      "text": "is the assumption of the existence of a"
+    },
+    {
+      "start": 715.04,
+      "duration": 2.799,
+      "text": "preferred"
+    },
+    {
+      "start": 718.079,
+      "duration": 6.961,
+      "text": "reference frame of or reference"
+    },
+    {
+      "start": 721.6,
+      "duration": 6.64,
+      "text": "system not only"
+    },
+    {
+      "start": 725.04,
+      "duration": 7.28,
+      "text": "of of rulers"
+    },
+    {
+      "start": 728.24,
+      "duration": 4.08,
+      "text": "but also um clocks"
+    },
+    {
+      "start": 734.079,
+      "duration": 3.121,
+      "text": "so i'll just say a preferred reference"
+    },
+    {
+      "start": 735.68,
+      "duration": 4.48,
+      "text": "system"
+    },
+    {
+      "start": 737.2,
+      "duration": 2.96,
+      "text": "and clocks"
+    },
+    {
+      "start": 740.88,
+      "duration": 6.399,
+      "text": "so this is the assumption"
+    },
+    {
+      "start": 744.079,
+      "duration": 4.721,
+      "text": "of newtonian physics in newtonian"
+    },
+    {
+      "start": 747.279,
+      "duration": 2.8,
+      "text": "physics we assume the existence of a"
+    },
+    {
+      "start": 748.8,
+      "duration": 4.0,
+      "text": "preferred reference system"
+    },
+    {
+      "start": 750.079,
+      "duration": 2.721,
+      "text": "and clocks"
+    },
+    {
+      "start": 753.279,
+      "duration": 5.281,
+      "text": "and we could denote or draw such a"
+    },
+    {
+      "start": 756.24,
+      "duration": 5.2,
+      "text": "reference system"
+    },
+    {
+      "start": 758.56,
+      "duration": 5.12,
+      "text": "something like this three coordinate"
+    },
+    {
+      "start": 761.44,
+      "duration": 6.16,
+      "text": "axes"
+    },
+    {
+      "start": 763.68,
+      "duration": 6.88,
+      "text": "and we would call this system"
+    },
+    {
+      "start": 767.6,
+      "duration": 5.44,
+      "text": "inertial so this this reference system"
+    },
+    {
+      "start": 770.56,
+      "duration": 6.56,
+      "text": "is preferred"
+    },
+    {
+      "start": 773.04,
+      "duration": 7.599,
+      "text": "and inertial if the trajectories"
+    },
+    {
+      "start": 777.12,
+      "duration": 4.24,
+      "text": "of a finite test mass or free test mass"
+    },
+    {
+      "start": 780.639,
+      "duration": 2.801,
+      "text": "let's say"
+    },
+    {
+      "start": 781.36,
+      "duration": 6.479,
+      "text": "upon which no force acts moves along a"
+    },
+    {
+      "start": 783.44,
+      "duration": 4.399,
+      "text": "straight line"
+    },
+    {
+      "start": 789.04,
+      "duration": 5.039,
+      "text": "so i'll highlight that here"
+    },
+    {
+      "start": 796.079,
+      "duration": 5.76,
+      "text": "in this particular preferred reference"
+    },
+    {
+      "start": 797.92,
+      "duration": 3.919,
+      "text": "frame free test masses"
+    },
+    {
+      "start": 802.48,
+      "duration": 5.84,
+      "text": "so it's important to say that free means"
+    },
+    {
+      "start": 805.04,
+      "duration": 3.28,
+      "text": "no force acts"
+    },
+    {
+      "start": 809.2,
+      "duration": 8.4,
+      "text": "that these move along a straight"
+    },
+    {
+      "start": 814.88,
+      "duration": 2.72,
+      "text": "trajectory"
+    },
+    {
+      "start": 825.04,
+      "duration": 3.039,
+      "text": "and do they move along the straight"
+    },
+    {
+      "start": 826.24,
+      "duration": 3.12,
+      "text": "trajectory at a non-constant rate node"
+    },
+    {
+      "start": 828.079,
+      "duration": 4.0,
+      "text": "they move along the straight"
+    },
+    {
+      "start": 829.36,
+      "duration": 5.12,
+      "text": "trajectory at a constant rate and the"
+    },
+    {
+      "start": 832.079,
+      "duration": 2.401,
+      "text": "clocks"
+    },
+    {
+      "start": 834.959,
+      "duration": 8.88,
+      "text": "they tick at a constant rate in this"
+    },
+    {
+      "start": 836.639,
+      "duration": 7.2,
+      "text": "preferred reference frame"
+    },
+    {
+      "start": 846.48,
+      "duration": 5.52,
+      "text": "so in particular this means a constant"
+    },
+    {
+      "start": 848.48,
+      "duration": 3.52,
+      "text": "displacement per unit time"
+    },
+    {
+      "start": 852.959,
+      "duration": 5.041,
+      "text": "and this is in a so-called inertial"
+    },
+    {
+      "start": 856.32,
+      "duration": 4.48,
+      "text": "reference frame"
+    },
+    {
+      "start": 858.0,
+      "duration": 5.36,
+      "text": "or indeed inertial reference frames are"
+    },
+    {
+      "start": 860.8,
+      "duration": 2.56,
+      "text": "defined"
+    },
+    {
+      "start": 864.56,
+      "duration": 3.36,
+      "text": "with respect to this property that free"
+    },
+    {
+      "start": 866.56,
+      "duration": 5.279,
+      "text": "test masses move on straight"
+    },
+    {
+      "start": 867.92,
+      "duration": 3.919,
+      "text": "trajectories at constant rates"
+    },
+    {
+      "start": 872.079,
+      "duration": 3.76,
+      "text": "there is one preferred reference frame a"
+    },
+    {
+      "start": 874.399,
+      "duration": 5.041,
+      "text": "system in clocks but you can get other"
+    },
+    {
+      "start": 875.839,
+      "duration": 5.041,
+      "text": "ones by making so-called galilean boosts"
+    },
+    {
+      "start": 879.44,
+      "duration": 2.639,
+      "text": "if you move a constant velocity with"
+    },
+    {
+      "start": 880.88,
+      "duration": 2.56,
+      "text": "respect to this preferred reference"
+    },
+    {
+      "start": 882.079,
+      "duration": 4.56,
+      "text": "flame then you will also"
+    },
+    {
+      "start": 883.44,
+      "duration": 4.72,
+      "text": "note that all three test masses move"
+    },
+    {
+      "start": 886.639,
+      "duration": 4.721,
+      "text": "along straight trajectories at a"
+    },
+    {
+      "start": 888.16,
+      "duration": 6.479,
+      "text": "constant rate uniformly in time"
+    },
+    {
+      "start": 891.36,
+      "duration": 7.76,
+      "text": "and now is the moment to recall"
+    },
+    {
+      "start": 894.639,
+      "duration": 6.56,
+      "text": "newton's second law"
+    },
+    {
+      "start": 899.12,
+      "duration": 3.519,
+      "text": "which tells us the trajectory or how to"
+    },
+    {
+      "start": 901.199,
+      "duration": 5.041,
+      "text": "calculate the trajectories"
+    },
+    {
+      "start": 902.639,
+      "duration": 8.56,
+      "text": "of particles in such reference frame"
+    },
+    {
+      "start": 906.24,
+      "duration": 9.44,
+      "text": "and it's written with respect"
+    },
+    {
+      "start": 911.199,
+      "duration": 4.481,
+      "text": "to an inertial reference system as"
+    },
+    {
+      "start": 916.639,
+      "duration": 2.64,
+      "text": "the following"
+    },
+    {
+      "start": 920.24,
+      "duration": 4.48,
+      "text": "so with respect to"
+    },
+    {
+      "start": 924.839,
+      "duration": 4.201,
+      "text": "um an inertial"
+    },
+    {
+      "start": 931.12,
+      "duration": 2.959,
+      "text": "reference system"
+    },
+    {
+      "start": 934.399,
+      "duration": 2.88,
+      "text": "so just remember"
+    },
+    {
+      "start": 937.68,
+      "duration": 4.159,
+      "text": "this formulation of newtonian mechanics"
+    },
+    {
+      "start": 949.04,
+      "duration": 5.12,
+      "text": "namely the acceleration of the test mass"
+    },
+    {
+      "start": 952.16,
+      "duration": 5.919,
+      "text": "or test particle"
+    },
+    {
+      "start": 954.16,
+      "duration": 7.039,
+      "text": "is determined by the force acting on it"
+    },
+    {
+      "start": 958.079,
+      "duration": 5.2,
+      "text": "so f here this is more for notation sake"
+    },
+    {
+      "start": 961.199,
+      "duration": 3.601,
+      "text": "f is denotes the force force is a three"
+    },
+    {
+      "start": 963.279,
+      "duration": 4.24,
+      "text": "vector here"
+    },
+    {
+      "start": 964.8,
+      "duration": 5.12,
+      "text": "m i denotes the so-called inertial mass"
+    },
+    {
+      "start": 967.519,
+      "duration": 7.361,
+      "text": "of the particle"
+    },
+    {
+      "start": 969.92,
+      "duration": 4.96,
+      "text": "and x double dot is the acceleration"
+    },
+    {
+      "start": 975.199,
+      "duration": 4.241,
+      "text": "of the test particle so this is newton's"
+    },
+    {
+      "start": 978.56,
+      "duration": 5.279,
+      "text": "second law"
+    },
+    {
+      "start": 979.44,
+      "duration": 4.399,
+      "text": "underlying newtonian physics"
+    },
+    {
+      "start": 985.839,
+      "duration": 3.601,
+      "text": "now interestingly you can write this is"
+    },
+    {
+      "start": 988.16,
+      "duration": 2.72,
+      "text": "all with respect to an inertial"
+    },
+    {
+      "start": 989.44,
+      "duration": 4.16,
+      "text": "reference frame"
+    },
+    {
+      "start": 990.88,
+      "duration": 4.079,
+      "text": "but you can write the equations of"
+    },
+    {
+      "start": 993.6,
+      "duration": 5.12,
+      "text": "motions with respect to"
+    },
+    {
+      "start": 994.959,
+      "duration": 3.761,
+      "text": "non-inertial reference frames"
+    },
+    {
+      "start": 998.959,
+      "duration": 2.88,
+      "text": "and that's a key"
+    },
+    {
+      "start": 1004.72,
+      "duration": 3.52,
+      "text": "this is something we're going to do a"
+    },
+    {
+      "start": 1006.0,
+      "duration": 2.24,
+      "text": "lot"
+    },
+    {
+      "start": 1009.04,
+      "duration": 3.76,
+      "text": "in general relativity because we're"
+    },
+    {
+      "start": 1010.56,
+      "duration": 4.719,
+      "text": "going to have test masses moving in"
+    },
+    {
+      "start": 1012.8,
+      "duration": 4.159,
+      "text": "in gravitational fields gravitational"
+    },
+    {
+      "start": 1015.279,
+      "duration": 3.36,
+      "text": "fields induce acceleration so with"
+    },
+    {
+      "start": 1016.959,
+      "duration": 3.201,
+      "text": "respect to say static lab-based"
+    },
+    {
+      "start": 1018.639,
+      "duration": 4.801,
+      "text": "reference frames"
+    },
+    {
+      "start": 1020.16,
+      "duration": 5.2,
+      "text": "where particles will move on uh"
+    },
+    {
+      "start": 1023.44,
+      "duration": 3.519,
+      "text": "they will be falling and accelerating"
+    },
+    {
+      "start": 1025.36,
+      "duration": 2.8,
+      "text": "but with respect to the accelerating"
+    },
+    {
+      "start": 1026.959,
+      "duration": 2.641,
+      "text": "reference frame of a"
+    },
+    {
+      "start": 1028.16,
+      "duration": 3.279,
+      "text": "freely falling test mass things will"
+    },
+    {
+      "start": 1029.6,
+      "duration": 3.68,
+      "text": "look different"
+    },
+    {
+      "start": 1031.439,
+      "duration": 4.961,
+      "text": "so with respect to non-inertial"
+    },
+    {
+      "start": 1033.28,
+      "duration": 3.12,
+      "text": "reference system"
+    },
+    {
+      "start": 1036.839,
+      "duration": 3.0,
+      "text": "frame"
+    },
+    {
+      "start": 1042.959,
+      "duration": 4.641,
+      "text": "we can also write out newton's equations"
+    },
+    {
+      "start": 1046.4,
+      "duration": 3.04,
+      "text": "newton's second law there's no"
+    },
+    {
+      "start": 1047.6,
+      "duration": 4.88,
+      "text": "difficulty in doing this"
+    },
+    {
+      "start": 1049.44,
+      "duration": 7.68,
+      "text": "and how do we do this well we"
+    },
+    {
+      "start": 1052.48,
+      "duration": 4.64,
+      "text": "we introduce some unit vectors"
+    },
+    {
+      "start": 1057.52,
+      "duration": 3.2,
+      "text": "this is one way of doing it we can do it"
+    },
+    {
+      "start": 1059.039,
+      "duration": 8.801,
+      "text": "another way in the next lecture"
+    },
+    {
+      "start": 1060.72,
+      "duration": 7.12,
+      "text": "so we define three unit vectors"
+    },
+    {
+      "start": 1070.559,
+      "duration": 4.721,
+      "text": "and we'll call them x hat prime"
+    },
+    {
+      "start": 1073.6,
+      "duration": 3.52,
+      "text": "and the thing about these unit vectors x"
+    },
+    {
+      "start": 1075.28,
+      "duration": 5.36,
+      "text": "hat prime t"
+    },
+    {
+      "start": 1077.12,
+      "duration": 6.32,
+      "text": "is that they change with time"
+    },
+    {
+      "start": 1080.64,
+      "duration": 3.52,
+      "text": "so they describe the unit vectors with"
+    },
+    {
+      "start": 1083.44,
+      "duration": 3.44,
+      "text": "respect to"
+    },
+    {
+      "start": 1084.16,
+      "duration": 4.16,
+      "text": "a moving accelerating reference frame so"
+    },
+    {
+      "start": 1086.88,
+      "duration": 3.2,
+      "text": "they hear the three unit vectors that"
+    },
+    {
+      "start": 1088.32,
+      "duration": 4.0,
+      "text": "we're going to use to describe things in"
+    },
+    {
+      "start": 1090.08,
+      "duration": 5.52,
+      "text": "our accelerating or non-inertial"
+    },
+    {
+      "start": 1092.32,
+      "duration": 5.04,
+      "text": "reference frame"
+    },
+    {
+      "start": 1095.6,
+      "duration": 3.04,
+      "text": "so we introduce these three unit vectors"
+    },
+    {
+      "start": 1097.36,
+      "duration": 5.12,
+      "text": "x prime y prime z"
+    },
+    {
+      "start": 1098.64,
+      "duration": 6.88,
+      "text": "prime we assume that the orthonormal"
+    },
+    {
+      "start": 1102.48,
+      "duration": 6.0,
+      "text": "and in an inertial"
+    },
+    {
+      "start": 1105.52,
+      "duration": 5.21,
+      "text": "reference frame determined sorry in a"
+    },
+    {
+      "start": 1108.48,
+      "duration": 4.88,
+      "text": "non-inertial right"
+    },
+    {
+      "start": 1110.73,
+      "duration": 5.43,
+      "text": "[Music]"
+    },
+    {
+      "start": 1113.36,
+      "duration": 4.72,
+      "text": "frame determined by these vectors then"
+    },
+    {
+      "start": 1116.16,
+      "duration": 3.28,
+      "text": "trajectories of straight lines might"
+    },
+    {
+      "start": 1118.08,
+      "duration": 2.959,
+      "text": "look curved because if you're"
+    },
+    {
+      "start": 1119.44,
+      "duration": 3.04,
+      "text": "accelerating with respect to"
+    },
+    {
+      "start": 1121.039,
+      "duration": 4.081,
+      "text": "an inertial reference frame the"
+    },
+    {
+      "start": 1122.48,
+      "duration": 5.52,
+      "text": "trajectory of a free"
+    },
+    {
+      "start": 1125.12,
+      "duration": 5.679,
+      "text": "test mass won't look straight anymore"
+    },
+    {
+      "start": 1128.0,
+      "duration": 2.799,
+      "text": "you're accelerating"
+    },
+    {
+      "start": 1131.2,
+      "duration": 6.64,
+      "text": "so in a reference frame with respect"
+    },
+    {
+      "start": 1134.4,
+      "duration": 3.44,
+      "text": "to this basis"
+    },
+    {
+      "start": 1142.72,
+      "duration": 3.76,
+      "text": "let's start it off in our old reference"
+    },
+    {
+      "start": 1148.84,
+      "duration": 3.0,
+      "text": "frame"
+    },
+    {
+      "start": 1152.24,
+      "duration": 5.76,
+      "text": "so if we go back to our initial"
+    },
+    {
+      "start": 1155.679,
+      "duration": 3.521,
+      "text": "inertial reference frame let's go back"
+    },
+    {
+      "start": 1158.0,
+      "duration": 4.96,
+      "text": "up here i've drawn it here"
+    },
+    {
+      "start": 1159.2,
+      "duration": 6.0,
+      "text": "then one can introduce the unit vectors"
+    },
+    {
+      "start": 1162.96,
+      "duration": 4.16,
+      "text": "pointing along the coordinate axis as x"
+    },
+    {
+      "start": 1165.2,
+      "duration": 4.88,
+      "text": "hat y hat and z hat these"
+    },
+    {
+      "start": 1167.12,
+      "duration": 3.439,
+      "text": "are the original unit vectors so in the"
+    },
+    {
+      "start": 1170.08,
+      "duration": 3.839,
+      "text": "reference"
+    },
+    {
+      "start": 1170.559,
+      "duration": 3.36,
+      "text": "with respect to the old basis"
+    },
+    {
+      "start": 1175.12,
+      "duration": 6.24,
+      "text": "we can write the trajectory"
+    },
+    {
+      "start": 1178.4,
+      "duration": 4.399,
+      "text": "of the test mass as we can decompose it"
+    },
+    {
+      "start": 1181.36,
+      "duration": 2.319,
+      "text": "with respect to these three unit vectors"
+    },
+    {
+      "start": 1182.799,
+      "duration": 4.401,
+      "text": "so we have w"
+    },
+    {
+      "start": 1183.679,
+      "duration": 6.961,
+      "text": "x w x is the coordinate"
+    },
+    {
+      "start": 1187.2,
+      "duration": 6.8,
+      "text": "component in the x direction of the"
+    },
+    {
+      "start": 1190.64,
+      "duration": 5.76,
+      "text": "displacement vector of this test mass w"
+    },
+    {
+      "start": 1194.0,
+      "duration": 3.28,
+      "text": "y it's also the y component so on blah"
+    },
+    {
+      "start": 1196.4,
+      "duration": 3.44,
+      "text": "blah blah"
+    },
+    {
+      "start": 1197.28,
+      "duration": 2.56,
+      "text": "w z"
+    },
+    {
+      "start": 1200.64,
+      "duration": 5.039,
+      "text": "and uh and fine so we've described with"
+    },
+    {
+      "start": 1203.44,
+      "duration": 4.56,
+      "text": "these three numbers the trajectory"
+    },
+    {
+      "start": 1205.679,
+      "duration": 4.081,
+      "text": "of a of a particle with respect to an"
+    },
+    {
+      "start": 1208.0,
+      "duration": 4.88,
+      "text": "inertial reference frame"
+    },
+    {
+      "start": 1209.76,
+      "duration": 3.12,
+      "text": "these are just the coordinates"
+    },
+    {
+      "start": 1216.96,
+      "duration": 3.04,
+      "text": "but of course we want to describe things"
+    },
+    {
+      "start": 1219.28,
+      "duration": 2.56,
+      "text": "with respect to"
+    },
+    {
+      "start": 1220.0,
+      "duration": 3.6,
+      "text": "our new reference frame how do we do"
+    },
+    {
+      "start": 1221.84,
+      "duration": 4.88,
+      "text": "that well"
+    },
+    {
+      "start": 1223.6,
+      "duration": 3.12,
+      "text": "we just write everything"
+    },
+    {
+      "start": 1226.799,
+      "duration": 4.641,
+      "text": "in terms of this new basis it's a it's a"
+    },
+    {
+      "start": 1229.28,
+      "duration": 5.12,
+      "text": "moving basis this basis moves in time"
+    },
+    {
+      "start": 1231.44,
+      "duration": 5.599,
+      "text": "okay remember these"
+    },
+    {
+      "start": 1234.4,
+      "duration": 5.92,
+      "text": "x y's and z's are vectors okay one short"
+    },
+    {
+      "start": 1237.039,
+      "duration": 3.281,
+      "text": "aside on notation"
+    },
+    {
+      "start": 1240.64,
+      "duration": 3.519,
+      "text": "i use um"
+    },
+    {
+      "start": 1246.84,
+      "duration": 6.28,
+      "text": "notation"
+    },
+    {
+      "start": 1248.799,
+      "duration": 6.961,
+      "text": "i use the underline to denote a 3 vector"
+    },
+    {
+      "start": 1253.12,
+      "duration": 5.039,
+      "text": "or even a 4 vector this just denotes a"
+    },
+    {
+      "start": 1255.76,
+      "duration": 2.399,
+      "text": "vector"
+    },
+    {
+      "start": 1260.08,
+      "duration": 3.44,
+      "text": "if you've watched any of my other videos"
+    },
+    {
+      "start": 1261.679,
+      "duration": 3.201,
+      "text": "or been through any of my other courses"
+    },
+    {
+      "start": 1263.52,
+      "duration": 2.08,
+      "text": "you'll you'll probably be familiar with"
+    },
+    {
+      "start": 1264.88,
+      "duration": 2.56,
+      "text": "this notation"
+    },
+    {
+      "start": 1265.6,
+      "duration": 3.28,
+      "text": "i tend to use lowercase letters to"
+    },
+    {
+      "start": 1267.44,
+      "duration": 4.719,
+      "text": "denote vectors"
+    },
+    {
+      "start": 1268.88,
+      "duration": 8.32,
+      "text": "uh then matrices"
+    },
+    {
+      "start": 1272.159,
+      "duration": 8.241,
+      "text": "i put three two lines underneath"
+    },
+    {
+      "start": 1277.2,
+      "duration": 4.32,
+      "text": "so a matrix times by a vector looks"
+    },
+    {
+      "start": 1280.4,
+      "duration": 4.88,
+      "text": "something like"
+    },
+    {
+      "start": 1281.52,
+      "duration": 4.96,
+      "text": "this tend to use that notation but that"
+    },
+    {
+      "start": 1285.28,
+      "duration": 2.639,
+      "text": "i'm not going to use a three-line"
+    },
+    {
+      "start": 1286.48,
+      "duration": 2.96,
+      "text": "notation for tensors i think that's"
+    },
+    {
+      "start": 1287.919,
+      "duration": 3.201,
+      "text": "ridiculous for some reason"
+    },
+    {
+      "start": 1289.44,
+      "duration": 4.239,
+      "text": "and so we're not going to be doing that"
+    },
+    {
+      "start": 1291.12,
+      "duration": 4.0,
+      "text": "tenses will always be clear from context"
+    },
+    {
+      "start": 1293.679,
+      "duration": 3.761,
+      "text": "when we introduce them like i'm not"
+    },
+    {
+      "start": 1295.12,
+      "duration": 4.08,
+      "text": "expecting that you know what a tensor is"
+    },
+    {
+      "start": 1297.44,
+      "duration": 3.359,
+      "text": "um that's something we're going to"
+    },
+    {
+      "start": 1299.2,
+      "duration": 7.839,
+      "text": "introduce in this course"
+    },
+    {
+      "start": 1300.799,
+      "duration": 6.24,
+      "text": "i i won't use underline notation"
+    },
+    {
+      "start": 1309.039,
+      "duration": 4.401,
+      "text": "so if you're watching this again for"
+    },
+    {
+      "start": 1310.88,
+      "duration": 4.56,
+      "text": "review i won't be using this underline"
+    },
+    {
+      "start": 1313.44,
+      "duration": 3.92,
+      "text": "notation instead we'll probably that"
+    },
+    {
+      "start": 1315.44,
+      "duration": 2.56,
+      "text": "will have shifted over to index notation"
+    },
+    {
+      "start": 1317.36,
+      "duration": 4.4,
+      "text": "by that point"
+    },
+    {
+      "start": 1318.0,
+      "duration": 7.76,
+      "text": "here also i should"
+    },
+    {
+      "start": 1321.76,
+      "duration": 5.36,
+      "text": "pause to mention index notation"
+    },
+    {
+      "start": 1325.76,
+      "duration": 4.08,
+      "text": "also something that you should have"
+    },
+    {
+      "start": 1327.12,
+      "duration": 3.12,
+      "text": "picked up in a special relativity course"
+    },
+    {
+      "start": 1329.84,
+      "duration": 2.959,
+      "text": "or"
+    },
+    {
+      "start": 1330.24,
+      "duration": 4.24,
+      "text": "even indeed a reasonably advanced course"
+    },
+    {
+      "start": 1332.799,
+      "duration": 4.24,
+      "text": "of mechanics"
+    },
+    {
+      "start": 1334.48,
+      "duration": 3.679,
+      "text": "we refer to elements of vectors and"
+    },
+    {
+      "start": 1337.039,
+      "duration": 3.601,
+      "text": "matrices with the"
+    },
+    {
+      "start": 1338.159,
+      "duration": 3.681,
+      "text": "also with index notation so if we have a"
+    },
+    {
+      "start": 1340.64,
+      "duration": 4.48,
+      "text": "vector a"
+    },
+    {
+      "start": 1341.84,
+      "duration": 6.0,
+      "text": "then we can denote the x component"
+    },
+    {
+      "start": 1345.12,
+      "duration": 2.72,
+      "text": "of a"
+    },
+    {
+      "start": 1350.559,
+      "duration": 9.521,
+      "text": "with a square brackets and an x or"
+    },
+    {
+      "start": 1354.0,
+      "duration": 9.36,
+      "text": "we might write it as ax"
+    },
+    {
+      "start": 1360.08,
+      "duration": 3.28,
+      "text": "similarly for matrices"
+    },
+    {
+      "start": 1363.76,
+      "duration": 4.0,
+      "text": "if i have the x y component of a matrix"
+    },
+    {
+      "start": 1370.72,
+      "duration": 4.88,
+      "text": "then i'm also going to use the notation"
+    },
+    {
+      "start": 1373.12,
+      "duration": 5.12,
+      "text": "x subscript x y"
+    },
+    {
+      "start": 1375.6,
+      "duration": 3.28,
+      "text": "probably in fact very quickly we're"
+    },
+    {
+      "start": 1378.24,
+      "duration": 2.24,
+      "text": "going to see"
+    },
+    {
+      "start": 1378.88,
+      "duration": 3.36,
+      "text": "that when we move to relativity physics"
+    },
+    {
+      "start": 1380.48,
+      "duration": 3.6,
+      "text": "i'll be putting that index upstairs as"
+    },
+    {
+      "start": 1382.24,
+      "duration": 4.559,
+      "text": "well we'll explain the upstairs notation"
+    },
+    {
+      "start": 1384.08,
+      "duration": 4.64,
+      "text": "when we get there"
+    },
+    {
+      "start": 1386.799,
+      "duration": 3.281,
+      "text": "so there it is that's some notations"
+    },
+    {
+      "start": 1388.72,
+      "duration": 2.24,
+      "text": "that we're going to be using when we're"
+    },
+    {
+      "start": 1390.08,
+      "duration": 3.599,
+      "text": "expressing"
+    },
+    {
+      "start": 1390.96,
+      "duration": 4.32,
+      "text": "uh vector quantities in newtonian"
+    },
+    {
+      "start": 1393.679,
+      "duration": 3.681,
+      "text": "physics and certainly we're going to"
+    },
+    {
+      "start": 1395.28,
+      "duration": 3.68,
+      "text": "this notation will transition to the"
+    },
+    {
+      "start": 1397.36,
+      "duration": 4.72,
+      "text": "relativity world"
+    },
+    {
+      "start": 1398.96,
+      "duration": 4.48,
+      "text": "as well all right so there's"
+    },
+    {
+      "start": 1402.08,
+      "duration": 4.64,
+      "text": "if we go back to here what was our goal"
+    },
+    {
+      "start": 1403.44,
+      "duration": 3.28,
+      "text": "well we have a trajectory"
+    },
+    {
+      "start": 1408.88,
+      "duration": 3.279,
+      "text": "with respect to an inertial reference"
+    },
+    {
+      "start": 1410.96,
+      "duration": 2.48,
+      "text": "frame but we can also express that"
+    },
+    {
+      "start": 1412.159,
+      "duration": 2.961,
+      "text": "trajectory with respect to a"
+    },
+    {
+      "start": 1413.44,
+      "duration": 5.52,
+      "text": "non-inertial reference frame"
+    },
+    {
+      "start": 1415.12,
+      "duration": 7.76,
+      "text": "as soon as we've chosen a"
+    },
+    {
+      "start": 1418.96,
+      "duration": 6.079,
+      "text": "set of unit vectors for the"
+    },
+    {
+      "start": 1422.88,
+      "duration": 4.159,
+      "text": "non-inertial reference frame no problems"
+    },
+    {
+      "start": 1425.039,
+      "duration": 6.801,
+      "text": "there that's a it's a little"
+    },
+    {
+      "start": 1427.039,
+      "duration": 4.801,
+      "text": "linear algebra computation"
+    },
+    {
+      "start": 1433.039,
+      "duration": 4.721,
+      "text": "and when you do that so suppose you"
+    },
+    {
+      "start": 1436.24,
+      "duration": 3.039,
+      "text": "insist on working with respect to a"
+    },
+    {
+      "start": 1437.76,
+      "duration": 3.44,
+      "text": "non-inertial reference frame"
+    },
+    {
+      "start": 1439.279,
+      "duration": 3.76,
+      "text": "well just substitute this stuff into"
+    },
+    {
+      "start": 1441.2,
+      "duration": 3.28,
+      "text": "here this stuff here into newton's"
+    },
+    {
+      "start": 1443.039,
+      "duration": 1.841,
+      "text": "second law and then you'll see that you"
+    },
+    {
+      "start": 1444.48,
+      "duration": 4.0,
+      "text": "get"
+    },
+    {
+      "start": 1444.88,
+      "duration": 3.6,
+      "text": "that newton's second law looks different"
+    },
+    {
+      "start": 1449.44,
+      "duration": 2.8,
+      "text": "so we're going to that's a homework"
+    },
+    {
+      "start": 1450.96,
+      "duration": 2.56,
+      "text": "question also we'll see it in the next"
+    },
+    {
+      "start": 1452.24,
+      "duration": 6.48,
+      "text": "lecture anyway"
+    },
+    {
+      "start": 1453.52,
+      "duration": 6.72,
+      "text": "um so"
+    },
+    {
+      "start": 1458.72,
+      "duration": 3.439,
+      "text": "and one way of summarizing this i"
+    },
+    {
+      "start": 1460.24,
+      "duration": 12.48,
+      "text": "suppose is that physics in"
+    },
+    {
+      "start": 1462.159,
+      "duration": 15.921,
+      "text": "non-inertial reference frames"
+    },
+    {
+      "start": 1472.72,
+      "duration": 5.36,
+      "text": "you know as captured by the second law"
+    },
+    {
+      "start": 1480.48,
+      "duration": 3.76,
+      "text": "newton's second law not the second law"
+    },
+    {
+      "start": 1482.72,
+      "duration": 4.16,
+      "text": "of thermodynamics"
+    },
+    {
+      "start": 1484.24,
+      "duration": 5.039,
+      "text": "as captured by newton's second law gives"
+    },
+    {
+      "start": 1486.88,
+      "duration": 2.399,
+      "text": "rise"
+    },
+    {
+      "start": 1491.2,
+      "duration": 14.4,
+      "text": "to additional force like terms"
+    },
+    {
+      "start": 1500.72,
+      "duration": 7.36,
+      "text": "and uh these are called inertial forces"
+    },
+    {
+      "start": 1505.6,
+      "duration": 4.079,
+      "text": "and i'll give you some examples so we"
+    },
+    {
+      "start": 1508.08,
+      "duration": 6.32,
+      "text": "have"
+    },
+    {
+      "start": 1509.679,
+      "duration": 9.681,
+      "text": "the centrifugal force centripetal force"
+    },
+    {
+      "start": 1514.4,
+      "duration": 7.279,
+      "text": "coriolis euler"
+    },
+    {
+      "start": 1519.36,
+      "duration": 3.84,
+      "text": "et cetera et cetera depending on the"
+    },
+    {
+      "start": 1521.679,
+      "duration": 3.921,
+      "text": "non-inertial reference frame"
+    },
+    {
+      "start": 1523.2,
+      "duration": 4.32,
+      "text": "that you you have to work with you'll"
+    },
+    {
+      "start": 1525.6,
+      "duration": 4.88,
+      "text": "pick up different additional terms"
+    },
+    {
+      "start": 1527.52,
+      "duration": 2.96,
+      "text": "on the right hand side"
+    },
+    {
+      "start": 1531.039,
+      "duration": 12.801,
+      "text": "and and this is there will be a homework"
+    },
+    {
+      "start": 1533.36,
+      "duration": 10.48,
+      "text": "question on this"
+    },
+    {
+      "start": 1544.08,
+      "duration": 4.56,
+      "text": "okay we're going to distinguish forces"
+    },
+    {
+      "start": 1546.88,
+      "duration": 10.96,
+      "text": "or true forces from such"
+    },
+    {
+      "start": 1548.64,
+      "duration": 9.2,
+      "text": "apparent forces"
+    },
+    {
+      "start": 1559.52,
+      "duration": 6.24,
+      "text": "so this you know obviously these"
+    },
+    {
+      "start": 1563.2,
+      "duration": 3.68,
+      "text": "centripetal centrifugal coriolis euler"
+    },
+    {
+      "start": 1565.76,
+      "duration": 3.36,
+      "text": "and so on forces"
+    },
+    {
+      "start": 1566.88,
+      "duration": 3.84,
+      "text": "they're not true right it's just that we"
+    },
+    {
+      "start": 1569.12,
+      "duration": 3.6,
+      "text": "we decided to be"
+    },
+    {
+      "start": 1570.72,
+      "duration": 3.439,
+      "text": "a bit stubborn and describe physics with"
+    },
+    {
+      "start": 1572.72,
+      "duration": 2.559,
+      "text": "respect to an accelerating reference"
+    },
+    {
+      "start": 1574.159,
+      "duration": 4.161,
+      "text": "frame"
+    },
+    {
+      "start": 1575.279,
+      "duration": 5.361,
+      "text": "so true forces are ones"
+    },
+    {
+      "start": 1578.32,
+      "duration": 7.52,
+      "text": "that don't arise from being in a"
+    },
+    {
+      "start": 1580.64,
+      "duration": 5.2,
+      "text": "non-inertial reference frame"
+    },
+    {
+      "start": 1587.36,
+      "duration": 4.08,
+      "text": "so such apparent inertial forces"
+    },
+    {
+      "start": 1591.919,
+      "duration": 3.521,
+      "text": "so that's really crucial that we"
+    },
+    {
+      "start": 1593.12,
+      "duration": 6.08,
+      "text": "distinguish between these"
+    },
+    {
+      "start": 1595.44,
+      "duration": 6.96,
+      "text": "these two things in particular in"
+    },
+    {
+      "start": 1599.2,
+      "duration": 3.2,
+      "text": "newtonian physics"
+    },
+    {
+      "start": 1604.88,
+      "duration": 3.52,
+      "text": "this is one of those core assumptions"
+    },
+    {
+      "start": 1607.039,
+      "duration": 2.88,
+      "text": "that we're going to have to revisit when"
+    },
+    {
+      "start": 1608.4,
+      "duration": 4.48,
+      "text": "we go to the relativity"
+    },
+    {
+      "start": 1609.919,
+      "duration": 6.961,
+      "text": "and go to general relativity so in"
+    },
+    {
+      "start": 1612.88,
+      "duration": 4.0,
+      "text": "particular in newtonian physics"
+    },
+    {
+      "start": 1617.12,
+      "duration": 4.08,
+      "text": "uh gravity is a true force"
+    },
+    {
+      "start": 1624.64,
+      "duration": 4.96,
+      "text": "but this will not be true"
+    },
+    {
+      "start": 1629.679,
+      "duration": 6.48,
+      "text": "in grgr of course is general relativity"
+    },
+    {
+      "start": 1634.0,
+      "duration": 4.0,
+      "text": "the pretty much universally accepted"
+    },
+    {
+      "start": 1636.159,
+      "duration": 3.361,
+      "text": "acronym for general relativities g are"
+    },
+    {
+      "start": 1638.0,
+      "duration": 5.6,
+      "text": "they pretty much universally accepted"
+    },
+    {
+      "start": 1639.52,
+      "duration": 4.08,
+      "text": "acronym for special relativity is sr"
+    },
+    {
+      "start": 1644.399,
+      "duration": 5.921,
+      "text": "okay that's just a short"
+    },
+    {
+      "start": 1647.44,
+      "duration": 4.4,
+      "text": "reminder to set some notation of the of"
+    },
+    {
+      "start": 1650.32,
+      "duration": 3.12,
+      "text": "some concepts underlying"
+    },
+    {
+      "start": 1651.84,
+      "duration": 2.8,
+      "text": "newtonian physics and indeed these are"
+    },
+    {
+      "start": 1653.44,
+      "duration": 2.0,
+      "text": "concepts we're going to have to revisit"
+    },
+    {
+      "start": 1654.64,
+      "duration": 5.2,
+      "text": "when we"
+    },
+    {
+      "start": 1655.44,
+      "duration": 6.56,
+      "text": "uh build up general relativity now"
+    },
+    {
+      "start": 1659.84,
+      "duration": 3.52,
+      "text": "let's uh in particular these are the"
+    },
+    {
+      "start": 1662.0,
+      "duration": 2.88,
+      "text": "this is the concept of force"
+    },
+    {
+      "start": 1663.36,
+      "duration": 3.48,
+      "text": "in newtonian physics and reference"
+    },
+    {
+      "start": 1664.88,
+      "duration": 5.6,
+      "text": "frames now let's discuss"
+    },
+    {
+      "start": 1666.84,
+      "duration": 5.24,
+      "text": "mass mass is another concept that's uh"
+    },
+    {
+      "start": 1670.48,
+      "duration": 3.28,
+      "text": "fundamental in newtonian physics and"
+    },
+    {
+      "start": 1672.08,
+      "duration": 5.36,
+      "text": "also in relativity physics"
+    },
+    {
+      "start": 1673.76,
+      "duration": 3.68,
+      "text": "and also in quantum mechanics to"
+    },
+    {
+      "start": 1678.559,
+      "duration": 5.12,
+      "text": "but it turns out that although it seems"
+    },
+    {
+      "start": 1681.919,
+      "duration": 3.76,
+      "text": "intuitively clear"
+    },
+    {
+      "start": 1683.679,
+      "duration": 3.12,
+      "text": "that you know what mass is capturing"
+    },
+    {
+      "start": 1685.679,
+      "duration": 3.521,
+      "text": "there's in fact"
+    },
+    {
+      "start": 1686.799,
+      "duration": 4.321,
+      "text": "several independent notions or"
+    },
+    {
+      "start": 1689.2,
+      "duration": 4.56,
+      "text": "conceptually distinct"
+    },
+    {
+      "start": 1691.12,
+      "duration": 4.559,
+      "text": "quantities that you can call mass and"
+    },
+    {
+      "start": 1693.76,
+      "duration": 5.279,
+      "text": "this we should"
+    },
+    {
+      "start": 1695.679,
+      "duration": 6.321,
+      "text": "separate out these these different"
+    },
+    {
+      "start": 1699.039,
+      "duration": 4.481,
+      "text": "conceptually distinct quantities uh"
+    },
+    {
+      "start": 1702.0,
+      "duration": 4.24,
+      "text": "because"
+    },
+    {
+      "start": 1703.52,
+      "duration": 4.0,
+      "text": "arguing that they're the same is a is a"
+    },
+    {
+      "start": 1706.24,
+      "duration": 2.6,
+      "text": "good deal of interest it"
+    },
+    {
+      "start": 1707.52,
+      "duration": 4.399,
+      "text": "led to a good deal of interesting"
+    },
+    {
+      "start": 1708.84,
+      "duration": 6.12,
+      "text": "physics so there's at least"
+    },
+    {
+      "start": 1711.919,
+      "duration": 4.161,
+      "text": "uh i'll say at least because depending"
+    },
+    {
+      "start": 1714.96,
+      "duration": 2.48,
+      "text": "on how"
+    },
+    {
+      "start": 1716.08,
+      "duration": 4.4,
+      "text": "baroque you're feeling you might be able"
+    },
+    {
+      "start": 1717.44,
+      "duration": 5.599,
+      "text": "to think of ways to"
+    },
+    {
+      "start": 1720.48,
+      "duration": 4.079,
+      "text": "have a notion of mass that i'm captured"
+    },
+    {
+      "start": 1723.039,
+      "duration": 3.681,
+      "text": "by these lower three but i think these"
+    },
+    {
+      "start": 1724.559,
+      "duration": 3.281,
+      "text": "three will capture everything in utonium"
+    },
+    {
+      "start": 1726.72,
+      "duration": 5.92,
+      "text": "physics"
+    },
+    {
+      "start": 1727.84,
+      "duration": 4.8,
+      "text": "there's at least three conceptually"
+    },
+    {
+      "start": 1733.44,
+      "duration": 6.479,
+      "text": "distinct quantities"
+    },
+    {
+      "start": 1737.44,
+      "duration": 4.56,
+      "text": "that we could call mass i'm going to"
+    },
+    {
+      "start": 1739.919,
+      "duration": 3.681,
+      "text": "distinguish between them right"
+    },
+    {
+      "start": 1742.0,
+      "duration": 4.159,
+      "text": "so the first one is the so-called"
+    },
+    {
+      "start": 1743.6,
+      "duration": 4.4,
+      "text": "inertial mass the one familiar"
+    },
+    {
+      "start": 1746.159,
+      "duration": 4.681,
+      "text": "from the second law that i wrote down"
+    },
+    {
+      "start": 1748.0,
+      "duration": 5.44,
+      "text": "just above and i even introduced it up"
+    },
+    {
+      "start": 1750.84,
+      "duration": 4.92,
+      "text": "there"
+    },
+    {
+      "start": 1753.44,
+      "duration": 2.32,
+      "text": "and"
+    },
+    {
+      "start": 1757.279,
+      "duration": 10.561,
+      "text": "do it differently this is the constant"
+    },
+    {
+      "start": 1760.48,
+      "duration": 7.36,
+      "text": "of proportionality"
+    },
+    {
+      "start": 1770.399,
+      "duration": 4.4,
+      "text": "this is the constant proportionality"
+    },
+    {
+      "start": 1771.919,
+      "duration": 2.88,
+      "text": "newton's second law"
+    },
+    {
+      "start": 1779.44,
+      "duration": 3.44,
+      "text": "so newton's second law right in"
+    },
+    {
+      "start": 1781.12,
+      "duration": 4.48,
+      "text": "abbreviated vector form is f"
+    },
+    {
+      "start": 1782.88,
+      "duration": 3.6,
+      "text": "equals m a what's this m m is the"
+    },
+    {
+      "start": 1785.6,
+      "duration": 2.319,
+      "text": "inertial mass"
+    },
+    {
+      "start": 1786.48,
+      "duration": 2.64,
+      "text": "right of the particle it's the constant"
+    },
+    {
+      "start": 1787.919,
+      "duration": 6.64,
+      "text": "of proportionality that relates"
+    },
+    {
+      "start": 1789.12,
+      "duration": 8.799,
+      "text": "acceleration to the force"
+    },
+    {
+      "start": 1794.559,
+      "duration": 4.881,
+      "text": "but there's another notion in fact two"
+    },
+    {
+      "start": 1797.919,
+      "duration": 4.401,
+      "text": "other notions which are"
+    },
+    {
+      "start": 1799.44,
+      "duration": 4.479,
+      "text": "not often distinguished but you should"
+    },
+    {
+      "start": 1802.32,
+      "duration": 3.2,
+      "text": "distinguish them it's an exercise to"
+    },
+    {
+      "start": 1803.919,
+      "duration": 4.961,
+      "text": "prove that in fact they're the same"
+    },
+    {
+      "start": 1805.52,
+      "duration": 6.56,
+      "text": "the next notion is the notion of active"
+    },
+    {
+      "start": 1808.88,
+      "duration": 3.2,
+      "text": "gravitational mass"
+    },
+    {
+      "start": 1816.159,
+      "duration": 6.081,
+      "text": "and so this is the"
+    },
+    {
+      "start": 1819.2,
+      "duration": 4.64,
+      "text": "the mass that appears"
+    },
+    {
+      "start": 1822.24,
+      "duration": 3.2,
+      "text": "in the law that produces the"
+    },
+    {
+      "start": 1823.84,
+      "duration": 14.0,
+      "text": "gravitational field that other masses"
+    },
+    {
+      "start": 1825.44,
+      "duration": 12.4,
+      "text": "respond to"
+    },
+    {
+      "start": 1853.36,
+      "duration": 3.84,
+      "text": "so if you recall the gravitational force"
+    },
+    {
+      "start": 1856.399,
+      "duration": 4.321,
+      "text": "law"
+    },
+    {
+      "start": 1857.2,
+      "duration": 6.959,
+      "text": "g is the gravitational field produced by"
+    },
+    {
+      "start": 1860.72,
+      "duration": 5.76,
+      "text": "a mass and it has it"
+    },
+    {
+      "start": 1864.159,
+      "duration": 3.601,
+      "text": "is described by the following formula"
+    },
+    {
+      "start": 1866.48,
+      "duration": 4.559,
+      "text": "minus big g"
+    },
+    {
+      "start": 1867.76,
+      "duration": 5.12,
+      "text": "times by m little g a this is the circle"
+    },
+    {
+      "start": 1871.039,
+      "duration": 4.161,
+      "text": "active mass"
+    },
+    {
+      "start": 1872.88,
+      "duration": 3.519,
+      "text": "x minus x prime which is the"
+    },
+    {
+      "start": 1875.2,
+      "duration": 4.0,
+      "text": "displacement between"
+    },
+    {
+      "start": 1876.399,
+      "duration": 3.681,
+      "text": "the producing mass and the the test mass"
+    },
+    {
+      "start": 1879.2,
+      "duration": 4.16,
+      "text": "that"
+    },
+    {
+      "start": 1880.08,
+      "duration": 3.28,
+      "text": "responds to this field"
+    },
+    {
+      "start": 1884.88,
+      "duration": 4.399,
+      "text": "divided by x minus x prime cubed"
+    },
+    {
+      "start": 1889.919,
+      "duration": 4.561,
+      "text": "so x prime is the location"
+    },
+    {
+      "start": 1896.159,
+      "duration": 4.721,
+      "text": "of the generating mass sorry i probably"
+    },
+    {
+      "start": 1898.559,
+      "duration": 5.521,
+      "text": "said it the wrong way around let me"
+    },
+    {
+      "start": 1900.88,
+      "duration": 5.6,
+      "text": "write it correctly so x prime is the"
+    },
+    {
+      "start": 1904.08,
+      "duration": 6.16,
+      "text": "location of the generating mass"
+    },
+    {
+      "start": 1906.48,
+      "duration": 7.199,
+      "text": "and the g"
+    },
+    {
+      "start": 1910.24,
+      "duration": 3.439,
+      "text": "is the gravitational constant"
+    },
+    {
+      "start": 1919.679,
+      "duration": 10.88,
+      "text": "given by the following number 6.6743015"
+    },
+    {
+      "start": 1926.64,
+      "duration": 8.879,
+      "text": "is uncertain times 10 to the minus 11 is"
+    },
+    {
+      "start": 1930.559,
+      "duration": 10.161,
+      "text": "massively tiny meters cubed"
+    },
+    {
+      "start": 1935.519,
+      "duration": 5.201,
+      "text": "kilograms minus one seconds minus two"
+    },
+    {
+      "start": 1942.64,
+      "duration": 4.8,
+      "text": "so the fact that big g is so tiny makes"
+    },
+    {
+      "start": 1946.0,
+      "duration": 3.84,
+      "text": "understanding quantum gravity is so"
+    },
+    {
+      "start": 1947.44,
+      "duration": 2.4,
+      "text": "difficult"
+    },
+    {
+      "start": 1952.399,
+      "duration": 3.841,
+      "text": "okay so we have a notion of a of"
+    },
+    {
+      "start": 1954.559,
+      "duration": 3.521,
+      "text": "so-called active gravitational mass"
+    },
+    {
+      "start": 1956.24,
+      "duration": 4.64,
+      "text": "that's the the mass that's responsible"
+    },
+    {
+      "start": 1958.08,
+      "duration": 2.8,
+      "text": "for producing"
+    },
+    {
+      "start": 1961.36,
+      "duration": 4.24,
+      "text": "a gravitational field but there's"
+    },
+    {
+      "start": 1964.0,
+      "duration": 2.399,
+      "text": "another one right there's another notion"
+    },
+    {
+      "start": 1965.6,
+      "duration": 5.6,
+      "text": "of mass that's"
+    },
+    {
+      "start": 1966.399,
+      "duration": 4.801,
+      "text": "sort of at least our priori uh"
+    },
+    {
+      "start": 1971.36,
+      "duration": 3.199,
+      "text": "independent notion or conceptually"
+    },
+    {
+      "start": 1973.039,
+      "duration": 4.801,
+      "text": "distinct notion that's the passive"
+    },
+    {
+      "start": 1974.559,
+      "duration": 3.281,
+      "text": "gravitational mass"
+    },
+    {
+      "start": 1981.279,
+      "duration": 3.601,
+      "text": "and this is the mass that responds to an"
+    },
+    {
+      "start": 1983.2,
+      "duration": 4.56,
+      "text": "external gravitational field"
+    },
+    {
+      "start": 1984.88,
+      "duration": 2.88,
+      "text": "by accelerating"
+    },
+    {
+      "start": 1988.32,
+      "duration": 6.719,
+      "text": "so this is the notion of mass that's"
+    },
+    {
+      "start": 1991.44,
+      "duration": 3.599,
+      "text": "responsible for responding"
+    },
+    {
+      "start": 1995.44,
+      "duration": 2.8,
+      "text": "to an external"
+    },
+    {
+      "start": 1999.76,
+      "duration": 6.08,
+      "text": "gravitational field"
+    },
+    {
+      "start": 2010.24,
+      "duration": 6.88,
+      "text": "by accelerating and the formula for that"
+    },
+    {
+      "start": 2013.519,
+      "duration": 7.04,
+      "text": "is given by newton's second law m"
+    },
+    {
+      "start": 2017.12,
+      "duration": 6.159,
+      "text": "g we'll call this m subscript g"
+    },
+    {
+      "start": 2020.559,
+      "duration": 5.761,
+      "text": "but now with a p at the top times by g"
+    },
+    {
+      "start": 2023.279,
+      "duration": 3.041,
+      "text": "the gravitational field"
+    },
+    {
+      "start": 2029.44,
+      "duration": 4.4,
+      "text": "so it's the passive gravitational mass"
+    },
+    {
+      "start": 2035.2,
+      "duration": 3.44,
+      "text": "now it is assumed"
+    },
+    {
+      "start": 2040.399,
+      "duration": 3.041,
+      "text": "should note this right it's an"
+    },
+    {
+      "start": 2041.6,
+      "duration": 2.959,
+      "text": "assumption underlying a lot of physics"
+    },
+    {
+      "start": 2043.44,
+      "duration": 4.239,
+      "text": "that these masses"
+    },
+    {
+      "start": 2044.559,
+      "duration": 3.921,
+      "text": "are not negative so this is a typical"
+    },
+    {
+      "start": 2047.679,
+      "duration": 3.121,
+      "text": "assumption"
+    },
+    {
+      "start": 2048.48,
+      "duration": 4.8,
+      "text": "but not proved right you can't deduce"
+    },
+    {
+      "start": 2050.8,
+      "duration": 4.72,
+      "text": "the non-negativity of mass"
+    },
+    {
+      "start": 2053.28,
+      "duration": 4.879,
+      "text": "it's an assumption and observed"
+    },
+    {
+      "start": 2055.52,
+      "duration": 6.319,
+      "text": "supported by extensive object"
+    },
+    {
+      "start": 2058.159,
+      "duration": 3.68,
+      "text": "physics observations"
+    },
+    {
+      "start": 2062.32,
+      "duration": 3.12,
+      "text": "but it's an assumption that these are"
+    },
+    {
+      "start": 2064.56,
+      "duration": 4.96,
+      "text": "all"
+    },
+    {
+      "start": 2065.44,
+      "duration": 7.52,
+      "text": "non-negative uh interestingly"
+    },
+    {
+      "start": 2069.52,
+      "duration": 6.559,
+      "text": "it is possible to to build physics"
+    },
+    {
+      "start": 2072.96,
+      "duration": 4.879,
+      "text": "with the negative masses it's not"
+    },
+    {
+      "start": 2076.079,
+      "duration": 3.441,
+      "text": "at least immediately inconsistent there"
+    },
+    {
+      "start": 2077.839,
+      "duration": 3.601,
+      "text": "have been attempts to build physics with"
+    },
+    {
+      "start": 2079.52,
+      "duration": 5.44,
+      "text": "negative masses and things"
+    },
+    {
+      "start": 2081.44,
+      "duration": 4.959,
+      "text": "hold together it's very fascinating the"
+    },
+    {
+      "start": 2084.96,
+      "duration": 3.28,
+      "text": "physics of negative masses"
+    },
+    {
+      "start": 2086.399,
+      "duration": 3.44,
+      "text": "they're more like negative charges and"
+    },
+    {
+      "start": 2088.24,
+      "duration": 3.04,
+      "text": "all kinds of crazy things can happen"
+    },
+    {
+      "start": 2089.839,
+      "duration": 2.161,
+      "text": "when you have negative masses but it"
+    },
+    {
+      "start": 2091.28,
+      "duration": 2.799,
+      "text": "doesn't"
+    },
+    {
+      "start": 2092.0,
+      "duration": 3.44,
+      "text": "lead to immediate breakdowns of the laws"
+    },
+    {
+      "start": 2094.079,
+      "duration": 4.0,
+      "text": "of physics at least"
+    },
+    {
+      "start": 2095.44,
+      "duration": 4.0,
+      "text": "as far as what uh if you if you think"
+    },
+    {
+      "start": 2098.079,
+      "duration": 3.76,
+      "text": "about it"
+    },
+    {
+      "start": 2099.44,
+      "duration": 5.679,
+      "text": "if you try and pursue the theory there's"
+    },
+    {
+      "start": 2101.839,
+      "duration": 3.28,
+      "text": "no obvious breakdowns"
+    },
+    {
+      "start": 2105.359,
+      "duration": 4.961,
+      "text": "in physics and people have pursued this"
+    },
+    {
+      "start": 2110.56,
+      "duration": 3.12,
+      "text": "now there's a reason why we don't talk"
+    },
+    {
+      "start": 2112.0,
+      "duration": 4.079,
+      "text": "about these three masses"
+    },
+    {
+      "start": 2113.68,
+      "duration": 3.76,
+      "text": "these three concepts three distinct"
+    },
+    {
+      "start": 2116.079,
+      "duration": 3.28,
+      "text": "conceptually distinct"
+    },
+    {
+      "start": 2117.44,
+      "duration": 3.52,
+      "text": "notions of mass because there's actually"
+    },
+    {
+      "start": 2119.359,
+      "duration": 4.641,
+      "text": "relationships that you can prove and"
+    },
+    {
+      "start": 2120.96,
+      "duration": 3.04,
+      "text": "pretty much immediately"
+    },
+    {
+      "start": 2127.599,
+      "duration": 4.24,
+      "text": "between these three concepts"
+    },
+    {
+      "start": 2138.8,
+      "duration": 3.92,
+      "text": "and it's an exercise for you to show"
+    },
+    {
+      "start": 2141.44,
+      "duration": 3.54,
+      "text": "that really we don't bother with the"
+    },
+    {
+      "start": 2142.72,
+      "duration": 5.37,
+      "text": "difference between passive and active"
+    },
+    {
+      "start": 2144.98,
+      "duration": 3.11,
+      "text": "[Music]"
+    },
+    {
+      "start": 2148.56,
+      "duration": 3.039,
+      "text": "gravitational mass"
+    },
+    {
+      "start": 2152.48,
+      "duration": 4.359,
+      "text": "and the reason we don't ever bother with"
+    },
+    {
+      "start": 2153.76,
+      "duration": 6.079,
+      "text": "it is because if you use newton's third"
+    },
+    {
+      "start": 2156.839,
+      "duration": 3.0,
+      "text": "law"
+    },
+    {
+      "start": 2163.76,
+      "duration": 2.88,
+      "text": "you can actually show"
+    },
+    {
+      "start": 2170.72,
+      "duration": 6.0,
+      "text": "you can argue that mga"
+    },
+    {
+      "start": 2173.76,
+      "duration": 4.0,
+      "text": "the active gravitational mass divided by"
+    },
+    {
+      "start": 2176.72,
+      "duration": 3.52,
+      "text": "mgp"
+    },
+    {
+      "start": 2177.76,
+      "duration": 5.599,
+      "text": "the passive gravitational mass is a"
+    },
+    {
+      "start": 2180.24,
+      "duration": 3.119,
+      "text": "universal constant"
+    },
+    {
+      "start": 2185.599,
+      "duration": 5.281,
+      "text": "so if you choose your units right you"
+    },
+    {
+      "start": 2187.44,
+      "duration": 3.44,
+      "text": "can just arrange for them to be the same"
+    },
+    {
+      "start": 2195.839,
+      "duration": 6.961,
+      "text": "we conclude that mga equals mg"
+    },
+    {
+      "start": 2199.68,
+      "duration": 4.8,
+      "text": "p equals some universal gravitational"
+    },
+    {
+      "start": 2202.8,
+      "duration": 2.08,
+      "text": "mass so that's why you never really talk"
+    },
+    {
+      "start": 2204.48,
+      "duration": 2.16,
+      "text": "about"
+    },
+    {
+      "start": 2204.88,
+      "duration": 3.68,
+      "text": "the difference between these two"
+    },
+    {
+      "start": 2206.64,
+      "duration": 3.52,
+      "text": "gravitational masses"
+    },
+    {
+      "start": 2208.56,
+      "duration": 3.36,
+      "text": "you can just use newton's third law so"
+    },
+    {
+      "start": 2210.16,
+      "duration": 2.8,
+      "text": "it's a very good exercise for you to"
+    },
+    {
+      "start": 2211.92,
+      "duration": 3.6,
+      "text": "think this through"
+    },
+    {
+      "start": 2212.96,
+      "duration": 4.72,
+      "text": "do do these exercises they will also"
+    },
+    {
+      "start": 2215.52,
+      "duration": 3.76,
+      "text": "appear on the exercise sheets anyway"
+    },
+    {
+      "start": 2217.68,
+      "duration": 5.04,
+      "text": "so you're pretty much forced to do these"
+    },
+    {
+      "start": 2219.28,
+      "duration": 6.16,
+      "text": "exercises if you're taking this course"
+    },
+    {
+      "start": 2222.72,
+      "duration": 3.92,
+      "text": "now you know we we can get bold now"
+    },
+    {
+      "start": 2225.44,
+      "duration": 2.56,
+      "text": "we've seen that the active and the"
+    },
+    {
+      "start": 2226.64,
+      "duration": 3.36,
+      "text": "passive gravitational masses"
+    },
+    {
+      "start": 2228.0,
+      "duration": 4.16,
+      "text": "are the same so maybe we can just prove"
+    },
+    {
+      "start": 2230.0,
+      "duration": 5.04,
+      "text": "using newton's whatever laws that"
+    },
+    {
+      "start": 2232.16,
+      "duration": 3.199,
+      "text": "um there's a direct relationship between"
+    },
+    {
+      "start": 2235.04,
+      "duration": 3.2,
+      "text": "the"
+    },
+    {
+      "start": 2235.359,
+      "duration": 3.681,
+      "text": "inertial and gravitational mass well you"
+    },
+    {
+      "start": 2238.24,
+      "duration": 5.599,
+      "text": "can't"
+    },
+    {
+      "start": 2239.04,
+      "duration": 4.799,
+      "text": "and that's really an amazing"
+    },
+    {
+      "start": 2245.2,
+      "duration": 3.36,
+      "text": "this has led to you know this is part of"
+    },
+    {
+      "start": 2247.2,
+      "duration": 2.72,
+      "text": "the ingredients that led"
+    },
+    {
+      "start": 2248.56,
+      "duration": 3.6,
+      "text": "einstein to the general theory of"
+    },
+    {
+      "start": 2249.92,
+      "duration": 6.56,
+      "text": "relativity that the fact that you can't"
+    },
+    {
+      "start": 2252.16,
+      "duration": 7.28,
+      "text": "prove that the same but"
+    },
+    {
+      "start": 2256.48,
+      "duration": 2.96,
+      "text": "and this is crucial"
+    },
+    {
+      "start": 2259.839,
+      "duration": 5.361,
+      "text": "they appear to be equal right so"
+    },
+    {
+      "start": 2262.88,
+      "duration": 3.04,
+      "text": "this has been tested a lot there's"
+    },
+    {
+      "start": 2265.2,
+      "duration": 3.12,
+      "text": "extensive"
+    },
+    {
+      "start": 2265.92,
+      "duration": 4.159,
+      "text": "so these these quantities these concepts"
+    },
+    {
+      "start": 2268.32,
+      "duration": 6.08,
+      "text": "of gravitational inertial mass"
+    },
+    {
+      "start": 2270.079,
+      "duration": 8.481,
+      "text": "uh uh uh independent conceptual notions"
+    },
+    {
+      "start": 2274.4,
+      "duration": 4.16,
+      "text": "however extensive experimental"
+    },
+    {
+      "start": 2278.72,
+      "duration": 7.2,
+      "text": "evidence suggests right it doesn't"
+    },
+    {
+      "start": 2282.88,
+      "duration": 6.0,
+      "text": "prove it suggests that mg"
+    },
+    {
+      "start": 2285.92,
+      "duration": 2.96,
+      "text": "equals mi"
+    },
+    {
+      "start": 2289.359,
+      "duration": 7.201,
+      "text": "so the hypothesis that they're"
+    },
+    {
+      "start": 2292.88,
+      "duration": 3.68,
+      "text": "equal hasn't been rejected yet"
+    },
+    {
+      "start": 2296.64,
+      "duration": 2.88,
+      "text": "could be that they're not equal there"
+    },
+    {
+      "start": 2298.0,
+      "duration": 3.2,
+      "text": "are extensive experiments there are"
+    },
+    {
+      "start": 2299.52,
+      "duration": 3.76,
+      "text": "experiments continuing to this day that"
+    },
+    {
+      "start": 2301.2,
+      "duration": 3.36,
+      "text": "test the relationship between mg and mi"
+    },
+    {
+      "start": 2303.28,
+      "duration": 3.6,
+      "text": "but there's no"
+    },
+    {
+      "start": 2304.56,
+      "duration": 3.6,
+      "text": "so far there's no contradiction to the"
+    },
+    {
+      "start": 2306.88,
+      "duration": 4.56,
+      "text": "hypothesis"
+    },
+    {
+      "start": 2308.16,
+      "duration": 8.64,
+      "text": "that mg equals mi"
+    },
+    {
+      "start": 2311.44,
+      "duration": 5.36,
+      "text": "this leads us to the following postulate"
+    },
+    {
+      "start": 2320.72,
+      "duration": 3.76,
+      "text": "which we're going to call the"
+    },
+    {
+      "start": 2321.599,
+      "duration": 6.24,
+      "text": "universality of free fall or uff"
+    },
+    {
+      "start": 2324.48,
+      "duration": 3.359,
+      "text": "for short"
+    },
+    {
+      "start": 2330.16,
+      "duration": 3.12,
+      "text": "and the universality free pool what does"
+    },
+    {
+      "start": 2331.68,
+      "duration": 2.48,
+      "text": "it say it says that in the gravitational"
+    },
+    {
+      "start": 2333.28,
+      "duration": 2.88,
+      "text": "field g"
+    },
+    {
+      "start": 2334.16,
+      "duration": 3.439,
+      "text": "the orbit of a test mass only depends on"
+    },
+    {
+      "start": 2336.16,
+      "duration": 4.24,
+      "text": "initial conditions"
+    },
+    {
+      "start": 2337.599,
+      "duration": 3.281,
+      "text": "and given initial conditions the same"
+    },
+    {
+      "start": 2340.4,
+      "duration": 2.4,
+      "text": "then"
+    },
+    {
+      "start": 2340.88,
+      "duration": 14.959,
+      "text": "the same trajectory will be the same for"
+    },
+    {
+      "start": 2342.8,
+      "duration": 13.039,
+      "text": "all test messages our way around"
+    },
+    {
+      "start": 2378.8,
+      "duration": 5.279,
+      "text": "so the orbit in a gravitational field g"
+    },
+    {
+      "start": 2381.28,
+      "duration": 4.72,
+      "text": "the orbit of a test mass"
+    },
+    {
+      "start": 2384.079,
+      "duration": 3.601,
+      "text": "only depends on the initial conditions"
+    },
+    {
+      "start": 2386.0,
+      "duration": 3.119,
+      "text": "that's the statement of universality of"
+    },
+    {
+      "start": 2387.68,
+      "duration": 4.24,
+      "text": "free fall"
+    },
+    {
+      "start": 2389.119,
+      "duration": 4.24,
+      "text": "and if you have the same initial"
+    },
+    {
+      "start": 2391.92,
+      "duration": 5.6,
+      "text": "conditions then you can get the same"
+    },
+    {
+      "start": 2393.359,
+      "duration": 7.681,
+      "text": "trajectory for all test masses"
+    },
+    {
+      "start": 2397.52,
+      "duration": 6.8,
+      "text": "cool so initial conditions i'll"
+    },
+    {
+      "start": 2401.04,
+      "duration": 3.28,
+      "text": "abbreviate with ic"
+    },
+    {
+      "start": 2405.839,
+      "duration": 3.201,
+      "text": "so the same ics initial conditions will"
+    },
+    {
+      "start": 2408.56,
+      "duration": 4.32,
+      "text": "give"
+    },
+    {
+      "start": 2409.04,
+      "duration": 6.079,
+      "text": "the same trajectories"
+    },
+    {
+      "start": 2412.88,
+      "duration": 5.04,
+      "text": "not for just one test mass but for all"
+    },
+    {
+      "start": 2415.119,
+      "duration": 2.801,
+      "text": "test masses"
+    },
+    {
+      "start": 2423.04,
+      "duration": 3.52,
+      "text": "so let's investigate some consequences"
+    },
+    {
+      "start": 2424.88,
+      "duration": 4.32,
+      "text": "of the universality of free fall this"
+    },
+    {
+      "start": 2426.56,
+      "duration": 2.64,
+      "text": "postulate"
+    },
+    {
+      "start": 2430.64,
+      "duration": 3.76,
+      "text": "so we assume that we have a test mass"
+    },
+    {
+      "start": 2433.44,
+      "duration": 5.28,
+      "text": "which is a point"
+    },
+    {
+      "start": 2434.4,
+      "duration": 7.6,
+      "text": "right okay i haven't said this um so far"
+    },
+    {
+      "start": 2438.72,
+      "duration": 5.68,
+      "text": "but you should visualize a test mass as"
+    },
+    {
+      "start": 2442.0,
+      "duration": 2.4,
+      "text": "a point"
+    },
+    {
+      "start": 2445.28,
+      "duration": 2.88,
+      "text": "i'll just write that in quote marks"
+    },
+    {
+      "start": 2446.88,
+      "duration": 4.16,
+      "text": "because the minute you invoke quantum"
+    },
+    {
+      "start": 2448.16,
+      "duration": 4.56,
+      "text": "mechanics all this goes completely crazy"
+    },
+    {
+      "start": 2451.04,
+      "duration": 4.16,
+      "text": "and even indeed points in general"
+    },
+    {
+      "start": 2452.72,
+      "duration": 5.119,
+      "text": "relativity are pretty"
+    },
+    {
+      "start": 2455.2,
+      "duration": 2.639,
+      "text": "pretty uh"
+    },
+    {
+      "start": 2458.48,
+      "duration": 4.72,
+      "text": "let's say hairy topics you know if you"
+    },
+    {
+      "start": 2461.359,
+      "duration": 4.081,
+      "text": "concentrate a certain amount of mass"
+    },
+    {
+      "start": 2463.2,
+      "duration": 3.36,
+      "text": "into a teeny tiny radius you're going to"
+    },
+    {
+      "start": 2465.44,
+      "duration": 3.919,
+      "text": "get black holes"
+    },
+    {
+      "start": 2466.56,
+      "duration": 6.24,
+      "text": "so but it's an idealized notion the"
+    },
+    {
+      "start": 2469.359,
+      "duration": 4.801,
+      "text": "notion of a test mass as a point"
+    },
+    {
+      "start": 2472.8,
+      "duration": 3.039,
+      "text": "so you have a test mass in a"
+    },
+    {
+      "start": 2474.16,
+      "duration": 4.24,
+      "text": "gravitational field so you"
+    },
+    {
+      "start": 2475.839,
+      "duration": 4.0,
+      "text": "you can draw a gravitational field as a"
+    },
+    {
+      "start": 2478.4,
+      "duration": 2.32,
+      "text": "bunch of arrows that sort of point to"
+    },
+    {
+      "start": 2479.839,
+      "duration": 4.081,
+      "text": "something heavy"
+    },
+    {
+      "start": 2480.72,
+      "duration": 7.04,
+      "text": "like a planet this is a gravitational"
+    },
+    {
+      "start": 2483.92,
+      "duration": 3.84,
+      "text": "field g it depends on your position"
+    },
+    {
+      "start": 2487.839,
+      "duration": 3.441,
+      "text": "and so you've got a test mass in this"
+    },
+    {
+      "start": 2489.44,
+      "duration": 3.44,
+      "text": "gravitational field"
+    },
+    {
+      "start": 2491.28,
+      "duration": 3.12,
+      "text": "and so i'll draw the test mass i don't"
+    },
+    {
+      "start": 2492.88,
+      "duration": 6.0,
+      "text": "know"
+    },
+    {
+      "start": 2494.4,
+      "duration": 5.919,
+      "text": "green maybe so here's the test map"
+    },
+    {
+      "start": 2498.88,
+      "duration": 3.199,
+      "text": "make sure it's actually green when i say"
+    },
+    {
+      "start": 2500.319,
+      "duration": 2.561,
+      "text": "it's green here's the test mass it's"
+    },
+    {
+      "start": 2502.079,
+      "duration": 2.721,
+      "text": "this green dot"
+    },
+    {
+      "start": 2502.88,
+      "duration": 3.76,
+      "text": "and it's moving on some trajectory in"
+    },
+    {
+      "start": 2504.8,
+      "duration": 2.24,
+      "text": "this gravitational field generated by"
+    },
+    {
+      "start": 2506.64,
+      "duration": 1.76,
+      "text": "this"
+    },
+    {
+      "start": 2507.04,
+      "duration": 3.68,
+      "text": "heavy object according to the"
+    },
+    {
+      "start": 2508.4,
+      "duration": 4.32,
+      "text": "gravitational force law"
+    },
+    {
+      "start": 2510.72,
+      "duration": 4.16,
+      "text": "and uh well what trajectory does it"
+    },
+    {
+      "start": 2512.72,
+      "duration": 5.44,
+      "text": "follow well this one right"
+    },
+    {
+      "start": 2514.88,
+      "duration": 4.64,
+      "text": "we apply newton's second law mg times by"
+    },
+    {
+      "start": 2518.16,
+      "duration": 3.199,
+      "text": "the gravitational field where do we"
+    },
+    {
+      "start": 2519.52,
+      "duration": 4.319,
+      "text": "evaluate it where the particle is"
+    },
+    {
+      "start": 2521.359,
+      "duration": 2.48,
+      "text": "x t"
+    },
+    {
+      "start": 2525.119,
+      "duration": 3.841,
+      "text": "and it's going to be equal to the"
+    },
+    {
+      "start": 2526.72,
+      "duration": 6.32,
+      "text": "inertial mass times by"
+    },
+    {
+      "start": 2528.96,
+      "duration": 4.08,
+      "text": "the acceleration of this particle"
+    },
+    {
+      "start": 2533.2,
+      "duration": 6.48,
+      "text": "or test mass and rewriting this"
+    },
+    {
+      "start": 2537.76,
+      "duration": 4.079,
+      "text": "we see that the acceleration of the test"
+    },
+    {
+      "start": 2539.68,
+      "duration": 4.0,
+      "text": "mass is equal to the ratio"
+    },
+    {
+      "start": 2541.839,
+      "duration": 4.721,
+      "text": "of the inert of the gravitational and"
+    },
+    {
+      "start": 2543.68,
+      "duration": 2.88,
+      "text": "inertial masses"
+    },
+    {
+      "start": 2549.119,
+      "duration": 3.681,
+      "text": "times by the gravitational force field"
+    },
+    {
+      "start": 2551.52,
+      "duration": 3.52,
+      "text": "and it's this ratio"
+    },
+    {
+      "start": 2552.8,
+      "duration": 13.039,
+      "text": "which will be a universal constant"
+    },
+    {
+      "start": 2555.04,
+      "duration": 10.799,
+      "text": "according to uff"
+    },
+    {
+      "start": 2573.52,
+      "duration": 6.319,
+      "text": "so we're going to choose units from now"
+    },
+    {
+      "start": 2576.839,
+      "duration": 3.0,
+      "text": "on"
+    },
+    {
+      "start": 2580.8,
+      "duration": 13.039,
+      "text": "so that mg equals mi"
+    },
+    {
+      "start": 2594.16,
+      "duration": 5.919,
+      "text": "so i've sort of implied this already but"
+    },
+    {
+      "start": 2596.96,
+      "duration": 3.119,
+      "text": "there's an important remark"
+    },
+    {
+      "start": 2604.839,
+      "duration": 17.0,
+      "text": "uff is not a consequence of"
+    },
+    {
+      "start": 2608.319,
+      "duration": 13.52,
+      "text": "newtonian theory"
+    },
+    {
+      "start": 2621.92,
+      "duration": 3.6,
+      "text": "it's a falsifiable hypothesis"
+    },
+    {
+      "start": 2633.119,
+      "duration": 4.561,
+      "text": "and two uff relates to test masses"
+    },
+    {
+      "start": 2644.48,
+      "duration": 4.24,
+      "text": "now test masses is already sort of"
+    },
+    {
+      "start": 2646.4,
+      "duration": 4.56,
+      "text": "implied or a bit of a subtle concept"
+    },
+    {
+      "start": 2648.72,
+      "duration": 3.119,
+      "text": "because you can't have a finite mass and"
+    },
+    {
+      "start": 2650.96,
+      "duration": 4.639,
+      "text": "an infinite"
+    },
+    {
+      "start": 2651.839,
+      "duration": 3.76,
+      "text": "infinitely small volume"
+    },
+    {
+      "start": 2657.04,
+      "duration": 5.68,
+      "text": "further you know what happens"
+    },
+    {
+      "start": 2660.8,
+      "duration": 3.44,
+      "text": "when you have lots of test masses and"
+    },
+    {
+      "start": 2662.72,
+      "duration": 2.32,
+      "text": "they generate their own gravitational"
+    },
+    {
+      "start": 2664.24,
+      "duration": 2.16,
+      "text": "fields"
+    },
+    {
+      "start": 2665.04,
+      "duration": 3.36,
+      "text": "there's an element of subtlety there"
+    },
+    {
+      "start": 2666.4,
+      "duration": 3.52,
+      "text": "that we won't delve too deeply into"
+    },
+    {
+      "start": 2668.4,
+      "duration": 9.04,
+      "text": "because we will resolve this"
+    },
+    {
+      "start": 2669.92,
+      "duration": 10.72,
+      "text": "in general relativity anyway"
+    },
+    {
+      "start": 2677.44,
+      "duration": 6.0,
+      "text": "so now i've spent some time"
+    },
+    {
+      "start": 2680.64,
+      "duration": 4.16,
+      "text": "reviewing some concepts in newtonian"
+    },
+    {
+      "start": 2683.44,
+      "duration": 3.76,
+      "text": "physics"
+    },
+    {
+      "start": 2684.8,
+      "duration": 3.12,
+      "text": "the next part of the lecture today will"
+    },
+    {
+      "start": 2687.2,
+      "duration": 2.72,
+      "text": "be"
+    },
+    {
+      "start": 2687.92,
+      "duration": 3.679,
+      "text": "beginning the transition from newtonian"
+    },
+    {
+      "start": 2689.92,
+      "duration": 3.52,
+      "text": "physics to general relativity"
+    },
+    {
+      "start": 2691.599,
+      "duration": 3.281,
+      "text": "and we'll see how some of these concepts"
+    },
+    {
+      "start": 2693.44,
+      "duration": 3.84,
+      "text": "these fundamental assumptions allowing"
+    },
+    {
+      "start": 2694.88,
+      "duration": 3.92,
+      "text": "newtonian physics have to be revised"
+    },
+    {
+      "start": 2697.28,
+      "duration": 3.839,
+      "text": "and how other aspects of nutrient"
+    },
+    {
+      "start": 2698.8,
+      "duration": 7.039,
+      "text": "physics will inform the development of"
+    },
+    {
+      "start": 2701.119,
+      "duration": 4.72,
+      "text": "general relativity"
+    },
+    {
+      "start": 2713.2,
+      "duration": 3.68,
+      "text": "so this next part of the lecture will be"
+    },
+    {
+      "start": 2714.64,
+      "duration": 5.199,
+      "text": "called from newtonian gravity to general"
+    },
+    {
+      "start": 2716.88,
+      "duration": 2.959,
+      "text": "relativity"
+    },
+    {
+      "start": 2720.48,
+      "duration": 2.8,
+      "text": "and here we're going to"
+    },
+    {
+      "start": 2723.52,
+      "duration": 2.559,
+      "text": "explain"
+    },
+    {
+      "start": 2728.0,
+      "duration": 3.44,
+      "text": "how you might first attempt to"
+    },
+    {
+      "start": 2729.68,
+      "duration": 4.639,
+      "text": "incorporate relativity in newtonian"
+    },
+    {
+      "start": 2731.44,
+      "duration": 5.679,
+      "text": "physics together and gravity"
+    },
+    {
+      "start": 2734.319,
+      "duration": 6.721,
+      "text": "and i'll also expand a little bit on how"
+    },
+    {
+      "start": 2737.119,
+      "duration": 3.921,
+      "text": "gravity and special relativity are"
+    },
+    {
+      "start": 2741.68,
+      "duration": 4.0,
+      "text": "incompatible although i say that"
+    },
+    {
+      "start": 2744.079,
+      "duration": 2.401,
+      "text": "essentially with quote marks because as"
+    },
+    {
+      "start": 2745.68,
+      "duration": 2.8,
+      "text": "you'll see"
+    },
+    {
+      "start": 2746.48,
+      "duration": 3.68,
+      "text": "that the more you think about it the"
+    },
+    {
+      "start": 2748.48,
+      "duration": 3.599,
+      "text": "more you can make"
+    },
+    {
+      "start": 2750.16,
+      "duration": 5.439,
+      "text": "gravity compatible especially relativity"
+    },
+    {
+      "start": 2752.079,
+      "duration": 3.52,
+      "text": "the closer you get to general relativity"
+    },
+    {
+      "start": 2757.04,
+      "duration": 3.76,
+      "text": "so but as we're going to transition from"
+    },
+    {
+      "start": 2758.96,
+      "duration": 3.359,
+      "text": "u-turning to general relativity"
+    },
+    {
+      "start": 2760.8,
+      "duration": 2.799,
+      "text": "newtonian gravity to general relativity"
+    },
+    {
+      "start": 2762.319,
+      "duration": 3.121,
+      "text": "the first step we want to do is to"
+    },
+    {
+      "start": 2763.599,
+      "duration": 3.441,
+      "text": "formulate newtonian gravity as a field"
+    },
+    {
+      "start": 2765.44,
+      "duration": 8.879,
+      "text": "theory"
+    },
+    {
+      "start": 2767.04,
+      "duration": 8.799,
+      "text": "so this is uh this is indeed possible"
+    },
+    {
+      "start": 2774.319,
+      "duration": 3.841,
+      "text": "you probably haven't seen it formulated"
+    },
+    {
+      "start": 2775.839,
+      "duration": 5.52,
+      "text": "like this"
+    },
+    {
+      "start": 2778.16,
+      "duration": 4.48,
+      "text": "and uh it's a more or less essential"
+    },
+    {
+      "start": 2781.359,
+      "duration": 2.881,
+      "text": "ingredient if we want to express"
+    },
+    {
+      "start": 2782.64,
+      "duration": 4.199,
+      "text": "newtonian gravity as"
+    },
+    {
+      "start": 2784.24,
+      "duration": 4.48,
+      "text": "somehow a theory compatible special"
+    },
+    {
+      "start": 2786.839,
+      "duration": 3.24,
+      "text": "relativity"
+    },
+    {
+      "start": 2788.72,
+      "duration": 4.56,
+      "text": "and the motivation comes from"
+    },
+    {
+      "start": 2790.079,
+      "duration": 3.201,
+      "text": "electrodynamics right"
+    },
+    {
+      "start": 2793.76,
+      "duration": 4.72,
+      "text": "you know electrodynamics is compatible"
+    },
+    {
+      "start": 2798.72,
+      "duration": 2.96,
+      "text": "with special relativity the reason it's"
+    },
+    {
+      "start": 2800.24,
+      "duration": 2.48,
+      "text": "compatible with special relativity is"
+    },
+    {
+      "start": 2801.68,
+      "duration": 2.88,
+      "text": "that"
+    },
+    {
+      "start": 2802.72,
+      "duration": 3.599,
+      "text": "the information propagates at the speed"
+    },
+    {
+      "start": 2804.56,
+      "duration": 3.44,
+      "text": "of light and that"
+    },
+    {
+      "start": 2806.319,
+      "duration": 4.241,
+      "text": "lawrence transformations leave maxwell's"
+    },
+    {
+      "start": 2808.0,
+      "duration": 6.24,
+      "text": "equation this variant"
+    },
+    {
+      "start": 2810.56,
+      "duration": 5.68,
+      "text": "so electrodynamics and sr"
+    },
+    {
+      "start": 2814.24,
+      "duration": 3.599,
+      "text": "are compatible right that's the that's"
+    },
+    {
+      "start": 2816.24,
+      "duration": 2.96,
+      "text": "the motivation for why we're going to"
+    },
+    {
+      "start": 2817.839,
+      "duration": 3.121,
+      "text": "try and"
+    },
+    {
+      "start": 2819.2,
+      "duration": 3.28,
+      "text": "discuss newtonian theory as a field"
+    },
+    {
+      "start": 2820.96,
+      "duration": 4.879,
+      "text": "theory you can do it newtonian"
+    },
+    {
+      "start": 2822.48,
+      "duration": 5.2,
+      "text": "gravity is a field theory and since"
+    },
+    {
+      "start": 2825.839,
+      "duration": 3.52,
+      "text": "and you know why would we even think"
+    },
+    {
+      "start": 2827.68,
+      "duration": 2.399,
+      "text": "this is possible well because basically"
+    },
+    {
+      "start": 2829.359,
+      "duration": 2.401,
+      "text": "newtonian"
+    },
+    {
+      "start": 2830.079,
+      "duration": 4.721,
+      "text": "gravity looks very very much like"
+    },
+    {
+      "start": 2831.76,
+      "duration": 3.04,
+      "text": "electrostatics right"
+    },
+    {
+      "start": 2836.319,
+      "duration": 2.161,
+      "text": "so"
+    },
+    {
+      "start": 2841.76,
+      "duration": 5.359,
+      "text": "so newtonian gravity is sort of like"
+    },
+    {
+      "start": 2844.16,
+      "duration": 2.959,
+      "text": "electrostatics"
+    },
+    {
+      "start": 2849.44,
+      "duration": 3.44,
+      "text": "and when you do electrodynamics you"
+    },
+    {
+      "start": 2851.599,
+      "duration": 3.121,
+      "text": "learn how to make"
+    },
+    {
+      "start": 2852.88,
+      "duration": 3.76,
+      "text": "electrodynamics right you have your"
+    },
+    {
+      "start": 2854.72,
+      "duration": 3.599,
+      "text": "static theory this electrostatics theory"
+    },
+    {
+      "start": 2856.64,
+      "duration": 4.88,
+      "text": "you add in dynamics and then woof"
+    },
+    {
+      "start": 2858.319,
+      "duration": 3.52,
+      "text": "it's uh you get maxwell's equations and"
+    },
+    {
+      "start": 2861.52,
+      "duration": 3.12,
+      "text": "all"
+    },
+    {
+      "start": 2861.839,
+      "duration": 3.921,
+      "text": "is compatible with special relativity"
+    },
+    {
+      "start": 2864.64,
+      "duration": 2.56,
+      "text": "and we could hope"
+    },
+    {
+      "start": 2865.76,
+      "duration": 4.079,
+      "text": "by doing the same right you know we"
+    },
+    {
+      "start": 2867.2,
+      "duration": 3.2,
+      "text": "start with elect newton gravity as a"
+    },
+    {
+      "start": 2869.839,
+      "duration": 2.881,
+      "text": "static"
+    },
+    {
+      "start": 2870.4,
+      "duration": 4.56,
+      "text": "field theory we could hope that by"
+    },
+    {
+      "start": 2872.72,
+      "duration": 3.359,
+      "text": "modifying it in a similar way we might"
+    },
+    {
+      "start": 2874.96,
+      "duration": 4.24,
+      "text": "get"
+    },
+    {
+      "start": 2876.079,
+      "duration": 6.321,
+      "text": "a beautiful theory of gravity and"
+    },
+    {
+      "start": 2879.2,
+      "duration": 6.24,
+      "text": "combined with relativity"
+    },
+    {
+      "start": 2882.4,
+      "duration": 5.52,
+      "text": "so let me just before before i explain"
+    },
+    {
+      "start": 2885.44,
+      "duration": 4.159,
+      "text": "why that doesn't quite work"
+    },
+    {
+      "start": 2887.92,
+      "duration": 4.08,
+      "text": "let's highlight some similarities"
+    },
+    {
+      "start": 2889.599,
+      "duration": 2.401,
+      "text": "between"
+    },
+    {
+      "start": 2894.8,
+      "duration": 7.039,
+      "text": "newton gravity or gravito statics"
+    },
+    {
+      "start": 2898.24,
+      "duration": 3.599,
+      "text": "and electrostatics"
+    },
+    {
+      "start": 2911.52,
+      "duration": 3.839,
+      "text": "so that's our next goal let's highlight"
+    },
+    {
+      "start": 2913.52,
+      "duration": 5.68,
+      "text": "some similarities right"
+    },
+    {
+      "start": 2915.359,
+      "duration": 3.841,
+      "text": "well firstly the gravitational field"
+    },
+    {
+      "start": 2922.0,
+      "duration": 3.119,
+      "text": "is determined by an equation where do"
+    },
+    {
+      "start": 2924.8,
+      "duration": 1.759,
+      "text": "you get"
+    },
+    {
+      "start": 2925.119,
+      "duration": 3.841,
+      "text": "what is the gravitational field for a"
+    },
+    {
+      "start": 2926.559,
+      "duration": 3.921,
+      "text": "start well you give it a time"
+    },
+    {
+      "start": 2928.96,
+      "duration": 3.76,
+      "text": "and a location and it'll give you a"
+    },
+    {
+      "start": 2930.48,
+      "duration": 4.56,
+      "text": "force vector so the gravitational field"
+    },
+    {
+      "start": 2932.72,
+      "duration": 4.24,
+      "text": "is a field it takes in a time coordinate"
+    },
+    {
+      "start": 2935.04,
+      "duration": 7.84,
+      "text": "it takes in a space coordinate and it"
+    },
+    {
+      "start": 2936.96,
+      "duration": 9.119,
+      "text": "gives you a vector"
+    },
+    {
+      "start": 2942.88,
+      "duration": 6.32,
+      "text": "right time"
+    },
+    {
+      "start": 2946.079,
+      "duration": 4.401,
+      "text": "space you give it a time and a space and"
+    },
+    {
+      "start": 2949.2,
+      "duration": 3.2,
+      "text": "the gravitational field as a"
+    },
+    {
+      "start": 2950.48,
+      "duration": 5.599,
+      "text": "mathematical object hands you a vector"
+    },
+    {
+      "start": 2952.4,
+      "duration": 5.76,
+      "text": "force vector"
+    },
+    {
+      "start": 2956.079,
+      "duration": 3.921,
+      "text": "so mathematically a gravitational the"
+    },
+    {
+      "start": 2958.16,
+      "duration": 3.199,
+      "text": "gravitational field is a field right you"
+    },
+    {
+      "start": 2960.0,
+      "duration": 2.64,
+      "text": "give it a location space time and it"
+    },
+    {
+      "start": 2961.359,
+      "duration": 1.76,
+      "text": "gives you a vector so it's a vector"
+    },
+    {
+      "start": 2962.64,
+      "duration": 3.6,
+      "text": "field"
+    },
+    {
+      "start": 2963.119,
+      "duration": 6.24,
+      "text": "just like the the electric field right"
+    },
+    {
+      "start": 2966.24,
+      "duration": 6.64,
+      "text": "and so what's a source for this field"
+    },
+    {
+      "start": 2969.359,
+      "duration": 6.161,
+      "text": "well the gravitational masses right"
+    },
+    {
+      "start": 2972.88,
+      "duration": 2.64,
+      "text": "any mass"
+    },
+    {
+      "start": 2978.4,
+      "duration": 4.0,
+      "text": "so the gravitational mass density is a"
+    },
+    {
+      "start": 2980.64,
+      "duration": 3.04,
+      "text": "source for the gravitational"
+    },
+    {
+      "start": 2982.4,
+      "duration": 3.76,
+      "text": "field so mathematically the"
+    },
+    {
+      "start": 2983.68,
+      "duration": 5.84,
+      "text": "gravitational force field is a field"
+    },
+    {
+      "start": 2986.16,
+      "duration": 6.159,
+      "text": "and it's generated or is sourced by the"
+    },
+    {
+      "start": 2989.52,
+      "duration": 4.319,
+      "text": "the density of gravitational mass and"
+    },
+    {
+      "start": 2992.319,
+      "duration": 3.441,
+      "text": "the density of gravitational mass is"
+    },
+    {
+      "start": 2993.839,
+      "duration": 3.841,
+      "text": "also a field we call it rho it goes to"
+    },
+    {
+      "start": 2995.76,
+      "duration": 3.68,
+      "text": "row plus because we assume that mass is"
+    },
+    {
+      "start": 2997.68,
+      "duration": 4.48,
+      "text": "non-negative"
+    },
+    {
+      "start": 2999.44,
+      "duration": 4.24,
+      "text": "so rho give it a time and space it's"
+    },
+    {
+      "start": 3002.16,
+      "duration": 2.64,
+      "text": "mathematically a field as well it just"
+    },
+    {
+      "start": 3003.68,
+      "duration": 3.84,
+      "text": "tells you how much"
+    },
+    {
+      "start": 3004.8,
+      "duration": 4.4,
+      "text": "mass density is in that location of"
+    },
+    {
+      "start": 3007.52,
+      "duration": 5.36,
+      "text": "space time"
+    },
+    {
+      "start": 3009.2,
+      "duration": 5.28,
+      "text": "and how does mass density"
+    },
+    {
+      "start": 3012.88,
+      "duration": 2.959,
+      "text": "uh source the gravitational field well"
+    },
+    {
+      "start": 3014.48,
+      "duration": 2.8,
+      "text": "has to obey an equation well this"
+    },
+    {
+      "start": 3015.839,
+      "duration": 2.48,
+      "text": "equation right that the divergence of"
+    },
+    {
+      "start": 3017.28,
+      "duration": 4.48,
+      "text": "the gravitational"
+    },
+    {
+      "start": 3018.319,
+      "duration": 6.52,
+      "text": "field equals minus 4 pi big g"
+    },
+    {
+      "start": 3021.76,
+      "duration": 6.079,
+      "text": "times rho it's just like coulomb's law"
+    },
+    {
+      "start": 3024.839,
+      "duration": 3.0,
+      "text": "right"
+    },
+    {
+      "start": 3033.92,
+      "duration": 4.08,
+      "text": "it's just like coulomb's law so"
+    },
+    {
+      "start": 3036.319,
+      "duration": 3.201,
+      "text": "newtonian physics if you have some mass"
+    },
+    {
+      "start": 3038.0,
+      "duration": 2.48,
+      "text": "density around gravitational mass"
+    },
+    {
+      "start": 3039.52,
+      "duration": 3.039,
+      "text": "density"
+    },
+    {
+      "start": 3040.48,
+      "duration": 3.599,
+      "text": "then that generates the gravitational"
+    },
+    {
+      "start": 3042.559,
+      "duration": 4.0,
+      "text": "field how do you compute it we'll take"
+    },
+    {
+      "start": 3044.079,
+      "duration": 4.961,
+      "text": "the divergence of the gravitational"
+    },
+    {
+      "start": 3046.559,
+      "duration": 3.841,
+      "text": "field force field and set it equal to"
+    },
+    {
+      "start": 3049.04,
+      "duration": 5.44,
+      "text": "minus 4 pi g times"
+    },
+    {
+      "start": 3050.4,
+      "duration": 7.199,
+      "text": "rho then you've got yourself"
+    },
+    {
+      "start": 3054.48,
+      "duration": 5.92,
+      "text": "the gravitational field"
+    },
+    {
+      "start": 3057.599,
+      "duration": 2.801,
+      "text": "big g here"
+    },
+    {
+      "start": 3061.28,
+      "duration": 4.0,
+      "text": "uh so this is just like coulomb's law"
+    },
+    {
+      "start": 3063.28,
+      "duration": 3.6,
+      "text": "right this is looking good right"
+    },
+    {
+      "start": 3065.28,
+      "duration": 3.68,
+      "text": "when we built up electrodynamics we"
+    },
+    {
+      "start": 3066.88,
+      "duration": 4.0,
+      "text": "started out with electrostatics and then"
+    },
+    {
+      "start": 3068.96,
+      "duration": 3.2,
+      "text": "we added in dynamics and then everything"
+    },
+    {
+      "start": 3070.88,
+      "duration": 4.88,
+      "text": "worked fine"
+    },
+    {
+      "start": 3072.16,
+      "duration": 5.439,
+      "text": "now because of basic vector rules"
+    },
+    {
+      "start": 3075.76,
+      "duration": 3.28,
+      "text": "vector differential operator rules we"
+    },
+    {
+      "start": 3077.599,
+      "duration": 6.24,
+      "text": "have that"
+    },
+    {
+      "start": 3079.04,
+      "duration": 4.799,
+      "text": "if you take the curl"
+    },
+    {
+      "start": 3085.119,
+      "duration": 11.041,
+      "text": "of uh of g"
+    },
+    {
+      "start": 3088.48,
+      "duration": 10.96,
+      "text": "you get zero"
+    },
+    {
+      "start": 3096.16,
+      "duration": 3.28,
+      "text": "so g is conservative"
+    },
+    {
+      "start": 3100.079,
+      "duration": 3.28,
+      "text": "just like the electric field"
+    },
+    {
+      "start": 3106.8,
+      "duration": 4.0,
+      "text": "so what can that what does that tell us"
+    },
+    {
+      "start": 3108.8,
+      "duration": 5.6,
+      "text": "it does actually tell us something"
+    },
+    {
+      "start": 3110.8,
+      "duration": 6.559,
+      "text": "just as in electrostatics you know"
+    },
+    {
+      "start": 3114.4,
+      "duration": 2.959,
+      "text": "by poincares"
+    },
+    {
+      "start": 3117.76,
+      "duration": 2.4,
+      "text": "lemma"
+    },
+    {
+      "start": 3122.079,
+      "duration": 9.121,
+      "text": "we learn the existence of a potential"
+    },
+    {
+      "start": 3126.16,
+      "duration": 7.6,
+      "text": "phi which is also a field a scalar field"
+    },
+    {
+      "start": 3131.2,
+      "duration": 4.96,
+      "text": "so that or such that the gravitational"
+    },
+    {
+      "start": 3133.76,
+      "duration": 4.64,
+      "text": "field g can be obtained by"
+    },
+    {
+      "start": 3136.16,
+      "duration": 3.04,
+      "text": "taking the the minus the gradient of the"
+    },
+    {
+      "start": 3138.4,
+      "duration": 3.12,
+      "text": "scalar"
+    },
+    {
+      "start": 3139.2,
+      "duration": 4.639,
+      "text": "gravitational potential and these minus"
+    },
+    {
+      "start": 3141.52,
+      "duration": 3.599,
+      "text": "signs are convention"
+    },
+    {
+      "start": 3143.839,
+      "duration": 4.0,
+      "text": "you put plus sign there if you're"
+    },
+    {
+      "start": 3145.119,
+      "duration": 3.921,
+      "text": "feeling perverse"
+    },
+    {
+      "start": 3147.839,
+      "duration": 6.0,
+      "text": "but then you have to propagate it"
+    },
+    {
+      "start": 3149.04,
+      "duration": 4.799,
+      "text": "everywhere throughout your calculations"
+    },
+    {
+      "start": 3158.24,
+      "duration": 9.599,
+      "text": "so we just as in electrostatic statics"
+    },
+    {
+      "start": 3168.48,
+      "duration": 4.48,
+      "text": "we can divide a uh we can obtain a field"
+    },
+    {
+      "start": 3171.92,
+      "duration": 9.919,
+      "text": "equation"
+    },
+    {
+      "start": 3172.96,
+      "duration": 8.879,
+      "text": "for phi the gravitational potential"
+    },
+    {
+      "start": 3193.359,
+      "duration": 4.641,
+      "text": "you can derive a field equation the"
+    },
+    {
+      "start": 3194.96,
+      "duration": 6.399,
+      "text": "laplace operated times by phi"
+    },
+    {
+      "start": 3198.0,
+      "duration": 5.599,
+      "text": "is four pi g rho"
+    },
+    {
+      "start": 3201.359,
+      "duration": 4.0,
+      "text": "so the scalar potential is determined by"
+    },
+    {
+      "start": 3203.599,
+      "duration": 3.201,
+      "text": "the mass density gravitational mass"
+    },
+    {
+      "start": 3205.359,
+      "duration": 5.361,
+      "text": "density"
+    },
+    {
+      "start": 3206.8,
+      "duration": 3.92,
+      "text": "where that's porcelain equation"
+    },
+    {
+      "start": 3218.96,
+      "duration": 5.359,
+      "text": "if you want a review of electrodynamics"
+    },
+    {
+      "start": 3222.96,
+      "duration": 3.2,
+      "text": "and you happen to speak german then you"
+    },
+    {
+      "start": 3224.319,
+      "duration": 4.24,
+      "text": "can check out my two edition pcb"
+    },
+    {
+      "start": 3226.16,
+      "duration": 2.399,
+      "text": "lectures"
+    },
+    {
+      "start": 3229.92,
+      "duration": 3.919,
+      "text": "otherwise there are no shortage of very"
+    },
+    {
+      "start": 3231.92,
+      "duration": 3.919,
+      "text": "good lectures on youtube"
+    },
+    {
+      "start": 3233.839,
+      "duration": 4.321,
+      "text": "or tutorials on the basics of"
+    },
+    {
+      "start": 3235.839,
+      "duration": 4.801,
+      "text": "electrodynamics"
+    },
+    {
+      "start": 3238.16,
+      "duration": 3.679,
+      "text": "so so far gravit the newton gravity"
+    },
+    {
+      "start": 3240.64,
+      "duration": 3.919,
+      "text": "looks very much like"
+    },
+    {
+      "start": 3241.839,
+      "duration": 3.441,
+      "text": "electrostatics in fact sort of symbol"
+    },
+    {
+      "start": 3244.559,
+      "duration": 4.081,
+      "text": "for symbol"
+    },
+    {
+      "start": 3245.28,
+      "duration": 6.079,
+      "text": "you can substitute everything now we've"
+    },
+    {
+      "start": 3248.64,
+      "duration": 4.479,
+      "text": "got a"
+    },
+    {
+      "start": 3251.359,
+      "duration": 5.601,
+      "text": "a lawrence force law so there's an"
+    },
+    {
+      "start": 3253.119,
+      "duration": 3.841,
+      "text": "equation of motion for test masses"
+    },
+    {
+      "start": 3257.68,
+      "duration": 4.72,
+      "text": "which would be the analog of the"
+    },
+    {
+      "start": 3259.76,
+      "duration": 2.64,
+      "text": "lawrence law"
+    },
+    {
+      "start": 3263.44,
+      "duration": 4.0,
+      "text": "and that is that the acceleration of a"
+    },
+    {
+      "start": 3265.68,
+      "duration": 5.28,
+      "text": "test mass"
+    },
+    {
+      "start": 3267.44,
+      "duration": 7.119,
+      "text": "is minus grad phi t"
+    },
+    {
+      "start": 3270.96,
+      "duration": 3.599,
+      "text": "evaluated where the test mass actually"
+    },
+    {
+      "start": 3276.839,
+      "duration": 3.0,
+      "text": "is"
+    },
+    {
+      "start": 3282.559,
+      "duration": 9.76,
+      "text": "and that's also a very interesting"
+    },
+    {
+      "start": 3288.24,
+      "duration": 8.079,
+      "text": "analog of electrostatics"
+    },
+    {
+      "start": 3292.319,
+      "duration": 4.0,
+      "text": "or i should say that i've assumed here"
+    },
+    {
+      "start": 3296.4,
+      "duration": 7.12,
+      "text": "so for the mathematically"
+    },
+    {
+      "start": 3299.76,
+      "duration": 5.92,
+      "text": "minded there is some assumptions"
+    },
+    {
+      "start": 3303.52,
+      "duration": 5.76,
+      "text": "underlying"
+    },
+    {
+      "start": 3305.68,
+      "duration": 6.8,
+      "text": "the the solution to possible equation"
+    },
+    {
+      "start": 3309.28,
+      "duration": 4.319,
+      "text": "um that i'm about to to show i'm going"
+    },
+    {
+      "start": 3312.48,
+      "duration": 3.839,
+      "text": "to assume here"
+    },
+    {
+      "start": 3313.599,
+      "duration": 4.0,
+      "text": "that the support of the gravitational"
+    },
+    {
+      "start": 3316.319,
+      "duration": 4.641,
+      "text": "mass"
+    },
+    {
+      "start": 3317.599,
+      "duration": 4.641,
+      "text": "density field is compact what does that"
+    },
+    {
+      "start": 3320.96,
+      "duration": 2.639,
+      "text": "mean it means that there's not a"
+    },
+    {
+      "start": 3322.24,
+      "duration": 2.8,
+      "text": "continuous distribution of matter"
+    },
+    {
+      "start": 3323.599,
+      "duration": 3.52,
+      "text": "throughout the universe in fact"
+    },
+    {
+      "start": 3325.04,
+      "duration": 4.16,
+      "text": "the distribution of matter is stuck in"
+    },
+    {
+      "start": 3327.119,
+      "duration": 5.521,
+      "text": "finite regions"
+    },
+    {
+      "start": 3329.2,
+      "duration": 4.8,
+      "text": "so if you know some topology which is"
+    },
+    {
+      "start": 3332.64,
+      "duration": 4.959,
+      "text": "not strictly necessary for this"
+    },
+    {
+      "start": 3334.0,
+      "duration": 5.2,
+      "text": "course what i'm assuming here is that"
+    },
+    {
+      "start": 3337.599,
+      "duration": 3.121,
+      "text": "the closure of the set"
+    },
+    {
+      "start": 3339.2,
+      "duration": 4.0,
+      "text": "of points where the gravitational mass"
+    },
+    {
+      "start": 3340.72,
+      "duration": 6.96,
+      "text": "density is not zero"
+    },
+    {
+      "start": 3343.2,
+      "duration": 8.639,
+      "text": "that that set is compact"
+    },
+    {
+      "start": 3347.68,
+      "duration": 4.159,
+      "text": "and since we're in uh"
+    },
+    {
+      "start": 3356.4,
+      "duration": 3.84,
+      "text": "in euclidean space then we can invoke"
+    },
+    {
+      "start": 3358.559,
+      "duration": 2.641,
+      "text": "the heiner boggle theorem and we learned"
+    },
+    {
+      "start": 3360.24,
+      "duration": 4.0,
+      "text": "that that's"
+    },
+    {
+      "start": 3361.2,
+      "duration": 3.84,
+      "text": "a closed and bounded region so if the"
+    },
+    {
+      "start": 3364.24,
+      "duration": 2.4,
+      "text": "mass density"
+    },
+    {
+      "start": 3365.04,
+      "duration": 3.84,
+      "text": "gravitational mass density we're going"
+    },
+    {
+      "start": 3366.64,
+      "duration": 4.8,
+      "text": "to assume"
+    },
+    {
+      "start": 3368.88,
+      "duration": 7.52,
+      "text": "that the gravitational mass densities is"
+    },
+    {
+      "start": 3371.44,
+      "duration": 7.28,
+      "text": "restricted to finite regions"
+    },
+    {
+      "start": 3376.4,
+      "duration": 4.24,
+      "text": "we've got this this possible equation"
+    },
+    {
+      "start": 3378.72,
+      "duration": 4.96,
+      "text": "for the gravitational"
+    },
+    {
+      "start": 3380.64,
+      "duration": 4.88,
+      "text": "scalar potential"
+    },
+    {
+      "start": 3383.68,
+      "duration": 3.52,
+      "text": "uh can we deduce the gravitational"
+    },
+    {
+      "start": 3385.52,
+      "duration": 3.36,
+      "text": "scalar potential as a function of rho"
+    },
+    {
+      "start": 3387.2,
+      "duration": 4.639,
+      "text": "well yes we can we've done that in"
+    },
+    {
+      "start": 3388.88,
+      "duration": 2.959,
+      "text": "electrode statics"
+    },
+    {
+      "start": 3392.0,
+      "duration": 4.4,
+      "text": "and as long as you're a bit careful"
+    },
+    {
+      "start": 3393.2,
+      "duration": 3.2,
+      "text": "about your boundary conditions"
+    },
+    {
+      "start": 3398.64,
+      "duration": 6.8,
+      "text": "to prevent weird soliton solutions"
+    },
+    {
+      "start": 3403.44,
+      "duration": 4.399,
+      "text": "so as long as the gravitational scalar"
+    },
+    {
+      "start": 3405.44,
+      "duration": 5.6,
+      "text": "potential is assumed to decay to zero"
+    },
+    {
+      "start": 3407.839,
+      "duration": 3.201,
+      "text": "as you go out to infinity"
+    },
+    {
+      "start": 3411.68,
+      "duration": 4.879,
+      "text": "then we get a unique solution for the"
+    },
+    {
+      "start": 3414.72,
+      "duration": 3.359,
+      "text": "gravitational scalar potential just as"
+    },
+    {
+      "start": 3416.559,
+      "duration": 3.921,
+      "text": "we do in electrostatics"
+    },
+    {
+      "start": 3418.079,
+      "duration": 4.72,
+      "text": "it's minus g the integral over all of"
+    },
+    {
+      "start": 3420.48,
+      "duration": 2.319,
+      "text": "space"
+    },
+    {
+      "start": 3423.04,
+      "duration": 3.519,
+      "text": "so three dimensional integral you take"
+    },
+    {
+      "start": 3425.44,
+      "duration": 4.0,
+      "text": "the gravitational"
+    },
+    {
+      "start": 3426.559,
+      "duration": 4.401,
+      "text": "you take the gravitational mass density"
+    },
+    {
+      "start": 3429.44,
+      "duration": 5.119,
+      "text": "divided by x minus x"
+    },
+    {
+      "start": 3430.96,
+      "duration": 7.44,
+      "text": "prime take the norm and integrate that"
+    },
+    {
+      "start": 3434.559,
+      "duration": 5.361,
+      "text": "over all of space and uh"
+    },
+    {
+      "start": 3438.4,
+      "duration": 4.959,
+      "text": "and then you have a nice well-defined"
+    },
+    {
+      "start": 3439.92,
+      "duration": 3.439,
+      "text": "gravitational scale of potential"
+    },
+    {
+      "start": 3444.72,
+      "duration": 6.32,
+      "text": "and so"
+    },
+    {
+      "start": 3447.76,
+      "duration": 3.28,
+      "text": "we have a beautiful analog"
+    },
+    {
+      "start": 3453.04,
+      "duration": 8.799,
+      "text": "of electrostatics that we might call"
+    },
+    {
+      "start": 3456.319,
+      "duration": 5.52,
+      "text": "grabato statics"
+    },
+    {
+      "start": 3466.88,
+      "duration": 4.719,
+      "text": "and seeing this you'll be like this is"
+    },
+    {
+      "start": 3469.92,
+      "duration": 2.919,
+      "text": "great"
+    },
+    {
+      "start": 3471.599,
+      "duration": 4.881,
+      "text": "well let's just do what we did for"
+    },
+    {
+      "start": 3472.839,
+      "duration": 5.48,
+      "text": "electrodynamics and we've combined"
+    },
+    {
+      "start": 3476.48,
+      "duration": 3.04,
+      "text": "relativity and gravitational newtonian"
+    },
+    {
+      "start": 3478.319,
+      "duration": 4.48,
+      "text": "gravity theory"
+    },
+    {
+      "start": 3479.52,
+      "duration": 5.2,
+      "text": "so let's just"
+    },
+    {
+      "start": 3482.799,
+      "duration": 4.04,
+      "text": "talk a little bit about what happens if"
+    },
+    {
+      "start": 3484.72,
+      "duration": 4.24,
+      "text": "you try and do that so how to add"
+    },
+    {
+      "start": 3486.839,
+      "duration": 5.48,
+      "text": "dynamics"
+    },
+    {
+      "start": 3488.96,
+      "duration": 3.359,
+      "text": "to the gravitational field"
+    },
+    {
+      "start": 3492.64,
+      "duration": 3.6,
+      "text": "so at the moment the gravitational field"
+    },
+    {
+      "start": 3494.48,
+      "duration": 8.879,
+      "text": "in this discussion is static it doesn't"
+    },
+    {
+      "start": 3496.24,
+      "duration": 9.359,
+      "text": "change with time"
+    },
+    {
+      "start": 3503.359,
+      "duration": 3.281,
+      "text": "so we have you know some options for how"
+    },
+    {
+      "start": 3505.599,
+      "duration": 2.72,
+      "text": "to add dynamics"
+    },
+    {
+      "start": 3506.64,
+      "duration": 3.76,
+      "text": "to the gravitational field so what"
+    },
+    {
+      "start": 3508.319,
+      "duration": 3.28,
+      "text": "happens if the the mass density that"
+    },
+    {
+      "start": 3510.4,
+      "duration": 3.12,
+      "text": "sources the gravitational field what"
+    },
+    {
+      "start": 3511.599,
+      "duration": 6.24,
+      "text": "happens if that changes well we could"
+    },
+    {
+      "start": 3513.52,
+      "duration": 4.319,
+      "text": "just assume instantaneous propagation"
+    },
+    {
+      "start": 3524.079,
+      "duration": 3.121,
+      "text": "or we could add dynamics to the"
+    },
+    {
+      "start": 3525.359,
+      "duration": 7.2,
+      "text": "gravitational field by"
+    },
+    {
+      "start": 3527.2,
+      "duration": 5.359,
+      "text": "assuming a scalar wave equation for five"
+    },
+    {
+      "start": 3533.52,
+      "duration": 4.079,
+      "text": "just that's not what happened in"
+    },
+    {
+      "start": 3536.16,
+      "duration": 3.919,
+      "text": "electrodynamics but hey right we could"
+    },
+    {
+      "start": 3537.599,
+      "duration": 2.48,
+      "text": "do it here"
+    },
+    {
+      "start": 3541.839,
+      "duration": 3.52,
+      "text": "it's allowed we could do the"
+    },
+    {
+      "start": 3543.76,
+      "duration": 5.44,
+      "text": "electrodynamics thing"
+    },
+    {
+      "start": 3545.359,
+      "duration": 4.96,
+      "text": "we could complete the gravitational"
+    },
+    {
+      "start": 3549.2,
+      "duration": 6.0,
+      "text": "scalar"
+    },
+    {
+      "start": 3550.319,
+      "duration": 4.881,
+      "text": "potential to a vector to a four vector"
+    },
+    {
+      "start": 3556.0,
+      "duration": 7.119,
+      "text": "it's a third option and just like for"
+    },
+    {
+      "start": 3560.119,
+      "duration": 3.0,
+      "text": "electrodynamics"
+    },
+    {
+      "start": 3567.359,
+      "duration": 9.601,
+      "text": "or we could complete"
+    },
+    {
+      "start": 3573.359,
+      "duration": 5.121,
+      "text": "phi to a tensor"
+    },
+    {
+      "start": 3576.96,
+      "duration": 3.04,
+      "text": "in this case a symmetric 10. so this"
+    },
+    {
+      "start": 3578.48,
+      "duration": 3.92,
+      "text": "will make more sense as we go through"
+    },
+    {
+      "start": 3580.0,
+      "duration": 4.24,
+      "text": "the course"
+    },
+    {
+      "start": 3582.4,
+      "duration": 3.28,
+      "text": "that'll be a fourth options fifth five"
+    },
+    {
+      "start": 3584.24,
+      "duration": 4.24,
+      "text": "fifths and six options but"
+    },
+    {
+      "start": 3585.68,
+      "duration": 4.48,
+      "text": "interestingly some things happen when"
+    },
+    {
+      "start": 3588.48,
+      "duration": 3.359,
+      "text": "you follow up these assumptions"
+    },
+    {
+      "start": 3590.16,
+      "duration": 3.28,
+      "text": "now there's a very beautiful discussion"
+    },
+    {
+      "start": 3591.839,
+      "duration": 3.041,
+      "text": "of this in mexico and wheeler chapter"
+    },
+    {
+      "start": 3593.44,
+      "duration": 4.0,
+      "text": "seven i highly recommend you go and take"
+    },
+    {
+      "start": 3594.88,
+      "duration": 2.56,
+      "text": "a look at it"
+    },
+    {
+      "start": 3597.839,
+      "duration": 3.28,
+      "text": "where they follow up all of these"
+    },
+    {
+      "start": 3599.04,
+      "duration": 4.88,
+      "text": "options for adding dynamics to the"
+    },
+    {
+      "start": 3601.119,
+      "duration": 4.081,
+      "text": "gravitational field so"
+    },
+    {
+      "start": 3603.92,
+      "duration": 3.28,
+      "text": "i don't really need to say much about"
+    },
+    {
+      "start": 3605.2,
+      "duration": 3.599,
+      "text": "the zeroth version there's obvious"
+    },
+    {
+      "start": 3607.2,
+      "duration": 3.04,
+      "text": "causality problems that make it"
+    },
+    {
+      "start": 3608.799,
+      "duration": 6.881,
+      "text": "incompatible"
+    },
+    {
+      "start": 3610.24,
+      "duration": 7.359,
+      "text": "with special relativity"
+    },
+    {
+      "start": 3615.68,
+      "duration": 3.52,
+      "text": "you know you can see by moving masses"
+    },
+    {
+      "start": 3617.599,
+      "duration": 2.72,
+      "text": "around you can signal faster than the"
+    },
+    {
+      "start": 3619.2,
+      "duration": 3.2,
+      "text": "speed of light"
+    },
+    {
+      "start": 3620.319,
+      "duration": 4.161,
+      "text": "so you know zero is out right you can't"
+    },
+    {
+      "start": 3622.4,
+      "duration": 5.439,
+      "text": "do that"
+    },
+    {
+      "start": 3624.48,
+      "duration": 5.44,
+      "text": "now one you can do but"
+    },
+    {
+      "start": 3627.839,
+      "duration": 4.401,
+      "text": "it's ruled out by observations because"
+    },
+    {
+      "start": 3629.92,
+      "duration": 5.52,
+      "text": "it there's no bending of light"
+    },
+    {
+      "start": 3632.24,
+      "duration": 3.2,
+      "text": "which has been observed"
+    },
+    {
+      "start": 3635.76,
+      "duration": 5.52,
+      "text": "two you can do uh as well"
+    },
+    {
+      "start": 3638.799,
+      "duration": 5.04,
+      "text": "but there's problems with the perihelion"
+    },
+    {
+      "start": 3641.28,
+      "duration": 2.559,
+      "text": "procession"
+    },
+    {
+      "start": 3651.839,
+      "duration": 4.48,
+      "text": "so that's ruled out by experiments as"
+    },
+    {
+      "start": 3653.44,
+      "duration": 5.28,
+      "text": "well and also you get negative energy"
+    },
+    {
+      "start": 3656.319,
+      "duration": 2.401,
+      "text": "waves"
+    },
+    {
+      "start": 3662.64,
+      "duration": 4.88,
+      "text": "it's pretty bad so we're left with three"
+    },
+    {
+      "start": 3666.24,
+      "duration": 3.52,
+      "text": "or are we left with three maybe there's"
+    },
+    {
+      "start": 3667.52,
+      "duration": 5.12,
+      "text": "more options so three"
+    },
+    {
+      "start": 3669.76,
+      "duration": 4.319,
+      "text": "if you follow up completing the scalar"
+    },
+    {
+      "start": 3672.64,
+      "duration": 4.88,
+      "text": "gravitational potential to a"
+    },
+    {
+      "start": 3674.079,
+      "duration": 6.48,
+      "text": "full tensor the rank two tensor"
+    },
+    {
+      "start": 3677.52,
+      "duration": 8.0,
+      "text": "then you actually uh"
+    },
+    {
+      "start": 3680.559,
+      "duration": 8.24,
+      "text": "discover something pretty amazing"
+    },
+    {
+      "start": 3685.52,
+      "duration": 14.319,
+      "text": "this route leads to the linearized"
+    },
+    {
+      "start": 3688.799,
+      "duration": 11.04,
+      "text": "einstein equation"
+    },
+    {
+      "start": 3704.16,
+      "duration": 5.36,
+      "text": "and sort of implicitly and indirectly"
+    },
+    {
+      "start": 3707.04,
+      "duration": 6.16,
+      "text": "you go to gr"
+    },
+    {
+      "start": 3709.52,
+      "duration": 5.839,
+      "text": "so really by taking newton's"
+    },
+    {
+      "start": 3713.2,
+      "duration": 3.839,
+      "text": "theory of gravity and trying to make it"
+    },
+    {
+      "start": 3715.359,
+      "duration": 3.601,
+      "text": "compatible with special relativity and"
+    },
+    {
+      "start": 3717.039,
+      "duration": 4.08,
+      "text": "the observations"
+    },
+    {
+      "start": 3718.96,
+      "duration": 3.04,
+      "text": "and available experimental observations"
+    },
+    {
+      "start": 3721.119,
+      "duration": 3.361,
+      "text": "you are forced"
+    },
+    {
+      "start": 3722.0,
+      "duration": 4.319,
+      "text": "to think of completing the gravitational"
+    },
+    {
+      "start": 3724.48,
+      "duration": 3.44,
+      "text": "scale potential to a tensor"
+    },
+    {
+      "start": 3726.319,
+      "duration": 2.881,
+      "text": "when you go down that root you discover"
+    },
+    {
+      "start": 3727.92,
+      "duration": 2.32,
+      "text": "that the dynamics you give to the"
+    },
+    {
+      "start": 3729.2,
+      "duration": 2.32,
+      "text": "gravitational field"
+    },
+    {
+      "start": 3730.24,
+      "duration": 3.44,
+      "text": "are governed by linearized form of"
+    },
+    {
+      "start": 3731.52,
+      "duration": 5.44,
+      "text": "einstein's field equations and then by"
+    },
+    {
+      "start": 3733.68,
+      "duration": 6.399,
+      "text": "somewhat indirect but you know logically"
+    },
+    {
+      "start": 3736.96,
+      "duration": 3.68,
+      "text": "uh logically okay argument you can then"
+    },
+    {
+      "start": 3740.079,
+      "duration": 2.48,
+      "text": "get"
+    },
+    {
+      "start": 3740.64,
+      "duration": 3.439,
+      "text": "um general relativity or deduce general"
+    },
+    {
+      "start": 3742.559,
+      "duration": 3.76,
+      "text": "relativity"
+    },
+    {
+      "start": 3744.079,
+      "duration": 4.0,
+      "text": "we are not going to do that this way and"
+    },
+    {
+      "start": 3746.319,
+      "duration": 2.72,
+      "text": "einstein certainly did not follow this"
+    },
+    {
+      "start": 3748.079,
+      "duration": 3.121,
+      "text": "route or at least"
+    },
+    {
+      "start": 3749.039,
+      "duration": 5.121,
+      "text": "we don't know from the historical record"
+    },
+    {
+      "start": 3751.2,
+      "duration": 4.399,
+      "text": "whether einstein followed this route"
+    },
+    {
+      "start": 3754.16,
+      "duration": 3.12,
+      "text": "instead we're going to discover general"
+    },
+    {
+      "start": 3755.599,
+      "duration": 3.281,
+      "text": "relativity in a completely different"
+    },
+    {
+      "start": 3757.28,
+      "duration": 5.039,
+      "text": "other way"
+    },
+    {
+      "start": 3758.88,
+      "duration": 5.12,
+      "text": "that's it for lecture one thank you for"
+    },
+    {
+      "start": 3762.319,
+      "duration": 5.121,
+      "text": "joining me on this journey and i look"
+    },
+    {
+      "start": 3764.0,
+      "duration": 3.44,
+      "text": "forward to seeing you in the next"
+    }
+  ]
+}

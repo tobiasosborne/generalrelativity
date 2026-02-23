@@ -1,0 +1,2402 @@
+{
+  "title": "General Relativity, Lecture 21: Schwarzschild metric, interior solutions",
+  "video_id": "OcZo9kzSzJA",
+  "url": "https://www.youtube.com/watch?v=OcZo9kzSzJA",
+  "transcript": [
+    {
+      "start": 0.08,
+      "duration": 3.839,
+      "text": "hello and welcome back to introduction"
+    },
+    {
+      "start": 1.52,
+      "duration": 4.72,
+      "text": "to channel relativity in today's lecture"
+    },
+    {
+      "start": 3.919,
+      "duration": 4.241,
+      "text": "we will continue our discussion of"
+    },
+    {
+      "start": 6.24,
+      "duration": 3.04,
+      "text": "solutions of einstein's field equations"
+    },
+    {
+      "start": 8.16,
+      "duration": 4.399,
+      "text": "that for static"
+    },
+    {
+      "start": 9.28,
+      "duration": 4.64,
+      "text": "and spherically symmetric space times"
+    },
+    {
+      "start": 12.559,
+      "duration": 3.521,
+      "text": "in particular we're going to continue"
+    },
+    {
+      "start": 13.92,
+      "duration": 5.6,
+      "text": "our discussion of the schwarzschild"
+    },
+    {
+      "start": 16.08,
+      "duration": 5.039,
+      "text": "solution and this time we're looking"
+    },
+    {
+      "start": 19.52,
+      "duration": 4.72,
+      "text": "for a solution of einstein's field"
+    },
+    {
+      "start": 21.119,
+      "duration": 10.721,
+      "text": "equations that applies to the interiors"
+    },
+    {
+      "start": 24.24,
+      "duration": 7.6,
+      "text": "of celestial bodies"
+    },
+    {
+      "start": 33.36,
+      "duration": 4.56,
+      "text": "so we're going to look for interior"
+    },
+    {
+      "start": 34.719,
+      "duration": 4.401,
+      "text": "solutions of"
+    },
+    {
+      "start": 37.92,
+      "duration": 7.28,
+      "text": "celestial bodies which are static"
+    },
+    {
+      "start": 39.12,
+      "duration": 9.279,
+      "text": "spherically symmetric"
+    },
+    {
+      "start": 45.2,
+      "duration": 4.64,
+      "text": "and what kind of material are these"
+    },
+    {
+      "start": 48.399,
+      "duration": 3.921,
+      "text": "celestial bodies going to be seen to be"
+    },
+    {
+      "start": 49.84,
+      "duration": 2.48,
+      "text": "made of"
+    },
+    {
+      "start": 52.399,
+      "duration": 6.64,
+      "text": "well we're going to be thinking about"
+    },
+    {
+      "start": 53.92,
+      "duration": 7.68,
+      "text": "stars here rather than say"
+    },
+    {
+      "start": 59.039,
+      "duration": 2.561,
+      "text": "planets"
+    },
+    {
+      "start": 62.719,
+      "duration": 3.041,
+      "text": "and for a star you go we're going to"
+    },
+    {
+      "start": 65.439,
+      "duration": 3.04,
+      "text": "take"
+    },
+    {
+      "start": 65.76,
+      "duration": 4.0,
+      "text": "as our model for a star not a solid but"
+    },
+    {
+      "start": 68.479,
+      "duration": 4.0,
+      "text": "a liquid right"
+    },
+    {
+      "start": 69.76,
+      "duration": 5.679,
+      "text": "you can imagine a star is a big hot"
+    },
+    {
+      "start": 72.479,
+      "duration": 2.96,
+      "text": "boiling liquid"
+    },
+    {
+      "start": 79.52,
+      "duration": 3.68,
+      "text": "so we're going to look for spherically"
+    },
+    {
+      "start": 82.479,
+      "duration": 2.241,
+      "text": "symmetric"
+    },
+    {
+      "start": 83.2,
+      "duration": 3.279,
+      "text": "and static solutions of i transferred"
+    },
+    {
+      "start": 84.72,
+      "duration": 5.2,
+      "text": "equations where the metric"
+    },
+    {
+      "start": 86.479,
+      "duration": 5.041,
+      "text": "sorry where the stress energy tensor"
+    },
+    {
+      "start": 89.92,
+      "duration": 4.32,
+      "text": "takes the following form it takes the"
+    },
+    {
+      "start": 91.52,
+      "duration": 2.72,
+      "text": "perfect fluid"
+    },
+    {
+      "start": 98.84,
+      "duration": 3.0,
+      "text": "form"
+    },
+    {
+      "start": 104.079,
+      "duration": 4.881,
+      "text": "because we imagine that our star is made"
+    },
+    {
+      "start": 105.92,
+      "duration": 3.04,
+      "text": "up is just a liquid"
+    },
+    {
+      "start": 110.799,
+      "duration": 5.041,
+      "text": "or gas"
+    },
+    {
+      "start": 116.32,
+      "duration": 4.24,
+      "text": "and can redistribute itself"
+    },
+    {
+      "start": 121.6,
+      "duration": 3.6,
+      "text": "where liquid the liquid comprising the"
+    },
+    {
+      "start": 124.159,
+      "duration": 5.281,
+      "text": "celestial object"
+    },
+    {
+      "start": 125.2,
+      "duration": 7.84,
+      "text": "can redistribute itself easily"
+    },
+    {
+      "start": 129.44,
+      "duration": 6.64,
+      "text": "and so we've got to"
+    },
+    {
+      "start": 133.04,
+      "duration": 4.4,
+      "text": "start by making some assumptions in"
+    },
+    {
+      "start": 136.08,
+      "duration": 4.72,
+      "text": "order to"
+    },
+    {
+      "start": 137.44,
+      "duration": 5.2,
+      "text": "be able to compare the stress energy"
+    },
+    {
+      "start": 140.8,
+      "duration": 5.28,
+      "text": "tensor with"
+    },
+    {
+      "start": 142.64,
+      "duration": 8.48,
+      "text": "the metric solution that we have already"
+    },
+    {
+      "start": 146.08,
+      "duration": 7.76,
+      "text": "derived on general grounds and"
+    },
+    {
+      "start": 151.12,
+      "duration": 5.119,
+      "text": "the observation we're going to use is"
+    },
+    {
+      "start": 153.84,
+      "duration": 7.28,
+      "text": "that we should"
+    },
+    {
+      "start": 156.239,
+      "duration": 4.881,
+      "text": "choose a direction for this u vector"
+    },
+    {
+      "start": 169.44,
+      "duration": 4.32,
+      "text": "and since we're talking about a static"
+    },
+    {
+      "start": 170.959,
+      "duration": 2.801,
+      "text": "solution here"
+    },
+    {
+      "start": 175.36,
+      "duration": 5.04,
+      "text": "we're going to choose that u has got a"
+    },
+    {
+      "start": 177.519,
+      "duration": 4.401,
+      "text": "point in the t direction"
+    },
+    {
+      "start": 180.4,
+      "duration": 5.44,
+      "text": "and just for convenience sake we put"
+    },
+    {
+      "start": 181.92,
+      "duration": 3.92,
+      "text": "minus square root f"
+    },
+    {
+      "start": 186.0,
+      "duration": 7.04,
+      "text": "so as a as a vector it's pointing"
+    },
+    {
+      "start": 189.519,
+      "duration": 3.521,
+      "text": "in directly in the t direction"
+    },
+    {
+      "start": 193.36,
+      "duration": 3.68,
+      "text": "and f here is exactly"
+    },
+    {
+      "start": 197.12,
+      "duration": 4.08,
+      "text": "the f that appears in the vacuum metric"
+    },
+    {
+      "start": 209.28,
+      "duration": 5.599,
+      "text": "and yeah as as i emphasized earlier the"
+    },
+    {
+      "start": 212.4,
+      "duration": 3.44,
+      "text": "the stress energy tends to star is meant"
+    },
+    {
+      "start": 214.879,
+      "duration": 4.561,
+      "text": "to model"
+    },
+    {
+      "start": 215.84,
+      "duration": 4.64,
+      "text": "stars hence this time for the first time"
+    },
+    {
+      "start": 219.44,
+      "duration": 3.359,
+      "text": "ever"
+    },
+    {
+      "start": 220.48,
+      "duration": 3.44,
+      "text": "the abbreviation star is possibly the"
+    },
+    {
+      "start": 222.799,
+      "duration": 4.321,
+      "text": "most appropriate"
+    },
+    {
+      "start": 223.92,
+      "duration": 6.239,
+      "text": "one for that equation"
+    },
+    {
+      "start": 227.12,
+      "duration": 5.039,
+      "text": "now we've got the stress energy tensor"
+    },
+    {
+      "start": 230.159,
+      "duration": 4.241,
+      "text": "we have the richie tensor from the"
+    },
+    {
+      "start": 232.159,
+      "duration": 4.16,
+      "text": "previous lecture"
+    },
+    {
+      "start": 234.4,
+      "duration": 3.28,
+      "text": "if a general static stroke spherically"
+    },
+    {
+      "start": 236.319,
+      "duration": 2.721,
+      "text": "symmetric solutions by science field"
+    },
+    {
+      "start": 237.68,
+      "duration": 2.96,
+      "text": "equation so we just have to equate the"
+    },
+    {
+      "start": 239.04,
+      "duration": 4.8,
+      "text": "two"
+    },
+    {
+      "start": 240.64,
+      "duration": 4.799,
+      "text": "now there's uh various"
+    },
+    {
+      "start": 243.84,
+      "duration": 2.959,
+      "text": "incarnations of i transfield equations"
+    },
+    {
+      "start": 245.439,
+      "duration": 3.281,
+      "text": "we're going to use this trace reversed"
+    },
+    {
+      "start": 246.799,
+      "duration": 8.561,
+      "text": "form"
+    },
+    {
+      "start": 248.72,
+      "duration": 9.44,
+      "text": "no we are not no not today we just apply"
+    },
+    {
+      "start": 255.36,
+      "duration": 2.8,
+      "text": "einstein's"
+    },
+    {
+      "start": 259.04,
+      "duration": 6.159,
+      "text": "uh field equations in the usual form"
+    },
+    {
+      "start": 262.24,
+      "duration": 4.88,
+      "text": "or the originally for this course quoted"
+    },
+    {
+      "start": 265.199,
+      "duration": 6.72,
+      "text": "form"
+    },
+    {
+      "start": 267.12,
+      "duration": 4.799,
+      "text": "you know gab equals 8 pi tab"
+    },
+    {
+      "start": 276.08,
+      "duration": 2.88,
+      "text": "we're going to apply them"
+    },
+    {
+      "start": 280.32,
+      "duration": 3.52,
+      "text": "in this way"
+    },
+    {
+      "start": 291.36,
+      "duration": 4.399,
+      "text": "and we will obtain three independent"
+    },
+    {
+      "start": 294.0,
+      "duration": 3.36,
+      "text": "equations just as we did in the vacuum"
+    },
+    {
+      "start": 295.759,
+      "duration": 3.841,
+      "text": "case"
+    },
+    {
+      "start": 297.36,
+      "duration": 3.52,
+      "text": "but to interpret these i'm going to be"
+    },
+    {
+      "start": 299.6,
+      "duration": 4.319,
+      "text": "talking about a different slightly"
+    },
+    {
+      "start": 300.88,
+      "duration": 3.039,
+      "text": "different coordinate system"
+    },
+    {
+      "start": 305.44,
+      "duration": 7.84,
+      "text": "so this is an exercise to just"
+    },
+    {
+      "start": 309.6,
+      "duration": 3.68,
+      "text": "do the substitutions of these"
+    },
+    {
+      "start": 322.84,
+      "duration": 3.0,
+      "text": "equations"
+    },
+    {
+      "start": 331.039,
+      "duration": 8.801,
+      "text": "i'll um just move this around so you can"
+    },
+    {
+      "start": 334.24,
+      "duration": 5.6,
+      "text": "to make something explicit here"
+    },
+    {
+      "start": 352.8,
+      "duration": 3.119,
+      "text": "so you just take the richie tensor that"
+    },
+    {
+      "start": 354.32,
+      "duration": 3.999,
+      "text": "we had before the metric tensor that we"
+    },
+    {
+      "start": 355.919,
+      "duration": 3.921,
+      "text": "had before"
+    },
+    {
+      "start": 358.319,
+      "duration": 3.521,
+      "text": "put it in the appropriate place of"
+    },
+    {
+      "start": 359.84,
+      "duration": 3.919,
+      "text": "einstein's field equations"
+    },
+    {
+      "start": 361.84,
+      "duration": 3.52,
+      "text": "and then work out the following"
+    },
+    {
+      "start": 363.759,
+      "duration": 3.601,
+      "text": "components now i'll define what"
+    },
+    {
+      "start": 365.36,
+      "duration": 4.0,
+      "text": "zero zero one one two two mean in a"
+    },
+    {
+      "start": 367.36,
+      "duration": 14.48,
+      "text": "second what what particular components"
+    },
+    {
+      "start": 369.36,
+      "duration": 12.48,
+      "text": "are being spoken of here"
+    },
+    {
+      "start": 382.96,
+      "duration": 4.88,
+      "text": "so we won't use exactly the same"
+    },
+    {
+      "start": 384.56,
+      "duration": 7.6,
+      "text": "coordinates to evaluate these components"
+    },
+    {
+      "start": 387.84,
+      "duration": 4.32,
+      "text": "as the vacuum coordinate system"
+    },
+    {
+      "start": 393.68,
+      "duration": 5.28,
+      "text": "but just a slightly rescaled version of"
+    },
+    {
+      "start": 396.8,
+      "duration": 2.16,
+      "text": "it"
+    },
+    {
+      "start": 402.88,
+      "duration": 4.24,
+      "text": "and that makes for a slightly more"
+    },
+    {
+      "start": 404.24,
+      "duration": 2.88,
+      "text": "compact solution"
+    },
+    {
+      "start": 407.44,
+      "duration": 5.52,
+      "text": "okay firstly i'll box up this equation"
+    },
+    {
+      "start": 411.039,
+      "duration": 5.121,
+      "text": "here"
+    },
+    {
+      "start": 412.96,
+      "duration": 3.2,
+      "text": "these three equations"
+    },
+    {
+      "start": 419.52,
+      "duration": 5.679,
+      "text": "and so we've introduced a couple of"
+    },
+    {
+      "start": 422.16,
+      "duration": 6.24,
+      "text": "basis co-vectors just to do"
+    },
+    {
+      "start": 425.199,
+      "duration": 3.201,
+      "text": "the computation above"
+    },
+    {
+      "start": 430.319,
+      "duration": 7.521,
+      "text": "so we've introduced a basis of four"
+    },
+    {
+      "start": 432.96,
+      "duration": 4.88,
+      "text": "co-vectors called e naught through three"
+    },
+    {
+      "start": 437.919,
+      "duration": 3.761,
+      "text": "one of them you've more or less seen"
+    },
+    {
+      "start": 439.28,
+      "duration": 2.4,
+      "text": "before"
+    },
+    {
+      "start": 443.12,
+      "duration": 6.32,
+      "text": "so these are these co vectors uh"
+    },
+    {
+      "start": 446.8,
+      "duration": 5.04,
+      "text": "make uh orthonormal with respect to the"
+    },
+    {
+      "start": 449.44,
+      "duration": 2.4,
+      "text": "metric"
+    },
+    {
+      "start": 467.52,
+      "duration": 5.28,
+      "text": "and using these curvatures we introduce"
+    },
+    {
+      "start": 469.52,
+      "duration": 3.28,
+      "text": "the following components so"
+    },
+    {
+      "start": 474.879,
+      "duration": 4.0,
+      "text": "this is slightly it just rescales things"
+    },
+    {
+      "start": 477.199,
+      "duration": 2.56,
+      "text": "and makes things slightly nicer when"
+    },
+    {
+      "start": 478.879,
+      "duration": 2.961,
+      "text": "writing out the"
+    },
+    {
+      "start": 479.759,
+      "duration": 4.481,
+      "text": "interior solution to use this particular"
+    },
+    {
+      "start": 481.84,
+      "duration": 2.4,
+      "text": "basis"
+    },
+    {
+      "start": 489.44,
+      "duration": 3.28,
+      "text": "of course we didn't have to introduce"
+    },
+    {
+      "start": 490.879,
+      "duration": 3.281,
+      "text": "this we could have just done thinking"
+    },
+    {
+      "start": 492.72,
+      "duration": 4.64,
+      "text": "done everything in the components given"
+    },
+    {
+      "start": 494.16,
+      "duration": 6.0,
+      "text": "to us by the the spherical"
+    },
+    {
+      "start": 497.36,
+      "duration": 4.32,
+      "text": "symmetric uh coordinate system but it"
+    },
+    {
+      "start": 500.16,
+      "duration": 3.28,
+      "text": "slightly simplifies things to do it this"
+    },
+    {
+      "start": 501.68,
+      "duration": 2.88,
+      "text": "way"
+    },
+    {
+      "start": 503.44,
+      "duration": 3.439,
+      "text": "there we go so we've got three"
+    },
+    {
+      "start": 504.56,
+      "duration": 4.639,
+      "text": "independent equations just as before"
+    },
+    {
+      "start": 506.879,
+      "duration": 4.241,
+      "text": "and the first thing to note is look at"
+    },
+    {
+      "start": 509.199,
+      "duration": 5.361,
+      "text": "equation one there right"
+    },
+    {
+      "start": 511.12,
+      "duration": 5.52,
+      "text": "uh there's no f at all in there so"
+    },
+    {
+      "start": 514.56,
+      "duration": 7.279,
+      "text": "that's uh that can be pretty much just"
+    },
+    {
+      "start": 516.64,
+      "duration": 5.199,
+      "text": "solved directly"
+    },
+    {
+      "start": 533.36,
+      "duration": 7.039,
+      "text": "and so rewriting equation one gives us"
+    },
+    {
+      "start": 536.72,
+      "duration": 7.36,
+      "text": "the following equation which relates"
+    },
+    {
+      "start": 540.399,
+      "duration": 3.681,
+      "text": "h and the"
+    },
+    {
+      "start": 544.72,
+      "duration": 6.64,
+      "text": "density rho"
+    },
+    {
+      "start": 549.839,
+      "duration": 14.0,
+      "text": "and you can just straightaway integrate"
+    },
+    {
+      "start": 551.36,
+      "duration": 12.479,
+      "text": "that right"
+    },
+    {
+      "start": 564.0,
+      "duration": 2.8,
+      "text": "and that's what you get"
+    },
+    {
+      "start": 569.04,
+      "duration": 9.52,
+      "text": "so i've introduced a constant here mr"
+    },
+    {
+      "start": 577.04,
+      "duration": 4.88,
+      "text": "which takes the following form it's"
+    },
+    {
+      "start": 578.56,
+      "duration": 3.36,
+      "text": "really an integral of the density"
+    },
+    {
+      "start": 584.56,
+      "duration": 2.959,
+      "text": "over the whole object"
+    },
+    {
+      "start": 587.68,
+      "duration": 3.44,
+      "text": "with an additional constant which comes"
+    },
+    {
+      "start": 589.2,
+      "duration": 5.52,
+      "text": "from the integration"
+    },
+    {
+      "start": 591.12,
+      "duration": 13.76,
+      "text": "but we want that this solution for a gab"
+    },
+    {
+      "start": 594.72,
+      "duration": 13.92,
+      "text": "is smooth"
+    },
+    {
+      "start": 604.88,
+      "duration": 8.88,
+      "text": "as r goes to zero so that implies that"
+    },
+    {
+      "start": 608.64,
+      "duration": 5.12,
+      "text": "h r has to go to one"
+    },
+    {
+      "start": 614.16,
+      "duration": 5.119,
+      "text": "and uh that means that a"
+    },
+    {
+      "start": 617.2,
+      "duration": 4.879,
+      "text": "a has to equal zero that's the only way"
+    },
+    {
+      "start": 619.279,
+      "duration": 2.8,
+      "text": "for that to work out"
+    },
+    {
+      "start": 625.92,
+      "duration": 4.08,
+      "text": "so we've already obtained a relationship"
+    },
+    {
+      "start": 628.72,
+      "duration": 5.119,
+      "text": "between"
+    },
+    {
+      "start": 630.0,
+      "duration": 3.839,
+      "text": "rho the density and h"
+    },
+    {
+      "start": 641.36,
+      "duration": 6.0,
+      "text": "because the slices"
+    },
+    {
+      "start": 645.279,
+      "duration": 4.321,
+      "text": "sigma that we used to derive our"
+    },
+    {
+      "start": 647.36,
+      "duration": 3.919,
+      "text": "coordinate system"
+    },
+    {
+      "start": 649.6,
+      "duration": 4.4,
+      "text": "two lectures ago because they have to be"
+    },
+    {
+      "start": 651.279,
+      "duration": 2.721,
+      "text": "space-like"
+    },
+    {
+      "start": 656.88,
+      "duration": 6.24,
+      "text": "then necessarily"
+    },
+    {
+      "start": 660.0,
+      "duration": 7.279,
+      "text": "necessarily h the coefficient of"
+    },
+    {
+      "start": 663.12,
+      "duration": 5.92,
+      "text": "d r squared well that better be positive"
+    },
+    {
+      "start": 667.279,
+      "duration": 3.441,
+      "text": "otherwise you change something space"
+    },
+    {
+      "start": 669.04,
+      "duration": 4.32,
+      "text": "like the timeline or at least"
+    },
+    {
+      "start": 670.72,
+      "duration": 3.76,
+      "text": "not space like and so that that implies"
+    },
+    {
+      "start": 673.36,
+      "duration": 3.599,
+      "text": "actually a condition"
+    },
+    {
+      "start": 674.48,
+      "duration": 2.479,
+      "text": "on r"
+    },
+    {
+      "start": 682.24,
+      "duration": 11.12,
+      "text": "and if rho is zero"
+    },
+    {
+      "start": 689.44,
+      "duration": 3.92,
+      "text": "then we can actually continue"
+    },
+    {
+      "start": 697.6,
+      "duration": 9.919,
+      "text": "our interior solution"
+    },
+    {
+      "start": 702.079,
+      "duration": 5.44,
+      "text": "age onto the vacuum"
+    },
+    {
+      "start": 714.839,
+      "duration": 3.0,
+      "text": "solution"
+    },
+    {
+      "start": 723.36,
+      "duration": 6.08,
+      "text": "and it is continued in that fashion if"
+    },
+    {
+      "start": 726.959,
+      "duration": 4.88,
+      "text": "at the exterior radius of the celestial"
+    },
+    {
+      "start": 729.44,
+      "duration": 2.399,
+      "text": "object"
+    },
+    {
+      "start": 732.16,
+      "duration": 5.44,
+      "text": "big m is precisely little m evaluated at"
+    },
+    {
+      "start": 735.44,
+      "duration": 2.16,
+      "text": "r"
+    },
+    {
+      "start": 742.88,
+      "duration": 4.399,
+      "text": "so we found h or we found the"
+    },
+    {
+      "start": 745.68,
+      "duration": 4.24,
+      "text": "relationship between h and rho to be"
+    },
+    {
+      "start": 747.279,
+      "duration": 6.081,
+      "text": "more precise"
+    },
+    {
+      "start": 749.92,
+      "duration": 3.44,
+      "text": "now we all we need is f"
+    },
+    {
+      "start": 755.92,
+      "duration": 3.599,
+      "text": "and to make things slightly easier we're"
+    },
+    {
+      "start": 757.519,
+      "duration": 4.32,
+      "text": "going to write not"
+    },
+    {
+      "start": 759.519,
+      "duration": 3.521,
+      "text": "f as f but we're going to represent f as"
+    },
+    {
+      "start": 761.839,
+      "duration": 3.281,
+      "text": "e to the 2"
+    },
+    {
+      "start": 763.04,
+      "duration": 4.16,
+      "text": "phi where phi is some unknown"
+    },
+    {
+      "start": 765.12,
+      "duration": 4.399,
+      "text": "[Music]"
+    },
+    {
+      "start": 767.2,
+      "duration": 5.04,
+      "text": "function that we're solving for and then"
+    },
+    {
+      "start": 769.519,
+      "duration": 4.641,
+      "text": "we take a look at equation two"
+    },
+    {
+      "start": 772.24,
+      "duration": 3.2,
+      "text": "and we substitute for our now known"
+    },
+    {
+      "start": 774.16,
+      "duration": 5.04,
+      "text": "value of h and"
+    },
+    {
+      "start": 775.44,
+      "duration": 12.399,
+      "text": "f and we will obtain an equation"
+    },
+    {
+      "start": 779.2,
+      "duration": 8.639,
+      "text": "for phi"
+    },
+    {
+      "start": 799.92,
+      "duration": 7.599,
+      "text": "and this equation phi relates r"
+    },
+    {
+      "start": 804.0,
+      "duration": 6.0,
+      "text": "p rho"
+    },
+    {
+      "start": 807.519,
+      "duration": 2.481,
+      "text": "and m"
+    },
+    {
+      "start": 811.6,
+      "duration": 4.239,
+      "text": "to phi"
+    },
+    {
+      "start": 830.639,
+      "duration": 3.041,
+      "text": "and we're not going to explicitly solve"
+    },
+    {
+      "start": 832.0,
+      "duration": 5.12,
+      "text": "this equation here you have to"
+    },
+    {
+      "start": 833.68,
+      "duration": 6.719,
+      "text": "assume an equation of state on p"
+    },
+    {
+      "start": 837.12,
+      "duration": 3.279,
+      "text": "and rho to get further"
+    },
+    {
+      "start": 841.76,
+      "duration": 3.519,
+      "text": "now uh we're not quite done yet we got"
+    },
+    {
+      "start": 844.399,
+      "duration": 2.961,
+      "text": "we haven't"
+    },
+    {
+      "start": 845.279,
+      "duration": 4.081,
+      "text": "used all our equations but before we do"
+    },
+    {
+      "start": 847.36,
+      "duration": 4.8,
+      "text": "that we'll just make a comment to um"
+    },
+    {
+      "start": 849.36,
+      "duration": 3.12,
+      "text": "interpret these these these quantities"
+    },
+    {
+      "start": 852.16,
+      "duration": 3.28,
+      "text": "so"
+    },
+    {
+      "start": 852.48,
+      "duration": 3.28,
+      "text": "in the limit the newtonian limit where"
+    },
+    {
+      "start": 855.44,
+      "duration": 2.88,
+      "text": "the"
+    },
+    {
+      "start": 855.76,
+      "duration": 4.96,
+      "text": "the pressure is much lower than the mass"
+    },
+    {
+      "start": 858.32,
+      "duration": 2.4,
+      "text": "energy"
+    },
+    {
+      "start": 861.12,
+      "duration": 6.48,
+      "text": "uh then uh"
+    },
+    {
+      "start": 864.32,
+      "duration": 3.28,
+      "text": "and where mr"
+    },
+    {
+      "start": 869.04,
+      "duration": 6.64,
+      "text": "it's much much less than r so there"
+    },
+    {
+      "start": 872.32,
+      "duration": 3.36,
+      "text": "isn't much mass energy around"
+    },
+    {
+      "start": 877.839,
+      "duration": 3.921,
+      "text": "this equation for phi reduces i mean the"
+    },
+    {
+      "start": 880.16,
+      "duration": 2.0,
+      "text": "reason we introduce phi is that we want"
+    },
+    {
+      "start": 881.76,
+      "duration": 3.439,
+      "text": "to"
+    },
+    {
+      "start": 882.16,
+      "duration": 5.52,
+      "text": "identify it with the gravitational"
+    },
+    {
+      "start": 885.199,
+      "duration": 2.481,
+      "text": "potential"
+    },
+    {
+      "start": 888.88,
+      "duration": 6.319,
+      "text": "so this equation for phi reduces to well"
+    },
+    {
+      "start": 891.519,
+      "duration": 3.68,
+      "text": "you know one that should be familiar"
+    },
+    {
+      "start": 896.16,
+      "duration": 3.44,
+      "text": "from newtonian theory namely the it's"
+    },
+    {
+      "start": 898.32,
+      "duration": 3.36,
+      "text": "essentially saying it's essentially just"
+    },
+    {
+      "start": 899.6,
+      "duration": 5.2,
+      "text": "possible equation for the gravitational"
+    },
+    {
+      "start": 901.68,
+      "duration": 7.279,
+      "text": "potential so we already knew that"
+    },
+    {
+      "start": 904.8,
+      "duration": 7.599,
+      "text": "from our perturbation approach to"
+    },
+    {
+      "start": 908.959,
+      "duration": 3.921,
+      "text": "linearized gravity and now we've learnt"
+    },
+    {
+      "start": 912.399,
+      "duration": 1.921,
+      "text": "it"
+    },
+    {
+      "start": 912.88,
+      "duration": 3.84,
+      "text": "in the context of the schwarzschild"
+    },
+    {
+      "start": 914.32,
+      "duration": 2.4,
+      "text": "solution"
+    },
+    {
+      "start": 924.32,
+      "duration": 3.36,
+      "text": "now we have one final equation we"
+    },
+    {
+      "start": 925.76,
+      "duration": 5.04,
+      "text": "haven't used up all our equations yet"
+    },
+    {
+      "start": 927.68,
+      "duration": 6.959,
+      "text": "uh and but we have related"
+    },
+    {
+      "start": 930.8,
+      "duration": 6.64,
+      "text": "these unknown functions f and h to"
+    },
+    {
+      "start": 934.639,
+      "duration": 4.801,
+      "text": "row and p now the thing about general"
+    },
+    {
+      "start": 937.44,
+      "duration": 4.639,
+      "text": "relativity is you don't just"
+    },
+    {
+      "start": 939.44,
+      "duration": 3.6,
+      "text": "specify row and p and then you get f and"
+    },
+    {
+      "start": 942.079,
+      "duration": 2.241,
+      "text": "h and then that's it"
+    },
+    {
+      "start": 943.04,
+      "duration": 3.52,
+      "text": "i mean there's this complex"
+    },
+    {
+      "start": 944.32,
+      "duration": 3.84,
+      "text": "interrelationship between this"
+    },
+    {
+      "start": 946.56,
+      "duration": 3.839,
+      "text": "the coordinate system the distribution"
+    },
+    {
+      "start": 948.16,
+      "duration": 4.88,
+      "text": "of stress energy and the solution to i"
+    },
+    {
+      "start": 950.399,
+      "duration": 7.281,
+      "text": "transferred equations and these things"
+    },
+    {
+      "start": 953.04,
+      "duration": 8.08,
+      "text": "influence each other in feedback loop"
+    },
+    {
+      "start": 957.68,
+      "duration": 6.48,
+      "text": "and we're going to see that in"
+    },
+    {
+      "start": 961.12,
+      "duration": 3.04,
+      "text": "when we substitute"
+    },
+    {
+      "start": 964.32,
+      "duration": 5.519,
+      "text": "the two equations which we've derived"
+    },
+    {
+      "start": 966.32,
+      "duration": 3.519,
+      "text": "into the third"
+    },
+    {
+      "start": 970.32,
+      "duration": 3.36,
+      "text": "we'll have to have we come up with a"
+    },
+    {
+      "start": 971.36,
+      "duration": 5.599,
+      "text": "consistency or an extra"
+    },
+    {
+      "start": 973.68,
+      "duration": 3.279,
+      "text": "extra consistency condition"
+    },
+    {
+      "start": 981.519,
+      "duration": 4.24,
+      "text": "this third equation is a bright pain to"
+    },
+    {
+      "start": 983.279,
+      "duration": 2.48,
+      "text": "derive"
+    },
+    {
+      "start": 990.48,
+      "duration": 7.84,
+      "text": "there's a lot of algebra going on here"
+    },
+    {
+      "start": 996.0,
+      "duration": 4.399,
+      "text": "and it relates the derivative of the"
+    },
+    {
+      "start": 998.32,
+      "duration": 5.519,
+      "text": "pressure"
+    },
+    {
+      "start": 1000.399,
+      "duration": 3.44,
+      "text": "the density and also"
+    },
+    {
+      "start": 1006.56,
+      "duration": 5.279,
+      "text": "the distribution of mass"
+    },
+    {
+      "start": 1009.6,
+      "duration": 2.239,
+      "text": "energy"
+    },
+    {
+      "start": 1015.68,
+      "duration": 5.519,
+      "text": "and this is an equation"
+    },
+    {
+      "start": 1019.12,
+      "duration": 4.0,
+      "text": "that determines hydrostatic equilibrium"
+    },
+    {
+      "start": 1021.199,
+      "duration": 3.921,
+      "text": "for the object that we're"
+    },
+    {
+      "start": 1023.12,
+      "duration": 3.12,
+      "text": "under consideration and it has a name"
+    },
+    {
+      "start": 1025.12,
+      "duration": 14.719,
+      "text": "it's the"
+    },
+    {
+      "start": 1026.24,
+      "duration": 13.599,
+      "text": "tolman oppenheimer volkov equation"
+    },
+    {
+      "start": 1040.88,
+      "duration": 13.36,
+      "text": "of hydrostatic equilibrium"
+    },
+    {
+      "start": 1052.4,
+      "duration": 3.92,
+      "text": "so this equation has to be satisfied in"
+    },
+    {
+      "start": 1054.24,
+      "duration": 5.28,
+      "text": "addition to the other two"
+    },
+    {
+      "start": 1056.32,
+      "duration": 5.68,
+      "text": "that determine in a sense"
+    },
+    {
+      "start": 1059.52,
+      "duration": 2.48,
+      "text": "f and h"
+    },
+    {
+      "start": 1064.96,
+      "duration": 6.959,
+      "text": "once you've uh gone ahead and"
+    },
+    {
+      "start": 1069.36,
+      "duration": 4.64,
+      "text": "substituted your pressure-less density"
+    },
+    {
+      "start": 1071.919,
+      "duration": 3.681,
+      "text": "relationship"
+    },
+    {
+      "start": 1074.0,
+      "duration": 7.84,
+      "text": "and you've satisfied all these equations"
+    },
+    {
+      "start": 1075.6,
+      "duration": 6.24,
+      "text": "you'll have the metric"
+    },
+    {
+      "start": 1093.6,
+      "duration": 4.4,
+      "text": "and the metric will take the following"
+    },
+    {
+      "start": 1095.679,
+      "duration": 2.321,
+      "text": "form"
+    },
+    {
+      "start": 1104.32,
+      "duration": 4.4,
+      "text": "it is d s squared is minus e to the two"
+    },
+    {
+      "start": 1107.679,
+      "duration": 4.641,
+      "text": "phi"
+    },
+    {
+      "start": 1108.72,
+      "duration": 7.12,
+      "text": "d t squared plus one minus"
+    },
+    {
+      "start": 1112.32,
+      "duration": 8.52,
+      "text": "two little m r over r minus one"
+    },
+    {
+      "start": 1115.84,
+      "duration": 8.0,
+      "text": "t r squared plus r squared d big omega"
+    },
+    {
+      "start": 1120.84,
+      "duration": 3.0,
+      "text": "squared"
+    },
+    {
+      "start": 1138.16,
+      "duration": 2.32,
+      "text": "and"
+    },
+    {
+      "start": 1141.6,
+      "duration": 11.84,
+      "text": "little m of r is as i defined it above"
+    },
+    {
+      "start": 1151.12,
+      "duration": 2.32,
+      "text": "oops"
+    },
+    {
+      "start": 1155.12,
+      "duration": 4.24,
+      "text": "so this is the general form of a"
+    },
+    {
+      "start": 1158.559,
+      "duration": 5.12,
+      "text": "solution"
+    },
+    {
+      "start": 1159.36,
+      "duration": 7.6,
+      "text": "for a spherically symmetric static"
+    },
+    {
+      "start": 1163.679,
+      "duration": 5.441,
+      "text": "liquid body celestial body"
+    },
+    {
+      "start": 1166.96,
+      "duration": 3.2,
+      "text": "we could spend a considerable amount of"
+    },
+    {
+      "start": 1169.12,
+      "duration": 3.76,
+      "text": "time"
+    },
+    {
+      "start": 1170.16,
+      "duration": 4.32,
+      "text": "discussing the stability of various"
+    },
+    {
+      "start": 1172.88,
+      "duration": 3.28,
+      "text": "celestial bodies and"
+    },
+    {
+      "start": 1174.48,
+      "duration": 3.92,
+      "text": "getting into some very fascinating and"
+    },
+    {
+      "start": 1176.16,
+      "duration": 4.56,
+      "text": "beautiful topics"
+    },
+    {
+      "start": 1178.4,
+      "duration": 4.72,
+      "text": "and eventually end up at the topics of"
+    },
+    {
+      "start": 1180.72,
+      "duration": 5.04,
+      "text": "neutron stars and black holes and so on"
+    },
+    {
+      "start": 1183.12,
+      "duration": 3.12,
+      "text": "we won't pursue that in this course"
+    },
+    {
+      "start": 1185.76,
+      "duration": 2.32,
+      "text": "although"
+    },
+    {
+      "start": 1186.24,
+      "duration": 4.319,
+      "text": "this is a wonderful advanced topic that"
+    },
+    {
+      "start": 1188.08,
+      "duration": 4.959,
+      "text": "you can follow up on"
+    },
+    {
+      "start": 1190.559,
+      "duration": 4.321,
+      "text": "instead in the remaining part of the"
+    },
+    {
+      "start": 1193.039,
+      "duration": 4.081,
+      "text": "course we're going to focus on"
+    },
+    {
+      "start": 1194.88,
+      "duration": 3.76,
+      "text": "some of the key predictions of general"
+    },
+    {
+      "start": 1197.12,
+      "duration": 5.52,
+      "text": "relativity"
+    },
+    {
+      "start": 1198.64,
+      "duration": 5.44,
+      "text": "and uh deriving the the form of these"
+    },
+    {
+      "start": 1202.64,
+      "duration": 3.919,
+      "text": "predictions"
+    },
+    {
+      "start": 1204.08,
+      "duration": 3.68,
+      "text": "and the the most important predictions"
+    },
+    {
+      "start": 1206.559,
+      "duration": 3.761,
+      "text": "that we'll focus on"
+    },
+    {
+      "start": 1207.76,
+      "duration": 3.84,
+      "text": "in the next lecture is the the motions"
+    },
+    {
+      "start": 1210.32,
+      "duration": 3.599,
+      "text": "of test bodies"
+    },
+    {
+      "start": 1211.6,
+      "duration": 3.439,
+      "text": "in particular will also focus on the"
+    },
+    {
+      "start": 1213.919,
+      "duration": 3.281,
+      "text": "motion of light"
+    },
+    {
+      "start": 1215.039,
+      "duration": 5.441,
+      "text": "in the the presence of static"
+    },
+    {
+      "start": 1217.2,
+      "duration": 7.04,
+      "text": "spherically symmetric solutions so that"
+    },
+    {
+      "start": 1220.48,
+      "duration": 6.64,
+      "text": "neatly brings us to the topic of"
+    },
+    {
+      "start": 1224.24,
+      "duration": 2.88,
+      "text": "geodesics"
+    },
+    {
+      "start": 1227.679,
+      "duration": 8.161,
+      "text": "of the schwarzschild solution"
+    },
+    {
+      "start": 1238.72,
+      "duration": 3.439,
+      "text": "uh and we're gonna make our life simple"
+    },
+    {
+      "start": 1240.159,
+      "duration": 4.561,
+      "text": "we're gonna derive the motion of"
+    },
+    {
+      "start": 1242.159,
+      "duration": 4.721,
+      "text": "test bodies in the exterior region right"
+    },
+    {
+      "start": 1244.72,
+      "duration": 3.92,
+      "text": "it doesn't really make sense to follow"
+    },
+    {
+      "start": 1246.88,
+      "duration": 4.32,
+      "text": "the motion of a test body as it plunges"
+    },
+    {
+      "start": 1248.64,
+      "duration": 2.56,
+      "text": "into a star"
+    },
+    {
+      "start": 1254.64,
+      "duration": 3.039,
+      "text": "because you kind of know what's going to"
+    },
+    {
+      "start": 1256.0,
+      "duration": 6.32,
+      "text": "happen to the test body as it reaches"
+    },
+    {
+      "start": 1257.679,
+      "duration": 6.721,
+      "text": "the start"
+    },
+    {
+      "start": 1262.32,
+      "duration": 3.359,
+      "text": "but it is kind of interesting to think"
+    },
+    {
+      "start": 1264.4,
+      "duration": 4.399,
+      "text": "about a test body"
+    },
+    {
+      "start": 1265.679,
+      "duration": 3.12,
+      "text": "dropping into a black hole"
+    },
+    {
+      "start": 1269.36,
+      "duration": 8.48,
+      "text": "but we won't do that here"
+    },
+    {
+      "start": 1280.96,
+      "duration": 3.44,
+      "text": "so we're going to derive the geodesics"
+    },
+    {
+      "start": 1282.559,
+      "duration": 3.841,
+      "text": "in this in the following lectures"
+    },
+    {
+      "start": 1284.4,
+      "duration": 7.44,
+      "text": "for test bodies and also for light rays"
+    },
+    {
+      "start": 1286.4,
+      "duration": 5.44,
+      "text": "in the exterior region"
+    },
+    {
+      "start": 1301.52,
+      "duration": 5.92,
+      "text": "and that's where this the radial"
+    },
+    {
+      "start": 1304.0,
+      "duration": 3.44,
+      "text": "coefficient is bigger than 2m"
+    },
+    {
+      "start": 1310.799,
+      "duration": 3.76,
+      "text": "now this our life is made a lot easier"
+    },
+    {
+      "start": 1313.44,
+      "duration": 3.44,
+      "text": "by the fact that the"
+    },
+    {
+      "start": 1314.559,
+      "duration": 3.041,
+      "text": "scratch short solution is in fact"
+    },
+    {
+      "start": 1316.88,
+      "duration": 3.84,
+      "text": "rotation rotationally"
+    },
+    {
+      "start": 1317.6,
+      "duration": 6.64,
+      "text": "invariant so if you think about a"
+    },
+    {
+      "start": 1320.72,
+      "duration": 7.36,
+      "text": "celestial body and then a test body"
+    },
+    {
+      "start": 1324.24,
+      "duration": 6.96,
+      "text": "moving to past"
+    },
+    {
+      "start": 1328.08,
+      "duration": 4.719,
+      "text": "a spherically symmetric test body then"
+    },
+    {
+      "start": 1331.2,
+      "duration": 3.28,
+      "text": "you can already hope i see that you know"
+    },
+    {
+      "start": 1332.799,
+      "duration": 4.0,
+      "text": "no matter how"
+    },
+    {
+      "start": 1334.48,
+      "duration": 4.16,
+      "text": "the test body moves you could exploit"
+    },
+    {
+      "start": 1336.799,
+      "duration": 5.841,
+      "text": "the symmetries"
+    },
+    {
+      "start": 1338.64,
+      "duration": 5.919,
+      "text": "of the solution to move the motion of"
+    },
+    {
+      "start": 1342.64,
+      "duration": 4.399,
+      "text": "the test body onto"
+    },
+    {
+      "start": 1344.559,
+      "duration": 4.24,
+      "text": "an equatorial plane we'll get to that uh"
+    },
+    {
+      "start": 1347.039,
+      "duration": 4.241,
+      "text": "but before that there are in fact"
+    },
+    {
+      "start": 1348.799,
+      "duration": 3.841,
+      "text": "other symmetries that the shroud"
+    },
+    {
+      "start": 1351.28,
+      "duration": 4.32,
+      "text": "solution possesses"
+    },
+    {
+      "start": 1352.64,
+      "duration": 4.48,
+      "text": "which greatly simplifies the derivation"
+    },
+    {
+      "start": 1355.6,
+      "duration": 4.16,
+      "text": "of geodesics"
+    },
+    {
+      "start": 1357.12,
+      "duration": 3.439,
+      "text": "and in fact there's another one uh not"
+    },
+    {
+      "start": 1359.76,
+      "duration": 4.32,
+      "text": "related to"
+    },
+    {
+      "start": 1360.559,
+      "duration": 5.12,
+      "text": "rotation invariance uh that i'd like to"
+    },
+    {
+      "start": 1364.08,
+      "duration": 2.4,
+      "text": "highlight now and this is true actually"
+    },
+    {
+      "start": 1365.679,
+      "duration": 4.961,
+      "text": "for any"
+    },
+    {
+      "start": 1366.48,
+      "duration": 4.16,
+      "text": "uh killing vector field"
+    },
+    {
+      "start": 1370.88,
+      "duration": 3.679,
+      "text": "so here's a little proposition very very"
+    },
+    {
+      "start": 1372.64,
+      "duration": 5.2,
+      "text": "easy to prove actually"
+    },
+    {
+      "start": 1374.559,
+      "duration": 5.201,
+      "text": "so imagine we have a killing vector"
+    },
+    {
+      "start": 1377.84,
+      "duration": 4.959,
+      "text": "field and we certainly have that in"
+    },
+    {
+      "start": 1379.76,
+      "duration": 10.08,
+      "text": "our case here"
+    },
+    {
+      "start": 1382.799,
+      "duration": 7.041,
+      "text": "and suppose you have a geodesic"
+    },
+    {
+      "start": 1390.48,
+      "duration": 4.559,
+      "text": "uh and since it's a geodesic it has a"
+    },
+    {
+      "start": 1392.559,
+      "duration": 2.48,
+      "text": "tangent"
+    },
+    {
+      "start": 1395.919,
+      "duration": 6.801,
+      "text": "ua then there is a constant of the"
+    },
+    {
+      "start": 1399.52,
+      "duration": 7.519,
+      "text": "motion you can derive"
+    },
+    {
+      "start": 1402.72,
+      "duration": 7.12,
+      "text": "namely psi a contracted with you a"
+    },
+    {
+      "start": 1407.039,
+      "duration": 2.801,
+      "text": "is constant"
+    },
+    {
+      "start": 1410.159,
+      "duration": 3.041,
+      "text": "along the geodesic"
+    },
+    {
+      "start": 1414.84,
+      "duration": 5.64,
+      "text": "and this is really simple"
+    },
+    {
+      "start": 1417.039,
+      "duration": 6.961,
+      "text": "really easy to prove we just"
+    },
+    {
+      "start": 1420.48,
+      "duration": 3.52,
+      "text": "apply the covariant derivative"
+    },
+    {
+      "start": 1424.88,
+      "duration": 9.679,
+      "text": "to this quantity"
+    },
+    {
+      "start": 1431.039,
+      "duration": 3.52,
+      "text": "i mean i'll write it all the way around"
+    },
+    {
+      "start": 1440.0,
+      "duration": 5.84,
+      "text": "and apply the leibniz rule and then"
+    },
+    {
+      "start": 1442.64,
+      "duration": 3.2,
+      "text": "we'll almost be done"
+    },
+    {
+      "start": 1446.96,
+      "duration": 3.599,
+      "text": "so note that the quantity in the"
+    },
+    {
+      "start": 1448.24,
+      "duration": 4.08,
+      "text": "question is is a scalar right"
+    },
+    {
+      "start": 1450.559,
+      "duration": 4.24,
+      "text": "that psi a contracted with ui is a"
+    },
+    {
+      "start": 1452.32,
+      "duration": 4.479,
+      "text": "scalar"
+    },
+    {
+      "start": 1454.799,
+      "duration": 3.841,
+      "text": "well uh let's look at the two terms"
+    },
+    {
+      "start": 1456.799,
+      "duration": 4.961,
+      "text": "after applying the leibniz rule"
+    },
+    {
+      "start": 1458.64,
+      "duration": 6.24,
+      "text": "well the first one"
+    },
+    {
+      "start": 1461.76,
+      "duration": 3.12,
+      "text": "this one's actually zero"
+    },
+    {
+      "start": 1465.039,
+      "duration": 7.12,
+      "text": "because the the tensor uaub"
+    },
+    {
+      "start": 1468.559,
+      "duration": 6.641,
+      "text": "contracted against delta b"
+    },
+    {
+      "start": 1472.159,
+      "duration": 7.281,
+      "text": "x i b uh delta b psi"
+    },
+    {
+      "start": 1475.2,
+      "duration": 4.24,
+      "text": "delta a psi b that's b right"
+    },
+    {
+      "start": 1480.32,
+      "duration": 3.76,
+      "text": "delta b psi a i apologize"
+    },
+    {
+      "start": 1484.32,
+      "duration": 4.959,
+      "text": "that quantity there has got to be zero"
+    },
+    {
+      "start": 1486.0,
+      "duration": 3.279,
+      "text": "because of killing's equation"
+    },
+    {
+      "start": 1498.24,
+      "duration": 3.6,
+      "text": "because this is a killing vector"
+    },
+    {
+      "start": 1502.0,
+      "duration": 3.679,
+      "text": "it obeys this equation here and the"
+    },
+    {
+      "start": 1504.96,
+      "duration": 3.44,
+      "text": "thing"
+    },
+    {
+      "start": 1505.679,
+      "duration": 5.281,
+      "text": "u a u b is symmetric and therefore it's"
+    },
+    {
+      "start": 1508.4,
+      "duration": 2.56,
+      "text": "gonna be zero"
+    },
+    {
+      "start": 1511.039,
+      "duration": 3.12,
+      "text": "and the second thing is zero because of"
+    },
+    {
+      "start": 1512.48,
+      "duration": 4.64,
+      "text": "all that's a geodesic that's just the"
+    },
+    {
+      "start": 1514.159,
+      "duration": 2.961,
+      "text": "geodesic equation"
+    },
+    {
+      "start": 1521.52,
+      "duration": 3.12,
+      "text": "so we've just learned that the"
+    },
+    {
+      "start": 1523.84,
+      "duration": 3.52,
+      "text": "derivative"
+    },
+    {
+      "start": 1524.64,
+      "duration": 3.6,
+      "text": "along the geodesic of xia contracted"
+    },
+    {
+      "start": 1527.36,
+      "duration": 4.48,
+      "text": "with ua is"
+    },
+    {
+      "start": 1528.24,
+      "duration": 3.6,
+      "text": "constant zero"
+    },
+    {
+      "start": 1536.88,
+      "duration": 2.96,
+      "text": "so that symmetry will turn out to be"
+    },
+    {
+      "start": 1538.159,
+      "duration": 3.041,
+      "text": "quite handy when we are trying to derive"
+    },
+    {
+      "start": 1539.84,
+      "duration": 3.439,
+      "text": "the geodesics"
+    },
+    {
+      "start": 1541.2,
+      "duration": 5.12,
+      "text": "or test bodies and light rays for the"
+    },
+    {
+      "start": 1543.279,
+      "duration": 3.041,
+      "text": "spharzide solution"
+    },
+    {
+      "start": 1546.48,
+      "duration": 5.199,
+      "text": "another symmetry which i've already"
+    },
+    {
+      "start": 1549.039,
+      "duration": 2.64,
+      "text": "alluded to"
+    },
+    {
+      "start": 1553.76,
+      "duration": 6.72,
+      "text": "is parody reflection"
+    },
+    {
+      "start": 1557.279,
+      "duration": 3.201,
+      "text": "also rotation in variance"
+    },
+    {
+      "start": 1562.4,
+      "duration": 5.44,
+      "text": "where if you you can send theta to pi"
+    },
+    {
+      "start": 1565.039,
+      "duration": 2.801,
+      "text": "minus theta"
+    },
+    {
+      "start": 1568.88,
+      "duration": 3.12,
+      "text": "and that'll be handy because it allows"
+    },
+    {
+      "start": 1571.36,
+      "duration": 5.36,
+      "text": "us"
+    },
+    {
+      "start": 1572.0,
+      "duration": 7.12,
+      "text": "to rotate a solution initially in"
+    },
+    {
+      "start": 1576.72,
+      "duration": 9.12,
+      "text": "uh some non-equatorial plane into the"
+    },
+    {
+      "start": 1579.12,
+      "duration": 6.72,
+      "text": "equatorial plane"
+    },
+    {
+      "start": 1606.48,
+      "duration": 4.36,
+      "text": "so if the initial position and tangent"
+    },
+    {
+      "start": 1608.96,
+      "duration": 7.52,
+      "text": "vector"
+    },
+    {
+      "start": 1610.84,
+      "duration": 5.64,
+      "text": "lie in the equatorial plane"
+    },
+    {
+      "start": 1621.44,
+      "duration": 6.4,
+      "text": "theta equals pi over two then so must"
+    },
+    {
+      "start": 1624.72,
+      "duration": 3.12,
+      "text": "hold you dizzy"
+    },
+    {
+      "start": 1641.6,
+      "duration": 4.48,
+      "text": "and what that means is that you can just"
+    },
+    {
+      "start": 1643.52,
+      "duration": 5.279,
+      "text": "take one rotation and move the geodesic"
+    },
+    {
+      "start": 1646.08,
+      "duration": 9.76,
+      "text": "motion of any test body into the"
+    },
+    {
+      "start": 1648.799,
+      "duration": 7.041,
+      "text": "equatorial plane"
+    },
+    {
+      "start": 1678.64,
+      "duration": 7.68,
+      "text": "cool all right that's it"
+    },
+    {
+      "start": 1682.559,
+      "duration": 5.12,
+      "text": "in terms of a general comment"
+    },
+    {
+      "start": 1686.32,
+      "duration": 3.28,
+      "text": "about the symmetries of the"
+    },
+    {
+      "start": 1687.679,
+      "duration": 5.521,
+      "text": "schwarzschild solution what it means"
+    },
+    {
+      "start": 1689.6,
+      "duration": 6.16,
+      "text": "for geodesics in the coming lectures"
+    },
+    {
+      "start": 1693.2,
+      "duration": 3.44,
+      "text": "we will derive the form of the geodesic"
+    },
+    {
+      "start": 1695.76,
+      "duration": 2.56,
+      "text": "and"
+    },
+    {
+      "start": 1696.64,
+      "duration": 4.0,
+      "text": "the motion of test bodies in the"
+    },
+    {
+      "start": 1698.32,
+      "duration": 4.64,
+      "text": "presence of the schwarzschild solution"
+    },
+    {
+      "start": 1700.64,
+      "duration": 3.6,
+      "text": "and then we will discuss and relate this"
+    },
+    {
+      "start": 1702.96,
+      "duration": 2.959,
+      "text": "to key predict"
+    },
+    {
+      "start": 1704.24,
+      "duration": 4.24,
+      "text": "predictions of general relativity that"
+    },
+    {
+      "start": 1705.919,
+      "duration": 5.041,
+      "text": "have been since confirmed"
+    },
+    {
+      "start": 1708.48,
+      "duration": 3.84,
+      "text": "and then that really will draw us to the"
+    },
+    {
+      "start": 1710.96,
+      "duration": 4.16,
+      "text": "end and conclusion"
+    },
+    {
+      "start": 1712.32,
+      "duration": 3.28,
+      "text": "of this course but that's that's it for"
+    },
+    {
+      "start": 1715.12,
+      "duration": 2.559,
+      "text": "now"
+    },
+    {
+      "start": 1715.6,
+      "duration": 3.28,
+      "text": "um thank you very much and i'll see you"
+    },
+    {
+      "start": 1717.679,
+      "duration": 3.841,
+      "text": "next time"
+    },
+    {
+      "start": 1718.88,
+      "duration": 2.64,
+      "text": "goodbye"
+    }
+  ]
+}

@@ -1,0 +1,640 @@
+# General Relativity, Lecture 18: FLRW continued
+# YouTube: https://www.youtube.com/watch?v=NV07yQ5NSBk
+# Auto-generated transcript
+
+[00:00.00] hello and welcome back to introduction
+[00:01.60] to general relativity in the previous
+[00:03.44] lecture
+[00:03.92] we started modeling the universe with
+[00:05.84] einstein's general theory of relativity
+[00:08.72] with some after some symmetry arguments
+[00:10.80] we arrived at the following form
+[00:12.80] of a highly idealized metric for the
+[00:15.52] universe
+[00:17.60] the goal of today's lecture is to
+[00:21.04] derive all the geometric quantities we
+[00:22.88] need to
+[00:24.72] solve einstein's field equation and then
+[00:26.64] solve our transfer equation for this
+[00:28.16] particular form
+[00:29.12] of the metric this flrw form
+[00:33.68] so this is the flrw metric
+[00:37.92] and our goal is to derive from the
+[00:40.80] metric today everything we need
+[00:42.88] to solve einstein's field equations so
+[00:44.72] what does that mean that means the
+[00:46.56] riemann tensor richie scala richie tensa
+[00:50.96] and we'll also need to talk about the
+[00:52.56] stress energy tensor as well
+[00:56.48] so given this metric it's a uh
+[01:00.64] exercise for you
+[01:09.20] wait on how about i do the flat case
+[01:11.04] first and then the non-flat cased
+[01:15.28] so it's an exercise for you
+[01:18.48] to show the following
+[01:23.84] crystal symbols so first we'll deal with
+[01:26.56] the case k equals zero that's the one
+[01:27.92] that corresponds to minkowski space
+[01:30.64] well not minkowski sorry um uh uh
+[01:35.92] flat space like the time-like slices
+[01:41.36] so the case k equals naught so in that
+[01:43.60] case we could write the uh
+[01:45.52] the metric as well basically a rescale
+[01:50.24] normal lorentz metric
+[01:55.12] we just go back to cartesian style
+[01:56.88] coordinates for this um
+[01:58.72] euclidean slice coordinate system
+[02:02.48] and then he in this in this coordinate
+[02:05.76] system the
+[02:06.56] non-vanishing christopher symbols
+[02:11.44] you can work them out pretty easily
+[02:19.92] so this is an exercise although honestly
+[02:22.08] it's not that difficult to exercise
+[02:24.16] so here's the i'm only going to write
+[02:26.64] down the crystal symbols that don't
+[02:28.24] vanish
+[02:33.76] and all the rest actually vanish so here
+[02:37.20] a with a dot over it means the
+[02:39.28] derivative with respect to tau
+[02:41.52] proper time
+[03:00.72] and you have a whole bunch of other
+[03:02.48] crystal symbols that are non-vanishing
+[03:05.20] but they're all very symmetric on
+[03:06.80] account of the fact that the metric
+[03:08.16] itself
+[03:08.72] is rather symmetric so this
+[03:12.48] thousand z's look very close to each
+[03:15.28] other here
+[03:19.68] okay and from that you can go ahead and
+[03:21.76] work out the riemann tensor and the
+[03:23.60] the uh richie scala and
+[03:26.64] rigid tensor we're not going to focus so
+[03:30.08] much on
+[03:30.80] this this euclidean
+[03:34.64] sliced coordinate system so much in fact
+[03:37.92] i want to express everything in as
+[03:40.40] general way as possible
+[03:42.00] that can capture the basic elements of
+[03:44.80] the universe we live in
+[03:47.44] so now in in for that purpose we need to
+[03:50.40] look at the k is not equal zero case
+[03:57.60] and in this case you need to
+[04:02.40] you can derive the crystal symbols again
+[04:04.64] but we're going to use this
+[04:06.08] spherical coordinate system to derive
+[04:07.92] the crystal symbols in this case
+[04:09.92] and we'll have the following rather long
+[04:12.24] list of christopher symbols
+[04:21.84] i mean any individual chris double
+[04:23.44] symbol here isn't that difficult to
+[04:26.84] derive
+[04:28.80] probably the biggest challenge you're
+[04:30.08] going to face in doing this calculation
+[04:34.48] is uh ensuring that you know the
+[04:37.12] inevitable mistakes that that creep in
+[04:40.00] that you detect them quick enough
+[04:48.08] having said that i may have made
+[04:49.52] mistakes as well
+[04:52.72] although i have checked these results
+[04:56.40] nevertheless i may make transcription
+[04:58.08] errors
+[05:01.20] so it's important to not entirely trust
+[05:05.52] what i write here
+[05:08.88] so you get this long list of crystal
+[05:10.88] symbols like this
+[05:13.12] i've checked i admit i've checked a
+[05:14.80] couple in mathematica
+[05:23.44] and indeed although i do believe it's
+[05:26.32] important to be able to do these kind of
+[05:27.84] calculations yourself there reaches a
+[05:29.52] point where
+[05:32.16] something like mathematica is really a
+[05:35.36] first-class tool to
+[05:38.72] prevent mistakes
+[05:48.56] okay we're almost through here
+[06:08.16] and we're down to the last two crystal
+[06:10.00] symbols now
+[06:17.52] all right so when we're given the metric
+[06:20.56] here this f l r w metric with this
+[06:22.72] particular coordinate system with
+[06:24.32] spherical
+[06:25.28] type coordinates and we have this
+[06:28.48] parameter k
+[06:29.52] oops i didn't i forgot to remind you
+[06:31.20] about k k equals minus 1
+[06:34.16] that's the hyperboloid case
+[06:38.72] k equals 0 is the flat case
+[06:42.16] a flat spatial case
+[06:46.84] oops
+[06:50.24] and uh k equals plus one is the
+[06:52.72] spherical case
+[06:55.44] so you have three uh three
+[06:56.88] representative metrics to capture the
+[06:58.56] three kinds of space time
+[07:00.24] uh that are isotropic and homogeneous
+[07:04.88] and given this metric you can write it
+[07:06.88] as a matrix if you wish or just
+[07:08.56] keep track of all the components you can
+[07:10.16] go ahead and just use the formula that
+[07:11.84] we introduced many lectures ago on
+[07:13.68] the crystal symbols and you can go and
+[07:14.96] calculate the crystal symbols and you
+[07:16.56] should
+[07:17.60] with any luck i didn't if i didn't make
+[07:20.08] a transcription error and if you didn't
+[07:21.52] make any errors you should arrive at
+[07:22.80] this list of
+[07:23.60] crystal symbols
+[07:26.88] and now after that we're not done right
+[07:30.32] the crystal symbols do contain all the
+[07:32.08] information you you do need
+[07:33.76] to write out einstein's field equations
+[07:38.24] but of course einstein's field equations
+[07:39.84] pertain to the richie tense or rather
+[07:41.84] more more uh
+[07:44.32] directly to the to the einstein tensor
+[07:48.56] so we need to work out the ritchie
+[07:50.00] tensor and therefore the einstein sensor
+[07:51.76] so here we go again
+[07:52.88] more calculations later
+[07:55.92] long list of components for this
+[08:01.12] tensor
+[08:11.04] so these calculations you cannot find in
+[08:12.80] world you have to
+[08:15.52] in wald's textbook he doesn't really
+[08:17.20] cover the case where k
+[08:18.80] is not zero which is a bit of a shame
+[08:22.64] but then again the textbook was written
+[08:25.36] before we
+[08:26.00] understood that the universe is
+[08:27.52] expanding and accelerated the expansion
+[08:30.16] is accelerating
+[08:39.28] which is a pretty amazing result
+[08:43.12] okay so here's the actual the non-zero
+[08:45.04] components for the richie tensa
+[08:47.92] note that there's only a handful of
+[08:49.36] non-zero ones and that the
+[08:51.04] rigid tense is diagonal
+[08:54.40] and here's the richie scala go ahead and
+[08:56.72] just add up
+[08:57.68] take the trace of that thing above
+[08:59.12] remember when you take the trace you
+[09:00.32] have to use the inverse of the metric in
+[09:02.00] there somewhere
+[09:04.16] so that's why this takes this form here
+[09:11.76] and now we've got almost enough stuff to
+[09:14.24] write out the einstein tensor
+[09:18.96] so let's now write out the einstein
+[09:20.48] tensor so there's a g-tail towel
+[09:22.72] term this is
+[09:26.08] again an exercise for you to confirm
+[09:27.84] these
+[09:29.52] i mean i did these calculations myself
+[09:31.68] it really didn't take so long
+[09:52.88] and then the next two more
+[09:55.92] components there's a theta theta
+[10:02.84] component
+[10:05.92] and there's a firefight component
+[10:22.72] and now we have enough information to
+[10:24.64] write out einstein's field equations we
+[10:26.96] have the stress energy tensor
+[10:28.48] remember we discussed that form of the
+[10:30.88] stress energy tensor for an isotropic
+[10:32.32] homogenous universe in the previous
+[10:33.60] lecture
+[10:34.88] and we also exploited those symmetries
+[10:38.88] to write out einstein's field equations
+[10:41.68] in a much simpler form and we arrived at
+[10:43.76] really two independent
+[10:45.36] equations that we need to worry about
+[11:00.16] and so let's write it out so here here
+[11:02.56] they are g a b
+[11:04.00] plus lambda the cosmological constant
+[11:05.92] times by the metric little g
+[11:07.44] a b is going to equal eight pi t
+[11:10.72] a b
+[11:17.52] and we can either use the result from
+[11:20.08] the previous lecture or
+[11:21.20] more directly which is what i'll just do
+[11:22.72] here
+[11:24.32] is look at some various components of
+[11:25.92] this equation will be actually be able
+[11:27.52] to quickly identify the independent
+[11:30.00] equations so if you look at the tt
+[11:32.56] component
+[11:33.28] or the tau tau component
+[11:37.04] and substitute in the richie tensor
+[11:38.72] einstein tensor blah blah blah blah you
+[11:40.32] just arrived
+[11:41.44] then you arrive at the following
+[11:43.12] equation which we'll call one
+[11:44.64] prime
+[11:52.40] and if you look at the rr component
+[11:59.68] then well a little calculation later
+[12:12.32] including cosmological constant here
+[12:22.56] would lead us to the second
+[12:25.92] equation of course there are several
+[12:27.52] more components
+[12:29.44] but none of those lead to independent
+[12:31.20] equations after these two
+[12:41.68] and we'll call this one ii prime
+[12:52.80] so these are two equations and you just
+[12:55.12] go ahead and solve them if you want
+[12:57.04] one prime and two prime that's totally
+[12:58.88] fine uh
+[13:01.04] you can do it but the you can
+[13:04.64] make your life a touch simpler by
+[13:08.40] combining these equations in various
+[13:10.00] ways differentiating them and
+[13:11.92] eliminating common terms and
+[13:16.00] when you do so
+[13:22.00] you will find that those equations one
+[13:25.04] prime and two prime
+[13:27.12] are equivalent to the following
+[13:29.68] equations
+[13:30.40] which we will make reference to as a
+[13:32.80] little later when we solve
+[13:35.44] solve these
+[13:49.36] but before we go ahead and solve these
+[13:51.04] equations we're going to note that this
+[13:53.04] cosmological constant term lambda
+[13:56.48] can be eliminated and the way it gets
+[14:00.84] eliminated
+[14:04.80] it gives you a sense of how or what role
+[14:08.08] the lambda the cosmological constant
+[14:10.16] term plays
+[14:16.88] so let's make this the following
+[14:18.16] substitution
+[14:19.92] rho gets mapped to rho plus lambda over
+[14:22.48] eight pi
+[14:23.60] and p gets mapped to p
+[14:26.88] minus lambda over eight pi so if you
+[14:29.12] make that substitution
+[14:31.76] actually you can eliminate lambda
+[14:37.92] in this way we can actually interpret
+[14:39.60] the cosmological constant
+[14:41.36] we can interpret it as representing a
+[14:43.28] form of energy
+[14:47.60] with a negative pressure
+[15:07.28] and this pressure is not only negative
+[15:09.52] it's equal in magnitude
+[15:11.04] to its energy density
+[15:37.76] that means that a little p equals minus
+[15:40.48] rho for this form
+[15:41.68] of energy this is this energy as a name
+[15:46.96] it's called dark energy
+[15:54.40] and there have been several independent
+[15:58.72] surveys of of this hypothetical dark
+[16:02.56] energy
+[16:03.12] and so far we haven't been able to
+[16:05.28] reject the hypothesis that dark energy
+[16:07.44] is present in our universe and
+[16:08.80] dominating
+[16:09.92] in fact or playing a dominating role in
+[16:12.96] the
+[16:13.28] uh the late stage evolution of our
+[16:15.68] universe
+[16:19.12] and that is so
+[16:22.24] the discussion up to this point uh about
+[16:24.80] eliminating lambda is just to
+[16:26.40] allow us to eliminate lambda from the
+[16:28.16] equations so we've got these equations 1
+[16:30.40] prime and 2 prime here
+[16:31.92] lambda's inside it but we can make this
+[16:34.32] particular substitution
+[16:35.60] and then we can end up with some
+[16:37.76] equations
+[16:40.80] which don't feature lambda anymore
+[16:48.56] but now we have to bear in mind that the
+[16:50.80] pressure can go negative
+[16:54.96] or we must allow for the pressure to go
+[16:57.68] negative
+[16:59.84] in order to accommodate the
+[17:06.00] presence of dark energy
+[17:10.96] so these are the two equations that
+[17:13.36] we're going to use
+[17:14.32] to model the evolution of our universe
+[17:22.08] and we'll call these one and two
+[17:33.76] and just by looking at these equations
+[17:35.20] we can actually deduce a fair number of
+[17:36.88] interesting
+[17:37.76] uh observations about
+[17:41.36] the evolution of various
+[17:45.68] types of universe
+[17:49.60] so there's one case that you might think
+[17:52.00] is highly relevant for the universe we
+[17:53.52] find ourselves in
+[17:55.28] um but in the end of course has been
+[17:56.72] rejected by the latest
+[18:00.64] observations you might imagine that in
+[18:02.88] our universe
+[18:03.76] rho the energy density is positive and
+[18:06.88] uh
+[18:07.20] p the pressure is also non-negative
+[18:09.04] right you might imagine that
+[18:11.04] and then in that case so this does not
+[18:13.52] to repeat this does not actually apply
+[18:15.12] to the universe that we live in
+[18:16.80] as far as we know now p
+[18:19.84] there is the cosmological constant term
+[18:21.60] that does
+[18:24.80] uh feature a negative pressure
+[18:26.84] contribution
+[18:29.76] but what if we um just assume
+[18:35.52] that rho is strictly greater than zero
+[18:37.92] and p is not negative
+[18:41.28] well we can uh we can actually deduce a
+[18:43.52] couple of
+[18:45.44] quite interesting observations
+[18:52.08] namely that the universe in this
+[18:54.40] particular case
+[18:58.00] cannot be static
+[19:05.28] because
+[19:09.36] a double dot is strictly less than zero
+[19:11.28] so if you take a look at the
+[19:12.48] equation two and
+[19:15.68] you look at the right hand side well you
+[19:16.96] see that rho and p are
+[19:18.72] non-negative so the right hand side is
+[19:20.48] strictly negative
+[19:22.16] a itself is positive so that tells us
+[19:25.52] that a double dot
+[19:26.48] is strictly negative
+[19:29.60] and what does that mean
+[19:32.72] well uh the universe must always be
+[19:34.96] contracting or expanding
+[19:57.52] right because that means that a dot has
+[20:00.08] to be strictly greater than zero
+[20:01.52] or a dot has to be strictly less than
+[20:04.24] zero a dot can't be zero
+[20:06.88] otherwise a double dot would be zero
+[20:12.40] so the universe is either always
+[20:15.04] expanding or contracting except in the
+[20:16.88] case where this cosmological constant
+[20:18.56] term
+[20:19.28] happens to just balance out
+[20:22.40] the uh the contribution of the
+[20:23.92] cosmological constant term just balances
+[20:25.68] out the
+[20:26.08] energy density indeed that was the
+[20:27.44] original motivation that
+[20:29.28] einstein to introduce the cosmological
+[20:31.08] constant um
+[20:35.04] now of course later observations
+[20:37.12] confirmed
+[20:38.72] the rejected the hypothesis that the
+[20:40.88] universe is static
+[20:42.64] and so somewhat melodramatically this is
+[20:45.12] uh
+[20:45.92] this is considered a mistake but of
+[20:47.44] course with hindsight now we understand
+[20:49.28] that
+[20:50.08] the way you should do physics is you
+[20:51.36] should include all terms that are
+[20:53.20] allowed by the symmetries of your theory
+[20:54.88] and
+[20:55.12] the cosmological constant term is
+[20:56.40] allowed by the the
+[20:58.48] symmetries of your theory it's one
+[20:59.92] constant term and it's non-zero
+[21:02.16] as far as we're aware in our universe so
+[21:03.68] i find it a bit melodramatic to
+[21:05.28] to depict the cosmological constant as a
+[21:07.68] mistake of einstein this is really
+[21:10.08] um the motivation may have been
+[21:14.84] uh with
+[21:16.72] uh it may not have been courageous
+[21:18.48] enough but the the
+[21:20.88] principle that you add in all the the
+[21:23.04] terms that are allowed by the symmetries
+[21:24.56] of your theory
+[21:25.60] is a good principle and uh one that you
+[21:28.48] should follow when formulating physical
+[21:30.24] theories
+[21:30.96] it you shouldn't set any coupling
+[21:33.92] constant or
+[21:36.24] interaction term in your theory to zero
+[21:37.76] unless you have a good reason to do so
+[21:39.36] based on experimental
+[21:41.04] evidence now uh
+[21:44.80] when you think that the universe is
+[21:46.16] expanding maybe you sort of think of
+[21:48.08] um there being a distinguished point
+[21:49.84] where expansion is happening around it
+[21:51.84] perhaps
+[21:52.80] uh you shouldn't really think of the
+[21:54.16] universe like that you should rather
+[21:55.36] think of galaxies as being distributed
+[21:57.12] like on the surface of a balloon
+[21:59.52] and uh and then your the universe is
+[22:01.44] sort of blowing up the balloon or the
+[22:02.88] balloon is shrinking
+[22:04.24] and that means that all the distances
+[22:05.76] between isotropic observers
+[22:07.68] um uh there's no preferred center right
+[22:11.12] we already know that
+[22:12.08] and the distance is all sort of
+[22:14.00] symmetrically changing
+[22:16.72] between isotropic observers
+[22:20.00] so
+[22:23.44] let's actually think about or study the
+[22:25.44] the distances between isotropic
+[22:27.04] observers and see
+[22:28.08] how they're changing in one of these
+[22:30.00] solutions
+[22:35.68] so imagine we have two isotropic
+[22:37.44] observers
+[22:38.72] a distance capital r apart
+[22:53.52] and that's at some proper time t
+[22:56.56] or some constant
+[23:00.08] tau sorry so let's just study
+[23:04.00] how the distance between two isotropic
+[23:06.08] observers changes as
+[23:08.08] tau changes
+[23:14.64] well firstly the change in this distance
+[23:16.72] r is
+[23:18.40] per definition right it's d r d tau
+[23:21.92] that's how it changes
+[23:23.76] but that's equal to r on a
+[23:27.04] times d a d tau which is
+[23:31.20] the definition something called h times
+[23:33.20] r now to to get the second line here you
+[23:37.52] have to
+[23:38.16] to to note that the metric
+[23:41.92] is changing with uh according with tau
+[23:46.96] and that the distance between two
+[23:48.88] isotropic observers is being rescaled
+[23:51.12] as tower changes right and a
+[23:54.24] is the scaling factor
+[23:57.76] and so what we've done here is we've
+[23:59.92] introduced something called
+[24:02.84] h
+[24:05.12] which is which is irritatingly called
+[24:08.64] hubble's constant although it's not
+[24:10.40] constant
+[24:16.24] humble's function so
+[24:22.32] let's put a scarecrow here it's not
+[24:24.96] constant
+[24:29.52] and so what we learn is that the change
+[24:31.84] in the distance between two isotopic
+[24:33.20] observers
+[24:33.84] is somehow proportional or
+[24:38.08] instantaneously proportional to the
+[24:39.84] distance between
+[24:41.12] the observers right this basically
+[24:43.44] exponential
+[24:44.96] uh separation
+[24:48.96] and what does that tell us well if r is
+[24:51.60] large enough
+[24:56.32] then easily right
+[25:00.32] v can exceed the speed of light
+[25:10.16] but that's bad right things aren't
+[25:11.84] allowed to travel at faster than the
+[25:13.60] speed of light
+[25:14.72] well actually that's not true in general
+[25:16.48] relativity uh
+[25:18.64] you got to be a little bit more careful
+[25:19.84] about how you you you state
+[25:22.00] the the the speed of light and the
+[25:25.28] the speed of light is a limit on
+[25:27.68] velocities
+[25:28.88] this actually entails no particular
+[25:30.32] violation this observation
+[25:31.92] of relativity because in general
+[25:34.00] relativity all that we required is that
+[25:35.76] locally measured relative velocities at
+[25:37.76] a single event does not
+[25:39.44] exceed the speed of light global
+[25:41.36] relative velocities such as v
+[25:43.28] you see the distance between two
+[25:44.56] isotropic observers is
+[25:46.40] this global distance quantity that's
+[25:49.20] determined by a geodesic
+[25:51.12] there's no no such restriction on those
+[25:54.16] those velocities and actually you know
+[25:57.04] you've seen in the exercises
+[25:59.84] um i've mentioned that desider as an
+[26:02.88] ideology universe is an idealized
+[26:04.80] solution by transfer equations features
+[26:06.56] exactly this
+[26:08.40] so this is no violation
+[26:13.28] of relativity
+[26:24.80] because in real in general relativity
+[26:26.72] only locally
+[26:32.24] measured relative velocities
+[26:39.20] so locally means some infinitesimally
+[26:42.96] closed
+[26:45.52] observers
+[26:49.36] at a single event
+[26:59.20] do not exceed the speed of light
+[27:10.96] global relative velocities
+[27:21.68] such as v are not
+[27:25.60] so constrained
+[27:28.72] and indeed we do observe this
+[27:35.12] so i've alluded to it several times and
+[27:36.72] stated directly several times
+[27:39.68] the universe is expanding the uh the
+[27:42.88] you can look at the redships of various
+[27:44.40] galaxies and you can confirm that the
+[27:46.64] universe is expanding
+[27:53.52] so given that the universe is expand
+[27:56.16] expanding
+[27:57.36] a dot is bigger than zero
+[28:00.40] what do we know well we know that a
+[28:02.96] double dot is less than zero
+[28:07.36] so what does that tell us well that
+[28:08.72] tells us that the universe must have
+[28:10.24] been accelerating
+[28:11.76] at a faster and faster rate as t tau
+[28:15.12] goes in the negative direction
+[28:28.16] this is true even the cosmological
+[28:29.60] concept term here
+[28:32.48] in the cases that are relevant for us
+[28:59.84] all right has to be right the universe
+[29:04.24] a double dot is strictly negative the
+[29:06.32] only way this is consistent
+[29:08.00] is if everything was accelerating faster
+[29:10.16] and faster and faster and faster as tau
+[29:11.76] goes negative
+[29:14.00] even at constant expansion
+[29:21.76] you know forget x the fact that it
+[29:23.12] actually was accelerating even at
+[29:24.88] constant expansion
+[29:28.96] then at a time
+[29:32.40] t given by a dot divided by a which is
+[29:34.72] like the inverse of this hubble constant
+[29:36.48] which isn't a constant
+[29:42.24] we would learn and this only gets worse
+[29:47.84] when you include the fact that we
+[29:50.56] weren't actually in a constantly
+[29:51.92] expanding universe
+[29:54.64] that we learned that a is zero
+[29:59.44] at this time t now that's a singular
+[30:03.68] state right
+[30:09.68] you know the metric has the the spatial
+[30:12.16] contribution to the metric has an a in
+[30:13.76] front of it
+[30:14.48] and if a is zero then that means the
+[30:17.28] distance is between all events
+[30:19.60] at that instant of time
+[30:23.12] is zero
+[30:41.04] zero right all events in the universe at
+[30:43.60] that that instant
+[30:44.88] t are at the same location
+[30:51.04] and hence if there's any energy density
+[30:53.28] or matter density
+[30:54.40] present at that point
+[31:00.96] well it would be infinite
+[31:07.84] and so this has been given a name right
+[31:09.36] this is called the the big bang
+[31:14.16] that instant where the universe comes
+[31:17.52] into being
+[31:19.12] and all matter or energy density in the
+[31:21.36] universe
+[31:22.24] is concentrated on a singular point
+[31:26.64] and then the universe after that instant
+[31:28.88] commences expansion
+[31:31.60] uh but i want to emphasize that this is
+[31:35.12] not an explosion of pre-existing matter
+[31:46.72] there was no before tea
+[32:05.04] so there was no time the universe didn't
+[32:07.92] simply didn't exist it was no matter
+[32:09.36] there was nothing before
+[32:13.52] t big t
+[32:18.00] and the reason is that it is impossible
+[32:22.32] to extend
+[32:31.36] the space-time manifold
+[32:35.44] in a non-singular way in connected way
+[32:43.28] i mean this is not i mean people have
+[32:45.28] studied this endlessly um
+[32:47.04] and there's a variety of different
+[32:50.08] things that could really have happened
+[32:51.60] in the real universe
+[32:52.80] however theorems on singularities
+[32:56.96] in the lorenz manifolds
+[33:00.00] pretty much force us into the
+[33:03.28] conclusion that the universe did
+[33:04.64] commence somehow in a big bang
+[33:06.80] scenario and that there was nothing
+[33:08.48] present before this big bang
+[33:12.24] this of course can be endlessly debated
+[33:15.20] and but as we
+[33:16.24] find out more observational evidence and
+[33:19.04] as we learn about the dynamics of our
+[33:20.56] universe this does seem to be the most
+[33:22.80] economical hypothesis all right that's
+[33:26.48] uh it for this lecture we've covered
+[33:30.08] essentially a qualitative discussion of
+[33:33.52] the equations governing the evolution
+[33:36.88] of a homogeneous and isotropic universe
+[33:39.44] and in the next lecture
+[33:40.80] we will look at the quantitative
+[33:42.72] solution of equations one and two we'll
+[33:45.04] solve them or at least i'll write down
+[33:47.28] the
+[33:48.16] solutions and then we will move on
+[33:51.52] to the uh final canonical topic
+[33:55.04] of this lecture series namely the
+[33:57.28] schwarzschild
+[33:58.24] solution but that's it for now thank you
+[34:00.64] very much and goodbye

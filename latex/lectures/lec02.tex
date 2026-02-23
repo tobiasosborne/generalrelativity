@@ -6,21 +6,35 @@
 \section{The equivalence principle and Mach's principle}%
 \label{sec:equivalence-principle}
 
+In the previous lecture we reviewed the fundamental assumptions of
+Newtonian physics---in particular, the preferred reference frame and
+the three conceptually distinct notions of mass.  We now turn to the
+two big principles that motivated Einstein to formulate general
+relativity: the \emph{equivalence principle} and \emph{Mach's
+principle}.
+
 \subsection{Einstein's equivalence principle (EEP)}
 
-The Einstein equivalence principle consists of three parts:
+The first, and arguably most important, principle underlying the
+formulation of general relativity is the Einstein equivalence
+principle.  In its modern form, EEP consists of three parts:
 
 \begin{enumerate}
   \item \textbf{Universality of free fall (UFF)}
     (also known as the \emph{weak equivalence principle}, WEP).\\
-    Verified (not rejected) e.g.\ in torsion balance experiments
-    (cf.~\S\ref{sec:UFF}).
+    Not rejected (a key distinction: in physics we cannot \emph{confirm}
+    a hypothesis, only fail to reject it) e.g.\ in torsion balance
+    experiments (cf.~\S\ref{sec:UFF}).
 
   \item \textbf{Local Lorentz invariance (LLI).}\\
-    In a freely falling reference frame, the laws of physics are those
-    of special relativity (no ``preferred'' reference frame);
-    i.e.\ the laws of physics do not depend on the orientation or
-    velocity.
+    In a freely falling reference frame, the laws of non-gravitational
+    physics are those of special relativity---there is no preferred
+    reference frame.  Recall that the existence of a preferred frame
+    was a fundamental assumption of Newtonian physics
+    (\S\ref{sec:prerelativity}); this is one of the assumptions one
+    must already abandon in the transition to special relativity.
+    In particular, the laws of physics do not depend on the orientation
+    or velocity of the observer.
 
     \smallskip
     \noindent Best bounds from Michelson--Morley--type experiments:
@@ -58,11 +72,17 @@ gravitational field.
   where $\nu(\vb{x}_1)$, $\nu(\vb{x}_2)$ are the clock rates at
   positions $1,2$ and
   $\Delta\phi = \phi(\vb{x}_1) - \phi(\vb{x}_2)$.
+  \emph{Hint:} There are (at least) two approaches---a Doppler-shift
+  argument, or an argument using the quantum expression $E = h\nu$ for
+  the energy of a photon and tracking how it changes at different
+  points in the gravitational field.
 \end{exercise}
 
 \noindent\textbf{Estimate:} On Earth's surface, for a height difference
 $\norm{\vb{x}_1 - \vb{x}_2} \sim 30\;\mathrm{cm}$, this effect is
-$\Delta\phi/c^2 \sim 10^{-17}$---and has been measured!
+$\Delta\phi/c^2 \sim 10^{-17}$---and has been measured!  Modern atomic
+clocks are sensitive enough that gravitational redshift is now
+routinely measurable over laboratory-scale height differences.
 
 \begin{intuition}[Gravity slows clocks]
   A clock at the bottom of a gravitational potential well runs slower
@@ -75,15 +95,29 @@ $\Delta\phi/c^2 \sim 10^{-17}$---and has been measured!
 % ──────────────────────────────────────────────────────────────
 \subsection{From EEP to geometry}
 
-\textbf{Observation:} Using EEP, it is possible to ``derive'' that
-gravity should be described \emph{geometrically}
+\textbf{Observation:} Using EEP, it is possible to ``derive'' (or at
+least argue convincingly) that gravity should be described
+\emph{geometrically}
 (K.~Thorne, D.~Lee, \& A.~Lightman,
 \emph{Phys.\ Rev.\ D}, \textbf{7}, 3563--3578, 1973).
 
+One should be careful here: formulating a physical theory in
+geometric language is, by itself, no particular magic.  Newton's
+mechanics can be formulated geometrically (via symplectic geometry),
+as can thermodynamics, statistical mechanics, and quantum mechanics
+(via K\"ahler manifolds).  If you are willing to work hard enough,
+just about \emph{any} physical theory admits a geometric formulation.
+
+What makes general relativity special is not merely that it
+\emph{has} a geometric formulation, but what that geometry
+\emph{means} physically:
+
 \begin{keyresult}[The geometric consequence of EEP]
-  All matter couples to the \emph{same geometry}---namely, that of
-  spacetime.  A single metric suffices to describe all of these
-  couplings simultaneously.
+  All matter---electrons, protons, gluons, the Higgs field---couples
+  to the \emph{same geometry}, namely that of spacetime.  A single
+  metric suffices to describe all of these couplings simultaneously.
+  This universal coupling is what distinguishes general relativity
+  from any other theory that happens to admit a geometric formulation.
 \end{keyresult}
 
 % ──────────────────────────────────────────────────────────────
@@ -93,6 +127,13 @@ gravity should be described \emph{geometrically}
 field can be detected in a freely falling elevator.
 
 \smallskip
+This is one of Einstein's classic thought experiments---``Einstein's
+elevator.''  Note the qualifiers \emph{static} and
+\emph{homogeneous}: if the gravitational field varies in space (is
+not translation-invariant), then tidal forces arise, and these
+\emph{can} be detected even in a freely falling frame.  This
+distinction will become important when we discuss curvature.
+
 Suppose we have $N$ (non-relativistic) particles moving in a pair
 force field $\vb{F}(\vb{x}_j - \vb{x}_k)$ and an external gravitational
 field $\vb{g}(\vb{x}) = \vb{g}$ (constant), with $\vb{F}(\vb{0}) = \vb{0}$.
@@ -104,7 +145,8 @@ field $\vb{g}(\vb{x}) = \vb{g}$ (constant), with $\vb{F}(\vb{0}) = \vb{0}$.
       + \sum_{k=1}^{N} \vb{F}(\vb{x}_j - \vb{x}_k)\,.
 \end{equation}
 
-Make a (non-Galilean) change to an \emph{accelerating frame}:
+We now make a non-Galilean change to an \emph{accelerating
+(freely falling) frame}:
 \begin{equation}\label{eq:accelerating-frame}
   \vb{x}' = \vb{x} - \tfrac{1}{2}\,\vb{g}\,t^2\,,\qquad
   t' = t\,.
@@ -116,10 +158,18 @@ Then the equations of motion become (exercise):
     = \sum_{k} \vb{F}(\vb{x}'_j - \vb{x}'_k)}\,.
 \end{equation}
 The gravitational field has been \emph{eliminated}---the freely falling
-frame sees only the inter-particle forces.
+frame sees only the inter-particle forces.  This is a first concrete
+demonstration of EEP within Newtonian physics.
 
 % ──────────────────────────────────────────────────────────────
 \subsection{Gravitational forces and freely falling coordinates}
+
+We now tell essentially the same story, but within special
+relativity---a more demanding calculation, and a good check on
+one's special-relativistic mechanics.  These calculations are meant
+to give facility with non-Galilean, non-Lorentzian coordinate
+changes; along the way, many of the symbols of differential geometry
+will already start to appear in this quite elementary setting.
 
 According to EEP, for \emph{any} particle moving purely under the
 influence of a gravitational field, there exists a freely falling
@@ -154,8 +204,9 @@ Repeated indices (one ``upstairs,'' one ``downstairs'') are summed over.
 % ──────────────────────────────────────────────────────────────
 \subsection{The geodesic equation}
 
-Suppose $x^\mu$ denotes some other set of coordinates (e.g.\ lab,
-rotating, \ldots):
+Suppose $x^\mu$ denotes some other---completely general---set of
+coordinates: a lab frame, a rotating frame, a frame ``jumping up and
+down on a trampoline''---anything at all:
 
 \begin{center}
 \begin{tikzpicture}[scale=0.9]
@@ -222,6 +273,12 @@ where the \emph{affine connection} (Christoffel symbol) is
     = \pd{x^\lambda}{\xi^\alpha}\,
       \frac{\partial^2\xi^\alpha}{\partial x^\mu\,\partial x^\nu}\,.
 \end{equation}
+The affine connection encodes how the freely falling coordinates
+depend on our (possibly wild) lab coordinates, together with a
+Jacobian factor.  When we come to formulate differential geometry
+properly (starting in lecture~3), we will encounter the geodesic
+equation and affine connections in much greater generality---but
+they already appear here, in this entirely elementary calculation.
 
 \begin{intuition}[Geodesics on a curved surface]
   To build intuition for the geodesic equation, consider a 2D
@@ -263,27 +320,46 @@ where
     = \pd{\xi^\alpha}{x^\mu}\,\pd{\xi^\beta}{x^\nu}\,
       \eta_{\alpha\beta}}
 \end{equation}
-is the \textbf{metric}.
+is the \textbf{metric}.  The metric collects all the information that
+appeared when we changed to the new coordinate system; it is the
+object that allows us to compute proper time (and hence distances and
+clock rates) without having to transform back to freely falling
+coordinates every time.
 
 \begin{intuition}[What the metric encodes]
   The metric $g_{\mu\nu}$ tells you how to measure distances and
   time intervals in arbitrary coordinates.  In freely falling
   coordinates it reduces to the flat Minkowski metric
   $\eta_{\alpha\beta}$.  The deviation of $g_{\mu\nu}$ from
-  $\eta_{\alpha\beta}$ encodes the gravitational field.
+  $\eta_{\alpha\beta}$ encodes the gravitational field.  Ultimately,
+  $g_{\mu\nu}$ is all one needs to describe the geometry of
+  spacetime.
 \end{intuition}
+
+So far we have seen only one half of the story: the geometry of
+spacetime tells freely falling particles how to move (via the
+geodesic equation).  The other half---that matter tells spacetime
+how to curve---requires Mach's principle and, eventually, Einstein's
+field equations.
 
 % ──────────────────────────────────────────────────────────────
 \subsection{Mach's principle}
 
-Mach's principle is the second key set of ideas underlying
-general relativity---less precise than EEP, but deeply influential.
+Mach's principle is the second key set of ideas---really a
+\emph{circle} of ideas, less precise than EEP and harder to make
+mathematically sharp, but profoundly influential on Einstein's
+thinking.
 
 \begin{keyresult}[Mach's principle (summary)]
   All matter in the universe should contribute to the local definition
   of ``non-accelerating'' and ``non-rotating.''
   In a universe devoid of matter, these concepts should have no meaning.
 \end{keyresult}
+
+\noindent This is a deep statement: the very notions of acceleration
+and rotation are not absolute but are determined by the matter content
+of the universe.  Without matter, there is nothing with respect to
+which one could be ``accelerating'' or ``rotating.''
 
 % ──────────────────────────────────────────────────────────────
 \subsection{General relativity: the synthesis}
@@ -292,12 +368,22 @@ General relativity is the following statement:
 
 \begin{keyresult}[General relativity]
   The observer-independent properties of spacetime are described
-  by a \emph{spacetime metric} $g_{\mu\nu}$, which need not have the
-  flat form $\eta_{\mu\nu}$ of special relativity.  \emph{Curvature}
+  by a \emph{spacetime metric} $g_{\mu\nu}$---a symmetric rank-2
+  tensor field assigning four numbers to each spacetime
+  event---which need not have the flat form $\eta_{\mu\nu}$ of special
+  relativity.  \emph{Curvature} is that property of the metric that
   accounts for the physical effects of gravitation.
   Furthermore, curvature is determined by the distribution of
-  stress-energy and momentum (and vice versa).
+  stress-energy and momentum, and vice versa.
 \end{keyresult}
+
+\noindent The ``vice versa'' is crucial: stress-energy tells spacetime
+how to curve, and curvature tells matter how to move.  This
+self-referential, nonlinear interplay between geometry and matter is
+what makes general relativity so remarkable.  The extraordinary---one
+might say almost miraculous---thing is that this all holds together:
+the theory does not collapse into inconsistency, but instead forms a
+beautifully self-contained whole.
 
 \begin{center}
 \begin{tikzpicture}[
@@ -319,3 +405,10 @@ General relativity is the following statement:
   \draw[arr, munsell!60] (M) -- (C);
 \end{tikzpicture}
 \end{center}
+
+\noindent Actually implementing the physical content of this
+formulation---computing curvature, writing down Einstein's field
+equations, extracting predictions---requires the mathematics of
+spacetime manifolds that are not flat.  That is the work we commence
+in the next lecture, beginning with the theory of differentiable
+manifolds.

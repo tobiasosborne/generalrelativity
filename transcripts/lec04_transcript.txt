@@ -1,0 +1,1099 @@
+# General Relativity, Lecture 4: Tangent vectors
+# YouTube: https://www.youtube.com/watch?v=WTVI_BHiiyM
+# Auto-generated transcript
+
+[00:00.00] hello and welcome back to introduction
+[00:01.36] to general relativity in lecture four
+[00:04.24] today's lecture we are going to look at
+[00:06.48] the definition of tangent space
+[00:08.48] for a manifold if you recall in the
+[00:11.68] previous video
+[00:12.72] we introduced the notion of a smooth
+[00:14.56] manifold and also we commence the
+[00:16.40] definition
+[00:17.44] of what it means to have a tangent
+[00:19.28] vector to a smooth manifold
+[00:22.72] and the substance of that definition was
+[00:25.92] that we were going to replace the
+[00:27.52] ordinary geometric notion of a tangent
+[00:29.52] vector to a smooth embedded manifold
+[00:32.00] with the notion of a directional
+[00:33.44] derivative
+[00:35.20] so today we're going to take a little
+[00:36.88] bit more time investigating
+[00:39.28] directional derivatives their
+[00:41.60] relationship to tangent vectors
+[00:46.40] and using directional derivatives as a
+[00:49.12] means
+[00:49.76] to define tangent vectors intrinsically
+[00:58.40] hence first topic that we will cover
+[01:00.72] today is that of directional derivatives
+[01:03.12] as
+[01:03.60] vectors
+[01:06.64] so this is maybe not the way you have
+[01:08.88] been thinking about directional
+[01:10.40] derivatives up to now but you can think
+[01:12.08] of
+[01:12.40] directional derivative operators as
+[01:14.72] vectors
+[01:16.16] i'll show you how you do it you start
+[01:17.92] with a n triple of numbers
+[01:20.88] from rn in other words a vector
+[01:24.64] components of a vector i mean and you
+[01:27.20] note
+[01:27.68] that this defines
+[01:33.04] a directional derivative
+[01:41.60] according via the following formula oops
+[01:44.16] directional derivative at a point
+[01:58.08] as follows
+[02:02.24] the way this works is you suppose
+[02:06.72] f is a at least one time differentiable
+[02:10.16] function
+[02:17.04] from r into r
+[02:20.40] and define
+[02:25.12] v dot grad
+[02:33.44] here i'm using the einstein summation
+[02:36.08] notation to sum
+[02:36.96] over this repeated index here so i'll
+[02:39.76] replace that with the summation today
+[02:41.28] but i
+[02:41.76] probably in future will not do this
+[02:44.80] so v dot grad is a differential operator
+[02:47.36] that you can define
+[02:48.56] but that's and indeed that's a
+[02:51.04] directional derivative but i want to
+[02:52.72] talk about
+[02:53.52] the more specific notion of a
+[02:55.60] directional derivative at a point
+[03:02.64] so i'll put this in brackets so that
+[03:05.12] notation means direct
+[03:06.80] is is this linear differential operator
+[03:09.76] but the notion
+[03:10.72] of a directional derivative at a point
+[03:13.68] well that's this
+[03:14.56] this notion here you differentiate with
+[03:17.20] respect to v dot grad
+[03:18.88] the function f and then you substitute
+[03:21.76] in
+[03:24.40] f as a function of the argument and then
+[03:25.84] you substitute in x is this point p
+[03:27.92] that you care about
+[03:30.96] and although we write that this way
+[03:35.76] so this a more specific notion only
+[03:38.80] makes sense at a point p
+[03:46.08] what i mean by a directional derivative
+[03:48.32] at a point p
+[03:51.28] so given a vector in r n we can define a
+[03:54.48] directional derivative at point p
+[03:57.52] by the formula in the red box here
+[04:12.88] directional derivative of point p
+[04:15.92] conversely given a directional
+[04:17.60] derivative at point p
+[04:18.96] we can obtain a vector
+[04:27.60] given some v dot
+[04:30.64] grad at some point p i'll just use the
+[04:34.16] point
+[04:34.64] the the p subscript p notation to
+[04:36.64] indicate that you have to evaluate this
+[04:38.00] at point p
+[04:39.92] um we obtain
+[04:44.80] a vector
+[04:48.16] in rn just read off those coefficients
+[04:51.92] in the definition of a directional
+[04:53.20] derivative at point p and then you have
+[04:55.04] yourself a vector in rn
+[04:58.00] further and this is what encourages us
+[05:01.60] to make this
+[05:02.88] analogy between directional derivatives
+[05:04.40] and tangent vectors uh concrete
+[05:07.60] directional derivatives form a the
+[05:09.60] directional derivatives at
+[05:11.52] p form a vector space
+[05:23.76] that we can identify with tangent space
+[05:27.68] to the surface
+[05:32.48] and this is going to be the the idea of
+[05:35.28] directional derivatives at a point p
+[05:37.52] you know here's the picture that we
+[05:39.84] currently have we have rn here
+[05:41.68] we have a point p and then we have this
+[05:43.92] idea of a directional derivative
+[05:45.68] at point p and we're identifying that
+[05:49.68] one to one
+[05:50.96] with is the point p and here's a
+[05:54.56] a vector v at point p
+[05:57.92] tan that we think of as our tangent
+[05:59.60] vector
+[06:01.92] so this is this correspondence between
+[06:03.76] direction divided by p
+[06:05.04] and tangent vectors that's the way we're
+[06:07.20] going to make sense of
+[06:08.64] tangent vectors intrinsically for
+[06:10.24] manifolds because it turns out
+[06:11.76] although we can't define tangent vector
+[06:13.68] directly intrinsically on a manifold
+[06:16.08] we can define directional derivatives at
+[06:18.24] a point p on a manifold without
+[06:20.00] making reference to the the ambient
+[06:21.68] space at all
+[06:25.76] before we do that we have to say what is
+[06:27.52] it intrinsically that we want from a
+[06:29.44] directional derivative at a point p
+[06:31.20] on a manifold and for that i'm going to
+[06:34.16] know two properties right
+[06:35.44] note
+[06:40.48] v dot grad at p
+[06:44.48] satisfies the following two properties
+[06:48.96] and these are crucial for our
+[06:52.88] subsequent generalization of the words
+[06:55.12] directional derivative to manifolds
+[06:57.12] firstly if you take the scalar
+[06:59.76] combination of two
+[07:02.56] functions then the directional
+[07:04.40] derivative at point p
+[07:06.48] of these two functions is the scalar
+[07:09.44] combination of their directional
+[07:10.64] derivatives
+[07:13.84] so this they're linearity
+[07:19.84] so for all f g
+[07:23.92] functions and for
+[07:27.52] all a b real numbers
+[07:30.88] we have this linearity and the second
+[07:32.64] thing is the circle lug nuts property if
+[07:34.32] you have two scalar functions
+[07:35.60] f and g you apply a directional
+[07:37.44] derivative to them then that's the same
+[07:39.28] as evaluating the function at the point
+[07:40.96] p
+[07:41.76] and taking the directional derivative of
+[07:44.00] the scalar function g
+[07:45.12] plus evaluating the function g at the
+[07:47.04] point p and taking
+[07:48.88] the directional derivative of p of f
+[07:53.44] that's the leibniz property
+[08:04.00] and now some notation before we continue
+[08:10.24] i in the previous video i in the
+[08:12.80] additional material at the end i
+[08:14.16] referred to calligraphic f
+[08:15.52] as the as a
+[08:18.56] differentiable structure here however
+[08:20.88] probably for the rest of this course i'm
+[08:22.24] going to
+[08:22.80] also use calligraphic f of m as
+[08:26.00] to denote the set of all c
+[08:29.28] infinity functions
+[08:32.80] from m to r
+[08:36.32] where m is a manifold we will uh this
+[08:39.28] notion
+[08:40.16] it should be cleared from the context
+[08:41.36] whenever i what i mean
+[08:43.76] by the respective notations
+[08:47.84] and so the big idea now to be able to
+[08:50.48] define
+[08:51.04] a tangent vector for a manifold is to
+[08:54.32] first define the vector space of
+[08:56.08] directional derivatives
+[09:00.08] on a manifold and then just call that by
+[09:03.04] fear
+[09:03.44] just declare that to be the tangent
+[09:06.84] space
+[09:24.08] and how do we define uh
+[09:28.08] a directional derivative on a manifold
+[09:30.00] well we just take these two properties
+[09:31.76] that are highlighted above one and two
+[09:33.52] and declare such
+[09:36.80] maps to be directional derivatives so
+[09:40.40] we define a vector space vp associated
+[09:43.04] to a point p in a manifold m
+[09:44.72] to be the set
+[09:48.32] of all
+[09:52.08] maps which goes from the space of
+[09:56.56] c infinity functions on m to r
+[10:00.80] which obey these two properties
+[10:04.16] one and two
+[10:08.24] there's a little exercise to get you
+[10:09.68] used to these kinds of things
+[10:12.40] and the exercise is to prove or to
+[10:15.36] convince yourself
+[10:24.24] that if h so this exercise is a couple
+[10:27.84] of parts a
+[10:28.48] convince yourself if h is constant
+[10:40.16] then vh0
+[10:48.08] and you're only allowed to use
+[10:50.00] properties one wanting to one and two
+[10:58.40] and the second part of this exercise is
+[11:00.56] to convince yourself that vp so defined
+[11:02.88] as a vector space
+[11:13.28] so you can add subtract blah blah blah
+[11:15.60] multiply by scalars
+[11:20.24] so that's some exercises to get you
+[11:21.68] warmed up into
+[11:23.36] and used to this notion now we have to
+[11:26.72] ask ourselves a question
+[11:28.08] it's all very well to introduce these
+[11:31.76] directional derivative thingies that um
+[11:34.32] do we dare call them directional
+[11:35.52] derivatives on the smooth manifold well
+[11:37.04] not quite yet
+[11:38.32] because the question is maybe we have
+[11:40.48] created a monster
+[11:50.48] so what could have gone wrong well in
+[11:52.16] defining these linear maps vp
+[11:55.12] these directional derivatives v
+[11:56.80] satisfying those properties one and two
+[11:58.88] it could be that uh we've created
+[12:02.00] you know certainly we've created a
+[12:03.20] vector space you've proved that to
+[12:04.48] yourself in the exercise just then
+[12:06.80] but it could be that we've created a
+[12:08.24] horrible vector space a nightmare vector
+[12:10.24] space with a continuous
+[12:11.76] with a huge infinite number of
+[12:13.60] dimensions that has nothing
+[12:15.44] to do with tangent vectors all together
+[12:21.20] so eg you know we could have even though
+[12:24.24] we want to have a tangent space of
+[12:25.84] dimension n
+[12:28.00] we may have uh inadvertently by being
+[12:30.24] careless in our definition created a
+[12:31.92] huge vector space
+[12:34.32] say an infinite dimensional vector space
+[12:38.40] uh which has nothing to do with tangent
+[12:40.56] vectors when you specialize the notion
+[12:42.56] back to
+[12:43.12] euclidean space this is not the case
+[12:45.44] obviously i wouldn't
+[12:46.56] have done that to just be a waste of
+[12:50.08] your time
+[12:50.88] and there's a theorem that uh
+[12:52.48] establishes
+[12:54.32] this uh firstly that the dimension of
+[12:56.64] this vector space is the hope for
+[12:58.32] n and secondly cements the notion
+[13:01.60] of these directional derivatives as the
+[13:03.92] correct analog of tangent vector
+[13:07.28] and that's the theorem we prove we'll
+[13:09.12] state and prove this theorem
+[13:10.72] typically in this course i won't be
+[13:12.16] proving theorems but this one
+[13:14.24] uh is is a is a theorem that we can
+[13:16.32] prove without too much difficulty
+[13:18.00] and can makes reference essentially only
+[13:19.84] to multi-variable calculus
+[13:21.60] and i think in going through the proofs
+[13:23.84] you gain a lot of intuition about this
+[13:25.52] this vector space so we're going to go
+[13:26.96] through the proof however for
+[13:28.72] examination purposes i wouldn't really
+[13:30.64] ask you to reproduce this proof
+[13:34.32] here we go so let m be an n
+[13:37.68] dimensional smooth manifold
+[13:43.04] i'm almost certainly going to drop real
+[13:45.28] smooth
+[13:46.16] these adjectives as we go along we know
+[13:48.16] what we mean in this course we're going
+[13:49.36] to be talking about real smooth
+[13:50.56] manifolds
+[13:58.24] let p be a point in the manifold
+[14:02.00] and let b let v
+[14:05.20] of p be this thing we defined above
+[14:08.88] and we now call it tangent space at p
+[14:20.00] the theorem that we will um this theorem
+[14:23.52] says
+[14:25.52] that the dimension of v of p
+[14:28.72] is exactly n
+[14:33.84] so that largely cements
+[14:36.96] this vector space as the a reasonable
+[14:40.16] analog
+[14:40.80] for tangent vectors but as we go through
+[14:43.12] the proof you'll see that
+[14:44.32] it actually makes that connection
+[14:48.48] slightly more precise
+[14:57.20] before we do the proof actually i'll
+[15:00.24] just introduce
+[15:02.88] some notation
+[15:18.56] notation definition i guess
+[15:26.48] the reason we're going to introduce the
+[15:27.52] notation is we're going to introduce a
+[15:30.32] candidate basis for this vector space
+[15:33.76] and for that candidate basis we need
+[15:36.16] some notation and it'll turn out that in
+[15:38.08] fact
+[15:38.56] this candidate basis will be a very
+[15:40.16] familiar set of things indeed
+[15:42.32] so here's my cartoon of a manifold m
+[15:48.48] we're going to consider a point p we're
+[15:51.28] going to consider
+[15:53.04] the chart around the point p
+[15:58.24] we're going to consider the
+[15:59.04] corresponding map to rn
+[16:02.32] which we'll call psi consider this the
+[16:04.80] set in
+[16:05.76] rn that it gets mapped to the chart call
+[16:08.80] it u
+[16:09.68] and the point p gets mapped to psi of p
+[16:13.68] we're also going to consider also
+[16:16.40] playing a role in this theorem is a
+[16:17.76] function on the manifold
+[16:19.20] if the function maps just to the real
+[16:21.36] number line which is also a manifold
+[16:25.60] and there's the function evaluated at p
+[16:28.00] it
+[16:28.64] finds itself on the real number line
+[16:35.04] and with this notation in hand we're
+[16:36.56] going to introduce
+[16:38.88] a special basis now for tangent space
+[16:46.24] and let's see let's uh give this
+[16:52.08] declare what these objects are first of
+[16:53.76] all before we move on
+[16:56.24] let psi be a map from
+[16:59.68] o a subset of our manifold onto rm
+[17:02.72] rn one to one one two be a
+[17:06.32] chart with the point that we care about
+[17:10.16] actually in it
+[17:11.52] the point choosing a chart where the
+[17:12.96] point's not in it
+[17:16.00] now if f is a nice smooth function on m
+[17:20.72] then the first thing we can say is that
+[17:23.52] the function
+[17:24.40] f composed with psi inverse right you go
+[17:28.08] back from rn into the manifold
+[17:31.20] it maps from u inside rn
+[17:34.40] to r well that that that's a c infinity
+[17:37.44] function
+[17:40.88] right if you just look at this this
+[17:42.88] diagram that i've drawn here if i
+[17:46.64] go backwards you know i'm at psi of p
+[17:49.04] inside rn
+[17:50.08] oops i can see a mistake there
+[17:53.12] rn so if we're at the point psi
+[17:56.16] p and we go backwards via psi inverse
+[17:59.52] then we go
+[18:00.00] down here via f then the
+[18:03.04] what we've defined is a function that
+[18:05.76] goes
+[18:06.48] from u to r
+[18:15.12] and then what we're going to do is now
+[18:16.24] given
+[18:19.04] we're going to define for each of mu
+[18:22.64] equals 1 all the way up to n we're going
+[18:25.28] to define the following
+[18:26.96] operators
+[18:30.00] x mu these operators eat scalar
+[18:32.56] functions and produce
+[18:33.68] numbers
+[18:40.48] and the scalar function that it eats is
+[18:43.20] uh
+[18:44.08] f composed with psi inverse
+[18:47.52] and then we evaluate it at psi of p
+[18:59.84] and these x muse these are coord these
+[19:02.00] are the coordinates
+[19:06.72] our current coordinate system of r n
+[19:11.84] here's a little exercise for you before
+[19:13.76] we get to the proof of the theorem
+[19:15.44] x mu so defined
+[19:20.56] are tangent vectors
+[19:28.00] the elements of this space vp
+[19:31.28] it's very important that you go through
+[19:32.40] that proof just have to check properties
+[19:34.08] one and two
+[19:34.72] linearity and the leibniz property now
+[19:37.84] let's get to the proof
+[19:39.60] so we've got this this candidate basis
+[19:42.08] in hand and we're going to now prove
+[19:43.84] that every element of vp is a linear
+[19:45.60] combination of these and vice versa now
+[19:52.16] here we go
+[19:53.76] suppose
+[19:57.20] that big f now is some
+[20:00.48] nice smooth function
+[20:05.84] then there's this
+[20:12.00] there's a way to expand if
+[20:20.64] looks like a taylor series it's really
+[20:23.60] an
+[20:23.84] instance of this intermediate value
+[20:32.84] theorem
+[20:48.24] and here's the expansion in question so
+[20:50.32] it's possible to you have a smooth
+[20:51.92] function
+[20:52.48] on rn right now when you evaluate the
+[20:56.24] smooth function at a point
+[20:57.76] other than some given point a then
+[21:01.12] well you know it's another takes
+[21:04.48] probably take some other value but if
+[21:07.60] you were
+[21:08.16] to say use taylor's theorem you might
+[21:10.80] say that for
+[21:12.40] x nearby to a f is a linear combination
+[21:18.32] of the of the coordinate differences
+[21:22.08] okay that would be taylor's do taylor's
+[21:24.08] theorem to first order plus some higher
+[21:25.60] order corrections
+[21:26.88] but this theorem here this result here
+[21:31.60] says something a bit stronger it says
+[21:33.52] that for any
+[21:35.04] smooth function on r n it's possible to
+[21:37.76] write
+[21:38.32] that function at an arbitrary point x as
+[21:41.76] the function evaluated at a fixed point
+[21:43.92] a
+[21:44.96] plus some coordinate differences
+[21:49.36] times by instead of the derivatives of
+[21:51.28] our function you know the first order
+[21:53.12] term
+[21:54.00] in taylor's theorem some
+[21:57.04] arbitrary scene from infinity functions
+[21:58.96] h mu of x
+[22:01.20] so this is well you know mediumly
+[22:04.00] irritating
+[22:05.20] it's not completely obvious how to prove
+[22:06.88] this
+[22:09.68] so this is a bonus problem for you to
+[22:17.68] to prove this statement
+[22:24.84] um
+[22:27.92] and uh this is there's a variety of ways
+[22:31.12] to prove it
+[22:33.76] i know of at least two you could do it
+[22:35.52] by by induction on the dimension
+[22:37.76] or you could use the intermediate volume
+[22:39.28] theorem what is the mean value theorem
+[22:45.36] believe it's the mean value thing but
+[22:46.88] i'm not
+[22:49.92] have to look at the proof again now
+[22:52.00] these functions these scalar functions h
+[22:53.92] mu a
+[22:55.76] they have an explicit representation
+[22:58.32] they really are the first derivatives of
+[22:59.92] f
+[23:02.16] at x as they should be when when x is uh
+[23:05.60] a but when evaluated at a but
+[23:09.68] when h of mu is evaluated elsewhere then
+[23:12.56] it's just some smooth function
+[23:17.68] okay so this is this little lemma is
+[23:19.20] something that we're going to use in our
+[23:20.56] proof of the theorem
+[23:23.76] and we're going to apply it precisely
+[23:27.12] to the following scalar function so
+[23:29.60] we've got a candidate scalar function
+[23:30.96] that we care about
+[23:31.84] we're going to say that big f is really
+[23:33.52] f composed with psi inverse
+[23:37.04] and a is none other than the point that
+[23:40.64] we get upon
+[23:41.36] projecting p into rn
+[23:44.80] so then by star so this result star that
+[23:49.12] you've proved now
+[23:50.24] in your bonus exercises
+[23:54.72] we have for all q in our
+[23:58.32] in our chart the following
+[24:02.16] result we have the f of q is little f of
+[24:05.68] p
+[24:06.96] plus the sum
+[24:11.60] x mu composed with psi evaluated at q
+[24:15.76] minus x mu composed with psi evaluated
+[24:18.88] at p
+[24:21.60] h mu psi q
+[24:26.80] so i haven't done anything except take
+[24:29.12] the definition
+[24:31.44] i've taken this particular choice of big
+[24:34.24] f
+[24:35.52] and this particular choice of a
+[24:38.88] and substituted it in
+[24:41.92] to this equation star which is this
+[24:44.64] result from multi-variable calculus
+[24:49.92] that's all i've done and when you do
+[24:52.24] that then
+[24:54.56] you uh end up writing down
+[24:58.48] the things that i've written down in
+[25:00.00] star star
+[25:05.92] so now let's suppose that
+[25:09.84] v is an element of this vector space
+[25:12.08] that we created above so it's a
+[25:13.68] directional derivative obeying
+[25:16.00] conditions 1 and 2.
+[25:18.96] we're going to apply this operator
+[25:23.52] to the scalar function f and we're going
+[25:26.40] to use this representation star star
+[25:29.28] so let's go through it line by line see
+[25:30.80] what happens so we apply v
+[25:32.56] to f then according to star star
+[25:36.08] we'll just replace the argument f with
+[25:37.92] this representation above
+[25:44.64] so i'm literally substituting star star
+[25:46.56] in here in the argument
+[25:49.52] i'll just leave that stuff in the
+[25:50.72] brackets for the moment
+[25:57.04] so i've taken this stuff this
+[25:59.04] representation here
+[26:02.00] and just pushed it into the argument of
+[26:06.24] v there now let's
+[26:09.76] properties 1 and 2 of the operator v and
+[26:14.40] on the argument and see what comes out
+[26:21.28] so we use linearity
+[26:25.60] in the first and end leibniz property so
+[26:27.84] 1 and 2
+[26:28.64] i'm going to use them all at once
+[26:32.00] and if you use linearity then this when
+[26:34.32] applied to this argument here then you
+[26:35.84] get v of f
+[26:36.64] p which has to be zero because f of p is
+[26:39.60] a constant and v of a constant is zero
+[26:41.36] you prove that already
+[26:43.52] plus and then we use linearity to put it
+[26:46.16] over the summation sign here and the
+[26:47.68] leibniz property
+[27:03.68] and the leibniz property says we must
+[27:06.00] evaluate
+[27:07.04] when we have a product of two functions
+[27:08.96] we have to evaluate one of the point p
+[27:10.72] and then
+[27:11.20] apply v to the other and that's exactly
+[27:14.64] what we're going to do here
+[27:18.80] q at q setting q equals p or x equals to
+[27:22.16] a
+[27:23.44] and then uh we apply v to the
+[27:26.88] scalar functions h mu
+[27:31.36] but then the other part of leibniz comes
+[27:33.36] along and says
+[27:34.40] now we have to evaluate the h mu scalar
+[27:37.68] function at p
+[27:39.84] and then apply v to that coordinate
+[27:42.08] stuff
+[27:46.32] and here i will start using the einstein
+[27:48.48] summation retention
+[27:49.92] summation notation a bit more frequently
+[27:53.52] to avoid writing out the summations all
+[27:55.28] the time
+[28:02.64] now evaluating
+[28:06.56] this term in yellow here at the point x
+[28:09.44] equals u
+[28:10.40] mu at x equals a sorry or q equals p
+[28:13.60] that gives us a straight out zero so
+[28:15.76] that's gone
+[28:16.88] in fact the only term that's left upon
+[28:19.00] applying the uh
+[28:21.04] directional derivative v is this last
+[28:23.36] one here
+[28:24.64] and so after all of this
+[28:28.24] we obtain uh zero plus
+[28:31.44] zero plus the sum as mu equals one to n
+[28:36.56] um h mu composed with psi
+[28:40.08] evaluated at p times by v
+[28:44.40] of the muth coordinate of psi
+[28:51.84] and uh how can you
+[28:55.76] why is it that i've only got the the
+[28:57.60] second term there well the first one is
+[28:59.84] is zero right that's just
+[29:05.36] sorry the second term is zero
+[29:13.04] this term here is zero because it's just
+[29:14.32] a constant it's just a number and v of
+[29:15.92] any constant
+[29:16.96] is zero
+[29:20.48] and now
+[29:24.16] we exploit remember
+[29:28.24] that h mu at a is
+[29:31.60] d f d x mu evaluated at x equals a
+[29:37.28] and substituting that information in
+[29:40.32] here
+[29:43.60] tells us that v applied to f
+[29:47.60] is really the sum as mu goes from one to
+[29:50.16] n
+[29:50.88] of d we've got to substitute for big f
+[29:52.72] now which is little
+[29:54.00] f composed with psi inverse dx mu
+[29:57.28] evaluated at x equals a or otherwise
+[30:00.64] known as psi p
+[30:03.04] and then we've got some numbers that
+[30:04.56] we'll call v mu
+[30:08.88] so these blue thingies here
+[30:12.72] they are just some numbers which we call
+[30:15.84] v
+[30:16.08] mu
+[30:19.92] and this pinky stuff here
+[30:25.04] is what we get over
+[30:28.72] there but then look at this expression
+[30:32.00] here
+[30:32.64] we already named these things
+[30:36.88] x mu of f so this tells us
+[30:41.20] that v mu a v of f is none other than a
+[30:44.72] linear combination
+[30:47.12] of these x mu f's
+[30:51.60] and we're done
+[30:55.36] so we've managed to show that any
+[30:57.84] directional derivative
+[30:59.04] operator any v satisfying conditions one
+[31:02.24] and two of the leibniz property in
+[31:03.60] linearity
+[31:04.80] when applied to a completely arbitrary
+[31:06.72] scalar function on a manifold m
+[31:08.96] is really just a linear combination of
+[31:10.72] these n coordinate
+[31:12.72] uh direct coordinate vectors x mu
+[31:16.08] and the converse is obvious so
+[31:21.12] what we have shown is we've not only
+[31:23.44] shown that dimension of this vector
+[31:24.96] space vp is the hooped for
+[31:27.04] n we've also presented a basis and this
+[31:29.84] basis
+[31:30.88] really is the one that uh carries
+[31:34.48] or connects with the the the notion of v
+[31:38.00] as a directional derivative on euclidean
+[31:39.68] space so it's
+[31:41.20] it generalizes in a nice way and a
+[31:44.16] natural way
+[31:47.20] so i gave this this basis a name
+[31:52.00] uh i said it aloud but let me just write
+[31:54.08] it down
+[31:55.52] so this basis x mu of v p is called the
+[31:58.88] coordinate basis
+[32:10.16] and it's often denoted depending on what
+[32:13.44] textbook you look at
+[32:17.68] uh x mu could be denoted d
+[32:21.04] d x mu evaluated at p
+[32:24.24] you might see it as uh d mu
+[32:28.56] at p or
+[32:31.68] uh some people just omit the p
+[32:34.72] uh you never know right e mu
+[32:41.04] the the textbook you pick up will denote
+[32:43.36] this this basis
+[32:44.80] in different notation depending
+[32:48.00] so be prepared for there to be a wide
+[32:50.64] variety of notations here
+[32:52.24] for this basis now i'd just like to draw
+[32:54.88] a little picture
+[32:56.32] here's my cartoon of m again
+[33:00.08] of this of this basis what does it look
+[33:02.16] like
+[33:04.80] what are you meant to think so here's
+[33:07.84] m is uh d
+[33:11.04] d x mu at p
+[33:14.32] and you're meant to think you really are
+[33:15.68] meant to think of it as a as a vector
+[33:18.08] tangent to m of course you can't say the
+[33:20.08] words tangent
+[33:22.16] m without uh
+[33:25.36] thinking of there being an ambient space
+[33:27.84] but
+[33:28.88] you think of at each point p there's one
+[33:31.04] of these ddx mu thingies
+[33:33.20] and under under psi under this
+[33:35.52] coordinate
+[33:36.64] chart psi
+[33:40.64] these this vector operator at p
+[33:44.32] becomes literally the vector operator
+[33:46.24] that goes in the coordinate direction
+[33:48.56] the corresponding coordinate direction
+[33:50.72] in rn
+[33:53.28] so at psi p
+[33:56.40] this operator becomes d d x mu
+[34:00.16] at psi p and so
+[34:03.60] all these this is
+[34:06.72] a field of operators
+[34:09.76] and in under psi or in
+[34:13.12] the corresponding coordinate chart all
+[34:15.36] these vectors point
+[34:16.24] exactly along the coordinate direction
+[34:18.84] view
+[34:24.24] okay so that's how you meant to think of
+[34:25.52] these they're operators they eat scalar
+[34:27.68] functions on the manifold
+[34:29.20] and they correspond to at a point with
+[34:31.12] the notion of a directional derivative
+[34:32.48] in euclidean space at that point
+[34:40.64] okay suppose but is it well defined is
+[34:43.44] this notion now a good notion or have we
+[34:45.28] just
+[34:46.16] done something silly and introduce
+[34:47.60] something horribly coordinate dependent
+[34:49.84] well let's find out suppose we had
+[34:52.96] chosen a different coordinate system
+[34:59.12] or a different chart
+[35:04.72] then we would have done everything with
+[35:06.40] respect to a new or different coordinate
+[35:14.84] basis
+[35:18.16] so we're going to introduce second
+[35:19.60] coordinate basis
+[35:24.24] which we'll have to call x prime nu
+[35:30.16] but can we express our first coordinate
+[35:33.12] basis in terms of our second coordinate
+[35:34.48] basis well you betcha
+[35:35.60] right
+[35:43.60] so x mu our original coordinate basis
+[35:47.04] is a linear combination
+[35:50.88] of these new coordinate bases and what
+[35:55.12] kind of linear combination is it well
+[35:56.88] you've got to compute
+[35:58.08] the jacobian or the
+[36:01.20] derivative of the new coordinate in the
+[36:03.60] new basis with respect to the
+[36:05.28] mu coordinate in the old basis at psi p
+[36:08.64] that's the linear combination so this is
+[36:10.80] a little exercise for you just to prove
+[36:12.56] that
+[36:13.60] there so that allows you to express one
+[36:16.56] tangent vector expressed in one
+[36:17.84] coordinate basis with respect to a new
+[36:19.20] coordinate basis
+[36:30.16] so little x prime nu denotes
+[36:37.04] the newth oops
+[36:42.16] component
+[36:48.40] of psi prime composed psi inverse
+[36:51.76] now i realize that we've got big x's and
+[36:55.60] little x's in this story
+[36:57.20] and the notation may not be entirely
+[36:59.12] clear
+[37:00.72] so let me just go backwards here through
+[37:02.80] the notes and just
+[37:04.16] slightly just use
+[37:07.68] a notation that clara re update the
+[37:09.92] notation here slightly to clarify this
+[37:12.88] so we have this x mu here this is meant
+[37:16.48] to be a capital x
+[37:19.36] and this is meant to be this thing in
+[37:21.92] blue is meant to be a little x
+[37:23.92] so the thing in yellow
+[37:31.68] that's a capital
+[37:35.36] x
+[37:38.56] and the thing in blue is lowercase
+[37:52.72] so i this
+[37:56.16] potential confusion won't last for so
+[37:58.32] long
+[37:59.20] basically assume every x is lower case
+[38:01.60] unless
+[38:02.84] i put
+[38:05.44] little serifs on it
+[38:08.80] so i'm just looking through here the
+[38:09.92] notes to see if i've used any other
+[38:11.20] instances of capital x here's one other
+[38:12.88] instance of capital x here
+[38:18.08] a capital x here
+[38:21.84] capital x here
+[38:28.72] capital x here here's another capital
+[38:33.20] here's a capital and those are little
+[38:36.24] x's so assume that all x is a lower case
+[38:38.32] unless i take some time to decorate them
+[38:40.24] with serifs
+[38:42.48] in the end these kind of things
+[38:44.96] shouldn't
+[38:45.60] cause too much confusion because
+[38:48.88] often the object that you're talking
+[38:50.72] about is
+[38:54.00] not is clear from the context but and by
+[38:56.96] context i mean
+[38:57.92] the things that it acts on
+[39:03.68] okay so now we know how to express one
+[39:06.96] coordinate basis in terms of for one
+[39:09.36] chart in terms of the
+[39:10.48] the coordinates of another chart now
+[39:14.08] we're about ready
+[39:15.12] to start building up mechanics
+[39:18.56] on smooth manifolds
+[39:38.32] so we've presented a nice basis x mu
+[39:42.00] for our tangent space vp that means that
+[39:44.96] any
+[39:45.52] any tangent vector is a linear
+[39:46.96] combination of this basis or whatever
+[39:49.36] basis takes your fancy with respect to
+[39:52.00] whatever
+[39:52.48] coordinate chart takes your fancy so
+[39:55.28] always now
+[39:58.64] we can express tangent vectors in terms
+[40:01.12] of
+[40:01.68] this basis
+[40:06.80] and how do we do we if you had chosen to
+[40:11.04] use a different coordinate chart
+[40:13.76] or you you're forced by circumstance
+[40:16.88] to express your results in terms of
+[40:19.92] another coordinate chart
+[40:21.60] then you can express your tangent
+[40:23.52] vectors
+[40:25.68] in the new basis using this
+[40:28.56] transformation rule
+[40:31.04] that i wrote before
+[40:36.48] so these coefficients of our vector
+[40:39.84] v our tangent vector v
+[40:43.12] in a new basis you can find them by
+[40:46.72] multiplying them by them this
+[40:48.96] multiplying them by this jacobian factor
+[40:56.88] and this thing here is a name
+[41:03.04] this is the vector transformation law
+[41:15.52] and so now we've got a way to express
+[41:17.36] vectors in one basis with respect to
+[41:18.96] another basis we have a coordinate
+[41:20.88] effectively we have the building blocks
+[41:22.24] for a coordinate free
+[41:23.92] notion of
+[41:27.60] a tangent vector
+[41:32.32] and now we can do mechanics do a little
+[41:34.80] bit of mechanics
+[41:46.88] so to do mechanics you need to have the
+[41:48.40] notion of a trajectory of a
+[41:50.16] test particle
+[41:57.76] so a trajectory is none other than a
+[41:59.68] smooth curve
+[42:08.96] so we have a test particle moving in a
+[42:10.64] manifold m
+[42:12.88] and we're gonna we need a notion of a
+[42:14.80] smooth curve that it follows
+[42:16.40] it doesn't have to be smooth but we're
+[42:17.68] going to stick with smooth throughout
+[42:18.88] this course
+[42:20.00] is a c infinity map
+[42:23.60] c which goes from r into m
+[42:28.00] or or an interval thereof
+[42:35.36] so you could go from an interval i
+[42:45.52] into m you don't have to have an
+[42:47.28] infinitely long trajectory you could
+[42:48.56] have sort of
+[42:49.04] trajectory segments they're also smooth
+[42:52.08] curves
+[42:52.96] so the picture you should have here is
+[42:54.56] that you've got you think of this
+[42:56.48] you have the real numbers here you think
+[42:58.32] of that as time
+[43:00.16] proper time and
+[43:03.60] c is a map that takes this the flat
+[43:05.68] including one dimensional space
+[43:07.68] r and gives us an image for each point
+[43:18.08] so c is this map and then
+[43:22.56] when applied to r it gives us this
+[43:24.40] lovely trajectory
+[43:27.52] inside m like so
+[43:32.16] it's the image of c and at one point on
+[43:34.96] r
+[43:35.76] c gives us the point p itself
+[43:48.56] now here's a nice thing if you have a
+[43:50.08] curve a smooth curve in m you can
+[43:52.00] associate
+[43:52.80] to each point p on c a tangent vector
+[44:08.24] so how do you go from having a curve to
+[44:09.92] a tangent vector
+[44:13.36] well this is the way some textbooks
+[44:15.04] present tangent vectors in the first
+[44:16.48] case
+[44:18.00] so what you do is you set for
+[44:21.20] a given f a given smooth function on m
+[44:24.08] what you do is you set the
+[44:25.84] t of f this is to be our differential
+[44:27.84] directional derivative
+[44:29.12] how do you get it well what you should
+[44:30.56] do is you differentiate along the curve
+[44:33.12] the function composed
+[44:34.64] with c and then evaluated at the point p
+[44:43.92] and then it's just a chain rule away
+[44:47.04] from expressing things
+[44:51.04] in our old notation
+[44:59.52] big x mu of f
+[45:15.20] where i've introduced some notation here
+[45:22.32] the muth component of psi composed with
+[45:25.28] c
+[45:25.76] is just called x mu of t
+[45:30.00] okay so that's how we get from a curve
+[45:33.28] in a manifold we can get a derivative
+[45:35.44] directional derivative operator
+[45:51.04] now it's worth saying that this
+[45:52.16] expansion works for any coordinate basis
+[45:58.84] right
+[46:10.32] any coordinate basis
+[46:14.00] and we always find that the components
+[46:18.56] of our tangent vector
+[46:22.48] are given by d mu dx mu dt
+[46:30.32] like so
+[46:34.96] so i've said it already many times but i
+[46:36.96] may as well write it out now
+[46:38.40] again v p this vector space of
+[46:41.04] directional derivatives of being
+[46:42.72] linearity and leibniz is called
+[46:46.40] the tangent space at p
+[47:01.20] so this is just the tangent space at a
+[47:02.56] given point we can
+[47:08.72] tangent space we can also define tangent
+[47:11.20] space
+[47:12.16] for the whole manifold what is that well
+[47:14.00] we just take the union
+[47:15.28] we stick together all the tangent spaces
+[47:17.28] for every point p
+[47:18.56] on the manifold so if you take u of p
+[47:23.68] of v of p we might give that a name we
+[47:26.08] might call it tm
+[47:28.64] so stick all these vector spaces
+[47:30.00] together now what do you have
+[47:32.24] you have the full tangent space
+[47:36.72] for m
+[47:41.12] now comes uh the warning and you know
+[47:44.08] we've tried to build a vector space
+[47:47.84] you know although our manifolds we can
+[47:49.92] no longer
+[47:51.28] our smooth manifolds may not necessarily
+[47:53.68] be vector spaces we managed to associate
+[47:55.76] a vector space to each point of a smooth
+[47:57.52] manifold
+[47:59.92] and you might start wondering well you
+[48:01.84] know
+[48:03.12] looks a bit like m is a smooth is a
+[48:05.84] vector space
+[48:07.68] okay this is where you've got to be real
+[48:08.96] careful so although
+[48:11.36] the dimensions of these vector spaces
+[48:14.24] these all these different points are the
+[48:15.84] same
+[48:16.40] all right that was the theorem we proved
+[48:18.24] for all points in
+[48:19.68] m the dimensions of these vector spaces
+[48:21.84] are the same
+[48:23.76] uh although that is the true
+[48:27.04] the and and further right when two
+[48:29.84] vector spaces have the same dimension
+[48:31.04] they're isomorphic there exists an
+[48:32.48] isomorphism between them
+[48:37.84] so thus vp is the same as vq there
+[48:40.72] exists a
+[48:41.68] rotation orthogonal linear or
+[48:44.80] there is a linear transformation which
+[48:46.64] which identifies vp with vq
+[48:49.36] invertible linear transformation
+[48:52.48] these are isomorphic vector spaces for
+[48:55.60] all p
+[48:56.08] and q although there exists these
+[48:58.80] isomorphisms they're not natural
+[49:14.96] uh they're completely they're chosen uh
+[49:18.72] yeah there's no canonical way to choose
+[49:20.48] an isomorphism between two vector spaces
+[49:22.40] without extra data
+[49:25.68] there's no standard way to choose this
+[49:28.84] isomorphism
+[49:39.52] isomorphism means identification
+[49:45.36] in particular you could have two points
+[49:46.80] that are really close and the
+[49:47.76] isomorphisms or the
+[49:49.04] identifications between these two vector
+[49:50.48] spaces is wildly varying like super
+[49:52.64] wildly varying
+[49:53.92] as you change the points around the
+[49:55.76] manifold you might think that's absurd
+[49:58.00] i'm sure i could choose a smooth way of
+[49:59.60] doing it well yeah
+[50:01.44] yeah yeah you can but you need a little
+[50:03.84] bit of extra data
+[50:09.04] so this this isomorphism could be quite
+[50:11.44] wild
+[50:20.48] to get a good choice
+[50:24.16] and i won't tell you what good means yet
+[50:26.24] just put in quote marks get a good
+[50:28.16] choice
+[50:29.36] you need a bit of extra data
+[50:36.48] okay so we can think of these tangent
+[50:38.56] spaces as being there canonically
+[50:40.56] associated to each point of the manifold
+[50:43.84] we can almost think of them as being
+[50:45.76] like the same
+[50:47.04] and as soon as you can identify one
+[50:49.36] tangent vector with another then you'll
+[50:50.80] be able to add and subtract tangent
+[50:52.00] vectors at different places
+[50:53.28] but we can't do it yet we actually need
+[50:54.96] a bit more information
+[50:57.44] and that's the extra data that you get
+[50:59.20] from a metric which we'll introduce
+[51:01.20] in some later lectures but not now
+[51:04.40] for now we're going to talk about
+[51:05.36] manifolds without metric without this
+[51:07.04] extra data
+[51:10.48] okay we're almost at sort of doing a bit
+[51:12.40] of mechanics on manifolds
+[51:14.56] so a tangent field so we've talked about
+[51:16.64] tangent vectors
+[51:18.00] now we can talk about a thing called a
+[51:19.28] field now what is a tangent field well
+[51:22.56] uh it's just an assignment of tangent
+[51:26.32] vectors right you know one for each
+[51:28.08] point
+[51:33.76] i even drew a couple
+[51:47.28] so it's an assignment of a tangent
+[51:48.72] vector 1 for each point of the manifold
+[51:55.20] that's what a tangent field is dot
+[51:58.80] we can characterize tangent vectors
+[52:01.12] tangent fields
+[52:02.56] so we can you know some tangent fields
+[52:04.24] are better than others
+[52:05.60] so we say v is smooth
+[52:10.80] if for all f
+[52:14.16] for all smooth functions on our manifold
+[52:16.08] m
+[52:17.60] when you apply v to f at p
+[52:24.00] well sorry v applied to f is a c
+[52:27.20] infinity function
+[52:32.08] so it's really interesting that
+[52:33.28] smoothness of a vector field can be
+[52:35.12] defined without this extra data of a
+[52:36.96] metric
+[52:38.64] um even though we're formally not
+[52:41.84] allowed
+[52:42.64] because we we can define this notion
+[52:45.36] without requiring
+[52:47.04] uh the the without requiring that we
+[52:50.72] compare
+[52:52.16] vectors at nearby points it's kind of
+[52:53.92] interesting that we get away with it
+[52:58.84] okay
+[53:00.96] there's a little lemma we should say
+[53:04.64] so the coordinate basis
+[53:08.40] fields now we can define a coordinate
+[53:11.12] basis field
+[53:12.72] capital x of mu they're all smooth
+[53:18.00] in the sense above and the proof is
+[53:21.52] this would give you some insights
+[53:23.12] perhaps even into the definition of
+[53:24.56] smoothness
+[53:25.36] what you do is you apply this x mu to
+[53:27.52] your favorite smooth function
+[53:29.52] here's the here's how you apply it to an
+[53:32.08] arbitrary
+[53:34.08] function on the manifold and
+[53:37.36] if you allow p to be the argument
+[53:41.36] you can see that because psi is smooth f
+[53:44.24] is smooth the first derivative is smooth
+[53:46.24] and then you evaluate
+[53:47.92] then evaluated for an arbitrary p you
+[53:49.52] get a smooth function of p
+[53:57.84] cool
+[54:00.96] and thus
+[54:05.60] an arbitrary
+[54:09.12] tangent vector
+[54:13.52] is a linear combination
+[54:20.48] of x mu
+[54:24.40] sorry not thus since
+[54:27.52] an arbitrary tangent vector is a linear
+[54:29.28] combination of the x muse we proved that
+[54:31.12] in the theorem
+[54:33.60] uh an arbitrary tangent vector v is a
+[54:36.72] linear combination of these x muse then
+[54:40.40] v is smooth if and only if
+[54:45.68] its components
+[54:49.52] v mu are smooth
+[54:54.24] this gives us a nice criterion to
+[54:56.24] determine if we have a smooth
+[54:58.32] vector field so we've pretty much built
+[55:01.52] everything up now to
+[55:03.20] to talk about rudimentary form of
+[55:05.36] mechanics on manifolds
+[55:08.48] right so they make we we've got the
+[55:10.96] notion
+[55:11.52] of a tangent vector field and we've got
+[55:14.32] the notion of a smooth curve
+[55:16.32] so with it we can define
+[55:20.00] a velocity field right
+[55:28.16] a velocity field is just a is a tangent
+[55:30.80] vector
+[55:32.84] field
+[55:41.28] and the solution to the equations of
+[55:46.84] motion
+[55:52.96] is a smooth curve
+[56:02.88] c with
+[56:06.48] t the tangent vector to the curve
+[56:11.04] literally being v of f
+[56:15.20] okay that's a topic we'll get into in
+[56:16.96] the next lecture but for today
+[56:19.20] we are finished so thank you very much
+[56:21.52] for your time and i look forward to
+[56:22.72] seeing you next week
+[56:24.56] goodbye

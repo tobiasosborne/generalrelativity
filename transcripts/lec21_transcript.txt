@@ -1,0 +1,483 @@
+# General Relativity, Lecture 21: Schwarzschild metric, interior solutions
+# YouTube: https://www.youtube.com/watch?v=OcZo9kzSzJA
+# Auto-generated transcript
+
+[00:00.08] hello and welcome back to introduction
+[00:01.52] to channel relativity in today's lecture
+[00:03.92] we will continue our discussion of
+[00:06.24] solutions of einstein's field equations
+[00:08.16] that for static
+[00:09.28] and spherically symmetric space times
+[00:12.56] in particular we're going to continue
+[00:13.92] our discussion of the schwarzschild
+[00:16.08] solution and this time we're looking
+[00:19.52] for a solution of einstein's field
+[00:21.12] equations that applies to the interiors
+[00:24.24] of celestial bodies
+[00:33.36] so we're going to look for interior
+[00:34.72] solutions of
+[00:37.92] celestial bodies which are static
+[00:39.12] spherically symmetric
+[00:45.20] and what kind of material are these
+[00:48.40] celestial bodies going to be seen to be
+[00:49.84] made of
+[00:52.40] well we're going to be thinking about
+[00:53.92] stars here rather than say
+[00:59.04] planets
+[01:02.72] and for a star you go we're going to
+[01:05.44] take
+[01:05.76] as our model for a star not a solid but
+[01:08.48] a liquid right
+[01:09.76] you can imagine a star is a big hot
+[01:12.48] boiling liquid
+[01:19.52] so we're going to look for spherically
+[01:22.48] symmetric
+[01:23.20] and static solutions of i transferred
+[01:24.72] equations where the metric
+[01:26.48] sorry where the stress energy tensor
+[01:29.92] takes the following form it takes the
+[01:31.52] perfect fluid
+[01:38.84] form
+[01:44.08] because we imagine that our star is made
+[01:45.92] up is just a liquid
+[01:50.80] or gas
+[01:56.32] and can redistribute itself
+[02:01.60] where liquid the liquid comprising the
+[02:04.16] celestial object
+[02:05.20] can redistribute itself easily
+[02:09.44] and so we've got to
+[02:13.04] start by making some assumptions in
+[02:16.08] order to
+[02:17.44] be able to compare the stress energy
+[02:20.80] tensor with
+[02:22.64] the metric solution that we have already
+[02:26.08] derived on general grounds and
+[02:31.12] the observation we're going to use is
+[02:33.84] that we should
+[02:36.24] choose a direction for this u vector
+[02:49.44] and since we're talking about a static
+[02:50.96] solution here
+[02:55.36] we're going to choose that u has got a
+[02:57.52] point in the t direction
+[03:00.40] and just for convenience sake we put
+[03:01.92] minus square root f
+[03:06.00] so as a as a vector it's pointing
+[03:09.52] in directly in the t direction
+[03:13.36] and f here is exactly
+[03:17.12] the f that appears in the vacuum metric
+[03:29.28] and yeah as as i emphasized earlier the
+[03:32.40] the stress energy tends to star is meant
+[03:34.88] to model
+[03:35.84] stars hence this time for the first time
+[03:39.44] ever
+[03:40.48] the abbreviation star is possibly the
+[03:42.80] most appropriate
+[03:43.92] one for that equation
+[03:47.12] now we've got the stress energy tensor
+[03:50.16] we have the richie tensor from the
+[03:52.16] previous lecture
+[03:54.40] if a general static stroke spherically
+[03:56.32] symmetric solutions by science field
+[03:57.68] equation so we just have to equate the
+[03:59.04] two
+[04:00.64] now there's uh various
+[04:03.84] incarnations of i transfield equations
+[04:05.44] we're going to use this trace reversed
+[04:06.80] form
+[04:08.72] no we are not no not today we just apply
+[04:15.36] einstein's
+[04:19.04] uh field equations in the usual form
+[04:22.24] or the originally for this course quoted
+[04:25.20] form
+[04:27.12] you know gab equals 8 pi tab
+[04:36.08] we're going to apply them
+[04:40.32] in this way
+[04:51.36] and we will obtain three independent
+[04:54.00] equations just as we did in the vacuum
+[04:55.76] case
+[04:57.36] but to interpret these i'm going to be
+[04:59.60] talking about a different slightly
+[05:00.88] different coordinate system
+[05:05.44] so this is an exercise to just
+[05:09.60] do the substitutions of these
+[05:22.84] equations
+[05:31.04] i'll um just move this around so you can
+[05:34.24] to make something explicit here
+[05:52.80] so you just take the richie tensor that
+[05:54.32] we had before the metric tensor that we
+[05:55.92] had before
+[05:58.32] put it in the appropriate place of
+[05:59.84] einstein's field equations
+[06:01.84] and then work out the following
+[06:03.76] components now i'll define what
+[06:05.36] zero zero one one two two mean in a
+[06:07.36] second what what particular components
+[06:09.36] are being spoken of here
+[06:22.96] so we won't use exactly the same
+[06:24.56] coordinates to evaluate these components
+[06:27.84] as the vacuum coordinate system
+[06:33.68] but just a slightly rescaled version of
+[06:36.80] it
+[06:42.88] and that makes for a slightly more
+[06:44.24] compact solution
+[06:47.44] okay firstly i'll box up this equation
+[06:51.04] here
+[06:52.96] these three equations
+[06:59.52] and so we've introduced a couple of
+[07:02.16] basis co-vectors just to do
+[07:05.20] the computation above
+[07:10.32] so we've introduced a basis of four
+[07:12.96] co-vectors called e naught through three
+[07:17.92] one of them you've more or less seen
+[07:19.28] before
+[07:23.12] so these are these co vectors uh
+[07:26.80] make uh orthonormal with respect to the
+[07:29.44] metric
+[07:47.52] and using these curvatures we introduce
+[07:49.52] the following components so
+[07:54.88] this is slightly it just rescales things
+[07:57.20] and makes things slightly nicer when
+[07:58.88] writing out the
+[07:59.76] interior solution to use this particular
+[08:01.84] basis
+[08:09.44] of course we didn't have to introduce
+[08:10.88] this we could have just done thinking
+[08:12.72] done everything in the components given
+[08:14.16] to us by the the spherical
+[08:17.36] symmetric uh coordinate system but it
+[08:20.16] slightly simplifies things to do it this
+[08:21.68] way
+[08:23.44] there we go so we've got three
+[08:24.56] independent equations just as before
+[08:26.88] and the first thing to note is look at
+[08:29.20] equation one there right
+[08:31.12] uh there's no f at all in there so
+[08:34.56] that's uh that can be pretty much just
+[08:36.64] solved directly
+[08:53.36] and so rewriting equation one gives us
+[08:56.72] the following equation which relates
+[09:00.40] h and the
+[09:04.72] density rho
+[09:09.84] and you can just straightaway integrate
+[09:11.36] that right
+[09:24.00] and that's what you get
+[09:29.04] so i've introduced a constant here mr
+[09:37.04] which takes the following form it's
+[09:38.56] really an integral of the density
+[09:44.56] over the whole object
+[09:47.68] with an additional constant which comes
+[09:49.20] from the integration
+[09:51.12] but we want that this solution for a gab
+[09:54.72] is smooth
+[10:04.88] as r goes to zero so that implies that
+[10:08.64] h r has to go to one
+[10:14.16] and uh that means that a
+[10:17.20] a has to equal zero that's the only way
+[10:19.28] for that to work out
+[10:25.92] so we've already obtained a relationship
+[10:28.72] between
+[10:30.00] rho the density and h
+[10:41.36] because the slices
+[10:45.28] sigma that we used to derive our
+[10:47.36] coordinate system
+[10:49.60] two lectures ago because they have to be
+[10:51.28] space-like
+[10:56.88] then necessarily
+[11:00.00] necessarily h the coefficient of
+[11:03.12] d r squared well that better be positive
+[11:07.28] otherwise you change something space
+[11:09.04] like the timeline or at least
+[11:10.72] not space like and so that that implies
+[11:13.36] actually a condition
+[11:14.48] on r
+[11:22.24] and if rho is zero
+[11:29.44] then we can actually continue
+[11:37.60] our interior solution
+[11:42.08] age onto the vacuum
+[11:54.84] solution
+[12:03.36] and it is continued in that fashion if
+[12:06.96] at the exterior radius of the celestial
+[12:09.44] object
+[12:12.16] big m is precisely little m evaluated at
+[12:15.44] r
+[12:22.88] so we found h or we found the
+[12:25.68] relationship between h and rho to be
+[12:27.28] more precise
+[12:29.92] now we all we need is f
+[12:35.92] and to make things slightly easier we're
+[12:37.52] going to write not
+[12:39.52] f as f but we're going to represent f as
+[12:41.84] e to the 2
+[12:43.04] phi where phi is some unknown
+[12:45.12] [Music]
+[12:47.20] function that we're solving for and then
+[12:49.52] we take a look at equation two
+[12:52.24] and we substitute for our now known
+[12:54.16] value of h and
+[12:55.44] f and we will obtain an equation
+[12:59.20] for phi
+[13:19.92] and this equation phi relates r
+[13:24.00] p rho
+[13:27.52] and m
+[13:31.60] to phi
+[13:50.64] and we're not going to explicitly solve
+[13:52.00] this equation here you have to
+[13:53.68] assume an equation of state on p
+[13:57.12] and rho to get further
+[14:01.76] now uh we're not quite done yet we got
+[14:04.40] we haven't
+[14:05.28] used all our equations but before we do
+[14:07.36] that we'll just make a comment to um
+[14:09.36] interpret these these these quantities
+[14:12.16] so
+[14:12.48] in the limit the newtonian limit where
+[14:15.44] the
+[14:15.76] the pressure is much lower than the mass
+[14:18.32] energy
+[14:21.12] uh then uh
+[14:24.32] and where mr
+[14:29.04] it's much much less than r so there
+[14:32.32] isn't much mass energy around
+[14:37.84] this equation for phi reduces i mean the
+[14:40.16] reason we introduce phi is that we want
+[14:41.76] to
+[14:42.16] identify it with the gravitational
+[14:45.20] potential
+[14:48.88] so this equation for phi reduces to well
+[14:51.52] you know one that should be familiar
+[14:56.16] from newtonian theory namely the it's
+[14:58.32] essentially saying it's essentially just
+[14:59.60] possible equation for the gravitational
+[15:01.68] potential so we already knew that
+[15:04.80] from our perturbation approach to
+[15:08.96] linearized gravity and now we've learnt
+[15:12.40] it
+[15:12.88] in the context of the schwarzschild
+[15:14.32] solution
+[15:24.32] now we have one final equation we
+[15:25.76] haven't used up all our equations yet
+[15:27.68] uh and but we have related
+[15:30.80] these unknown functions f and h to
+[15:34.64] row and p now the thing about general
+[15:37.44] relativity is you don't just
+[15:39.44] specify row and p and then you get f and
+[15:42.08] h and then that's it
+[15:43.04] i mean there's this complex
+[15:44.32] interrelationship between this
+[15:46.56] the coordinate system the distribution
+[15:48.16] of stress energy and the solution to i
+[15:50.40] transferred equations and these things
+[15:53.04] influence each other in feedback loop
+[15:57.68] and we're going to see that in
+[16:01.12] when we substitute
+[16:04.32] the two equations which we've derived
+[16:06.32] into the third
+[16:10.32] we'll have to have we come up with a
+[16:11.36] consistency or an extra
+[16:13.68] extra consistency condition
+[16:21.52] this third equation is a bright pain to
+[16:23.28] derive
+[16:30.48] there's a lot of algebra going on here
+[16:36.00] and it relates the derivative of the
+[16:38.32] pressure
+[16:40.40] the density and also
+[16:46.56] the distribution of mass
+[16:49.60] energy
+[16:55.68] and this is an equation
+[16:59.12] that determines hydrostatic equilibrium
+[17:01.20] for the object that we're
+[17:03.12] under consideration and it has a name
+[17:05.12] it's the
+[17:06.24] tolman oppenheimer volkov equation
+[17:20.88] of hydrostatic equilibrium
+[17:32.40] so this equation has to be satisfied in
+[17:34.24] addition to the other two
+[17:36.32] that determine in a sense
+[17:39.52] f and h
+[17:44.96] once you've uh gone ahead and
+[17:49.36] substituted your pressure-less density
+[17:51.92] relationship
+[17:54.00] and you've satisfied all these equations
+[17:55.60] you'll have the metric
+[18:13.60] and the metric will take the following
+[18:15.68] form
+[18:24.32] it is d s squared is minus e to the two
+[18:27.68] phi
+[18:28.72] d t squared plus one minus
+[18:32.32] two little m r over r minus one
+[18:35.84] t r squared plus r squared d big omega
+[18:40.84] squared
+[18:58.16] and
+[19:01.60] little m of r is as i defined it above
+[19:11.12] oops
+[19:15.12] so this is the general form of a
+[19:18.56] solution
+[19:19.36] for a spherically symmetric static
+[19:23.68] liquid body celestial body
+[19:26.96] we could spend a considerable amount of
+[19:29.12] time
+[19:30.16] discussing the stability of various
+[19:32.88] celestial bodies and
+[19:34.48] getting into some very fascinating and
+[19:36.16] beautiful topics
+[19:38.40] and eventually end up at the topics of
+[19:40.72] neutron stars and black holes and so on
+[19:43.12] we won't pursue that in this course
+[19:45.76] although
+[19:46.24] this is a wonderful advanced topic that
+[19:48.08] you can follow up on
+[19:50.56] instead in the remaining part of the
+[19:53.04] course we're going to focus on
+[19:54.88] some of the key predictions of general
+[19:57.12] relativity
+[19:58.64] and uh deriving the the form of these
+[20:02.64] predictions
+[20:04.08] and the the most important predictions
+[20:06.56] that we'll focus on
+[20:07.76] in the next lecture is the the motions
+[20:10.32] of test bodies
+[20:11.60] in particular will also focus on the
+[20:13.92] motion of light
+[20:15.04] in the the presence of static
+[20:17.20] spherically symmetric solutions so that
+[20:20.48] neatly brings us to the topic of
+[20:24.24] geodesics
+[20:27.68] of the schwarzschild solution
+[20:38.72] uh and we're gonna make our life simple
+[20:40.16] we're gonna derive the motion of
+[20:42.16] test bodies in the exterior region right
+[20:44.72] it doesn't really make sense to follow
+[20:46.88] the motion of a test body as it plunges
+[20:48.64] into a star
+[20:54.64] because you kind of know what's going to
+[20:56.00] happen to the test body as it reaches
+[20:57.68] the start
+[21:02.32] but it is kind of interesting to think
+[21:04.40] about a test body
+[21:05.68] dropping into a black hole
+[21:09.36] but we won't do that here
+[21:20.96] so we're going to derive the geodesics
+[21:22.56] in this in the following lectures
+[21:24.40] for test bodies and also for light rays
+[21:26.40] in the exterior region
+[21:41.52] and that's where this the radial
+[21:44.00] coefficient is bigger than 2m
+[21:50.80] now this our life is made a lot easier
+[21:53.44] by the fact that the
+[21:54.56] scratch short solution is in fact
+[21:56.88] rotation rotationally
+[21:57.60] invariant so if you think about a
+[22:00.72] celestial body and then a test body
+[22:04.24] moving to past
+[22:08.08] a spherically symmetric test body then
+[22:11.20] you can already hope i see that you know
+[22:12.80] no matter how
+[22:14.48] the test body moves you could exploit
+[22:16.80] the symmetries
+[22:18.64] of the solution to move the motion of
+[22:22.64] the test body onto
+[22:24.56] an equatorial plane we'll get to that uh
+[22:27.04] but before that there are in fact
+[22:28.80] other symmetries that the shroud
+[22:31.28] solution possesses
+[22:32.64] which greatly simplifies the derivation
+[22:35.60] of geodesics
+[22:37.12] and in fact there's another one uh not
+[22:39.76] related to
+[22:40.56] rotation invariance uh that i'd like to
+[22:44.08] highlight now and this is true actually
+[22:45.68] for any
+[22:46.48] uh killing vector field
+[22:50.88] so here's a little proposition very very
+[22:52.64] easy to prove actually
+[22:54.56] so imagine we have a killing vector
+[22:57.84] field and we certainly have that in
+[22:59.76] our case here
+[23:02.80] and suppose you have a geodesic
+[23:10.48] uh and since it's a geodesic it has a
+[23:12.56] tangent
+[23:15.92] ua then there is a constant of the
+[23:19.52] motion you can derive
+[23:22.72] namely psi a contracted with you a
+[23:27.04] is constant
+[23:30.16] along the geodesic
+[23:34.84] and this is really simple
+[23:37.04] really easy to prove we just
+[23:40.48] apply the covariant derivative
+[23:44.88] to this quantity
+[23:51.04] i mean i'll write it all the way around
+[24:00.00] and apply the leibniz rule and then
+[24:02.64] we'll almost be done
+[24:06.96] so note that the quantity in the
+[24:08.24] question is is a scalar right
+[24:10.56] that psi a contracted with ui is a
+[24:12.32] scalar
+[24:14.80] well uh let's look at the two terms
+[24:16.80] after applying the leibniz rule
+[24:18.64] well the first one
+[24:21.76] this one's actually zero
+[24:25.04] because the the tensor uaub
+[24:28.56] contracted against delta b
+[24:32.16] x i b uh delta b psi
+[24:35.20] delta a psi b that's b right
+[24:40.32] delta b psi a i apologize
+[24:44.32] that quantity there has got to be zero
+[24:46.00] because of killing's equation
+[24:58.24] because this is a killing vector
+[25:02.00] it obeys this equation here and the
+[25:04.96] thing
+[25:05.68] u a u b is symmetric and therefore it's
+[25:08.40] gonna be zero
+[25:11.04] and the second thing is zero because of
+[25:12.48] all that's a geodesic that's just the
+[25:14.16] geodesic equation
+[25:21.52] so we've just learned that the
+[25:23.84] derivative
+[25:24.64] along the geodesic of xia contracted
+[25:27.36] with ua is
+[25:28.24] constant zero
+[25:36.88] so that symmetry will turn out to be
+[25:38.16] quite handy when we are trying to derive
+[25:39.84] the geodesics
+[25:41.20] or test bodies and light rays for the
+[25:43.28] spharzide solution
+[25:46.48] another symmetry which i've already
+[25:49.04] alluded to
+[25:53.76] is parody reflection
+[25:57.28] also rotation in variance
+[26:02.40] where if you you can send theta to pi
+[26:05.04] minus theta
+[26:08.88] and that'll be handy because it allows
+[26:11.36] us
+[26:12.00] to rotate a solution initially in
+[26:16.72] uh some non-equatorial plane into the
+[26:19.12] equatorial plane
+[26:46.48] so if the initial position and tangent
+[26:48.96] vector
+[26:50.84] lie in the equatorial plane
+[27:01.44] theta equals pi over two then so must
+[27:04.72] hold you dizzy
+[27:21.60] and what that means is that you can just
+[27:23.52] take one rotation and move the geodesic
+[27:26.08] motion of any test body into the
+[27:28.80] equatorial plane
+[27:58.64] cool all right that's it
+[28:02.56] in terms of a general comment
+[28:06.32] about the symmetries of the
+[28:07.68] schwarzschild solution what it means
+[28:09.60] for geodesics in the coming lectures
+[28:13.20] we will derive the form of the geodesic
+[28:15.76] and
+[28:16.64] the motion of test bodies in the
+[28:18.32] presence of the schwarzschild solution
+[28:20.64] and then we will discuss and relate this
+[28:22.96] to key predict
+[28:24.24] predictions of general relativity that
+[28:25.92] have been since confirmed
+[28:28.48] and then that really will draw us to the
+[28:30.96] end and conclusion
+[28:32.32] of this course but that's that's it for
+[28:35.12] now
+[28:35.60] um thank you very much and i'll see you
+[28:37.68] next time
+[28:38.88] goodbye

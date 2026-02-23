@@ -1,0 +1,1232 @@
+# General Relativity, Lecture 12: Einstein's field equations
+# YouTube: https://www.youtube.com/watch?v=zN-SET295KY
+# Auto-generated transcript
+
+[00:00.40] hello and welcome back to introduction
+[00:01.92] to general relativity
+[00:03.52] today we're going to exploit all the
+[00:05.60] hard work that we've invested
+[00:07.04] in learning the mathematics of
+[00:08.40] differential geometry to finally
+[00:10.72] discuss general relativity
+[00:14.24] before we get to the full formulation of
+[00:16.80] einstein's theory of general relativity
+[00:18.56] we'll have to make a couple of comments
+[00:20.40] on special relativity and the
+[00:23.36] consequences
+[00:24.72] of the principles of the equivalence
+[00:27.12] principle and mark's principle that we
+[00:29.36] are adopting in formulating
+[00:31.12] general relativity the first comment to
+[00:33.84] make is that the equivalence principle
+[00:35.20] itself implies
+[00:36.24] that it's impossible in general to set
+[00:38.24] up a family of inertial observers to
+[00:40.32] measure the gravitational force
+[00:43.36] we can't and the problem is we just
+[00:44.96] can't insulate an observer
+[00:46.96] from gravity any observer
+[00:50.08] according to the equivalence principle
+[00:51.68] will move in exactly the same way as a
+[00:53.52] test body
+[00:54.32] and there is no natural background
+[00:56.24] motion to compare with
+[00:57.52] a test body so that's the the main
+[01:00.72] problem
+[01:01.44] with thinking of gravity as a force
+[01:03.76] within general relativity
+[01:06.80] so this is actually in a fundamental
+[01:09.12] hypothesis
+[01:10.00] in general relativity and what i'll do
+[01:12.80] is i'll
+[01:15.20] write this out a little bit more
+[01:16.32] explicitly and name
+[01:22.24] the fundamental hypotheses of hypothesis
+[01:25.52] of general relativity
+[01:36.32] explicitly so let's sort of review
+[01:41.84] general relativity as we've somewhat
+[01:43.44] vaguely formulated it
+[01:44.88] built on the equivalence principle
+[01:46.16] mark's principle and now
+[01:48.24] make it much more precise indeed this is
+[01:50.24] the formulation that we're going to be
+[01:52.64] uh carrying forward in our discussion of
+[01:55.36] einstein's
+[01:56.08] general theory of relativity so the
+[01:58.32] fundamental hypothesis of general
+[01:59.60] relativity reads
+[02:02.16] that space time
+[02:05.84] is a manifold
+[02:12.96] m
+[02:17.12] on which is defined
+[02:22.00] a lawrence metric g
+[02:28.56] we'll say gab to emphasize the fact that
+[02:30.88] it's got
+[02:31.76] two tensorial components and further
+[02:37.12] you know before i see the further
+[02:41.60] i should point out as a side remark
+[02:46.08] that the manifold
+[02:49.52] m can be a lot
+[02:52.64] more general than just minkowski space
+[03:07.92] so incorporated into the fundamental
+[03:10.40] hypothesis of general relativity is the
+[03:12.00] fact that
+[03:12.48] spacetime itself need no longer be flat
+[03:17.68] in fact it can be topologically
+[03:19.36] different from minkowski
+[03:21.44] space
+[03:25.20] so that's the first part of the
+[03:26.56] fundamental hypothesis of
+[03:28.80] general relativity but there's more to
+[03:32.08] it there's also
+[03:35.44] the fact that
+[03:40.88] space-time is not necessarily fat flat
+[03:46.72] you'd have topologically different
+[03:48.40] manifolds but they could be still flat
+[03:51.36] but here it's allowed in the fundamental
+[03:53.60] hypothesis of general relativity for
+[03:55.04] space-time
+[03:56.24] to be not flat so not necessarily
+[04:00.16] flat
+[04:05.60] and also the world lines and this is
+[04:08.32] where we incorporate the
+[04:09.76] equivalence principle
+[04:16.48] of freely falling bodies
+[04:25.68] are geodesics
+[04:34.72] of the curved
+[04:38.72] metric g
+[04:45.04] so this is going to be the fundamental
+[04:48.24] hypothesis of general relativity for us
+[04:50.00] going forward
+[04:55.76] and we are going to build general
+[04:58.32] relativity on this fundamental
+[04:59.60] hypothesis
+[05:00.40] we'll see that we're not yet quite there
+[05:01.84] yet we need a way to
+[05:03.52] build equations of motions equations of
+[05:06.64] motion
+[05:07.20] for various physical systems we'll need
+[05:10.08] principles to guide us in selecting
+[05:11.68] these equations of motion well further
+[05:13.36] we also need to
+[05:16.56] provide a quantitative way to describe
+[05:18.96] the equation of motion of spacetime
+[05:20.40] itself
+[05:20.88] and so that will require the addition of
+[05:23.20] mark's principle
+[05:24.80] anyway for the next part of this lecture
+[05:26.32] we're going to start building on this
+[05:27.52] fundamental hypothesis
+[05:29.84] now it's worth saying that the
+[05:33.60] in certain situations it is sort of
+[05:35.68] possible to
+[05:36.72] measure the gravitational force
+[05:42.64] and that's that's something that you you
+[05:44.16] know
+[05:46.16] we should comment on explicitly
+[05:52.88] so the cases of time translation
+[06:00.32] symmetry so if for some reason you have
+[06:03.28] a setup where your system is invariant
+[06:05.92] under time translations
+[06:08.80] or your background you have somehow a
+[06:10.80] strong background that's invariant under
+[06:12.40] time translations
+[06:14.72] one can define a preferred setup
+[06:25.68] background
+[06:29.60] family of observers of inertial
+[06:32.84] observers
+[06:36.72] and you can therefore thereby you know
+[06:39.60] sort of
+[06:40.00] measure a gravitational
+[06:44.00] force but with only respect to this this
+[06:47.04] family
+[06:58.00] so it's possible and you know what
+[06:59.60] situation are we talking about well
+[07:01.12] we're talking about
+[07:02.80] here on earth so we have one heavenly
+[07:05.68] body the earth
+[07:06.88] where the this heavenly body is in
+[07:10.40] you know in absence of the rest of the
+[07:11.92] universe it's it generates a
+[07:14.00] gravitational field
+[07:15.36] that is invariant under time
+[07:16.96] translations then we can set up a
+[07:18.80] preferred set of background
+[07:20.64] observers with respect to which we can
+[07:22.48] measure the gravitational force
+[07:24.64] of the earth and
+[07:28.16] and then we're all happy and so that's
+[07:30.88] that does apply
+[07:31.84] in this very particular situation of one
+[07:34.08] one heavenly body
+[07:35.52] however the minute we have two or even
+[07:37.76] three in motion
+[07:38.96] then the system is no longer invariant
+[07:40.72] under time translations
+[07:42.40] and it's impossible to set up a
+[07:44.56] background preferred background
+[07:46.72] set of observers to measure a
+[07:48.16] gravitational force with respect to
+[07:53.44] so although the fundamental hypothesis
+[07:56.80] of general relativity pretty much
+[07:58.48] excludes uh
+[08:00.08] setting up a um preferred background
+[08:02.48] observers
+[08:03.92] um there are you know we can still
+[08:06.96] measure things
+[08:07.92] to do with gravity uh so
+[08:12.96] i'm gonna write that down we know why we
+[08:15.60] cannot measure the gravitational
+[08:21.28] force directly
+[08:31.28] so while we can't measure the
+[08:32.32] gravitational force in general
+[08:33.52] situations we can always
+[08:35.92] measure the relative acceleration of
+[08:38.00] nearby geodesics
+[08:54.08] that's well defined
+[08:58.64] and hence we can speak of tidal forces
+[09:06.72] meaningfully in general relativity
+[09:13.20] so that's an important observation in
+[09:14.56] fact it's a critical observation when it
+[09:16.24] comes to formulating einstein's field
+[09:17.84] equations
+[09:20.88] so given this fundamental hypothesis of
+[09:22.64] general relativity how do we actually
+[09:24.24] determine
+[09:25.20] uh the laws of physics in general
+[09:27.04] relativity
+[09:29.44] well there's two key principles that you
+[09:32.80] can employ
+[09:38.32] to determine the laws of physics
+[09:48.08] i mean we don't get to we don't have to
+[09:49.76] do everything in a vacuum we can really
+[09:52.00] uh take guidance from two key principles
+[09:55.52] i mean this isn't
+[09:56.56] these are not these two principles are
+[09:58.32] not like 100 mathematically rigorously
+[10:00.56] well defined
+[10:01.44] but they are so helpful as guiding
+[10:03.92] principles that you pretty much
+[10:05.36] um can uniquely identify the correct
+[10:09.04] laws of physics for the situation
+[10:10.72] they're interested in
+[10:12.56] so what's the key principles of the
+[10:14.24] first one is the principle of
+[10:16.56] of general covariance that's the first
+[10:19.28] core principle
+[10:22.08] that uh we're gonna that one can
+[10:25.52] can and should use to determine
+[10:27.60] equations of motion
+[10:30.08] laws of physics in general relativity
+[10:32.96] and the principle of general covariance
+[10:35.04] says that only the metric
+[10:38.24] basically is allowed to appear
+[10:41.36] as a uh
+[10:45.04] representing the space-time geometry
+[10:50.00] in equations of motion
+[11:01.84] so only the metric and quantities
+[11:03.44] derivable from
+[11:05.36] the metric
+[11:10.40] may appear oh
+[11:15.68] are the only
+[11:21.36] space-time quantities
+[11:29.12] that can appear in laws of physics
+[11:35.52] laws meaning equations right
+[11:44.48] so if you want to formulate a law of
+[11:45.84] physics and you want to make reference
+[11:48.00] to the
+[11:48.64] the geometry it's based on geometry
+[11:50.72] somehow like i don't know in terms of
+[11:52.40] position or something
+[11:53.76] then you better not be referring to
+[11:56.16] anything other than
+[11:57.68] a quantity derivable from the metrics so
+[12:00.48] in particular you're not allowed to
+[12:02.08] refer to say
+[12:02.96] the position in some coordinate system
+[12:05.20] that's already been
+[12:07.20] captured earlier qualitatively in the
+[12:09.44] principle
+[12:14.16] in our discussion of the core principles
+[12:17.12] underlying special relativity for
+[12:18.56] example
+[12:21.20] now that's not quite enough to help us
+[12:23.44] in formulating the laws of physics in
+[12:25.60] in in uh general relativity but here's
+[12:28.48] the second principle that more or less
+[12:30.00] does it for us
+[12:31.28] and that says that the equations of
+[12:32.88] physics
+[12:36.56] you know if you kind of come up with
+[12:37.52] some equations of physics in gr
+[12:39.76] they must reduce
+[12:44.24] to their special relativity versions
+[12:50.32] for the case where g a b
+[12:53.68] is flat right
+[12:57.04] that seems like a pretty safe
+[13:00.08] principle
+[13:05.36] because if that weren't true then you
+[13:07.44] know we would have
+[13:08.96] uh we wouldn't accept special relativity
+[13:12.88] as somehow a limiting case of general
+[13:14.24] relativity
+[13:16.64] so we have to point out that these two
+[13:18.08] principles are somewhat imprecise
+[13:20.80] and they don't actually uniquely define
+[13:23.04] the laws of physics or determine the
+[13:24.40] laws of physics
+[13:25.44] but they are very very helpful as
+[13:27.68] guiding principles
+[13:29.12] for identifying candidate laws or
+[13:31.28] natural
+[13:32.16] physical laws
+[13:36.32] all right so according to these
+[13:37.76] principles
+[13:39.44] let's start let's get started in
+[13:41.04] identifying the laws of physics for the
+[13:42.88] motion of
+[13:43.60] free particles
+[13:56.88] so we've got um
+[14:06.32] we're going to continue
+[14:11.04] to represent
+[14:14.56] physical quantities by tensorial objects
+[14:18.00] just as we do in special relativity
+[14:27.60] so the velocity is a vector
+[14:32.24] stress energy is a tensor that kind of
+[14:42.84] thing
+[14:45.60] so here's a couple of bullet points that
+[14:47.44] will
+[14:52.56] summarizing this statement so for
+[14:54.88] example particle motion
+[14:57.20] is represented by
+[15:00.24] time-like curves
+[15:12.48] uh what's another principle the four
+[15:14.64] velocity of a particle will continue to
+[15:16.64] be represented as a tangent vector
+[15:18.96] to a world line
+[15:49.76] and unit means we're measuring it
+[15:54.40] with respect to the metric
+[15:59.68] so these kind of quantities don't we
+[16:01.84] don't posit new quantities to
+[16:03.68] to define old concepts but we do have to
+[16:07.36] update the way the equations of motions
+[16:09.52] or amend the equations of motion
+[16:16.56] so you know we're no longer doing
+[16:18.24] newton's laws here so free
+[16:21.68] we have to update the equations of
+[16:22.96] motion and how do we update the
+[16:24.16] equations of motion well
+[16:25.52] for free particle
+[16:29.60] i'll just before i get to jump into that
+[16:46.96] so while we don't change the tensorial
+[16:49.20] quantities representing
+[16:54.40] physical properties and special
+[16:55.52] relativity we do update the equations of
+[16:57.28] motion
+[16:59.92] and in particular
+[17:04.24] free particle
+[17:08.24] motion or the free particle equation of
+[17:10.96] motion becomes the geodesic equation
+[17:24.72] all right that's the first updated
+[17:28.40] law of physics so in the absence of any
+[17:31.68] exterior forces
+[17:33.52] external forces a free particle will
+[17:35.84] move along a geodesic as per the
+[17:37.76] fundamental hypothesis of general
+[17:40.00] relativity
+[17:41.20] and we even have an equation of motion
+[17:43.20] determining a geodesic now
+[17:45.12] and that is determined with respect to
+[17:46.48] the genera the derivative operator delta
+[17:48.56] determined by the metric g
+[18:03.76] and so we can now define
+[18:06.88] the acceleration
+[18:16.00] analogously
+[18:25.92] so the acceleration is given by
+[18:29.12] well the change along the world line of
+[18:32.16] the velocity
+[18:37.60] so if it's uh which is zero right for
+[18:40.48] something in in a
+[18:42.96] a free particle
+[18:46.80] and when it's not zero then we say that
+[18:49.68] a force is acting
+[18:50.72] on the test particle
+[19:03.84] f what's the force that acts on the
+[19:05.44] particle well it's the force is just
+[19:07.68] m the initial mass of the particle
+[19:11.36] the rest mass of the particle
+[19:14.72] multiplied by the acceleration
+[19:33.68] so it's not new it's not newton's second
+[19:35.76] law but you know
+[19:37.68] looks pretty close we've just updated
+[19:41.92] the notion of acceleration to be defined
+[19:44.64] in terms of the derivative
+[19:45.84] operator associated to a metric
+[19:49.92] accordingly we also define the four
+[19:52.80] momentum
+[20:01.60] of the particle
+[20:09.76] how do we define that well you just take
+[20:13.84] the rest mass and multiplied by
+[20:17.04] the unit vector representing
+[20:20.80] the tangent to the geodesic that the
+[20:24.32] particle is following
+[20:28.16] if it's freely moving
+[20:33.68] and now we've got the four momentum we
+[20:36.08] can define the energy but now you have
+[20:37.68] to be a little bit careful
+[20:38.80] the energy as it'll turn out uh
+[20:42.64] cannot be defined globally this is a
+[20:45.44] really
+[20:46.84] important
+[20:49.36] property of general relativity but we
+[20:50.88] can certainly define the energy locally
+[20:52.48] so the energy
+[20:54.24] now who determines the energy well an
+[20:56.00] observer determines the energy
+[21:05.36] so the observer who can determine
+[21:08.72] to determine the energy of the particles
+[21:10.48] to be present
+[21:12.96] at the particle's world line right
+[21:16.16] we'll see i'll explain more in a second
+[21:37.36] so the observer who's going to try and
+[21:39.68] define the energy
+[21:41.04] will has to be present at the
+[21:44.48] an event on the particle's world line
+[21:48.24] and that that observer will determine
+[21:50.00] the energy to be
+[21:51.52] minus the momentum of the particle
+[21:58.08] the scalar product of the momentum with
+[22:00.48] the
+[22:01.12] velocity of the observer
+[22:04.80] so of course an observer who moves with
+[22:06.72] the test particle will say that the
+[22:08.00] particle has no energy
+[22:09.84] well apart from the rest mass synergy
+[22:29.92] so now why can't we define energy
+[22:33.28] for a particle somewhere else not
+[22:35.52] present on the world line
+[22:37.84] or on the observer's world line well
+[22:40.08] because space-time is curved
+[22:42.40] there's the parallel transport is path
+[22:45.12] dependent
+[22:45.92] so there's no notion of a natural family
+[22:47.84] of inertial observers
+[22:49.20] and a given observer cannot in general
+[22:51.44] define the energy of a distant particle
+[23:13.84] because you see you need two vectorial
+[23:15.52] quantities to define the energy you need
+[23:17.44] to multiply the momentum of the particle
+[23:19.36] and the velocity of the observer or take
+[23:21.68] the scalar product
+[23:27.36] and because in a general curve manifold
+[23:29.68] parallel transport
+[23:30.96] is just not it is just path depending
+[23:42.72] so you might try and you know formulate
+[23:45.60] a protocol whereby you measure the
+[23:46.88] energy of distant particles by only
+[23:48.40] moving along certain para
+[23:50.72] world lines but
+[23:54.24] in the general curve manifold there is
+[23:55.84] no distinguished
+[23:57.92] preferred background frame of inertial
+[23:59.92] observers so there is no real way to
+[24:01.76] just to distinguish a preferred parallel
+[24:04.40] transport path to measure the energies
+[24:06.16] of distant particles
+[24:09.28] so in this summary of the
+[24:13.92] kinematics of single particles we've
+[24:17.04] already witnessed
+[24:18.24] uh the application of
+[24:21.52] the two principles determining the laws
+[24:23.76] of physics and general relativity
+[24:26.00] the metric we've the metric does appear
+[24:28.64] in these expressions certainly
+[24:30.00] implicitly in the definition of the
+[24:32.16] derivative operator
+[24:33.52] and also in scalar products between the
+[24:35.76] momentum and the observer
+[24:37.76] for velocities and momenta and
+[24:40.80] also it's pretty clear i hope right that
+[24:42.96] these these equations are motion reduced
+[24:44.64] to their special relativity versions
+[24:47.12] just replace the derivative operator
+[24:49.84] determined by the metric by the one
+[24:51.12] determined by the flat matrix
+[24:54.24] and so you can see
+[24:57.28] that in applying these principles
+[25:00.56] we're somehow exploiting
+[25:04.08] a following sort of min what we might
+[25:06.00] call minimal substitution rules
+[25:11.36] and we can you know make this a bit more
+[25:13.04] explicit
+[25:15.28] by saying that general relativity
+[25:17.12] friendly
+[25:22.72] equations of motion how do you how might
+[25:24.88] you find them well there's a kind of
+[25:26.84] uh
+[25:32.24] let's say usually not always right
+[25:49.68] they can usually be found by applying
+[25:51.28] the following minimal substitution rules
+[25:53.44] so in special relativity the
+[25:56.96] flat metric eta a b gets mapped in
+[25:59.76] general relativity
+[26:02.56] to just a general metric gab and in
+[26:05.44] special relativity
+[26:06.80] when you have a derivative operator just
+[26:09.12] the unusual derivative operator in
+[26:10.96] general relativity you replace that with
+[26:12.72] the covariance derivative
+[26:14.08] determined by the metric
+[26:18.72] and in this way we can build up a whole
+[26:21.12] bunch of
+[26:23.04] hypothesis equations of motion for
+[26:26.48] field theories and and beyond
+[26:29.60] so let's give some examples of applying
+[26:32.16] these minimal substitute substitution
+[26:34.24] rules
+[26:37.04] well one of them is this is going to be
+[26:40.72] simpler than the field theory that will
+[26:43.52] occupy us for the rest of this course
+[26:47.04] because the field theory of principle
+[26:48.96] interest and general relativity is that
+[26:50.40] of
+[26:50.72] fluid dynamics some pretty complicated
+[26:53.04] field theories in several fields
+[26:54.56] involved in
+[26:55.20] formulating fluid mechanics before we
+[26:56.64] even do fluid mechanics let's let's
+[26:59.20] experiment with a far simpler field
+[27:01.60] theory
+[27:02.24] namely scalar field theory circle known
+[27:05.20] as the
+[27:05.68] klein gordon field let's apply these
+[27:09.12] minimal substitution rules to see what
+[27:10.64] we get
+[27:11.36] see what kinds of equations of motion we
+[27:12.96] get
+[27:14.64] so in special relativity the klein
+[27:16.32] gordon field is determined by a lagrange
+[27:18.84] density
+[27:21.44] you don't need to worry about the grunge
+[27:22.72] densities if you don't know about
+[27:23.84] lagrange densities yet
+[27:26.08] because i'll write out the equation of
+[27:27.36] motion anyway
+[27:31.20] so by varying this lagrange density you
+[27:32.88] get the equation of motion
+[27:35.36] that's the thing that we're going to
+[27:36.32] modify right now
+[27:41.12] you get the equation of motion delta a
+[27:42.96] delta a
+[27:44.24] phi minus m squared phi is zero so
+[27:47.28] that's the klein gordon field
+[27:49.04] in special relativity plays a hugely
+[27:51.04] important role in
+[27:52.08] in quantum field theory as well as in
+[27:54.32] classical field theory
+[27:56.08] now how might you get the general
+[27:57.20] relativity version well in general
+[27:59.28] relativity remember what we have to do
+[28:00.80] we have to replace
+[28:02.48] the delta a's with the big covariance
+[28:05.44] derivatives
+[28:06.24] so just looking at that equation of
+[28:07.76] motion the first thing you might guess
+[28:09.52] and you're welcome to guess it
+[28:13.12] is just to replace deltas with
+[28:16.56] covariance derivatives and there you go
+[28:18.08] that's that's
+[28:19.84] one perfectly well behaved
+[28:23.36] general
+[28:26.72] general relativity friendly formulation
+[28:28.88] of scalar field theory
+[28:34.32] the stress energy tensor for this
+[28:36.48] particular
+[28:39.44] scalar field theory a couple of ways you
+[28:41.92] can argue what the stress energy tensor
+[28:46.08] is one of them if you know anything
+[28:48.24] about classical field theory is to apply
+[28:50.16] notice theorem
+[28:55.12] with respect to the symmetries of
+[28:56.84] translation
+[29:00.88] or you can just believe me it's also
+[29:02.96] fine
+[29:11.12] another clever way to get the stress
+[29:12.64] energy tensor is to vary the metric
+[29:15.60] of the action it'll get you the stress
+[29:18.00] energy tensor as well
+[29:22.00] there are some differences between these
+[29:23.36] ways of getting the stress energy tensor
+[29:24.72] but for here
+[29:25.52] we end up with the following
+[29:36.32] equation of conservation equation i'll
+[29:38.48] say conservation but i'm going to argue
+[29:40.00] later it's not actually a conservation
+[29:41.36] equation you end up with the following
+[29:43.52] equation
+[29:46.96] of motion for the stressed energy tensor
+[29:49.12] of the klein gordon field
+[29:51.44] namely that the uh divergence
+[29:55.52] with respect to a derivative operator
+[29:57.44] determined by the manifold is zero
+[30:02.00] now it's important to note
+[30:06.48] that this is not the only generalization
+[30:20.84] possible
+[30:25.20] there are in fact other generalizations
+[30:27.28] that you could very
+[30:28.48] uh you could very meaningfully add to
+[30:31.60] the equation of motion
+[30:35.44] for example you could
+[30:40.88] add the term to the equation of motion
+[30:43.68] which is
+[30:44.40] some constant alpha
+[30:47.44] times r the richie scalar times phi
+[30:57.28] that term certainly reduces to its
+[30:59.28] special relativity version in
+[31:01.36] the case where the metric is flat r
+[31:03.60] vanishes
+[31:05.20] and it contains only the metric
+[31:08.24] in a nicely contracted way so that's
+[31:11.52] a possible term you could add it's not
+[31:13.36] the minimal substitution
+[31:15.52] but it is a possible substitution so
+[31:18.24] there
+[31:18.56] are and sometimes these these added
+[31:21.52] terms
+[31:22.64] it is possible to argue that they are in
+[31:24.24] fact more appropriate to describe
+[31:26.24] certain physical situations
+[31:29.36] okay so that's a kind of warm up the the
+[31:31.12] klein gordon field is a kind of warm-up
+[31:32.64] problem
+[31:33.68] for the field theory that is of
+[31:36.88] primary importance in in general
+[31:38.64] relativity in particular in cosmology
+[31:41.04] namely that of
+[31:44.24] a perfect fluid
+[31:51.44] so the perfect fluid
+[31:55.44] is a field theory it's a field theory
+[31:56.96] with a velocity field a pressure field
+[31:58.80] and a density field
+[32:00.80] so there's lots of fields interacting
+[32:17.76] it pertains to a continuous distribution
+[32:19.76] of matter
+[32:25.92] and the way we destroy describe the
+[32:29.44] state of this this matter
+[32:31.12] is with the stress energy tensor so if
+[32:34.32] you remember
+[32:34.96] the discussion of the stress energy
+[32:36.32] tensor several lectures ago
+[32:38.64] um it describes the density of positions
+[32:42.40] and
+[32:42.80] momentum of all the particles that make
+[32:44.72] up the matter
+[32:48.64] and the stress energy tensor of
+[32:52.16] a perfect fluid has a certain form and
+[32:54.08] it's this form here
+[33:00.64] and you can argue that this is the
+[33:02.16] correct form by
+[33:03.76] taking the continuum limit of the stress
+[33:06.72] energy tensor of a bunch of particles
+[33:12.64] so here rho is the density so it's a
+[33:15.68] field
+[33:17.12] now p is the pressure
+[33:24.32] and ua is a
+[33:28.00] velocity field
+[33:41.36] and it represents
+[33:46.00] the full velocity of the fluid
+[33:54.96] now the equation of motion of a perfect
+[34:04.84] fluid
+[34:20.00] you can find it by taking the
+[34:23.04] the divergence the four divergence
+[34:27.68] of the stress energy tensor
+[34:33.12] so that's the special relativity way to
+[34:35.20] describe
+[34:36.48] a perfect fluid you describe it by the
+[34:39.20] stress energy tensor
+[34:40.40] and the equation of motion is just the
+[34:42.40] four divergence is
+[34:43.60] is vanishing and as i'll argue later or
+[34:46.80] as i'll remind you later that that just
+[34:48.72] pertains to the conservation of of
+[34:50.96] energy
+[34:52.24] however in general relativity uh i
+[34:54.56] didn't i de-emphasized you know this
+[34:56.48] previous prior discussion of
+[34:57.84] the stress energy tends to de-emphasize
+[34:59.92] the role of
+[35:02.48] the for divergence being a conservation
+[35:05.04] law
+[35:05.52] um because as we'll see in general
+[35:06.64] relativity we have to revise our
+[35:08.16] understanding
+[35:09.68] of these things a little so in general
+[35:11.92] relativity
+[35:13.20] how do we get the stress energy tensor
+[35:15.28] of a perfect fluid well it's the same
+[35:16.64] story we apply the two principles above
+[35:19.12] and the minimal substitution rule so
+[35:20.80] there was a metric now we've got to
+[35:21.92] replace our metric with gab
+[35:24.08] and nowhere else do we have to do
+[35:25.68] anything and we impose
+[35:30.40] guess right you know you have to have to
+[35:32.56] make clear that the minimal substitution
+[35:34.32] rule is a guess
+[35:36.24] and you have to argue provide
+[35:38.80] independent arguments why it's correct
+[35:47.60] so the simplest equation of motion you
+[35:49.76] can impose on the forward
+[35:51.60] on on the stress energy tension general
+[35:53.20] relativity is that this
+[35:55.44] the covariance derivative contracted
+[35:59.12] on the first argument is zero
+[36:02.32] on the first tensor
+[36:06.00] argument leg zero
+[36:13.36] might call this star star
+[36:20.00] now we these equations of motion that
+[36:22.32] i've written here there's 16 of them
+[36:24.40] um in the the red box there 16 equations
+[36:28.00] of motion for the stress energy tensor
+[36:30.08] but we can actually uh since the stress
+[36:32.32] energy tensor is symmetric
+[36:34.64] we can uh reduce the number of equations
+[36:36.96] of motion and put them in a slightly
+[36:38.16] more familiar form
+[36:42.24] and you can do that by projecting
+[36:47.44] the equation onto components
+[36:53.12] parallel and perpendicular
+[37:02.88] to you
+[37:06.16] and when you do that you get the
+[37:07.84] following two equations of motion
+[37:09.92] which might look slightly more familiar
+[37:12.00] one is like the conservation
+[37:14.40] equation
+[37:18.64] and the other one is like euler's
+[37:20.84] equation
+[37:22.72] pertaining to the derivative of the
+[37:26.24] velocity field
+[37:41.44] you check in the non-relativistic limit
+[37:43.36] that this all
+[37:44.64] you know first you go to the special
+[37:46.08] relativity element where you replace g
+[37:47.92] with
+[37:48.48] eta and delta the covariance derivative
+[37:51.36] with delta
+[37:52.16] and then you can go to the
+[37:53.04] non-relativistic limit where the speed
+[37:54.88] of light is much greater than any
+[37:56.08] velocity in the
+[37:57.12] in your your setup and then you'll end
+[37:59.84] up back with the conservation law
+[38:01.76] euler's equation that you would know
+[38:03.60] from non-relativistic physics
+[38:10.00] so now i'll just comment on
+[38:11.80] [Music]
+[38:16.00] the interpretation
+[38:21.20] of the stress energy tensor in gr
+[38:30.24] so it's important to know that there's a
+[38:32.96] distinction in how we can are allowed to
+[38:34.96] interpret the stress energy tensor and
+[38:36.64] general relativity as opposed to or as
+[38:38.56] compared with special relativity
+[38:41.44] so the first thing to note or to do is
+[38:44.32] to just revise or remind you
+[38:46.24] how we interpret the stress energy
+[38:48.00] tensor in
+[38:49.36] in special relativity
+[39:19.20] so an observing special relativity an
+[39:21.04] observer with forbidden full velocity va
+[39:25.28] interprets the quantity
+[39:28.64] t a b v a v b
+[39:32.16] as an energy density
+[39:45.44] more specifically the mass
+[39:48.88] energy density per unit volume
+[40:03.36] for the observer okay you can go ahead
+[40:06.40] and
+[40:06.88] just verify that it's an exercise right
+[40:08.96] we talked about i introduced the stress
+[40:10.48] energy tensor
+[40:12.88] several several lectures ago and uh you
+[40:15.60] can take that definition that we
+[40:16.80] supplied there and just check that
+[40:18.32] interpretation
+[40:22.48] further right
+[40:27.52] if x a is orthogonal
+[40:34.16] to b a then the quantity
+[40:38.00] minus t a b v a x b
+[40:42.48] is the momentum density of matter in the
+[40:44.80] x a direction
+[40:46.40] or is interpreted
+[41:06.80] so
+[41:18.84] so d a
+[41:23.68] the four divergence of the stress energy
+[41:25.36] tensor
+[41:28.72] in special relativity then gets
+[41:32.48] interpreted or may be interpreted as a
+[41:34.16] conservation law
+[41:53.36] so how do you do that well you apply
+[41:55.12] gauss's gas law
+[42:07.44] and uh
+[42:16.72] and then you'll be able to interpret
+[42:23.52] gauss's law as imposing a conservation
+[42:27.04] law for a current
+[42:30.40] now before we do that
+[42:36.00] we have to say a couple of words about
+[42:38.16] how to set up
+[42:39.04] this this situation
+[42:43.76] because we are in special relativity we
+[42:45.76] can set up
+[42:49.68] or we assume that we can in principle
+[42:59.84] set up a family
+[43:04.64] of inertial observers
+[43:13.36] which have a certain property namely
+[43:14.80] that they all have parallel full
+[43:24.84] velocities
+[43:28.08] and what does parallel mean in this
+[43:29.36] context it just means if you take the
+[43:30.80] derivative
+[43:32.56] of the full velocity field defined by
+[43:35.04] this family of inertial observers
+[43:37.12] that that full velocity that that
+[43:40.32] derivative is zero so here's a picture
+[43:43.84] of this
+[43:44.40] you know you've got four velocity
+[43:45.92] observers you've got observers all
+[43:48.08] marching forward in
+[43:50.72] a nice grid of observers and they're all
+[43:53.12] moving
+[43:55.76] parallel to each other with respect to
+[43:58.64] some
+[43:59.36] inertial reference frame
+[44:08.56] when you have this velocity field
+[44:10.56] determined
+[44:11.60] by this family of inertial observers
+[44:14.56] then you can set up a current
+[44:20.88] we can set up the following current j a
+[44:23.60] is just minus t
+[44:24.80] a b contracted with v all right
+[44:28.00] so we've got a current where v is the
+[44:30.88] velocity
+[44:31.60] of these velocity fielders these
+[44:33.60] observers so we have a current density
+[44:37.20] and now this the
+[44:43.92] the equation d a d a b is 0
+[44:47.84] implies the divergence free equation
+[44:51.04] d a j a is zero so j a is really like a
+[44:53.92] current
+[44:54.72] and then you can integrate that equation
+[44:59.20] to to derive conservation laws so you
+[45:02.08] set up a fictitious
+[45:05.76] pill box in space time and then you can
+[45:09.52] integrate this current
+[45:12.72] and apply gauss's law to learn
+[45:14.80] conservation laws for the four current
+[45:19.12] now this is the the story one tells in
+[45:22.16] special relativity to interpret the the
+[45:25.12] law of motion
+[45:26.00] delta a tab for a stress energy tensor
+[45:28.88] however in general relativity
+[45:30.72] uh we have some some challenges some
+[45:33.20] problems
+[45:34.64] that prevent us from interpreting these
+[45:36.64] things in the same way
+[45:43.60] we can still represent families
+[45:45.84] observers
+[45:46.80] of observers sorry with a velocity field
+[45:59.44] so a family of observers may still be
+[46:01.28] represented by velocity field v
+[46:03.52] where v is unit and time-like
+[46:10.32] then the condition that the full
+[46:11.52] velocities however are parallel that
+[46:13.36] they're all moving
+[46:14.64] you know in parallel to each other
+[46:19.04] has to be changed
+[46:30.08] according to the minimal substitution
+[46:31.68] rule we would guess
+[46:38.56] that the condition for a family of
+[46:42.00] observers
+[46:42.88] to be moving parallel to each other is
+[46:44.48] the covariance derivative of the
+[46:46.96] components of the velocity field is zero
+[46:50.80] or
+[46:54.84] equivalently that
+[46:58.00] d delta a v b
+[47:01.28] symmetrizes zero this is an equation
+[47:04.56] we're going to meet a little bit later
+[47:05.68] in the course
+[47:06.88] called killing's equation
+[47:15.12] and so this looks all fine right you
+[47:18.32] know maybe we can
+[47:19.28] always solve killings equation right and
+[47:22.48] then we can maybe we can set up this
+[47:24.24] current vector
+[47:25.60] j and then we can in uh infer
+[47:29.20] the conservation of this four current uh
+[47:32.00] the global conservation of this four
+[47:33.44] current from
+[47:34.16] a kind of gauss law however
+[47:37.28] however and this is the you know i
+[47:39.52] already
+[47:41.20] discussed this at the beginning of this
+[47:42.72] lecture
+[47:45.04] uh in your curved space time
+[47:52.88] it is generally impossible
+[48:02.32] to find such vas
+[48:09.52] so it's generally impossible i mean it
+[48:11.76] is possible for minkowski but in general
+[48:13.68] it is not imp
+[48:14.56] it is not possible to find a family of
+[48:17.68] observers such that their unit
+[48:19.44] timelike and that they that this
+[48:22.64] killings equation
+[48:23.68] is satisfied and the cat the core
+[48:27.36] a really crucial counter example
+[48:31.92] that really is pertinent to the to the
+[48:33.84] space time that we live in
+[48:35.76] is diesel spacetime
+[48:40.80] in dc the space time it's impossible to
+[48:42.88] find a global
+[48:44.24] time-like uh killing vector field which
+[48:46.88] would be the thing solving this
+[48:48.00] killings equation that means you can't
+[48:50.64] define
+[48:51.60] a global notion a notion of global
+[48:54.40] energy
+[48:54.96] and therefore you can't infer
+[49:01.04] from the equation of motion delta a t a
+[49:03.28] b equals zero
+[49:05.36] you can't infer uh
+[49:08.40] strict energy conservation
+[49:28.84] uh
+[49:35.36] physically you can interpret this also
+[49:37.36] physically
+[49:39.36] as saying that tidal forces do work
+[49:47.68] and how the tidal forces act on
+[49:49.52] something well by the gravitational
+[49:56.84] field
+[50:13.44] so global energy conservation is not
+[50:16.08] implied by the equation of motion of a
+[50:18.08] perfect fluid in general relativity
+[50:20.16] however it is possible to still regard
+[50:22.96] this equation of motion
+[50:24.24] as a local conservation of energy
+[50:29.36] so if we name it star star which i have
+[51:13.92] so you are allowed to regard the
+[51:16.88] equation star star which is the
+[51:18.80] divergence free
+[51:20.08] general relativity divergence free
+[51:21.60] equation of motion for the stress energy
+[51:22.96] tense you are allowed to regard it as a
+[51:25.52] conservation law locally if the
+[51:27.68] gravitational field is sufficiently
+[51:29.52] small
+[51:30.32] and the region which you're looking at
+[51:31.52] is sufficiently flat so that you can set
+[51:33.60] up
+[51:33.84] effectively a family a local family of
+[51:37.76] inertial observers background family of
+[51:40.08] inertial observers which are moving
+[51:41.44] parallel to each other
+[51:44.64] okay so that's a little tour through a
+[51:46.24] couple of three settings
+[51:48.56] three equations of motion in general
+[51:50.40] relativity and how to discover them via
+[51:52.32] these principles of general covariance
+[51:54.56] and the principles that equations of
+[51:55.92] motion ought to reduce to the special
+[51:57.28] relativity versions when the
+[51:58.56] gravitational field is sufficiently
+[52:00.08] small
+[52:01.84] now these this these principles only get
+[52:03.60] you so far
+[52:05.36] they get you far enough that you can
+[52:07.20] work out equations of motions for
+[52:09.20] various physical situations
+[52:10.96] but there's one physical quantity which
+[52:13.28] it doesn't tell you
+[52:14.32] how to uh quantize uh not quantize
+[52:17.76] sorry there's one physical quantity
+[52:19.60] which it doesn't tell you how to j
+[52:22.64] doesn't tell you the equation of motion
+[52:24.72] of and that is namely space time
+[52:26.32] itself so that brings us to the topic
+[52:30.16] of einstein's equation
+[52:43.28] so as i've emphasized throughout this
+[52:45.44] course space time
+[52:46.96] and general relativity space time itself
+[52:51.20] is dynamical
+[52:56.96] which means it changes in response to
+[52:59.68] things
+[53:00.32] so we need to have an equation of motion
+[53:02.00] for space-time
+[53:07.76] and the equatio therefore we need an
+[53:09.92] equation of motion
+[53:10.88] for something quantifying space time and
+[53:13.60] reporting according to the principle of
+[53:14.96] general covariance at least
+[53:16.40] this had better be an equation of motion
+[53:19.76] for the metric
+[53:32.96] and that's a core equation of motion
+[53:35.28] that we need in order to move forward in
+[53:37.60] formulating special
+[53:38.72] general relativity and how do we find
+[53:42.40] this equation of motion well
+[53:44.00] uh we need to we need some kind of
+[53:47.60] principle to guide us
+[53:49.36] and that's where mark's principle comes
+[53:51.60] in to play
+[53:55.28] that space-time geometry one reading of
+[53:58.64] mark's principle would be is that
+[54:00.16] space-time
+[54:00.88] geometry is influenced by
+[54:04.08] matter distribution
+[54:19.36] okay that's that's a key principle great
+[54:23.20] that's that's sort of helpful but not
+[54:25.68] right i mean
+[54:27.68] thanks but no thanks we need a bit more
+[54:30.16] to make this quantitative right at the
+[54:31.92] moment it's very
+[54:32.88] qualitative as a statement we need an
+[54:34.80] actual equation of motion
+[54:36.16] that that's involving the metric and
+[54:38.80] some derivatives maybe
+[54:40.16] or something like that
+[54:50.00] and the trick the clue
+[54:56.64] is to look at tidal forces and how
+[54:58.16] they're calculated
+[55:16.72] and in fact we're going to look all the
+[55:17.92] way back to newtonian physics for
+[55:19.36] guidance
+[55:28.00] so
+[55:33.36] i mean we we somehow have in the back of
+[55:36.08] our minds in this discussion here that
+[55:37.44] we have a heavenly body
+[55:39.44] and we have two two test particles
+[55:41.52] moving
+[55:42.64] in the gravitational field of this
+[55:44.08] heavenly body here's one
+[55:46.56] and here's another one and
+[55:50.00] they're on slightly different orbits
+[55:53.68] that's an appallingly bad rendition of
+[55:55.52] two test particles on slightly different
+[55:57.20] orbits
+[55:58.08] anyway you get the idea okay
+[56:02.56] so i'll try to really try to get this a
+[56:05.20] bit better
+[56:06.56] and
+[56:13.60] so the earth let's say it's the earth
+[56:15.76] and a test particle is a little
+[56:17.04] spaceship
+[56:18.88] uh one you know the earth is one of the
+[56:23.28] the foci of the ellipse
+[56:26.96] and then we have another another orbits
+[56:32.88] of another spaceship that's nearby and
+[56:35.28] so along this orbit these two spaceships
+[56:37.84] move relative to each other
+[56:44.24] and you can solve you know go through
+[56:46.40] the whole keplerian thing and work out
+[56:48.16] the
+[56:48.48] the orbits of these two particles and
+[56:50.16] you can set up
+[56:51.68] uh the equation of motion for the
+[56:54.00] relative separation vector
+[56:59.92] so if you do this newtonian
+[57:02.96] you what would newton tell you to do
+[57:04.88] well
+[57:06.16] uh well newton wouldn't tell you but you
+[57:08.00] know this is how you would do it
+[57:10.08] in the newtonian way
+[57:14.96] firstly in the modern newtonian way you
+[57:17.68] describe the gravitational field by
+[57:19.68] the potential
+[57:22.80] gravitational potential phi
+[57:26.08] and the tidal acceleration vector
+[57:47.28] you'd call uh a
+[57:53.36] right x is the the relative separation
+[57:57.52] and the tidal acceleration like how do
+[57:59.44] these these two particles accelerate
+[58:01.20] with respect to each other as they orbit
+[58:02.88] around
+[58:03.52] the planet well that's you you it's
+[58:06.72] determined by the following equation
+[58:09.12] here which is a good exercise in your
+[58:12.16] orbital mechanics
+[58:20.32] and this x is the separation relative
+[58:30.88] okay great so that's how you calculate
+[58:32.88] the the tidal acceleration
+[58:34.80] in newtonian physics actually
+[58:37.84] in general relativity we've also solved
+[58:39.68] this problem
+[58:42.00] with the geodesic deviation equation
+[59:03.36] remember these two freely falling
+[59:04.96] falling bodies these two spacecraft
+[59:09.04] they're each moving on a geodesic of
+[59:10.80] this gravitational field
+[59:13.60] and we know
+[59:17.12] that if they're infinitesimally close
+[59:20.64] how two geodesics accelerate
+[59:24.24] and decelerate with respect to each
+[59:26.24] other is directly related to curvature
+[59:28.48] and the curvature is quantified by the
+[59:30.16] riemann curvature tensor
+[59:32.00] and the relative acceleration is
+[59:34.16] quantified by
+[59:35.28] this geodesic deviation equation
+[59:42.24] so here you know
+[59:45.84] v is the full velocity
+[59:52.40] of the particles
+[59:55.76] and x the deviation
+[60:05.52] and so this suggests doesn't prove but
+[60:08.00] it strongly suggests
+[60:16.00] a correspondence
+[60:22.64] you know the correspondence it's
+[60:24.00] suggesting is well it's just take this
+[60:26.64] strip off the relatives
+[60:31.12] separation vector from both sides so to
+[60:33.44] speak
+[60:34.96] and then you ought to have that the
+[60:36.40] curvature
+[60:39.04] is related to the derivatives of the
+[60:42.24] gravitational potential
+[60:51.76] with the velocity thrown in there of the
+[60:54.24] orbiting particles
+[60:57.92] but
+[61:01.92] phi is determined by rho
+[61:05.60] the distribution of mass energy
+[61:14.08] in newtonian theory
+[61:24.48] and the equation of determining the
+[61:26.88] distribution
+[61:28.32] sorry determining the gravitational
+[61:30.16] scale of potential is this poisson's
+[61:31.52] equation
+[61:33.52] but remember right you know i went to
+[61:35.52] some lengths
+[61:36.84] to explain the interpretation
+[61:39.92] of
+[61:44.00] the distribution of mass energy
+[61:52.72] or energy density
+[62:01.20] and that's described
+[62:06.56] by the stress energy tensor
+[62:14.32] according to t a b
+[62:17.60] v a v b where v is the velocity of the
+[62:20.32] observer
+[62:23.12] um relative to the the the
+[62:27.12] the matter at that point along the
+[62:28.80] observer's world line
+[62:30.88] so we've attained a correspondence
+[62:32.40] between the stress energy tensor
+[62:35.60] and the energy density of matter thus
+[62:40.64] we have a suggested correspondence
+[62:46.00] between curvature
+[62:52.24] and the stress energy tensor and that's
+[62:54.64] exactly the kind of thing we've been
+[62:55.76] looking for
+[63:14.88] so we put it all together we have the
+[63:18.24] stress energy tensor on one side we have
+[63:20.16] the vc and the vd the
+[63:21.76] the velocity vector of the inertial of
+[63:24.88] the of the
+[63:25.92] observer moving through this
+[63:27.76] gravitational field
+[63:29.28] and that implies right
+[63:34.96] the following equation namely that the
+[63:39.52] rigid tensor is determined by the stress
+[63:42.88] energy tensor
+[63:45.36] now i'll put a question mark in an
+[63:47.44] exclamation mark there
+[63:48.80] because it's not correct you know this
+[63:52.08] argumentation while very very beautiful
+[63:54.80] has a flaw
+[64:00.72] now this was in fact einstein's original
+[64:04.64] equation
+[64:07.92] however he very quickly realized the
+[64:10.84] flaw
+[64:15.60] it has a floor pretty glaring floor
+[64:20.08] namely that
+[64:23.68] the divergence of this
+[64:26.72] stress energy tensor is not equal to
+[64:28.24] zero
+[64:30.24] and the reason uh is because of
+[64:33.68] bianchi's identity
+[64:40.08] of the bianchi identity
+[64:44.08] we have that delta c r c d
+[64:49.44] which tends to minus a half g c d times
+[64:52.08] whether which scalar is zero
+[64:55.28] so the only way to reconcile
+[65:00.16] the stress into the equation of motion
+[65:01.60] for the stress energy tensor and
+[65:04.16] this equation i've put the square skirm
+[65:08.08] skirt acclimation mark next to would be
+[65:10.48] if the richie scaler vanishes
+[65:22.72] okay but that's that's not satisfied by
+[65:25.36] most interesting
+[65:27.76] manifolds but the resolution
+[65:32.72] is incredibly simple
+[65:37.84] namely consider
+[65:40.88] instead
+[65:44.72] the equation
+[65:47.76] g a b the einstein tensor which is
+[65:51.28] r a b minus a half r
+[65:54.56] g a b equals eight
+[65:57.92] pi t a b so this
+[66:04.72] equation is consistent with the
+[66:07.76] the divergence condition on the stress
+[66:11.60] energy tensor
+[66:13.76] and it reduces in the right limits
+[66:16.96] to the same
+[66:20.16] consequences that i discussed above
+[66:23.20] and this indeed is the resolution
+[66:28.16] to the goal on the puzzle above
+[66:32.96] and provides the connection between
+[66:35.60] space-time geometry and
+[66:37.04] distribution of matter
+[66:41.36] this equation now bears einstein's name
+[66:44.80] it's called einstein's equation
+[66:46.64] einstein's field equation
+[66:52.96] so in this lecture i've taken you
+[66:56.56] along the path of trying to understand
+[66:59.20] how to generalize
+[67:00.24] laws of physics that we know in the
+[67:01.52] limit of special relativity
+[67:03.28] how to generalize them to the case of
+[67:05.28] arbitrary manifolds and hence find their
+[67:07.20] general relativistic counterparts
+[67:09.44] also by taking mark's principle and
+[67:12.32] making a quantitative version
+[67:14.24] we are able to discover as einstein did
+[67:17.12] that
+[67:17.52] there is an equation relating space-time
+[67:20.64] geometry as quantified by the metric and
+[67:23.68] the distribution of energy density
+[67:26.40] stress energy density in space time as
+[67:28.24] quantified by the stress energy tensor
+[67:30.80] and this led extraordinarily elegantly
+[67:33.44] to an equation known as einstein's
+[67:35.20] equation
+[67:36.72] this amazing equation will be the focus
+[67:39.44] of the rest of this course
+[67:41.36] we're going to take aim at trying to
+[67:44.56] solve this equation we'll fail
+[67:46.16] completely except in a couple of very
+[67:47.92] very special cases
+[67:49.92] and we'll also spend a long time
+[67:52.00] interpreting this equation
+[67:53.76] for various in various physical
+[67:55.20] situations
+[67:56.96] it's really this extraordinary equation
+[67:59.60] it's very very difficult
+[68:01.12] to sort of overstate the amazing
+[68:04.88] significance of this equation in the the
+[68:07.36] formulation of general relativity as i
+[68:09.20] presented it
+[68:10.32] today and particularly amazing and i
+[68:14.72] hope you'll
+[68:15.28] share this sense of wonder as we go
+[68:16.96] through this course particularly amazing
+[68:19.04] is how everything holds together in a
+[68:20.80] self-consistent way
+[68:23.04] we'll see that very clearly in the
+[68:25.12] coming lecture
+[68:26.40] but for now that's it thank you very
+[68:28.40] much see you later

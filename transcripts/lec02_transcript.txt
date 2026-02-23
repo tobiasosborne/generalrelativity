@@ -1,0 +1,1079 @@
+# General Relativity, Lecture 2: Einstein's Equivalence Principle & Mach's Principle
+# YouTube: https://www.youtube.com/watch?v=FZgFkihTT5A
+# Auto-generated transcript
+
+[00:00.00] hello and welcome back to introduction
+[00:01.52] to general relativity
+[00:03.12] in the previous lecture we commenced our
+[00:05.36] journey into the theory of general
+[00:07.04] relativity by reviewing some of the
+[00:08.80] fundamental assumptions underlying
+[00:10.32] newtonian physics
+[00:12.00] in today's lecture i'm going to
+[00:13.28] introduce to you the main
+[00:15.12] two main big principles that underlie
+[00:18.48] the underlie the formulation of general
+[00:20.72] relativity and
+[00:21.76] motivated einstein to discover the
+[00:23.52] theory of general relativity in the
+[00:24.80] first place namely
+[00:26.24] we're going to discuss the principle of
+[00:27.60] equivalence and mark's principle
+[00:31.68] so the modern formulation of
+[00:35.04] general relativity is uh now
+[00:40.64] consists of a large amount of
+[00:43.84] mathematical formalism
+[00:45.60] but this formalism is all is
+[00:48.80] very naturally a consequence of a couple
+[00:50.96] of physical principles
+[00:53.20] and the first principle and really
+[00:56.56] arguably the most important principle
+[00:58.16] underlying the
+[00:59.76] formulation of general relativity is
+[01:01.68] what's known as the principle of
+[01:03.04] equivalent or einstein's equivalence
+[01:04.64] principle
+[01:05.36] so write that down the first
+[01:12.24] and certainly most influential principle
+[01:14.48] underlying
+[01:17.44] general relativity is this einstein's
+[01:20.16] equivalence
+[01:24.84] principle e e p
+[01:27.84] for short now einstein's equivalence
+[01:30.96] principle
+[01:32.08] uh consists really in the modern
+[01:34.48] understanding today
+[01:35.92] of really three parts
+[01:39.68] one of them we've already seen
+[01:44.24] so the first part we saw in the previous
+[01:46.72] lecture and that's the
+[01:48.00] the principle of uff
+[01:51.28] universality of free fall
+[02:03.44] and this is this is another name
+[02:08.88] it's also known as the weak equivalence
+[02:20.84] principle
+[02:25.68] or wep for short
+[02:29.68] and the content of this principle where
+[02:31.36] we discussed in the previous lecture it
+[02:32.80] says that
+[02:33.52] spatial orbits of test particles only
+[02:35.52] depend on the initial conditions
+[02:37.68] and not on the physical or chemical
+[02:41.04] properties of a test particle
+[02:45.12] uff wep have been experimentally
+[02:48.84] verified
+[02:58.48] eg in torsion balance experiments
+[03:09.36] i mean it's a bit rushed to say that
+[03:10.80] they've been verified
+[03:12.72] they've been not rejected
+[03:17.28] the key point in physics of course is
+[03:19.20] that we can't confirm a hypothesis we
+[03:21.04] can only reject a hypothesis
+[03:22.40] experimentally
+[03:24.48] okay that that that we really discussed
+[03:27.04] uh
+[03:27.52] in more detail in the previous lecture
+[03:28.96] and the consequences of uff
+[03:31.52] in today's lecture i'm going to now
+[03:34.48] introduce to you the other aspects of
+[03:36.48] the einstein's equivalence principle
+[03:38.40] the second aspect is local lawrence
+[03:44.84] invariants
+[03:48.80] and this is uh abbreviated lli
+[03:52.80] and it says that in a freely falling
+[03:54.32] reference frame
+[03:55.84] the laws of non-gravitational physics
+[03:57.68] are those of special relativity
+[04:00.00] so in particular they don't depend on
+[04:01.68] spatial orientation or velocity
+[04:04.00] so i'll just quickly summarize that
+[04:24.00] so freely following reference frame the
+[04:25.36] laws of physics are those of special
+[04:26.84] relativity
+[04:29.28] and you can summarize this as saying
+[04:31.52] that there's no
+[04:33.28] preferred
+[04:36.40] reference frame
+[04:43.44] and we talked about preferred reference
+[04:45.84] frames in newtonian physics
+[04:50.64] and this is one of those notions that
+[04:52.16] you have to give up on when you move
+[04:54.08] transition to special relativity but not
+[04:56.48] general relativity
+[04:59.12] uh you already have to give up on when
+[05:01.20] you go to special relativity
+[05:04.72] so laws
+[05:08.00] in particular the laws of physics
+[05:13.52] don't depend on velocity or rotation or
+[05:22.84] orientation
+[05:30.16] orientation or
+[05:33.36] velocity
+[05:37.60] now uh local lawrence and variance is a
+[05:41.92] an assumption that you've got a
+[05:44.56] hypothesis and you can reject the
+[05:46.16] hypothesis
+[05:47.44] and nicholson-morley type experiments
+[05:55.12] have been unable to reject this
+[05:57.44] hypothesis
+[05:58.40] the hypothesis of lli um
+[06:02.72] and they've delivered to us the best
+[06:04.84] bounds
+[06:06.64] which are
+[06:09.84] now of the order of delta c
+[06:13.20] over c is something like 5 by 10 to the
+[06:15.84] minus 17. so pretty extraordinary
+[06:19.76] bounds on the variation of the speed of
+[06:22.00] light
+[06:23.84] as you change orientation or reference
+[06:25.76] frame
+[06:27.04] there's a third aspect to what we now
+[06:29.52] call einstein's equivalence principle
+[06:31.44] namely local position invariants
+[06:34.80] right maybe it's maybe it's kind of
+[06:36.88] obvious but you gotta
+[06:39.04] spell these assumptions out
+[06:42.56] this is lpi and this simply says that
+[06:45.68] the laws of physics do not
+[06:47.28] depend on position
+[06:51.84] so sr holds
+[06:55.12] special relativity holds independent
+[07:00.56] of space time position right you know
+[07:03.60] you can have position in space but you
+[07:05.04] also have position
+[07:06.00] in time so there's
+[07:09.04] another way of saying this is there's no
+[07:11.28] preferred location
+[07:13.04] in space time
+[07:22.16] and you can reformulate three if you
+[07:28.84] like
+[07:30.64] to perhaps a more familiar
+[07:34.48] formulation one that einstein was
+[07:36.32] certainly motivating motivated einstein
+[07:38.16] heavily
+[07:38.96] and this is the the principle of the
+[07:42.40] universality of gravitational redshift
+[07:45.04] so principle 3 is also equivalent
+[07:48.72] which is an exercise for you
+[07:52.40] to the universality of gravitational
+[07:56.84] redshift
+[08:05.04] what always known as u g r
+[08:10.08] another way of saying that is that clock
+[08:12.48] rates are universally affected
+[08:14.24] by the gravitational field
+[08:36.24] so this is a this is a fundamental
+[08:39.44] assumption underlying
+[08:40.64] the einstein's equivalence principle
+[08:43.76] now uh to get you uh into the mood and
+[08:46.96] spirit and
+[08:47.84] uh into practice with these kinds of
+[08:49.92] calculations we're gonna set an exercise
+[08:53.12] this one's will be on the the homework
+[08:56.24] sheets but
+[08:58.32] all these exercises on the homework
+[08:59.68] sheets will be mentioned in the lecture
+[09:01.68] so we're going to show you the task is
+[09:03.76] to show or argue
+[09:06.16] that for small velocities
+[09:12.72] and weak gravitational fields so we
+[09:15.20] don't expect any
+[09:19.52] black holes or anything
+[09:23.76] so for weak gravitational fields such as
+[09:25.44] what we experience here on earth
+[09:27.84] that delta nu over nu is
+[09:31.44] equal to delta phi over c squared
+[09:34.96] so um where where i'm going to tell you
+[09:38.40] what these symbols are
+[09:40.48] new x1 and ux2 these are the clock rates
+[09:45.52] of two clocks
+[09:54.56] uh we'll name the clocks as clock 1 and
+[09:56.88] this clock 2
+[09:58.24] and these clocks are at locations x1 and
+[10:01.60] or x2 so there's a picture right you
+[10:04.16] know you have somehow a clock here
+[10:08.88] and then you have a clock here and
+[10:10.80] another it's based on locations is
+[10:13.68] somehow x1 x2
+[10:16.96] so what's phi phi is the gravitational
+[10:20.16] scalar potential which we met in the
+[10:23.92] previous
+[10:25.68] lecture since phi x1 5
+[10:29.12] x2 and delta
+[10:34.08] phi is just the difference of course
+[10:35.52] between these two uh
+[10:38.40] scalar potentials so gravity is pointing
+[10:40.88] somewhere down in this picture
+[10:42.80] so delta phi is phi of x1 minus
+[10:46.00] phi of x2 and your task
+[10:49.52] is uh to
+[10:52.56] argue that delta nu over nu the
+[10:55.28] difference in these clock rates
+[10:56.88] is proportional to the difference in the
+[10:59.60] gravitational scale of field
+[11:01.28] divided by the speed of light squared
+[11:03.12] you can do that with a doppler shift
+[11:05.12] argument or you can use
+[11:06.72] if you like a uh
+[11:11.04] the quantum expression for
+[11:14.32] uh the energy of a photon and
+[11:17.84] argue how that would change at different
+[11:19.44] points in the gravitational field
+[11:21.76] there's two ways to to at least to to
+[11:24.32] argue
+[11:25.04] this relation and uh and the second part
+[11:28.48] of this exercise is to estimate
+[11:32.96] um delta phi over c
+[11:36.64] uh in our gravitational field
+[11:39.92] field of the earth for it
+[11:43.28] for a uh for a displacement of
+[11:46.32] 30 centimeters so
+[11:53.60] so when the two clocks are only 30
+[11:55.36] centimeters separated which i can
+[11:57.04] indicate almost by my hands here
+[11:59.20] there we go it's about well a bit less
+[12:02.56] 25 there and estimate
+[12:05.76] the this this change in these ticking of
+[12:09.20] these two clocks
+[12:10.48] and you'll get a small number right and
+[12:12.24] the interesting thing is you should do a
+[12:13.68] bit of googling what's the best
+[12:15.36] the best balance delivered by atomic
+[12:17.84] clocks on
+[12:19.68] measuring clock rates and you should you
+[12:22.72] should conclude that this is now
+[12:24.40] routinely measurable in the
+[12:25.92] laboratory experiments in fact if kind
+[12:28.32] of like you know if you are curious you
+[12:29.84] should investigate what are the current
+[12:31.44] bounds now
+[12:32.72] on on differences on
+[12:36.08] uh on delta
+[12:40.16] on the differences between differences
+[12:42.96] of heights where the gravitational
+[12:44.24] redshift is measurable in laboratory
+[12:46.08] experiments you'll be pretty surprised
+[12:47.60] by what we can
+[12:48.64] measure in the lab in terms of
+[12:49.92] gravitational red trip
+[12:53.12] so it's a curious thing so that that
+[12:56.08] that's
+[12:56.48] already you know what have we done we've
+[12:57.84] i've i've described to you the principle
+[13:00.16] einstein's equivalence principle as it's
+[13:02.48] a modern formulation of eep as it is
+[13:06.08] found in the modern formulation of
+[13:07.68] general relativity and i've
+[13:09.44] isolated three aspects to eep namely
+[13:13.12] the universality of free fall lawrence
+[13:15.84] local lawrence and variance
+[13:17.12] and uh local positioning variants or ugr
+[13:19.68] the universality of gravitational
+[13:21.20] redshift
+[13:23.20] now it's an interesting observation
+[13:29.68] that using eep you can
+[13:33.04] derive the gravity should be
+[13:37.68] described
+[13:46.84] geometrically so you've probably heard
+[13:48.72] that einstein's
+[13:50.08] general theory of relativity is a
+[13:51.36] geometrical theory it sounds pretty
+[13:53.60] magical right um pretty amazing lots of
+[13:56.96] people have said lots of things about
+[13:58.16] this
+[13:59.12] uh and where does this come from well
+[14:02.56] you know
+[14:03.12] it's possible to derive this you can i
+[14:05.76] would say argue this
+[14:11.76] from the eep
+[14:26.64] and i'll give you a reference it's not a
+[14:29.76] very readable reference i'm afraid
+[14:33.20] i took a look at it
+[14:36.48] i think you have to be you wouldn't you
+[14:39.04] wouldn't read this on your first
+[14:41.44] encounter with general relativity but
+[14:42.88] you might be curious to see where these
+[14:44.48] arguments are laid down
+[14:46.40] you can find them in this this journal
+[14:48.16] article here
+[14:52.24] by thornley enlightenment
+[14:59.68] i wouldn't recommend you as i said it
+[15:01.20] wouldn't if this is your first encounter
+[15:02.48] with general relativity you wouldn't
+[15:03.84] really recommend following this up
+[15:05.76] unless you're particularly motivated
+[15:10.84] and you know
+[15:13.12] this is this is a key key feature of
+[15:15.36] general relativity that that
+[15:17.28] it's it's formulated in in a geometric
+[15:20.00] fashion
+[15:20.80] however there's some there's a key point
+[15:22.32] i want to emphasize uh
+[15:23.92] and that is that just phrasing a
+[15:26.48] physical theory in geometrical terms is
+[15:28.24] no particular magic
+[15:29.84] you probably heard if you encountered
+[15:32.08] any amount of popular science
+[15:34.16] the idea statements that you know
+[15:36.72] general relativity is
+[15:38.08] special because it has this geometric
+[15:40.24] formulation
+[15:41.60] well it's not special if a physical
+[15:43.28] theory has a geometric
+[15:44.72] uh formulation in fact most if not all
+[15:47.68] physical theories can be formulated
+[15:49.20] geometrically
+[15:50.32] for example newton newton's theory can
+[15:53.04] be formulated geometrically
+[15:54.56] thermodynamics can be formulated
+[15:56.16] geometrically static statistical
+[15:57.84] mechanics and quantum mechanics may be
+[15:59.44] described geometrically
+[16:01.76] in particular quantum mechanics can be
+[16:03.44] described in terms of kela manifolds you
+[16:05.28] can see that in my lectures on
+[16:06.56] symplectic mechanics and
+[16:08.48] synthetic geometry and classical
+[16:10.24] mechanics
+[16:12.16] if you're willing to work hard enough i
+[16:13.68] claim you can just about formulate
+[16:15.20] anything geometrically
+[16:17.20] so the important point about einstein's
+[16:19.20] theory of general relativity
+[16:21.20] is that the key physical principle
+[16:23.60] underlying this geometrization
+[16:25.84] is that all matter from electrons
+[16:28.32] protons gluons
+[16:30.32] to the higgs they all couple to the same
+[16:32.96] geometry
+[16:33.76] namely that of space time so that's the
+[16:36.16] fundamental thing
+[16:37.28] that makes that distinguishes general
+[16:38.80] relativity is a geometrical theory from
+[16:41.12] any other theory and so let's write that
+[16:44.00] out that's really important so all
+[16:45.76] matter
+[16:47.84] uh couples doesn't matter what the
+[16:49.84] matter is right higgs is
+[16:52.00] gluons you name it quarks
+[16:55.52] they all matter couples to the same
+[17:02.84] geometry
+[17:04.40] we can't quantify this mathematically
+[17:06.08] yet we will be able to as we go through
+[17:07.76] this course
+[17:09.20] and what geometry namely is that of
+[17:12.24] space-time
+[17:17.04] when you formulate all these other
+[17:18.32] aforementioned theories geometrically
+[17:20.00] you don't see that
+[17:28.80] this is something very special about
+[17:30.16] general relativity
+[17:36.48] and because of this
+[17:40.32] a single metric suffices to describe all
+[17:42.96] indirection or coupled
+[17:47.44] and we'll i'll explain to you what is a
+[17:50.40] metric
+[17:51.68] later in this course
+[18:12.32] so don't worry about metrics we will
+[18:14.24] talk about them later in the course
+[18:18.00] uh to get you uh in the spirit of things
+[18:20.80] we're gonna do some calculations now
+[18:22.48] um these are
+[18:26.48] these calculations are supporting
+[18:28.72] various aspects of eep
+[18:30.80] with respect to newtonian physics
+[18:36.80] and i find these these calculations
+[18:38.40] pretty enlightening especially since
+[18:41.20] very soon like in the next couple of
+[18:42.72] weeks we're going to be entering
+[18:44.80] we're going to commence our studies of
+[18:46.48] differential geometry and you'll quickly
+[18:48.32] get
+[18:49.60] bamboozled with afine and christopher
+[18:52.16] connections and blah blah blah and you
+[18:54.16] might wonder if these actually have
+[18:55.36] anything to do with physics at all
+[18:57.20] uh indeed they do and we'll see all
+[19:01.68] we'll see many of those geometrical
+[19:03.52] things turning up already in this
+[19:04.88] quite simple calculations that we can do
+[19:06.48] within newtonian physics right now
+[19:12.32] okay let's start let's take aim at the
+[19:13.76] following statement
+[19:21.20] so the statement is no
+[19:26.16] external
+[19:30.24] static
+[19:33.76] homogeneous these words are very
+[19:35.92] important as you'll see
+[19:39.04] gravitational field
+[19:46.56] can be detected in a freely falling
+[19:48.32] reference frame
+[20:03.36] this is one of these classic thought
+[20:04.64] experiments of
+[20:07.84] einstein einstein's elevator
+[20:11.28] nothing no external static homogeneous
+[20:14.00] gravitational field can be detected in a
+[20:15.52] freely falling elevator we're going to
+[20:16.88] prove that now within
+[20:18.96] newtonian physics note that
+[20:22.64] that i'm stressing static homogeneous
+[20:26.00] so if the gravitational field varies
+[20:28.40] it's not homogeneous it's not
+[20:29.68] translation invariant then you can
+[20:31.04] detect it by tidal forces
+[20:32.80] it's very important so
+[20:35.84] let's uh how we're going to quantify how
+[20:38.96] we're going to
+[20:41.36] prove this statement within newtonian
+[20:44.48] physics well
+[20:45.52] we're going to suppose we have some
+[20:47.68] physical system
+[20:48.56] right and we're going to have n
+[20:52.04] non-relativistic particles
+[21:00.64] and they're moving
+[21:06.80] in a pair force field
+[21:15.76] described by big f which depends on the
+[21:18.24] separations between these these
+[21:20.00] these particles and they're not only
+[21:23.52] moving in that
+[21:25.20] pair force field they're also moving in
+[21:27.04] and
+[21:29.44] they're moving in an external
+[21:30.80] gravitational field
+[21:42.88] g of x just is a constant g
+[21:45.92] homogeneous static doesn't change with
+[21:47.92] time
+[21:49.68] so what do we do well we
+[21:53.68] we apply newton's second law to get the
+[21:55.44] equations of motion
+[22:00.08] how do they look well the mass of the
+[22:02.16] j-th particle
+[22:03.76] times by its acceleration
+[22:07.92] is equal to the mass of the j-th
+[22:09.36] particle times by g that's the static
+[22:11.36] homogeneous gravitational field
+[22:14.00] plus the sum of all the pair
+[22:17.44] forces
+[22:22.48] right that's newton's second law k runs
+[22:25.28] from one to n
+[22:26.16] and we just assume that f of zero is
+[22:28.96] zero
+[22:29.52] just to make this thing work out nicely
+[22:34.08] so there you go look at newton's second
+[22:35.44] law right you i can certainly see
+[22:37.12] the gravitational term right there it's
+[22:39.12] the first thing on the right hand side
+[22:41.04] but we're not in a freely pulling
+[22:42.56] reference frame so
+[22:44.40] if we make a galilean transformation
+[22:48.24] sorry a non-galilean right we're going
+[22:50.40] to a
+[22:52.24] an accelerating or freely falling
+[22:54.24] reference frame with respect to
+[22:57.92] this inertial reference frame where
+[22:59.28] things were formulated
+[23:07.60] what happens well we have to describe
+[23:10.24] that change of variables and how we're
+[23:11.76] going to do it well we're going to
+[23:12.80] describe it this way today
+[23:14.32] x prime the coordinates in the new
+[23:15.92] reference frame are the
+[23:17.84] coordinates in the old reference frame
+[23:19.04] minus a half gt squared right we're just
+[23:22.24] going to accelerate freely falling in
+[23:23.76] the reference frame and t
+[23:24.80] prime equals t we're not going to it's
+[23:26.08] not relativity yet this is newtonian
+[23:27.60] physics
+[23:30.64] then what happens to the equations of
+[23:32.16] motion according to newton in our new
+[23:36.72] accelerating frame
+[23:42.16] well if you do the change of variable i
+[23:44.72] mean you know it's a little teeny weeny
+[23:46.48] exercise
+[23:48.00] all right literally substituting in for
+[23:51.52] x
+[23:51.76] prime here and t prime
+[23:55.12] already leads you to the answer
+[23:58.72] then we see that the equations of motion
+[24:01.12] in this freely falling reference frame
+[24:02.72] are exactly those of newton
+[24:05.68] and we cannot detect that we're in a
+[24:08.48] gravitational
+[24:09.92] field so that's
+[24:14.56] a uh the first demonstration within
+[24:17.60] newton's theory
+[24:18.64] of uff and eep
+[24:24.48] now we're going to tell pretty much the
+[24:26.00] same story
+[24:29.20] but in special relativity
+[24:34.32] a bit more demanding calculation and
+[24:37.04] really a good warm up for you
+[24:38.72] and a reminder and a check on your
+[24:41.68] special relativity knowledge which is
+[24:43.28] essential for this course
+[24:47.52] so we're going to do essentially the
+[24:50.72] same
+[24:51.12] transformation we're going to go we're
+[24:53.60] going to consider a particle moving
+[24:55.44] under the influence of gravitational
+[24:57.28] force field and in a freely folding
+[24:59.84] coordinate system
+[25:01.20] and then we're going to transform to a
+[25:03.24] non-freely falling coordinate system and
+[25:05.36] see what the equations of motion look
+[25:06.72] like
+[25:09.52] these kind of these these calculations
+[25:11.92] are just
+[25:12.56] meant to give you some facility with
+[25:14.72] non-uh
+[25:15.84] non-gala lane and non-lawrencium type
+[25:17.84] changes of coordinates
+[25:19.60] but along the lines along along the way
+[25:21.68] we're going to see how
+[25:22.88] the features how many of the symbols in
+[25:25.36] differential geometry will already start
+[25:26.88] to appear just
+[25:28.00] in these simple simple calculations here
+[25:31.28] so according to eep
+[25:35.28] there exists for any particle
+[25:41.28] moving purely under gravity
+[25:58.24] purely under the influence of a
+[25:59.68] gravitational field
+[26:07.04] there exists for any such freely falling
+[26:10.08] test particle there exists a coordinate
+[26:12.16] system according to eep
+[26:14.32] where you cannot detect the
+[26:16.56] gravitational field
+[26:19.28] at that point you can detect it by total
+[26:21.68] forces but it's a little bit different
+[26:43.68] so there exists a freely falling
+[26:46.16] coordinate system and i'm going to write
+[26:47.60] psi 0 through 3 to describe the
+[26:50.16] coordinates in the system
+[26:51.84] such that right there's no
+[26:55.12] force acting on this particle
+[26:58.64] now remember here we're doing now
+[27:01.84] special relative special relativity this
+[27:04.24] is relativistic
+[27:05.44] dynamics and kinematics that we're
+[27:06.96] talking about now
+[27:09.12] and i have to highlight
+[27:14.00] to remind you of some of the
+[27:16.16] modifications you have to make to new
+[27:17.52] training mechanics to do
+[27:19.12] relativistic mechanics
+[27:22.32] so where we've got something some new
+[27:25.20] symbols here
+[27:30.48] where tau is a new symbol this is the
+[27:32.96] proper time right
+[27:37.84] okay go go and revise the proper time
+[27:40.96] you've seen it before in just about any
+[27:43.44] special relativity course
+[27:46.00] and how do you define the proper time
+[27:54.32] well it's defined by the infinitesimal
+[28:00.84] difference
+[28:07.04] minus eta alpha beta dxi alpha d psi
+[28:10.16] beta
+[28:11.76] or or maybe it's a bit easier to see it
+[28:14.24] this way
+[28:15.44] it's defined by requiring that minus one
+[28:20.80] is equal to eta alpha beta d psi
+[28:23.84] alpha dt d tau sorry d psi
+[28:27.04] beta d tau it's the the howard clock
+[28:30.72] ticks that moves with the particle
+[28:32.08] instantaneously
+[28:34.64] and now now i've introduced some new
+[28:36.32] notation right and some new
+[28:37.76] new operations so we're going to have to
+[28:39.44] explain these things
+[28:40.96] so this is the new notations that we're
+[28:42.96] encountering so firstly we've got
+[28:44.64] here we've got this eta what on earth is
+[28:46.96] ada a is a matrix
+[28:49.04] it's a special relativity metric
+[28:52.08] it's a diagonal matrix which is mostly
+[28:54.24] positive in our course
+[28:56.56] we'll take the mostly positive
+[28:57.84] convention following walled
+[29:00.40] and uh well you know
+[29:03.68] i told you about components didn't i
+[29:05.44] well the alpha beta component is also
+[29:08.00] written
+[29:09.76] like this which is the
+[29:13.20] entry of row
+[29:16.96] alpha and column beta
+[29:22.00] we're also employing index notation to
+[29:24.96] in the einstein summation convention
+[29:27.92] so what does that mean well you've seen
+[29:31.20] indices before
+[29:33.44] in the previous lecture but the
+[29:34.64] summation notation
+[29:36.56] i mean you probably can't avoid you
+[29:39.44] probably haven't been able to avoid
+[29:40.80] seeing it so far but here it is just to
+[29:42.48] remind you of it
+[29:45.36] if we've got some an expression that
+[29:46.80] looks like this this means
+[29:49.12] some alpha 0 1 2
+[29:52.84] 3 so wherever we have a repeated index
+[29:56.64] where one index is
+[29:57.68] downstairs and one index is upstairs
+[30:00.40] then we're meant to sum over it
+[30:02.08] the distinguishing distinction between
+[30:03.92] downstairs and upstairs we won't make
+[30:05.44] today
+[30:06.80] today if you just see this notation this
+[30:08.64] is what it means
+[30:11.28] later as we get into differential
+[30:12.80] geometry i will
+[30:14.56] explain the difference between upstairs
+[30:18.64] explain what the ups and down says
+[30:20.72] notation is meant to represent
+[30:23.12] so here we've just introduced a notation
+[30:25.44] this should be already familiar to you
+[30:27.04] from your special relativity course
+[30:29.68] and and using that notation we've
+[30:33.04] talked about or introduced the notion of
+[30:34.56] proper time
+[30:36.40] so proper time is
+[30:39.92] tau is defined by this equation here so
+[30:42.48] you get your coordinates
+[30:44.56] and you differentiate them with respect
+[30:46.40] to a temporal parameter
+[30:48.32] and you find that temporal parameter or
+[30:49.76] that premise parametrization of time
+[30:51.44] such that that equation fulfilled with
+[30:53.04] minus one is equal to this
+[30:54.72] to this length of these four vectors
+[30:56.24] here
+[31:02.40] all right now that's
+[31:05.60] in all in the free with respect to the
+[31:07.12] freely falling reference frame right
+[31:08.48] that's
+[31:08.88] relativistic mechanics and freely
+[31:10.56] falling reference frame there's no
+[31:12.00] force forces and there's no force acting
+[31:15.84] on on our test particle according to eep
+[31:19.04] when we're in a 3d falling reference
+[31:20.96] frame
+[31:25.12] well let's suppose now we're going to
+[31:27.60] take a look at things
+[31:28.56] in another reference frame
+[31:36.48] in fact we're going to be is pretty much
+[31:37.84] as general as possible we're going to
+[31:39.12] suppose we're going to move to a
+[31:40.72] just another coordinate system
+[31:44.24] it doesn't have to be accelera it
+[31:46.56] doesn't have to be freely falling it
+[31:47.92] might be
+[31:48.56] uh static with respect to feeling
+[31:51.04] falling
+[31:51.68] uh observer it might be uh in constant
+[31:54.40] motion with respect to feeling
+[31:55.68] it might be rotating whatever this is a
+[31:59.28] total general
+[32:00.24] calculation might be a lab reference
+[32:03.84] frame
+[32:04.16] rotating
+[32:07.28] so that's you know i'm going to just
+[32:09.28] draw a schematic
+[32:11.04] now of these coordinates
+[32:14.16] so here this black grid here is meant to
+[32:16.88] represent
+[32:17.68] our uh our new coordinate system
+[32:22.08] x1 goes along this this this axis here
+[32:25.36] x naught which is something the temporal
+[32:26.88] coordinate goes up there there's an x2
+[32:28.48] and x3
+[32:30.32] and then with respect to these new
+[32:32.00] coordinates the old coordinates well
+[32:33.68] they all look distorted don't they right
+[32:35.44] you know maybe we're rotating who knows
+[32:37.36] right
+[32:39.84] here's the old coordinates here so this
+[32:43.04] this
+[32:43.44] this axis here might be psi naught in
+[32:45.28] the old coordinates this one along here
+[32:47.28] might be x i
+[32:48.24] one so we have two coordinate systems
+[32:52.16] one describing one reference frame one
+[32:53.60] describing the other
+[32:55.44] and how do we change coordinates well
+[32:59.04] they're just functions of the other
+[33:00.32] right so psi alpha
+[33:02.56] you can express psi alpha the freely
+[33:04.48] folding reference frame coordinates in
+[33:06.08] terms of these non-freely falling
+[33:07.76] reference frame coordinates
+[33:09.04] you know as long as you didn't do
+[33:09.92] anything singular
+[33:12.16] this is a you you can calculate
+[33:15.36] these coordinates so at the moment i've
+[33:18.24] got these upstairs indices
+[33:19.60] don't worry about that yet just follow
+[33:21.60] the notation and
+[33:22.96] the meaning will be explained later you
+[33:25.60] can you could eventually wells written
+[33:27.36] all these indices downstairs if you want
+[33:29.04] at the moment there's no no
+[33:30.96] no difference in their meaning implied
+[33:36.16] so the force-free equation of motion you
+[33:38.96] know the
+[33:39.60] the the expression of relativist in
+[33:42.24] relativistic mechanics that no force
+[33:43.92] acts
+[33:49.28] what does that look like well remember
+[33:51.52] the force-free equation which
+[33:52.88] is no force zero no force acts
+[33:56.16] on d squared x i alpha d
+[33:59.28] tau squared right proper times up there
+[34:01.68] let's go check i didn't write nonsense
+[34:03.44] down here is that the same as before yep
+[34:06.40] so but that's in the freely fooling
+[34:08.16] reference frame what does it look like
+[34:09.36] in our crazy reference frame
+[34:11.84] well we've got to substitute
+[34:14.96] and what does two second derivative mean
+[34:17.04] it means do the derivative twice
+[34:18.88] so we're going to do it twice
+[34:23.28] but remember we've got to do everything
+[34:24.56] with respect to our new coordinate
+[34:25.84] system
+[34:26.32] so we have to take this total derivative
+[34:29.20] with respect to proper time
+[34:30.56] and express it with respect to
+[34:33.76] the coordinate system
+[34:37.76] coordinates x mu
+[34:44.64] right there we go all i've done is taken
+[34:46.56] this total derivative
+[34:47.68] and written it in terms of all the
+[34:48.88] partials with respect to the
+[34:50.96] independent variables
+[34:55.04] and now well that's just one total
+[34:57.28] derivative we need to get rid of the
+[34:58.64] other one
+[34:59.12] in the same fashion and if you do this
+[35:01.44] you find the following equation
+[35:03.84] for the false free equation of motion
+[35:09.20] so if you apply the second derivative
+[35:11.44] and write the total derivative with
+[35:12.88] respect to all the independent variables
+[35:14.72] as partial derivatives
+[35:17.84] then you end up with this equation here
+[35:27.04] and this is an equation that we will see
+[35:29.36] a lot more
+[35:31.44] in coming lectures
+[35:34.64] it's called the geodesic equation but
+[35:37.36] here we're just doing things totally
+[35:39.04] at a completely elementary level within
+[35:41.04] relativistic mechanics
+[35:44.64] so already this is a an interesting
+[35:46.80] equation it's not
+[35:47.68] completely the geodesic equation right
+[35:49.44] you know we've got this
+[35:51.84] we've got a term here and we don't like
+[35:53.36] that we want to express things in a term
+[35:55.28] which makes
+[35:56.08] in a way which makes the acceleration
+[35:57.76] terms
+[36:00.24] easier to look at and so we want to get
+[36:02.16] rid of this yellow term
+[36:03.36] um we can do that
+[36:06.88] zero equals this complicated equation we
+[36:09.76] can
+[36:10.08] exploit the following you know identity
+[36:12.72] namely that the
+[36:13.92] jacobian is invertible
+[36:23.20] d lambda mu is just the dirac delta
+[36:26.32] chronic delta function to get direct the
+[36:28.24] chronic delta function so it's one if
+[36:30.24] lambda equals mu or zero otherwise so
+[36:33.28] this is just
+[36:34.24] this is the jacobian matrix is
+[36:36.08] invertible that's what that says
+[36:39.60] so then if we can exploit that we can
+[36:41.28] multiply both sides
+[36:48.72] we can multiply both sides by dx lambda
+[36:52.64] dxi alpha to eliminate this yellow term
+[36:55.68] there
+[36:57.12] and sum right and sum
+[37:01.28] and then that equation up here now
+[37:04.40] takes on the more familiar geodesic
+[37:06.72] equation type
+[37:11.84] form and i've already introduced
+[37:15.84] some notation that we'll see later when
+[37:18.24] we start doing differential geometry
+[37:20.84] properly
+[37:24.16] so this is what the equation of motion
+[37:25.36] looks like in our new reference frame
+[37:29.44] our crazy rotating jumping up and down
+[37:32.00] on the trampoline reference frame
+[37:33.60] this is what the the freely falling
+[37:36.32] trajectory looks like
+[37:38.00] and we've introduced some notation
+[37:48.80] gamma for the so-called affine
+[37:51.12] connection
+[38:02.32] and this is
+[38:05.36] well it's okay i've missed one line so
+[38:07.68] it's an exercise for you to fill in that
+[38:09.12] line
+[38:14.00] and this is this affine connection
+[38:17.04] expresses the
+[38:20.64] how how the
+[38:23.84] the new coordinate the old the freely
+[38:26.80] falling coordinates depend on the
+[38:28.72] the new coordinate system and there's
+[38:30.08] also a jacobian factor in there
+[38:37.12] and we can also okay so let's pause for
+[38:40.88] a moment to just
+[38:42.40] look at this equation here we're going
+[38:44.40] to see this equation much more
+[38:45.84] generality
+[38:46.72] when we come to formulating differential
+[38:48.56] geometry mathematically
+[38:50.64] and this equation we know is the
+[38:52.16] geodesic equation and
+[38:53.84] it expresses that in a
+[38:56.96] freely falling reference frame there are
+[39:00.16] no forces acting on a particle
+[39:03.12] okay eep
+[39:09.52] it's convenient you know when we're in
+[39:11.20] the new reference frame it's a bit
+[39:12.48] convenient to not have to define the
+[39:14.48] proper time with respect to the old
+[39:16.24] reference frame coordinates so what we
+[39:18.48] do is we also
+[39:19.52] work out how to com to calculate the
+[39:22.40] proper time with respect to
+[39:23.92] uh with respect to the new coordinates
+[39:35.04] that way we're not we're not stuck to
+[39:37.68] going to the freely falling reference
+[39:38.96] frame every time we want to compute
+[39:40.08] something
+[39:41.44] the tau squared what is it equal to by
+[39:43.28] per definition it's equal to eta alpha
+[39:45.20] beta
+[39:45.76] d psi alpha d psi beta
+[39:49.52] well let's just change our coordinates
+[39:51.36] now we know how to change coordinates we
+[39:53.36] just change our total derivatives
+[39:55.20] with respect to size to partial
+[39:58.08] derivatives with respect to
+[39:59.60] x's we do some multi-variable calculus
+[40:03.92] to do the increment in terms of x's
+[40:07.60] instead of
+[40:08.84] size
+[40:24.32] there we go that's how we change from
+[40:26.32] having our
+[40:29.12] increment d psi to dx we pick up these
+[40:32.88] change of variable formulas and
+[40:36.08] we can define that way a new expression
+[40:43.44] we could just define something called g
+[40:45.68] g is a matrix
+[40:47.04] and that's that g collects together all
+[40:49.68] the stuff that turned out
+[40:51.52] appeared when we changed to the new
+[40:54.32] coordinate system
+[40:55.44] this is the blue stuff
+[41:02.80] so the definition of g
+[41:06.24] is as d psi alpha d x
+[41:09.60] mu d x i beta d x nu
+[41:16.00] is the and we give a name to it right we
+[41:18.80] call it the metric
+[41:25.04] so these are just this is these are
+[41:27.04] calculations you can do within newton's
+[41:29.52] mechanics newtonian mechanics or
+[41:30.88] relativistic mechanics
+[41:33.68] where we explore consequences
+[41:37.20] of eep and uff and so on
+[41:42.88] this doesn't completely get us to
+[41:46.24] general relativity here we're only
+[41:47.68] seeing
+[41:48.00] one aspect of general relativity a very
+[41:51.44] important aspect
+[41:52.24] namely that the geometry of space time
+[41:54.72] tells freely pulling particles how to
+[41:56.64] move
+[41:58.64] the geometry of space time will be later
+[42:00.88] captured in this course
+[42:02.00] by the metric g mu u g mu will be all
+[42:04.72] that you need to describe the geometry
+[42:06.32] of space time
+[42:07.28] and with that you'll be able to derive
+[42:09.04] the trajectories of freely falling
+[42:10.64] particles
+[42:11.52] but that's only half the story right
+[42:13.28] general relativity is an amazing theory
+[42:15.84] because it combines a back action
+[42:20.88] of of matter on the gravitational field
+[42:23.92] and that's
+[42:27.04] comes as a consequence not just of eep
+[42:29.44] also also of
+[42:31.12] something called mark's principle
+[42:37.20] this is the second underlying
+[42:44.40] the second key idea underlying here
+[42:56.40] and it's a bit more diffuse it's a bit
+[42:58.32] harder to make
+[42:59.60] precise but it was highly influential to
+[43:01.52] einstein
+[43:05.36] and so in second key idea well really we
+[43:07.28] should replace the word idea with
+[43:09.92] circle of ideas set of ideas
+[43:20.32] it's less precise you can't formulate it
+[43:23.92] so nicely
+[43:26.56] but very very influential
+[43:33.84] i'll give a summary of these ideas in
+[43:35.84] the following statement it's a modern
+[43:40.56] interpretation of what marx
+[43:42.16] and smoke was all about
+[44:26.88] and this summary is something like this
+[44:28.80] all matter in the universe
+[44:30.24] should contribute to the local
+[44:32.08] definition of non-accelerating and
+[44:34.84] non-rotating
+[44:36.80] conversely
+[44:38.04] [Music]
+[44:40.64] in a universe devoid of matter
+[44:49.04] there should be no meaning to these
+[45:02.84] concepts
+[45:04.08] and this is really pretty deep right you
+[45:05.84] know these concepts don't make sense
+[45:10.16] without matter you need matter to give
+[45:12.48] sense to
+[45:13.68] the notion of non-acceleration and
+[45:16.84] non-rotating
+[45:19.44] now einstein took these ideas and these
+[45:22.08] observations and these calculations and
+[45:24.00] similar
+[45:25.28] similar calculations to these and over
+[45:29.04] a long period of time
+[45:32.24] conceived of and carried out the
+[45:35.20] formulation
+[45:36.40] of the theory that we now know today as
+[45:38.08] general relativity
+[45:41.36] i'm going to give you a short
+[45:45.20] description of general relativity as
+[45:47.44] formulated by einstein
+[45:52.24] it's possible to to state what the
+[45:54.32] theory is even
+[45:55.52] at this quite descriptive level but
+[45:58.40] getting at the quantitative
+[46:01.04] consequences of these statements takes a
+[46:03.52] lot more work
+[46:04.80] but nonetheless you can still appreciate
+[46:06.96] einstein's theory with
+[46:08.32] little more than what i've shown you in
+[46:09.76] these first two lectures
+[47:04.00] so the first part of general relativity
+[47:05.76] is a statement that the observer
+[47:07.28] independent properties
+[47:08.56] of space-time are described by a
+[47:10.56] space-time metric
+[47:11.84] which is a matrix of four numbers at
+[47:13.60] every space-time location
+[47:15.04] which need not have the platform or
+[47:16.64] special relativity okay
+[47:19.92] now comes
+[47:23.12] the byte curvature is that property of
+[47:26.48] the metric
+[47:27.44] that accounts for the physical effects
+[47:30.80] of gravitation
+[47:46.48] so that's the first part
+[47:49.52] of the second part of the formulation
+[47:51.20] general relativity curvature
+[47:52.96] is a property of the metric so you can
+[47:54.88] spec first
+[47:56.08] statement is that space time is
+[47:57.76] described by a space like metric
+[47:59.92] second part is that the property of this
+[48:02.00] metric field
+[48:03.68] that accounts for the physical effects
+[48:05.04] of gravitation is curvature which i'll
+[48:06.96] come to defining in the coming
+[48:09.68] say three or four weeks
+[48:12.72] and further
+[48:18.64] and in a sense you know you could
+[48:20.24] discover already the statement that
+[48:21.68] curvature is effect accounting for the
+[48:23.20] physical effects of gravitation that's
+[48:24.96] uh from calculations we've done today
+[48:27.68] but
+[48:29.12] the part that we haven't really
+[48:30.16] discussed today and we will discuss
+[48:34.08] later is that curvature is determined
+[48:39.68] itself by matter
+[48:51.60] well not really just matter actually
+[48:54.24] matters perhaps uh
+[48:56.48] over simplifying it curvature is
+[48:58.32] determined by the distribution of
+[49:00.16] stress energy and momentum
+[49:04.96] in space-time and therefore
+[49:08.16] and then vice versa so there's this
+[49:10.24] continuous interplay
+[49:11.92] between the distribution of stress
+[49:15.44] energy which affects the curvature
+[49:19.28] of space-time curvature affects the
+[49:21.84] locations
+[49:22.88] of test particles or test masses and
+[49:26.48] test masses are masses right a part is
+[49:29.44] matter itself
+[49:30.88] curvature tells matter how to move on
+[49:32.64] these freely falling geodesics
+[49:34.16] which then redefines what it means for
+[49:36.08] the the distribution of stress and
+[49:37.84] uh redefines this distribution of stress
+[49:40.40] energy which changes the curvature and
+[49:41.84] so on
+[49:44.32] and so this
+[49:53.92] so stress energy
+[49:57.12] uh tell space time how to move and
+[49:59.44] curvature tells how
+[50:01.60] tells how mata moves so there's this
+[50:04.32] non-linear
+[50:05.12] it'll turn out to be non-linear
+[50:06.88] interplay between these two concepts
+[50:08.64] they determine each other
+[50:10.40] and the extraordinary thing that the
+[50:12.56] almost divine aspect of general
+[50:14.32] relativity is that this holds together
+[50:16.08] it doesn't
+[50:16.72] blow to pieces and become inconsistent
+[50:19.76] this leads to a beautifully consistent
+[50:21.60] theory a complete
+[50:23.20] theory of essentially of itself
+[50:26.24] and that's an amazing thing that you
+[50:28.48] that such a thing could exist
+[50:29.76] especially when you you work at trying
+[50:31.44] to build these kinds of theories
+[50:33.20] and you find that it's not so trivial to
+[50:34.88] come up with something like that that
+[50:36.00] all holds together
+[50:37.60] well that's the that's a story for
+[50:40.00] another
+[50:40.80] let's say 20 lectures so the plan is
+[50:44.16] this is your first two lectures of
+[50:45.60] general relativity you've seen
+[50:47.60] uh the key principles underlying the
+[50:49.44] formulation of general relativity
+[50:51.52] you've seen the einstein's equivalence
+[50:54.32] principle we've seen mark's principle
+[50:55.76] we've done some calculations and moving
+[50:57.36] between reference frames
+[50:58.96] but actually implementing carrying out
+[51:01.20] the physical content
+[51:02.48] of einstein's formulation of general
+[51:04.08] relativity
+[51:05.68] it's not sufficient really to with the
+[51:07.28] maths that we have currently
+[51:08.72] at our disposal we have to develop the
+[51:10.72] mathematics of
+[51:11.76] of curvature the mathematics of of
+[51:14.88] space-time manifolds that aren't flat
+[51:18.48] and that requires a bit of work without
+[51:21.84] work you don't you can't expect any
+[51:23.44] payoff
+[51:24.24] you only get what you put into it in
+[51:25.68] this course and that's the work that
+[51:27.20] we're going to commence next week
+[51:28.80] in lecture three but for now that's it
+[51:31.44] thank you very much
+[51:32.48] goodbye

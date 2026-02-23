@@ -1,0 +1,577 @@
+# General Relativity, Lecture 16: isotropy and homogeneity in cosmology
+# YouTube: https://www.youtube.com/watch?v=ghpQF1Pl23E
+# Auto-generated transcript
+
+[00:00.08] hello and welcome back to introduction
+[00:01.84] to general relativity
+[00:03.12] in today's lecture we're going to take a
+[00:04.80] look at cosmology
+[00:07.36] and namely space times with homogeneity
+[00:10.00] and isotropy
+[00:11.04] and we're going to attempt to set up the
+[00:14.56] equations of such a homogeneous and
+[00:17.20] isotropic space time
+[00:18.64] in order that we in the next lecture
+[00:21.04] solve einstein's equations or
+[00:22.72] move to the solution of einstein's
+[00:24.40] equations in this cosmological context
+[00:28.88] so if you recall from the previous
+[00:30.80] lecture we introduced the notions of
+[00:33.04] homogeneity
+[00:34.24] and isotropy and today
+[00:37.76] we're going to take those discussions
+[00:39.52] and implement them at the level of the
+[00:42.84] metric
+[00:44.16] so suppose our manifold m modeling
+[00:47.60] space time modeling the entire universe
+[00:56.96] let's suppose that our space time is
+[00:59.76] homogeneous and isotropic
+[01:11.60] so the con the question now is what
+[01:13.68] consequences does that have for the
+[01:15.52] fundamental degree of freedom
+[01:16.80] that we need to describe our spacetime
+[01:18.72] namely the metric
+[01:27.76] so the metric gab is the fundamental
+[01:31.68] fundamental a dynamical variable that
+[01:33.52] we're solving for in general relativity
+[01:37.52] and that's our goal today to work out if
+[01:40.24] what if any
+[01:41.12] are there consequences of homogeneity
+[01:43.04] isotropy for the metric
+[01:44.56] now our the hope here is that by
+[01:47.28] assuming the symmetries of homogenating
+[01:49.36] isotropy the metric gets simplified
+[01:51.68] and when you simplify something you can
+[01:53.76] throw away degrees of freedom that you
+[01:55.36] have to
+[01:57.60] take into a consideration so that the
+[01:59.92] problem that you have to solve the
+[02:01.20] einstein's field equations
+[02:02.72] hopefully becomes simpler indeed of
+[02:04.40] course it does
+[02:08.00] to work out these consequences it's very
+[02:10.16] helpful
+[02:12.48] um to restrict
+[02:15.84] the metric the general
+[02:19.20] metric of space-time
+[02:22.64] g a b we want to restrict that
+[02:26.56] to a three dimensional metric
+[02:30.40] h a b depending on t
+[02:34.32] on these surfaces sigma t that we
+[02:37.04] introduced in the previous lecture
+[02:41.20] so it's a really important uh device
+[02:44.40] that we're going to employ now we're
+[02:45.52] going to instead of looking firstly at
+[02:46.96] the full metric gab we're going to
+[02:48.24] instead
+[02:48.88] look at the three-dimensional induced
+[02:50.64] metric on sigma t
+[02:54.00] and study the consequences of
+[02:56.40] homogeneity and isotropy
+[02:58.64] for this induced metric and then later
+[03:00.80] we will
+[03:03.36] embed the metric h a b back into g a b
+[03:06.80] and then argue that we don't have to add
+[03:08.88] that many extra degrees of freedom
+[03:13.68] all right then let's take a look at
+[03:15.12] homogeneity what does this mean
+[03:17.92] for the metric hab the induced
+[03:20.16] three-dimensional metric
+[03:21.92] h-a-b well it means that there exists an
+[03:25.44] isometry
+[03:28.32] of h-a-b so diphymorphism that preserves
+[03:31.76] the
+[03:33.20] the metric which takes
+[03:38.64] any point p
+[03:42.00] in this surface sigma t hyper surface
+[03:45.44] sigma t
+[03:46.40] to another point q in sigma t that's
+[03:49.12] what homogeneity means
+[03:50.80] and isotropy what does it mean
+[03:55.92] there exists an isometry
+[04:01.28] of h a b well i should put t everywhere
+[04:03.76] but when i forget to put t then
+[04:05.44] i'm still talking about h e b restricted
+[04:07.20] to sigma t
+[04:08.96] um no we're not
+[04:12.84] isotropy we can phrase it differently
+[04:16.08] isotropy implies that it is impossible
+[04:24.88] to construct a geometrically preferred
+[04:27.36] vector
+[04:39.28] in big sigma t
+[04:43.60] now we're going to take aim at the
+[04:45.12] second constraint first of all
+[04:47.12] and then uh use homogeneity
+[04:50.16] later and the way we're going to take
+[04:53.20] aim at the second constraint is we're
+[04:54.56] going to try and
+[04:56.16] we're going to try and build a
+[04:57.36] geometrically preferred vector on sigma
+[04:59.84] t
+[05:00.80] there's a handful of ways where you
+[05:02.32] could do this and
+[05:03.92] i will go through in detail one style of
+[05:06.64] argumentation which would
+[05:08.00] in principle select out a geometrically
+[05:10.32] preferred vector on sigma t
+[05:12.16] and then by arguing that that can't be
+[05:14.00] the case we will
+[05:16.40] uh infer a very very
+[05:19.52] substantial simplification of the metric
+[05:21.04] h a b
+[05:22.72] all right so
+[05:27.04] here it goes the second constraint
+[05:30.72] namely isotropy
+[05:36.84] uh implies the following
+[05:43.44] so what we're going to do is we're going
+[05:45.60] to
+[05:48.72] we'll build a uh
+[05:52.08] riemann tensor
+[05:58.16] for sigma t as follows right we just
+[06:00.40] take the metric
+[06:04.00] h a b
+[06:10.32] and we build the riemann tensor
+[06:12.16] following the rules of the previous
+[06:13.44] lectures
+[06:14.00] this is the beauty of having done all
+[06:16.40] this hard work in the past
+[06:18.16] 12 lectures or so we can just
+[06:21.44] uh by doing all that hard work in
+[06:23.44] arbitrary space-time dimensions we can
+[06:25.36] do these kind of tricks without having
+[06:26.64] to add any kind of argument we just say
+[06:28.24] here's a metric on a three-dimensional
+[06:30.24] manifold just construct the riemann
+[06:32.80] tensor and now you know what that means
+[06:37.20] so we construct the riemann tensor and
+[06:38.64] we got to give it distinguish it somehow
+[06:40.16] from the renal tensor of our spacetime m
+[06:42.00] and so we put this little
+[06:42.96] brackets three of the top left
+[06:44.72] superscript
+[06:47.20] now we can raise the index
+[06:50.72] c if we so like
+[06:57.60] and then we get this object here
+[07:00.72] r a b c d which is just defined to be
+[07:05.52] r a b c prime d h c
+[07:08.64] prime c so that's just the raised i've
+[07:11.12] just raised an index on
+[07:12.32] our three dimensional riemann curvature
+[07:14.84] tensor
+[07:16.32] and the reason we did this is we can
+[07:20.32] interpret i mean we could have
+[07:22.40] interpreted it before but whatever
+[07:24.08] this makes it much more explicit we can
+[07:26.72] interpret this
+[07:28.80] as a linear map
+[07:34.48] so our three-dimensional riemann test is
+[07:37.36] now interpreted as a linear map
+[07:39.28] from a subspace
+[07:42.72] well first of all it's from zero to
+[07:47.04] two tenses of type zero two and that
+[07:50.32] much is
+[07:50.96] pretty much clear uh
+[07:55.84] at a point p at any point p
+[08:01.28] now there's something kind of remarkable
+[08:03.12] about this linear map
+[08:05.04] that is that it not only um
+[08:08.32] maps from tensors of type zero two to
+[08:10.08] type zero two but also
+[08:12.48] takes the subspace of anti-symmetric
+[08:14.56] tenses of type zero two to itself
+[08:17.20] so it preserves the subspace so that's a
+[08:19.84] little exercise for you
+[08:20.96] so you gotta argue that
+[08:24.08] this linear map
+[08:27.76] 3 a b c d
+[08:30.88] annihilates symmetric tenses
+[08:40.56] in t02 okay that's an important little
+[08:43.52] exercise for you to
+[08:44.72] convince yourself that way
+[08:47.92] we induce a linear map
+[08:58.48] l going from w to w
+[09:06.84] from
+[09:11.32] rabcd
+[09:14.48] where w is the space
+[09:18.48] of two forms
+[09:23.68] at this at the point at a point p so
+[09:26.80] remember two forms are anti-symmetric
+[09:28.96] tenses of type zero two
+[09:33.44] and now uh this this linear map right
+[09:36.00] we're moving we're mapping from
+[09:37.68] uh now a real vector space to a real
+[09:39.60] vector space we have a linear map
+[09:41.36] and what kind of linear map is it well
+[09:43.84] it turns out that it's a pretty nice
+[09:45.12] linear map
+[09:48.48] so the symmetric property of the riemann
+[09:51.28] curvature tensor
+[09:56.88] that you argued in as an exercise in a
+[09:59.36] previous lecture
+[10:00.24] so that you can swap these indices a b
+[10:03.12] and c d
+[10:03.76] as a pair
+[10:07.84] this symmetry property implies
+[10:12.16] that l is a symmetric matrix
+[10:23.92] and further it's on an inner product
+[10:30.84] space
+[10:34.80] the inner product space is that of all
+[10:36.96] uh is w the space of any symmetric
+[10:39.36] two tenses uh type zero two tensors and
+[10:42.56] what's the inner product well
+[10:44.32] you know you've gotta distinguished
+[10:46.40] inner product here
+[10:47.44] uh furnished by
+[10:50.88] ajb right the the tensor the
+[10:54.56] metric on sigma t
+[10:57.84] so we've got ourselves a a symmetric
+[11:01.36] matrix acting on an inner product space
+[11:03.60] and whenever you are fortunate enough to
+[11:05.28] have
+[11:06.00] a uh symmetric matrix or on an inner
+[11:08.40] product space
+[11:09.12] then you you know that the matrix is
+[11:11.36] diagonal and it has real eigenvalues
+[11:32.40] so the matrix l has real eigenvalues and
+[11:35.36] eigenvectors so let's just diagonalize
+[11:37.20] it
+[11:39.36] well if we do that then we have a
+[11:42.88] basis independent way of selecting a
+[11:45.68] geometrically distinct two form at p
+[11:48.80] if if if the eigenvalues are not
+[11:51.60] degenerate
+[11:52.64] so there's three
+[11:56.24] eigenvalues
+[12:00.72] i'm not much mistaken this is space of
+[12:03.04] two forms
+[12:04.00] has dimension
+[12:11.28] three choose two
+[12:14.72] which is three right yeah
+[12:19.20] so this matrix l has three eigenvalues
+[12:22.40] and three eigenvectors
+[12:26.08] and the argument is that
+[12:31.36] all eigenvalues of l
+[12:36.64] are degenerate or equal
+[12:39.68] let's just say cool is easy to write to
+[12:42.40] all the imo's of l are equal
+[12:44.48] now why is that well suppose they
+[12:46.08] weren't equal that would mean
+[12:47.60] that there was one eigenvalue one odd
+[12:49.92] one out right
+[12:50.72] and from that you would be able to
+[12:53.20] select at every point p in the manifold
+[12:55.28] a two form corresponding to this one odd
+[12:58.32] one out
+[12:59.60] and that two form would be a distinct
+[13:02.40] distinguished two form chosen in a basis
+[13:04.56] uh independent prescription and that
+[13:07.76] would be a preferred
+[13:09.36] 2 form at p but a 2 form
+[13:12.72] can always be completed to a unique 3
+[13:14.88] form up to a sign
+[13:16.40] and that would therefore choose a
+[13:17.92] preferred vector at p so that's why the
+[13:19.92] eigenvalues
+[13:21.68] are equal
+[13:26.80] and i'll just summarize that discussion
+[13:28.48] as otherwise we could
+[13:31.20] construct our preferred
+[13:35.84] vector
+[13:41.44] at the point p and so we learned that l
+[13:45.04] is proportional to the identity matrix
+[13:47.20] the three by three identity matrix
+[13:49.68] and this means that the
+[13:53.12] riemann tensor r a b c d
+[13:56.64] the with the appropriately raised
+[14:00.96] indices it has the following form if you
+[14:04.16] just
+[14:06.00] work it out as an exercise what identity
+[14:08.88] matrix must mean
+[14:10.32] in terms of the components of the
+[14:11.68] riemann tensor then this this
+[14:14.40] formula here involving these delta
+[14:15.92] functions
+[14:20.24] and this k here is the constant of
+[14:28.84] proportionality
+[14:34.56] that constant and proportionality there
+[14:40.56] and is it a constant well it really is a
+[14:42.72] constant thanks to homogeneity
+[15:01.92] but if you're not satisfied with that
+[15:03.28] statement then let's just prove it
+[15:04.96] uh independently
+[15:10.48] obviously argue this
+[15:20.96] so what we're going to do is we're going
+[15:21.84] to lower the indices c and d
+[15:30.80] and we will have the following
+[15:34.96] three-dimensional riemann curvature
+[15:36.72] tensor for sigma
+[15:39.12] t
+[15:42.48] and now we're going to uh infer
+[15:45.68] that isotropy alone will
+[15:49.68] ensure that k is a constant
+[15:56.88] and the way we will do that is we'll
+[15:58.08] look at the bianchi identity so
+[16:06.32] the bianchi identity says that zero
+[16:08.56] equals
+[16:09.36] the covariant derivative of the three
+[16:16.48] dimensional riemann curvature tensor
+[16:21.04] which because of the form of
+[16:24.64] the metric of the rerun curvature tens
+[16:28.00] as a function of the metric and the fact
+[16:29.36] that the covariant derivative associated
+[16:32.00] to the metric
+[16:35.20] when applied to the metric vanishes
+[16:47.20] we learn that this
+[16:50.72] bianchi identity is the same as just
+[16:53.60] applying the covariance derivative to
+[16:55.04] this
+[16:56.00] this uh scalar k
+[16:59.92] now if the dimension of the manifold is
+[17:03.28] greater than or equal to three because
+[17:04.80] if the dimensions two and one things are
+[17:06.96] highly degenerate and you don't get any
+[17:08.40] new information there
+[17:10.08] then the fact that the right hand side
+[17:11.84] of this equation vanishes
+[17:13.68] well that tells us uh that can happen if
+[17:16.88] and only if
+[17:17.68] d e k is vanishing or in other words um
+[17:22.32] k is constant on sigma t
+[17:26.56] so we've learned something pretty pretty
+[17:28.40] remarkable via this this
+[17:30.24] sequence of um of steps
+[17:34.40] you know we start by in building an
+[17:36.00] induced riemann curvature tensor
+[17:38.80] on this uh hypersurface sigma t
+[17:42.40] we use isotropy to restrict the
+[17:45.36] structure of this riemann curvature
+[17:47.20] tensor
+[17:48.56] and then we learn that that implies in
+[17:52.88] turn
+[17:53.36] that the riemann curvature tensor has a
+[17:55.12] specific form in terms of the induced
+[17:57.28] metric hab
+[18:02.64] and that becomes a definition now
+[18:22.88] so it's based on manifold where the
+[18:25.28] curvature tensor has this very
+[18:26.80] particular form that we've derived here
+[18:28.88] as a consequence of isotropy and so on
+[18:31.36] there's a
+[18:32.08] consequence of isotropy as a name
+[18:36.40] it's called uh with k constant
+[18:44.24] it's called a space of constant
+[18:45.60] curvature
+[18:54.16] sort of not hard to imagine the the
+[18:56.00] physics behind this definition
+[18:58.00] you know whichever way you do your
+[18:59.84] little remember the riemann curvature
+[19:01.20] tensor tells you the failure of
+[19:02.96] parallel transport operations to commute
+[19:05.68] and it's saying no matter which way you
+[19:07.12] do these little
+[19:07.92] parallel transport operations you get
+[19:09.92] the same failure to come
+[19:11.20] to to commute so the curvature is
+[19:14.16] constant in every direction
+[19:22.84] curvature
+[19:24.56] so now we've got this highly restrictive
+[19:29.52] definition and consequence
+[19:33.68] a highly restrictive
+[19:37.44] structure of the riemann curvature so
+[19:39.04] we're going to describe some
+[19:40.32] representative space times that exhaust
+[19:42.88] the possible options of the values of k
+[20:02.32] you know we've said the riemann
+[20:03.36] curvature tensor has to have this form
+[20:05.60] now we're going to describe now a
+[20:08.40] complete
+[20:09.12] list of space times that exhibit this
+[20:11.36] riemann curvature tensor
+[20:18.56] and these will represent our
+[20:23.28] hypotheses hypothesis models for
+[20:26.88] homogeneous and isotropic space times
+[20:32.32] all right we've got three cases to deal
+[20:34.16] with firstly
+[20:35.52] the case k is bigger than zero
+[20:38.72] and this is achieved you can
+[20:42.32] go ahead and calculate the riemann
+[20:43.84] curvature tensor for this space time
+[20:46.96] by sigma
+[20:52.00] t being three spheres embedded in
+[20:55.76] r four
+[21:15.28] now remember this r4 is a fictitious r4
+[21:18.40] the three spheres are considered as in
+[21:22.48] intrinsic manifolds by themselves
+[21:32.24] now this r here is the radius of this
+[21:35.76] three sphere and the corresponding
+[21:42.84] metric
+[21:47.04] is described in spherical coordinates
+[21:54.64] what is it well it's this is one
+[21:57.20] representative
+[21:58.00] way of writing a metric uh here we have
+[22:00.88] the
+[22:01.20] angle variables and radial variables is
+[22:05.84] vanished because we're on the surface of
+[22:07.44] the sphere
+[22:12.80] so the case k bigger than zero positive
+[22:15.92] curvature so to speak uh is that
+[22:19.28] is achieved by three dimensional spheres
+[22:22.00] and you can think of these three
+[22:22.88] dimensional spheres
+[22:24.16] explicitly as being embedded in r4 but
+[22:26.72] this alpha has got nothing to do with
+[22:28.32] the four dimensional space time that we
+[22:29.76] live in it's just a way of
+[22:31.12] describing these manifolds uh as
+[22:33.36] embedded manifolds you must think of
+[22:34.88] these three spheres as actually being
+[22:36.88] intrinsically defined as
+[22:38.24] three-dimensional manifolds
+[22:40.08] and the metric is just the standard one
+[22:42.48] in spherical coordinates
+[22:44.24] now this this is an example uh
+[22:49.52] this is called a closed universe
+[23:01.36] this case where the manifold is this
+[23:04.48] the spatial slices are close us three
+[23:07.68] spheres because it's compact right
+[23:10.40] everything's connected to everything
+[23:11.68] there's no going off to infinity
+[23:15.20] okay the case k equals naught well
+[23:17.12] that's pretty easy right this is just
+[23:18.72] flat 3d space
+[23:25.52] and the metric is just that familiar d x
+[23:28.16] squared plus d y
+[23:29.28] squared plus d z squared this is
+[23:32.64] called an open universe for
+[23:39.84] i hope fairly obvious reasons
+[23:42.96] all right uh well infinity is not
+[23:45.12] explicitly included in this this
+[23:46.96] this slice so you can go off to infinity
+[23:50.16] in various directions we can also
+[23:52.00] describe the metric using
+[23:53.52] uh spherical coordinates um we may do
+[23:56.40] that we in fact i think we do do that
+[23:57.76] later on
+[24:00.08] that's a nexus a little warm-up exercise
+[24:02.00] view to remember how to express the
+[24:03.68] metric of flats based on the spherical
+[24:05.28] coordinates and the the somewhat
+[24:07.12] interesting case
+[24:07.92] also of there is a third case when
+[24:09.92] there's negative curve
+[24:11.68] what you might call negative curvature
+[24:13.04] when k is less than equal to zero
+[24:16.00] and that's obtained by hyperboloids
+[24:35.28] so you can think of hyperboloids as
+[24:36.80] being hypersurfaces
+[24:38.56] in r4 embedded manifolds in r4
+[24:45.04] with obeying this hyperbola equation
+[24:48.40] here
+[24:49.76] radius r and the metric
+[24:59.28] in hyperbolic coordinates
+[25:07.20] the metric reads d s squared equals
+[25:10.40] d psi squared plus sinch squared
+[25:14.16] psi d theta squared plus
+[25:17.84] sine squared theta d phi squared
+[25:21.68] and this is also an open universe
+[25:36.80] now we've print we've presented a list
+[25:40.64] of representative space times that
+[25:42.72] exhaust all the possible
+[25:44.96] values of k we can now
+[25:48.80] take these spatial slice metrics and and
+[25:52.00] uh
+[25:52.48] embed them and use them to induce the
+[25:55.84] full metric of space
+[25:57.20] of four dimensional space-time
+[26:00.48] and to do this we're going to exploit
+[26:02.16] isotropy and homogeneity once again
+[26:04.88] so the point being that as isotropic
+[26:08.84] observers
+[26:11.04] move on world lines
+[26:16.32] orthogonal to sigma t
+[26:25.44] we can express the metric the full
+[26:29.04] 4d metric
+[26:33.76] as follows
+[26:49.28] so we've
+[26:53.36] got
+[26:56.40] an additional piece of data essentially
+[26:58.40] that appears in the metric here
+[27:02.64] you got to explain what that is or
+[27:03.92] remind you what that is
+[27:06.72] so here u a is the
+[27:09.76] tangent vector
+[27:15.76] for the isotropic observer
+[27:21.28] all the observers right this field of
+[27:23.28] isotropic observers
+[27:25.12] and uh h-a-b-t
+[27:29.04] is
+[27:32.88] one of the metrics above
+[27:49.04] now we can make things
+[27:54.08] more consistent by uh the following
+[27:57.04] observation
+[27:59.20] so we note that all isotropic observers
+[28:01.76] are going to
+[28:02.32] assign the same proper time tau
+[28:05.52] to the surface sigma t and so what we're
+[28:08.72] going to do is
+[28:10.24] express our metric
+[28:13.84] in a coordinate system adapted to the
+[28:16.40] proper tone
+[28:44.96] so in the these coordinates
+[28:52.00] our metric becomes the following
+[28:59.28] we have the following metric d s squared
+[29:01.68] is minus d
+[29:03.04] tau squared right the constant in front
+[29:04.96] of d tau is one that's the proper time
+[29:07.44] plus there's a function a squared tau
+[29:10.88] which is more or less the the the
+[29:13.04] constant k
+[29:14.80] and then you have three options right
+[29:16.56] you have either
+[29:18.24] closed three sphere
+[29:28.24] you have flat three space
+[29:38.48] or you have hyperboloid
+[29:54.48] and this is called the friedmann
+[30:00.30] [Music]
+[30:06.84] lemaitre
+[30:10.56] robertson
+[30:15.60] walker metric
+[30:19.84] or flrw metric
+[30:37.20] and this is going to be our fundamental
+[30:39.68] model
+[30:40.24] for highly simplified of course for the
+[30:43.44] universe
+[30:44.16] in the next couple of lectures
+[30:51.04] so what we've done is by assuming
+[30:53.44] homogeneity
+[30:54.48] and isotropy we've reduced the task
+[30:58.32] of finding the metric
+[31:01.44] of the of a universe of a highly
+[31:04.40] symmetric
+[31:05.04] version of our universe to the task of
+[31:07.28] finding
+[31:08.16] just one single scalar function a
+[31:11.36] tao and that's a
+[31:14.80] huge simplification
+[31:22.64] we just need to solve
+[31:26.96] for a tau just one single scalar
+[31:29.68] function a of tau
+[31:31.52] that's an extraordinary simplification
+[31:33.92] and we hope
+[31:35.20] sincerely and it is indeed a well
+[31:37.84] justified hope that when we substitute
+[31:39.44] this metric into einstein's field
+[31:40.88] equations with the appropriate
+[31:42.32] stress energy tensor on the right hand
+[31:43.92] side that
+[31:45.60] we'll be able to reduce all of the 16 or
+[31:49.28] whatever 10 einstein field equations
+[31:51.20] down to a single differential equation
+[31:52.96] say for a of tau and that hope is
+[31:54.88] realizable and we will be able to solve
+[31:56.88] for a
+[31:57.36] of tau and but that however will be the
+[32:00.00] subject of the next lecture
+[32:02.24] that's it for this lecture thank you
+[32:04.40] very much and
+[32:05.60] goodbye

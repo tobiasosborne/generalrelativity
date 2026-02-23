@@ -1,0 +1,1267 @@
+# General Relativity, Lecture 13: Einstein's field equations, linearised solutions
+# YouTube: https://www.youtube.com/watch?v=Xy389BDX3AU
+# Auto-generated transcript
+
+[00:00.00] hello and welcome back to introduction
+[00:01.60] to general relativity
+[00:03.20] in the last lecture we introduced
+[00:05.12] einstein's field equations
+[00:06.56] and in today's lecture we're going to
+[00:08.00] continue our study of einstein's field
+[00:10.00] equations
+[00:10.96] study and commence the study of their
+[00:13.52] solution
+[00:14.96] but only in perturbation theory at the
+[00:17.68] linearized
+[00:18.80] level so if you recall in the previous
+[00:22.32] lecture
+[00:23.28] we introduced
+[00:27.12] the following equation r a b
+[00:30.48] minus a half r the richie scalar times g
+[00:33.04] a b the metric
+[00:34.40] is equal to eight pi t a b where t a b
+[00:38.00] is the stress energy tensor
+[00:40.72] so this is einstein's field equation or
+[00:44.08] field equations as it's really a lot of
+[00:46.16] equations all packaged into one little
+[00:49.36] compact
+[00:52.80] equation and in this lecture
+[00:56.88] we're going to start investigating the
+[00:59.28] general properties
+[01:00.64] of this set of equations and also the
+[01:04.16] how to solve them now it's pretty
+[01:06.80] difficult to solve these equations it's
+[01:08.80] non-trivial
+[01:09.68] and we're going to work really hard and
+[01:12.00] in fact it's going to occupy us pretty
+[01:13.44] much for the rest of this course
+[01:15.36] the the task of solving these equations
+[01:17.28] in some very specific
+[01:18.80] and restricted settings
+[01:22.24] so it's pretty fair to say that
+[01:25.52] solving einstein's field equations is
+[01:27.36] still a bit of a research topic
+[01:29.52] in more general settings
+[01:33.76] okay let's start with some basic
+[01:38.84] properties
+[01:40.40] of these of this uh equation of motion
+[01:43.36] for space time
+[01:45.20] basic properties what are some basic
+[01:47.12] things that we can do with these
+[01:48.32] equations and some basic
+[01:49.76] consequences we can derive well we can
+[01:55.28] you know a good a good thing to do
+[01:56.72] whenever you're faced with an equation
+[01:58.40] of motion is just to start
+[01:59.68] deriving other equations from it by
+[02:02.24] operations that are allowed
+[02:04.00] and that way you'll build up a bank or
+[02:06.56] library
+[02:07.28] of equations that are true
+[02:10.80] given that your master equation of
+[02:12.40] motion is true and then
+[02:14.16] these may or may not be useful in
+[02:15.60] various contexts so the first
+[02:17.44] thing we're going to do is just apply
+[02:19.52] some basic tensor operations
+[02:21.12] to this to einstein's field equation see
+[02:23.60] what kind of consequences we can draw
+[02:25.52] from basic uh basic tensor operations
+[02:29.60] so the first what's the first basic
+[02:32.08] tensor operation you can take when you
+[02:33.52] have a tensors
+[02:34.40] so on the left hands if you look at
+[02:35.76] einstein's field equations what do we
+[02:36.88] have we have on the left hand side we
+[02:38.08] have a rank two tensor on the right hand
+[02:39.36] side we have the rank two tensor
+[02:41.12] when you have a rank two ten so you can
+[02:42.48] always take the trace contract it with a
+[02:44.48] metric
+[02:45.82] [Music]
+[02:47.92] and that's a legal operation and what do
+[02:50.88] you get
+[02:52.08] well when you trace with by contracting
+[02:55.04] with a metric
+[02:56.64] we obtain an equation now
+[03:00.32] which relates the richie scalar r and
+[03:04.32] the trace of the stress energy tensor
+[03:08.88] so that's a simple consequence of
+[03:10.88] einstein's field equations
+[03:13.44] so t is this the trace
+[03:21.60] of the stress energy tensor
+[03:24.80] okay and we can um substitute this
+[03:27.84] equation now
+[03:30.72] back into uh
+[03:36.32] into einstein's field equation so now
+[03:37.84] we're just sort of manipulating
+[03:39.76] einstein's field equations and what do
+[03:42.08] we obtain
+[03:44.56] well you know we obtain the following
+[03:46.80] equation so wherever you saw
+[03:48.40] the richie scala before you can replace
+[03:50.32] that with minus a pi
+[03:51.52] t and so on the left-hand side you've
+[03:53.68] got the
+[03:54.64] the richie tensor and on the right-hand
+[03:57.04] side you have only things
+[03:59.28] nearly only things that depend on the
+[04:01.84] stress energy tensor
+[04:05.76] so this this second equation i've just
+[04:07.52] derived here
+[04:09.36] is well it looks very much like but
+[04:13.52] you know there'll be lots of warnings
+[04:16.96] about this as we go through the course
+[04:18.88] it looks very much like the right hand
+[04:20.96] side is just
+[04:22.64] matter stuff or you know energy
+[04:27.44] matter butter energy matter stress
+[04:31.20] etc and on the left hand side there's
+[04:34.48] geometry
+[04:37.44] right the geometry is dictated or
+[04:39.52] governed by rab
+[04:41.20] and on the right hand side we've just
+[04:42.32] got matter but we haven't really just
+[04:43.84] got right hand side on the
+[04:45.28] matter on the right hand side we've also
+[04:46.72] got geometry
+[04:48.32] in the form of the metric at least
+[04:49.76] explicitly here and indeed implicitly in
+[04:52.40] the structure of the
+[04:53.44] stress energy tensor so you can't really
+[04:55.76] disentangle
+[04:56.96] um how the geometry is encoded in
+[05:00.32] einstein's field equations
+[05:02.08] from how the stress energy and matter
+[05:04.32] energy density and so on is
+[05:06.16] using is encoded in einstein's field
+[05:08.40] equations so there's a i'll say more
+[05:10.48] about this
+[05:11.28] later so although this
+[05:14.48] superficially looks like we've just
+[05:16.32] written an equation where the geometry
+[05:18.64] is totally determined by the stress
+[05:20.00] energy
+[05:21.20] the information is always flowing
+[05:22.48] backwards and forwards in einstein's
+[05:24.16] field equations
+[05:27.76] but sometimes sometimes
+[05:33.04] this equation
+[05:38.96] can uh yield solutions so thinking
+[05:46.40] you know this this formulation of
+[05:47.60] einstein's field equations could
+[05:48.72] sometimes yield solutions to
+[05:52.88] for cases of specific cases of extreme
+[05:55.12] symbols of symmetry
+[05:59.76] okay so now we should
+[06:01.24] [Music]
+[06:05.20] examine some limits you know the next
+[06:07.84] task
+[06:09.84] in in studying the properties of
+[06:12.48] einstein's field equations
+[06:14.48] is to uh well
+[06:19.04] solve it but before we even do that we
+[06:20.88] should really convince ourselves that we
+[06:22.48] do indeed
+[06:23.12] recover the physics we know
+[06:30.40] in the limits where we our current rules
+[06:34.40] where the previous laws of physics apply
+[06:40.72] so do we do we actually recover for
+[06:43.76] example special relativity
+[06:46.24] and
+[06:50.80] newtonian physics
+[06:54.08] as solutions
+[06:57.44] to star in some limits
+[07:04.00] you know in the limits where c goes to
+[07:06.24] infinity or big g goes to zero
+[07:08.96] uh do we actually recover
+[07:12.00] these kind of uh domains of physics
+[07:16.16] to the the solutions to einstein's field
+[07:18.16] equations reduced to a good level of
+[07:20.24] approximation
+[07:21.84] to being describable by special
+[07:24.56] relativity newtonian physics
+[07:26.08] that's not clear at this point although
+[07:28.48] we obtained einstein's field equations
+[07:31.04] in a kind of viral kind of limiting
+[07:32.64] argument you've written down some
+[07:34.24] and we wrote down some equations of
+[07:35.52] motion that doesn't mean that the actual
+[07:36.80] solutions to these equations even exist
+[07:39.04] let alone limit to the cases where we we
+[07:42.24] expect them to be reducing to special
+[07:44.96] relativity or newtonian physics
+[07:46.80] so that's our goal for the next couple
+[07:48.72] of lectures
+[08:02.16] and our goal is to argue
+[08:05.52] that gr reduces to sr
+[08:13.68] or newtonian physics in
+[08:18.16] the non
+[08:23.68] i'll just say in the correct limits
+[08:25.12] because already
+[08:27.36] discussing what we mean by a limit will
+[08:30.08] be slightly complicated
+[08:32.88] and we'll clarify this later
+[08:37.60] let's start by looking at some of the
+[08:42.88] consequences of various limits so
+[08:49.20] one of the simplest limits that we can
+[08:50.72] investigate is the case where the energy
+[08:53.20] of matter
+[09:02.48] as measured by an observer at rest
+[09:11.44] and i have to put scarecrows around that
+[09:18.08] with respect to the whatever the
+[09:20.88] heavenly body or masses
+[09:24.80] or dust or whatever
+[09:49.12] so in this limit where if you're an
+[09:51.84] observer at rest with
+[09:53.12] the masses in your uh
+[09:56.48] determining the gravitational field in
+[09:57.76] your system if you're an observer at
+[09:59.36] rest with these masses
+[10:00.48] and then the distribution of energy and
+[10:02.72] stress energy
+[10:03.60] is such that the masses
+[10:06.64] dominate the stress energy tensor and
+[10:08.96] the stresses are
+[10:09.76] you can neglect them then
+[10:12.96] in that limit t the trace of the stress
+[10:15.76] energy tensor is minus rho
+[10:18.16] which is also minus tab
+[10:21.44] times va vb
+[10:26.16] and we can substitute
+[10:30.40] that into our various formulations
+[10:34.00] of einstein's field equations and then
+[10:35.92] we obtain
+[10:39.28] the following equation
+[10:48.96] so in this particular case you can see
+[10:52.00] that
+[10:54.16] the geometry is directly determined by
+[10:56.96] the distribution of stress energy
+[10:58.88] however a warning is that this will not
+[11:01.28] always be
+[11:01.92] the case
+[11:10.16] now that we've got einstein's field
+[11:11.84] equations in hand
+[11:13.44] it's probably pertinent to summarize the
+[11:15.68] physical content of gr
+[11:17.52] as it is in our course at the current
+[11:19.44] point
+[11:26.08] before moving on
+[11:33.76] so what is the physical content of gr
+[11:35.52] well firstly there's the fundamental
+[11:37.44] assumption
+[11:40.32] of general relativity plus now we've
+[11:43.36] been able to
+[11:44.88] write down an equation
+[11:49.52] capturing the last component of the
+[11:52.24] fundamental
+[11:53.76] assumption of general relativity
+[11:56.88] so space time m the physical content of
+[11:59.12] gr is just the following right space
+[12:00.80] time m is a manifold with lorenzi and
+[12:02.80] metric
+[12:04.00] that's an assumption
+[12:11.68] and the curvature of this metric the
+[12:14.16] curvature of
+[12:15.84] gab is related
+[12:21.68] to the matter distribution
+[12:26.96] stress energy distribution
+[12:30.88] in space time
+[12:35.28] via einstein's field equation star okay
+[12:37.84] so that's the fundamental assumption
+[12:41.28] as it currently stands in our course
+[12:44.72] of general relativity
+[12:48.48] and
+[12:51.60] even in the manipulations we just the
+[12:53.36] elementary manipulations we've just done
+[12:55.12] involving einstein's field equations a
+[12:57.12] couple of things should really be
+[12:58.48] apparent
+[12:59.44] a couple of comments should be made
+[13:02.48] that that
+[13:06.16] highlight or bring out certain aspects
+[13:09.04] of einstein's field equation and general
+[13:10.72] relativity
+[13:11.92] and these these comments have to be made
+[13:13.92] at this point in the course
+[13:15.68] to prevent you from drawing
+[13:19.04] too strong an analogy between general
+[13:21.28] relativity and
+[13:22.88] electrodynamics for example and other
+[13:25.84] fields of physics
+[13:27.04] so the first comment that's really
+[13:29.84] fundamental
+[13:30.56] and you can't get rid of it is that the
+[13:32.72] einstein's field equation
+[13:34.00] isn't is not linear right it's not only
+[13:36.56] not linear it's highly non-linear
+[13:38.48] it's one of the most nonlinear sets of
+[13:41.28] equations
+[13:42.96] that we have in physics
+[13:48.16] it's a highly non-linear system of
+[13:50.40] coupled
+[13:51.28] partial differential equations
+[14:00.00] involving the metric
+[14:06.64] when you go to some coordinate system
+[14:09.20] obviously
+[14:15.44] it it and it's further it's not not
+[14:17.60] first order like maybe
+[14:19.76] the order of the the derivative might be
+[14:21.52] low and save you
+[14:23.36] and allow you to to use some
+[14:25.28] computational tricks from
+[14:26.80] not only partial differential equations
+[14:28.48] but no it's even second order
+[14:30.72] in derivatives so it's really it's
+[14:33.04] fiendish
+[14:34.72] set of equations and there's lots of
+[14:36.80] them they're non-linear they're
+[14:38.56] coupled and they're they're second order
+[14:44.48] so that's the first comment to make it's
+[14:46.00] really the one of the uh
+[14:48.08] most challenging set of equations of
+[14:49.84] motion that exists in physics i mean
+[14:51.36] quantum mechanics is nothing in
+[14:52.72] comparison to this right quantum
+[14:54.00] mechanics is linear
+[14:56.72] the difficulty in quantum mechanics is
+[14:58.24] there's just so many dimensions
+[15:00.16] of course it must be said at this point
+[15:02.16] i won't write it down but it
+[15:03.68] must be said that any nonlinear equation
+[15:05.60] can be reduced to an infinite set of
+[15:07.12] linear equations so
+[15:08.16] arguably the difficulty in quantum
+[15:09.76] mechanics and general relativity
+[15:11.76] is not not uh income
+[15:14.96] incomparable uh
+[15:18.24] the second comment and i alluded to this
+[15:20.32] earlier today is that unlike
+[15:22.16] for example in electrodynamics with
+[15:25.12] maxwell's equations
+[15:31.60] we cannot regard the stress energy
+[15:33.52] tensor simply as a source
+[15:40.96] you know in maxwell's equations you have
+[15:42.64] the current for current
+[15:44.16] and you can regard that just simply as a
+[15:45.68] source you specify the current and then
+[15:47.68] the electro
+[15:48.24] electromagnetic field is just completely
+[15:49.84] determined
+[15:52.48] by the current you know the distribution
+[15:54.56] of charge and current
+[15:57.52] uh so we can't regard however in general
+[16:00.64] relativity
+[16:03.36] as a source that's somehow independently
+[16:06.00] causing
+[16:06.80] causating the the gravitational field
+[16:10.96] and met therefore metric
+[16:16.80] this is really fundamental uh
+[16:20.24] fundamental aspect of general relativity
+[16:22.08] that maxwell's equations simply doesn't
+[16:23.76] have
+[16:25.52] and the reason is
+[16:30.16] just defining the stress energy tensor
+[16:34.96] involves the metric
+[16:40.56] certainly in the examples that are
+[16:42.16] relevant in in cosmology
+[16:44.24] and in other
+[16:47.36] in even the electromagnetic field for
+[16:50.16] example
+[16:52.40] so the the reason the naive reason and
+[16:54.96] really the fundamental reason also that
+[16:56.64] you can't
+[16:57.76] regard tab as a source is that tab the
+[17:00.00] stress energy tensor itself is defined
+[17:02.16] in terms of the metric
+[17:07.36] for most physical systems that we're
+[17:10.88] going to be interested in
+[17:12.08] in particular perfect fluids
+[17:15.76] so we can't even interpret
+[17:26.96] the stress energy tensor before solving
+[17:33.36] einstein's field equation you have to
+[17:34.56] solve for everything all at once
+[17:36.44] self-consistently self-consistently
+[17:43.28] and the third one third comment
+[17:46.64] uh that that we have to make about
+[17:48.24] einstein's field equations and this is
+[17:49.68] you know this is this is the stuff of
+[17:54.56] of magic and
+[17:58.64] an or
+[18:02.24] and that is that einstein's field
+[18:04.00] equations
+[18:06.72] are amazingly self-consistent in a way
+[18:09.68] that's
+[18:10.48] incredibly difficult to engineer
+[18:13.68] and that is uh and i'll explain what i
+[18:16.40] mean
+[18:16.72] so i transferred equations implies this
+[18:19.28] divergence condition on the stress
+[18:20.80] energy tensor right that's
+[18:22.40] in fact how we how i argued in the
+[18:24.88] previous lecture
+[18:28.48] the the the modification of the
+[18:31.76] ritchie tensor to the einstein's tensor
+[18:33.92] that's one way to introduce it
+[18:36.40] and so now okay so what right
+[18:39.52] but the the interesting thing about this
+[18:42.48] equation is that it may be argued
+[18:44.80] that this equation
+[18:48.00] actually implies something else right
+[18:53.12] it implies and this is the magic that
+[18:55.68] for a dust
+[18:56.64] right of grains
+[19:01.20] and by that you should sort of think of
+[19:02.88] test bodies
+[19:06.72] so for a dust of grains exerting no
+[19:08.64] force on each other so in the limit
+[19:10.16] where you've got these little test
+[19:11.28] masses like a dust in space time
+[19:19.84] this equation implies
+[19:26.80] that the grains of sand or dust or
+[19:29.44] whatever
+[19:30.96] move on geodesics
+[19:39.52] so effectively einstein's field
+[19:43.04] equations
+[19:44.80] contain the geodesic hypothesis already
+[19:53.12] so i began the our discussion of general
+[19:56.24] relativity by saying that it's a
+[19:57.60] hypothesis that that
+[19:59.20] obs observers freely pulling test masses
+[20:01.28] move on on geodesics
+[20:04.84] but the equation and then
+[20:08.64] you know by its various argumentation
+[20:10.64] strategies we got to uh einstein's field
+[20:12.72] equations but now einstein's field
+[20:13.92] equations themselves contain
+[20:16.00] effectively the geodesic hypothesis that
+[20:18.32] freely falling masses move on
+[20:20.00] geodesics of the sp of the of the
+[20:22.08] space-time metric
+[20:23.52] and now that's an extraordinary piece of
+[20:25.92] self-consistency that comes out of the
+[20:28.16] uh out of einstein's field equations and
+[20:31.04] this kind of thing
+[20:32.32] is what really convinces you that that
+[20:35.12] there must be something right about
+[20:36.56] general relativity usually
+[20:38.56] if you try to to write down equations of
+[20:40.96] motion for
+[20:41.68] complex systems usually you can write
+[20:44.40] something down pretty easy but then
+[20:46.80] the minute you check it for
+[20:48.32] self-consistency with other assumptions
+[20:50.00] that may or may not be built directly
+[20:51.52] into the equations of motion you find
+[20:52.96] that things aren't consistent
+[20:55.60] so that's an amazing consequence of
+[20:57.84] einstein's field equations that
+[20:59.84] they effectively contain the geodesic
+[21:01.68] hypothesis without that being directly
+[21:03.28] built into them
+[21:05.12] and you know that alone is is
+[21:07.52] breathtakingly
+[21:08.64] impressive and something that
+[21:12.32] is sort of difficult to comprehend even
+[21:14.64] how that came about
+[21:16.48] because it's it's you know this
+[21:17.92] magically wants to be correct this
+[21:19.92] theory
+[21:24.56] okay so with these comments in hand
+[21:26.64] let's get to the business in the rest of
+[21:28.40] the course
+[21:29.76] of uh solving einstein's field equation
+[21:32.32] this is something we should get to now
+[21:34.72] and we won't get away from like this is
+[21:36.40] it we're going to be spending the rest
+[21:37.76] of this course
+[21:39.52] solving star trying to and probably
+[21:42.40] failing most of the time
+[21:46.48] of course we're not going to completely
+[21:48.40] fail i'm going to present to you some
+[21:50.00] idealized solutions
+[21:51.36] but solving einstein's field equations
+[21:53.68] in the realistic
+[21:54.80] situation of the initial conditions of
+[21:56.48] our universe is incredibly difficult
+[22:00.56] we can only approach its solution
+[22:04.16] via various limits and the first
+[22:08.80] limit that we're going to investigate is
+[22:10.08] the limit where gravity is weak
+[22:12.64] and i'll explain what i mean by that um
+[22:15.20] there are other limits where we'll
+[22:16.40] investigate the solutions of einstein's
+[22:17.84] field equations and we'll be able to get
+[22:19.36] a solution that's in the cases of high
+[22:22.08] high degrees of symmetry in
+[22:23.52] in these in the system so we're going to
+[22:25.36] be able to solve i transferred equations
+[22:27.12] in this situation where the universe is
+[22:29.12] completely rotationally symmetric
+[22:31.20] it's not very physical but hey um
+[22:34.48] that'll get us actually close to an
+[22:36.64] interesting situation
+[22:38.80] to model heavenly bodies and we'll also
+[22:41.12] investigate the solution of einstein's
+[22:42.40] field equations in the cosmological
+[22:44.00] setting
+[22:45.68] where the distribution of matter is
+[22:47.44] uniform so none of these limits are
+[22:49.84] directly physical
+[22:50.96] it has to be said but each of the
+[22:54.16] solutions that we're going to
+[22:55.04] investigate in this course will give us
+[22:56.56] indirect information about how
+[22:58.24] einstein's field of
+[22:59.36] general solutions of insurance field
+[23:00.64] equations behave
+[23:03.28] but let's not get ahead of ourselves
+[23:04.56] we're going to try and solve and it will
+[23:06.56] take us a couple of lectures to do so
+[23:10.80] uh we're going to try and solve
+[23:11.92] einstein's field equations in the case
+[23:13.36] where gravity is weak
+[23:14.80] very close to special special relativity
+[23:30.00] now even this deserves scare quotes like
+[23:31.76] what does it mean weak
+[23:38.64] and for us what it's going to mean is
+[23:41.12] that the space time metric
+[23:44.56] that's the thing we're solving for the
+[23:47.20] space time metric
+[23:50.08] be somehow close to flat
+[24:11.44] and for us that's going to entail an
+[24:13.44] assumption namely that the space-time
+[24:15.36] metric is somehow
+[24:20.24] the space diametric is somehow
+[24:23.60] equal to the flat magic of minkowski
+[24:25.60] space time plus a bit
+[24:27.52] small perturbation
+[24:39.20] and this small perturbation
+[24:42.64] is going to have to be small whatever
+[24:44.48] that means
+[24:47.84] now in this uh coordinate free notation
+[24:50.72] that we've adopted
+[24:51.92] uh here in this to describe the the
+[24:55.04] space symmetric g
+[24:56.72] uh smallness or bigness there's no
+[24:58.32] meaning yet we haven't actually
+[25:00.40] uh you know you have to say small with
+[25:02.40] respect to something
+[25:04.08] um and actually it's a bit tricky to
+[25:06.56] define this notion
+[25:08.00] in the coordinate free way and we're not
+[25:10.16] going to define it in a coordinate free
+[25:11.76] way the only way i'm going to
+[25:14.96] to argue that gamma a b is small
+[25:18.72] is that um
+[25:22.88] in a given coordinate system in a
+[25:25.04] particular coordinate system so we're
+[25:26.64] going to appeal to a certain coordinate
+[25:28.16] system here and we're going to thereby
+[25:29.84] break the coordinate in variance of our
+[25:32.40] equations
+[25:34.96] we're going to say that in a specific
+[25:36.16] coordinate system the components of
+[25:37.92] gamma a b
+[25:38.72] are the components cannot be as small
+[26:13.44] so here here now we'll be a bit more
+[26:15.52] specific about what we mean by smallness
+[26:17.12] we say that
+[26:18.16] um gamma a b is small if there exists a
+[26:20.80] global coordinate system
+[26:22.84] global
+[26:28.88] and i should probably say inertial
+[26:30.48] coordinate system
+[26:38.00] note the word global as well here
+[26:41.92] um
+[26:47.04] such that the coordinate the components
+[26:48.96] of the the perturbation gamma
+[26:51.28] mu nu in this global inertial coordinate
+[26:53.20] system
+[26:55.52] small with respect to
+[26:59.36] one let's see
+[27:03.84] so just to stress this again before we
+[27:06.80] choose a coordinate system
+[27:08.80] we can't say what gamma a b small means
+[27:12.24] gamma a b is just an abstract box
+[27:16.32] you need a criteria for specifying when
+[27:18.40] gamma a b is small or large
+[27:21.12] and the criteria that we select when
+[27:22.96] discussing linearized
+[27:24.40] gravity is to go to a global inertial
+[27:26.48] coordinate system you know the one where
+[27:28.16] the flat metric is defined for example
+[27:30.80] and then then you now we're in a
+[27:32.40] coordinate system we can write out gamma
+[27:34.08] a b in terms of its coordinate
+[27:36.72] components in this coordinate system and
+[27:38.24] those will become like numbers that
+[27:39.68] depend on position
+[27:41.52] space-time position and now those
+[27:43.12] numbers you can look at those numbers
+[27:44.40] and say are they small or big with
+[27:46.16] respect to the the
+[27:49.12] the dimensions of your the units of your
+[27:52.40] system
+[27:55.84] and now we can say a little bit better
+[27:57.60] what we mean by linearized gravity
+[28:02.32] what is it well it's it's what results
+[28:07.84] from substituting
+[28:13.36] star an indian monster from substituting
+[28:18.24] g mu g a b let's say still right you
+[28:21.12] know we understand what smallness means
+[28:22.72] now so we're going to work back in our
+[28:24.32] abstract notation as much as we can
+[28:28.64] into star so that's what linearized
+[28:31.28] gravity means
+[28:34.56] uh and that's
+[28:38.32] and collecting
+[28:45.52] terms to first order
+[28:49.52] in gamma a b
+[28:54.80] so there's a couple of computational
+[28:57.68] subtleties that we have to highlight
+[28:59.12] when working in
+[29:00.00] linearized gravity
+[29:08.64] we should technically raise in lower
+[29:11.44] indices with g
+[29:12.64] right raising annoying is always done
+[29:14.96] with respect to the metric g
+[29:16.88] but we can get away with raising
+[29:19.92] lowering with respect to eta a b because
+[29:21.92] everything's small
+[29:23.36] um and that works almost all the time
+[29:26.48] there is one case where it doesn't work
+[29:27.84] a little highlight that in the moment
+[29:30.32] and uh yeah let's talk about that still
+[29:33.92] um
+[29:37.04] there is an exception so almost always
+[29:40.16] you can raise in low indices with the
+[29:41.68] flat metric because
+[29:43.04] to that order in the to linear order
+[29:46.08] the higher order corrections just won't
+[29:47.76] matter however there is an exception
+[29:50.64] uh g a b when you see g a b with indices
+[29:53.92] upper that doesn't mean g
+[29:55.68] raised with respect to eta but it
+[29:58.32] actually denotes the true inverse
+[30:07.04] uh to gab and
+[30:10.96] not you know what it could be
+[30:14.16] there's an interpretation or an
+[30:16.00] alternate interpretation to what gab
+[30:18.24] could mean it could mean right having
+[30:20.24] raised it with respect to eta
+[30:21.84] no we don't mean that whenever you see
+[30:24.88] gab with their indices raised
+[30:30.24] it means the actual inverse the gab and
+[30:32.64] you can calculate
+[30:35.28] as an exercise in fact it's not even an
+[30:37.92] exercise i'll just do it
+[30:39.60] um gab is to linear order just ada a b
+[30:44.80] minus the metric uh
+[30:48.56] don't believe me well let's check um
+[30:54.32] let's multiply by contracting on the
+[30:56.24] second index g
+[30:57.60] a b upper with gac lower and i'm just
+[31:00.80] going to collect terms
+[31:01.84] the first order in gamma
+[31:09.92] okay so that's everything to first order
+[31:12.88] that you need to
+[31:13.68] worry about and we're going to be able
+[31:14.88] to neglect one term so the first
+[31:17.36] the first thing we get is when we
+[31:18.40] contract eta against itself and then we
+[31:20.16] get a nice little delta function
+[31:22.32] and then we contract gamma against eta
+[31:28.24] and then we get this remember we're
+[31:31.44] using upper and lower
+[31:32.80] to mean contraction with respect to eta
+[31:35.28] and then we have
+[31:36.56] an additional gamma ac coming from the
+[31:38.40] other contraction
+[31:40.00] and then we have a second order term
+[31:41.44] right i'm just going to write it out but
+[31:42.56] we immediately neglect it because we're
+[31:43.84] working the first order in gamma
+[31:47.04] so that's gone and then these first
+[31:49.36] order terms cancel
+[31:51.04] and so we have to first order that the
+[31:54.96] equation that i've written down for the
+[31:56.48] inverse of g is is
+[31:58.24] indeed the inverse now if you're a
+[32:01.28] little bit uncomfortable about raising
+[32:02.64] lowering with respect to a to a b
+[32:04.00] then you can certainly raise and lower
+[32:05.36] with respect to g you just have a whole
+[32:07.20] bunch of extra terms that you'll have to
+[32:08.48] worry about but at the end
+[32:10.00] once you've done all the calculations
+[32:12.00] you'll throw all those extra terms out
+[32:13.60] and you realize
+[32:14.24] oh yeah i could have just effectively
+[32:16.72] raised and lowered with ada a b
+[32:18.56] so depending on your paranoia level and
+[32:20.64] your skepticism level
+[32:22.00] of this statement you're invited to go
+[32:24.24] through this derivation by raising and
+[32:25.84] lowering with respect to the entire
+[32:27.20] metric but i claim at the end you'll get
+[32:29.04] the same result as if you just raised in
+[32:30.80] lord with respect to the flat metric
+[32:34.56] all right so now we're in a global
+[32:36.08] coordinate system
+[32:40.96] or we will uh eventually appeal
+[32:44.96] to a global coordinate system but
+[32:48.08] we assume already at this stage there is
+[32:50.08] a global coordinate system
+[32:52.16] you know this is not a fundamental
+[32:53.44] assumption of gr that there is a global
+[32:55.04] coordinate system
+[32:56.24] describing your whole space time indeed
+[32:58.56] it's completely open
+[33:00.08] uh if our space time is covered by a
+[33:03.12] global coordinate patch it seems
+[33:06.32] unlikely with the current experimental
+[33:08.84] evidence
+[33:10.16] but if you assume that space time can be
+[33:12.24] covered by a global coordinate system
+[33:14.56] and that the metric gamma g is
+[33:17.84] almost eta plus some small components in
+[33:20.64] gamma
+[33:22.00] then you can start to calculate the
+[33:23.92] stuff we need to calculate to write down
+[33:25.76] eight science field equations
+[33:29.04] and the first thing we're going to need
+[33:30.32] is the covariant derivative
+[33:34.32] and to write down the covariance
+[33:35.60] derivative we're going to need
+[33:37.44] the crystal symbols all right so here we
+[33:39.84] go let's do it
+[33:41.04] crystal symbols c a b how are they
+[33:43.84] defined well
+[33:45.12] remember there's a g c d
+[33:51.36] and then there's a whole bunch of
+[33:52.72] derivatives d a
+[33:54.72] g b d plus
+[33:58.08] d b g a d minus
+[34:01.44] d d g a b okay that's that's the crystal
+[34:05.76] symbols but we're working to linear
+[34:07.12] order and gamma now and now a lot of
+[34:08.56] these things can just cancel out so
+[34:10.16] first of all
+[34:11.04] and i'll just do these these
+[34:12.16] substitutions in place
+[34:14.08] uh the final notes won't have this this
+[34:16.72] equation there but you can see them
+[34:18.80] evolve as we talk so what's gbd right
+[34:21.76] well you had an equation for that gbd
+[34:23.76] is that's the fundamental assumption of
+[34:26.32] linear
+[34:27.84] linearized gravity it's the flat metric
+[34:29.52] plus the perturbation so we can erase
+[34:32.08] g and i'll just do that right now like
+[34:35.12] uh we get a to b d plus
+[34:38.64] gamma b d right that's what g is
+[34:42.16] but the derivative of the flat metric is
+[34:43.84] zero because it's
+[34:45.20] just a constant so actually
+[34:48.48] to linear order g vanishes
+[34:52.32] and we just get gammas instead
+[34:59.44] that was easy right we just got rid of
+[35:03.20] a bunch of terms there could potentially
+[35:07.04] have been
+[35:07.68] you know six terms in the brackets here
+[35:09.36] and it's actually only three thankfully
+[35:11.20] and now we've also got the inverse of
+[35:12.80] the metric right so but i told you how
+[35:14.32] we're going to compute the inverse of
+[35:15.52] the metric
+[35:16.64] that's going to be computed as eta a b
+[35:19.36] minus
+[35:19.92] gamma oops e to c d minus gamma c
+[35:23.44] d now already
+[35:28.16] we we get to throw away some terms
+[35:29.84] because the stuff to the right here
+[35:33.92] oops
+[35:40.64] one node crashed okay the stuff to the
+[35:43.12] right here
+[35:48.32] just check the recording is working the
+[35:50.96] stuff to the right here
+[35:53.84] is already at linear order in gamma and
+[35:56.48] so if you multiply anything linear
+[35:58.00] ordering gamma by something
+[35:59.52] linear ordering gamma namely gamma
+[36:01.12] itself then you you you get
+[36:02.88] zero to order linear order and gamma so
+[36:04.64] actually
+[36:05.92] we can compute the christopher symbols
+[36:08.80] you know
+[36:12.00] uh somewhat easily well less horribly
+[36:15.68] than maybe
+[36:16.40] could have been the case
+[36:19.60] and so now we've got an equation for the
+[36:22.16] crystal symbols right we can just dump
+[36:25.60] uh dump this this equation
+[36:29.36] that are in red that i've struck out to
+[36:31.52] zero and we're left with
+[36:33.52] uh a somewhat simpler expression for the
+[36:35.92] chris double symbols
+[36:38.48] and that now once you've got the crystal
+[36:40.24] symbols you can just go straight ahead
+[36:42.24] and uh compute the richie tensor
+[36:47.60] if you remember when i introduced the
+[36:49.12] ritchie tensor
+[36:50.72] there's a way to compute it in terms of
+[36:53.44] the riemann tensor
+[36:54.88] and in our case the riemann tensor is
+[36:56.56] just some expressions involving
+[36:58.80] the richie derivatives of the crystal
+[37:01.44] symbols and
+[37:02.64] quadratic expressions in terms of the
+[37:04.48] christopher symbols
+[37:10.40] so this is an exercise for you
+[37:14.00] and the claim is to linear order
+[37:20.08] the ritchie tenses actually you can find
+[37:22.48] it via
+[37:23.36] this equation here already you remember
+[37:27.28] you know you you would usually have some
+[37:28.96] terms involving the crystals quadratic
+[37:30.88] expressions of the crystal symbols but
+[37:32.32] they all vanish
+[37:33.28] to linear order right because
+[37:34.64] everything's already uh to linear order
+[37:37.12] and so if you square them then you've
+[37:38.32] got to get zero
+[37:41.36] so there's the richie tensor and
+[37:45.20] we can now substitute for the expression
+[37:47.12] that we have obtained
+[37:48.40] for the christopher symbols just above
+[37:50.40] to linear order
+[37:51.68] and then we get c and then there's some
+[37:56.16] symmetrized terms
+[38:06.32] oopsies
+[38:12.16] where i've introduced the trace of gamma
+[38:15.76] gamma is defined to be the trace of
+[38:17.68] gamma
+[38:19.52] now that we've got the ritchie tensor in
+[38:21.04] hand we can
+[38:22.64] write out the einstein tensor g a b to
+[38:25.44] first order
+[38:26.96] and the way g a b is defined will you
+[38:29.20] take the rigid tensor
+[38:30.56] and you subtract from it a half by the
+[38:32.32] metric multiplied by the richie scala
+[38:35.44] now to this level to this order uh we
+[38:38.40] can regard them
+[38:39.28] the metric simply as a linear term
+[38:42.24] because the other term
+[38:43.52] multiplied by the rigid scale is already
+[38:44.96] zero to linear order
+[38:46.56] and we obtain the following lengthy
+[38:48.40] expression
+[38:50.72] for the einstein tensor
+[39:02.24] things will simplify later but at this
+[39:05.36] point
+[39:07.44] this is what the einstein tensor looks
+[39:12.84] like
+[39:27.04] we can make it things look
+[39:30.32] slightly bit more compact
+[39:37.92] by defining a new quantity gamma bar
+[39:41.60] the perturbation as being minus a half
+[39:44.80] as gamma a b minus a half a to a b times
+[39:47.68] by gamma
+[39:49.04] and then
+[39:52.64] then star the einstein's field equations
+[39:54.80] to linear order
+[40:05.36] einstein's field equations now can be
+[40:07.44] written out
+[40:09.12] in their full glory and here they are to
+[40:11.76] linear order
+[40:33.20] this is just an exercise in rewriting
+[40:35.04] some equations
+[40:36.72] for uh and the right hand side is just
+[40:39.12] the full
+[40:40.56] stress energy tensor so this is this is
+[40:43.52] what the einstein field equations look
+[40:45.12] like to linear order
+[40:48.96] we haven't done anything particularly
+[40:50.16] intelligent yet we just substituted
+[40:54.00] our expansion for the metric
+[40:59.12] into einstein's field equations
+[41:01.28] collected terms to linear order in gamma
+[41:03.44] and written out what we've got now this
+[41:06.56] equation is not super friendly to look
+[41:08.40] at actually have i missed the term one
+[41:10.40] two three
+[41:12.08] no that's correct i believe this this
+[41:14.32] equation is not super friendly to look
+[41:15.84] at i mean it is linear
+[41:17.12] it's linear in gamma right
+[41:23.12] and so at least we have a chance of
+[41:24.40] solving it
+[41:27.12] when something's linear uh it's a linear
+[41:29.20] pde of second order
+[41:30.88] in gamma and so we can go ahead and
+[41:32.40] solve this set of 16 linear pde
+[41:35.12] but you know you want to work smart when
+[41:36.88] you can and
+[41:38.56] we're going to do that now we're going
+[41:40.16] to dive take a digression for the next
+[41:42.32] lecture or two
+[41:43.44] to actually identify the symmetries of
+[41:46.80] this equation so that we can simplify it
+[41:48.80] somewhat it'll make just
+[41:49.92] our lives easier and uh so we're going
+[41:52.88] to make a little bit extra investment of
+[41:54.64] energy
+[41:55.12] now in understanding the symmetries of
+[41:57.76] this equation
+[41:58.96] so that we can find find spend that
+[42:02.40] symmetry to write down a simpler
+[42:04.16] equivalent equation for gamma and that
+[42:06.72] equation will be so
+[42:07.76] simple that we'll be able to solve it
+[42:09.20] really easily
+[42:11.52] so that's our task now this equation
+[42:16.56] you can actually simplify it
+[42:26.24] and the way you simplify it is to use
+[42:27.84] the gauge freedom
+[42:29.60] so-called gauge freedom
+[42:35.12] of general relativity so general
+[42:38.32] relativity the formulation that we
+[42:40.96] that we're describing here of general
+[42:42.32] relativity has a symmetry
+[42:45.92] and i'm going to explain that symmetry
+[42:47.60] over the coming lectures
+[42:49.12] and it is this that if you have
+[42:54.32] a diffumorphism phi of your space-time
+[42:57.76] manifold
+[42:58.40] m then uh
+[43:09.20] then the two uh metrics
+[43:12.72] namely your original one that solves
+[43:14.56] einstein's field equations
+[43:18.48] and the metric you get from doing the
+[43:21.28] diphymorphism
+[43:25.68] we'll call it get gab prime for the
+[43:27.68] moment i'll explain how to calculate gab
+[43:30.64] prime they represent the same space-time
+[43:38.84] geometry now i'm going to explain all of
+[43:40.96] this
+[43:45.04] but to do that we're going to have to
+[43:46.32] spend a little bit more time
+[43:48.32] on some foundational aspects of
+[43:51.28] differential geometry
+[44:07.60] okay so we're going to take a little
+[44:09.28] digression
+[44:14.00] to talk about maps of manifolds
+[44:24.00] so uh let's suppose
+[44:29.68] that we have two manifolds let's say m
+[44:32.48] and
+[44:34.84] n
+[44:38.16] they're they're arbitrary but m and n
+[44:43.28] and let let's also suppose we have some
+[44:46.32] map between these two manifolds let's
+[44:48.56] let phi m n
+[44:50.40] be a smooth map
+[44:54.72] from m to n then
+[44:58.40] the first thing to note
+[45:01.52] is that associated to any function
+[45:08.96] on our target manifold n given any such
+[45:12.48] any arbitrary function on n is actually
+[45:15.20] implicitly
+[45:16.32] via phi a function on m
+[45:26.24] circle pullback function
+[45:33.44] composed with phi and if you check how
+[45:36.40] where the arrows go everything works out
+[45:38.08] right so here's
+[45:39.28] you know this is the manifold m then we
+[45:42.32] have the map phi
+[45:43.52] from m to some other manifold n
+[45:46.72] and then you've got to map f to the real
+[45:50.08] numbers
+[45:52.32] and then just by doing one than the
+[45:54.40] other
+[45:56.08] you automatically obtain
+[46:00.00] function that goes from m
+[46:03.04] to r and this function has a name it's
+[46:05.84] called the pullback function
+[46:07.92] now it doesn't stop there it the minute
+[46:10.56] you
+[46:10.96] you write down a map between two
+[46:13.36] manifolds then you can start
+[46:14.96] uh pulling back various geometrical
+[46:16.96] quantities from one manifold to the
+[46:18.40] other and pushing forward other ones so
+[46:20.08] let's
+[46:20.80] talk about you know what kind of
+[46:22.08] geometrical quantities am i talking
+[46:23.44] about
+[46:24.08] well you know the first associated
+[46:26.16] quantity you can put on a manifold after
+[46:27.84] functions
+[46:28.48] is tangent vectors so what happens to a
+[46:31.44] tangent vector
+[46:32.32] well if you have a tangent vector
+[46:39.84] you suppose you have a tangent vector
+[46:41.20] some point p in m
+[46:45.68] there is a uh you can actually build in
+[46:48.64] a canonical canonical meaning standard
+[46:51.60] there is a circle push forward
+[47:05.84] that you can define canonically on n
+[47:12.80] and the way you obtain this push forward
+[47:14.32] vector is we set up first a linear map
+[47:16.80] phi star that takes the tangent space at
+[47:19.28] some point p
+[47:20.16] in a manifold to a tangent space
+[47:25.44] defined at the image of this point so
+[47:27.36] this is the point p and under phi we
+[47:29.28] have another point p
+[47:30.72] phi of p here and we obviously
+[47:34.64] will eventually get a image of the
+[47:36.80] tangent vector at p
+[47:40.96] and uh
+[47:44.32] how does this linear map work
+[47:51.28] well phi star is defined as follows
+[47:55.52] so for some tangent vector at a point p
+[47:59.04] on the manifold m we're going to define
+[48:04.88] a new tangent vector phi star v which
+[48:07.76] lives at
+[48:09.12] the corresponding point phi p in the
+[48:11.60] manifold n
+[48:13.36] by
+[48:16.40] this formula here phi star v when
+[48:19.60] evaluated on a function
+[48:21.20] f is just to be fine to be v
+[48:24.72] evaluated on f compose phi
+[48:30.24] you should you should think about this
+[48:32.00] for a bit
+[48:39.36] you know there's a couple of properties
+[48:40.48] that you need to check that this this
+[48:42.08] this uh
+[48:42.80] definition is coherent with you know do
+[48:45.20] you get a tangent vector
+[48:46.80] is it linear does it obey leibniz and so
+[48:50.48] on
+[48:53.52] and that's got to be true for all smooth
+[48:56.08] functions
+[48:57.68] on m so we get a tangent vector
+[49:03.84] by this prescription here and this is
+[49:06.00] called the
+[49:07.20] push forward of the tangent vector
+[49:14.84] v
+[49:23.92] now it turns out
+[49:27.52] the map if i start is familiar to you
+[49:33.68] it's the jacobian
+[49:44.32] if we choose
+[49:48.64] a coordinate system so if x mu denote
+[49:51.68] coordinates of uh
+[49:56.84] m
+[49:58.16] and respectively y nu
+[50:01.60] is the coordinates of n
+[50:05.92] then the matrix
+[50:09.04] because now you know phi star is a map
+[50:11.60] of linear vector space
+[50:12.80] is a linear map of vector spaces by v p
+[50:14.96] to v phi p so you can write it out
+[50:16.96] as a matrix in terms of the basis of
+[50:20.32] both of these
+[50:21.28] vector spaces so and that basis is
+[50:23.76] furnished by the standard derivatives
+[50:26.08] with respect to these coordinates so the
+[50:27.76] matrix of components of phi star
+[50:29.68] is then
+[50:34.96] so this you can now regard it as a
+[50:37.20] matrix and you can work out its
+[50:38.40] components and this is an exercise for
+[50:40.16] you to just confirm this
+[50:41.92] is d y mu
+[50:45.12] d x nu so phi star is the
+[50:49.12] jacobian if you like of
+[50:52.84] um the map
+[50:55.76] phi
+[50:58.80] now similarly right this is now we've
+[51:00.96] got it for vectors we can immediately
+[51:02.64] start deducing things for covectors or
+[51:04.80] dual vectors by the same argument so we
+[51:09.20] can pull back
+[51:11.92] our joule vectors
+[51:18.00] at phi p
+[51:25.84] by defining
+[51:30.16] the following linear map going from dual
+[51:33.12] vector spaces v p
+[51:34.64] v phi v5p star to vb star
+[51:53.76] and how do we define v phi star well
+[51:56.56] give it a dual vector
+[51:57.68] mu and then demand
+[52:01.68] that when we contract it with a tangent
+[52:03.60] vector v that's the same as
+[52:05.44] applying the joule vector
+[52:08.48] to phi star v contracted against mu
+[52:18.32] so that's how you can immediately extend
+[52:20.72] you know the minute you have something
+[52:22.00] that maps
+[52:22.88] tangent vectors the tangent some tangent
+[52:24.72] vectors in one vector space to attach
+[52:26.24] vectors and another vector space and you
+[52:27.60] you
+[52:28.16] pretty much have something that that'll
+[52:30.32] hold dually for the jewel vectors
+[52:34.00] and we can extend this
+[52:38.40] now
+[52:41.44] to even tenses
+[52:45.60] of type t not l
+[52:58.24] by defining phi star
+[53:01.44] of a tensor the components of the of a
+[53:04.08] tensor
+[53:07.52] by demanding that these components phi
+[53:09.36] star of t
+[53:11.12] obey the following equation here
+[53:14.80] and this is just the generalization of
+[53:17.44] the push forward equation that we've
+[53:19.04] already seen
+[53:26.40] sorry the pullback equation and
+[53:29.84] to uh tenses of type k naught
+[53:34.24] we also have a similar uh
+[53:38.72] push forward type expression
+[54:03.60] this is what you get it's essentially
+[54:06.56] natural
+[54:07.76] there's no way a you would have a hard
+[54:10.64] time arguing
+[54:11.44] that this is not the right way to to do
+[54:13.44] things
+[54:14.88] so this is for all v1 through to vl and
+[54:17.68] for all
+[54:18.40] mu 1 through the mu k
+[54:23.12] so once you've got a map between two
+[54:24.80] manifolds then very quickly
+[54:26.64] you can build maps between tensor
+[54:29.84] objects on these manifolds but note the
+[54:31.92] directions of these arrows right
+[54:36.00] so here's m here's n
+[54:41.68] so phi star the push forward goes that
+[54:43.84] direction but
+[54:45.12] and takes tangent vectors forward but
+[54:48.32] phi star lower goes the other direction
+[54:51.44] let me just check that that's consistent
+[54:52.80] with what i've been saying
+[54:53.92] yes indeed it is so uh
+[54:57.20] and that means that you know a tensor
+[55:00.72] object which is
+[55:03.84] acting on n and some tensor products of
+[55:07.12] the dual vector space would a tensor
+[55:08.64] object there gets taken
+[55:09.68] back to m but a vector a a tensor on
+[55:13.44] vector spaces
+[55:15.28] or in tensor products of vector spaces
+[55:17.52] tangent vector spaces gets pushed
+[55:18.80] forward to n
+[55:20.24] so there's no natural
+[55:27.12] way to get an action
+[55:31.20] of phi on mixed tenses
+[55:42.40] because the arrows are going the wrong
+[55:43.68] way right some of the components get
+[55:45.12] transformed from
+[55:46.24] mapped from n to m and some of the
+[55:47.84] others we get from map from m to n
+[55:57.20] yeah so we don't get an action on
+[55:59.12] tensors of type kl
+[56:00.80] there's no natural action on tensors of
+[56:02.64] type kl because
+[56:04.96] a tensor of type kl the various
+[56:07.92] components will be pushed forward or
+[56:09.68] pulled back depending if they're vector
+[56:11.44] vectorial or dual vector
+[56:14.00] but there is a way to get out of this
+[56:19.44] uh if phi i mean so far phi is just some
+[56:22.96] smooth map it doesn't have to be any
+[56:24.72] particular smooth map
+[56:26.00] however if pi is a diffumorphism then we
+[56:28.48] we have a little bit more information
+[56:30.80] that we can exploit
+[56:38.80] and in particular that means that m the
+[56:40.48] manifold m is now the manifold in
+[56:43.20] so if phi is a diphymorphism we can
+[56:46.24] exploit
+[56:49.28] the fact that the inverse exists and is
+[56:51.60] also smooth
+[56:58.88] and we can extend this map that we've
+[57:01.04] just defined above
+[57:05.04] to apply to mixed tenses
+[57:15.44] and this is because phi star oops if i
+[57:19.28] inverse star
+[57:22.08] is a linear map that goes from v phi p
+[57:25.12] to v so now that takes vp that takes the
+[57:27.60] vectors on
+[57:28.40] the target manifold backwards
+[57:32.48] and then we define in this particular
+[57:35.68] case
+[57:36.64] a full action of phi on on a mixed
+[57:40.08] tensor and how do we do it well
+[57:42.16] we just combine the two actions that we
+[57:44.32] introduced above
+[58:06.84] here
+[58:16.72] so we take these actions of phi star on
+[58:19.52] the individual joule vectors and vectors
+[58:21.92] and
+[58:24.88] we apply them to the inverses now
+[58:28.88] of phi also in order to get a map that
+[58:31.20] goes the correct way
+[58:38.96] and that in turn has allowed us to
+[58:40.80] define an action of phi
+[58:43.68] and implicitly thereby of course phi
+[58:45.92] inverse
+[58:46.80] on mixed tenses now
+[58:58.48] and of course there's a implicit here in
+[59:01.12] order for this to be well defined
+[59:05.20] is the fact that phi star has got to be
+[59:08.56] equal
+[59:09.20] to phi inverse star you better check
+[59:12.32] that
+[59:12.80] it's important for things to be good
+[59:20.56] okay and so the final uh definition i'll
+[59:23.44] make before
+[59:24.40] finishing up today is
+[59:28.72] to isolate the special role played by
+[59:31.36] certain diphymorphisms
+[59:34.56] in general relativity and in
+[59:36.16] differential geometry
+[59:37.68] so there are special diphthiamorphisms
+[59:44.84] phi
+[59:47.60] namely those that are such that
+[59:52.80] the metric is invariant under applying
+[59:58.84] diffumorphism
+[60:02.96] and those now we can actually write down
+[60:05.12] that expression what does it mean
+[60:06.96] for a uh the metric to be left invariant
+[60:09.84] well you you need to have an action of
+[60:11.28] the lithomorphism on the metric
+[60:13.20] that we've just obtained above and
+[60:15.68] therefore there are a special class of
+[60:17.28] diffumorphisms which leave the metric
+[60:18.88] absolutely alone
+[60:20.00] and those are called isometries so these
+[60:21.60] are these are the fundam these
+[60:23.68] symmetries are the the fundamental
+[60:25.52] symmetries of space-time
+[60:27.44] however the symmetries of general
+[60:28.96] relativity are
+[60:31.36] actually much larger than just
+[60:34.80] isometries because it will turn out
+[60:38.40] that diffiomorphisms are in fact
+[60:42.48] will yield identical manifold structures
+[60:45.12] and
+[60:45.60] the general relativity is written in
+[60:47.20] terms of of coordinate free expressions
+[60:49.60] of the metric
+[60:51.12] so that when you apply a diffumorphism
+[60:53.84] to a manifold you actually get
+[60:55.76] physic when you you look at physical
+[60:57.36] quantities you'll find
+[60:59.12] that they lead to physically they'll
+[61:00.80] lead to operationally identical
+[61:02.08] predictions
+[61:02.80] so the actual symmetries of general
+[61:04.48] relativity will be deformable
+[61:06.00] but we'll talk about that in the next
+[61:08.08] lecture
+[61:09.04] for today that's it thank you very much
+[61:12.56] for your time and see you next time

@@ -7,24 +7,25 @@ Public: https://github.com/tobiasosborne/generalrelativity (Apache 2.0)
 
 ## Status
 
-11 of 23 lectures converted (+ 1 supplementary note). 52 pages total.
+11 of 23 lectures converted (+ 1 supplementary note). 54 pages total.
+Lectures 1–2 enriched with transcript material. Lectures 3–11 still need transcript enrichment.
 Julia simulation pipeline operational: 3 scripts generating data-driven pgfplots figures.
 Build tool: `./build.sh` with `--cmfonts`, `--draft`, `--simdata`, `--full`, `--clean`, `--watch` options.
 
-| Done | Next |
-|------|------|
-| Lec 1: Prerelativity gravitation + Lagrange point figure | Lec 12: Lie derivatives & Newtonian limit |
-| Lec 2: Equivalence principle & Mach + geodesic bump figure | Lec 13: Einstein's field equations, linearised solutions |
-| Lec 3: Manifolds + ellipsoid geodesics figure | Lec 14: Gravitational radiation |
-| Lec 4: Tangent space | Lec 15–18: Schwarzschild solution & geodesics |
-| Lec 5: Flows and tensors | Lec 19–23: Cosmology (homogeneity, isotropy, FLRW) |
-| Lec 6: Tensors continued (cotangent, transformation laws, metric, AIN) | |
-| Lec 7: Derivative operators (affine connections, C tensor, Christoffel) | |
-| Lec 8: Parallel transport (Levi-Civita, metric compatibility, geodesics) | |
-| Lec 9: Abstract index notation review, curvature intro | |
-| Lec 10: Geodesics as extremal curves, Riemann tensor, loops | |
-| Lec 11: Riemann symmetries, Bianchi, Ricci, Einstein tensor, geodesic deviation | |
-| Note: ∂_a as covariant derivative | |
+| Done | Transcript-enriched | Next |
+|------|---------------------|------|
+| Lec 1: Prerelativity gravitation + Lagrange point figure | ✓ | Lec 3: enrich with transcript |
+| Lec 2: Equivalence principle & Mach + geodesic bump figure | ✓ | Lec 4: enrich with transcript |
+| Lec 3: Manifolds + ellipsoid geodesics figure | | Lec 5–11: enrich with transcripts |
+| Lec 4: Tangent space | | Lec 12: Lie derivatives & Newtonian limit (full workflow) |
+| Lec 5: Flows and tensors | | Lec 13: Einstein's field equations, linearised solutions |
+| Lec 6: Tensors continued (cotangent, transformation laws, metric, AIN) | | Lec 14: Gravitational radiation |
+| Lec 7: Derivative operators (affine connections, C tensor, Christoffel) | | Lec 15–18: Schwarzschild solution & geodesics |
+| Lec 8: Parallel transport (Levi-Civita, metric compatibility, geodesics) | | Lec 19–23: Cosmology (homogeneity, isotropy, FLRW) |
+| Lec 9: Abstract index notation review, curvature intro | | |
+| Lec 10: Geodesics as extremal curves, Riemann tensor, loops | | |
+| Lec 11: Riemann symmetries, Bianchi, Ricci, Einstein tensor, geodesic deviation | | |
+| Note: ∂_a as covariant derivative | | |
 
 ## Lecture-to-PDF mapping
 
@@ -117,11 +118,19 @@ Whitney fonts symlinked to `~/texmf/fonts/opentype/whitney/`.
 
 ## Workflow per lecture
 
-1. **Draft**: read handwritten PDF + transcript → create `lectures/lec##.tex`
+### For new lectures (lec12 onward): full workflow
+1. **Draft**: read handwritten PDF + transcript (`transcripts/lec##_transcript.txt`) → create `lectures/lec##.tex`
 2. **Build test**: `./build.sh --draft` — verify zero errors from new lecture
 3. **Review**: check content, notation consistency against Wald/Warner
 4. **Enhance**: intuition boxes, historical boxes, TikZ diagrams
 5. **Simulate** (optional): write `scripts/sim_lec##.jl` → `latex/data/` → `latex/figures/fig_lec##_*.tex`
+
+### For existing lectures (lec03–lec11): transcript enrichment pass
+1. **Read** existing `lectures/lec##.tex` + corresponding `transcripts/lec##_transcript.txt`
+2. **Identify** motivational discussion, physical intuition, explanatory asides, and pedagogical framing in transcript that are missing from the notes
+3. **Edit** the .tex file to weave in transcript material as prose paragraphs, expanded remarks, exercise hints, intuition boxes, or transitional text. Do NOT transcribe verbatim — rewrite in lecture-note style.
+4. **Build test**: `./build.sh --draft` — verify zero errors
+5. **Guidelines**: keep additions proportionate; add the lecturer's voice and explanatory depth without overwhelming the existing mathematical content. Good candidates: opening/closing motivational paragraphs, "why we care" framing, physical interpretation of formalism, historical/experimental context, forward/backward references between lectures.
 
 ## Future integration
 

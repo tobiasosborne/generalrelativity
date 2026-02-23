@@ -1,0 +1,6147 @@
+{
+  "title": "General Relativity, Lecture 11: curvature cont.",
+  "video_id": "iqblyHoxuiQ",
+  "url": "https://www.youtube.com/watch?v=iqblyHoxuiQ",
+  "transcript": [
+    {
+      "start": 0.0,
+      "duration": 3.12,
+      "text": "hello and welcome back to introduction"
+    },
+    {
+      "start": 1.68,
+      "duration": 4.32,
+      "text": "to general relativity"
+    },
+    {
+      "start": 3.12,
+      "duration": 4.639,
+      "text": "in the previous lecture i introduced the"
+    },
+    {
+      "start": 6.0,
+      "duration": 3.679,
+      "text": "riemann curvature tensor"
+    },
+    {
+      "start": 7.759,
+      "duration": 3.361,
+      "text": "and the goal today is to continue our"
+    },
+    {
+      "start": 9.679,
+      "duration": 2.88,
+      "text": "discussion of the riemann curvature"
+    },
+    {
+      "start": 11.12,
+      "duration": 3.04,
+      "text": "tensor investigate some of its"
+    },
+    {
+      "start": 12.559,
+      "duration": 4.001,
+      "text": "properties and relate it"
+    },
+    {
+      "start": 14.16,
+      "duration": 6.879,
+      "text": "in a fundamental way to the divergence"
+    },
+    {
+      "start": 16.56,
+      "duration": 4.479,
+      "text": "of nearby geodesics on a curved manifold"
+    },
+    {
+      "start": 23.92,
+      "duration": 2.72,
+      "text": "before we do"
+    },
+    {
+      "start": 26.96,
+      "duration": 6.16,
+      "text": "obtain our advertised"
+    },
+    {
+      "start": 31.119,
+      "duration": 3.28,
+      "text": "connection between the curvature tensor"
+    },
+    {
+      "start": 33.12,
+      "duration": 3.119,
+      "text": "and the"
+    },
+    {
+      "start": 34.399,
+      "duration": 3.441,
+      "text": "displacement of nearby geodesics we need"
+    },
+    {
+      "start": 36.239,
+      "duration": 5.921,
+      "text": "to understand"
+    },
+    {
+      "start": 37.84,
+      "duration": 6.719,
+      "text": "how to relate the action of"
+    },
+    {
+      "start": 42.16,
+      "duration": 3.44,
+      "text": "the curvature tensor on vector fields"
+    },
+    {
+      "start": 44.559,
+      "duration": 4.401,
+      "text": "and other"
+    },
+    {
+      "start": 45.6,
+      "duration": 3.36,
+      "text": "tensorial objects"
+    },
+    {
+      "start": 50.879,
+      "duration": 8.961,
+      "text": "and we're going to do this in that we"
+    },
+    {
+      "start": 54.64,
+      "duration": 5.2,
+      "text": "study the action of the commutator"
+    },
+    {
+      "start": 60.239,
+      "duration": 5.121,
+      "text": "so i may occasionally write this"
+    },
+    {
+      "start": 62.079,
+      "duration": 6.481,
+      "text": "expression as the commutator"
+    },
+    {
+      "start": 65.36,
+      "duration": 3.2,
+      "text": "of the derivative operator"
+    },
+    {
+      "start": 68.72,
+      "duration": 3.28,
+      "text": "so you're going to need to understand"
+    },
+    {
+      "start": 71.28,
+      "duration": 2.24,
+      "text": "the action of this"
+    },
+    {
+      "start": 72.0,
+      "duration": 3.2,
+      "text": "commutator on vector fields when we"
+    },
+    {
+      "start": 73.52,
+      "duration": 2.0,
+      "text": "understand that we'll be able to relate"
+    },
+    {
+      "start": 75.2,
+      "duration": 2.0,
+      "text": "it"
+    },
+    {
+      "start": 75.52,
+      "duration": 4.16,
+      "text": "to the riemann curvature so we'll see"
+    },
+    {
+      "start": 77.2,
+      "duration": 10.64,
+      "text": "how the riemann curvature tensor"
+    },
+    {
+      "start": 79.68,
+      "duration": 8.16,
+      "text": "acts on vector fields"
+    },
+    {
+      "start": 95.68,
+      "duration": 4.24,
+      "text": "so the way we obtain this action is we"
+    },
+    {
+      "start": 98.32,
+      "duration": 2.96,
+      "text": "consider the commutator of these two"
+    },
+    {
+      "start": 99.92,
+      "duration": 3.6,
+      "text": "derivative operators and we"
+    },
+    {
+      "start": 101.28,
+      "duration": 4.159,
+      "text": "we use the same argumentation that we"
+    },
+    {
+      "start": 103.52,
+      "duration": 3.44,
+      "text": "used to understand the action of the"
+    },
+    {
+      "start": 105.439,
+      "duration": 4.72,
+      "text": "derivative operator on"
+    },
+    {
+      "start": 106.96,
+      "duration": 7.76,
+      "text": "uh arbitrary vector intensive fields"
+    },
+    {
+      "start": 110.159,
+      "duration": 9.121,
+      "text": "namely we uh suppose that t a"
+    },
+    {
+      "start": 114.72,
+      "duration": 7.359,
+      "text": "and omega a are"
+    },
+    {
+      "start": 119.28,
+      "duration": 2.799,
+      "text": "arbitrary"
+    },
+    {
+      "start": 122.799,
+      "duration": 9.201,
+      "text": "vector and dual"
+    },
+    {
+      "start": 129.2,
+      "duration": 2.8,
+      "text": "vector fields"
+    },
+    {
+      "start": 133.44,
+      "duration": 5.68,
+      "text": "then we form the scalar which is just"
+    },
+    {
+      "start": 136.239,
+      "duration": 2.881,
+      "text": "the contraction"
+    },
+    {
+      "start": 139.44,
+      "duration": 3.2,
+      "text": "and then we act on it with this"
+    },
+    {
+      "start": 140.959,
+      "duration": 2.64,
+      "text": "derivative operator and we apply the"
+    },
+    {
+      "start": 142.64,
+      "duration": 3.12,
+      "text": "leibniz rule"
+    },
+    {
+      "start": 143.599,
+      "duration": 2.161,
+      "text": "and"
+    },
+    {
+      "start": 146.72,
+      "duration": 3.519,
+      "text": "sooner or later when the dust settles of"
+    },
+    {
+      "start": 148.72,
+      "duration": 4.799,
+      "text": "this calculation"
+    },
+    {
+      "start": 150.239,
+      "duration": 5.681,
+      "text": "we'll understand how"
+    },
+    {
+      "start": 153.519,
+      "duration": 4.241,
+      "text": "to apply this commutator of derivative"
+    },
+    {
+      "start": 155.92,
+      "duration": 4.08,
+      "text": "operators on a vector field"
+    },
+    {
+      "start": 157.76,
+      "duration": 3.04,
+      "text": "so step one we got this expression we're"
+    },
+    {
+      "start": 160.0,
+      "duration": 5.84,
+      "text": "going to apply"
+    },
+    {
+      "start": 160.8,
+      "duration": 5.04,
+      "text": "the leibniz property to evaluate"
+    },
+    {
+      "start": 165.92,
+      "duration": 3.52,
+      "text": "the action of the first derivative"
+    },
+    {
+      "start": 167.44,
+      "duration": 2.72,
+      "text": "operator on the scalar that we form"
+    },
+    {
+      "start": 169.44,
+      "duration": 3.28,
+      "text": "between t"
+    },
+    {
+      "start": 170.16,
+      "duration": 2.56,
+      "text": "and omega"
+    },
+    {
+      "start": 175.2,
+      "duration": 3.36,
+      "text": "and we obtained the following expression"
+    },
+    {
+      "start": 177.599,
+      "duration": 3.92,
+      "text": "so you just imagine"
+    },
+    {
+      "start": 178.56,
+      "duration": 7.28,
+      "text": "i'm now working the delta a operator"
+    },
+    {
+      "start": 181.519,
+      "duration": 4.321,
+      "text": "through the scalar contraction"
+    },
+    {
+      "start": 186.72,
+      "duration": 7.76,
+      "text": "and then we are able to factorize"
+    },
+    {
+      "start": 190.159,
+      "duration": 7.36,
+      "text": "out the"
+    },
+    {
+      "start": 194.48,
+      "duration": 4.96,
+      "text": "and then we were able to apply the"
+    },
+    {
+      "start": 197.519,
+      "duration": 4.08,
+      "text": "second derivative operator to this"
+    },
+    {
+      "start": 199.44,
+      "duration": 5.519,
+      "text": "expression and"
+    },
+    {
+      "start": 201.599,
+      "duration": 5.041,
+      "text": "what we find is"
+    },
+    {
+      "start": 204.959,
+      "duration": 3.761,
+      "text": "applying the leibniz property and"
+    },
+    {
+      "start": 206.64,
+      "duration": 5.76,
+      "text": "canceling out"
+    },
+    {
+      "start": 208.72,
+      "duration": 4.72,
+      "text": "common terms some effectively going to"
+    },
+    {
+      "start": 212.4,
+      "duration": 4.08,
+      "text": "skip"
+    },
+    {
+      "start": 213.44,
+      "duration": 6.719,
+      "text": "one line of derivation here we find that"
+    },
+    {
+      "start": 216.48,
+      "duration": 10.399,
+      "text": "the action of these delta a delta b"
+    },
+    {
+      "start": 220.159,
+      "duration": 8.08,
+      "text": "minus delta b delta a"
+    },
+    {
+      "start": 226.879,
+      "duration": 4.08,
+      "text": "simplifies to this rather nice"
+    },
+    {
+      "start": 228.239,
+      "duration": 2.72,
+      "text": "expression here"
+    },
+    {
+      "start": 235.68,
+      "duration": 6.479,
+      "text": "and so i've"
+    },
+    {
+      "start": 238.959,
+      "duration": 5.121,
+      "text": "skipped an intermediate step and we note"
+    },
+    {
+      "start": 242.159,
+      "duration": 3.44,
+      "text": "that we we know what to do with one part"
+    },
+    {
+      "start": 244.08,
+      "duration": 3.28,
+      "text": "of this expression so that's"
+    },
+    {
+      "start": 245.599,
+      "duration": 3.28,
+      "text": "we already know how this community acts"
+    },
+    {
+      "start": 247.36,
+      "duration": 8.48,
+      "text": "on dual vector fields so we can"
+    },
+    {
+      "start": 248.879,
+      "duration": 6.961,
+      "text": "substitute now"
+    },
+    {
+      "start": 256.56,
+      "duration": 4.399,
+      "text": "the action of this on dual vector fields"
+    },
+    {
+      "start": 260.079,
+      "duration": 4.481,
+      "text": "and that's namely"
+    },
+    {
+      "start": 260.959,
+      "duration": 8.001,
+      "text": "by the riemann curvature tensor"
+    },
+    {
+      "start": 264.56,
+      "duration": 8.0,
+      "text": "abc d that's the action in yellow on"
+    },
+    {
+      "start": 268.96,
+      "duration": 5.36,
+      "text": "dual vector fields and we we have that"
+    },
+    {
+      "start": 272.56,
+      "duration": 3.199,
+      "text": "zero equals this expression so"
+    },
+    {
+      "start": 274.32,
+      "duration": 2.8,
+      "text": "the only conclusion we can draw since"
+    },
+    {
+      "start": 275.759,
+      "duration": 3.921,
+      "text": "this has to be true for all vector"
+    },
+    {
+      "start": 277.12,
+      "duration": 6.24,
+      "text": "fields in all dual vector fields"
+    },
+    {
+      "start": 279.68,
+      "duration": 5.76,
+      "text": "we learn that this the action of these"
+    },
+    {
+      "start": 283.36,
+      "duration": 3.6,
+      "text": "two vector fields"
+    },
+    {
+      "start": 285.44,
+      "duration": 4.16,
+      "text": "of these two derivative operators on"
+    },
+    {
+      "start": 286.96,
+      "duration": 5.679,
+      "text": "vector fields is"
+    },
+    {
+      "start": 289.6,
+      "duration": 5.24,
+      "text": "none other than as"
+    },
+    {
+      "start": 292.639,
+      "duration": 3.441,
+      "text": "a contraction of the riemann curvature"
+    },
+    {
+      "start": 294.84,
+      "duration": 2.84,
+      "text": "tensor"
+    },
+    {
+      "start": 296.08,
+      "duration": 3.76,
+      "text": "of the third slot of this riemann"
+    },
+    {
+      "start": 297.68,
+      "duration": 5.76,
+      "text": "curvature tensor against"
+    },
+    {
+      "start": 299.84,
+      "duration": 3.6,
+      "text": "the vector field t"
+    },
+    {
+      "start": 303.919,
+      "duration": 7.921,
+      "text": "similarly and this is really for you"
+    },
+    {
+      "start": 313.52,
+      "duration": 5.04,
+      "text": "we find for an arbitrary tensor field"
+    },
+    {
+      "start": 322.16,
+      "duration": 5.759,
+      "text": "that the commutator of these derivative"
+    },
+    {
+      "start": 325.6,
+      "duration": 5.28,
+      "text": "operators"
+    },
+    {
+      "start": 327.919,
+      "duration": 2.961,
+      "text": "acts as follows"
+    },
+    {
+      "start": 334.32,
+      "duration": 3.439,
+      "text": "so basically you sum over every slot or"
+    },
+    {
+      "start": 336.479,
+      "duration": 3.601,
+      "text": "argument of"
+    },
+    {
+      "start": 337.759,
+      "duration": 3.361,
+      "text": "the tensor and then if it's a dual"
+    },
+    {
+      "start": 340.08,
+      "duration": 4.16,
+      "text": "vector type"
+    },
+    {
+      "start": 341.12,
+      "duration": 6.56,
+      "text": "argument or slot or leg of"
+    },
+    {
+      "start": 344.24,
+      "duration": 3.44,
+      "text": "the tensor then"
+    },
+    {
+      "start": 348.08,
+      "duration": 2.64,
+      "text": "you use"
+    },
+    {
+      "start": 351.44,
+      "duration": 5.759,
+      "text": "the action"
+    },
+    {
+      "start": 355.12,
+      "duration": 4.079,
+      "text": "that we already know for the riemann"
+    },
+    {
+      "start": 357.199,
+      "duration": 5.201,
+      "text": "curvature tense on dual vector fields"
+    },
+    {
+      "start": 359.199,
+      "duration": 8.481,
+      "text": "and if it's a vector type leg entry"
+    },
+    {
+      "start": 362.4,
+      "duration": 8.4,
+      "text": "slot we use"
+    },
+    {
+      "start": 367.68,
+      "duration": 5.92,
+      "text": "the action we've just obtained"
+    },
+    {
+      "start": 370.8,
+      "duration": 2.8,
+      "text": "for vector fields"
+    },
+    {
+      "start": 377.12,
+      "duration": 3.68,
+      "text": "and so we have a completely general"
+    },
+    {
+      "start": 379.52,
+      "duration": 4.08,
+      "text": "expression"
+    },
+    {
+      "start": 380.8,
+      "duration": 4.72,
+      "text": "for the action of the commutator of two"
+    },
+    {
+      "start": 383.6,
+      "duration": 12.24,
+      "text": "derivative operators on an arbitrary"
+    },
+    {
+      "start": 385.52,
+      "duration": 10.32,
+      "text": "density field"
+    },
+    {
+      "start": 398.479,
+      "duration": 3.681,
+      "text": "so you can see the riemann curvature"
+    },
+    {
+      "start": 400.319,
+      "duration": 5.201,
+      "text": "tends to plays a rather important role"
+    },
+    {
+      "start": 402.16,
+      "duration": 7.039,
+      "text": "in the action or understanding curvature"
+    },
+    {
+      "start": 405.52,
+      "duration": 7.04,
+      "text": "of manifolds so it"
+    },
+    {
+      "start": 409.199,
+      "duration": 3.84,
+      "text": "it's therefore worthwhile recognizing"
+    },
+    {
+      "start": 412.56,
+      "duration": 3.6,
+      "text": "the"
+    },
+    {
+      "start": 413.039,
+      "duration": 4.801,
+      "text": "the central role played by this tensor"
+    },
+    {
+      "start": 416.16,
+      "duration": 4.68,
+      "text": "it's worthwhile understanding a few of"
+    },
+    {
+      "start": 417.84,
+      "duration": 6.0,
+      "text": "its properties or obtaining some of its"
+    },
+    {
+      "start": 420.84,
+      "duration": 3.0,
+      "text": "properties"
+    },
+    {
+      "start": 426.479,
+      "duration": 6.881,
+      "text": "and that's our goal now"
+    },
+    {
+      "start": 429.84,
+      "duration": 5.12,
+      "text": "so the next part of today's"
+    },
+    {
+      "start": 433.36,
+      "duration": 3.76,
+      "text": "discussion will be focused on"
+    },
+    {
+      "start": 434.96,
+      "duration": 4.72,
+      "text": "establishing the following"
+    },
+    {
+      "start": 437.12,
+      "duration": 5.04,
+      "text": "four fundamental properties of the"
+    },
+    {
+      "start": 439.68,
+      "duration": 4.32,
+      "text": "riemann curvature tensor"
+    },
+    {
+      "start": 442.16,
+      "duration": 3.039,
+      "text": "and these will come in handy in various"
+    },
+    {
+      "start": 444.0,
+      "duration": 5.039,
+      "text": "ways in the coming"
+    },
+    {
+      "start": 445.199,
+      "duration": 7.28,
+      "text": "lectures giving us neat ways to do"
+    },
+    {
+      "start": 449.039,
+      "duration": 3.44,
+      "text": "computations it will give us"
+    },
+    {
+      "start": 453.039,
+      "duration": 4.241,
+      "text": "ways to prove results without doing"
+    },
+    {
+      "start": 454.88,
+      "duration": 10.96,
+      "text": "computations and"
+    },
+    {
+      "start": 457.28,
+      "duration": 8.56,
+      "text": "everything in between so it's"
+    },
+    {
+      "start": 466.0,
+      "duration": 4.24,
+      "text": "it's pretty important that we understand"
+    },
+    {
+      "start": 471.44,
+      "duration": 3.36,
+      "text": "these basic properties so the first"
+    },
+    {
+      "start": 473.28,
+      "duration": 2.4,
+      "text": "property is that the riemann curvature"
+    },
+    {
+      "start": 474.8,
+      "duration": 2.72,
+      "text": "tensor is"
+    },
+    {
+      "start": 475.68,
+      "duration": 4.0,
+      "text": "anti-symmetric under exchange of the"
+    },
+    {
+      "start": 477.52,
+      "duration": 5.359,
+      "text": "first two arguments"
+    },
+    {
+      "start": 479.68,
+      "duration": 4.88,
+      "text": "entries slots legs the second is that"
+    },
+    {
+      "start": 482.879,
+      "duration": 2.961,
+      "text": "when you anti-symmetrize over the first"
+    },
+    {
+      "start": 484.56,
+      "duration": 5.44,
+      "text": "three arguments you get zero"
+    },
+    {
+      "start": 485.84,
+      "duration": 6.4,
+      "text": "the third one pertains"
+    },
+    {
+      "start": 490.0,
+      "duration": 5.759,
+      "text": "to the metric and derivative and when"
+    },
+    {
+      "start": 492.24,
+      "duration": 3.519,
+      "text": "you lower one of the indices"
+    },
+    {
+      "start": 497.28,
+      "duration": 5.52,
+      "text": "of the riemann curvature tensor and the"
+    },
+    {
+      "start": 500.24,
+      "duration": 2.56,
+      "text": "fourth one"
+    },
+    {
+      "start": 503.28,
+      "duration": 4.08,
+      "text": "which will turn out to play a key role"
+    },
+    {
+      "start": 504.879,
+      "duration": 5.361,
+      "text": "in determining and defining the einstein"
+    },
+    {
+      "start": 507.36,
+      "duration": 2.88,
+      "text": "curvature tensor"
+    },
+    {
+      "start": 514.719,
+      "duration": 3.76,
+      "text": "is an identity involving the action of a"
+    },
+    {
+      "start": 516.88,
+      "duration": 4.399,
+      "text": "derivative operator on the curvature"
+    },
+    {
+      "start": 518.479,
+      "duration": 6.161,
+      "text": "tensor itself"
+    },
+    {
+      "start": 521.279,
+      "duration": 5.281,
+      "text": "so here's four properties they will all"
+    },
+    {
+      "start": 524.64,
+      "duration": 2.319,
+      "text": "turn out to be useful in various forms"
+    },
+    {
+      "start": 526.56,
+      "duration": 2.64,
+      "text": "in"
+    },
+    {
+      "start": 526.959,
+      "duration": 3.041,
+      "text": "the rest of our course so we'll spend a"
+    },
+    {
+      "start": 529.2,
+      "duration": 5.199,
+      "text": "little bit of time"
+    },
+    {
+      "start": 530.0,
+      "duration": 8.24,
+      "text": "now proving them"
+    },
+    {
+      "start": 534.399,
+      "duration": 3.841,
+      "text": "let's take a look at one okay"
+    },
+    {
+      "start": 539.36,
+      "duration": 4.72,
+      "text": "that one's easy just look at the"
+    },
+    {
+      "start": 541.6,
+      "duration": 6.16,
+      "text": "definition of the curvature tensor"
+    },
+    {
+      "start": 544.08,
+      "duration": 7.759,
+      "text": "and compare it with the"
+    },
+    {
+      "start": 547.76,
+      "duration": 4.079,
+      "text": "definition where b is replaced with a"
+    },
+    {
+      "start": 551.92,
+      "duration": 4.72,
+      "text": "so we could we've already established"
+    },
+    {
+      "start": 553.2,
+      "duration": 3.44,
+      "text": "one so now let's get on to two"
+    },
+    {
+      "start": 557.76,
+      "duration": 3.199,
+      "text": "so for an arbitrary"
+    },
+    {
+      "start": 561.68,
+      "duration": 7.279,
+      "text": "dual vector field omega a and"
+    },
+    {
+      "start": 564.8,
+      "duration": 7.36,
+      "text": "any derivative operator"
+    },
+    {
+      "start": 568.959,
+      "duration": 4.721,
+      "text": "right doesn't even have to be the one"
+    },
+    {
+      "start": 572.16,
+      "duration": 6.32,
+      "text": "determined by the metric"
+    },
+    {
+      "start": 573.68,
+      "duration": 4.8,
+      "text": "we have the following result is true"
+    },
+    {
+      "start": 579.04,
+      "duration": 3.359,
+      "text": "that if you anti-symmetrize over the"
+    },
+    {
+      "start": 581.2,
+      "duration": 3.84,
+      "text": "application"
+    },
+    {
+      "start": 582.399,
+      "duration": 8.481,
+      "text": "of the derivative operator twice to the"
+    },
+    {
+      "start": 585.04,
+      "duration": 10.08,
+      "text": "dual vector field you get zero"
+    },
+    {
+      "start": 590.88,
+      "duration": 6.32,
+      "text": "um so"
+    },
+    {
+      "start": 595.12,
+      "duration": 10.719,
+      "text": "how does that follow well we'll check"
+    },
+    {
+      "start": 597.2,
+      "duration": 8.639,
+      "text": "this as follows"
+    },
+    {
+      "start": 606.48,
+      "duration": 3.44,
+      "text": "so we'll look at the left hand side"
+    },
+    {
+      "start": 611.92,
+      "duration": 6.0,
+      "text": "and we'll"
+    },
+    {
+      "start": 614.959,
+      "duration": 4.241,
+      "text": "substitute for the definition of the"
+    },
+    {
+      "start": 617.92,
+      "duration": 4.88,
+      "text": "derivative operator"
+    },
+    {
+      "start": 619.2,
+      "duration": 3.6,
+      "text": "in terms of a coordinate chart"
+    },
+    {
+      "start": 627.12,
+      "duration": 4.88,
+      "text": "so the left hand side equals"
+    },
+    {
+      "start": 630.399,
+      "duration": 4.56,
+      "text": "this expression here here we're just"
+    },
+    {
+      "start": 632.0,
+      "duration": 2.959,
+      "text": "substituting now"
+    },
+    {
+      "start": 637.36,
+      "duration": 3.76,
+      "text": "for the action of the covariance"
+    },
+    {
+      "start": 639.839,
+      "duration": 5.0,
+      "text": "derivative"
+    },
+    {
+      "start": 641.12,
+      "duration": 5.76,
+      "text": "delta b in terms of the coordinate chart"
+    },
+    {
+      "start": 644.839,
+      "duration": 4.12,
+      "text": "derivative"
+    },
+    {
+      "start": 646.88,
+      "duration": 3.68,
+      "text": "and then we'll do it again right so"
+    },
+    {
+      "start": 648.959,
+      "duration": 2.161,
+      "text": "we've got delta a acting but we know how"
+    },
+    {
+      "start": 650.56,
+      "duration": 4.399,
+      "text": "that acts"
+    },
+    {
+      "start": 651.12,
+      "duration": 3.839,
+      "text": "so this is the same as"
+    },
+    {
+      "start": 657.68,
+      "duration": 4.159,
+      "text": "the following action"
+    },
+    {
+      "start": 665.839,
+      "duration": 3.041,
+      "text": "and i'm employing for the first time"
+    },
+    {
+      "start": 667.36,
+      "duration": 8.479,
+      "text": "here in notation that i'll explain"
+    },
+    {
+      "start": 668.88,
+      "duration": 6.959,
+      "text": "in a second"
+    },
+    {
+      "start": 678.0,
+      "duration": 11.839,
+      "text": "so there's lots of terms now"
+    },
+    {
+      "start": 698.88,
+      "duration": 4.959,
+      "text": "here comes the final term"
+    },
+    {
+      "start": 710.88,
+      "duration": 3.44,
+      "text": "okay so i need to explain this notation"
+    },
+    {
+      "start": 712.959,
+      "duration": 3.201,
+      "text": "so this notation"
+    },
+    {
+      "start": 714.32,
+      "duration": 4.56,
+      "text": "it has to do with anti-symmetrization so"
+    },
+    {
+      "start": 716.16,
+      "duration": 4.88,
+      "text": "it appears here i've got this"
+    },
+    {
+      "start": 718.88,
+      "duration": 3.68,
+      "text": "notation where the square bracket a b"
+    },
+    {
+      "start": 721.04,
+      "duration": 4.72,
+      "text": "then this vertical line d"
+    },
+    {
+      "start": 722.56,
+      "duration": 5.36,
+      "text": "vertical line and then c that means"
+    },
+    {
+      "start": 725.76,
+      "duration": 6.079,
+      "text": "anti-symmetrize over a b and c but"
+    },
+    {
+      "start": 727.92,
+      "duration": 3.919,
+      "text": "ignore d"
+    },
+    {
+      "start": 746.24,
+      "duration": 4.159,
+      "text": "so that's what that notation means when"
+    },
+    {
+      "start": 747.839,
+      "duration": 5.44,
+      "text": "you put these vertical lines around"
+    },
+    {
+      "start": 750.399,
+      "duration": 3.44,
+      "text": "one of these abstract index notation"
+    },
+    {
+      "start": 753.279,
+      "duration": 2.881,
+      "text": "index"
+    },
+    {
+      "start": 753.839,
+      "duration": 5.44,
+      "text": "indices then it means ignore it when you"
+    },
+    {
+      "start": 756.16,
+      "duration": 5.84,
+      "text": "do the anti-symmetrization"
+    },
+    {
+      "start": 759.279,
+      "duration": 4.641,
+      "text": "okay so we've got a big long massive of"
+    },
+    {
+      "start": 762.0,
+      "duration": 3.76,
+      "text": "expressions"
+    },
+    {
+      "start": 763.92,
+      "duration": 3.12,
+      "text": "uh we've got in particular we've got six"
+    },
+    {
+      "start": 765.76,
+      "duration": 3.84,
+      "text": "terms to to"
+    },
+    {
+      "start": 767.04,
+      "duration": 4.239,
+      "text": "focus on we have to worry about and"
+    },
+    {
+      "start": 769.6,
+      "duration": 2.56,
+      "text": "let's just check each one well the first"
+    },
+    {
+      "start": 771.279,
+      "duration": 4.24,
+      "text": "one"
+    },
+    {
+      "start": 772.16,
+      "duration": 5.359,
+      "text": "vanishes because d a d b"
+    },
+    {
+      "start": 775.519,
+      "duration": 3.44,
+      "text": "is the same as d b d a but we're"
+    },
+    {
+      "start": 777.519,
+      "duration": 3.601,
+      "text": "anti-symmetrizing so that one's going to"
+    },
+    {
+      "start": 778.959,
+      "duration": 4.801,
+      "text": "go to zero"
+    },
+    {
+      "start": 781.12,
+      "duration": 5.12,
+      "text": "the second term vanishes because c is"
+    },
+    {
+      "start": 783.76,
+      "duration": 4.079,
+      "text": "symmetric in the first two index indices"
+    },
+    {
+      "start": 786.24,
+      "duration": 4.32,
+      "text": "the third term vanishes because c is"
+    },
+    {
+      "start": 787.839,
+      "duration": 5.841,
+      "text": "symmetric in the first two"
+    },
+    {
+      "start": 790.56,
+      "duration": 3.44,
+      "text": "indices the third term vanishes because"
+    },
+    {
+      "start": 793.68,
+      "duration": 3.52,
+      "text": "c"
+    },
+    {
+      "start": 794.0,
+      "duration": 4.32,
+      "text": "is and is symmetric in b and c as does"
+    },
+    {
+      "start": 797.2,
+      "duration": 6.319,
+      "text": "the fourth term"
+    },
+    {
+      "start": 798.32,
+      "duration": 5.199,
+      "text": "and the final term also vanishes"
+    },
+    {
+      "start": 809.36,
+      "duration": 6.479,
+      "text": "because that's just re-labeling"
+    },
+    {
+      "start": 816.72,
+      "duration": 4.479,
+      "text": "if you write out the final term here"
+    },
+    {
+      "start": 819.92,
+      "duration": 3.2,
+      "text": "you may need to spend a couple of"
+    },
+    {
+      "start": 821.199,
+      "duration": 3.681,
+      "text": "minutes to think about why that's also"
+    },
+    {
+      "start": 823.12,
+      "duration": 2.88,
+      "text": "vanishing"
+    },
+    {
+      "start": 824.88,
+      "duration": 5.28,
+      "text": "and that's got to do with the fact that"
+    },
+    {
+      "start": 826.0,
+      "duration": 4.16,
+      "text": "we have to relabel indices"
+    },
+    {
+      "start": 830.8,
+      "duration": 3.2,
+      "text": "so if you write out all six terms"
+    },
+    {
+      "start": 832.48,
+      "duration": 3.039,
+      "text": "appearing in that anti-symmetrization"
+    },
+    {
+      "start": 834.0,
+      "duration": 2.88,
+      "text": "you'll be able to pair them up"
+    },
+    {
+      "start": 835.519,
+      "duration": 3.68,
+      "text": "the positive and negative ones and you"
+    },
+    {
+      "start": 836.88,
+      "duration": 5.44,
+      "text": "get zero so in fact you get zero"
+    },
+    {
+      "start": 839.199,
+      "duration": 5.521,
+      "text": "for this whole expression and so"
+    },
+    {
+      "start": 842.32,
+      "duration": 4.8,
+      "text": "thus right what have we learned well"
+    },
+    {
+      "start": 844.72,
+      "duration": 6.559,
+      "text": "we've learned that zero"
+    },
+    {
+      "start": 847.12,
+      "duration": 5.519,
+      "text": "equals two times the anti-symmetrization"
+    },
+    {
+      "start": 851.279,
+      "duration": 5.281,
+      "text": "of delta a delta"
+    },
+    {
+      "start": 852.639,
+      "duration": 5.841,
+      "text": "delta b omega c"
+    },
+    {
+      "start": 856.56,
+      "duration": 3.12,
+      "text": "okay i'm just taking twice what i had"
+    },
+    {
+      "start": 858.48,
+      "duration": 3.84,
+      "text": "above"
+    },
+    {
+      "start": 859.68,
+      "duration": 11.2,
+      "text": "but uh we can write that out in a"
+    },
+    {
+      "start": 862.32,
+      "duration": 10.24,
+      "text": "different way"
+    },
+    {
+      "start": 870.88,
+      "duration": 5.44,
+      "text": "namely that's equal to this expression"
+    },
+    {
+      "start": 872.56,
+      "duration": 3.76,
+      "text": "here just by index substitution"
+    },
+    {
+      "start": 879.92,
+      "duration": 4.08,
+      "text": "but that's also you can understand that"
+    },
+    {
+      "start": 882.0,
+      "duration": 3.519,
+      "text": "as being the same as the"
+    },
+    {
+      "start": 884.0,
+      "duration": 3.04,
+      "text": "anti-symmetrized version of the"
+    },
+    {
+      "start": 885.519,
+      "duration": 3.521,
+      "text": "riemann curvature tensor applied to"
+    },
+    {
+      "start": 887.04,
+      "duration": 4.0,
+      "text": "omega d so we now know"
+    },
+    {
+      "start": 889.04,
+      "duration": 3.68,
+      "text": "that the anti-symmetrize the rhema"
+    },
+    {
+      "start": 891.04,
+      "duration": 2.72,
+      "text": "curvature tensor anti-symmetries over"
+    },
+    {
+      "start": 892.72,
+      "duration": 4.479,
+      "text": "the first three indices"
+    },
+    {
+      "start": 893.76,
+      "duration": 6.079,
+      "text": "is zero okay let's prove"
+    },
+    {
+      "start": 897.199,
+      "duration": 2.64,
+      "text": "three"
+    },
+    {
+      "start": 901.839,
+      "duration": 4.56,
+      "text": "this one comes a bit easier than the"
+    },
+    {
+      "start": 903.76,
+      "duration": 2.639,
+      "text": "previous one"
+    },
+    {
+      "start": 906.8,
+      "duration": 3.039,
+      "text": "so consider"
+    },
+    {
+      "start": 908.02,
+      "duration": 4.86,
+      "text": "[Music]"
+    },
+    {
+      "start": 909.839,
+      "duration": 7.36,
+      "text": "the action"
+    },
+    {
+      "start": 912.88,
+      "duration": 6.56,
+      "text": "of covering derivatives on the metric"
+    },
+    {
+      "start": 917.199,
+      "duration": 3.521,
+      "text": "well i've just said that the action of"
+    },
+    {
+      "start": 919.44,
+      "duration": 1.759,
+      "text": "the covariance derivative of the metric"
+    },
+    {
+      "start": 920.72,
+      "duration": 2.799,
+      "text": "is zero"
+    },
+    {
+      "start": 921.199,
+      "duration": 3.361,
+      "text": "right that's the defining characteristic"
+    },
+    {
+      "start": 923.519,
+      "duration": 4.56,
+      "text": "of our"
+    },
+    {
+      "start": 924.56,
+      "duration": 6.24,
+      "text": "derivative operator here so that's"
+    },
+    {
+      "start": 928.079,
+      "duration": 4.0,
+      "text": "zero but of course there's another a way"
+    },
+    {
+      "start": 930.8,
+      "duration": 2.88,
+      "text": "to determine the action of the"
+    },
+    {
+      "start": 932.079,
+      "duration": 3.2,
+      "text": "commutator of two derivative operators"
+    },
+    {
+      "start": 933.68,
+      "duration": 5.2,
+      "text": "on a tensor namely we have that"
+    },
+    {
+      "start": 935.279,
+      "duration": 6.641,
+      "text": "tensor formula here here in yellow"
+    },
+    {
+      "start": 938.88,
+      "duration": 4.959,
+      "text": "called star maybe by star"
+    },
+    {
+      "start": 941.92,
+      "duration": 3.12,
+      "text": "there's another way to compute this this"
+    },
+    {
+      "start": 943.839,
+      "duration": 2.881,
+      "text": "thing"
+    },
+    {
+      "start": 945.04,
+      "duration": 3.52,
+      "text": "and the way you do it is well you"
+    },
+    {
+      "start": 946.72,
+      "duration": 5.2,
+      "text": "contract the curvature tensor against"
+    },
+    {
+      "start": 948.56,
+      "duration": 3.76,
+      "text": "every entry of your tensor in this case"
+    },
+    {
+      "start": 951.92,
+      "duration": 3.919,
+      "text": "g"
+    },
+    {
+      "start": 952.32,
+      "duration": 3.519,
+      "text": "so we'll do it twice"
+    },
+    {
+      "start": 958.0,
+      "duration": 5.68,
+      "text": "but that's just the same as pulling down"
+    },
+    {
+      "start": 960.88,
+      "duration": 2.8,
+      "text": "these indices"
+    },
+    {
+      "start": 964.959,
+      "duration": 4.721,
+      "text": "and then we're done right so we've"
+    },
+    {
+      "start": 966.56,
+      "duration": 5.36,
+      "text": "proved three"
+    },
+    {
+      "start": 969.68,
+      "duration": 3.599,
+      "text": "and the fourth all that's left now over"
+    },
+    {
+      "start": 971.92,
+      "duration": 5.44,
+      "text": "is the the fourth"
+    },
+    {
+      "start": 973.279,
+      "duration": 4.081,
+      "text": "uh condition the bianchi identity"
+    },
+    {
+      "start": 979.92,
+      "duration": 4.08,
+      "text": "this one is a little bit trickier maybe"
+    },
+    {
+      "start": 982.24,
+      "duration": 3.2,
+      "text": "so we're going to consider the action of"
+    },
+    {
+      "start": 984.0,
+      "duration": 3.199,
+      "text": "our derivative operator or the"
+    },
+    {
+      "start": 985.44,
+      "duration": 2.48,
+      "text": "commutator of our derivative operators"
+    },
+    {
+      "start": 987.199,
+      "duration": 2.961,
+      "text": "on"
+    },
+    {
+      "start": 987.92,
+      "duration": 4.0,
+      "text": "the derivative operator applied to some"
+    },
+    {
+      "start": 990.16,
+      "duration": 5.28,
+      "text": "arbitrary joule"
+    },
+    {
+      "start": 991.92,
+      "duration": 3.52,
+      "text": "a dual vector field omega d"
+    },
+    {
+      "start": 995.6,
+      "duration": 4.159,
+      "text": "well this thing that's easy enough to to"
+    },
+    {
+      "start": 999.44,
+      "duration": 1.92,
+      "text": "do"
+    },
+    {
+      "start": 999.759,
+      "duration": 3.921,
+      "text": "right because this thing here i've"
+    },
+    {
+      "start": 1001.36,
+      "duration": 4.96,
+      "text": "highlighted that's a tensor of type"
+    },
+    {
+      "start": 1003.68,
+      "duration": 3.279,
+      "text": "zero two so we just apply the tensor"
+    },
+    {
+      "start": 1006.32,
+      "duration": 3.04,
+      "text": "rule"
+    },
+    {
+      "start": 1006.959,
+      "duration": 3.201,
+      "text": "for the action of the riemann curvature"
+    },
+    {
+      "start": 1009.36,
+      "duration": 5.36,
+      "text": "tensor"
+    },
+    {
+      "start": 1010.16,
+      "duration": 4.56,
+      "text": "so we can compute that expression this"
+    },
+    {
+      "start": 1022.839,
+      "duration": 3.0,
+      "text": "way"
+    },
+    {
+      "start": 1028.559,
+      "duration": 3.201,
+      "text": "and we get this expression"
+    },
+    {
+      "start": 1034.88,
+      "duration": 5.36,
+      "text": "but consider that but also"
+    },
+    {
+      "start": 1038.559,
+      "duration": 3.441,
+      "text": "we're gonna at the same time consider"
+    },
+    {
+      "start": 1040.24,
+      "duration": 4.719,
+      "text": "another expression involving three"
+    },
+    {
+      "start": 1042.0,
+      "duration": 2.959,
+      "text": "derivative operators"
+    },
+    {
+      "start": 1050.84,
+      "duration": 3.0,
+      "text": "so"
+    },
+    {
+      "start": 1057.84,
+      "duration": 3.92,
+      "text": "and that's well pretty easy right that's"
+    },
+    {
+      "start": 1060.24,
+      "duration": 3.52,
+      "text": "just the action of the riemann curvature"
+    },
+    {
+      "start": 1061.76,
+      "duration": 6.08,
+      "text": "tensor on the dual vector field omega d"
+    },
+    {
+      "start": 1063.76,
+      "duration": 4.08,
+      "text": "then differentiated"
+    },
+    {
+      "start": 1069.84,
+      "duration": 3.199,
+      "text": "and then we do the leibniz property to"
+    },
+    {
+      "start": 1071.44,
+      "duration": 10.4,
+      "text": "get the action of that derivative"
+    },
+    {
+      "start": 1073.039,
+      "duration": 8.801,
+      "text": "operator through"
+    },
+    {
+      "start": 1083.44,
+      "duration": 2.64,
+      "text": "and now"
+    },
+    {
+      "start": 1086.559,
+      "duration": 3.281,
+      "text": "suppose we call the first expression i"
+    },
+    {
+      "start": 1088.48,
+      "duration": 7.36,
+      "text": "in the second expression i"
+    },
+    {
+      "start": 1089.84,
+      "duration": 6.0,
+      "text": "i if we anti-symmetrize"
+    },
+    {
+      "start": 1096.0,
+      "duration": 3.44,
+      "text": "i and i i"
+    },
+    {
+      "start": 1099.52,
+      "duration": 4.319,
+      "text": "over a b and c"
+    },
+    {
+      "start": 1100.77,
+      "duration": 3.069,
+      "text": "[Music]"
+    },
+    {
+      "start": 1104.0,
+      "duration": 5.84,
+      "text": "both sides both expressions become equal"
+    },
+    {
+      "start": 1120.4,
+      "duration": 3.76,
+      "text": "so we can equate both the"
+    },
+    {
+      "start": 1122.72,
+      "duration": 4.8,
+      "text": "anti-symmetrized version of i and the"
+    },
+    {
+      "start": 1124.16,
+      "duration": 3.36,
+      "text": "anti-symmetric version of ii"
+    },
+    {
+      "start": 1133.12,
+      "duration": 5.2,
+      "text": "and we can use other properties that"
+    },
+    {
+      "start": 1135.28,
+      "duration": 3.04,
+      "text": "we've already determined"
+    },
+    {
+      "start": 1138.799,
+      "duration": 3.201,
+      "text": "remember my vertical line notation here"
+    },
+    {
+      "start": 1141.52,
+      "duration": 4.8,
+      "text": "means"
+    },
+    {
+      "start": 1142.0,
+      "duration": 9.84,
+      "text": "don't anti-symmetrize over that slot"
+    },
+    {
+      "start": 1146.32,
+      "duration": 5.52,
+      "text": "argument index"
+    },
+    {
+      "start": 1169.919,
+      "duration": 3.841,
+      "text": "so some of these terms cancel this term"
+    },
+    {
+      "start": 1172.16,
+      "duration": 5.04,
+      "text": "cancels by property"
+    },
+    {
+      "start": 1173.76,
+      "duration": 6.64,
+      "text": "two i think we call it"
+    },
+    {
+      "start": 1177.2,
+      "duration": 3.2,
+      "text": "yep property two"
+    },
+    {
+      "start": 1180.64,
+      "duration": 3.36,
+      "text": "and we're going to bring this term over"
+    },
+    {
+      "start": 1189.12,
+      "duration": 4.08,
+      "text": "and we see that they're actually equal"
+    },
+    {
+      "start": 1190.72,
+      "duration": 4.64,
+      "text": "those two terms"
+    },
+    {
+      "start": 1193.2,
+      "duration": 2.16,
+      "text": "so"
+    },
+    {
+      "start": 1199.679,
+      "duration": 3.12,
+      "text": "for all omega e"
+    },
+    {
+      "start": 1203.039,
+      "duration": 9.041,
+      "text": "we have that omega e delta of a"
+    },
+    {
+      "start": 1207.12,
+      "duration": 8.96,
+      "text": "rbc d e is zero"
+    },
+    {
+      "start": 1212.08,
+      "duration": 4.0,
+      "text": "and hence we've derived the b and key"
+    },
+    {
+      "start": 1218.84,
+      "duration": 3.0,
+      "text": "identity"
+    },
+    {
+      "start": 1224.64,
+      "duration": 4.159,
+      "text": "and we're done this proof"
+    },
+    {
+      "start": 1229.44,
+      "duration": 5.2,
+      "text": "now the riemann curvature tensor is an"
+    },
+    {
+      "start": 1232.24,
+      "duration": 5.28,
+      "text": "intrinsic invariant that captures"
+    },
+    {
+      "start": 1234.64,
+      "duration": 4.32,
+      "text": "the curvature of a manifold so you've"
+    },
+    {
+      "start": 1237.52,
+      "duration": 3.92,
+      "text": "got to think of the riemann curvature"
+    },
+    {
+      "start": 1238.96,
+      "duration": 2.48,
+      "text": "tensor"
+    },
+    {
+      "start": 1241.76,
+      "duration": 3.68,
+      "text": "as a kind of machine box"
+    },
+    {
+      "start": 1246.84,
+      "duration": 7.959,
+      "text": "device it has"
+    },
+    {
+      "start": 1249.679,
+      "duration": 5.12,
+      "text": "um four and four arguments"
+    },
+    {
+      "start": 1255.28,
+      "duration": 5.2,
+      "text": "it takes a vector here it takes a vector"
+    },
+    {
+      "start": 1258.88,
+      "duration": 4.96,
+      "text": "here"
+    },
+    {
+      "start": 1260.48,
+      "duration": 3.36,
+      "text": "it takes a vector here"
+    },
+    {
+      "start": 1264.88,
+      "duration": 5.919,
+      "text": "and it has a dual vector argument but we"
+    },
+    {
+      "start": 1268.72,
+      "duration": 4.64,
+      "text": "use that dual vector in a different way"
+    },
+    {
+      "start": 1270.799,
+      "duration": 4.321,
+      "text": "so you can think of the riemann"
+    },
+    {
+      "start": 1273.36,
+      "duration": 3.6,
+      "text": "curvature tensor as a box that eats"
+    },
+    {
+      "start": 1275.12,
+      "duration": 6.559,
+      "text": "three vectors and produces"
+    },
+    {
+      "start": 1276.96,
+      "duration": 6.24,
+      "text": "one vector if you like one joule vector"
+    },
+    {
+      "start": 1281.679,
+      "duration": 4.0,
+      "text": "that's not the way we're going to think"
+    },
+    {
+      "start": 1283.2,
+      "duration": 3.44,
+      "text": "about the riemann curvature tensor"
+    },
+    {
+      "start": 1285.679,
+      "duration": 3.36,
+      "text": "we're going to think of the riemann"
+    },
+    {
+      "start": 1286.64,
+      "duration": 3.36,
+      "text": "curvature tensor as a linear"
+    },
+    {
+      "start": 1289.039,
+      "duration": 4.401,
+      "text": "transformation on"
+    },
+    {
+      "start": 1290.0,
+      "duration": 3.44,
+      "text": "tangent vector spaces so"
+    },
+    {
+      "start": 1302.84,
+      "duration": 3.0,
+      "text": "times"
+    },
+    {
+      "start": 1311.36,
+      "duration": 4.4,
+      "text": "so you've got to think about these these"
+    },
+    {
+      "start": 1313.2,
+      "duration": 2.56,
+      "text": "arguments"
+    },
+    {
+      "start": 1316.64,
+      "duration": 2.56,
+      "text": "in the following way so the second"
+    },
+    {
+      "start": 1318.159,
+      "duration": 2.561,
+      "text": "argument the first argument of the"
+    },
+    {
+      "start": 1319.2,
+      "duration": 1.839,
+      "text": "riemann curvature tends to think of that"
+    },
+    {
+      "start": 1320.72,
+      "duration": 3.199,
+      "text": "as"
+    },
+    {
+      "start": 1321.039,
+      "duration": 4.401,
+      "text": "being defining a coordinate axis of a"
+    },
+    {
+      "start": 1323.919,
+      "duration": 3.601,
+      "text": "two-dimensional subspace of"
+    },
+    {
+      "start": 1325.44,
+      "duration": 2.08,
+      "text": "m"
+    },
+    {
+      "start": 1329.52,
+      "duration": 4.32,
+      "text": "and you've got to think of the second"
+    },
+    {
+      "start": 1330.88,
+      "duration": 2.96,
+      "text": "vector"
+    },
+    {
+      "start": 1334.0,
+      "duration": 5.919,
+      "text": "argument of the riemann curvature tensor"
+    },
+    {
+      "start": 1336.08,
+      "duration": 5.44,
+      "text": "is defining a second coordinate axis"
+    },
+    {
+      "start": 1339.919,
+      "duration": 5.521,
+      "text": "and then if you stick those two"
+    },
+    {
+      "start": 1341.52,
+      "duration": 3.92,
+      "text": "arguments in what you're left with"
+    },
+    {
+      "start": 1345.679,
+      "duration": 5.921,
+      "text": "so if we if we you know give the riemann"
+    },
+    {
+      "start": 1348.24,
+      "duration": 6.559,
+      "text": "curvature tense of these two arguments"
+    },
+    {
+      "start": 1351.6,
+      "duration": 8.079,
+      "text": "let's call them v and w"
+    },
+    {
+      "start": 1354.799,
+      "duration": 9.441,
+      "text": "then we're left with a device which"
+    },
+    {
+      "start": 1359.679,
+      "duration": 4.561,
+      "text": "can be thought of as a matrix right"
+    },
+    {
+      "start": 1367.76,
+      "duration": 4.48,
+      "text": "it's got in abstract index notation it"
+    },
+    {
+      "start": 1370.559,
+      "duration": 3.441,
+      "text": "looks like this right it's got one upper"
+    },
+    {
+      "start": 1372.24,
+      "duration": 4.24,
+      "text": "index and one lower index"
+    },
+    {
+      "start": 1374.0,
+      "duration": 3.44,
+      "text": "and this is a you know a matrix right"
+    },
+    {
+      "start": 1376.48,
+      "duration": 6.0,
+      "text": "that's one way of"
+    },
+    {
+      "start": 1377.44,
+      "duration": 5.04,
+      "text": "thinking it or linear"
+    },
+    {
+      "start": 1386.84,
+      "duration": 4.92,
+      "text": "transformation"
+    },
+    {
+      "start": 1388.559,
+      "duration": 4.641,
+      "text": "of the tangent space so what you've got"
+    },
+    {
+      "start": 1391.76,
+      "duration": 4.96,
+      "text": "to think of"
+    },
+    {
+      "start": 1393.2,
+      "duration": 5.52,
+      "text": "is this device"
+    },
+    {
+      "start": 1396.72,
+      "duration": 5.68,
+      "text": "eats two vectors so you hand it two"
+    },
+    {
+      "start": 1398.72,
+      "duration": 4.88,
+      "text": "vectors these two vectors define"
+    },
+    {
+      "start": 1402.4,
+      "duration": 3.279,
+      "text": "you've got to think of those two vectors"
+    },
+    {
+      "start": 1403.6,
+      "duration": 2.72,
+      "text": "as defining a two dimensional surface"
+    },
+    {
+      "start": 1405.679,
+      "duration": 3.761,
+      "text": "inside"
+    },
+    {
+      "start": 1406.32,
+      "duration": 4.56,
+      "text": "m and that's these two vectors define"
+    },
+    {
+      "start": 1409.44,
+      "duration": 3.84,
+      "text": "the where the loop is that you're going"
+    },
+    {
+      "start": 1410.88,
+      "duration": 4.08,
+      "text": "to do this parallel transport around"
+    },
+    {
+      "start": 1413.28,
+      "duration": 3.84,
+      "text": "and then once you've chosen these two"
+    },
+    {
+      "start": 1414.96,
+      "duration": 2.64,
+      "text": "vectors being w to define the surface"
+    },
+    {
+      "start": 1417.12,
+      "duration": 3.6,
+      "text": "inside"
+    },
+    {
+      "start": 1417.6,
+      "duration": 5.199,
+      "text": "m the riemann curvature tensor"
+    },
+    {
+      "start": 1420.72,
+      "duration": 3.92,
+      "text": "tells you how a vector initially at the"
+    },
+    {
+      "start": 1422.799,
+      "duration": 2.401,
+      "text": "point p gets parallel transported around"
+    },
+    {
+      "start": 1424.64,
+      "duration": 1.76,
+      "text": "that loop"
+    },
+    {
+      "start": 1425.2,
+      "duration": 2.719,
+      "text": "so it gives you the second order"
+    },
+    {
+      "start": 1426.4,
+      "duration": 2.8,
+      "text": "correction right that's what we saw in"
+    },
+    {
+      "start": 1427.919,
+      "duration": 2.481,
+      "text": "the previous lecture"
+    },
+    {
+      "start": 1429.2,
+      "duration": 3.76,
+      "text": "it's the way to think of the riemann"
+    },
+    {
+      "start": 1430.4,
+      "duration": 3.519,
+      "text": "curvature tensor now it turns out"
+    },
+    {
+      "start": 1432.96,
+      "duration": 3.12,
+      "text": "of course there are lots of"
+    },
+    {
+      "start": 1433.919,
+      "duration": 3.201,
+      "text": "circumstances where it's you know you"
+    },
+    {
+      "start": 1436.08,
+      "duration": 2.719,
+      "text": "don't want to"
+    },
+    {
+      "start": 1437.12,
+      "duration": 3.439,
+      "text": "you don't need all that information so"
+    },
+    {
+      "start": 1438.799,
+      "duration": 4.401,
+      "text": "this is this is by the way you know"
+    },
+    {
+      "start": 1440.559,
+      "duration": 4.561,
+      "text": "all the information that you can require"
+    },
+    {
+      "start": 1443.2,
+      "duration": 3.28,
+      "text": "to specify the parallel transport of a"
+    },
+    {
+      "start": 1445.12,
+      "duration": 3.679,
+      "text": "little vector around a loop"
+    },
+    {
+      "start": 1446.48,
+      "duration": 3.76,
+      "text": "you know an arbitrary loop now you think"
+    },
+    {
+      "start": 1448.799,
+      "duration": 2.961,
+      "text": "of what you need to specify an arbitrary"
+    },
+    {
+      "start": 1450.24,
+      "duration": 2.96,
+      "text": "loop in a manifold where you need two"
+    },
+    {
+      "start": 1451.76,
+      "duration": 3.12,
+      "text": "two vectors to give this coordinate"
+    },
+    {
+      "start": 1453.2,
+      "duration": 4.0,
+      "text": "plane and you need"
+    },
+    {
+      "start": 1454.88,
+      "duration": 3.76,
+      "text": "uh and and then the parallel transport"
+    },
+    {
+      "start": 1457.2,
+      "duration": 2.88,
+      "text": "to second order is then captured"
+    },
+    {
+      "start": 1458.64,
+      "duration": 2.72,
+      "text": "completely by the riemann curvature turn"
+    },
+    {
+      "start": 1460.08,
+      "duration": 2.4,
+      "text": "so there's no more information to"
+    },
+    {
+      "start": 1461.36,
+      "duration": 3.199,
+      "text": "capture so this is"
+    },
+    {
+      "start": 1462.48,
+      "duration": 3.76,
+      "text": "like all the second order structure of"
+    },
+    {
+      "start": 1464.559,
+      "duration": 2.72,
+      "text": "your manifold is captured by the riemann"
+    },
+    {
+      "start": 1466.24,
+      "duration": 2.72,
+      "text": "curvature tensor"
+    },
+    {
+      "start": 1467.279,
+      "duration": 3.121,
+      "text": "but often in applications you don't need"
+    },
+    {
+      "start": 1468.96,
+      "duration": 3.28,
+      "text": "all of that information like"
+    },
+    {
+      "start": 1470.4,
+      "duration": 5.279,
+      "text": "you're going to sum over various indices"
+    },
+    {
+      "start": 1472.24,
+      "duration": 5.2,
+      "text": "because you average or whatever"
+    },
+    {
+      "start": 1475.679,
+      "duration": 3.681,
+      "text": "and so it turns out that a couple of"
+    },
+    {
+      "start": 1477.44,
+      "duration": 5.2,
+      "text": "derived tensor fields play a special"
+    },
+    {
+      "start": 1479.36,
+      "duration": 3.28,
+      "text": "role in general relativity"
+    },
+    {
+      "start": 1483.36,
+      "duration": 6.0,
+      "text": "and the first derived tensor so"
+    },
+    {
+      "start": 1486.799,
+      "duration": 3.841,
+      "text": "this has less strictly less or usually"
+    },
+    {
+      "start": 1489.36,
+      "duration": 2.72,
+      "text": "less information than the riemann"
+    },
+    {
+      "start": 1490.64,
+      "duration": 3.36,
+      "text": "curvature tensor"
+    },
+    {
+      "start": 1492.08,
+      "duration": 3.44,
+      "text": "depends on your dimension so the first"
+    },
+    {
+      "start": 1494.0,
+      "duration": 3.84,
+      "text": "derived tensor that we're going to"
+    },
+    {
+      "start": 1495.52,
+      "duration": 3.6,
+      "text": "define is the circle richie tensor"
+    },
+    {
+      "start": 1497.84,
+      "duration": 3.92,
+      "text": "and that's what you get when you"
+    },
+    {
+      "start": 1499.12,
+      "duration": 6.32,
+      "text": "contract over the second argument of the"
+    },
+    {
+      "start": 1501.76,
+      "duration": 3.68,
+      "text": "riemann curvature tensor and the fourth"
+    },
+    {
+      "start": 1507.6,
+      "duration": 8.24,
+      "text": "this plays a pretty important role in"
+    },
+    {
+      "start": 1509.84,
+      "duration": 6.0,
+      "text": "general relativity"
+    },
+    {
+      "start": 1519.039,
+      "duration": 5.601,
+      "text": "and uh well note"
+    },
+    {
+      "start": 1522.24,
+      "duration": 7.6,
+      "text": "this riemann this richie turtle has a"
+    },
+    {
+      "start": 1524.64,
+      "duration": 5.2,
+      "text": "nice symmetry property"
+    },
+    {
+      "start": 1529.919,
+      "duration": 3.281,
+      "text": "and that followed by three"
+    },
+    {
+      "start": 1533.36,
+      "duration": 3.04,
+      "text": "by property three of the riemann"
+    },
+    {
+      "start": 1534.72,
+      "duration": 4.72,
+      "text": "curvature tensor"
+    },
+    {
+      "start": 1536.4,
+      "duration": 3.04,
+      "text": "and we also define"
+    },
+    {
+      "start": 1539.84,
+      "duration": 4.0,
+      "text": "something called the scalar curvature"
+    },
+    {
+      "start": 1546.559,
+      "duration": 5.201,
+      "text": "which is the contraction of the richie"
+    },
+    {
+      "start": 1554.84,
+      "duration": 3.0,
+      "text": "tensor"
+    },
+    {
+      "start": 1567.44,
+      "duration": 3.04,
+      "text": "and turns out there's one final tensor"
+    },
+    {
+      "start": 1569.52,
+      "duration": 3.6,
+      "text": "that will play"
+    },
+    {
+      "start": 1570.48,
+      "duration": 4.48,
+      "text": "probably the most important role in"
+    },
+    {
+      "start": 1573.12,
+      "duration": 3.679,
+      "text": "general relativity"
+    },
+    {
+      "start": 1574.96,
+      "duration": 3.28,
+      "text": "and that to define that tensor we're"
+    },
+    {
+      "start": 1576.799,
+      "duration": 3.36,
+      "text": "going to note"
+    },
+    {
+      "start": 1578.24,
+      "duration": 3.039,
+      "text": "we're going to first make an observation"
+    },
+    {
+      "start": 1580.159,
+      "duration": 2.081,
+      "text": "and then use the result of that"
+    },
+    {
+      "start": 1581.279,
+      "duration": 4.561,
+      "text": "observation"
+    },
+    {
+      "start": 1582.24,
+      "duration": 3.6,
+      "text": "to actually introduce our definition"
+    },
+    {
+      "start": 1586.72,
+      "duration": 4.24,
+      "text": "so to get this third tensor that we"
+    },
+    {
+      "start": 1591.679,
+      "duration": 2.48,
+      "text": "that will play the important role in"
+    },
+    {
+      "start": 1592.96,
+      "duration": 2.079,
+      "text": "general relativity we're going to put"
+    },
+    {
+      "start": 1594.159,
+      "duration": 4.081,
+      "text": "contracted by"
+    },
+    {
+      "start": 1595.039,
+      "duration": 7.201,
+      "text": "bianchi identity"
+    },
+    {
+      "start": 1598.24,
+      "duration": 4.0,
+      "text": "and what do we get when we do that well"
+    },
+    {
+      "start": 1602.32,
+      "duration": 5.52,
+      "text": "b c d a plus this is i'm just writing"
+    },
+    {
+      "start": 1605.919,
+      "duration": 7.521,
+      "text": "out the bianchi identity"
+    },
+    {
+      "start": 1607.84,
+      "duration": 7.76,
+      "text": "and we've contracted it over"
+    },
+    {
+      "start": 1613.44,
+      "duration": 2.16,
+      "text": "uh"
+    },
+    {
+      "start": 1619.039,
+      "duration": 4.401,
+      "text": "what have we contracted it against a and"
+    },
+    {
+      "start": 1621.36,
+      "duration": 2.08,
+      "text": "b"
+    },
+    {
+      "start": 1624.559,
+      "duration": 3.281,
+      "text": "so then"
+    },
+    {
+      "start": 1628.0,
+      "duration": 3.44,
+      "text": "take that expression and contract it"
+    },
+    {
+      "start": 1629.84,
+      "duration": 4.24,
+      "text": "with"
+    },
+    {
+      "start": 1631.44,
+      "duration": 2.64,
+      "text": "gbd"
+    },
+    {
+      "start": 1635.6,
+      "duration": 6.4,
+      "text": "right and that effectively raises d and"
+    },
+    {
+      "start": 1638.48,
+      "duration": 3.52,
+      "text": "then contracts it with with b"
+    },
+    {
+      "start": 1642.559,
+      "duration": 5.6,
+      "text": "and so when you do that you get this"
+    },
+    {
+      "start": 1645.36,
+      "duration": 2.799,
+      "text": "expression here"
+    },
+    {
+      "start": 1648.64,
+      "duration": 4.2,
+      "text": "and now we've got an expression where"
+    },
+    {
+      "start": 1649.919,
+      "duration": 5.921,
+      "text": "the riemann curvature tensor has"
+    },
+    {
+      "start": 1652.84,
+      "duration": 3.0,
+      "text": "vanished"
+    },
+    {
+      "start": 1659.84,
+      "duration": 4.959,
+      "text": "and we have just by a bit of index"
+    },
+    {
+      "start": 1666.84,
+      "duration": 6.68,
+      "text": "shuffling"
+    },
+    {
+      "start": 1669.039,
+      "duration": 4.481,
+      "text": "we have obtained"
+    },
+    {
+      "start": 1673.6,
+      "duration": 4.559,
+      "text": "a very simple expression for the"
+    },
+    {
+      "start": 1675.84,
+      "duration": 6.959,
+      "text": "divergence of a certain tensor field"
+    },
+    {
+      "start": 1678.159,
+      "duration": 6.321,
+      "text": "and we"
+    },
+    {
+      "start": 1682.799,
+      "duration": 5.921,
+      "text": "oh you know that should be just all"
+    },
+    {
+      "start": 1684.48,
+      "duration": 4.24,
+      "text": "right um so what we've learned"
+    },
+    {
+      "start": 1692.559,
+      "duration": 6.881,
+      "text": "is that if you take the divergence the"
+    },
+    {
+      "start": 1696.88,
+      "duration": 2.56,
+      "text": "so-called"
+    },
+    {
+      "start": 1700.0,
+      "duration": 4.32,
+      "text": "which is just contracting the the raised"
+    },
+    {
+      "start": 1706.32,
+      "duration": 5.52,
+      "text": "this is the definition of the divergence"
+    },
+    {
+      "start": 1714.88,
+      "duration": 3.6,
+      "text": "by applying or contracting again the"
+    },
+    {
+      "start": 1716.96,
+      "duration": 3.04,
+      "text": "tensor against the raised derivative"
+    },
+    {
+      "start": 1718.48,
+      "duration": 4.319,
+      "text": "operator then we get that that"
+    },
+    {
+      "start": 1720.0,
+      "duration": 4.96,
+      "text": "divergence of this new tensor that's"
+    },
+    {
+      "start": 1722.799,
+      "duration": 5.441,
+      "text": "appeared here gab is zero"
+    },
+    {
+      "start": 1724.96,
+      "duration": 6.719,
+      "text": "where what is this new tensor"
+    },
+    {
+      "start": 1728.24,
+      "duration": 3.439,
+      "text": "well it's defined by the line above"
+    },
+    {
+      "start": 1735.52,
+      "duration": 3.6,
+      "text": "and there's divergencelessness of this"
+    },
+    {
+      "start": 1738.48,
+      "duration": 4.079,
+      "text": "final"
+    },
+    {
+      "start": 1739.12,
+      "duration": 4.88,
+      "text": "tensor here turns out to play be very"
+    },
+    {
+      "start": 1742.559,
+      "duration": 3.041,
+      "text": "play a crucial role in formulating"
+    },
+    {
+      "start": 1744.0,
+      "duration": 4.24,
+      "text": "einstein's field equations"
+    },
+    {
+      "start": 1745.6,
+      "duration": 4.48,
+      "text": "and this this tensor here has a has a"
+    },
+    {
+      "start": 1748.24,
+      "duration": 5.6,
+      "text": "name"
+    },
+    {
+      "start": 1750.08,
+      "duration": 3.76,
+      "text": "and it's the einstein tensor"
+    },
+    {
+      "start": 1758.32,
+      "duration": 3.28,
+      "text": "okay so for the rest of"
+    },
+    {
+      "start": 1762.24,
+      "duration": 3.76,
+      "text": "those are three three derived tensor"
+    },
+    {
+      "start": 1765.279,
+      "duration": 3.841,
+      "text": "fields that we get"
+    },
+    {
+      "start": 1766.0,
+      "duration": 3.679,
+      "text": "from the the riemann curvature tensor so"
+    },
+    {
+      "start": 1769.12,
+      "duration": 2.08,
+      "text": "far we've"
+    },
+    {
+      "start": 1769.679,
+      "duration": 3.36,
+      "text": "we've just studied the riemann curvature"
+    },
+    {
+      "start": 1771.2,
+      "duration": 4.56,
+      "text": "sensor established some of its basic"
+    },
+    {
+      "start": 1773.039,
+      "duration": 4.561,
+      "text": "uh contraction properties and"
+    },
+    {
+      "start": 1775.76,
+      "duration": 5.039,
+      "text": "differential properties"
+    },
+    {
+      "start": 1777.6,
+      "duration": 5.6,
+      "text": "we've defined these three"
+    },
+    {
+      "start": 1780.799,
+      "duration": 3.441,
+      "text": "derived tensor fields and now we're"
+    },
+    {
+      "start": 1783.2,
+      "duration": 2.64,
+      "text": "going to relate"
+    },
+    {
+      "start": 1784.24,
+      "duration": 3.84,
+      "text": "the riemann curvature tensor to yet"
+    },
+    {
+      "start": 1785.84,
+      "duration": 4.319,
+      "text": "another interpretation"
+    },
+    {
+      "start": 1788.08,
+      "duration": 3.76,
+      "text": "and this one will be the the one that"
+    },
+    {
+      "start": 1790.159,
+      "duration": 3.921,
+      "text": "plays the most important role in"
+    },
+    {
+      "start": 1791.84,
+      "duration": 4.079,
+      "text": "deriving the einstein's field equations"
+    },
+    {
+      "start": 1794.08,
+      "duration": 4.16,
+      "text": "so so far we understand the remain"
+    },
+    {
+      "start": 1795.919,
+      "duration": 3.36,
+      "text": "curvature tensor as this just either age"
+    },
+    {
+      "start": 1798.24,
+      "duration": 2.88,
+      "text": "is this"
+    },
+    {
+      "start": 1799.279,
+      "duration": 3.601,
+      "text": "this mathematical object the commutator"
+    },
+    {
+      "start": 1801.12,
+      "duration": 4.559,
+      "text": "of two derivative operators or"
+    },
+    {
+      "start": 1802.88,
+      "duration": 4.08,
+      "text": "b we understand it as telling us about"
+    },
+    {
+      "start": 1805.679,
+      "duration": 2.801,
+      "text": "the parallel transport of a vector"
+    },
+    {
+      "start": 1806.96,
+      "duration": 2.4,
+      "text": "around the little tiny loop to second"
+    },
+    {
+      "start": 1808.48,
+      "duration": 3.76,
+      "text": "order"
+    },
+    {
+      "start": 1809.36,
+      "duration": 4.48,
+      "text": "but there's a third interpretation of"
+    },
+    {
+      "start": 1812.24,
+      "duration": 3.679,
+      "text": "the curvature tensor"
+    },
+    {
+      "start": 1813.84,
+      "duration": 3.76,
+      "text": "that plays the most important role and"
+    },
+    {
+      "start": 1815.919,
+      "duration": 6.961,
+      "text": "it's this it's called the geodesic"
+    },
+    {
+      "start": 1817.6,
+      "duration": 7.679,
+      "text": "deviation equation"
+    },
+    {
+      "start": 1822.88,
+      "duration": 3.919,
+      "text": "and what this tells us is that the human"
+    },
+    {
+      "start": 1825.279,
+      "duration": 3.921,
+      "text": "curvature tensor is related to the"
+    },
+    {
+      "start": 1826.799,
+      "duration": 11.041,
+      "text": "acceleration of nearby geodesics away"
+    },
+    {
+      "start": 1829.2,
+      "duration": 8.64,
+      "text": "from each other"
+    },
+    {
+      "start": 1865.2,
+      "duration": 4.4,
+      "text": "so you imagine that you have two"
+    },
+    {
+      "start": 1868.0,
+      "duration": 4.32,
+      "text": "geodesics that are initially"
+    },
+    {
+      "start": 1869.6,
+      "duration": 4.079,
+      "text": "nearby the infinitesimally close and"
+    },
+    {
+      "start": 1872.32,
+      "duration": 3.52,
+      "text": "then you let them"
+    },
+    {
+      "start": 1873.679,
+      "duration": 4.161,
+      "text": "move apart move on your manifold and so"
+    },
+    {
+      "start": 1875.84,
+      "duration": 2.8,
+      "text": "when you have two geodesics nearby on a"
+    },
+    {
+      "start": 1877.84,
+      "duration": 2.8,
+      "text": "manifold"
+    },
+    {
+      "start": 1878.64,
+      "duration": 3.759,
+      "text": "if there's no curvature if the manifold"
+    },
+    {
+      "start": 1880.64,
+      "duration": 2.8,
+      "text": "is not curved and those geodesics will"
+    },
+    {
+      "start": 1882.399,
+      "duration": 2.241,
+      "text": "always stay nearby"
+    },
+    {
+      "start": 1883.44,
+      "duration": 3.599,
+      "text": "right if they're pointing in the same"
+    },
+    {
+      "start": 1884.64,
+      "duration": 2.399,
+      "text": "direction"
+    },
+    {
+      "start": 1887.44,
+      "duration": 4.64,
+      "text": "now if you have curvature like you're on"
+    },
+    {
+      "start": 1890.72,
+      "duration": 3.36,
+      "text": "the surface of the sphere then those"
+    },
+    {
+      "start": 1892.08,
+      "duration": 5.839,
+      "text": "geodesics can diverge or they can"
+    },
+    {
+      "start": 1894.08,
+      "duration": 5.76,
+      "text": "converge later on and this this"
+    },
+    {
+      "start": 1897.919,
+      "duration": 3.6,
+      "text": "relative acceleration can actually be"
+    },
+    {
+      "start": 1899.84,
+      "duration": 2.88,
+      "text": "captured completely by the riemann"
+    },
+    {
+      "start": 1901.519,
+      "duration": 3.52,
+      "text": "curvature tensor"
+    },
+    {
+      "start": 1902.72,
+      "duration": 3.439,
+      "text": "so to make this precise we have to spend"
+    },
+    {
+      "start": 1905.039,
+      "duration": 3.441,
+      "text": "a little bit of time"
+    },
+    {
+      "start": 1906.159,
+      "duration": 4.321,
+      "text": "defining what we could mean by too"
+    },
+    {
+      "start": 1908.48,
+      "duration": 12.4,
+      "text": "nearby geodesics"
+    },
+    {
+      "start": 1910.48,
+      "duration": 12.64,
+      "text": "so that needs a little bit of work"
+    },
+    {
+      "start": 1920.88,
+      "duration": 4.0,
+      "text": "so we want to we want to talk about"
+    },
+    {
+      "start": 1923.12,
+      "duration": 4.48,
+      "text": "smooth one parameter families of"
+    },
+    {
+      "start": 1924.88,
+      "duration": 2.72,
+      "text": "geodesics"
+    },
+    {
+      "start": 1929.6,
+      "duration": 2.559,
+      "text": "you know that doesn't mean one geodesic"
+    },
+    {
+      "start": 1931.039,
+      "duration": 2.561,
+      "text": "that means you've got a whole bunch of"
+    },
+    {
+      "start": 1932.159,
+      "duration": 3.041,
+      "text": "them"
+    },
+    {
+      "start": 1933.6,
+      "duration": 3.84,
+      "text": "and they're all sort of nearby each"
+    },
+    {
+      "start": 1935.2,
+      "duration": 2.24,
+      "text": "other"
+    },
+    {
+      "start": 1938.32,
+      "duration": 4.479,
+      "text": "and it's perfectly easy to imagine a"
+    },
+    {
+      "start": 1941.279,
+      "duration": 3.12,
+      "text": "chaotic situation where you've got one"
+    },
+    {
+      "start": 1942.799,
+      "duration": 3.201,
+      "text": "geodesic pointing one way and then"
+    },
+    {
+      "start": 1944.399,
+      "duration": 2.561,
+      "text": "infinitely it says something close by"
+    },
+    {
+      "start": 1946.0,
+      "duration": 2.72,
+      "text": "you're going to do it does it put in"
+    },
+    {
+      "start": 1946.96,
+      "duration": 4.079,
+      "text": "another way no no no we don't want to"
+    },
+    {
+      "start": 1948.72,
+      "duration": 5.92,
+      "text": "discuss such crazy situations let's"
+    },
+    {
+      "start": 1951.039,
+      "duration": 3.601,
+      "text": "let's consider a nice situation"
+    },
+    {
+      "start": 1954.799,
+      "duration": 3.6,
+      "text": "so what can we mean by a nice family of"
+    },
+    {
+      "start": 1956.96,
+      "duration": 3.88,
+      "text": "geodesics well"
+    },
+    {
+      "start": 1958.399,
+      "duration": 5.441,
+      "text": "what we mean is that gamma s is a"
+    },
+    {
+      "start": 1960.84,
+      "duration": 3.0,
+      "text": "geodesic"
+    },
+    {
+      "start": 1964.32,
+      "duration": 6.8,
+      "text": "firstly for all s"
+    },
+    {
+      "start": 1967.76,
+      "duration": 3.36,
+      "text": "in some interval in r"
+    },
+    {
+      "start": 1972.48,
+      "duration": 8.4,
+      "text": "i don't know minus epsilon epsilon"
+    },
+    {
+      "start": 1976.96,
+      "duration": 6.319,
+      "text": "uh and that's not enough"
+    },
+    {
+      "start": 1980.88,
+      "duration": 4.0,
+      "text": "you know we don't want th that could i"
+    },
+    {
+      "start": 1983.279,
+      "duration": 3.28,
+      "text": "could easily construct such a gamma s"
+    },
+    {
+      "start": 1984.88,
+      "duration": 3.919,
+      "text": "with a completely crazy"
+    },
+    {
+      "start": 1986.559,
+      "duration": 4.0,
+      "text": "spray of geodesics going everywhere we"
+    },
+    {
+      "start": 1988.799,
+      "duration": 2.72,
+      "text": "also want that they depend smoothly as"
+    },
+    {
+      "start": 1990.559,
+      "duration": 2.96,
+      "text": "you vary s"
+    },
+    {
+      "start": 1991.519,
+      "duration": 3.601,
+      "text": "and as you vary the the curve parameter"
+    },
+    {
+      "start": 1993.519,
+      "duration": 3.361,
+      "text": "or geodesic parameter"
+    },
+    {
+      "start": 1995.12,
+      "duration": 4.32,
+      "text": "and what the smooth mean in this context"
+    },
+    {
+      "start": 1996.88,
+      "duration": 2.56,
+      "text": "it means"
+    },
+    {
+      "start": 2001.039,
+      "duration": 5.281,
+      "text": "that it as you take a pair of the pair"
+    },
+    {
+      "start": 2003.6,
+      "duration": 6.0,
+      "text": "of parameters snt to a geodesic"
+    },
+    {
+      "start": 2006.32,
+      "duration": 3.28,
+      "text": "that you get a smooth"
+    },
+    {
+      "start": 2009.679,
+      "duration": 7.161,
+      "text": "uh one to one no no"
+    },
+    {
+      "start": 2013.44,
+      "duration": 4.88,
+      "text": "these geodesics aren't crossing each"
+    },
+    {
+      "start": 2016.84,
+      "duration": 4.28,
+      "text": "other"
+    },
+    {
+      "start": 2018.32,
+      "duration": 2.8,
+      "text": "one-to-one map"
+    },
+    {
+      "start": 2025.279,
+      "duration": 6.88,
+      "text": "and furthermore it's invertible"
+    },
+    {
+      "start": 2028.96,
+      "duration": 6.319,
+      "text": "and the inverse"
+    },
+    {
+      "start": 2032.159,
+      "duration": 4.88,
+      "text": "is smooth yeah that's about we're trying"
+    },
+    {
+      "start": 2035.279,
+      "duration": 3.28,
+      "text": "to demand that our family of geodesics"
+    },
+    {
+      "start": 2037.039,
+      "duration": 5.281,
+      "text": "forms a nice smooth"
+    },
+    {
+      "start": 2038.559,
+      "duration": 3.761,
+      "text": "family like a surface"
+    },
+    {
+      "start": 2045.279,
+      "duration": 4.721,
+      "text": "and then let's just say it so let sigma"
+    },
+    {
+      "start": 2047.519,
+      "duration": 14.32,
+      "text": "be the 2d manifold"
+    },
+    {
+      "start": 2050.0,
+      "duration": 11.839,
+      "text": "sub manifold"
+    },
+    {
+      "start": 2068.32,
+      "duration": 4.16,
+      "text": "so you can think of gamma st as defining"
+    },
+    {
+      "start": 2070.159,
+      "duration": 5.76,
+      "text": "a smooth sub manifold"
+    },
+    {
+      "start": 2072.48,
+      "duration": 7.199,
+      "text": "and st are the coordinate"
+    },
+    {
+      "start": 2075.919,
+      "duration": 3.76,
+      "text": "re coordinate system right for this"
+    },
+    {
+      "start": 2086.839,
+      "duration": 3.0,
+      "text": "manifold"
+    },
+    {
+      "start": 2094.72,
+      "duration": 3.84,
+      "text": "and i'll draw a picture now see this is"
+    },
+    {
+      "start": 2097.119,
+      "duration": 3.281,
+      "text": "the"
+    },
+    {
+      "start": 2098.56,
+      "duration": 3.519,
+      "text": "picture you should have in mind when i'm"
+    },
+    {
+      "start": 2100.4,
+      "duration": 3.92,
+      "text": "talking about a smooth family of"
+    },
+    {
+      "start": 2102.079,
+      "duration": 6.401,
+      "text": "geodesics here this sort of"
+    },
+    {
+      "start": 2104.32,
+      "duration": 4.16,
+      "text": "here's drawn a whole bunch of geodesics"
+    },
+    {
+      "start": 2109.04,
+      "duration": 4.64,
+      "text": "and we're going to have two two"
+    },
+    {
+      "start": 2111.76,
+      "duration": 6.16,
+      "text": "parameters"
+    },
+    {
+      "start": 2113.68,
+      "duration": 8.8,
+      "text": "s and t so"
+    },
+    {
+      "start": 2117.92,
+      "duration": 7.919,
+      "text": "t s labels our"
+    },
+    {
+      "start": 2122.48,
+      "duration": 6.359,
+      "text": "which geodesic we have"
+    },
+    {
+      "start": 2125.839,
+      "duration": 5.921,
+      "text": "and t labels where we are along the"
+    },
+    {
+      "start": 2128.839,
+      "duration": 4.361,
+      "text": "geodesic"
+    },
+    {
+      "start": 2131.76,
+      "duration": 3.28,
+      "text": "and corresponding to these two"
+    },
+    {
+      "start": 2133.2,
+      "duration": 4.639,
+      "text": "coordinates there are two"
+    },
+    {
+      "start": 2135.04,
+      "duration": 2.799,
+      "text": "tangent vectors"
+    },
+    {
+      "start": 2138.48,
+      "duration": 3.599,
+      "text": "it's called the tangent vector in the"
+    },
+    {
+      "start": 2140.56,
+      "duration": 5.279,
+      "text": "direction of the curve capital t"
+    },
+    {
+      "start": 2142.079,
+      "duration": 3.76,
+      "text": "a and the other one capital x a"
+    },
+    {
+      "start": 2154.48,
+      "duration": 4.8,
+      "text": "so t a what is that it's defined to be"
+    },
+    {
+      "start": 2157.839,
+      "duration": 16.0,
+      "text": "this tangent vector here"
+    },
+    {
+      "start": 2159.28,
+      "duration": 18.079,
+      "text": "as you infinitesimally change little d"
+    },
+    {
+      "start": 2173.839,
+      "duration": 3.52,
+      "text": "and because it's a tangent"
+    },
+    {
+      "start": 2177.52,
+      "duration": 3.04,
+      "text": "of a geodesic"
+    },
+    {
+      "start": 2184.96,
+      "duration": 7.28,
+      "text": "we have of course that t"
+    },
+    {
+      "start": 2188.32,
+      "duration": 5.6,
+      "text": "a delta a t b is zero right the geodesic"
+    },
+    {
+      "start": 2192.24,
+      "duration": 8.08,
+      "text": "is a curve for which its tangent vector"
+    },
+    {
+      "start": 2193.92,
+      "duration": 9.76,
+      "text": "is parallel transported along itself"
+    },
+    {
+      "start": 2200.32,
+      "duration": 3.36,
+      "text": "now we have another vector field"
+    },
+    {
+      "start": 2208.88,
+      "duration": 7.199,
+      "text": "the vector field capital x a which is"
+    },
+    {
+      "start": 2212.32,
+      "duration": 8.24,
+      "text": "defined by dds a you can interpret that"
+    },
+    {
+      "start": 2216.079,
+      "duration": 4.481,
+      "text": "as the displacement"
+    },
+    {
+      "start": 2221.28,
+      "duration": 2.799,
+      "text": "to a nearby"
+    },
+    {
+      "start": 2224.88,
+      "duration": 4.959,
+      "text": "vector field nearby geodesic"
+    },
+    {
+      "start": 2242.32,
+      "duration": 2.72,
+      "text": "right you think of"
+    },
+    {
+      "start": 2246.0,
+      "duration": 7.44,
+      "text": "just infinitesimally varying s and"
+    },
+    {
+      "start": 2250.24,
+      "duration": 7.599,
+      "text": "at the point gamma as t xa points in the"
+    },
+    {
+      "start": 2253.44,
+      "duration": 4.399,
+      "text": "direction of the nearby geodesic"
+    },
+    {
+      "start": 2260.48,
+      "duration": 3.68,
+      "text": "now now we want to spend a bit of a time"
+    },
+    {
+      "start": 2262.24,
+      "duration": 2.32,
+      "text": "rescaling our parameters so they're just"
+    },
+    {
+      "start": 2264.16,
+      "duration": 3.84,
+      "text": "right"
+    },
+    {
+      "start": 2264.56,
+      "duration": 5.68,
+      "text": "for the calculation we're about to do"
+    },
+    {
+      "start": 2268.0,
+      "duration": 4.8,
+      "text": "so we're going to rescale our t"
+    },
+    {
+      "start": 2270.24,
+      "duration": 2.56,
+      "text": "parameter"
+    },
+    {
+      "start": 2272.96,
+      "duration": 3.28,
+      "text": "with an s dependent"
+    },
+    {
+      "start": 2277.2,
+      "duration": 2.399,
+      "text": "factor"
+    },
+    {
+      "start": 2280.4,
+      "duration": 6.16,
+      "text": "remember that the geodesic parameter t"
+    },
+    {
+      "start": 2284.32,
+      "duration": 4.08,
+      "text": "may be rescaled and that doesn't change"
+    },
+    {
+      "start": 2286.56,
+      "duration": 4.08,
+      "text": "the fact that it's a geodesic"
+    },
+    {
+      "start": 2288.4,
+      "duration": 2.24,
+      "text": "but"
+    },
+    {
+      "start": 2291.839,
+      "duration": 8.0,
+      "text": "we can ensure that various properties"
+    },
+    {
+      "start": 2293.76,
+      "duration": 6.079,
+      "text": "are satisfied"
+    },
+    {
+      "start": 2305.04,
+      "duration": 3.6,
+      "text": "and the first property we want to"
+    },
+    {
+      "start": 2308.88,
+      "duration": 3.76,
+      "text": "require is that the length of the"
+    },
+    {
+      "start": 2310.48,
+      "duration": 4.16,
+      "text": "tangent vector doesn't vary as you"
+    },
+    {
+      "start": 2312.64,
+      "duration": 4.32,
+      "text": "change the s parameter which geodesic"
+    },
+    {
+      "start": 2314.64,
+      "duration": 2.32,
+      "text": "you're on"
+    },
+    {
+      "start": 2317.92,
+      "duration": 9.52,
+      "text": "now remember s and t are coordinates"
+    },
+    {
+      "start": 2321.359,
+      "duration": 20.48,
+      "text": "so they're corresponding tangent vectors"
+    },
+    {
+      "start": 2327.44,
+      "duration": 14.399,
+      "text": "commute in the sense of vector fields"
+    },
+    {
+      "start": 2345.359,
+      "duration": 4.081,
+      "text": "so it's another property that will come"
+    },
+    {
+      "start": 2348.88,
+      "duration": 3.76,
+      "text": "out"
+    },
+    {
+      "start": 2349.44,
+      "duration": 4.72,
+      "text": "in handy when we start"
+    },
+    {
+      "start": 2352.64,
+      "duration": 3.28,
+      "text": "trying to relate the situation to"
+    },
+    {
+      "start": 2354.16,
+      "duration": 4.959,
+      "text": "curvature"
+    },
+    {
+      "start": 2355.92,
+      "duration": 3.679,
+      "text": "so that also has the consequence that x"
+    },
+    {
+      "start": 2359.119,
+      "duration": 10.161,
+      "text": "a t"
+    },
+    {
+      "start": 2359.599,
+      "duration": 11.201,
+      "text": "a is constant"
+    },
+    {
+      "start": 2369.28,
+      "duration": 4.799,
+      "text": "you can add a constant to the s"
+    },
+    {
+      "start": 2370.8,
+      "duration": 3.279,
+      "text": "parameter in the t parameter"
+    },
+    {
+      "start": 2377.359,
+      "duration": 6.48,
+      "text": "not only can you overall scale the"
+    },
+    {
+      "start": 2380.839,
+      "duration": 3.0,
+      "text": "parameters"
+    },
+    {
+      "start": 2392.24,
+      "duration": 9.28,
+      "text": "and by the addition of this constant"
+    },
+    {
+      "start": 2397.52,
+      "duration": 4.0,
+      "text": "well it's an s dependent constant"
+    },
+    {
+      "start": 2404.16,
+      "duration": 4.159,
+      "text": "we can ensure that in fact the inner"
+    },
+    {
+      "start": 2406.16,
+      "duration": 4.56,
+      "text": "product between x and t"
+    },
+    {
+      "start": 2408.319,
+      "duration": 4.8,
+      "text": "is zero so they're orthonormal or"
+    },
+    {
+      "start": 2410.72,
+      "duration": 7.68,
+      "text": "orthogonal"
+    },
+    {
+      "start": 2413.119,
+      "duration": 5.281,
+      "text": "because x a need not have uh unit norm"
+    },
+    {
+      "start": 2421.839,
+      "duration": 4.0,
+      "text": "now let's interpret these things"
+    },
+    {
+      "start": 2431.839,
+      "duration": 3.041,
+      "text": "so first quantity we want to interpret"
+    },
+    {
+      "start": 2433.52,
+      "duration": 3.76,
+      "text": "is the quantity va"
+    },
+    {
+      "start": 2434.88,
+      "duration": 3.199,
+      "text": "defined by the covariance derivative in"
+    },
+    {
+      "start": 2437.28,
+      "duration": 4.0,
+      "text": "the direction of t"
+    },
+    {
+      "start": 2438.079,
+      "duration": 6.321,
+      "text": "of x a so that's the change in the"
+    },
+    {
+      "start": 2441.28,
+      "duration": 3.12,
+      "text": "displacement vector"
+    },
+    {
+      "start": 2447.359,
+      "duration": 3.201,
+      "text": "as you make an infinitesimal change"
+    },
+    {
+      "start": 2450.079,
+      "duration": 3.76,
+      "text": "along"
+    },
+    {
+      "start": 2450.56,
+      "duration": 3.279,
+      "text": "the geodesic"
+    },
+    {
+      "start": 2477.119,
+      "duration": 4.72,
+      "text": "so it's like a velocity a relative"
+    },
+    {
+      "start": 2479.52,
+      "duration": 2.319,
+      "text": "velocity"
+    },
+    {
+      "start": 2486.72,
+      "duration": 3.68,
+      "text": "that quantity is a relative velocity"
+    },
+    {
+      "start": 2490.72,
+      "duration": 3.359,
+      "text": "and therefore following that argument we"
+    },
+    {
+      "start": 2493.359,
+      "duration": 4.321,
+      "text": "can introduce"
+    },
+    {
+      "start": 2494.079,
+      "duration": 3.601,
+      "text": "a relative acceleration quantity"
+    },
+    {
+      "start": 2497.839,
+      "duration": 6.401,
+      "text": "as the change in the change of"
+    },
+    {
+      "start": 2501.119,
+      "duration": 8.72,
+      "text": "the displacement vector as we go along"
+    },
+    {
+      "start": 2504.24,
+      "duration": 5.599,
+      "text": "the geodesic"
+    },
+    {
+      "start": 2510.4,
+      "duration": 3.439,
+      "text": "and we introduce the world's worst"
+    },
+    {
+      "start": 2511.76,
+      "duration": 4.079,
+      "text": "notation um"
+    },
+    {
+      "start": 2513.839,
+      "duration": 5.52,
+      "text": "a to the power a however we do capital a"
+    },
+    {
+      "start": 2515.839,
+      "duration": 3.52,
+      "text": "to the power a for the acceleration"
+    },
+    {
+      "start": 2519.839,
+      "duration": 4.561,
+      "text": "t c delta c so that's the change in the"
+    },
+    {
+      "start": 2523.68,
+      "duration": 3.6,
+      "text": "change"
+    },
+    {
+      "start": 2524.4,
+      "duration": 2.88,
+      "text": "of the displacement"
+    },
+    {
+      "start": 2532.56,
+      "duration": 7.44,
+      "text": "vector as you go along the geodesic well"
+    },
+    {
+      "start": 2536.16,
+      "duration": 3.84,
+      "text": "this quantity we can"
+    },
+    {
+      "start": 2540.079,
+      "duration": 3.601,
+      "text": "work on right we're taking the"
+    },
+    {
+      "start": 2541.68,
+      "duration": 3.84,
+      "text": "derivative of something which is the"
+    },
+    {
+      "start": 2543.68,
+      "duration": 3.679,
+      "text": "derivative of something"
+    },
+    {
+      "start": 2545.52,
+      "duration": 3.36,
+      "text": "and we can you know as soon as you see"
+    },
+    {
+      "start": 2547.359,
+      "duration": 3.601,
+      "text": "two derivative operators appear in"
+    },
+    {
+      "start": 2548.88,
+      "duration": 3.52,
+      "text": "differential geometry you should start b"
+    },
+    {
+      "start": 2550.96,
+      "duration": 3.2,
+      "text": "should start looking for the curvature"
+    },
+    {
+      "start": 2552.4,
+      "duration": 4.24,
+      "text": "tensor somehow"
+    },
+    {
+      "start": 2554.16,
+      "duration": 4.0,
+      "text": "well today is no exception let's go"
+    },
+    {
+      "start": 2556.64,
+      "duration": 2.719,
+      "text": "ahead and start applying this derivative"
+    },
+    {
+      "start": 2558.16,
+      "duration": 2.4,
+      "text": "operator"
+    },
+    {
+      "start": 2559.359,
+      "duration": 2.96,
+      "text": "well we're not going to do that just"
+    },
+    {
+      "start": 2560.56,
+      "duration": 2.16,
+      "text": "here firstly we use the fact that these"
+    },
+    {
+      "start": 2562.319,
+      "duration": 2.161,
+      "text": "two"
+    },
+    {
+      "start": 2562.72,
+      "duration": 3.359,
+      "text": "coordinate fields commute just to swap"
+    },
+    {
+      "start": 2564.48,
+      "duration": 4.16,
+      "text": "them around so we swap"
+    },
+    {
+      "start": 2566.079,
+      "duration": 2.561,
+      "text": "x and t"
+    },
+    {
+      "start": 2577.52,
+      "duration": 5.04,
+      "text": "so xa and ta commute"
+    },
+    {
+      "start": 2586.079,
+      "duration": 7.76,
+      "text": "and now we apply we do some leibnizing"
+    },
+    {
+      "start": 2602.24,
+      "duration": 4.0,
+      "text": "so let's liven its through that delta"
+    },
+    {
+      "start": 2604.839,
+      "duration": 3.881,
+      "text": "delta c"
+    },
+    {
+      "start": 2606.24,
+      "duration": 2.48,
+      "text": "operator"
+    },
+    {
+      "start": 2614.88,
+      "duration": 4.64,
+      "text": "and the next step we we started to get"
+    },
+    {
+      "start": 2617.92,
+      "duration": 3.679,
+      "text": "close right you know take a look at what"
+    },
+    {
+      "start": 2619.52,
+      "duration": 3.2,
+      "text": "we've got here we've got two derivative"
+    },
+    {
+      "start": 2621.599,
+      "duration": 2.24,
+      "text": "operators next to each other"
+    },
+    {
+      "start": 2622.72,
+      "duration": 2.48,
+      "text": "what's the best way to get the"
+    },
+    {
+      "start": 2623.839,
+      "duration": 2.721,
+      "text": "commutative two derivative operators"
+    },
+    {
+      "start": 2625.2,
+      "duration": 3.6,
+      "text": "when you're only got one well you add it"
+    },
+    {
+      "start": 2626.56,
+      "duration": 4.32,
+      "text": "and subtract it"
+    },
+    {
+      "start": 2628.8,
+      "duration": 4.08,
+      "text": "that's what we're going to do add and"
+    },
+    {
+      "start": 2630.88,
+      "duration": 4.959,
+      "text": "subtract the term you want to be there"
+    },
+    {
+      "start": 2632.88,
+      "duration": 2.959,
+      "text": "so we're going to do now"
+    },
+    {
+      "start": 2646.839,
+      "duration": 4.601,
+      "text": "effectively"
+    },
+    {
+      "start": 2648.079,
+      "duration": 5.681,
+      "text": "the term we wish was there and now we've"
+    },
+    {
+      "start": 2651.44,
+      "duration": 2.32,
+      "text": "got the"
+    },
+    {
+      "start": 2654.4,
+      "duration": 3.199,
+      "text": "sorry we put the term in we wish was"
+    },
+    {
+      "start": 2656.0,
+      "duration": 2.64,
+      "text": "there but we had to subtract it this"
+    },
+    {
+      "start": 2657.599,
+      "duration": 2.961,
+      "text": "gets added"
+    },
+    {
+      "start": 2658.64,
+      "duration": 5.36,
+      "text": "and now we use the fact that we got the"
+    },
+    {
+      "start": 2660.56,
+      "duration": 7.039,
+      "text": "riemann curvature tensor appearing"
+    },
+    {
+      "start": 2664.0,
+      "duration": 5.839,
+      "text": "but if you look at that expression um"
+    },
+    {
+      "start": 2667.599,
+      "duration": 2.24,
+      "text": "well"
+    },
+    {
+      "start": 2671.119,
+      "duration": 4.081,
+      "text": "we use the fact that we've got the"
+    },
+    {
+      "start": 2672.319,
+      "duration": 6.961,
+      "text": "geodesic the ta is a geodesic"
+    },
+    {
+      "start": 2675.2,
+      "duration": 6.159,
+      "text": "look at this tc delta c on ta"
+    },
+    {
+      "start": 2679.28,
+      "duration": 5.6,
+      "text": "that's great right that's the definition"
+    },
+    {
+      "start": 2681.359,
+      "duration": 3.521,
+      "text": "of a geodesic so that vanishes"
+    },
+    {
+      "start": 2686.4,
+      "duration": 5.439,
+      "text": "and now we're left with this this"
+    },
+    {
+      "start": 2687.68,
+      "duration": 4.159,
+      "text": "expression here xc delta c"
+    },
+    {
+      "start": 2702.64,
+      "duration": 6.4,
+      "text": "so by rearranging the first two terms"
+    },
+    {
+      "start": 2704.88,
+      "duration": 7.84,
+      "text": "and an implied leibniz property has been"
+    },
+    {
+      "start": 2709.04,
+      "duration": 7.92,
+      "text": "invoked then we can really get"
+    },
+    {
+      "start": 2712.72,
+      "duration": 4.24,
+      "text": "t c to be on delta c"
+    },
+    {
+      "start": 2717.359,
+      "duration": 5.201,
+      "text": "and that's the thing we want to vanish"
+    },
+    {
+      "start": 2720.4,
+      "duration": 4.719,
+      "text": "because it is again we've got to where"
+    },
+    {
+      "start": 2722.56,
+      "duration": 2.559,
+      "text": "we want to be"
+    },
+    {
+      "start": 2729.119,
+      "duration": 3.921,
+      "text": "how about that so we've related the"
+    },
+    {
+      "start": 2730.96,
+      "duration": 3.92,
+      "text": "acceleration of two infinitesimally"
+    },
+    {
+      "start": 2733.04,
+      "duration": 4.88,
+      "text": "close geodesics"
+    },
+    {
+      "start": 2734.88,
+      "duration": 6.479,
+      "text": "to the riemann curvature tensor"
+    },
+    {
+      "start": 2737.92,
+      "duration": 7.04,
+      "text": "and data that you can compute with"
+    },
+    {
+      "start": 2741.359,
+      "duration": 6.96,
+      "text": "uh just the geodesics"
+    },
+    {
+      "start": 2744.96,
+      "duration": 7.28,
+      "text": "themselves namely their tangent vectors"
+    },
+    {
+      "start": 2748.319,
+      "duration": 3.921,
+      "text": "so this is the geodesic deviation"
+    },
+    {
+      "start": 2758.839,
+      "duration": 3.561,
+      "text": "equation and"
+    },
+    {
+      "start": 2760.24,
+      "duration": 3.52,
+      "text": "a really important consequence of this"
+    },
+    {
+      "start": 2762.4,
+      "duration": 6.4,
+      "text": "is that if"
+    },
+    {
+      "start": 2763.76,
+      "duration": 8.079,
+      "text": "this acceleration is zero for all"
+    },
+    {
+      "start": 2768.8,
+      "duration": 7.039,
+      "text": "geodesic families right all nice"
+    },
+    {
+      "start": 2771.839,
+      "duration": 4.0,
+      "text": "families of geodesics"
+    },
+    {
+      "start": 2776.56,
+      "duration": 5.68,
+      "text": "well that can happen if and only if the"
+    },
+    {
+      "start": 2778.319,
+      "duration": 3.921,
+      "text": "riemann curvature tensor is zero"
+    },
+    {
+      "start": 2784.64,
+      "duration": 4.24,
+      "text": "so if you have geodesics that accelerate"
+    },
+    {
+      "start": 2786.96,
+      "duration": 5.68,
+      "text": "relative to each other that implies that"
+    },
+    {
+      "start": 2788.88,
+      "duration": 3.76,
+      "text": "the riemann curvature tensor is not zero"
+    },
+    {
+      "start": 2793.52,
+      "duration": 2.88,
+      "text": "so if there exists"
+    },
+    {
+      "start": 2797.599,
+      "duration": 6.24,
+      "text": "relatively accelerating geodesics"
+    },
+    {
+      "start": 2805.839,
+      "duration": 7.361,
+      "text": "that implies that"
+    },
+    {
+      "start": 2809.52,
+      "duration": 6.72,
+      "text": "r a b c d is not zero uh"
+    },
+    {
+      "start": 2813.2,
+      "duration": 4.639,
+      "text": "families right smooth families it's no"
+    },
+    {
+      "start": 2816.24,
+      "duration": 3.599,
+      "text": "good just to have two geodesics that"
+    },
+    {
+      "start": 2817.839,
+      "duration": 4.0,
+      "text": "accelerate relative to each other"
+    },
+    {
+      "start": 2819.839,
+      "duration": 3.841,
+      "text": "you can do that even in flat space right"
+    },
+    {
+      "start": 2821.839,
+      "duration": 4.48,
+      "text": "just pick two geodesics and make them"
+    },
+    {
+      "start": 2823.68,
+      "duration": 4.639,
+      "text": "point in crazy directions no no if you"
+    },
+    {
+      "start": 2826.319,
+      "duration": 3.201,
+      "text": "have two geodesics that are pointing in"
+    },
+    {
+      "start": 2828.319,
+      "duration": 4.721,
+      "text": "the same direction and"
+    },
+    {
+      "start": 2829.52,
+      "duration": 4.96,
+      "text": "implementationally closed then and then"
+    },
+    {
+      "start": 2833.04,
+      "duration": 3.44,
+      "text": "you know the curvature tensor is not"
+    },
+    {
+      "start": 2834.48,
+      "duration": 3.92,
+      "text": "equal to zero"
+    },
+    {
+      "start": 2836.48,
+      "duration": 3.68,
+      "text": "now the geodesic deviation equation will"
+    },
+    {
+      "start": 2838.4,
+      "duration": 5.76,
+      "text": "play an extraordinarily important role"
+    },
+    {
+      "start": 2840.16,
+      "duration": 5.679,
+      "text": "in deducing einstein's field equations"
+    },
+    {
+      "start": 2844.16,
+      "duration": 4.08,
+      "text": "however that's a subject for our next"
+    },
+    {
+      "start": 2845.839,
+      "duration": 2.401,
+      "text": "lectures"
+    },
+    {
+      "start": 2848.319,
+      "duration": 3.441,
+      "text": "the final topics for today"
+    },
+    {
+      "start": 2853.599,
+      "duration": 7.841,
+      "text": "well the final topic for today is to put"
+    },
+    {
+      "start": 2857.44,
+      "duration": 4.8,
+      "text": "is to to explain how to practically"
+    },
+    {
+      "start": 2861.44,
+      "duration": 2.32,
+      "text": "calculate"
+    },
+    {
+      "start": 2862.24,
+      "duration": 3.52,
+      "text": "the riemann curvature tensor it's all"
+    },
+    {
+      "start": 2863.76,
+      "duration": 3.12,
+      "text": "very well to play around with these"
+    },
+    {
+      "start": 2865.76,
+      "duration": 2.319,
+      "text": "abstract quantities"
+    },
+    {
+      "start": 2866.88,
+      "duration": 3.28,
+      "text": "but if we don't know how to calculate"
+    },
+    {
+      "start": 2868.079,
+      "duration": 3.361,
+      "text": "them then what good is that"
+    },
+    {
+      "start": 2870.16,
+      "duration": 4.0,
+      "text": "so i'm going to show you the most"
+    },
+    {
+      "start": 2871.44,
+      "duration": 3.6,
+      "text": "explicit down-to-earth nitty-gritty way"
+    },
+    {
+      "start": 2874.16,
+      "duration": 3.84,
+      "text": "for computing"
+    },
+    {
+      "start": 2875.04,
+      "duration": 3.519,
+      "text": "the riemann curvature tensor it's not"
+    },
+    {
+      "start": 2878.0,
+      "duration": 4.24,
+      "text": "very"
+    },
+    {
+      "start": 2878.559,
+      "duration": 4.881,
+      "text": "um not very sexy not very dramatic not"
+    },
+    {
+      "start": 2882.24,
+      "duration": 2.8,
+      "text": "very romantic"
+    },
+    {
+      "start": 2883.44,
+      "duration": 3.76,
+      "text": "way of doing it it just gets the job"
+    },
+    {
+      "start": 2885.04,
+      "duration": 4.72,
+      "text": "done there are trickier"
+    },
+    {
+      "start": 2887.2,
+      "duration": 4.48,
+      "text": "more elegant ways to compute the riemann"
+    },
+    {
+      "start": 2889.76,
+      "duration": 3.839,
+      "text": "curvature tensor however"
+    },
+    {
+      "start": 2891.68,
+      "duration": 4.399,
+      "text": "we largely won't need them in this"
+    },
+    {
+      "start": 2893.599,
+      "duration": 2.48,
+      "text": "course so"
+    },
+    {
+      "start": 2897.119,
+      "duration": 4.081,
+      "text": "instead i'll focus on the rather"
+    },
+    {
+      "start": 2900.0,
+      "duration": 5.52,
+      "text": "pedestrian approach"
+    },
+    {
+      "start": 2901.2,
+      "duration": 7.04,
+      "text": "so if you have a manifold m"
+    },
+    {
+      "start": 2905.52,
+      "duration": 2.72,
+      "text": "with a metric"
+    },
+    {
+      "start": 2909.44,
+      "duration": 7.679,
+      "text": "g a b so if you've got that data"
+    },
+    {
+      "start": 2915.68,
+      "duration": 4.96,
+      "text": "then in principle you have enough to"
+    },
+    {
+      "start": 2917.119,
+      "duration": 3.521,
+      "text": "compute the riemann curvature tensor"
+    },
+    {
+      "start": 2925.04,
+      "duration": 4.799,
+      "text": "our abcd is determined"
+    },
+    {
+      "start": 2930.24,
+      "duration": 6.24,
+      "text": "in principle uniquely"
+    },
+    {
+      "start": 2934.079,
+      "duration": 4.24,
+      "text": "per definition by the derivative"
+    },
+    {
+      "start": 2936.48,
+      "duration": 3.359,
+      "text": "operator which is itself determined by"
+    },
+    {
+      "start": 2938.319,
+      "duration": 4.0,
+      "text": "the metric"
+    },
+    {
+      "start": 2939.839,
+      "duration": 4.081,
+      "text": "but how do you do this in practice right"
+    },
+    {
+      "start": 2942.319,
+      "duration": 3.201,
+      "text": "you know how does this data get handed"
+    },
+    {
+      "start": 2943.92,
+      "duration": 5.199,
+      "text": "to you in practice"
+    },
+    {
+      "start": 2945.52,
+      "duration": 4.88,
+      "text": "well usually you'll have a coordinate"
+    },
+    {
+      "start": 2949.119,
+      "duration": 2.641,
+      "text": "system right let's face it you know"
+    },
+    {
+      "start": 2950.4,
+      "duration": 2.0,
+      "text": "we've done everything in a coordinate"
+    },
+    {
+      "start": 2951.76,
+      "duration": 2.48,
+      "text": "free way"
+    },
+    {
+      "start": 2952.4,
+      "duration": 3.76,
+      "text": "and we've done that so that we can be"
+    },
+    {
+      "start": 2954.24,
+      "duration": 4.64,
+      "text": "pretty damn sure that certain quantities"
+    },
+    {
+      "start": 2956.16,
+      "duration": 3.76,
+      "text": "are operationally meaningful or"
+    },
+    {
+      "start": 2958.88,
+      "duration": 2.64,
+      "text": "coordinate free"
+    },
+    {
+      "start": 2959.92,
+      "duration": 3.439,
+      "text": "or don't depend on the coordinate system"
+    },
+    {
+      "start": 2961.52,
+      "duration": 3.44,
+      "text": "we chose"
+    },
+    {
+      "start": 2963.359,
+      "duration": 2.801,
+      "text": "but of course whenever we do an actual"
+    },
+    {
+      "start": 2964.96,
+      "duration": 5.119,
+      "text": "computation we're going to have a"
+    },
+    {
+      "start": 2966.16,
+      "duration": 6.959,
+      "text": "coordinate system"
+    },
+    {
+      "start": 2970.079,
+      "duration": 3.04,
+      "text": "so in practice"
+    },
+    {
+      "start": 2974.319,
+      "duration": 3.76,
+      "text": "we choose coordinates"
+    },
+    {
+      "start": 2978.559,
+      "duration": 4.161,
+      "text": "now yeah there's some fancy schmancy"
+    },
+    {
+      "start": 2980.4,
+      "duration": 4.48,
+      "text": "ways of doing things without coordinates"
+    },
+    {
+      "start": 2982.72,
+      "duration": 3.44,
+      "text": "they'll get you so far but at some point"
+    },
+    {
+      "start": 2984.88,
+      "duration": 2.32,
+      "text": "at the end of the day if you don't have"
+    },
+    {
+      "start": 2986.16,
+      "duration": 2.88,
+      "text": "coordinates"
+    },
+    {
+      "start": 2987.2,
+      "duration": 4.159,
+      "text": "then you're not really doing any physics"
+    },
+    {
+      "start": 2989.04,
+      "duration": 2.319,
+      "text": "are you"
+    },
+    {
+      "start": 2993.359,
+      "duration": 4.081,
+      "text": "so in practice you've got to choose some"
+    },
+    {
+      "start": 2994.8,
+      "duration": 2.64,
+      "text": "coordinates"
+    },
+    {
+      "start": 2997.52,
+      "duration": 4.16,
+      "text": "to get the job done and in that case we"
+    },
+    {
+      "start": 2999.92,
+      "duration": 5.919,
+      "text": "can now"
+    },
+    {
+      "start": 3001.68,
+      "duration": 4.159,
+      "text": "write out the derivative operator"
+    },
+    {
+      "start": 3006.4,
+      "duration": 2.24,
+      "text": "in"
+    },
+    {
+      "start": 3009.52,
+      "duration": 3.839,
+      "text": "the coordinate system with resp with"
+    },
+    {
+      "start": 3012.0,
+      "duration": 14.0,
+      "text": "respect to the derivative of"
+    },
+    {
+      "start": 3013.359,
+      "duration": 14.161,
+      "text": "determined by this coordinate system"
+    },
+    {
+      "start": 3026.0,
+      "duration": 3.599,
+      "text": "and now it's just a matter of"
+    },
+    {
+      "start": 3027.52,
+      "duration": 4.4,
+      "text": "substitution now into our formula that"
+    },
+    {
+      "start": 3029.599,
+      "duration": 4.401,
+      "text": "we have"
+    },
+    {
+      "start": 3031.92,
+      "duration": 3.52,
+      "text": "so the first part of the riemann"
+    },
+    {
+      "start": 3034.0,
+      "duration": 2.8,
+      "text": "curvature tensor is just doing this"
+    },
+    {
+      "start": 3035.44,
+      "duration": 2.96,
+      "text": "derivative applying this derivative"
+    },
+    {
+      "start": 3036.8,
+      "duration": 2.72,
+      "text": "operator twice to your favorite dual"
+    },
+    {
+      "start": 3038.4,
+      "duration": 4.0,
+      "text": "vector field"
+    },
+    {
+      "start": 3039.52,
+      "duration": 14.48,
+      "text": "now we're in a coordinate system we can"
+    },
+    {
+      "start": 3042.4,
+      "duration": 14.24,
+      "text": "go ahead and start doing that"
+    },
+    {
+      "start": 3054.0,
+      "duration": 3.52,
+      "text": "and i'm just substituting in for the"
+    },
+    {
+      "start": 3056.64,
+      "duration": 13.199,
+      "text": "definition"
+    },
+    {
+      "start": 3057.52,
+      "duration": 12.319,
+      "text": "of the derivative operator here"
+    },
+    {
+      "start": 3075.359,
+      "duration": 4.081,
+      "text": "i've just substituted it in wherever i"
+    },
+    {
+      "start": 3080.839,
+      "duration": 4.681,
+      "text": "could"
+    },
+    {
+      "start": 3083.2,
+      "duration": 3.68,
+      "text": "and how do we get the rebound curvature"
+    },
+    {
+      "start": 3085.52,
+      "duration": 5.12,
+      "text": "tensor from this big old mess"
+    },
+    {
+      "start": 3086.88,
+      "duration": 9.679,
+      "text": "well right you have to anti-symmetrize"
+    },
+    {
+      "start": 3090.64,
+      "duration": 9.199,
+      "text": "look at the commutator"
+    },
+    {
+      "start": 3096.559,
+      "duration": 5.841,
+      "text": "and you get it by anti-symmetrizing"
+    },
+    {
+      "start": 3099.839,
+      "duration": 4.0,
+      "text": "remember the anti-symmetrizing operation"
+    },
+    {
+      "start": 3102.4,
+      "duration": 2.88,
+      "text": "divides by a factor of two so we have to"
+    },
+    {
+      "start": 3103.839,
+      "duration": 3.041,
+      "text": "multiply by two"
+    },
+    {
+      "start": 3105.28,
+      "duration": 3.279,
+      "text": "so we know that if we anti-symmetrize"
+    },
+    {
+      "start": 3106.88,
+      "duration": 3.36,
+      "text": "the thingy above"
+    },
+    {
+      "start": 3108.559,
+      "duration": 4.56,
+      "text": "then we will know what the riemann"
+    },
+    {
+      "start": 3110.24,
+      "duration": 2.879,
+      "text": "curvature tensor is"
+    },
+    {
+      "start": 3113.44,
+      "duration": 5.76,
+      "text": "so we just anti-symmetrize the the"
+    },
+    {
+      "start": 3116.079,
+      "duration": 3.121,
+      "text": "expression i've just written"
+    },
+    {
+      "start": 3120.96,
+      "duration": 3.76,
+      "text": "to get the action of the riemann"
+    },
+    {
+      "start": 3123.359,
+      "duration": 3.441,
+      "text": "curvature tensor and we get the"
+    },
+    {
+      "start": 3124.72,
+      "duration": 6.56,
+      "text": "following expression so we get -2"
+    },
+    {
+      "start": 3126.8,
+      "duration": 4.48,
+      "text": "d delta a oops"
+    },
+    {
+      "start": 3136.559,
+      "duration": 4.721,
+      "text": "and we get two times e c a"
+    },
+    {
+      "start": 3141.359,
+      "duration": 3.2,
+      "text": "b e"
+    },
+    {
+      "start": 3149.28,
+      "duration": 3.839,
+      "text": "okay so you see that a bunch of terms"
+    },
+    {
+      "start": 3150.96,
+      "duration": 4.32,
+      "text": "cancelled from the expression above"
+    },
+    {
+      "start": 3153.119,
+      "duration": 3.681,
+      "text": "getting to the expression below"
+    },
+    {
+      "start": 3155.28,
+      "duration": 4.079,
+      "text": "some of them are pretty easy to to"
+    },
+    {
+      "start": 3156.8,
+      "duration": 4.64,
+      "text": "deduce right if i anti-symmetrize the a"
+    },
+    {
+      "start": 3159.359,
+      "duration": 3.2,
+      "text": "and the b coordinates here well what's"
+    },
+    {
+      "start": 3161.44,
+      "duration": 2.399,
+      "text": "going to happen"
+    },
+    {
+      "start": 3162.559,
+      "duration": 3.04,
+      "text": "is they're going to vanish right because"
+    },
+    {
+      "start": 3163.839,
+      "duration": 5.121,
+      "text": "the partial derivatives"
+    },
+    {
+      "start": 3165.599,
+      "duration": 5.121,
+      "text": "they commute and"
+    },
+    {
+      "start": 3168.96,
+      "duration": 3.68,
+      "text": "if you work through each term in the"
+    },
+    {
+      "start": 3170.72,
+      "duration": 3.68,
+      "text": "expression here that i've"
+    },
+    {
+      "start": 3172.64,
+      "duration": 3.84,
+      "text": "of which i've partially highlighted and"
+    },
+    {
+      "start": 3174.4,
+      "duration": 3.6,
+      "text": "exploit the symmetry properties of gamma"
+    },
+    {
+      "start": 3176.48,
+      "duration": 3.04,
+      "text": "then you'll eventually convince yourself"
+    },
+    {
+      "start": 3178.0,
+      "duration": 2.319,
+      "text": "that the only two terms that are left"
+    },
+    {
+      "start": 3179.52,
+      "duration": 3.599,
+      "text": "over over"
+    },
+    {
+      "start": 3180.319,
+      "duration": 4.961,
+      "text": "are these ones in the brackets so this"
+    },
+    {
+      "start": 3183.119,
+      "duration": 2.161,
+      "text": "is"
+    },
+    {
+      "start": 3190.559,
+      "duration": 7.601,
+      "text": "this holds for all omega d"
+    },
+    {
+      "start": 3195.52,
+      "duration": 2.64,
+      "text": "so in"
+    },
+    {
+      "start": 3198.64,
+      "duration": 3.12,
+      "text": "coordinates finally"
+    },
+    {
+      "start": 3203.28,
+      "duration": 3.76,
+      "text": "we have the following expression for the"
+    },
+    {
+      "start": 3204.72,
+      "duration": 3.68,
+      "text": "riemann curvature tensor"
+    },
+    {
+      "start": 3207.04,
+      "duration": 4.079,
+      "text": "so now we really are working in the"
+    },
+    {
+      "start": 3208.4,
+      "duration": 2.719,
+      "text": "coordinate system"
+    },
+    {
+      "start": 3213.76,
+      "duration": 2.96,
+      "text": "now in this coordinate system we know"
+    },
+    {
+      "start": 3215.28,
+      "duration": 4.72,
+      "text": "what the derivative operator it is just"
+    },
+    {
+      "start": 3216.72,
+      "duration": 3.28,
+      "text": "our friend the partial derivative"
+    },
+    {
+      "start": 3220.839,
+      "duration": 5.641,
+      "text": "operator"
+    },
+    {
+      "start": 3223.839,
+      "duration": 3.441,
+      "text": "and we're just going to write out all"
+    },
+    {
+      "start": 3226.48,
+      "duration": 11.359,
+      "text": "the two"
+    },
+    {
+      "start": 3227.28,
+      "duration": 10.559,
+      "text": "all the four terms that we have up above"
+    },
+    {
+      "start": 3248.64,
+      "duration": 2.959,
+      "text": "and that's it that's actually the"
+    },
+    {
+      "start": 3249.76,
+      "duration": 3.76,
+      "text": "expression the desired expression we're"
+    },
+    {
+      "start": 3251.599,
+      "duration": 4.801,
+      "text": "in a coordinate system we can determine"
+    },
+    {
+      "start": 3253.52,
+      "duration": 2.88,
+      "text": "all of this data"
+    },
+    {
+      "start": 3257.119,
+      "duration": 11.681,
+      "text": "from the metric"
+    },
+    {
+      "start": 3264.88,
+      "duration": 7.52,
+      "text": "now it's not very nice"
+    },
+    {
+      "start": 3268.8,
+      "duration": 4.72,
+      "text": "i mean if your metric is even halfway"
+    },
+    {
+      "start": 3272.4,
+      "duration": 2.959,
+      "text": "complicated"
+    },
+    {
+      "start": 3273.52,
+      "duration": 3.12,
+      "text": "that is not an easy expression to"
+    },
+    {
+      "start": 3275.359,
+      "duration": 3.041,
+      "text": "compute in practice"
+    },
+    {
+      "start": 3276.64,
+      "duration": 4.32,
+      "text": "no one said that it was going to be easy"
+    },
+    {
+      "start": 3278.4,
+      "duration": 2.56,
+      "text": "in practice"
+    },
+    {
+      "start": 3282.079,
+      "duration": 3.681,
+      "text": "and you will have to work damn hard if"
+    },
+    {
+      "start": 3284.48,
+      "duration": 5.119,
+      "text": "you want to compute"
+    },
+    {
+      "start": 3285.76,
+      "duration": 5.839,
+      "text": "re uh rehab curvature tenses for"
+    },
+    {
+      "start": 3289.599,
+      "duration": 4.401,
+      "text": "halfway complicated manifolds and of"
+    },
+    {
+      "start": 3291.599,
+      "duration": 4.881,
+      "text": "course what everyone does is"
+    },
+    {
+      "start": 3294.0,
+      "duration": 3.92,
+      "text": "use every trick and symmetry they can to"
+    },
+    {
+      "start": 3296.48,
+      "duration": 2.4,
+      "text": "minimize the number of computations they"
+    },
+    {
+      "start": 3297.92,
+      "duration": 1.919,
+      "text": "have to do"
+    },
+    {
+      "start": 3298.88,
+      "duration": 3.52,
+      "text": "because if you just look at that"
+    },
+    {
+      "start": 3299.839,
+      "duration": 4.0,
+      "text": "expression naively how many computations"
+    },
+    {
+      "start": 3302.4,
+      "duration": 5.36,
+      "text": "do we have to do well"
+    },
+    {
+      "start": 3303.839,
+      "duration": 7.48,
+      "text": "mu nu rho and sigma run over four"
+    },
+    {
+      "start": 3307.76,
+      "duration": 6.96,
+      "text": "possible values so we've got"
+    },
+    {
+      "start": 3311.319,
+      "duration": 5.641,
+      "text": "256 quantities that we have to compute"
+    },
+    {
+      "start": 3314.72,
+      "duration": 4.639,
+      "text": "for a four dimensional manifold but each"
+    },
+    {
+      "start": 3316.96,
+      "duration": 5.92,
+      "text": "of gamma"
+    },
+    {
+      "start": 3319.359,
+      "duration": 5.361,
+      "text": "is a quantity involving the metric"
+    },
+    {
+      "start": 3322.88,
+      "duration": 4.4,
+      "text": "and that involves a side computation"
+    },
+    {
+      "start": 3324.72,
+      "duration": 6.32,
+      "text": "okay so you've got you know 64"
+    },
+    {
+      "start": 3327.28,
+      "duration": 5.92,
+      "text": "um quantities that you have to compute"
+    },
+    {
+      "start": 3331.04,
+      "duration": 3.519,
+      "text": "first in the form of the crystal symbols"
+    },
+    {
+      "start": 3333.2,
+      "duration": 3.44,
+      "text": "but then you also have to perform this"
+    },
+    {
+      "start": 3334.559,
+      "duration": 4.24,
+      "text": "contraction of alpha so for every one of"
+    },
+    {
+      "start": 3336.64,
+      "duration": 4.24,
+      "text": "these 256"
+    },
+    {
+      "start": 3338.799,
+      "duration": 3.28,
+      "text": "uh quantities you have to perform a"
+    },
+    {
+      "start": 3340.88,
+      "duration": 2.719,
+      "text": "summation of a four"
+    },
+    {
+      "start": 3342.079,
+      "duration": 3.52,
+      "text": "auxiliary quantities so really you're"
+    },
+    {
+      "start": 3343.599,
+      "duration": 4.48,
+      "text": "doing kind of a thousand and"
+    },
+    {
+      "start": 3345.599,
+      "duration": 5.041,
+      "text": "twenty four computations to get the"
+    },
+    {
+      "start": 3348.079,
+      "duration": 6.321,
+      "text": "riemann curvature tensor"
+    },
+    {
+      "start": 3350.64,
+      "duration": 7.12,
+      "text": "and just writing collecting that data"
+    },
+    {
+      "start": 3354.4,
+      "duration": 6.56,
+      "text": "of 1024 things"
+    },
+    {
+      "start": 3357.76,
+      "duration": 5.92,
+      "text": "and summing them up is non-trivial right"
+    },
+    {
+      "start": 3360.96,
+      "duration": 4.399,
+      "text": "and if the you know a human makes it has"
+    },
+    {
+      "start": 3363.68,
+      "duration": 2.0,
+      "text": "a one percent chance of making an error"
+    },
+    {
+      "start": 3365.359,
+      "duration": 1.681,
+      "text": "then"
+    },
+    {
+      "start": 3365.68,
+      "duration": 3.2,
+      "text": "the expected number of errors you'll"
+    },
+    {
+      "start": 3367.04,
+      "duration": 4.319,
+      "text": "make in a full computation of a riemann"
+    },
+    {
+      "start": 3368.88,
+      "duration": 4.8,
+      "text": "curvature tense is something like 10."
+    },
+    {
+      "start": 3371.359,
+      "duration": 3.921,
+      "text": "so like luckily we live in an age of"
+    },
+    {
+      "start": 3373.68,
+      "duration": 4.639,
+      "text": "computer algebra packages and we don't"
+    },
+    {
+      "start": 3375.28,
+      "duration": 5.36,
+      "text": "have to we can verify these computations"
+    },
+    {
+      "start": 3378.319,
+      "duration": 3.841,
+      "text": "automated in an automated fashion but"
+    },
+    {
+      "start": 3380.64,
+      "duration": 4.08,
+      "text": "this is the main obstruction"
+    },
+    {
+      "start": 3382.16,
+      "duration": 4.08,
+      "text": "to fully just talking about complicated"
+    },
+    {
+      "start": 3384.72,
+      "duration": 4.32,
+      "text": "manifolds"
+    },
+    {
+      "start": 3386.24,
+      "duration": 4.48,
+      "text": "right just the number of just the 256"
+    },
+    {
+      "start": 3389.04,
+      "duration": 3.039,
+      "text": "quantities we need to keep track of"
+    },
+    {
+      "start": 3390.72,
+      "duration": 2.56,
+      "text": "there are various symmetries that we"
+    },
+    {
+      "start": 3392.079,
+      "duration": 2.641,
+      "text": "already derived for the riemann"
+    },
+    {
+      "start": 3393.28,
+      "duration": 4.0,
+      "text": "curvature tensor"
+    },
+    {
+      "start": 3394.72,
+      "duration": 4.079,
+      "text": "um you know with bianchi identities and"
+    },
+    {
+      "start": 3397.28,
+      "duration": 3.12,
+      "text": "anti-symmetric properties so it's not"
+    },
+    {
+      "start": 3398.799,
+      "duration": 6.081,
+      "text": "really 256"
+    },
+    {
+      "start": 3400.4,
+      "duration": 7.679,
+      "text": "but uh it's it's still a lot right"
+    },
+    {
+      "start": 3404.88,
+      "duration": 3.199,
+      "text": "it's it's more than two"
+    },
+    {
+      "start": 3414.16,
+      "duration": 3.76,
+      "text": "and even though you may have a symmetry"
+    },
+    {
+      "start": 3415.68,
+      "duration": 3.28,
+      "text": "property i strongly encourage you to"
+    },
+    {
+      "start": 3417.92,
+      "duration": 2.48,
+      "text": "compute it"
+    },
+    {
+      "start": 3418.96,
+      "duration": 3.839,
+      "text": "the other way around if you're doing a"
+    },
+    {
+      "start": 3420.4,
+      "duration": 4.88,
+      "text": "computation by hand"
+    },
+    {
+      "start": 3422.799,
+      "duration": 3.601,
+      "text": "then i claim it's more efficient to"
+    },
+    {
+      "start": 3425.28,
+      "duration": 2.64,
+      "text": "compute"
+    },
+    {
+      "start": 3426.4,
+      "duration": 3.76,
+      "text": "all the quantities and then check the"
+    },
+    {
+      "start": 3427.92,
+      "duration": 4.159,
+      "text": "symmetry afterwards than it is to rely"
+    },
+    {
+      "start": 3430.16,
+      "duration": 4.88,
+      "text": "on the invulnerability of your"
+    },
+    {
+      "start": 3432.079,
+      "duration": 2.961,
+      "text": "derivation skills"
+    },
+    {
+      "start": 3435.44,
+      "duration": 3.04,
+      "text": "so once we have the riemann curvature"
+    },
+    {
+      "start": 3436.799,
+      "duration": 2.881,
+      "text": "tense we can get the richie tensor just"
+    },
+    {
+      "start": 3438.48,
+      "duration": 3.839,
+      "text": "by contraction"
+    },
+    {
+      "start": 3439.68,
+      "duration": 4.32,
+      "text": "and the scalar curvature by a further"
+    },
+    {
+      "start": 3442.319,
+      "duration": 3.841,
+      "text": "contraction"
+    },
+    {
+      "start": 3444.0,
+      "duration": 3.04,
+      "text": "so there it is that's that's it in all"
+    },
+    {
+      "start": 3446.16,
+      "duration": 3.04,
+      "text": "its glory"
+    },
+    {
+      "start": 3447.04,
+      "duration": 4.319,
+      "text": "the riemann curvature tensor basically"
+    },
+    {
+      "start": 3449.2,
+      "duration": 4.96,
+      "text": "in terms of the metric"
+    },
+    {
+      "start": 3451.359,
+      "duration": 4.081,
+      "text": "and sometimes there's no escape we'll"
+    },
+    {
+      "start": 3454.16,
+      "duration": 2.88,
+      "text": "have to work with this expression but"
+    },
+    {
+      "start": 3455.44,
+      "duration": 2.879,
+      "text": "often we'll try and exploit every"
+    },
+    {
+      "start": 3457.04,
+      "duration": 4.319,
+      "text": "symmetry"
+    },
+    {
+      "start": 3458.319,
+      "duration": 3.921,
+      "text": "and uh simplification trick we can to"
+    },
+    {
+      "start": 3461.359,
+      "duration": 2.321,
+      "text": "avoid"
+    },
+    {
+      "start": 3462.24,
+      "duration": 3.599,
+      "text": "working with all these these quantities"
+    },
+    {
+      "start": 3463.68,
+      "duration": 6.32,
+      "text": "separately"
+    },
+    {
+      "start": 3465.839,
+      "duration": 4.161,
+      "text": "here's a couple of tricks to end today's"
+    },
+    {
+      "start": 3472.839,
+      "duration": 4.28,
+      "text": "lecture"
+    },
+    {
+      "start": 3474.24,
+      "duration": 4.64,
+      "text": "here's some useful formulas so these"
+    },
+    {
+      "start": 3477.119,
+      "duration": 3.921,
+      "text": "will turn out to be kind of handy when"
+    },
+    {
+      "start": 3478.88,
+      "duration": 4.08,
+      "text": "working with crystal symbols"
+    },
+    {
+      "start": 3481.04,
+      "duration": 4.24,
+      "text": "and it's worth collecting them at some"
+    },
+    {
+      "start": 3482.96,
+      "duration": 2.32,
+      "text": "point"
+    },
+    {
+      "start": 3485.76,
+      "duration": 5.44,
+      "text": "and this is that point so firstly if"
+    },
+    {
+      "start": 3489.44,
+      "duration": 4.08,
+      "text": "you've got the metric"
+    },
+    {
+      "start": 3491.2,
+      "duration": 3.68,
+      "text": "you can compute in in a coordinate"
+    },
+    {
+      "start": 3493.52,
+      "duration": 3.039,
+      "text": "system"
+    },
+    {
+      "start": 3494.88,
+      "duration": 4.239,
+      "text": "you can compute as determinant because"
+    },
+    {
+      "start": 3496.559,
+      "duration": 2.56,
+      "text": "the metric is"
+    },
+    {
+      "start": 3499.2,
+      "duration": 5.119,
+      "text": "can be represented as a matrix and a"
+    },
+    {
+      "start": 3501.04,
+      "duration": 5.44,
+      "text": "matrix you can take the determinant of"
+    },
+    {
+      "start": 3504.319,
+      "duration": 2.161,
+      "text": "now"
+    },
+    {
+      "start": 3514.559,
+      "duration": 4.0,
+      "text": "there's a nice little identity you can"
+    },
+    {
+      "start": 3516.079,
+      "duration": 3.361,
+      "text": "exploit involving the inverse of a"
+    },
+    {
+      "start": 3518.559,
+      "duration": 3.841,
+      "text": "matrix"
+    },
+    {
+      "start": 3519.44,
+      "duration": 2.96,
+      "text": "and the determinant"
+    },
+    {
+      "start": 3524.24,
+      "duration": 9.2,
+      "text": "and some derivatives"
+    },
+    {
+      "start": 3531.68,
+      "duration": 5.2,
+      "text": "so it's a little exercise for you to"
+    },
+    {
+      "start": 3533.44,
+      "duration": 3.44,
+      "text": "prove this linear algebra identity"
+    },
+    {
+      "start": 3537.599,
+      "duration": 4.801,
+      "text": "so it turns out that you can relate the"
+    },
+    {
+      "start": 3540.16,
+      "duration": 4.24,
+      "text": "derivative of the determinant"
+    },
+    {
+      "start": 3542.4,
+      "duration": 3.679,
+      "text": "to the product of the inverse of a"
+    },
+    {
+      "start": 3544.4,
+      "duration": 2.8,
+      "text": "matrix and the derivative of the matrix"
+    },
+    {
+      "start": 3546.079,
+      "duration": 2.801,
+      "text": "itself"
+    },
+    {
+      "start": 3547.2,
+      "duration": 3.84,
+      "text": "okay whatever it's kind of a curious"
+    },
+    {
+      "start": 3548.88,
+      "duration": 4.56,
+      "text": "thing"
+    },
+    {
+      "start": 3551.04,
+      "duration": 2.4,
+      "text": "further"
+    },
+    {
+      "start": 3554.72,
+      "duration": 3.839,
+      "text": "you look at the right hand side and you"
+    },
+    {
+      "start": 3556.24,
+      "duration": 4.64,
+      "text": "note that that's"
+    },
+    {
+      "start": 3558.559,
+      "duration": 2.321,
+      "text": "also"
+    },
+    {
+      "start": 3562.64,
+      "duration": 3.04,
+      "text": "can be realized as the derivative of the"
+    },
+    {
+      "start": 3564.4,
+      "duration": 8.48,
+      "text": "absolute value of g"
+    },
+    {
+      "start": 3565.68,
+      "duration": 9.919,
+      "text": "with respect to x"
+    },
+    {
+      "start": 3572.88,
+      "duration": 5.28,
+      "text": "now why would you care about this little"
+    },
+    {
+      "start": 3575.599,
+      "duration": 2.561,
+      "text": "identity"
+    },
+    {
+      "start": 3584.839,
+      "duration": 4.28,
+      "text": "well"
+    },
+    {
+      "start": 3586.559,
+      "duration": 2.56,
+      "text": "the following"
+    },
+    {
+      "start": 3594.72,
+      "duration": 2.96,
+      "text": "following formula"
+    },
+    {
+      "start": 3597.92,
+      "duration": 5.28,
+      "text": "turns up pretty often it's one that"
+    },
+    {
+      "start": 3599.92,
+      "duration": 3.28,
+      "text": "involves the christopher symbols"
+    },
+    {
+      "start": 3603.76,
+      "duration": 5.12,
+      "text": "namely suppose you have a contraction of"
+    },
+    {
+      "start": 3607.2,
+      "duration": 4.48,
+      "text": "the top index of the crystal symbol in"
+    },
+    {
+      "start": 3608.88,
+      "duration": 2.8,
+      "text": "the bottom index"
+    },
+    {
+      "start": 3612.24,
+      "duration": 4.24,
+      "text": "this turns up in various places in"
+    },
+    {
+      "start": 3614.0,
+      "duration": 4.88,
+      "text": "geodesics and so on"
+    },
+    {
+      "start": 3616.48,
+      "duration": 5.2,
+      "text": "and in computing curvature various"
+    },
+    {
+      "start": 3618.88,
+      "duration": 7.36,
+      "text": "circumstances"
+    },
+    {
+      "start": 3621.68,
+      "duration": 4.56,
+      "text": "and uh the the richie"
+    },
+    {
+      "start": 3626.839,
+      "duration": 4.441,
+      "text": "tensor"
+    },
+    {
+      "start": 3628.48,
+      "duration": 5.68,
+      "text": "and we can use that little identity that"
+    },
+    {
+      "start": 3631.28,
+      "duration": 2.88,
+      "text": "we derived above"
+    },
+    {
+      "start": 3637.119,
+      "duration": 6.72,
+      "text": "to actually simplify that quantity"
+    },
+    {
+      "start": 3646.799,
+      "duration": 3.601,
+      "text": "so by above"
+    },
+    {
+      "start": 3653.52,
+      "duration": 6.48,
+      "text": "we learn that this is equal to a half"
+    },
+    {
+      "start": 3657.44,
+      "duration": 2.56,
+      "text": "one over g"
+    },
+    {
+      "start": 3663.599,
+      "duration": 3.921,
+      "text": "d dx mu g"
+    },
+    {
+      "start": 3668.24,
+      "duration": 5.52,
+      "text": "or ddx mu the log"
+    },
+    {
+      "start": 3671.76,
+      "duration": 5.44,
+      "text": "of the square root of the determinant of"
+    },
+    {
+      "start": 3673.76,
+      "duration": 6.88,
+      "text": "g well the absolute value since we're"
+    },
+    {
+      "start": 3677.2,
+      "duration": 5.44,
+      "text": "working with negative signature"
+    },
+    {
+      "start": 3680.64,
+      "duration": 3.439,
+      "text": "so because double symbols themselves"
+    },
+    {
+      "start": 3682.64,
+      "duration": 3.6,
+      "text": "require all these derivatives of the"
+    },
+    {
+      "start": 3684.079,
+      "duration": 5.28,
+      "text": "metric and so on blah blah blah blah"
+    },
+    {
+      "start": 3686.24,
+      "duration": 4.72,
+      "text": "but if you ever face ever encounter this"
+    },
+    {
+      "start": 3689.359,
+      "duration": 2.72,
+      "text": "contraction of the crystal symbols then"
+    },
+    {
+      "start": 3690.96,
+      "duration": 3.599,
+      "text": "you can compute it by"
+    },
+    {
+      "start": 3692.079,
+      "duration": 3.841,
+      "text": "arguably much less complicated uh"
+    },
+    {
+      "start": 3694.559,
+      "duration": 3.121,
+      "text": "expression first you take the"
+    },
+    {
+      "start": 3695.92,
+      "duration": 4.24,
+      "text": "determinant of the metric which is now"
+    },
+    {
+      "start": 3697.68,
+      "duration": 5.2,
+      "text": "like a number and you can differentiate"
+    },
+    {
+      "start": 3700.16,
+      "duration": 2.72,
+      "text": "the log of that"
+    },
+    {
+      "start": 3703.92,
+      "duration": 4.159,
+      "text": "so this appears as i said in the richie"
+    },
+    {
+      "start": 3706.319,
+      "duration": 5.121,
+      "text": "tensor"
+    },
+    {
+      "start": 3708.079,
+      "duration": 4.961,
+      "text": "it also appears in a quantity that will"
+    },
+    {
+      "start": 3711.44,
+      "duration": 3.359,
+      "text": "play"
+    },
+    {
+      "start": 3713.04,
+      "duration": 4.88,
+      "text": "important physical role to do with"
+    },
+    {
+      "start": 3714.799,
+      "duration": 3.121,
+      "text": "conservation equations"
+    },
+    {
+      "start": 3720.64,
+      "duration": 5.84,
+      "text": "it appears in the divergence right we've"
+    },
+    {
+      "start": 3722.88,
+      "duration": 6.479,
+      "text": "already seen the divergence"
+    },
+    {
+      "start": 3726.48,
+      "duration": 2.879,
+      "text": "of a vector field"
+    },
+    {
+      "start": 3734.4,
+      "duration": 3.679,
+      "text": "so the divergence is a quantity that"
+    },
+    {
+      "start": 3736.4,
+      "duration": 5.439,
+      "text": "will has an important role in"
+    },
+    {
+      "start": 3738.079,
+      "duration": 3.76,
+      "text": "conservation equations"
+    },
+    {
+      "start": 3742.96,
+      "duration": 3.28,
+      "text": "and if you compute the divergence in"
+    },
+    {
+      "start": 3744.48,
+      "duration": 4.0,
+      "text": "terms of the derivative operator"
+    },
+    {
+      "start": 3746.24,
+      "duration": 4.319,
+      "text": "well you're going to contract some"
+    },
+    {
+      "start": 3748.48,
+      "duration": 6.879,
+      "text": "crystal symbols"
+    },
+    {
+      "start": 3750.559,
+      "duration": 18.721,
+      "text": "and that we can use compute by"
+    },
+    {
+      "start": 3755.359,
+      "duration": 16.48,
+      "text": "our neat little formula above"
+    },
+    {
+      "start": 3769.28,
+      "duration": 4.48,
+      "text": "okay so that's just some neat little"
+    },
+    {
+      "start": 3771.839,
+      "duration": 5.041,
+      "text": "identities that"
+    },
+    {
+      "start": 3773.76,
+      "duration": 7.079,
+      "text": "come in handy now and again"
+    },
+    {
+      "start": 3776.88,
+      "duration": 7.76,
+      "text": "in discussing particular"
+    },
+    {
+      "start": 3780.839,
+      "duration": 6.601,
+      "text": "fields in space time"
+    },
+    {
+      "start": 3784.64,
+      "duration": 4.399,
+      "text": "okay but that's it for today in our next"
+    },
+    {
+      "start": 3787.44,
+      "duration": 3.359,
+      "text": "lecture we will get to start"
+    },
+    {
+      "start": 3789.039,
+      "duration": 3.121,
+      "text": "finally the discussion of einstein's"
+    },
+    {
+      "start": 3790.799,
+      "duration": 3.841,
+      "text": "general theory of relativity"
+    },
+    {
+      "start": 3792.16,
+      "duration": 3.439,
+      "text": "having spent a good 10 lectures building"
+    },
+    {
+      "start": 3794.64,
+      "duration": 2.959,
+      "text": "up the manual"
+    },
+    {
+      "start": 3795.599,
+      "duration": 3.2,
+      "text": "i guess eight eight lectures building up"
+    },
+    {
+      "start": 3797.599,
+      "duration": 4.161,
+      "text": "the mathematical"
+    },
+    {
+      "start": 3798.799,
+      "duration": 4.401,
+      "text": "foundations of differential geometry"
+    },
+    {
+      "start": 3801.76,
+      "duration": 5.52,
+      "text": "thank you very much for your time"
+    },
+    {
+      "start": 3803.2,
+      "duration": 4.08,
+      "text": "see you next time bye-bye"
+    }
+  ]
+}

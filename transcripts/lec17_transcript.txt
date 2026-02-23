@@ -1,0 +1,440 @@
+# General Relativity, Lecture 17: solving Einstein's equations for FLRW
+# YouTube: https://www.youtube.com/watch?v=KDYGOaHw1BU
+# Auto-generated transcript
+
+[00:00.00] hello and welcome back to introduction
+[00:01.52] to general relativity
+[00:03.12] in today's lecture we're going to solve
+[00:05.20] einstein's field equations
+[00:07.20] for the case of a homogeneous and
+[00:09.36] isotropic space time
+[00:11.12] well more properly we're going to
+[00:12.40] commence the solution of einstein's
+[00:14.00] field equations for homogeneous and
+[00:15.68] isotropic
+[00:16.16] universe so that brings us to the topic
+[00:19.76] of the dynamics
+[00:24.80] of a homogeneous
+[00:28.56] and isotropic
+[00:32.88] universe how does
+[00:36.16] such a universe evolve from its
+[00:39.68] inception so to speak to its final
+[00:42.96] moments if there are any
+[00:46.96] so we're going to do is we we've only
+[00:49.12] described in the previous lecture half
+[00:50.64] the story right we've described the
+[00:52.32] the structure of the metric of a
+[00:53.84] homogeneous and isotropic universe and
+[00:55.36] we've reduced the task of of uh
+[00:58.40] solving this metric in einstein's field
+[01:01.52] equation to that of
+[01:03.12] solving for a single scalar function a
+[01:04.88] of tau
+[01:06.32] now we've got to describe the other half
+[01:08.00] of einstein field equations namely the
+[01:09.60] stress energy tensor what's the stress
+[01:11.12] energy tends that we can assume or
+[01:12.48] attach to a homogeneous and isotropic
+[01:14.48] universe
+[01:16.00] so it's a highly idealized model
+[01:19.04] so we're going to idealize galaxies in
+[01:21.04] this model
+[01:22.24] to grains of dust
+[01:29.12] and we're going to further assume that
+[01:33.36] these galaxies really move they don't
+[01:36.48] have much
+[01:37.12] initial velocity of their own in fact
+[01:39.44] they're going to move on
+[01:41.12] world lines of isotropic observers
+[02:00.88] now these gravit these galaxies will
+[02:03.04] have some fluctuations in their
+[02:04.32] velocities
+[02:06.64] you know the universe isn't completely
+[02:08.56] isotropic and
+[02:09.76] and homogeneous but in order to model
+[02:12.96] the stress energy distribution of the
+[02:14.88] universe we're going to assume
+[02:16.88] in this highly simplifies highly
+[02:18.88] simplified idealized model
+[02:20.56] that the fluctuations of these galaxy
+[02:22.48] velocities is very small
+[02:31.84] is much smaller than any other
+[02:36.32] quantity
+[02:40.40] in particular the speed of light and so
+[02:42.08] in this way we're going to neglect any
+[02:43.76] form of pressure
+[02:45.84] in in modeling the stress energy
+[02:50.80] tensor of the matter of our universe
+[02:54.80] and uh in that sense uh it's pretty easy
+[02:57.36] to write down the stress energy tensor
+[03:01.12] you know the stress energy tensor is
+[03:02.56] that of just a homogenic homogeneous
+[03:05.04] uniform gas of
+[03:06.80] particles with no pressure
+[03:14.96] so this is just the stress energy tensor
+[03:16.40] of the galaxy of the matter content
+[03:18.08] the visible matter content
+[03:22.16] and it's super simple we just take
+[03:25.84] the matter to move on the world lines of
+[03:28.96] isotropic observers
+[03:31.20] easy where rho of course is the
+[03:34.24] density
+[03:37.52] of the density average density
+[03:49.20] so you smear out the galaxies until
+[03:51.28] they're a homogenous
+[03:53.04] soup so that was easy uh we could throw
+[03:57.28] that
+[03:57.60] into einstein's field equations right
+[03:59.12] now and try and solve things but we
+[04:01.36] wouldn't be
+[04:01.92] modeling the physics of our universe
+[04:03.52] quite correctly yet because there is
+[04:05.68] more uh stress energy mass
+[04:08.88] energy content to our universe
+[04:12.40] in fact there's at least one other field
+[04:14.56] that will impact play a role in the the
+[04:17.12] evolution of our universe
+[04:18.96] and that is the electromagnetic field
+[04:23.04] so there is experimentally determined
+[04:25.92] background thermal radiation
+[04:28.80] throughout our universe it's at
+[04:30.88] approximately at a temperature of 3
+[04:32.32] kelvin
+[04:33.60] and
+[04:36.80] we're going to model this background
+[04:38.48] radiation also as a
+[04:40.16] as a perfect fluid
+[04:52.24] it's a somewhat advanced exercise
+[04:56.08] pretty advanced exercise involving a
+[04:57.60] little bit of statistical physics to
+[04:59.04] argue that
+[05:00.00] the thermal state of the electromagnetic
+[05:02.64] field
+[05:03.12] can be modeled with a with a perfect
+[05:05.20] fluid stress energy tensor
+[05:12.80] i mean there aren't so many options
+[05:14.56] right in this in this situation of
+[05:16.16] homogeneity and isotropy
+[05:19.60] so there aren't
+[05:23.28] so many symmetric homogenous isotropic
+[05:27.84] uh four tenses that you can write down
+[05:32.08] and so you're pretty much reduced to to
+[05:34.00] just describing things in terms of
+[05:35.68] diagonal
+[05:37.36] 4x4 matrices where the three spatial
+[05:40.40] components are equal and the temporal
+[05:42.08] component is
+[05:42.96] potentially unequal so we use for the
+[05:46.80] stress
+[05:47.20] energy tensor of the the radiation field
+[05:49.36] the perfect
+[05:50.84] fluid stress energy tensor
+[05:54.96] where in this case uh the pressure of
+[05:58.24] the radiation field is exactly
+[06:00.32] one-third of the density
+[06:04.88] and thus the total stress energy tensor
+[06:07.36] of the universe
+[06:12.16] is as i just mentioned before is as
+[06:14.16] general as it can be
+[06:17.92] while respecting these additional
+[06:19.44] symmetries
+[06:22.08] and that is it has this perfect fluid
+[06:24.72] form
+[06:25.12] but where p and rho are appropriately
+[06:27.76] adjusted to
+[06:28.64] incorporate the galaxy matter content
+[06:32.16] and the radiation
+[06:46.84] metacontent
+[06:51.28] uh and so i'm gonna just say most
+[06:53.44] general
+[06:58.00] is and i think you i could safely eat
+[07:00.00] that as an exercise for you
+[07:02.16] what is the most general stress energy
+[07:03.68] tensor you can write down well it also
+[07:05.12] has
+[07:06.16] essentially this perfect fluid form but
+[07:09.12] rho
+[07:09.60] and p are no longer just p rad and rho
+[07:12.32] rad
+[07:12.72] and p galaxy and so on they they have to
+[07:15.28] be adjusted those constants to
+[07:16.56] incorporate
+[07:18.24] these contributions
+[07:22.24] so that's extraordinarily simple
+[07:27.04] stress energy tensor it's a diagonal
+[07:28.56] stress energy tensor if you look at it
+[07:30.32] in the
+[07:31.28] coordinate system we've been working in
+[07:33.76] and the spatial components are all equal
+[07:37.76] and now what we're going to do is we've
+[07:40.08] got the right hand side of einstein's
+[07:41.36] field equations
+[07:42.48] so now we're really in a situation where
+[07:44.64] we can
+[07:45.76] uh write out the full equations of
+[07:48.48] motion
+[07:49.28] for the our universe that we learn
+[07:56.32] so no perturbation theory here no
+[07:58.08] approximations here we're going to go
+[07:59.36] for a full solution today
+[08:01.28] and in the next lectures
+[08:08.08] and einstein's field equations well what
+[08:10.08] do we need well
+[08:12.24] we need the einstein tensor g big g we
+[08:15.12] need the stress energy intensity a b so
+[08:16.96] we have
+[08:17.60] the metric we have the stress energy
+[08:19.84] tensor and i've added on here an extra
+[08:22.08] term
+[08:23.28] called the cosmological constant term
+[08:29.68] that's a consistent one can add this
+[08:33.36] equation
+[08:34.56] add this this term to einstein's field
+[08:36.32] equation einstein himself also added
+[08:38.56] this equation uh this constant
+[08:41.28] term to the field equations
+[08:45.92] although he for very very different
+[08:47.52] reasons
+[08:49.12] which we if you're interested in the
+[08:51.28] history of general relativity
+[08:54.64] you can look up
+[09:07.28] so we've added an additional term lambda
+[09:10.32] the cosmological constant and it turns
+[09:13.36] out that although it was hoped that
+[09:15.92] lambda by einstein
+[09:19.36] who added it in order to model an
+[09:21.12] internal universe
+[09:22.64] uh it was later hoped that
+[09:25.92] lambda would be zero well that's not the
+[09:27.60] case we
+[09:28.96] the observations now favor
+[09:33.36] a non-zero value of lambda and it's
+[09:37.52] these observations have essentially been
+[09:39.36] independently uh
+[09:41.28] verified now um
+[09:46.32] and what do we need for well we need to
+[09:48.40] account for the observed
+[09:51.28] cosmic background radiation
+[09:57.84] but also very recently
+[09:59.63] [Music]
+[10:01.12] this term the non-vanishing of this term
+[10:04.96] was also uh independently
+[10:08.56] largely verified by
+[10:12.88] the dark energy surveys which have just
+[10:15.12] been
+[10:16.00] completed or just begun we're just
+[10:17.76] beginning to analyze the data from these
+[10:19.36] dark energy surveys
+[10:20.64] so the cosmological constant is here to
+[10:22.80] stay we have to have it
+[10:24.56] uh in order to match uh to model the
+[10:28.08] universe that we live in
+[10:30.40] so why not for this rest of these next
+[10:33.52] coming lectures
+[10:34.24] included in our solution of einstein's
+[10:35.92] field equation turns out to be rather
+[10:37.28] easy to do so it just
+[10:38.80] effectively adjusts uh it acts like a
+[10:41.76] negative pressure term
+[10:46.40] so in principle so how hard is it to
+[10:48.32] solve einstein's field equations well
+[10:50.16] you know in principle
+[10:52.08] we need to solve 10
+[10:55.36] simultaneous coupled nonlinear partial
+[10:58.08] differential equations
+[11:09.52] and you know and why 10 well the
+[11:12.64] variables
+[11:13.44] in einstein's field equation is the
+[11:15.04] metric the metric is a 4x4 matrix
+[11:17.92] a 4x4 matrix has 16 terms
+[11:21.28] but if it's a symmetric 4x4 matrix which
+[11:24.08] it is in the case of
+[11:27.36] our space time that we live in then only
+[11:29.68] 10 10 components are actually
+[11:31.44] independent so you only need to solve
+[11:33.04] for 10
+[11:34.00] things 10 uh variables
+[11:37.52] now 10 10 nonlinear couple
+[11:41.28] pde uh is is ridiculous
+[11:44.40] uh ridiculously complicated most of your
+[11:46.96] career in physics
+[11:48.08] let's say you know unless you've been
+[11:50.32] heavily involved in
+[11:52.56] fluid mechanics or something has been
+[11:55.28] mostly occupied with linear
+[11:56.72] partial differential equations or
+[11:58.48] ordinary differential equations
+[12:00.96] uh you've probably in fluid mechanics
+[12:02.88] encountered
+[12:04.08] uh nonlinear partial differential
+[12:06.16] equations but
+[12:07.12] not like ten you have the worst case
+[12:10.32] scenarios like navier stokes equation
+[12:13.28] and so this is an a monstrous system
+[12:16.96] of complexity far far
+[12:20.32] exceeding anything that you're likely to
+[12:22.24] encounter in any other branch of physics
+[12:26.16] and so you can't hope to have a general
+[12:28.64] solution you know there's no greens
+[12:30.16] function nothing's going to save you in
+[12:31.52] general it's it's absolutely
+[12:33.44] an orders of magnitude more ambitious a
+[12:36.56] task to solve these equations of motion
+[12:39.04] however you can either use perturbation
+[12:42.00] theory as we have done
+[12:43.60] in the previous lecture or you can
+[12:44.96] exploit symmetry so to reduce the number
+[12:46.80] of equations you have to solve
+[12:48.40] and keep reducing until you hopefully
+[12:49.92] just get to some one non-linear or
+[12:52.24] ordinary differential equation and that
+[12:54.48] you can solve
+[12:55.28] you just integrate by quadratures or
+[12:56.80] whatever
+[12:59.12] and that's exactly what's going to
+[13:00.16] happen here today
+[13:04.24] we're not going to need to solve 10
+[13:05.76] thank goodness uh
+[13:07.60] because of homogeneity and isotropic
+[13:11.52] isotropy
+[13:16.64] we're going to get away with a lot less
+[13:27.36] it turns out only two equations are in
+[13:29.68] fact independent anyway
+[13:42.24] and the argument for this is
+[13:48.08] well note the following right
+[13:52.88] the the vectors which you get by
+[13:54.56] contracting the einstein
+[13:56.16] tensor against the ub the tangent vector
+[13:58.96] going in the of the isotropic observer
+[14:01.04] and the stress energy tensor with uv
+[14:04.88] these have no cannot have spatial
+[14:14.84] components
+[14:17.04] that's due to isotropy
+[14:22.00] and similarly
+[14:27.12] if you restrict your attention to sigma
+[14:29.60] t
+[14:30.40] one of these slices
+[14:35.60] then you can make a very similar
+[14:42.84] argument
+[14:44.80] uh that we made for
+[14:48.88] the riemann curvature tensor of h a b
+[14:54.00] you know that was the argument involving
+[14:56.00] diagonalizing matrices and symmetries
+[14:58.32] and and degenerate eigenvalues
+[15:03.92] it implies that the the
+[15:05.36] three-dimensional einstein
+[15:07.12] tensor is proportional to the identity
+[15:13.44] otherwise you could select out a
+[15:15.12] distinguished vector
+[15:21.52] so the off-diagonal terms
+[15:30.32] of star they vanish
+[15:34.08] so if you recall stars find transvert
+[15:37.20] equation with cosmological constant
+[15:42.08] and and the diagonal
+[15:46.00] space based components
+[15:53.12] are equal these are effectively induced
+[15:56.08] by the eigenvalues of ga
+[15:57.52] these effectively induce the eigenvalues
+[15:59.92] and of gab
+[16:01.44] on sigma t
+[16:10.80] and and of course homogeneity
+[16:20.84] implies
+[16:23.28] that the space time components vanish
+[16:34.88] and so we're left with just two
+[16:36.00] independent components from star
+[16:50.64] i'm going to write them like this g tao
+[16:52.72] tau plus lambda g
+[16:54.88] tau tau equals eight pi
+[16:58.08] rho let's look up the stress energy
+[16:59.76] tensor and the
+[17:01.12] the time time or telltale component and
+[17:03.28] g star star
+[17:04.88] plus lambda g star star equals eight
+[17:08.40] pi p
+[17:11.60] and uh i got to tell you what the star
+[17:14.72] notation means
+[17:16.08] and there's g tau tau well g telltale's
+[17:18.00] easy to explain right it's just g
+[17:19.52] a b where you put in the tangent vector
+[17:23.36] of the isotropic observers and g star
+[17:26.56] star is just any spatial component that
+[17:28.64] you get
+[17:29.52] by contracting with
+[17:32.88] a unit space like vector
+[17:44.72] and what we're going to do is uh well
+[17:47.76] we've got to do the calculations still
+[17:49.36] where i haven't yet
+[17:53.36] completely trivialized this problem
+[17:57.04] we've got a system of two two equations
+[17:59.52] now
+[18:00.80] but the metric is like highly highly
+[18:03.12] non-trivially embedded in the einstein
+[18:04.96] tensor
+[18:06.64] i mean it's explicitly there in the the
+[18:08.80] cosmological constant term but the
+[18:11.04] in the einstein tensor it's sort of
+[18:12.48] buried in a non-linear way
+[18:15.60] so to carry out
+[18:18.88] the subsequent calculations
+[18:25.36] we're going to have to work out the
+[18:26.48] dependence of the einstein tensor
+[18:29.52] on the metric and to do any
+[18:32.88] computation in physics you will need to
+[18:34.72] choose a basis and you will need to do
+[18:36.40] some hard work
+[18:37.92] you can't you know basis free doing
+[18:40.80] things basis free and coordinate free
+[18:42.56] is wonderful for uh deducing
+[18:46.80] logical consequences of statements but
+[18:49.20] is hopeless
+[18:49.92] for doing any real calculation we want
+[18:52.16] to model some
+[18:53.20] physical process
+[18:58.24] so to actually carry out a calculation
+[19:00.00] we're going to need to do some
+[19:01.52] calculating so we're going to have to
+[19:04.48] obtain the explicit form of our metric
+[19:07.52] and it turns out to be rather convenient
+[19:10.16] to write the fl
+[19:12.24] rw metric in the following form it's
+[19:15.12] just a little exercise for you
+[19:22.64] and it's in in this way we can
+[19:24.32] consistently cope with all three
+[19:26.08] possibilities of
+[19:27.36] the constant big k
+[19:38.08] and uh how do we do that well where
+[19:40.64] little k
+[19:41.52] equals plus one is corresponding to the
+[19:44.08] sphere
+[19:46.48] spherical three spherical sections
+[19:49.60] k equals naught equals the minkowski
+[19:52.16] space
+[19:54.32] or flat well not in kopsky but
+[19:58.48] flat space sections
+[20:01.76] and uh little k equals minus one is the
+[20:04.84] hyperboloid
+[20:06.00] case
+[20:12.88] and we're going to take this this is the
+[20:14.64] form of the metric that we're going to
+[20:15.84] use in our subsequent calculations in
+[20:17.60] the following lectures
+[20:19.20] we're going to take this metric we're
+[20:20.88] going to calculate the
+[20:22.48] associated christopher symbols we're
+[20:25.28] going to
+[20:25.92] then from the christopher symbols build
+[20:28.24] the
+[20:28.96] riemann curvature tensor the richie
+[20:31.28] tensor the richie scala
+[20:33.12] we're going to substitute all these
+[20:34.56] functions into
+[20:36.40] the two remaining independent components
+[20:38.96] of einstein's field equations and we're
+[20:40.40] going to arrive at some non-linear
+[20:41.84] differential equations which we will
+[20:43.12] then solve
+[20:44.16] and we will be able to solve them
+[20:45.68] remarkably but that is a story
+[20:48.24] for the next lecture that's it for today
+[20:51.20] thank you
+[20:51.76] and goodbye

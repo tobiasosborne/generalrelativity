@@ -1,0 +1,982 @@
+# General Relativity, Lecture 22: geodesics for the Schwarzschild metric
+# YouTube: https://www.youtube.com/watch?v=KUpMjsKokSo
+# Auto-generated transcript
+
+[00:00.16] hello and welcome back to introduction
+[00:01.84] to general relativity
+[00:03.60] in this lecture we're going to study the
+[00:06.08] geodesics of
+[00:07.36] test masses and bodies in the
+[00:10.16] schwarzschild
+[00:11.04] solution we this is the
+[00:14.72] calculations in this and the following
+[00:16.48] lecture will allow us to actually
+[00:20.48] understand some of the most significant
+[00:22.48] tests of the general theory of
+[00:24.48] relativity
+[00:28.84] now the objective really today
+[00:31.92] is to study as i said the motion of a
+[00:35.12] particle
+[00:36.16] in the schwarzschild solution we're not
+[00:37.60] just going to study a general
+[00:40.80] trajectory however we're going to study
+[00:43.20] particles in motion
+[00:44.40] around the outside of a heavenly body
+[00:48.56] because of course we can all get an idea
+[00:51.12] of what the trajectory of a test mass
+[00:53.84] that actually impacts the sun
+[00:57.28] will be um you know there won't be any
+[00:59.76] particle
+[01:00.56] after it impacts the surface of the sun
+[01:03.44] so we're only going to worry about test
+[01:05.04] masses that go
+[01:06.08] around the exterior of a heavenly body
+[01:10.64] such as the sun and uh
+[01:13.92] so if we draw the sun here right
+[01:18.64] blob of superheated
+[01:22.88] gas then we're interested in
+[01:25.36] trajectories
+[01:26.48] which orbit around say the sun or some
+[01:29.12] star or something
+[01:33.36] and uh we're going to
+[01:36.80] introduce some notation before we get
+[01:39.28] into the full
+[01:41.60] derivation of this trajectory so our
+[01:43.44] goal is this black line to understand
+[01:45.20] this black line
+[01:50.96] so if this this back line here this is
+[01:53.12] the curve on the question
+[01:54.72] called gamma maybe
+[02:00.40] so for a curve gamma
+[02:05.76] and we we demanded this curve is
+[02:08.24] parameterized by
+[02:10.00] some
+[02:13.36] parameter let's call that parameter tau
+[02:18.32] we're going to introduce the notation u
+[02:20.24] a uh is the for the tangent vector
+[02:25.36] to the curve
+[02:36.80] we're going to also use the
+[02:38.80] schwarzschild coordinate systems
+[02:47.12] so in that case it makes sense to
+[02:48.64] actually express ua
+[02:50.24] as a in the coordinate basis
+[02:58.00] in which case we use the greek letter
+[03:00.08] now to denote the index
+[03:02.72] because we're using a specific
+[03:03.84] coordinate system and these
+[03:05.92] uh components are nothing other than the
+[03:07.92] derivatives of the
+[03:10.32] the coordinates with respect to the
+[03:11.84] parameter tau
+[03:15.20] now we're only going to focus on
+[03:16.32] time-like geodesics we could
+[03:18.56] we will focus in the next lecture on
+[03:20.32] null geodesics
+[03:21.84] um there's not really any point in
+[03:24.00] focusing on space like geodesics
+[03:26.32] [Music]
+[03:28.08] unless you believe that there exist
+[03:29.44] particles that moves by faster than the
+[03:31.12] speed of light
+[03:39.92] so for time like here does x tell this
+[03:42.00] parameter we're going to choose it to be
+[03:43.60] the proper time
+[03:51.36] that affords us some simplifications
+[03:57.92] in the case where we we consider null
+[04:00.32] geodesics
+[04:03.92] light rays we're gonna
+[04:07.36] we can no longer choose tail to be the
+[04:09.12] proper time it doesn't make any sense
+[04:11.20] um we're gonna choose it to be the
+[04:13.84] affine
+[04:14.96] parameter which is defined as follows
+[04:21.76] you just choose tau so that
+[04:27.28] the covering derivative of u
+[04:30.40] along the tangent vector vanishes
+[04:34.48] remember there's an extra affine
+[04:38.16] freedom in choosing these curve
+[04:40.32] parameters
+[04:41.36] so that this equation is only satisfied
+[04:43.44] for one particular choice
+[04:47.76] now remember we're in the uh in the
+[04:50.72] plane
+[04:51.28] right
+[04:55.60] in the previous lecture we discussed
+[04:57.68] symmetries of the previous lectures
+[04:59.36] symmetries of the schwarzschild solution
+[05:01.44] one of the key symmetries is rotational
+[05:03.20] invariance
+[05:08.24] and without loss of generality
+[05:15.04] we can choose theta the theta coordinate
+[05:17.36] just to be the pi over two
+[05:24.24] so now we can investigate the length
+[05:28.16] of our tangent vector to the curve
+[05:32.40] and this will turn out to be very useful
+[05:33.68] formula
+[05:35.44] so the length with respect to the metric
+[05:38.88] of this tangent to the
+[05:40.08] trajectory of this free particle moving
+[05:42.88] in the schwarzschild in
+[05:44.16] under the gravitation of this heavenly
+[05:45.60] or celestial body
+[05:48.00] is has admits the following formula in
+[05:50.16] terms of components
+[06:01.20] and depending on whether or not you have
+[06:03.52] a time like or null
+[06:05.60] geodesic this is either one or zero
+[06:09.76] right because if it's time like we're
+[06:11.52] using
+[06:14.72] proper time and we're normalizing this
+[06:19.36] to one
+[06:24.72] since it turns out to be quite a useful
+[06:26.16] formula
+[06:29.68] so we'll box it up
+[06:38.72] then
+[06:39.33] [Music]
+[06:42.16] we also know something more from the
+[06:44.00] previous lecture
+[06:46.64] see at this stage i should pause and say
+[06:48.96] what's up what are we trying to do here
+[06:50.24] we're trying to solve
+[06:51.36] um we're trying to solve
+[06:54.96] for these coefficients here
+[07:05.28] so what are we doing at the moment
+[07:10.16] well we aim to solve for the position
+[07:13.20] of our test mass right whatever given
+[07:15.28] some initial conditions
+[07:18.40] so we've got t we aim to solve for t
+[07:21.76] r and phi and also theta right
+[07:25.84] but that that actually equals pi over 2
+[07:28.08] by the symmetries of the problem
+[07:30.32] and so what we're going to do is we're
+[07:31.60] going to write down enough equations
+[07:33.68] that can deliver
+[07:34.80] us the derivatives a complete set of
+[07:36.64] ordinary differential equations
+[07:38.08] for t r and phi
+[07:45.20] and uh
+[07:49.84] we're gonna be you know you can just
+[07:51.28] write out the geodesic equation right
+[07:52.64] there's one strategy that you could do
+[07:54.56] it's it's it's a procedural strategy
+[07:58.16] you don't have to think you write down
+[08:00.08] the geodesic equation
+[08:02.16] and that's all fine and good and you can
+[08:04.16] do that and in fact in some textbooks
+[08:06.16] they really do write out the
+[08:07.44] geodesic equation using the crystal
+[08:10.96] symbols that you find
+[08:12.16] for the schwarzschild solution however
+[08:14.24] it turns out to be
+[08:15.52] um
+[08:18.88] a far more economical way to get to the
+[08:22.16] complete set of differential equations
+[08:25.12] for tr
+[08:26.00] and phi
+[08:29.52] we could use geodesic equation
+[08:37.92] however there is a much more economical
+[08:41.12] way
+[08:47.92] and that's using and this is the way
+[08:49.92] that we use
+[08:50.96] also this is pretty much the strategy
+[08:53.84] when one exploits
+[08:55.20] classically in the newtonian world
+[08:59.36] and that is to use constants of the
+[09:06.84] motion
+[09:10.96] so that's actually if you write down
+[09:12.80] enough constants of the motion
+[09:14.40] well you've our
+[09:17.76] you've completely determined the the
+[09:19.84] trajectory
+[09:20.96] now because the schwarzschild solution
+[09:22.40] has so many symmetries
+[09:24.40] and uh we're going to be able to write
+[09:26.96] down quite a few constants of the motion
+[09:28.80] more than one and that turns out and
+[09:31.60] will turn out to be
+[09:32.56] enough to determine the trajectory
+[09:37.12] so thanks to this proposition
+[09:40.88] in the previous lecture remember this
+[09:42.72] proposition about
+[09:45.28] killing
+[09:48.72] vector fields
+[09:52.24] and geodesics
+[10:01.76] so we proved that if you have a vector
+[10:05.20] a killing vector and a geodesic then the
+[10:07.28] inner product of the geodesic
+[10:09.28] tangent vector and the killing vector is
+[10:11.12] constant
+[10:12.80] it's a pretty important
+[10:16.48] result because it gives us constants of
+[10:18.72] the motion
+[10:22.88] if you the more killing vector feels you
+[10:24.32] have the more constants of the motion
+[10:27.84] so there it is right the inner product
+[10:29.28] of psi aua
+[10:31.52] which is just the metric right times psi
+[10:34.40] a upper uv
+[10:44.84] upper
+[10:55.84] so the more killing vector fields you
+[10:57.20] have the more constants of the motion
+[10:58.64] you have
+[11:01.12] that's a pretty impressive and useful
+[11:03.12] result
+[11:04.64] because some solutions
+[11:08.24] to to the einstein's field equations
+[11:11.36] they have natural nice big isometry
+[11:14.00] groups and associated to an isometry
+[11:15.60] group as a killing vector field and
+[11:16.80] association
+[11:17.84] killing vector field constants of the
+[11:19.44] motion
+[11:21.92] so let's choose our first and favorite
+[11:23.60] always uh killing vector field the one
+[11:25.76] that generates time translations
+[11:30.88] and correspondingly to this
+[11:35.84] vector field we have the following
+[11:39.52] constant of the motion
+[11:40.80] which has a name right what what is it
+[11:43.92] that doesn't change as time
+[11:45.68] passes well we give it a name in physics
+[11:49.12] that's called the energy right
+[11:52.40] although in general relativity one must
+[11:55.44] be very careful about what one calls the
+[11:57.44] the energy
+[12:00.72] um because you also
+[12:03.71] [Music]
+[12:05.12] have to incorporate the gravitational
+[12:06.40] field itself so actually the question of
+[12:08.64] what's the energy of some of the volume
+[12:10.56] of space-time including test particles
+[12:12.32] and so on is can be difficult
+[12:15.44] to make precise
+[12:24.72] we'll continue to call this the energy
+[12:27.44] um
+[12:28.08] despite these subtleties because um
+[12:32.00] in the special relativistic limit
+[12:35.68] this really is the energy
+[12:48.08] so if you try and solve for the motion
+[12:49.76] in special relativity
+[12:59.60] then you get the this quantity e is the
+[13:02.00] energy per unit mass
+[13:08.40] of a particle in
+[13:18.32] measured by a static observer
+[13:22.16] but it ultimately whether or not it's
+[13:23.84] the energy or it doesn't really matter
+[13:25.04] for our role
+[13:25.84] uh today which is to solve for the
+[13:28.00] motion
+[13:28.96] so for the trajectory or the geodesic
+[13:30.80] followed by a free particle
+[13:33.76] so all you should really note is that i
+[13:36.08] equation i
+[13:36.88] is got a constant on the left hand and
+[13:39.12] on the right hand side a derivative of t
+[13:41.52] that'll allow us to uh that delivers us
+[13:44.56] one ordinary differential equation
+[13:46.88] actually we have two now
+[13:48.08] because remember we got equation star
+[13:50.00] equation star is
+[13:51.12] also a differential equation for
+[13:53.12] involving tr and phi
+[13:54.64] so we have two differential equations
+[13:56.40] now involving t r and phi
+[13:59.36] once we have a third we'll have enough
+[14:01.04] and we'll be able to solve for the
+[14:02.32] motion
+[14:04.96] so a little bit more on the
+[14:06.48] interpretation of this e thing in the
+[14:08.08] null case
+[14:09.04] um you can think uh
+[14:12.24] think of h by e as representing
+[14:16.64] um now we're using invoking quantum
+[14:18.24] mechanics a little the total energy of
+[14:20.32] the photon
+[14:26.80] now that's this is a constant of the
+[14:28.40] motion corresponding to the killing
+[14:29.60] vector field of time translations
+[14:31.20] there's another cooling vector field
+[14:33.44] that we haven't spent yet we spent one
+[14:36.32] in just
+[14:37.36] restricting our attention to the
+[14:38.80] equatorial plane right we spent one
+[14:40.64] symmetry that way we have spent a second
+[14:42.48] one time
+[14:43.04] translation now to get the this energy
+[14:45.20] constant of motion
+[14:46.32] we have one other generator of
+[14:49.28] symmetries
+[14:52.24] namely a second rotation right
+[14:55.28] rotation's about by phi
+[15:05.12] so you can look at the the generator of
+[15:07.92] a rotation
+[15:09.92] in the phi coordinate
+[15:13.20] that gives you an another killing vector
+[15:15.44] field psi
+[15:16.40] a and
+[15:19.44] corresponding to that we also get a
+[15:20.96] constant of motion
+[15:33.36] and we're going to call this
+[15:34.80] concentration suggestively
+[15:36.72] l right for various reasons
+[15:41.12] as we'll see
+[15:47.52] and you can interpret this one really as
+[15:49.52] the angular momentum
+[15:50.80] per unit rest mass of a particle
+[15:54.40] on the trajectory or as the
+[15:57.60] quantum angular momentum of a photon
+[16:43.04] so you can think of this h by l is the
+[16:45.36] angular momentum of a photon
+[16:48.24] you don't have to l is a constant
+[16:51.28] e is a constant and this equation here
+[16:54.48] has a constant right hand side
+[16:56.80] you can choose to interpret these
+[16:58.40] constants you don't have to
+[17:02.96] uh
+[17:06.32] interestingly if you look at the right
+[17:07.84] hand side of equation two
+[17:10.48] you should recognize this from orbital
+[17:13.36] mechanics in the newtonian setting
+[17:19.76] so constancy of l
+[17:23.12] in newtonian physics
+[17:29.44] is uh kepler's second law right
+[17:36.32] which means that equal area is swept out
+[17:38.56] in equal times
+[17:41.68] okay we've got three equations now we've
+[17:43.52] got equation star
+[17:45.36] which is a differential equation we've
+[17:47.44] got equation one which is a differential
+[17:49.20] equation we've got different
+[17:50.72] equation two which is a differential
+[17:52.08] equation and
+[17:53.92] we could just try and brute force solve
+[17:55.92] these nonlinear
+[17:57.20] couple differential equations but
+[17:58.56] actually we got like we get lucky
+[18:02.56] and it's pretty easy just to to solve
+[18:04.72] these equations we can eliminate quite a
+[18:06.32] few already
+[18:14.80] so just by simply substituting 1 and 2
+[18:16.96] into star
+[18:18.80] we get an equation very useful equation
+[18:28.80] that will almost
+[18:33.12] give us the solution already
+[18:36.24] and you'll see what i mean by almost in
+[18:40.84] second
+[18:54.40] and so this kappa is a constant equals
+[18:57.84] plus one for time-like and zero for null
+[19:12.16] now why do i say almost so well check it
+[19:15.28] out right this equation
+[19:17.60] has two bits to it this firstly there's
+[19:20.64] a
+[19:21.04] half r dot squared and secondly i mean
+[19:24.56] well the zeroth observation is like this
+[19:26.80] equation involves only
+[19:27.92] r so it's an ordinary differential
+[19:30.08] equation involving r
+[19:32.48] that's already pretty fantastic we've
+[19:34.08] reduced the whole problem to quadratures
+[19:35.60] now
+[19:36.32] so what we've got is we've got um i'll
+[19:38.56] suggestively label
+[19:39.92] the two terms here uh the first term as
+[19:42.48] a kinetic energy type term and the
+[19:44.72] second
+[19:45.60] term as a kind of potential energy like
+[19:47.68] term and the right hand side is kind of
+[19:49.04] like
+[19:49.68] an energy total energy type term
+[19:54.80] and if you look at this equation you
+[19:56.80] know with
+[19:58.08] thinking about those words then you
+[19:59.92] should recognize this equation
+[20:01.84] that we've in the red box here the
+[20:03.60] yellow box
+[20:04.96] you should really recognize this as a uh
+[20:07.44] equation of motion for a particle
+[20:09.76] a free particle of unit mass uh in
+[20:13.60] under the influence of this potential
+[20:15.28] strange potential here
+[20:17.28] and with the total energy half e squared
+[20:22.88] now this is sort of one of the most
+[20:26.16] familiar
+[20:27.04] aspects of mechanics right we've got a
+[20:29.04] kinetic potential
+[20:30.64] total energy uh we know how to to work
+[20:34.08] with such things
+[20:48.72] and we're going to import and exploit
+[20:50.56] all the knowledge we have
+[20:52.00] of of one-dimensional mechanics to solve
+[20:55.84] this equation
+[21:29.04] and uh so our strategy will be just as
+[21:32.08] in classical orbital mechanics we're
+[21:34.40] going to solve for the radial motion
+[21:36.16] first
+[21:36.72] and then we're going to use the other
+[21:38.32] equations to determine
+[21:39.76] the angular motion
+[21:43.12] now if you look at this potential vr
+[21:44.88] here that this effective potential that
+[21:46.80] we've written down actually
+[21:48.40] it should be pretty familiar to you from
+[21:50.24] orbital mechanics like
+[21:51.44] it's in fact it's comprised mostly of
+[21:53.44] stuff that we already see
+[21:54.80] coming in newtonian level of physics
+[21:56.72] right the first three
+[21:58.00] terms effectively are what you would
+[22:01.36] expect
+[22:01.92] from uh
+[22:05.44] uh orbital mechanics the only the last
+[22:07.28] term is new or
+[22:09.12] presents a new
+[22:13.84] additional term that's not present in
+[22:15.84] the newtonian physics setting
+[22:24.56] so the first three terms are very should
+[22:26.16] be completely familiar from newtonian
+[22:27.92] physics
+[22:30.48] the uh extra term that's new
+[22:34.40] is this minus ml squared over r cubed
+[22:37.76] and what does it do well it
+[22:41.04] it doesn't do much when r is big right
+[22:43.36] it's quite a small
+[22:44.48] perturbation when r is large in fact it
+[22:47.68] only has a plays a role when r is small
+[22:51.44] but when r is small it does a massive
+[22:53.84] effect right it dominates
+[22:56.64] over the centrifugal barrier
+[23:13.68] and so you can already get a sense that
+[23:15.68] we can expect some rather interesting
+[23:17.36] behavior right
+[23:20.08] uh as compared to the newtonian setting
+[23:24.56] so now the goal is to solve all these
+[23:26.32] equations well we're going to solve
+[23:28.08] for r first right
+[23:31.92] and we can do that because it's really
+[23:33.20] quadratures now
+[23:38.56] so if we take a look at the radial
+[23:40.08] equation right you've got a first
+[23:41.60] derivative of r
+[23:43.76] it's got the classical kinetic plus
+[23:45.60] potential energy structure
+[23:47.60] we can just integrate this equation
+[23:53.20] and you get the following integral
+[24:00.48] and you have to take a square root along
+[24:01.76] the way that's why there's a plus or
+[24:03.04] minus sign there
+[24:09.36] but otherwise it should be a completely
+[24:12.40] straightforward exercise to verify this
+[24:14.40] calculation if i haven't made a mistake
+[24:22.48] and that's it we've already worked out
+[24:23.84] the angular motion now
+[24:30.72] oh i even skipped a step sorry about
+[24:32.40] that um
+[24:38.24] i've already jumped ahead
+[24:42.72] so i'm not solving for r at all just
+[24:45.28] realize i've written down the angular
+[24:46.80] motion
+[24:53.60] you can do this by eliminating
+[25:01.44] uh the tau dependence
+[25:04.88] from equations two and star
+[25:09.60] and that's how you arrive at this
+[25:10.96] equation here so what do i mean by that
+[25:12.64] so if you look at equation two
+[25:15.68] two's super simple right it's just r
+[25:17.20] squared phi dot squared
+[25:19.28] and star is the somewhat more
+[25:20.64] complicated
+[25:22.40] equation here and
+[25:25.52] the trick here is to express
+[25:28.56] i mean i'm not going to do this full
+[25:29.68] calculation it's a couple of lines
+[25:34.48] i'll give you some hints right you know
+[25:36.40] so equation 2
+[25:37.52] says that l equals r
+[25:40.56] squared and i'll actually write out the
+[25:42.40] derivative so you can see what's
+[25:43.52] happening
+[25:44.24] d tau squared so you rearrange that
+[25:49.68] so that's l on r squared equals
+[25:53.44] d phi squared detail oops if i del
+[25:56.80] squared
+[25:58.64] and now we want uh we want something
+[26:02.40] like
+[26:03.04] d phi d r that we can then integrate
+[26:05.76] that's
+[26:06.24] the objective so we don't have that
+[26:09.20] right if you look at the equation two
+[26:11.76] two gives us something with a proper
+[26:13.28] time and we need to eliminate
+[26:15.04] uh the proper time so one way to do that
+[26:17.44] is you can just do
+[26:18.88] do it like this right you can just say
+[26:20.40] that definitely r
+[26:22.16] equals well it equals definitely tau
+[26:25.84] times by d tau dr
+[26:29.84] okay and then that thing
+[26:34.48] we can get this from star from equation
+[26:37.60] star
+[26:38.00] right d tail d r is just d r d tau
+[26:40.56] inverted
+[26:41.84] and where do we find it well we can go
+[26:43.68] back to equation star and there it is
+[26:46.56] it's buried in here right there it is
+[26:48.16] there so r dot squared
+[26:50.00] or we can yeah that's one way to do it
+[27:00.88] go ahead and do it that way if you like
+[27:02.56] and then you should end up hopefully
+[27:04.16] with the equation that i've written down
+[27:09.44] so actually i've just gone ahead forget
+[27:10.96] the radio measure i just went ahead and
+[27:12.32] solved for the actual
+[27:13.60] um full trajectory although you could
+[27:17.04] certainly
+[27:17.68] solve for the radio motion and then
+[27:19.76] solve the other equations
+[27:21.04] to get phi
+[27:25.04] and given that now we can actually
+[27:27.12] analyze and study these orbits
+[27:29.04] well actually we can learn a lot just by
+[27:30.56] thinking about this potential in kinetic
+[27:32.16] energy interpretation
+[27:35.12] so the name of the game now is to
+[27:36.64] actually consider these orbits to
+[27:38.40] understand these orbits and now
+[27:40.24] to look at their stability
+[27:44.24] and actually we're going to start with
+[27:45.60] stability questions
+[27:56.48] so to make life simple for the rest of
+[27:58.96] this lecture we're just going to focus
+[28:00.16] on the time like geodesics now the
+[28:01.76] knowledge of districts we leave to the
+[28:02.96] next lecture
+[28:05.68] and now what is a a stable orbit well a
+[28:08.00] stable orbit is one where
+[28:09.60] the radius does not change with time
+[28:12.64] right and if we look back here when
+[28:16.08] would that be well that would be
+[28:17.28] an extrema of the potential energy right
+[28:21.28] and i'm gonna draw some pictures to
+[28:22.64] explain that in a second and so what we
+[28:24.48] do is find the extrema of the potential
+[28:28.84] energy
+[28:42.56] so if we look at our effective potential
+[28:44.16] term
+[28:53.76] where where are the extrema well they're
+[28:55.76] just when you take the potential and
+[28:57.44] differentiate
+[28:58.00] it with respect to r and set it to zero
+[28:59.44] that's where the extrema are so if you
+[29:01.04] do that
+[29:02.48] take the potential and you do the
+[29:03.76] derivative and hopefully you should
+[29:05.92] arrive at this formula
+[29:09.84] and we can just straight away cancel off
+[29:11.36] the r to the four
+[29:13.84] and we're left with a quadratic equation
+[29:27.44] so we can just write write out those
+[29:28.96] zeros we've got two coins we've got r
+[29:30.88] plus and we get r minus
+[29:37.76] from the quadratic formula
+[29:44.88] and uh well you know when do we have two
+[29:47.28] solutions one do we have no solutions
+[29:49.68] well when the term and the square root
+[29:52.00] here is
+[29:52.80] negative then we don't have any real
+[29:54.24] solutions any longer
+[30:00.56] so in particular if l squared is less
+[30:02.48] than 12 times
+[30:04.16] m squared there are no extrema
+[30:14.00] so the small angular momentum
+[30:17.28] and what does the potential look like
+[30:18.64] now well
+[30:22.24] in that that kind of setting where l
+[30:24.72] squared is less than 12 m squared
+[30:26.88] then the potential has this kind of look
+[30:30.96] there are no extrema
+[30:36.00] here i've plotted it for six m squared
+[30:44.24] and uh so no extrema means that if you
+[30:46.48] put a particle in that potential
+[30:48.08] remember
+[30:48.56] the interpretation of the radial
+[30:50.00] equation of motion is that of a unit
+[30:51.36] mass particle moving in this potential
+[30:53.44] then no matter where you stick the
+[30:54.88] particle uh
+[30:56.56] there is a gradient and it's going to
+[30:58.72] sink down or it's going to zoom down
+[31:01.44] into the center so what would that mean
+[31:04.72] in terms of an orbit that would mean an
+[31:06.00] orbit that spirals or just goes directly
+[31:08.40] into the center of the celestial body
+[31:12.88] so in that case there are no stable
+[31:14.48] orbits
+[31:16.16] there's not enough angular momentum that
+[31:17.52] particles going in
+[31:22.00] now if you've got enough angular
+[31:23.92] momentum
+[31:29.52] in particular you've got more than 12 m
+[31:31.84] squared angular momentum
+[31:34.56] then you can find the extrema
+[31:38.00] according to that formula right
+[31:39.60] nothing's changed the formula's still
+[31:41.12] correct
+[31:42.24] but you could work out that one extreme
+[31:43.92] is a minima and one is a maxima
+[31:49.36] you just got to do the second derivative
+[31:50.88] to work out which ones are minima and
+[31:52.24] which ones are maximum or you just look
+[31:53.52] at the plot
+[32:09.04] and what do you see well in this this
+[32:11.20] sort of setting
+[32:12.16] the what does the potential look like
+[32:13.68] well the potential looks a little
+[32:15.12] different now
+[32:15.76] so uh we've got a maxima and a minima
+[32:22.40] max min
+[32:26.84] and here i've drawn it for c
+[32:32.88] l squared equals 24 m squared
+[32:43.68] and so you can see whether the maximum
+[32:45.52] minima are on this particular curve
+[32:48.48] but here's here's a maxima and here's a
+[32:54.84] minima
+[33:04.80] so this is our minus
+[33:09.36] here oops
+[33:16.16] that's r minus there and that's r plus
+[33:18.08] there the minimum
+[33:20.56] so you can see that a part a fictitious
+[33:22.16] particle in this potential would sort of
+[33:23.52] roll around
+[33:24.48] the minima here and fall down from the
+[33:26.48] maxima
+[33:28.32] so in particular it tells us there are
+[33:30.32] stable orbits
+[33:42.48] and not only stable they are completely
+[33:44.08] circular right when the radius doesn't
+[33:45.68] change
+[33:46.24] well phi changes that's a circular orbit
+[33:53.68] r dot is zero
+[34:01.44] there's also an unstable circular orbit
+[34:04.56] right if you just get the particle the
+[34:06.40] test mass balanced in that potential
+[34:08.48] there
+[34:10.56] then then it
+[34:13.68] will also execute a circular orbit but
+[34:15.36] of course the slightest perturbation
+[34:16.64] will
+[34:17.04] kick it out
+[34:25.44] and in the limit right we can get to the
+[34:28.08] newtonian
+[34:29.04] non-relativistic limit to understand
+[34:31.52] these these
+[34:32.84] points
+[34:36.40] r plus has the form l squared over m
+[34:40.00] which is the same as the newtonian
+[34:42.08] formula for the radius of the circular
+[34:46.84] orbital
+[35:03.84] now it's sort of important to note that
+[35:10.88] r plus greater than because r plus is
+[35:13.44] greater than 6m
+[35:15.52] there are actually no stable orbits
+[35:23.12] stable circular orbits
+[35:37.20] okay that's a fairly obvious consequence
+[35:40.48] another one is that the circular orbits
+[35:42.48] themselves the unstable
+[35:44.08] ones in a bounded region
+[36:01.28] and they just lie between 3m and 6m
+[36:10.96] the energy constant now so you can work
+[36:12.96] out the energy
+[36:14.64] of a particle
+[36:17.76] in a circular orbit
+[36:26.96] just substitute it into the equation
+[36:28.56] above
+[36:32.40] and it's a little substitution exercise
+[36:34.72] so what's the
+[36:35.76] energy as a function of the radius of
+[36:37.60] something in a stable circular orbit
+[36:39.20] well it's r minus 2 m over the square
+[36:41.12] root of r
+[36:46.40] square root of r minus 3m
+[36:49.52] this will turn it to be kind of
+[36:50.64] interesting in a second
+[37:06.84] and
+[37:11.28] so the small radii like for r less than
+[37:13.76] four m
+[37:15.68] the energy is greater than one
+[37:20.16] and uh
+[37:26.32] so if we take a look then we can
+[37:30.96] see that if you have a particle perched
+[37:33.44] at the top of this potential
+[37:35.28] i mean it's kind of obvious from the
+[37:36.40] picture right if you've got a particle
+[37:38.48] in an unstable circular orbit
+[37:41.04] uh perched at the top of this potential
+[37:43.76] and you give it a little um perturbation
+[37:45.76] outwards then you'll see that it escapes
+[37:47.36] to infinity right it just flies off the
+[37:49.12] potential it has enough energy to carry
+[37:51.20] it
+[37:51.44] out to infinity
+[38:02.80] of course if you put a perturb the
+[38:04.96] particle inwards then it will
+[38:07.60] collapse it'll plummet into the center
+[38:44.56] all right now let's understand stable
+[38:47.36] circular orbits
+[38:51.52] and in particular perturbations of
+[38:53.52] stable circular orders
+[38:55.12] this will lead us to one of the most
+[38:56.48] celebrated predictions of
+[38:58.16] einstein's general theory of relativity
+[39:04.56] well confirmations rather than
+[39:06.24] predictions as you'll see
+[39:14.88] so let's suppose we have a particle
+[39:18.72] in a stable circular orbit
+[39:26.40] what does that mean on our potential
+[39:27.92] diagram so our fictitious
+[39:30.00] unit mass particle will be in that
+[39:33.28] potential well now
+[39:42.64] so we've got this little particle here
+[39:47.28] and it's executing oscillations inside
+[39:49.84] this potential well here
+[39:59.28] around the minima r plus that's what it
+[40:01.52] means to be in a stable
+[40:03.04] but in a perturbation of a stable
+[40:04.96] circular orbit
+[40:23.44] so if you look at that potential then
+[40:25.52] suppose sufficiently small
+[40:27.84] distances away from r plus the potential
+[40:30.16] is going to look effectively quadratic
+[40:31.60] right
+[40:32.00] um i mean it's got some cubic
+[40:34.56] corrections
+[40:35.60] but it's effectively a quadratic
+[40:36.96] potential
+[40:39.52] so we can just
+[40:42.96] exploit that observation to really
+[40:45.76] quickly
+[40:46.32] get a handle on the oscillations around
+[40:49.76] this minima
+[40:53.52] so we're going to look at some
+[40:55.44] sufficiently small
+[41:04.84] displacements
+[41:07.52] where the cubic corrections are coming
+[41:10.08] neglected
+[41:10.88] and then the particle will execute
+[41:13.36] harmonic simple harmonic motion
+[41:15.12] because it's a quadratic potential
+[41:30.72] and what's the frequency well you just
+[41:32.32] got to solve the harmonic oscillator
+[41:36.72] and that is a job for you
+[41:41.84] so the frequency of radial oscillations
+[41:44.88] uh we'll call omega squared uh
+[41:49.12] you find that by just taking the second
+[41:50.72] derivative of the potential around the
+[41:52.24] minima
+[41:54.00] and it's just well when you work it out
+[41:57.04] it's just this num this ratio here
+[42:00.08] of r pluses and m's
+[42:07.20] now i have to point out of course that
+[42:08.72] this the time here in this
+[42:11.20] uh one-dimensional classical mechanics
+[42:13.76] problem is the proper time right
+[42:15.28] so this is as things are measured
+[42:18.16] relative to the the particle itself
+[42:24.56] but to the level of approximation uh we
+[42:27.76] will just set the two to eb
+[42:29.20] equal
+[42:42.00] so yeah it's not
+[42:46.72] the schwarzschild coordinate time
+[42:56.40] t right towers from t
+[43:01.84] so we've already worked out now that the
+[43:04.08] particles execute these little
+[43:05.60] oscillations around this
+[43:07.68] stable radius
+[43:10.80] now the particle is also the test
+[43:12.48] particle is also moving around the
+[43:13.76] celestial body right once every
+[43:16.96] however many uh seconds
+[43:21.04] and we need to work out what is this
+[43:24.96] angular frequency
+[43:26.08] right how often does it go around the
+[43:27.84] celestial body
+[43:36.72] well you can find it by just
+[43:40.24] uh defining
+[43:43.28] omega phi to be phi dot right
+[43:47.68] because whenever phi comes around two pi
+[43:50.32] well then you executed a complete
+[43:52.84] oscillation
+[43:55.20] and that right is determined by the
+[43:57.44] angular momentum
+[43:59.36] and the radius
+[44:13.20] i forgot my square here i believe
+[44:20.08] actually i'm just to check that i got
+[44:22.96] the angular momentum equation correct
+[44:25.28] i feel like there's an extra square that
+[44:26.88] i wrote down that doesn't feel right
+[44:35.52] indeed i made a mistake earlier on sorry
+[44:37.84] about this
+[44:48.64] right that looked awful strange um
+[44:52.48] so equation two has a mistake in it from
+[44:55.28] earlier
+[44:59.68] so do make sure to correct uh
+[45:03.12] to pay attention to that you would not
+[45:04.80] have been able to do
+[45:06.56] some of the equations uh the exercises
+[45:09.68] so i'm sure some of you may have already
+[45:11.52] in fact commented
+[45:13.12] by the time
+[45:16.16] we got this far so okay there was a
+[45:18.64] mistake there
+[45:19.60] apologize for that sorry
+[45:28.48] so where were we so there's definitely
+[45:29.92] no squared there
+[45:32.24] um okay so we're trying to solve for the
+[45:34.96] angular motion
+[45:36.00] of our test body well by defining
+[45:39.36] omega phi just to be phi dot then we
+[45:41.20] already can work out
+[45:44.16] the period and therefore the frequency
+[45:55.04] which is determined by the angular
+[45:58.84] momentum
+[46:03.76] and the angular momentum we can
+[46:05.44] eliminate with the
+[46:08.48] equation above which determines the zero
+[46:13.12] of the circular orbit a stable circular
+[46:17.36] orbit and then we work out that the
+[46:18.64] angular frequency is
+[46:19.76] this particular ratio here involving r
+[46:22.08] plus
+[46:27.52] okay very good so what right well
+[46:31.84] the first thing i want to point out is
+[46:33.76] that and this is
+[46:35.76] uh the sort of the most normal situation
+[46:38.48] with this kind of setting
+[46:40.00] is that omega r is not necessarily the
+[46:42.72] same as omega phi
+[46:44.48] now that's a bit different to the
+[46:46.08] newtonian setting so the newtonian
+[46:47.76] setting things are like
+[46:48.72] amazingly beautifully symmetric and
+[46:50.64] wonderful there omega r and omega phi
+[46:53.12] are commensurate frequencies
+[46:54.88] just magically because of the the the
+[46:57.44] the nature of the potential which is
+[46:58.80] kind of amazing right
+[47:00.72] but here in this general relativistic
+[47:03.12] setting things are much less
+[47:04.32] sort of much more generic and much less
+[47:06.80] miraculous
+[47:08.08] so uh in particular these two
+[47:10.16] frequencies are inconvenient but let's
+[47:12.00] first talk about where they are almost
+[47:13.52] convincing it
+[47:14.48] so if r plus is really large
+[47:18.16] so this is the newtonian limit
+[47:24.72] uh what are these angular frequencies
+[47:26.96] well one of them is approximately
+[47:30.56] m over r plus cubed and the other one is
+[47:33.52] approximately
+[47:34.72] m over r plus cubed okay so great so in
+[47:37.60] the far
+[47:38.08] r limit the larger our limit
+[47:41.68] these two frequencies are commensurate
+[47:47.36] they coincide
+[48:01.60] and the orbit closes right so this is
+[48:06.48] this is what you expect from the old
+[48:08.32] newtonian stuff
+[48:10.08] you have a heavenly body celestial body
+[48:13.44] here it is here and you have
+[48:17.04] a particle in motion around this
+[48:21.52] this celestial body so i'm just going to
+[48:23.60] draw this
+[48:24.88] trajectory here say an orange
+[48:28.08] so let's suppose you have a stable
+[48:29.76] circular orbit around the celestial body
+[48:32.40] and then you consider perturbation
+[48:34.16] around this celestial
+[48:35.52] body
+[48:41.92] then in the newtonian limit then this
+[48:44.24] thing executes this
+[48:46.48] simple harmonic motion around uh
+[48:49.76] the minima and the orbit closes
+[48:54.80] so that's the newtonian element great
+[48:56.72] fine so everything matches up with what
+[48:58.64] you you know from the newtonian limit
+[49:02.24] the impressive and amazing
+[49:05.84] thing about general relativity
+[49:10.24] is that in general omega r does not
+[49:12.88] equal omega phi
+[49:13.92] right these orbits uh these oscillations
+[49:16.08] are inconvenient
+[49:24.16] and that means the orbits do not close
+[49:35.36] and we get a procession of perihelia and
+[49:42.84] apelio
+[49:46.00] so perihelium and aphelion are the
+[49:48.96] places where the orbit
+[49:50.24] is closest and furthest from the
+[49:51.76] celestial body
+[50:00.80] so redrawing the figure that we just had
+[50:02.72] before
+[50:06.80] so there's a the orange curve is the
+[50:09.04] stable circular orbit
+[50:15.92] consider a perturbation around the
+[50:18.00] stable circular orbit
+[50:19.92] now the particle oscillates as it goes
+[50:22.32] around
+[50:23.76] radially oscillates but these uh
+[50:26.16] oscillations are inconvenient with the
+[50:28.24] the circular frequency and so we get
+[50:30.72] these
+[50:31.36] characteristic unclosed orbits
+[50:34.88] which i'm not sure if i'll go to draw
+[50:42.64] right
+[50:47.68] and the the point where the particles
+[50:50.56] furthest from the object
+[50:55.52] or closest from the object
+[50:58.88] changes from orbit to orbit
+[51:05.20] so the precision rate of the perihelium
+[51:16.48] well there is a precession first of all
+[51:19.12] that's the kind of
+[51:20.40] key key prediction here
+[51:25.20] and you can estimate this precession
+[51:27.28] rate as being just the difference of
+[51:28.72] these two frequencies
+[51:30.64] and substituting those numbers in
+[51:34.48] you arrive at the following formula for
+[51:37.28] this precession rate
+[51:42.56] and for the for the not quite newtonian
+[51:45.44] limit but for the limit where r plus is
+[51:46.88] a lot bigger than m
+[51:48.00] this precession rate is approximately
+[51:51.04] three m to the three halves
+[51:57.20] r plus to the five halves now
+[52:00.40] uh this is a very very small number but
+[52:04.56] for certain celestial bodies it's
+[52:07.28] non-trivial it's a measurable
+[52:09.12] number and in particular for mercury
+[52:14.80] this this is about 43 seconds of arc
+[52:21.44] per century so if you observe the the
+[52:23.84] orbits of
+[52:25.04] mercury for 100 years you'll start to
+[52:26.88] notice that the perihelion
+[52:28.88] mercury are processing around and this
+[52:31.20] was in fact known
+[52:32.72] and this constant this calculation here
+[52:34.96] constituted one of the most
+[52:36.40] celebrated and stunning successes of
+[52:38.64] einstein's general theory of relativity
+[52:40.80] because it matched the actual
+[52:42.08] observations
+[52:43.60] of uh the procession of the perihelion
+[52:45.92] of mercury
+[52:47.68] and in the next lecture we'll be looking
+[52:50.56] at another stunning
+[52:51.84] prediction of einstein's general theory
+[52:53.92] of relativity namely that light
+[52:55.92] is uh the trajectory of light is this is
+[52:58.64] curved or
+[52:59.60] bend by uh the gravitational field
+[53:03.52] and that will bring us essentially
+[53:06.72] to the end of this course but for today
+[53:09.28] we're finished
+[53:10.16] thank you very much and goodbye

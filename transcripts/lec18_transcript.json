@@ -1,0 +1,3187 @@
+{
+  "title": "General Relativity, Lecture 18: FLRW continued",
+  "video_id": "NV07yQ5NSBk",
+  "url": "https://www.youtube.com/watch?v=NV07yQ5NSBk",
+  "transcript": [
+    {
+      "start": 0.0,
+      "duration": 3.439,
+      "text": "hello and welcome back to introduction"
+    },
+    {
+      "start": 1.599,
+      "duration": 2.32,
+      "text": "to general relativity in the previous"
+    },
+    {
+      "start": 3.439,
+      "duration": 2.4,
+      "text": "lecture"
+    },
+    {
+      "start": 3.919,
+      "duration": 4.801,
+      "text": "we started modeling the universe with"
+    },
+    {
+      "start": 5.839,
+      "duration": 4.961,
+      "text": "einstein's general theory of relativity"
+    },
+    {
+      "start": 8.72,
+      "duration": 4.079,
+      "text": "with some after some symmetry arguments"
+    },
+    {
+      "start": 10.8,
+      "duration": 4.719,
+      "text": "we arrived at the following form"
+    },
+    {
+      "start": 12.799,
+      "duration": 4.801,
+      "text": "of a highly idealized metric for the"
+    },
+    {
+      "start": 15.519,
+      "duration": 5.52,
+      "text": "universe"
+    },
+    {
+      "start": 17.6,
+      "duration": 5.28,
+      "text": "the goal of today's lecture is to"
+    },
+    {
+      "start": 21.039,
+      "duration": 3.681,
+      "text": "derive all the geometric quantities we"
+    },
+    {
+      "start": 22.88,
+      "duration": 3.76,
+      "text": "need to"
+    },
+    {
+      "start": 24.72,
+      "duration": 3.44,
+      "text": "solve einstein's field equation and then"
+    },
+    {
+      "start": 26.64,
+      "duration": 2.479,
+      "text": "solve our transfer equation for this"
+    },
+    {
+      "start": 28.16,
+      "duration": 5.52,
+      "text": "particular form"
+    },
+    {
+      "start": 29.119,
+      "duration": 8.561,
+      "text": "of the metric this flrw form"
+    },
+    {
+      "start": 33.68,
+      "duration": 4.0,
+      "text": "so this is the flrw metric"
+    },
+    {
+      "start": 37.92,
+      "duration": 4.959,
+      "text": "and our goal is to derive from the"
+    },
+    {
+      "start": 40.8,
+      "duration": 3.919,
+      "text": "metric today everything we need"
+    },
+    {
+      "start": 42.879,
+      "duration": 3.68,
+      "text": "to solve einstein's field equations so"
+    },
+    {
+      "start": 44.719,
+      "duration": 6.241,
+      "text": "what does that mean that means the"
+    },
+    {
+      "start": 46.559,
+      "duration": 6.0,
+      "text": "riemann tensor richie scala richie tensa"
+    },
+    {
+      "start": 50.96,
+      "duration": 5.119,
+      "text": "and we'll also need to talk about the"
+    },
+    {
+      "start": 52.559,
+      "duration": 3.52,
+      "text": "stress energy tensor as well"
+    },
+    {
+      "start": 56.48,
+      "duration": 8.0,
+      "text": "so given this metric it's a uh"
+    },
+    {
+      "start": 60.64,
+      "duration": 3.84,
+      "text": "exercise for you"
+    },
+    {
+      "start": 69.2,
+      "duration": 5.52,
+      "text": "wait on how about i do the flat case"
+    },
+    {
+      "start": 71.04,
+      "duration": 3.68,
+      "text": "first and then the non-flat cased"
+    },
+    {
+      "start": 75.28,
+      "duration": 7.04,
+      "text": "so it's an exercise for you"
+    },
+    {
+      "start": 78.479,
+      "duration": 3.841,
+      "text": "to show the following"
+    },
+    {
+      "start": 83.84,
+      "duration": 4.08,
+      "text": "crystal symbols so first we'll deal with"
+    },
+    {
+      "start": 86.56,
+      "duration": 4.08,
+      "text": "the case k equals zero that's the one"
+    },
+    {
+      "start": 87.92,
+      "duration": 7.92,
+      "text": "that corresponds to minkowski space"
+    },
+    {
+      "start": 90.64,
+      "duration": 5.2,
+      "text": "well not minkowski sorry um uh uh"
+    },
+    {
+      "start": 95.92,
+      "duration": 7.68,
+      "text": "flat space like the time-like slices"
+    },
+    {
+      "start": 101.36,
+      "duration": 4.16,
+      "text": "so the case k equals naught so in that"
+    },
+    {
+      "start": 103.6,
+      "duration": 6.64,
+      "text": "case we could write the uh"
+    },
+    {
+      "start": 105.52,
+      "duration": 9.599,
+      "text": "the metric as well basically a rescale"
+    },
+    {
+      "start": 110.24,
+      "duration": 6.64,
+      "text": "normal lorentz metric"
+    },
+    {
+      "start": 115.119,
+      "duration": 3.6,
+      "text": "we just go back to cartesian style"
+    },
+    {
+      "start": 116.88,
+      "duration": 5.599,
+      "text": "coordinates for this um"
+    },
+    {
+      "start": 118.719,
+      "duration": 7.04,
+      "text": "euclidean slice coordinate system"
+    },
+    {
+      "start": 122.479,
+      "duration": 4.081,
+      "text": "and then he in this in this coordinate"
+    },
+    {
+      "start": 125.759,
+      "duration": 4.56,
+      "text": "system the"
+    },
+    {
+      "start": 126.56,
+      "duration": 3.759,
+      "text": "non-vanishing christopher symbols"
+    },
+    {
+      "start": 131.44,
+      "duration": 3.439,
+      "text": "you can work them out pretty easily"
+    },
+    {
+      "start": 139.92,
+      "duration": 4.24,
+      "text": "so this is an exercise although honestly"
+    },
+    {
+      "start": 142.08,
+      "duration": 4.56,
+      "text": "it's not that difficult to exercise"
+    },
+    {
+      "start": 144.16,
+      "duration": 4.079,
+      "text": "so here's the i'm only going to write"
+    },
+    {
+      "start": 146.64,
+      "duration": 4.0,
+      "text": "down the crystal symbols that don't"
+    },
+    {
+      "start": 148.239,
+      "duration": 2.401,
+      "text": "vanish"
+    },
+    {
+      "start": 153.76,
+      "duration": 5.52,
+      "text": "and all the rest actually vanish so here"
+    },
+    {
+      "start": 157.2,
+      "duration": 4.319,
+      "text": "a with a dot over it means the"
+    },
+    {
+      "start": 159.28,
+      "duration": 12.56,
+      "text": "derivative with respect to tau"
+    },
+    {
+      "start": 161.519,
+      "duration": 10.321,
+      "text": "proper time"
+    },
+    {
+      "start": 180.72,
+      "duration": 4.48,
+      "text": "and you have a whole bunch of other"
+    },
+    {
+      "start": 182.48,
+      "duration": 4.32,
+      "text": "crystal symbols that are non-vanishing"
+    },
+    {
+      "start": 185.2,
+      "duration": 2.959,
+      "text": "but they're all very symmetric on"
+    },
+    {
+      "start": 186.8,
+      "duration": 1.92,
+      "text": "account of the fact that the metric"
+    },
+    {
+      "start": 188.159,
+      "duration": 4.321,
+      "text": "itself"
+    },
+    {
+      "start": 188.72,
+      "duration": 6.56,
+      "text": "is rather symmetric so this"
+    },
+    {
+      "start": 192.48,
+      "duration": 7.2,
+      "text": "thousand z's look very close to each"
+    },
+    {
+      "start": 195.28,
+      "duration": 6.48,
+      "text": "other here"
+    },
+    {
+      "start": 199.68,
+      "duration": 3.919,
+      "text": "okay and from that you can go ahead and"
+    },
+    {
+      "start": 201.76,
+      "duration": 4.88,
+      "text": "work out the riemann tensor and the"
+    },
+    {
+      "start": 203.599,
+      "duration": 6.481,
+      "text": "the uh richie scala and"
+    },
+    {
+      "start": 206.64,
+      "duration": 4.159,
+      "text": "rigid tensor we're not going to focus so"
+    },
+    {
+      "start": 210.08,
+      "duration": 4.56,
+      "text": "much on"
+    },
+    {
+      "start": 210.799,
+      "duration": 7.121,
+      "text": "this this euclidean"
+    },
+    {
+      "start": 214.64,
+      "duration": 5.76,
+      "text": "sliced coordinate system so much in fact"
+    },
+    {
+      "start": 217.92,
+      "duration": 4.08,
+      "text": "i want to express everything in as"
+    },
+    {
+      "start": 220.4,
+      "duration": 4.399,
+      "text": "general way as possible"
+    },
+    {
+      "start": 222.0,
+      "duration": 5.44,
+      "text": "that can capture the basic elements of"
+    },
+    {
+      "start": 224.799,
+      "duration": 5.601,
+      "text": "the universe we live in"
+    },
+    {
+      "start": 227.44,
+      "duration": 6.64,
+      "text": "so now in in for that purpose we need to"
+    },
+    {
+      "start": 230.4,
+      "duration": 3.68,
+      "text": "look at the k is not equal zero case"
+    },
+    {
+      "start": 237.599,
+      "duration": 4.241,
+      "text": "and in this case you need to"
+    },
+    {
+      "start": 242.4,
+      "duration": 3.68,
+      "text": "you can derive the crystal symbols again"
+    },
+    {
+      "start": 244.64,
+      "duration": 3.28,
+      "text": "but we're going to use this"
+    },
+    {
+      "start": 246.08,
+      "duration": 3.84,
+      "text": "spherical coordinate system to derive"
+    },
+    {
+      "start": 247.92,
+      "duration": 4.319,
+      "text": "the crystal symbols in this case"
+    },
+    {
+      "start": 249.92,
+      "duration": 5.92,
+      "text": "and we'll have the following rather long"
+    },
+    {
+      "start": 252.239,
+      "duration": 3.601,
+      "text": "list of christopher symbols"
+    },
+    {
+      "start": 261.84,
+      "duration": 5.0,
+      "text": "i mean any individual chris double"
+    },
+    {
+      "start": 263.44,
+      "duration": 5.36,
+      "text": "symbol here isn't that difficult to"
+    },
+    {
+      "start": 266.84,
+      "duration": 3.24,
+      "text": "derive"
+    },
+    {
+      "start": 268.8,
+      "duration": 5.28,
+      "text": "probably the biggest challenge you're"
+    },
+    {
+      "start": 270.08,
+      "duration": 4.0,
+      "text": "going to face in doing this calculation"
+    },
+    {
+      "start": 274.479,
+      "duration": 5.521,
+      "text": "is uh ensuring that you know the"
+    },
+    {
+      "start": 277.12,
+      "duration": 6.72,
+      "text": "inevitable mistakes that that creep in"
+    },
+    {
+      "start": 280.0,
+      "duration": 3.84,
+      "text": "that you detect them quick enough"
+    },
+    {
+      "start": 288.08,
+      "duration": 4.24,
+      "text": "having said that i may have made"
+    },
+    {
+      "start": 289.52,
+      "duration": 2.8,
+      "text": "mistakes as well"
+    },
+    {
+      "start": 292.72,
+      "duration": 5.36,
+      "text": "although i have checked these results"
+    },
+    {
+      "start": 296.4,
+      "duration": 4.0,
+      "text": "nevertheless i may make transcription"
+    },
+    {
+      "start": 298.08,
+      "duration": 2.32,
+      "text": "errors"
+    },
+    {
+      "start": 301.199,
+      "duration": 7.201,
+      "text": "so it's important to not entirely trust"
+    },
+    {
+      "start": 305.52,
+      "duration": 2.88,
+      "text": "what i write here"
+    },
+    {
+      "start": 308.88,
+      "duration": 4.24,
+      "text": "so you get this long list of crystal"
+    },
+    {
+      "start": 310.88,
+      "duration": 3.92,
+      "text": "symbols like this"
+    },
+    {
+      "start": 313.12,
+      "duration": 4.799,
+      "text": "i've checked i admit i've checked a"
+    },
+    {
+      "start": 314.8,
+      "duration": 3.119,
+      "text": "couple in mathematica"
+    },
+    {
+      "start": 323.44,
+      "duration": 4.4,
+      "text": "and indeed although i do believe it's"
+    },
+    {
+      "start": 326.32,
+      "duration": 3.2,
+      "text": "important to be able to do these kind of"
+    },
+    {
+      "start": 327.84,
+      "duration": 4.24,
+      "text": "calculations yourself there reaches a"
+    },
+    {
+      "start": 329.52,
+      "duration": 2.56,
+      "text": "point where"
+    },
+    {
+      "start": 332.16,
+      "duration": 6.56,
+      "text": "something like mathematica is really a"
+    },
+    {
+      "start": 335.36,
+      "duration": 6.32,
+      "text": "first-class tool to"
+    },
+    {
+      "start": 338.72,
+      "duration": 2.96,
+      "text": "prevent mistakes"
+    },
+    {
+      "start": 348.56,
+      "duration": 5.28,
+      "text": "okay we're almost through here"
+    },
+    {
+      "start": 368.16,
+      "duration": 4.479,
+      "text": "and we're down to the last two crystal"
+    },
+    {
+      "start": 370.0,
+      "duration": 2.639,
+      "text": "symbols now"
+    },
+    {
+      "start": 377.52,
+      "duration": 5.2,
+      "text": "all right so when we're given the metric"
+    },
+    {
+      "start": 380.56,
+      "duration": 3.759,
+      "text": "here this f l r w metric with this"
+    },
+    {
+      "start": 382.72,
+      "duration": 2.56,
+      "text": "particular coordinate system with"
+    },
+    {
+      "start": 384.319,
+      "duration": 4.16,
+      "text": "spherical"
+    },
+    {
+      "start": 385.28,
+      "duration": 4.24,
+      "text": "type coordinates and we have this"
+    },
+    {
+      "start": 388.479,
+      "duration": 2.72,
+      "text": "parameter k"
+    },
+    {
+      "start": 389.52,
+      "duration": 4.64,
+      "text": "oops i didn't i forgot to remind you"
+    },
+    {
+      "start": 391.199,
+      "duration": 6.56,
+      "text": "about k k equals minus 1"
+    },
+    {
+      "start": 394.16,
+      "duration": 3.599,
+      "text": "that's the hyperboloid case"
+    },
+    {
+      "start": 398.72,
+      "duration": 6.8,
+      "text": "k equals 0 is the flat case"
+    },
+    {
+      "start": 402.16,
+      "duration": 3.36,
+      "text": "a flat spatial case"
+    },
+    {
+      "start": 406.84,
+      "duration": 3.0,
+      "text": "oops"
+    },
+    {
+      "start": 410.24,
+      "duration": 5.2,
+      "text": "and uh k equals plus one is the"
+    },
+    {
+      "start": 412.72,
+      "duration": 4.16,
+      "text": "spherical case"
+    },
+    {
+      "start": 415.44,
+      "duration": 3.12,
+      "text": "so you have three uh three"
+    },
+    {
+      "start": 416.88,
+      "duration": 3.36,
+      "text": "representative metrics to capture the"
+    },
+    {
+      "start": 418.56,
+      "duration": 6.24,
+      "text": "three kinds of space time"
+    },
+    {
+      "start": 420.24,
+      "duration": 4.56,
+      "text": "uh that are isotropic and homogeneous"
+    },
+    {
+      "start": 424.88,
+      "duration": 3.68,
+      "text": "and given this metric you can write it"
+    },
+    {
+      "start": 426.88,
+      "duration": 3.28,
+      "text": "as a matrix if you wish or just"
+    },
+    {
+      "start": 428.56,
+      "duration": 3.28,
+      "text": "keep track of all the components you can"
+    },
+    {
+      "start": 430.16,
+      "duration": 3.52,
+      "text": "go ahead and just use the formula that"
+    },
+    {
+      "start": 431.84,
+      "duration": 3.12,
+      "text": "we introduced many lectures ago on"
+    },
+    {
+      "start": 433.68,
+      "duration": 2.88,
+      "text": "the crystal symbols and you can go and"
+    },
+    {
+      "start": 434.96,
+      "duration": 2.639,
+      "text": "calculate the crystal symbols and you"
+    },
+    {
+      "start": 436.56,
+      "duration": 3.52,
+      "text": "should"
+    },
+    {
+      "start": 437.599,
+      "duration": 3.921,
+      "text": "with any luck i didn't if i didn't make"
+    },
+    {
+      "start": 440.08,
+      "duration": 2.72,
+      "text": "a transcription error and if you didn't"
+    },
+    {
+      "start": 441.52,
+      "duration": 2.079,
+      "text": "make any errors you should arrive at"
+    },
+    {
+      "start": 442.8,
+      "duration": 3.679,
+      "text": "this list of"
+    },
+    {
+      "start": 443.599,
+      "duration": 2.88,
+      "text": "crystal symbols"
+    },
+    {
+      "start": 446.88,
+      "duration": 5.2,
+      "text": "and now after that we're not done right"
+    },
+    {
+      "start": 450.319,
+      "duration": 3.44,
+      "text": "the crystal symbols do contain all the"
+    },
+    {
+      "start": 452.08,
+      "duration": 6.16,
+      "text": "information you you do need"
+    },
+    {
+      "start": 453.759,
+      "duration": 6.081,
+      "text": "to write out einstein's field equations"
+    },
+    {
+      "start": 458.24,
+      "duration": 3.6,
+      "text": "but of course einstein's field equations"
+    },
+    {
+      "start": 459.84,
+      "duration": 4.479,
+      "text": "pertain to the richie tense or rather"
+    },
+    {
+      "start": 461.84,
+      "duration": 6.72,
+      "text": "more more uh"
+    },
+    {
+      "start": 464.319,
+      "duration": 5.681,
+      "text": "directly to the to the einstein tensor"
+    },
+    {
+      "start": 468.56,
+      "duration": 3.199,
+      "text": "so we need to work out the ritchie"
+    },
+    {
+      "start": 470.0,
+      "duration": 2.879,
+      "text": "tensor and therefore the einstein sensor"
+    },
+    {
+      "start": 471.759,
+      "duration": 4.16,
+      "text": "so here we go again"
+    },
+    {
+      "start": 472.879,
+      "duration": 7.44,
+      "text": "more calculations later"
+    },
+    {
+      "start": 475.919,
+      "duration": 4.4,
+      "text": "long list of components for this"
+    },
+    {
+      "start": 481.12,
+      "duration": 2.479,
+      "text": "tensor"
+    },
+    {
+      "start": 491.039,
+      "duration": 4.481,
+      "text": "so these calculations you cannot find in"
+    },
+    {
+      "start": 492.8,
+      "duration": 4.399,
+      "text": "world you have to"
+    },
+    {
+      "start": 495.52,
+      "duration": 3.28,
+      "text": "in wald's textbook he doesn't really"
+    },
+    {
+      "start": 497.199,
+      "duration": 5.44,
+      "text": "cover the case where k"
+    },
+    {
+      "start": 498.8,
+      "duration": 6.56,
+      "text": "is not zero which is a bit of a shame"
+    },
+    {
+      "start": 502.639,
+      "duration": 3.361,
+      "text": "but then again the textbook was written"
+    },
+    {
+      "start": 505.36,
+      "duration": 2.16,
+      "text": "before we"
+    },
+    {
+      "start": 506.0,
+      "duration": 4.16,
+      "text": "understood that the universe is"
+    },
+    {
+      "start": 507.52,
+      "duration": 5.519,
+      "text": "expanding and accelerated the expansion"
+    },
+    {
+      "start": 510.16,
+      "duration": 2.879,
+      "text": "is accelerating"
+    },
+    {
+      "start": 519.279,
+      "duration": 3.521,
+      "text": "which is a pretty amazing result"
+    },
+    {
+      "start": 523.12,
+      "duration": 4.8,
+      "text": "okay so here's the actual the non-zero"
+    },
+    {
+      "start": 525.04,
+      "duration": 4.32,
+      "text": "components for the richie tensa"
+    },
+    {
+      "start": 527.92,
+      "duration": 3.12,
+      "text": "note that there's only a handful of"
+    },
+    {
+      "start": 529.36,
+      "duration": 5.039,
+      "text": "non-zero ones and that the"
+    },
+    {
+      "start": 531.04,
+      "duration": 5.68,
+      "text": "rigid tense is diagonal"
+    },
+    {
+      "start": 534.399,
+      "duration": 3.281,
+      "text": "and here's the richie scala go ahead and"
+    },
+    {
+      "start": 536.72,
+      "duration": 2.4,
+      "text": "just add up"
+    },
+    {
+      "start": 537.68,
+      "duration": 2.64,
+      "text": "take the trace of that thing above"
+    },
+    {
+      "start": 539.12,
+      "duration": 2.88,
+      "text": "remember when you take the trace you"
+    },
+    {
+      "start": 540.32,
+      "duration": 3.84,
+      "text": "have to use the inverse of the metric in"
+    },
+    {
+      "start": 542.0,
+      "duration": 7.839,
+      "text": "there somewhere"
+    },
+    {
+      "start": 544.16,
+      "duration": 5.679,
+      "text": "so that's why this takes this form here"
+    },
+    {
+      "start": 551.76,
+      "duration": 6.0,
+      "text": "and now we've got almost enough stuff to"
+    },
+    {
+      "start": 554.24,
+      "duration": 3.52,
+      "text": "write out the einstein tensor"
+    },
+    {
+      "start": 558.959,
+      "duration": 3.761,
+      "text": "so let's now write out the einstein"
+    },
+    {
+      "start": 560.48,
+      "duration": 5.6,
+      "text": "tensor so there's a g-tail towel"
+    },
+    {
+      "start": 562.72,
+      "duration": 5.119,
+      "text": "term this is"
+    },
+    {
+      "start": 566.08,
+      "duration": 3.439,
+      "text": "again an exercise for you to confirm"
+    },
+    {
+      "start": 567.839,
+      "duration": 3.841,
+      "text": "these"
+    },
+    {
+      "start": 569.519,
+      "duration": 8.32,
+      "text": "i mean i did these calculations myself"
+    },
+    {
+      "start": 571.68,
+      "duration": 6.159,
+      "text": "it really didn't take so long"
+    },
+    {
+      "start": 592.88,
+      "duration": 6.72,
+      "text": "and then the next two more"
+    },
+    {
+      "start": 595.92,
+      "duration": 3.68,
+      "text": "components there's a theta theta"
+    },
+    {
+      "start": 602.839,
+      "duration": 3.0,
+      "text": "component"
+    },
+    {
+      "start": 605.92,
+      "duration": 13.919,
+      "text": "and there's a firefight component"
+    },
+    {
+      "start": 622.72,
+      "duration": 4.239,
+      "text": "and now we have enough information to"
+    },
+    {
+      "start": 624.64,
+      "duration": 3.84,
+      "text": "write out einstein's field equations we"
+    },
+    {
+      "start": 626.959,
+      "duration": 3.921,
+      "text": "have the stress energy tensor"
+    },
+    {
+      "start": 628.48,
+      "duration": 3.84,
+      "text": "remember we discussed that form of the"
+    },
+    {
+      "start": 630.88,
+      "duration": 2.72,
+      "text": "stress energy tensor for an isotropic"
+    },
+    {
+      "start": 632.32,
+      "duration": 2.56,
+      "text": "homogenous universe in the previous"
+    },
+    {
+      "start": 633.6,
+      "duration": 5.28,
+      "text": "lecture"
+    },
+    {
+      "start": 634.88,
+      "duration": 6.8,
+      "text": "and we also exploited those symmetries"
+    },
+    {
+      "start": 638.88,
+      "duration": 4.88,
+      "text": "to write out einstein's field equations"
+    },
+    {
+      "start": 641.68,
+      "duration": 3.68,
+      "text": "in a much simpler form and we arrived at"
+    },
+    {
+      "start": 643.76,
+      "duration": 16.4,
+      "text": "really two independent"
+    },
+    {
+      "start": 645.36,
+      "duration": 17.2,
+      "text": "equations that we need to worry about"
+    },
+    {
+      "start": 660.16,
+      "duration": 3.84,
+      "text": "and so let's write it out so here here"
+    },
+    {
+      "start": 662.56,
+      "duration": 3.36,
+      "text": "they are g a b"
+    },
+    {
+      "start": 664.0,
+      "duration": 3.44,
+      "text": "plus lambda the cosmological constant"
+    },
+    {
+      "start": 665.92,
+      "duration": 4.8,
+      "text": "times by the metric little g"
+    },
+    {
+      "start": 667.44,
+      "duration": 8.399,
+      "text": "a b is going to equal eight pi t"
+    },
+    {
+      "start": 670.72,
+      "duration": 5.119,
+      "text": "a b"
+    },
+    {
+      "start": 677.519,
+      "duration": 3.681,
+      "text": "and we can either use the result from"
+    },
+    {
+      "start": 680.079,
+      "duration": 2.641,
+      "text": "the previous lecture or"
+    },
+    {
+      "start": 681.2,
+      "duration": 3.12,
+      "text": "more directly which is what i'll just do"
+    },
+    {
+      "start": 682.72,
+      "duration": 3.2,
+      "text": "here"
+    },
+    {
+      "start": 684.32,
+      "duration": 3.199,
+      "text": "is look at some various components of"
+    },
+    {
+      "start": 685.92,
+      "duration": 4.08,
+      "text": "this equation will be actually be able"
+    },
+    {
+      "start": 687.519,
+      "duration": 5.041,
+      "text": "to quickly identify the independent"
+    },
+    {
+      "start": 690.0,
+      "duration": 3.279,
+      "text": "equations so if you look at the tt"
+    },
+    {
+      "start": 692.56,
+      "duration": 4.16,
+      "text": "component"
+    },
+    {
+      "start": 693.279,
+      "duration": 3.441,
+      "text": "or the tau tau component"
+    },
+    {
+      "start": 697.04,
+      "duration": 3.28,
+      "text": "and substitute in the richie tensor"
+    },
+    {
+      "start": 698.72,
+      "duration": 2.72,
+      "text": "einstein tensor blah blah blah blah you"
+    },
+    {
+      "start": 700.32,
+      "duration": 2.8,
+      "text": "just arrived"
+    },
+    {
+      "start": 701.44,
+      "duration": 3.2,
+      "text": "then you arrive at the following"
+    },
+    {
+      "start": 703.12,
+      "duration": 3.92,
+      "text": "equation which we'll call one"
+    },
+    {
+      "start": 704.64,
+      "duration": 2.4,
+      "text": "prime"
+    },
+    {
+      "start": 712.399,
+      "duration": 5.44,
+      "text": "and if you look at the rr component"
+    },
+    {
+      "start": 719.68,
+      "duration": 12.159,
+      "text": "then well a little calculation later"
+    },
+    {
+      "start": 732.32,
+      "duration": 3.92,
+      "text": "including cosmological constant here"
+    },
+    {
+      "start": 742.56,
+      "duration": 4.959,
+      "text": "would lead us to the second"
+    },
+    {
+      "start": 745.92,
+      "duration": 3.52,
+      "text": "equation of course there are several"
+    },
+    {
+      "start": 747.519,
+      "duration": 3.681,
+      "text": "more components"
+    },
+    {
+      "start": 749.44,
+      "duration": 10.399,
+      "text": "but none of those lead to independent"
+    },
+    {
+      "start": 751.2,
+      "duration": 8.639,
+      "text": "equations after these two"
+    },
+    {
+      "start": 761.68,
+      "duration": 13.44,
+      "text": "and we'll call this one ii prime"
+    },
+    {
+      "start": 772.8,
+      "duration": 4.24,
+      "text": "so these are two equations and you just"
+    },
+    {
+      "start": 775.12,
+      "duration": 3.76,
+      "text": "go ahead and solve them if you want"
+    },
+    {
+      "start": 777.04,
+      "duration": 4.0,
+      "text": "one prime and two prime that's totally"
+    },
+    {
+      "start": 778.88,
+      "duration": 5.759,
+      "text": "fine uh"
+    },
+    {
+      "start": 781.04,
+      "duration": 7.359,
+      "text": "you can do it but the you can"
+    },
+    {
+      "start": 784.639,
+      "duration": 5.361,
+      "text": "make your life a touch simpler by"
+    },
+    {
+      "start": 788.399,
+      "duration": 3.521,
+      "text": "combining these equations in various"
+    },
+    {
+      "start": 790.0,
+      "duration": 6.0,
+      "text": "ways differentiating them and"
+    },
+    {
+      "start": 791.92,
+      "duration": 9.919,
+      "text": "eliminating common terms and"
+    },
+    {
+      "start": 796.0,
+      "duration": 5.839,
+      "text": "when you do so"
+    },
+    {
+      "start": 802.0,
+      "duration": 5.12,
+      "text": "you will find that those equations one"
+    },
+    {
+      "start": 805.04,
+      "duration": 4.64,
+      "text": "prime and two prime"
+    },
+    {
+      "start": 807.12,
+      "duration": 3.279,
+      "text": "are equivalent to the following"
+    },
+    {
+      "start": 809.68,
+      "duration": 3.12,
+      "text": "equations"
+    },
+    {
+      "start": 810.399,
+      "duration": 5.041,
+      "text": "which we will make reference to as a"
+    },
+    {
+      "start": 812.8,
+      "duration": 16.56,
+      "text": "little later when we solve"
+    },
+    {
+      "start": 815.44,
+      "duration": 15.6,
+      "text": "solve these"
+    },
+    {
+      "start": 829.36,
+      "duration": 3.68,
+      "text": "but before we go ahead and solve these"
+    },
+    {
+      "start": 831.04,
+      "duration": 5.44,
+      "text": "equations we're going to note that this"
+    },
+    {
+      "start": 833.04,
+      "duration": 7.799,
+      "text": "cosmological constant term lambda"
+    },
+    {
+      "start": 836.48,
+      "duration": 7.359,
+      "text": "can be eliminated and the way it gets"
+    },
+    {
+      "start": 840.839,
+      "duration": 3.0,
+      "text": "eliminated"
+    },
+    {
+      "start": 844.8,
+      "duration": 5.36,
+      "text": "it gives you a sense of how or what role"
+    },
+    {
+      "start": 848.079,
+      "duration": 8.801,
+      "text": "the lambda the cosmological constant"
+    },
+    {
+      "start": 850.16,
+      "duration": 8.0,
+      "text": "term plays"
+    },
+    {
+      "start": 856.88,
+      "duration": 3.04,
+      "text": "so let's make this the following"
+    },
+    {
+      "start": 858.16,
+      "duration": 4.32,
+      "text": "substitution"
+    },
+    {
+      "start": 859.92,
+      "duration": 3.68,
+      "text": "rho gets mapped to rho plus lambda over"
+    },
+    {
+      "start": 862.48,
+      "duration": 4.4,
+      "text": "eight pi"
+    },
+    {
+      "start": 863.6,
+      "duration": 5.52,
+      "text": "and p gets mapped to p"
+    },
+    {
+      "start": 866.88,
+      "duration": 4.88,
+      "text": "minus lambda over eight pi so if you"
+    },
+    {
+      "start": 869.12,
+      "duration": 6.719,
+      "text": "make that substitution"
+    },
+    {
+      "start": 871.76,
+      "duration": 4.079,
+      "text": "actually you can eliminate lambda"
+    },
+    {
+      "start": 877.92,
+      "duration": 3.44,
+      "text": "in this way we can actually interpret"
+    },
+    {
+      "start": 879.6,
+      "duration": 3.679,
+      "text": "the cosmological constant"
+    },
+    {
+      "start": 881.36,
+      "duration": 4.8,
+      "text": "we can interpret it as representing a"
+    },
+    {
+      "start": 883.279,
+      "duration": 2.881,
+      "text": "form of energy"
+    },
+    {
+      "start": 887.6,
+      "duration": 12.239,
+      "text": "with a negative pressure"
+    },
+    {
+      "start": 907.279,
+      "duration": 3.761,
+      "text": "and this pressure is not only negative"
+    },
+    {
+      "start": 909.519,
+      "duration": 18.32,
+      "text": "it's equal in magnitude"
+    },
+    {
+      "start": 911.04,
+      "duration": 16.799,
+      "text": "to its energy density"
+    },
+    {
+      "start": 937.759,
+      "duration": 3.921,
+      "text": "that means that a little p equals minus"
+    },
+    {
+      "start": 940.48,
+      "duration": 6.4,
+      "text": "rho for this form"
+    },
+    {
+      "start": 941.68,
+      "duration": 5.2,
+      "text": "of energy this is this energy as a name"
+    },
+    {
+      "start": 946.959,
+      "duration": 11.761,
+      "text": "it's called dark energy"
+    },
+    {
+      "start": 954.399,
+      "duration": 8.161,
+      "text": "and there have been several independent"
+    },
+    {
+      "start": 958.72,
+      "duration": 4.4,
+      "text": "surveys of of this hypothetical dark"
+    },
+    {
+      "start": 962.56,
+      "duration": 2.719,
+      "text": "energy"
+    },
+    {
+      "start": 963.12,
+      "duration": 4.32,
+      "text": "and so far we haven't been able to"
+    },
+    {
+      "start": 965.279,
+      "duration": 3.521,
+      "text": "reject the hypothesis that dark energy"
+    },
+    {
+      "start": 967.44,
+      "duration": 2.48,
+      "text": "is present in our universe and"
+    },
+    {
+      "start": 968.8,
+      "duration": 4.159,
+      "text": "dominating"
+    },
+    {
+      "start": 969.92,
+      "duration": 3.359,
+      "text": "in fact or playing a dominating role in"
+    },
+    {
+      "start": 972.959,
+      "duration": 2.721,
+      "text": "the"
+    },
+    {
+      "start": 973.279,
+      "duration": 4.8,
+      "text": "uh the late stage evolution of our"
+    },
+    {
+      "start": 975.68,
+      "duration": 2.399,
+      "text": "universe"
+    },
+    {
+      "start": 979.12,
+      "duration": 5.68,
+      "text": "and that is so"
+    },
+    {
+      "start": 982.24,
+      "duration": 4.159,
+      "text": "the discussion up to this point uh about"
+    },
+    {
+      "start": 984.8,
+      "duration": 3.36,
+      "text": "eliminating lambda is just to"
+    },
+    {
+      "start": 986.399,
+      "duration": 4.0,
+      "text": "allow us to eliminate lambda from the"
+    },
+    {
+      "start": 988.16,
+      "duration": 3.76,
+      "text": "equations so we've got these equations 1"
+    },
+    {
+      "start": 990.399,
+      "duration": 3.921,
+      "text": "prime and 2 prime here"
+    },
+    {
+      "start": 991.92,
+      "duration": 3.68,
+      "text": "lambda's inside it but we can make this"
+    },
+    {
+      "start": 994.32,
+      "duration": 3.439,
+      "text": "particular substitution"
+    },
+    {
+      "start": 995.6,
+      "duration": 4.799,
+      "text": "and then we can end up with some"
+    },
+    {
+      "start": 997.759,
+      "duration": 2.64,
+      "text": "equations"
+    },
+    {
+      "start": 1000.8,
+      "duration": 3.599,
+      "text": "which don't feature lambda anymore"
+    },
+    {
+      "start": 1008.56,
+      "duration": 5.519,
+      "text": "but now we have to bear in mind that the"
+    },
+    {
+      "start": 1010.8,
+      "duration": 3.279,
+      "text": "pressure can go negative"
+    },
+    {
+      "start": 1014.959,
+      "duration": 4.88,
+      "text": "or we must allow for the pressure to go"
+    },
+    {
+      "start": 1017.68,
+      "duration": 8.159,
+      "text": "negative"
+    },
+    {
+      "start": 1019.839,
+      "duration": 6.0,
+      "text": "in order to accommodate the"
+    },
+    {
+      "start": 1026.0,
+      "duration": 4.319,
+      "text": "presence of dark energy"
+    },
+    {
+      "start": 1030.959,
+      "duration": 3.36,
+      "text": "so these are the two equations that"
+    },
+    {
+      "start": 1033.36,
+      "duration": 6.479,
+      "text": "we're going to use"
+    },
+    {
+      "start": 1034.319,
+      "duration": 5.52,
+      "text": "to model the evolution of our universe"
+    },
+    {
+      "start": 1042.079,
+      "duration": 13.121,
+      "text": "and we'll call these one and two"
+    },
+    {
+      "start": 1053.76,
+      "duration": 3.12,
+      "text": "and just by looking at these equations"
+    },
+    {
+      "start": 1055.2,
+      "duration": 2.56,
+      "text": "we can actually deduce a fair number of"
+    },
+    {
+      "start": 1056.88,
+      "duration": 4.48,
+      "text": "interesting"
+    },
+    {
+      "start": 1057.76,
+      "duration": 7.84,
+      "text": "uh observations about"
+    },
+    {
+      "start": 1061.36,
+      "duration": 4.24,
+      "text": "the evolution of various"
+    },
+    {
+      "start": 1065.679,
+      "duration": 3.12,
+      "text": "types of universe"
+    },
+    {
+      "start": 1069.6,
+      "duration": 3.92,
+      "text": "so there's one case that you might think"
+    },
+    {
+      "start": 1072.0,
+      "duration": 3.28,
+      "text": "is highly relevant for the universe we"
+    },
+    {
+      "start": 1073.52,
+      "duration": 3.2,
+      "text": "find ourselves in"
+    },
+    {
+      "start": 1075.28,
+      "duration": 5.36,
+      "text": "um but in the end of course has been"
+    },
+    {
+      "start": 1076.72,
+      "duration": 6.16,
+      "text": "rejected by the latest"
+    },
+    {
+      "start": 1080.64,
+      "duration": 3.12,
+      "text": "observations you might imagine that in"
+    },
+    {
+      "start": 1082.88,
+      "duration": 4.0,
+      "text": "our universe"
+    },
+    {
+      "start": 1083.76,
+      "duration": 3.44,
+      "text": "rho the energy density is positive and"
+    },
+    {
+      "start": 1086.88,
+      "duration": 2.159,
+      "text": "uh"
+    },
+    {
+      "start": 1087.2,
+      "duration": 3.839,
+      "text": "p the pressure is also non-negative"
+    },
+    {
+      "start": 1089.039,
+      "duration": 4.481,
+      "text": "right you might imagine that"
+    },
+    {
+      "start": 1091.039,
+      "duration": 4.081,
+      "text": "and then in that case so this does not"
+    },
+    {
+      "start": 1093.52,
+      "duration": 3.279,
+      "text": "to repeat this does not actually apply"
+    },
+    {
+      "start": 1095.12,
+      "duration": 4.72,
+      "text": "to the universe that we live in"
+    },
+    {
+      "start": 1096.799,
+      "duration": 4.801,
+      "text": "as far as we know now p"
+    },
+    {
+      "start": 1099.84,
+      "duration": 4.16,
+      "text": "there is the cosmological constant term"
+    },
+    {
+      "start": 1101.6,
+      "duration": 2.4,
+      "text": "that does"
+    },
+    {
+      "start": 1104.799,
+      "duration": 4.961,
+      "text": "uh feature a negative pressure"
+    },
+    {
+      "start": 1106.84,
+      "duration": 8.52,
+      "text": "contribution"
+    },
+    {
+      "start": 1109.76,
+      "duration": 5.6,
+      "text": "but what if we um just assume"
+    },
+    {
+      "start": 1115.52,
+      "duration": 5.2,
+      "text": "that rho is strictly greater than zero"
+    },
+    {
+      "start": 1117.919,
+      "duration": 2.801,
+      "text": "and p is not negative"
+    },
+    {
+      "start": 1121.28,
+      "duration": 4.16,
+      "text": "well we can uh we can actually deduce a"
+    },
+    {
+      "start": 1123.52,
+      "duration": 6.72,
+      "text": "couple of"
+    },
+    {
+      "start": 1125.44,
+      "duration": 4.8,
+      "text": "quite interesting observations"
+    },
+    {
+      "start": 1132.08,
+      "duration": 5.76,
+      "text": "namely that the universe in this"
+    },
+    {
+      "start": 1134.4,
+      "duration": 3.44,
+      "text": "particular case"
+    },
+    {
+      "start": 1138.0,
+      "duration": 3.76,
+      "text": "cannot be static"
+    },
+    {
+      "start": 1145.28,
+      "duration": 2.48,
+      "text": "because"
+    },
+    {
+      "start": 1149.36,
+      "duration": 3.12,
+      "text": "a double dot is strictly less than zero"
+    },
+    {
+      "start": 1151.28,
+      "duration": 4.399,
+      "text": "so if you take a look at the"
+    },
+    {
+      "start": 1152.48,
+      "duration": 4.48,
+      "text": "equation two and"
+    },
+    {
+      "start": 1155.679,
+      "duration": 3.041,
+      "text": "you look at the right hand side well you"
+    },
+    {
+      "start": 1156.96,
+      "duration": 3.52,
+      "text": "see that rho and p are"
+    },
+    {
+      "start": 1158.72,
+      "duration": 3.44,
+      "text": "non-negative so the right hand side is"
+    },
+    {
+      "start": 1160.48,
+      "duration": 5.04,
+      "text": "strictly negative"
+    },
+    {
+      "start": 1162.16,
+      "duration": 4.32,
+      "text": "a itself is positive so that tells us"
+    },
+    {
+      "start": 1165.52,
+      "duration": 3.92,
+      "text": "that a double dot"
+    },
+    {
+      "start": 1166.48,
+      "duration": 2.96,
+      "text": "is strictly negative"
+    },
+    {
+      "start": 1169.6,
+      "duration": 2.72,
+      "text": "and what does that mean"
+    },
+    {
+      "start": 1172.72,
+      "duration": 7.12,
+      "text": "well uh the universe must always be"
+    },
+    {
+      "start": 1174.96,
+      "duration": 4.88,
+      "text": "contracting or expanding"
+    },
+    {
+      "start": 1197.52,
+      "duration": 4.0,
+      "text": "right because that means that a dot has"
+    },
+    {
+      "start": 1200.08,
+      "duration": 4.16,
+      "text": "to be strictly greater than zero"
+    },
+    {
+      "start": 1201.52,
+      "duration": 5.36,
+      "text": "or a dot has to be strictly less than"
+    },
+    {
+      "start": 1204.24,
+      "duration": 6.0,
+      "text": "zero a dot can't be zero"
+    },
+    {
+      "start": 1206.88,
+      "duration": 3.36,
+      "text": "otherwise a double dot would be zero"
+    },
+    {
+      "start": 1212.4,
+      "duration": 4.48,
+      "text": "so the universe is either always"
+    },
+    {
+      "start": 1215.039,
+      "duration": 3.52,
+      "text": "expanding or contracting except in the"
+    },
+    {
+      "start": 1216.88,
+      "duration": 2.4,
+      "text": "case where this cosmological constant"
+    },
+    {
+      "start": 1218.559,
+      "duration": 3.841,
+      "text": "term"
+    },
+    {
+      "start": 1219.28,
+      "duration": 4.639,
+      "text": "happens to just balance out"
+    },
+    {
+      "start": 1222.4,
+      "duration": 3.279,
+      "text": "the uh the contribution of the"
+    },
+    {
+      "start": 1223.919,
+      "duration": 2.161,
+      "text": "cosmological constant term just balances"
+    },
+    {
+      "start": 1225.679,
+      "duration": 1.761,
+      "text": "out the"
+    },
+    {
+      "start": 1226.08,
+      "duration": 3.2,
+      "text": "energy density indeed that was the"
+    },
+    {
+      "start": 1227.44,
+      "duration": 3.64,
+      "text": "original motivation that"
+    },
+    {
+      "start": 1229.28,
+      "duration": 5.759,
+      "text": "einstein to introduce the cosmological"
+    },
+    {
+      "start": 1231.08,
+      "duration": 6.04,
+      "text": "constant um"
+    },
+    {
+      "start": 1235.039,
+      "duration": 3.681,
+      "text": "now of course later observations"
+    },
+    {
+      "start": 1237.12,
+      "duration": 3.76,
+      "text": "confirmed"
+    },
+    {
+      "start": 1238.72,
+      "duration": 3.92,
+      "text": "the rejected the hypothesis that the"
+    },
+    {
+      "start": 1240.88,
+      "duration": 4.24,
+      "text": "universe is static"
+    },
+    {
+      "start": 1242.64,
+      "duration": 3.279,
+      "text": "and so somewhat melodramatically this is"
+    },
+    {
+      "start": 1245.12,
+      "duration": 2.32,
+      "text": "uh"
+    },
+    {
+      "start": 1245.919,
+      "duration": 3.361,
+      "text": "this is considered a mistake but of"
+    },
+    {
+      "start": 1247.44,
+      "duration": 2.64,
+      "text": "course with hindsight now we understand"
+    },
+    {
+      "start": 1249.28,
+      "duration": 2.08,
+      "text": "that"
+    },
+    {
+      "start": 1250.08,
+      "duration": 3.12,
+      "text": "the way you should do physics is you"
+    },
+    {
+      "start": 1251.36,
+      "duration": 3.52,
+      "text": "should include all terms that are"
+    },
+    {
+      "start": 1253.2,
+      "duration": 1.92,
+      "text": "allowed by the symmetries of your theory"
+    },
+    {
+      "start": 1254.88,
+      "duration": 1.52,
+      "text": "and"
+    },
+    {
+      "start": 1255.12,
+      "duration": 3.36,
+      "text": "the cosmological constant term is"
+    },
+    {
+      "start": 1256.4,
+      "duration": 3.519,
+      "text": "allowed by the the"
+    },
+    {
+      "start": 1258.48,
+      "duration": 3.679,
+      "text": "symmetries of your theory it's one"
+    },
+    {
+      "start": 1259.919,
+      "duration": 3.76,
+      "text": "constant term and it's non-zero"
+    },
+    {
+      "start": 1262.159,
+      "duration": 3.121,
+      "text": "as far as we're aware in our universe so"
+    },
+    {
+      "start": 1263.679,
+      "duration": 4.0,
+      "text": "i find it a bit melodramatic to"
+    },
+    {
+      "start": 1265.28,
+      "duration": 4.8,
+      "text": "to depict the cosmological constant as a"
+    },
+    {
+      "start": 1267.679,
+      "duration": 7.161,
+      "text": "mistake of einstein this is really"
+    },
+    {
+      "start": 1270.08,
+      "duration": 6.64,
+      "text": "um the motivation may have been"
+    },
+    {
+      "start": 1274.84,
+      "duration": 3.64,
+      "text": "uh with"
+    },
+    {
+      "start": 1276.72,
+      "duration": 4.16,
+      "text": "uh it may not have been courageous"
+    },
+    {
+      "start": 1278.48,
+      "duration": 4.559,
+      "text": "enough but the the"
+    },
+    {
+      "start": 1280.88,
+      "duration": 3.679,
+      "text": "principle that you add in all the the"
+    },
+    {
+      "start": 1283.039,
+      "duration": 2.561,
+      "text": "terms that are allowed by the symmetries"
+    },
+    {
+      "start": 1284.559,
+      "duration": 3.921,
+      "text": "of your theory"
+    },
+    {
+      "start": 1285.6,
+      "duration": 4.64,
+      "text": "is a good principle and uh one that you"
+    },
+    {
+      "start": 1288.48,
+      "duration": 2.48,
+      "text": "should follow when formulating physical"
+    },
+    {
+      "start": 1290.24,
+      "duration": 3.679,
+      "text": "theories"
+    },
+    {
+      "start": 1290.96,
+      "duration": 5.28,
+      "text": "it you shouldn't set any coupling"
+    },
+    {
+      "start": 1293.919,
+      "duration": 3.841,
+      "text": "constant or"
+    },
+    {
+      "start": 1296.24,
+      "duration": 3.12,
+      "text": "interaction term in your theory to zero"
+    },
+    {
+      "start": 1297.76,
+      "duration": 3.279,
+      "text": "unless you have a good reason to do so"
+    },
+    {
+      "start": 1299.36,
+      "duration": 5.439,
+      "text": "based on experimental"
+    },
+    {
+      "start": 1301.039,
+      "duration": 5.12,
+      "text": "evidence now uh"
+    },
+    {
+      "start": 1304.799,
+      "duration": 3.281,
+      "text": "when you think that the universe is"
+    },
+    {
+      "start": 1306.159,
+      "duration": 3.681,
+      "text": "expanding maybe you sort of think of"
+    },
+    {
+      "start": 1308.08,
+      "duration": 3.76,
+      "text": "um there being a distinguished point"
+    },
+    {
+      "start": 1309.84,
+      "duration": 2.959,
+      "text": "where expansion is happening around it"
+    },
+    {
+      "start": 1311.84,
+      "duration": 2.319,
+      "text": "perhaps"
+    },
+    {
+      "start": 1312.799,
+      "duration": 2.561,
+      "text": "uh you shouldn't really think of the"
+    },
+    {
+      "start": 1314.159,
+      "duration": 2.961,
+      "text": "universe like that you should rather"
+    },
+    {
+      "start": 1315.36,
+      "duration": 4.16,
+      "text": "think of galaxies as being distributed"
+    },
+    {
+      "start": 1317.12,
+      "duration": 4.32,
+      "text": "like on the surface of a balloon"
+    },
+    {
+      "start": 1319.52,
+      "duration": 3.36,
+      "text": "and uh and then your the universe is"
+    },
+    {
+      "start": 1321.44,
+      "duration": 2.8,
+      "text": "sort of blowing up the balloon or the"
+    },
+    {
+      "start": 1322.88,
+      "duration": 2.88,
+      "text": "balloon is shrinking"
+    },
+    {
+      "start": 1324.24,
+      "duration": 3.439,
+      "text": "and that means that all the distances"
+    },
+    {
+      "start": 1325.76,
+      "duration": 5.36,
+      "text": "between isotropic observers"
+    },
+    {
+      "start": 1327.679,
+      "duration": 4.401,
+      "text": "um uh there's no preferred center right"
+    },
+    {
+      "start": 1331.12,
+      "duration": 2.88,
+      "text": "we already know that"
+    },
+    {
+      "start": 1332.08,
+      "duration": 4.64,
+      "text": "and the distance is all sort of"
+    },
+    {
+      "start": 1334.0,
+      "duration": 6.0,
+      "text": "symmetrically changing"
+    },
+    {
+      "start": 1336.72,
+      "duration": 5.439,
+      "text": "between isotropic observers"
+    },
+    {
+      "start": 1340.0,
+      "duration": 2.159,
+      "text": "so"
+    },
+    {
+      "start": 1343.44,
+      "duration": 3.599,
+      "text": "let's actually think about or study the"
+    },
+    {
+      "start": 1345.44,
+      "duration": 2.64,
+      "text": "the distances between isotropic"
+    },
+    {
+      "start": 1347.039,
+      "duration": 2.961,
+      "text": "observers and see"
+    },
+    {
+      "start": 1348.08,
+      "duration": 4.4,
+      "text": "how they're changing in one of these"
+    },
+    {
+      "start": 1350.0,
+      "duration": 2.48,
+      "text": "solutions"
+    },
+    {
+      "start": 1355.679,
+      "duration": 3.041,
+      "text": "so imagine we have two isotropic"
+    },
+    {
+      "start": 1357.44,
+      "duration": 4.96,
+      "text": "observers"
+    },
+    {
+      "start": 1358.72,
+      "duration": 3.68,
+      "text": "a distance capital r apart"
+    },
+    {
+      "start": 1373.52,
+      "duration": 6.0,
+      "text": "and that's at some proper time t"
+    },
+    {
+      "start": 1376.559,
+      "duration": 2.961,
+      "text": "or some constant"
+    },
+    {
+      "start": 1380.08,
+      "duration": 6.0,
+      "text": "tau sorry so let's just study"
+    },
+    {
+      "start": 1384.0,
+      "duration": 4.08,
+      "text": "how the distance between two isotropic"
+    },
+    {
+      "start": 1386.08,
+      "duration": 4.719,
+      "text": "observers changes as"
+    },
+    {
+      "start": 1388.08,
+      "duration": 2.719,
+      "text": "tau changes"
+    },
+    {
+      "start": 1394.64,
+      "duration": 3.76,
+      "text": "well firstly the change in this distance"
+    },
+    {
+      "start": 1396.72,
+      "duration": 5.199,
+      "text": "r is"
+    },
+    {
+      "start": 1398.4,
+      "duration": 5.36,
+      "text": "per definition right it's d r d tau"
+    },
+    {
+      "start": 1401.919,
+      "duration": 5.12,
+      "text": "that's how it changes"
+    },
+    {
+      "start": 1403.76,
+      "duration": 7.44,
+      "text": "but that's equal to r on a"
+    },
+    {
+      "start": 1407.039,
+      "duration": 6.161,
+      "text": "times d a d tau which is"
+    },
+    {
+      "start": 1411.2,
+      "duration": 6.32,
+      "text": "the definition something called h times"
+    },
+    {
+      "start": 1413.2,
+      "duration": 4.959,
+      "text": "r now to to get the second line here you"
+    },
+    {
+      "start": 1417.52,
+      "duration": 4.399,
+      "text": "have to"
+    },
+    {
+      "start": 1418.159,
+      "duration": 8.801,
+      "text": "to to note that the metric"
+    },
+    {
+      "start": 1421.919,
+      "duration": 6.961,
+      "text": "is changing with uh according with tau"
+    },
+    {
+      "start": 1426.96,
+      "duration": 4.16,
+      "text": "and that the distance between two"
+    },
+    {
+      "start": 1428.88,
+      "duration": 5.36,
+      "text": "isotropic observers is being rescaled"
+    },
+    {
+      "start": 1431.12,
+      "duration": 6.4,
+      "text": "as tower changes right and a"
+    },
+    {
+      "start": 1434.24,
+      "duration": 3.28,
+      "text": "is the scaling factor"
+    },
+    {
+      "start": 1437.76,
+      "duration": 5.08,
+      "text": "and so what we've done here is we've"
+    },
+    {
+      "start": 1439.919,
+      "duration": 5.201,
+      "text": "introduced something called"
+    },
+    {
+      "start": 1442.84,
+      "duration": 5.8,
+      "text": "h"
+    },
+    {
+      "start": 1445.12,
+      "duration": 5.28,
+      "text": "which is which is irritatingly called"
+    },
+    {
+      "start": 1448.64,
+      "duration": 4.24,
+      "text": "hubble's constant although it's not"
+    },
+    {
+      "start": 1450.4,
+      "duration": 2.48,
+      "text": "constant"
+    },
+    {
+      "start": 1456.24,
+      "duration": 3.919,
+      "text": "humble's function so"
+    },
+    {
+      "start": 1462.32,
+      "duration": 5.12,
+      "text": "let's put a scarecrow here it's not"
+    },
+    {
+      "start": 1464.96,
+      "duration": 2.48,
+      "text": "constant"
+    },
+    {
+      "start": 1469.52,
+      "duration": 3.68,
+      "text": "and so what we learn is that the change"
+    },
+    {
+      "start": 1471.84,
+      "duration": 2.0,
+      "text": "in the distance between two isotopic"
+    },
+    {
+      "start": 1473.2,
+      "duration": 4.88,
+      "text": "observers"
+    },
+    {
+      "start": 1473.84,
+      "duration": 6.0,
+      "text": "is somehow proportional or"
+    },
+    {
+      "start": 1478.08,
+      "duration": 3.04,
+      "text": "instantaneously proportional to the"
+    },
+    {
+      "start": 1479.84,
+      "duration": 3.6,
+      "text": "distance between"
+    },
+    {
+      "start": 1481.12,
+      "duration": 3.84,
+      "text": "the observers right this basically"
+    },
+    {
+      "start": 1483.44,
+      "duration": 4.4,
+      "text": "exponential"
+    },
+    {
+      "start": 1484.96,
+      "duration": 2.88,
+      "text": "uh separation"
+    },
+    {
+      "start": 1488.96,
+      "duration": 5.28,
+      "text": "and what does that tell us well if r is"
+    },
+    {
+      "start": 1491.6,
+      "duration": 2.64,
+      "text": "large enough"
+    },
+    {
+      "start": 1496.32,
+      "duration": 8.239,
+      "text": "then easily right"
+    },
+    {
+      "start": 1500.32,
+      "duration": 4.239,
+      "text": "v can exceed the speed of light"
+    },
+    {
+      "start": 1510.159,
+      "duration": 3.441,
+      "text": "but that's bad right things aren't"
+    },
+    {
+      "start": 1511.84,
+      "duration": 2.88,
+      "text": "allowed to travel at faster than the"
+    },
+    {
+      "start": 1513.6,
+      "duration": 2.88,
+      "text": "speed of light"
+    },
+    {
+      "start": 1514.72,
+      "duration": 3.92,
+      "text": "well actually that's not true in general"
+    },
+    {
+      "start": 1516.48,
+      "duration": 3.36,
+      "text": "relativity uh"
+    },
+    {
+      "start": 1518.64,
+      "duration": 3.36,
+      "text": "you got to be a little bit more careful"
+    },
+    {
+      "start": 1519.84,
+      "duration": 5.439,
+      "text": "about how you you you state"
+    },
+    {
+      "start": 1522.0,
+      "duration": 5.679,
+      "text": "the the the speed of light and the"
+    },
+    {
+      "start": 1525.279,
+      "duration": 3.601,
+      "text": "the speed of light is a limit on"
+    },
+    {
+      "start": 1527.679,
+      "duration": 2.641,
+      "text": "velocities"
+    },
+    {
+      "start": 1528.88,
+      "duration": 3.039,
+      "text": "this actually entails no particular"
+    },
+    {
+      "start": 1530.32,
+      "duration": 3.68,
+      "text": "violation this observation"
+    },
+    {
+      "start": 1531.919,
+      "duration": 3.841,
+      "text": "of relativity because in general"
+    },
+    {
+      "start": 1534.0,
+      "duration": 3.76,
+      "text": "relativity all that we required is that"
+    },
+    {
+      "start": 1535.76,
+      "duration": 3.68,
+      "text": "locally measured relative velocities at"
+    },
+    {
+      "start": 1537.76,
+      "duration": 3.6,
+      "text": "a single event does not"
+    },
+    {
+      "start": 1539.44,
+      "duration": 3.839,
+      "text": "exceed the speed of light global"
+    },
+    {
+      "start": 1541.36,
+      "duration": 3.199,
+      "text": "relative velocities such as v"
+    },
+    {
+      "start": 1543.279,
+      "duration": 3.121,
+      "text": "you see the distance between two"
+    },
+    {
+      "start": 1544.559,
+      "duration": 4.641,
+      "text": "isotropic observers is"
+    },
+    {
+      "start": 1546.4,
+      "duration": 4.72,
+      "text": "this global distance quantity that's"
+    },
+    {
+      "start": 1549.2,
+      "duration": 4.959,
+      "text": "determined by a geodesic"
+    },
+    {
+      "start": 1551.12,
+      "duration": 5.919,
+      "text": "there's no no such restriction on those"
+    },
+    {
+      "start": 1554.159,
+      "duration": 5.681,
+      "text": "those velocities and actually you know"
+    },
+    {
+      "start": 1557.039,
+      "duration": 5.841,
+      "text": "you've seen in the exercises"
+    },
+    {
+      "start": 1559.84,
+      "duration": 4.959,
+      "text": "um i've mentioned that desider as an"
+    },
+    {
+      "start": 1562.88,
+      "duration": 3.679,
+      "text": "ideology universe is an idealized"
+    },
+    {
+      "start": 1564.799,
+      "duration": 3.601,
+      "text": "solution by transfer equations features"
+    },
+    {
+      "start": 1566.559,
+      "duration": 6.321,
+      "text": "exactly this"
+    },
+    {
+      "start": 1568.4,
+      "duration": 4.48,
+      "text": "so this is no violation"
+    },
+    {
+      "start": 1573.279,
+      "duration": 13.441,
+      "text": "of relativity"
+    },
+    {
+      "start": 1584.799,
+      "duration": 5.201,
+      "text": "because in real in general relativity"
+    },
+    {
+      "start": 1586.72,
+      "duration": 3.28,
+      "text": "only locally"
+    },
+    {
+      "start": 1592.24,
+      "duration": 10.72,
+      "text": "measured relative velocities"
+    },
+    {
+      "start": 1599.2,
+      "duration": 6.0,
+      "text": "so locally means some infinitesimally"
+    },
+    {
+      "start": 1602.96,
+      "duration": 2.24,
+      "text": "closed"
+    },
+    {
+      "start": 1605.52,
+      "duration": 2.56,
+      "text": "observers"
+    },
+    {
+      "start": 1609.36,
+      "duration": 4.48,
+      "text": "at a single event"
+    },
+    {
+      "start": 1619.2,
+      "duration": 8.64,
+      "text": "do not exceed the speed of light"
+    },
+    {
+      "start": 1630.96,
+      "duration": 14.64,
+      "text": "global relative velocities"
+    },
+    {
+      "start": 1641.679,
+      "duration": 6.88,
+      "text": "such as v are not"
+    },
+    {
+      "start": 1645.6,
+      "duration": 2.959,
+      "text": "so constrained"
+    },
+    {
+      "start": 1648.72,
+      "duration": 8.0,
+      "text": "and indeed we do observe this"
+    },
+    {
+      "start": 1655.12,
+      "duration": 4.559,
+      "text": "so i've alluded to it several times and"
+    },
+    {
+      "start": 1656.72,
+      "duration": 6.16,
+      "text": "stated directly several times"
+    },
+    {
+      "start": 1659.679,
+      "duration": 4.72,
+      "text": "the universe is expanding the uh the"
+    },
+    {
+      "start": 1662.88,
+      "duration": 3.76,
+      "text": "you can look at the redships of various"
+    },
+    {
+      "start": 1664.399,
+      "duration": 5.441,
+      "text": "galaxies and you can confirm that the"
+    },
+    {
+      "start": 1666.64,
+      "duration": 3.2,
+      "text": "universe is expanding"
+    },
+    {
+      "start": 1673.52,
+      "duration": 3.84,
+      "text": "so given that the universe is expand"
+    },
+    {
+      "start": 1676.159,
+      "duration": 4.24,
+      "text": "expanding"
+    },
+    {
+      "start": 1677.36,
+      "duration": 5.6,
+      "text": "a dot is bigger than zero"
+    },
+    {
+      "start": 1680.399,
+      "duration": 6.16,
+      "text": "what do we know well we know that a"
+    },
+    {
+      "start": 1682.96,
+      "duration": 3.599,
+      "text": "double dot is less than zero"
+    },
+    {
+      "start": 1687.36,
+      "duration": 2.88,
+      "text": "so what does that tell us well that"
+    },
+    {
+      "start": 1688.72,
+      "duration": 3.04,
+      "text": "tells us that the universe must have"
+    },
+    {
+      "start": 1690.24,
+      "duration": 4.88,
+      "text": "been accelerating"
+    },
+    {
+      "start": 1691.76,
+      "duration": 6.639,
+      "text": "at a faster and faster rate as t tau"
+    },
+    {
+      "start": 1695.12,
+      "duration": 3.279,
+      "text": "goes in the negative direction"
+    },
+    {
+      "start": 1708.159,
+      "duration": 4.24,
+      "text": "this is true even the cosmological"
+    },
+    {
+      "start": 1709.6,
+      "duration": 2.799,
+      "text": "concept term here"
+    },
+    {
+      "start": 1712.48,
+      "duration": 13.36,
+      "text": "in the cases that are relevant for us"
+    },
+    {
+      "start": 1739.84,
+      "duration": 6.48,
+      "text": "all right has to be right the universe"
+    },
+    {
+      "start": 1744.24,
+      "duration": 3.76,
+      "text": "a double dot is strictly negative the"
+    },
+    {
+      "start": 1746.32,
+      "duration": 3.839,
+      "text": "only way this is consistent"
+    },
+    {
+      "start": 1748.0,
+      "duration": 3.76,
+      "text": "is if everything was accelerating faster"
+    },
+    {
+      "start": 1750.159,
+      "duration": 3.841,
+      "text": "and faster and faster and faster as tau"
+    },
+    {
+      "start": 1751.76,
+      "duration": 6.0,
+      "text": "goes negative"
+    },
+    {
+      "start": 1754.0,
+      "duration": 3.76,
+      "text": "even at constant expansion"
+    },
+    {
+      "start": 1761.76,
+      "duration": 3.12,
+      "text": "you know forget x the fact that it"
+    },
+    {
+      "start": 1763.12,
+      "duration": 4.72,
+      "text": "actually was accelerating even at"
+    },
+    {
+      "start": 1764.88,
+      "duration": 2.96,
+      "text": "constant expansion"
+    },
+    {
+      "start": 1768.96,
+      "duration": 3.04,
+      "text": "then at a time"
+    },
+    {
+      "start": 1772.399,
+      "duration": 4.081,
+      "text": "t given by a dot divided by a which is"
+    },
+    {
+      "start": 1774.72,
+      "duration": 7.12,
+      "text": "like the inverse of this hubble constant"
+    },
+    {
+      "start": 1776.48,
+      "duration": 5.36,
+      "text": "which isn't a constant"
+    },
+    {
+      "start": 1782.24,
+      "duration": 8.319,
+      "text": "we would learn and this only gets worse"
+    },
+    {
+      "start": 1787.84,
+      "duration": 4.079,
+      "text": "when you include the fact that we"
+    },
+    {
+      "start": 1790.559,
+      "duration": 4.081,
+      "text": "weren't actually in a constantly"
+    },
+    {
+      "start": 1791.919,
+      "duration": 6.24,
+      "text": "expanding universe"
+    },
+    {
+      "start": 1794.64,
+      "duration": 3.519,
+      "text": "that we learned that a is zero"
+    },
+    {
+      "start": 1799.44,
+      "duration": 10.239,
+      "text": "at this time t now that's a singular"
+    },
+    {
+      "start": 1803.679,
+      "duration": 8.48,
+      "text": "state right"
+    },
+    {
+      "start": 1809.679,
+      "duration": 4.081,
+      "text": "you know the metric has the the spatial"
+    },
+    {
+      "start": 1812.159,
+      "duration": 2.321,
+      "text": "contribution to the metric has an a in"
+    },
+    {
+      "start": 1813.76,
+      "duration": 3.519,
+      "text": "front of it"
+    },
+    {
+      "start": 1814.48,
+      "duration": 5.12,
+      "text": "and if a is zero then that means the"
+    },
+    {
+      "start": 1817.279,
+      "duration": 5.841,
+      "text": "distance is between all events"
+    },
+    {
+      "start": 1819.6,
+      "duration": 18.24,
+      "text": "at that instant of time"
+    },
+    {
+      "start": 1823.12,
+      "duration": 14.72,
+      "text": "is zero"
+    },
+    {
+      "start": 1841.039,
+      "duration": 3.841,
+      "text": "zero right all events in the universe at"
+    },
+    {
+      "start": 1843.6,
+      "duration": 7.439,
+      "text": "that that instant"
+    },
+    {
+      "start": 1844.88,
+      "duration": 8.399,
+      "text": "t are at the same location"
+    },
+    {
+      "start": 1851.039,
+      "duration": 3.36,
+      "text": "and hence if there's any energy density"
+    },
+    {
+      "start": 1853.279,
+      "duration": 4.081,
+      "text": "or matter density"
+    },
+    {
+      "start": 1854.399,
+      "duration": 2.961,
+      "text": "present at that point"
+    },
+    {
+      "start": 1860.96,
+      "duration": 4.88,
+      "text": "well it would be infinite"
+    },
+    {
+      "start": 1867.84,
+      "duration": 5.28,
+      "text": "and so this has been given a name right"
+    },
+    {
+      "start": 1869.36,
+      "duration": 3.76,
+      "text": "this is called the the big bang"
+    },
+    {
+      "start": 1874.159,
+      "duration": 4.961,
+      "text": "that instant where the universe comes"
+    },
+    {
+      "start": 1877.519,
+      "duration": 3.841,
+      "text": "into being"
+    },
+    {
+      "start": 1879.12,
+      "duration": 3.12,
+      "text": "and all matter or energy density in the"
+    },
+    {
+      "start": 1881.36,
+      "duration": 4.64,
+      "text": "universe"
+    },
+    {
+      "start": 1882.24,
+      "duration": 3.76,
+      "text": "is concentrated on a singular point"
+    },
+    {
+      "start": 1886.64,
+      "duration": 4.96,
+      "text": "and then the universe after that instant"
+    },
+    {
+      "start": 1888.88,
+      "duration": 6.24,
+      "text": "commences expansion"
+    },
+    {
+      "start": 1891.6,
+      "duration": 15.12,
+      "text": "uh but i want to emphasize that this is"
+    },
+    {
+      "start": 1895.12,
+      "duration": 26.72,
+      "text": "not an explosion of pre-existing matter"
+    },
+    {
+      "start": 1906.72,
+      "duration": 15.12,
+      "text": "there was no before tea"
+    },
+    {
+      "start": 1925.039,
+      "duration": 4.321,
+      "text": "so there was no time the universe didn't"
+    },
+    {
+      "start": 1927.919,
+      "duration": 4.64,
+      "text": "simply didn't exist it was no matter"
+    },
+    {
+      "start": 1929.36,
+      "duration": 3.199,
+      "text": "there was nothing before"
+    },
+    {
+      "start": 1933.519,
+      "duration": 2.88,
+      "text": "t big t"
+    },
+    {
+      "start": 1938.0,
+      "duration": 4.0,
+      "text": "and the reason is that it is impossible"
+    },
+    {
+      "start": 1942.32,
+      "duration": 7.52,
+      "text": "to extend"
+    },
+    {
+      "start": 1951.36,
+      "duration": 3.28,
+      "text": "the space-time manifold"
+    },
+    {
+      "start": 1955.44,
+      "duration": 9.839,
+      "text": "in a non-singular way in connected way"
+    },
+    {
+      "start": 1963.279,
+      "duration": 3.76,
+      "text": "i mean this is not i mean people have"
+    },
+    {
+      "start": 1965.279,
+      "duration": 4.801,
+      "text": "studied this endlessly um"
+    },
+    {
+      "start": 1967.039,
+      "duration": 4.561,
+      "text": "and there's a variety of different"
+    },
+    {
+      "start": 1970.08,
+      "duration": 2.719,
+      "text": "things that could really have happened"
+    },
+    {
+      "start": 1971.6,
+      "duration": 5.36,
+      "text": "in the real universe"
+    },
+    {
+      "start": 1972.799,
+      "duration": 7.201,
+      "text": "however theorems on singularities"
+    },
+    {
+      "start": 1976.96,
+      "duration": 6.319,
+      "text": "in the lorenz manifolds"
+    },
+    {
+      "start": 1980.0,
+      "duration": 4.64,
+      "text": "pretty much force us into the"
+    },
+    {
+      "start": 1983.279,
+      "duration": 3.52,
+      "text": "conclusion that the universe did"
+    },
+    {
+      "start": 1984.64,
+      "duration": 3.84,
+      "text": "commence somehow in a big bang"
+    },
+    {
+      "start": 1986.799,
+      "duration": 5.041,
+      "text": "scenario and that there was nothing"
+    },
+    {
+      "start": 1988.48,
+      "duration": 3.36,
+      "text": "present before this big bang"
+    },
+    {
+      "start": 1992.24,
+      "duration": 4.0,
+      "text": "this of course can be endlessly debated"
+    },
+    {
+      "start": 1995.2,
+      "duration": 3.839,
+      "text": "and but as we"
+    },
+    {
+      "start": 1996.24,
+      "duration": 4.319,
+      "text": "find out more observational evidence and"
+    },
+    {
+      "start": 1999.039,
+      "duration": 3.76,
+      "text": "as we learn about the dynamics of our"
+    },
+    {
+      "start": 2000.559,
+      "duration": 5.921,
+      "text": "universe this does seem to be the most"
+    },
+    {
+      "start": 2002.799,
+      "duration": 7.281,
+      "text": "economical hypothesis all right that's"
+    },
+    {
+      "start": 2006.48,
+      "duration": 7.039,
+      "text": "uh it for this lecture we've covered"
+    },
+    {
+      "start": 2010.08,
+      "duration": 6.8,
+      "text": "essentially a qualitative discussion of"
+    },
+    {
+      "start": 2013.519,
+      "duration": 5.921,
+      "text": "the equations governing the evolution"
+    },
+    {
+      "start": 2016.88,
+      "duration": 3.919,
+      "text": "of a homogeneous and isotropic universe"
+    },
+    {
+      "start": 2019.44,
+      "duration": 3.28,
+      "text": "and in the next lecture"
+    },
+    {
+      "start": 2020.799,
+      "duration": 4.24,
+      "text": "we will look at the quantitative"
+    },
+    {
+      "start": 2022.72,
+      "duration": 4.559,
+      "text": "solution of equations one and two we'll"
+    },
+    {
+      "start": 2025.039,
+      "duration": 3.12,
+      "text": "solve them or at least i'll write down"
+    },
+    {
+      "start": 2027.279,
+      "duration": 4.24,
+      "text": "the"
+    },
+    {
+      "start": 2028.159,
+      "duration": 6.88,
+      "text": "solutions and then we will move on"
+    },
+    {
+      "start": 2031.519,
+      "duration": 5.76,
+      "text": "to the uh final canonical topic"
+    },
+    {
+      "start": 2035.039,
+      "duration": 3.201,
+      "text": "of this lecture series namely the"
+    },
+    {
+      "start": 2037.279,
+      "duration": 3.361,
+      "text": "schwarzschild"
+    },
+    {
+      "start": 2038.24,
+      "duration": 5.6,
+      "text": "solution but that's it for now thank you"
+    },
+    {
+      "start": 2040.64,
+      "duration": 3.2,
+      "text": "very much and goodbye"
+    }
+  ]
+}

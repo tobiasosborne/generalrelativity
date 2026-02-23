@@ -1,0 +1,1192 @@
+# General Relativity, Lecture 8: covariant derivatives and parallel transport
+# YouTube: https://www.youtube.com/watch?v=xrtxUHkJRk0
+# Auto-generated transcript
+
+[00:00.40] hello and welcome back to introduction
+[00:02.00] to general relativity
+[00:03.60] in the previous lecture we discussed
+[00:06.56] parallel transport from a slightly
+[00:08.64] heuristic perspective
+[00:10.08] and i argued that there should be a
+[00:12.16] correspondence between parallel
+[00:13.92] transport operations and derivative type
+[00:16.08] operators
+[00:17.12] the goal for today's lecture is to take
+[00:19.36] these arguments
+[00:20.56] and these ideas and build an abstract
+[00:22.80] and intrinsic notion
+[00:24.32] of a derivative type operator
+[00:27.04] corresponding to a parallel transporter
+[00:30.32] an infinitesimal parallel transporter
+[00:33.52] these derivative type operators will be
+[00:35.28] giving them a name in this lecture
+[00:36.48] they'll be called covariant derivative
+[00:38.40] operators and our strategy in this
+[00:41.60] lecture is to abstractly an engine
+[00:43.76] intrinsically characterize those
+[00:45.36] properties that we would like a
+[00:46.72] covariant derivative operator to have
+[00:49.12] and then we're also going to call these
+[00:51.04] things affine connections
+[00:52.48] and then we are going to explore what
+[00:55.12] freedom we have in these derivative
+[00:56.88] operators
+[00:57.60] after we've listed a bunch of uh
+[01:01.28] abstract uh properties that we would
+[01:04.24] demand that any reasonable covarian
+[01:06.08] derivative
+[01:06.64] operator should have so from now on
+[01:09.36] we're gonna donate
+[01:13.12] denote a derivative operator with like a
+[01:15.60] nabla symbol
+[01:19.68] so now
+[01:22.88] object of study today is a so-called
+[01:26.16] covariant derivative operator
+[01:32.96] denoted with this nabla symbol and we
+[01:35.92] also
+[01:36.56] uh we'll probably call these affine
+[01:40.80] connections
+[01:43.68] so that's our goal today to characterize
+[01:48.88] so this is just the notation
+[01:55.04] to characterize these things abstractly
+[01:56.96] and intrinsically
+[01:59.20] now uh some further notation i'll
+[02:02.16] probably use it
+[02:03.60] here and there you may as well get used
+[02:04.88] to it so get let
+[02:06.72] m be a manifold
+[02:12.64] and then we are going to denote
+[02:17.60] by x m
+[02:22.96] the space
+[02:26.08] of smooth vector fields
+[02:33.76] on m
+[02:38.00] okay with that notation with this
+[02:40.00] notation in hand
+[02:41.12] i'm now going to tell you what a uh
+[02:43.84] affine connection or a covering
+[02:45.36] derivative
+[02:46.16] should do what do we demand from it
+[02:53.20] here it is we get the main definition
+[02:54.80] now so an affine connection
+[03:02.00] delta well first we
+[03:05.12] discussing a mathematical operator so we
+[03:06.96] should say what it acts on and what it
+[03:08.80] produces is a
+[03:12.56] map delta going from
+[03:16.96] smooth vector fields cross smooth vector
+[03:19.36] fields so it takes
+[03:20.24] two smooth vector field entries and
+[03:22.64] produces
+[03:23.36] one smooth vector field uh
+[03:27.12] output
+[03:30.84] and but what we will do
+[03:34.88] is we will immediately
+[03:38.64] extend
+[03:41.76] domain of definition
+[03:49.76] because it turns out that the axioms i'm
+[03:51.68] going to list will just
+[03:53.20] be easiest to phrase in a wider setting
+[03:59.68] namely to the setting where delta
+[04:02.96] takes as an argument one smooth vector
+[04:05.52] field
+[04:06.96] but as its second argument it just takes
+[04:09.76] an arbitrary tensor field of type kl
+[04:12.72] and produces an arbitrary tensor of type
+[04:15.60] kl
+[04:18.56] so basically everything i write in the
+[04:20.40] following list of abstract
+[04:22.48] requirements of our tensor about
+[04:25.92] covariance derivative or f1 connection
+[04:28.00] can immediately be extended to tensor
+[04:29.84] fields
+[04:30.40] where the second argument is
+[04:31.44] tensorfields
+[04:34.56] all right so what are some requirements
+[04:36.48] that we demand of our
+[04:38.08] abstract covarian derivative operator
+[04:40.96] well
+[04:41.52] there's a couple of really very simple
+[04:43.84] uh
+[04:44.56] zeroth requirements that aren't listed
+[04:47.36] in wald's textbook but
+[04:48.88] uh are required if you want to make
+[04:51.20] sense of this thing
+[04:52.96] as a linear map so sup and they
+[04:56.32] these requirements are as follows uh so
+[05:00.80] let x y be
+[05:04.08] uh be vector fields
+[05:08.00] and z just the tensorfield
+[05:11.20] so it could itself be a vector field
+[05:13.12] right
+[05:15.20] then um we demand
+[05:22.84] that
+[05:24.16] this covarian derivative operator you've
+[05:25.76] got to think of a converting derivative
+[05:26.88] it's kind of like a directional
+[05:27.76] derivative operator
+[05:28.88] if you take a directional derivative in
+[05:31.12] directions x plus y of z
+[05:33.12] then that's just going to be it's got to
+[05:35.12] be the same as doing it with respect to
+[05:37.04] x on z y on z
+[05:40.88] and then there's a second zeroth
+[05:42.32] requirement
+[05:44.56] namely uh for all f for all smooth
+[05:47.84] functions
+[05:50.84] f
+[05:52.24] uh we are going to
+[05:56.80] also demand that delta of f times x
+[05:59.52] which is also a smooth vector field
+[06:01.12] on y is
+[06:04.40] f delta x on y
+[06:07.76] so x here is is a smooth vector field
+[06:11.12] and y is a tensor field so we really do
+[06:14.40] need these zeros and zero prime
+[06:16.40] conditions because we want to deploy
+[06:18.88] abstract index notation as soon as
+[06:20.64] possible to talk about this thing
+[06:22.64] or the way it acts on things and for
+[06:24.64] that we're actually going to implicitly
+[06:26.00] need these
+[06:26.56] these linearity in the first argument
+[06:29.04] type
+[06:30.08] properties so let's now come to
+[06:33.68] the
+[06:37.60] the the first major requirement
+[06:41.12] namely linearity so delta x
+[06:44.64] of a plus b it better be the same
+[06:48.08] as delta x of a plus delta x of
+[06:51.28] b that any decent derivative operator is
+[06:53.68] linear in this sense
+[06:55.60] and and in this case uh a
+[06:59.04] and b are tenses and x is a vector
+[07:03.12] let's move that down and write that
+[07:04.40] clearly
+[07:06.72] here
+[07:13.92] we demand that now because of zero and
+[07:16.64] zero prime we're able to express this
+[07:18.48] requirement in
+[07:19.60] abstract index notation
+[07:23.28] so we can actually write this out as
+[07:26.24] follows
+[07:28.00] [Music]
+[07:29.68] namely by
+[07:32.80] noting that the
+[07:36.16] abstract that delta x
+[07:40.96] is think of delta x as a thing
+[07:44.64] that eats tensor and produces a tensor
+[07:52.56] so itself delta x should be a tensor
+[07:58.08] of a different type
+[08:05.12] and we're going to
+[08:09.28] express this in abstract index notation
+[08:11.60] as follows we're going to introduce
+[08:15.20] the following notation to to denote the
+[08:18.32] covariant
+[08:19.04] derivative operator with respect to
+[08:20.56] abstract index notation so whenever you
+[08:22.16] see
+[08:23.04] x a contracted with delta a you me you
+[08:26.16] know that that means that
+[08:27.52] delta we're talking about delta x
+[08:30.96] and so this uh with respect to this
+[08:33.28] abstract index notation we can write
+[08:34.72] this linearity condition as follows
+[08:36.24] right we can write it as
+[08:38.32] uh delta c of a
+[08:41.44] a1 through to ak b1 through to bl
+[08:45.68] plus ba1 through to ak b1 through to bl
+[08:51.12] is equal
+[08:59.20] to the linear combinations
+[09:08.00] okay so that's the linearity property of
+[09:10.72] uh
+[09:12.96] the covariant derivative operator
+[09:14.80] expressed in abstract index notation you
+[09:16.56] can see that these two things are
+[09:17.60] equivalent according to this
+[09:20.08] this notation whereby delta x defines
+[09:23.68] this thing
+[09:24.24] delta a
+[09:27.52] two the second thing you want any decent
+[09:30.24] derivative operator to satisfy is the
+[09:32.08] leibniz property
+[09:33.44] leibniz rule so
+[09:37.92] for all a and b oops now they're in
+[09:41.36] different places
+[09:42.96] tensor k l so all t k
+[09:46.16] a tensor fields of type k l and all b
+[09:49.28] tensor fields of type k prime l prime
+[09:53.44] we want that delta x applied to a
+[09:57.04] outer product b is the same as delta x
+[10:00.88] applied to a outer product b
+[10:06.64] plus a tensor delta x
+[10:09.76] b
+[10:12.96] so actually i'll just highlight these
+[10:15.76] various requirements as we go just so
+[10:18.08] you can see them in the notes later
+[10:20.88] a bit better in the notes than later
+[10:27.68] here's the first two the first
+[10:30.88] zeroth requirements establish the
+[10:33.44] linearity in the first argument
+[10:36.16] the first requirement establishes
+[10:38.16] linearity
+[10:40.40] in the second argument
+[10:47.84] and the second criteria here that we
+[10:51.76] demand of a good
+[10:53.04] decent covariant derivative operator is
+[10:55.76] that it obeys a leibniz property
+[11:00.48] and we can also write that in abstract
+[11:02.08] index notation
+[11:04.00] or represent this in abstract index
+[11:07.84] notation as follows
+[11:09.68] so delta c a a 1 through to a k
+[11:14.32] b 1 through the b l outer product
+[11:18.24] right which is just represented by
+[11:19.68] concatenation
+[11:21.52] in abstract index notation
+[11:28.40] that's equal to doing the derivative
+[11:30.08] operator on the first argument and
+[11:31.76] concatenating
+[11:36.96] and with the second tensor field
+[11:42.24] plus doing uh concatenating the first
+[11:44.64] tensor field
+[11:46.24] and concatenating it with
+[11:49.76] the second oh i wrote c here that's
+[11:52.96] probably which
+[11:54.00] poor choice
+[11:57.12] delta e
+[12:11.44] okay so that's the leibniz rule in
+[12:13.20] abstract index notation
+[12:15.36] there's another condition that we had
+[12:17.20] better demand you almost wouldn't notice
+[12:19.12] it
+[12:22.32] but you have to demand that it is a
+[12:23.84] condition commutativity
+[12:26.08] with contraction
+[12:33.92] so if you covarian derivative something
+[12:36.40] and then contract versus contract and
+[12:37.92] then convert derivative it better be the
+[12:39.36] same thing
+[12:43.92] so in abstract sorry in non-abstract
+[12:47.04] index notation so if i contract
+[12:49.04] the jth and the j prime entries of a
+[12:52.00] tensor
+[12:52.56] field a i better get the same as if i
+[12:57.44] uh contracted
+[13:00.96] those entries of the tensor field after
+[13:03.60] the covariance derivative but because
+[13:05.04] we've introduced a new
+[13:06.64] entry i'm going to write it like so
+[13:14.96] okay that's commutativity with
+[13:18.84] contraction
+[13:22.48] semi-obvious if you've got linearity in
+[13:24.64] the second argument
+[13:28.64] already and we can write that out in
+[13:30.80] abstract internet
+[13:32.00] abstract in index notation what's how
+[13:35.44] how do we represent that in the ain
+[13:37.84] well we're going to use
+[13:44.96] we'll represent it so
+[14:04.16] okay now the fourth condition that we
+[14:08.00] want
+[14:08.56] uh just tells us that if we
+[14:11.76] apply our derivative our covariance
+[14:13.60] derivative to something where there is a
+[14:15.12] unique notion of derivative namely
+[14:17.20] um on scalar fields and smooth vector
+[14:20.56] and smooth scalar functions then it
+[14:22.88] better do the same thing
+[14:24.48] you know we haven't invented reinvented
+[14:26.40] the wheel so reduction
+[14:29.36] to vector fields
+[14:32.96] on scalar functions we know that
+[14:36.56] directional derivatives are in
+[14:37.68] one-to-one correspondence with
+[14:39.36] vector fields when applied to scalar
+[14:41.04] functions so our delta better be
+[14:43.28] doing that or better be consistent with
+[14:46.16] that
+[14:47.92] so if f is a smooth function on the
+[14:49.76] manifold n
+[14:51.44] then it better be the case that if i do
+[14:54.00] the covariance derivative
+[14:55.20] in the direction of the vector field x
+[14:57.60] on f
+[14:58.24] that's really just the same as applying
+[14:59.68] the vector field to the scalar function
+[15:01.44] so
+[15:02.64] okay this note this operator is
+[15:06.08] exactly does the same thing when
+[15:09.52] restricted to
+[15:11.12] the functions
+[15:14.48] and in abstract index notation we
+[15:17.84] denote that as
+[15:24.84] follows
+[15:26.16] finally the fifth condition is not
+[15:28.96] necessary but
+[15:30.08] we do assume it in many parts of general
+[15:32.96] relativity
+[15:33.92] we demand that the
+[15:38.56] derivative covariance derivative
+[15:40.24] operator is so-called torsion free which
+[15:42.32] means that for all
+[15:43.68] smooth functions f in m
+[15:46.88] wait i'll do it the other way around
+[15:48.32] first which which
+[15:51.60] says that says the following object
+[15:54.96] which is a tensor
+[15:59.60] is zero
+[16:06.08] so this condition is not necessary
+[16:09.44] but is very convenient for many parts of
+[16:11.28] general relativity to assume
+[16:15.76] so if we take the covariant derivative
+[16:18.08] in the direction x
+[16:19.04] of a vector field y and subtract from
+[16:21.20] the covariance derivative
+[16:22.16] of x in the direction y
+[16:25.44] and then subtract from that um
+[16:29.20] the commutator of these two things then
+[16:30.96] we should get zero this is a bit sort of
+[16:33.44] opaque the interpretation of this but in
+[16:35.52] abstract
+[16:38.08] index notation you can show that this
+[16:40.24] condition is equivalent to the following
+[16:41.92] which is
+[16:42.56] somehow much has a
+[16:45.16] [Music]
+[16:47.04] much more intuitive meaning
+[16:51.76] namely that for all smooth scalar
+[16:53.92] functions on the manifold
+[16:55.28] m if uh you
+[16:58.32] take the covariance derivative in
+[16:59.52] direction a and then b that should be
+[17:01.36] the same as doing it in direction b then
+[17:02.96] a
+[17:03.60] on a scalar function smooth scalar
+[17:05.12] function f so it's much more
+[17:07.20] easy to understand criterion
+[17:15.20] so these are the five five plus two
+[17:17.36] conditions that you might demand
+[17:18.96] from a covariant derivative operator
+[17:22.72] are they all independent uh there's
+[17:26.16] some redundancy in these these axioms
+[17:28.64] but that's okay i mean you just
+[17:30.88] we're not out for the most economical
+[17:33.44] description
+[17:34.08] of the requirements of a covering
+[17:35.28] derivative we just want to have a
+[17:36.64] laundry list of all the properties
+[17:38.64] that are required that we would we would
+[17:42.48] require we don't care if there's some
+[17:44.08] interdependencies as long as they're all
+[17:45.44] consistent
+[17:47.36] now there's some simple consequences
+[17:52.88] of these conditions
+[17:57.28] that we can immediately deduce so for
+[18:00.24] example
+[18:01.28] if you if you
+[18:05.04] have two vector fields x and y
+[18:10.00] and a scalar function f
+[18:13.92] then if you take the covariance
+[18:15.84] derivative
+[18:17.20] in the direction x of the scalar
+[18:19.52] function times by y
+[18:21.20] then we can apply leibniz and the
+[18:22.72] reduction to vector fields on scalars to
+[18:25.44] learn immediately that that
+[18:29.28] object is also a vector field of the and
+[18:31.52] can be expressed in the following
+[18:32.80] fashion
+[18:34.24] so that's that's an interesting simple
+[18:36.08] consequence just of leibniz and the
+[18:37.76] reduction to
+[18:38.80] vector fields on scalar functions and
+[18:40.56] the second one is is also
+[18:42.80] is kind of an interesting way to compute
+[18:44.32] the commutator of two smooth vector
+[18:45.92] fields so if you have
+[18:48.08] two smooth vector fields v in w you can
+[18:50.64] naturally form the commutator as we
+[18:52.64] described quite a few lectures ago now
+[18:55.04] as how do you do it well you just do the
+[18:57.36] vector field once
+[18:58.24] then twice and then uh
+[19:01.52] do it in the opposite order it should be
+[19:03.60] a minus sign almost certainly
+[19:06.56] and uh and well there's something rather
+[19:09.20] interesting right
+[19:10.08] namely that we can w
+[19:13.20] of f is a vector field applied to a
+[19:15.84] scalar function but we could also
+[19:17.28] interpret that as the covariance
+[19:19.44] derivative applied
+[19:22.48] uh to f uh
+[19:25.84] uh uh contracted with w
+[19:30.00] that's just that comes immediately from
+[19:35.04] condition four
+[19:38.40] right condition 4 says that
+[19:42.08] and then we can also subsequently apply
+[19:46.72] the covariance derivative in the other
+[19:49.68] directions
+[19:51.44] now why is that interesting well
+[19:54.96] we can uh now
+[19:58.24] apply leibniz property so we've got the
+[20:00.64] the sec
+[20:01.60] the covariance derivative here with
+[20:02.88] respect to v and then w we can apply
+[20:04.72] leibniz onto these
+[20:06.72] these objects here inside the bracket
+[20:10.08] and we apply it to the first argument
+[20:11.76] which is a vector field and we apply it
+[20:13.28] to the second argument which is the
+[20:14.40] vector
+[20:14.96] code vector field using just the leibniz
+[20:17.68] property
+[20:18.16] and we obtain the following next line so
+[20:19.92] we get
+[20:21.68] we do the apply the covariance
+[20:22.96] derivative just to the vector field w
+[20:25.36] and leave the co-vector field delta
+[20:28.48] b f alone and then we apply it
+[20:31.60] to the second part of the bracket here
+[20:35.20] so
+[20:36.48] to obtain delta a v b
+[20:40.96] delta b f and then we do the same again
+[20:51.28] so to be sorry uh the second term here
+[20:54.08] that i've just written out
+[20:55.60] is the line is is using leibniz on this
+[20:58.80] second term in the commutator
+[21:02.80] and then we've got two more terms that
+[21:04.00] we have to add in so we've got v a
+[21:05.84] w b delta a delta b f
+[21:09.28] that's leibniz on the second term
+[21:12.32] and v a w b delta b a delta a f
+[21:16.16] but according to torsion freeness these
+[21:17.92] two things here are zero right
+[21:20.56] so they vanish
+[21:25.28] they don't vanish separately but their
+[21:26.96] difference vanishes
+[21:28.96] so we actually can get a formula for the
+[21:31.68] vector field
+[21:33.92] just commutate a vector field
+[21:42.88] interpret this vector field
+[21:48.48] as the following
+[21:56.84] tensor
+[22:00.72] and the following vector field is pretty
+[22:03.28] neat
+[22:06.56] now what we've done is just written down
+[22:09.36] a list of
+[22:10.16] a wish list right this is just a wish
+[22:11.76] list we would love a covariance
+[22:13.76] derivative operator to do this this this
+[22:15.60] and this is
+[22:16.32] look we could also ask that the
+[22:17.68] covariant derivative operator goes
+[22:20.00] shopping for us
+[22:21.20] but uh that's it's
+[22:24.56] all very well to make a laundry list of
+[22:26.48] things that you would like
+[22:29.60] the problem is when you make a long list
+[22:31.60] of things like that you may not have
+[22:33.20] anything that exists that satisfies such
+[22:35.20] a long list
+[22:36.00] or you might have too many things that
+[22:37.76] obey the list of axioms
+[22:41.60] in our case it turns out there's more
+[22:43.04] than one derivative operator which obeys
+[22:44.80] these conditions
+[22:46.32] uh that's fine um but now our job is to
+[22:50.08] understand this arbitrariness and
+[22:51.68] connect it to geometry
+[23:00.00] so there's many derivative operators
+[23:02.32] obeying
+[23:03.28] these conditions
+[23:08.16] i gotta at least prove to you one exists
+[23:10.48] right
+[23:11.28] otherwise you might disbelieve me that
+[23:12.96] anything obeys these conditions
+[23:15.60] uh and uh well
+[23:18.72] here's an example
+[23:23.92] namely is the ordinary derivative
+[23:27.36] operator
+[23:30.64] in sum chart
+[23:47.12] and how do we define it was defined as
+[23:48.88] follows um
+[23:51.04] we have to pick a chart right this is
+[23:52.72] the first part so this is coordinate
+[23:54.72] dependent i'm going to present to you a
+[23:56.32] derivative operator that is
+[23:58.40] defined with respect to a coordinate
+[24:00.24] system
+[24:01.76] that's okay right but
+[24:05.28] you might worry that there are there's
+[24:07.52] no coordinate independent way to work
+[24:09.36] with derivative operators i'll
+[24:11.36] subsequently argue that's not the case
+[24:15.36] so it's defined as follows let
+[24:18.72] psi be a chart
+[24:21.76] and t tensor of type kl
+[24:26.00] with components now right it's uh
+[24:29.44] we're going to represent this this
+[24:30.72] tensor in this coordinate system t
+[24:32.88] mu i'm using greek letters here to
+[24:34.40] indicate that
+[24:39.12] so in the coordinate basis it has those
+[24:42.16] components
+[24:43.52] and delta acts
+[24:47.04] via the following so
+[24:52.80] suppose we encounter this abstract index
+[24:55.60] notation here
+[24:56.96] well we interpret that abstract notation
+[24:59.60] in
+[25:00.08] the cohort basis the coordinate basis
+[25:03.44] as this defined by psi as this
+[25:08.88] tensor field
+[25:14.08] we've just taken the derivative with
+[25:16.00] respect the partial derivative with
+[25:17.36] respect to the sigma
+[25:18.64] component of these functions
+[25:21.92] t these components in the coordinate
+[25:24.00] basis
+[25:25.92] so this is you know obviously this isn't
+[25:31.60] it's not defined everywhere
+[25:37.52] it's only defined in the chart sigma si
+[25:42.08] it at least establishes that with
+[25:43.60] respect to one chart
+[25:45.44] there exists at least one derivative
+[25:47.28] operator obeying all those conditions
+[25:48.72] you can
+[25:49.84] it just check you can check yourself
+[25:52.88] that um
+[25:56.96] delta obeys these conditions obeys zero
+[26:00.08] through five
+[26:02.88] okay that's an exercise for you so now
+[26:05.36] let's understand the freedom in
+[26:07.44] derivative operators you know it looks
+[26:08.88] like we've got one
+[26:10.48] two things could happen uh maybe that's
+[26:12.80] the unique derivative operator or
+[26:14.80] there's more than one and we want to
+[26:16.56] understand the arbitrariness in defining
+[26:18.48] a derivative operator of course the
+[26:19.76] answer is that there's more than one
+[26:22.84] so so let's understand the freedom
+[26:26.08] in in defining derivative operators so
+[26:27.92] we're going to suppose that we have two
+[26:29.76] different derivative operators
+[26:37.44] that obey these conditions so suppose
+[26:40.56] delta and delta twiddle are two
+[26:42.64] covariant derivative operators
+[26:47.84] obeying um zero through five
+[26:54.40] and we're going to understand the
+[26:57.36] freedom
+[26:58.48] in definition that we have
+[27:02.24] after applying all these these
+[27:04.88] conditions that a derivative operator
+[27:06.56] has to obey
+[27:07.52] what's left over what what degrees of
+[27:09.04] freedom are left over
+[27:11.20] so let's start with its action on scalar
+[27:14.48] functions so as a map
+[27:17.12] on scalar function smooth functions on
+[27:20.56] the manifold we learned that the
+[27:22.64] difference between these two operators
+[27:25.12] applied to a scalar function
+[27:28.80] vanishes
+[27:32.88] right that's just a consequence of
+[27:34.40] condition for
+[27:37.44] so there's no freedom on scalar
+[27:39.04] functions as an operator on
+[27:40.96] smooth scalar functions on a manifold
+[27:42.64] there's no difference between two
+[27:43.76] different individual phrases they're the
+[27:45.20] same thing
+[27:46.08] they act the same way but of course
+[27:48.80] we've defined derivative operators on
+[27:51.04] to to accept an arbitrary argument of
+[27:53.52] tensor type kl
+[27:55.44] we're going to slowly build up uh
+[27:58.56] and understand the action of the
+[28:00.56] difference on
+[28:04.00] as we enlarge the domain of definition
+[28:06.00] on which these things
+[28:08.08] act so suppose we act uh our difference
+[28:10.72] now on a co-vector on a tensor of type
+[28:12.88] zero comma one
+[28:15.04] well what can we say well it accepts a
+[28:16.88] co-vector
+[28:18.64] the difference of these two
+[28:21.92] and it produces a tensor of type zero
+[28:24.64] two
+[28:25.12] that's just the definition
+[28:31.12] so delta a remembers the abstract index
+[28:33.76] notation
+[28:42.84] so
+[28:44.08] now uh let
+[28:48.40] f be a smooth function scalar function
+[28:52.32] and omega is an arbitrary covacto
+[28:56.48] dual vector then you know one thing we
+[28:59.12] can do is we can multiply scalars by
+[29:01.28] by dual vectors and get other dual
+[29:03.20] vectors
+[29:07.12] and now we're gonna we're gonna learn
+[29:09.20] something from this leibniz property so
+[29:10.96] this is
+[29:11.44] this is the key strategy to determining
+[29:14.40] this difference on
+[29:16.32] and understanding the freedom of
+[29:18.32] definition in covariance derivative
+[29:19.92] operators is this following trick
+[29:22.40] so form the difference and apply it to
+[29:25.92] our scala
+[29:27.84] and then simply do livenitz right
+[29:38.64] and you'll learn that that this
+[29:40.40] difference commutes
+[29:41.84] with f right you can push the the
+[29:43.76] difference of these two
+[29:46.32] derivative operators you can move it
+[29:47.92] backwards and forwards past this any
+[29:49.68] arbitrary smooth function f
+[29:52.64] so this is you know uh via
+[29:56.08] the leibniz property and and condition
+[29:59.12] 4.
+[30:00.80] now that that turns out to be an
+[30:02.08] extraordinarily restrictive
+[30:04.48] condition on the behavior of the
+[30:07.28] difference of these two derivative
+[30:08.56] operators
+[30:11.60] and in fact we're going to learn that
+[30:12.88] this this
+[30:14.72] uh completely determines
+[30:18.24] that their difference except at the
+[30:20.08] point p itself
+[30:23.04] so this this condition star that i've
+[30:27.52] highlighted here condition star implies
+[30:35.28] that uh
+[30:38.40] delta a twiddle on omega b minus delta a
+[30:41.12] and omega b
+[30:42.56] only depends
+[30:47.60] on the cova dual vector at p itself and
+[30:51.12] nowhere else not even on the
+[30:52.40] neighborhood around
+[30:53.44] the point p now this is weird right this
+[30:55.84] is not what you would might
+[30:57.20] initially expect if you have a
+[30:58.80] derivative operator and you apply it
+[31:00.88] to a function then it depends on the
+[31:03.44] first order
+[31:04.00] neighborhood around that function at the
+[31:06.96] point p
+[31:08.64] so we're saying that the difference of
+[31:10.00] two derivative operators while itself
+[31:11.60] being a derivative operator
+[31:13.04] somehow doesn't depend on even the first
+[31:15.60] order neighborhood of the
+[31:16.88] the argument around the point p
+[31:21.60] and uh and how are we going to do this
+[31:23.60] how are we going to claim
+[31:24.64] how am i going to demonstrate that that
+[31:26.48] statement is correct
+[31:28.72] well um so the strategy will be as
+[31:32.80] follows
+[31:37.84] what we're going to do is we're going to
+[31:38.88] let
+[31:40.96] omega b prime be another dual vector
+[31:44.24] field which agrees with omega b at a
+[31:46.08] point
+[31:58.84] p
+[32:02.88] so to find omega b prime to be just some
+[32:05.52] other
+[32:06.00] dual vector field that when you uh come
+[32:10.56] when you look at the point p is
+[32:12.56] absolutely equal to omega
+[32:14.00] b but can be different arbitrarily
+[32:15.68] different elsewheres
+[32:21.36] and then we claim or we're going to
+[32:23.52] argue
+[32:24.96] we will argue
+[32:28.88] that the difference of these derivative
+[32:30.64] operators applied to these various
+[32:33.36] omegas are in fact equal
+[32:42.88] okay not obvious but we will prove that
+[32:46.64] we will argue this
+[32:54.32] now the way to arguing this is to use
+[32:57.04] this exercise that we had from
+[32:59.20] uh
+[33:02.48] this taylor expansion exercise that we
+[33:05.12] considered i believe in lecture three
+[33:06.72] already
+[33:08.84] so
+[33:12.16] one can find exercise smooth functions
+[33:20.96] uh f okay yeah
+[33:24.08] right there's some potential for
+[33:25.20] confusion with this round bracket
+[33:26.64] notation let's just say
+[33:28.32] um f subscript alpha
+[33:31.92] which uh vanish
+[33:35.28] at p
+[33:38.88] and a smooth
+[33:46.56] dual vectors mu b and i'm going to use a
+[33:49.28] funny notation for these because i don't
+[33:52.16] want you to think that these
+[33:53.44] are tenses of type one one no no they're
+[33:55.84] just
+[33:57.12] a list of dual vector fields
+[34:02.32] such that when you look at the
+[34:04.72] difference between omega b remember
+[34:06.40] omega b is our
+[34:07.68] dual vector field that agrees with omega
+[34:09.52] omega b prime residual vector
+[34:11.20] field that agrees with omega b at the
+[34:12.56] point p well around the point p
+[34:17.12] we learn that you can represent
+[34:23.20] this difference of dual vector fields as
+[34:26.00] a linear combination of dual vector
+[34:27.52] fields where these coefficient functions
+[34:29.12] here
+[34:29.44] vanish at point p should be intuitively
+[34:32.00] okay
+[34:32.56] clear it's kind of like a taylor series
+[34:35.36] to order one
+[34:36.64] uh and you just use that uh
+[34:39.84] calculus result that we proved
+[34:43.68] we didn't prove that we exploited in
+[34:45.76] arguing that the derivative
+[34:47.28] coordinate derivatives are a basis for
+[34:48.88] tangents b so i think that was lecture
+[34:50.56] three
+[34:52.40] so we have this representation here this
+[34:55.44] key representation here
+[34:56.96] so whenever you have
+[35:00.40] a pair of vector a dual vector fields
+[35:03.20] the degree at a point
+[35:04.56] then you can look at the difference and
+[35:05.92] it will be expandable in this way
+[35:08.40] and so f of alpha at p equals zero
+[35:12.16] and now we're going to apply our
+[35:16.00] covariant difference of covariance
+[35:17.68] derivative operators
+[35:25.28] and we're going to learn something
+[35:26.24] interesting as a consequence of that
+[35:28.84] representation
+[35:35.84] so we exploit the fact that that
+[35:37.60] difference commutes past scalar
+[35:39.60] functions
+[35:43.36] which we established as an exercise just
+[35:45.28] above
+[35:48.40] and then we see that uh this has to
+[35:50.80] equal zero
+[35:51.60] at p why because
+[35:56.40] these coefficient functions vanish at p
+[35:59.36] it's pretty amazing
+[36:04.40] hence we've learned that delta a
+[36:08.08] twiddle minus delta a applied to
+[36:11.68] our alternative dual vector field omega
+[36:13.44] b prime is equal to delta
+[36:16.08] a twiddle minus delta a applied to omega
+[36:19.44] b
+[36:20.08] at p for all omega b primes
+[36:23.20] that are equal to omega b at p
+[36:27.36] so the difference here uh
+[36:30.40] doesn't depend
+[36:35.04] on omega b out
+[36:40.40] away from
+[36:43.84] the point p it only depends the
+[36:45.84] difference of these derivative operators
+[36:47.52] applied to some dual vector field only
+[36:50.32] depends on the value of the dual vector
+[36:51.84] field at the point p
+[36:53.20] and that's pretty amazing right because
+[36:55.12] what that tells us
+[36:56.64] is that because we know already that
+[36:58.88] delta a twitter minus delta a is a
+[37:00.56] linear map of
+[37:01.76] of of tenses it's a map of tensors
+[37:05.84] at that doesn't involve the neighborhood
+[37:08.08] around the tent so really it's a map of
+[37:09.52] tenses at the point p
+[37:10.80] so you can interpret this as a map of
+[37:14.40] tenses
+[37:19.12] at each point p
+[37:24.08] and it's not like it's a map of tensors
+[37:25.84] of type
+[37:28.96] zero one at the point p nothing more no
+[37:32.32] it doesn't depend on any extra data
+[37:35.04] and it's a linear map because of the the
+[37:36.72] linearity condition
+[37:38.64] and so uh what is it it's a linear map
+[37:41.28] so defining
+[37:42.40] this difference we'll call it c for the
+[37:43.84] moment
+[37:45.44] c takes a dual vector
+[37:48.80] at point p and gives us
+[37:51.92] a
+[37:56.96] element of v p star tensor v
+[38:00.32] b star
+[38:16.96] right because
+[38:20.80] delta takes a dual vector
+[38:25.52] and produces an object this object here
+[38:30.24] and this object has in abstract index
+[38:32.00] notation two indices at the bottom so
+[38:34.40] it's a tensor of type zero two
+[38:38.96] so two tenses of type zero two so
+[38:42.08] c is a map a linear map of vector spaces
+[38:44.56] like so
+[38:45.76] now remember you can do this duality
+[38:47.92] trick where you
+[38:49.28] by duality remember vp star star is
+[38:52.40] equivalent to vp
+[38:53.92] you can interpret uh
+[39:00.00] can interpret c in a different way
+[39:04.88] as a map
+[39:08.00] that goes from
+[39:14.00] as a as a map from
+[39:18.00] vp star tensor vp
+[39:21.52] tensor vp to the reals or
+[39:25.68] as an element
+[39:31.76] of the tensor product vector space
+[39:35.44] v p tensor v p star tensor v p
+[39:40.84] star
+[39:42.64] now
+[39:45.68] we're going to write c abc for its or c
+[39:48.96] c a b sorry
+[39:52.24] for the abstract index notation of
+[39:56.48] c so c is just a tensor field by no
+[39:59.76] derivative left anymore the difference
+[40:03.28] in two derivative operators is just a
+[40:04.88] tensor field it's not a
+[40:06.88] it's not uh doesn't have any further
+[40:08.80] action as a derivative operator
+[40:10.88] so that's pretty cool that's like this
+[40:12.64] really striking
+[40:14.56] observation about the difference of two
+[40:16.00] derivative operators
+[40:19.76] and just expressing
+[40:23.52] this information we've gained in one
+[40:26.08] equation
+[40:27.44] we learn already how
+[40:30.88] what the we've completely understood the
+[40:33.68] freedom
+[40:34.32] in defining these covariant derivative
+[40:36.88] operators because
+[40:38.24] we know that if we have two covariant
+[40:39.68] derivative operators then the covariance
+[40:41.52] derivative of the first
+[40:43.36] type of some dual vector field is the
+[40:45.44] derivative of the second type minus some
+[40:47.20] tensor field applied to that
+[40:48.80] dual vector
+[40:54.16] so let's uh now we're going to learn
+[40:57.20] even more dramatically
+[40:59.52] um how that just that data there
+[41:03.84] is enough to specify delta on all tensor
+[41:06.96] fields
+[41:07.52] learn a sec but before we do that we're
+[41:09.52] just going to notice something about the
+[41:10.80] symmetry
+[41:11.52] so suppose that we're assuming that our
+[41:14.16] derivative operators are torsion free
+[41:17.52] then that means that on scalars
+[41:21.60] on
+[41:27.12] the following object is symmetric right
+[41:29.92] delta a delta b
+[41:31.44] equals delta a delta b
+[41:34.64] twiddle f minus c c a b
+[41:37.84] we're just using
+[41:41.36] the equation above but we notice that
+[41:43.36] this is symmetric
+[41:45.28] that's torsion freeness but also by
+[41:48.16] assumption
+[41:48.80] because delta twiddle obeys equation
+[41:51.28] five that's symmetric so that implies
+[41:54.08] that c
+[41:57.52] c a b is also symmetric
+[42:02.64] anyway this can happen as if c c a b is
+[42:04.88] also symmetric
+[42:11.20] okay so what we've seen so far
+[42:14.24] is that we've abstractly characterized
+[42:17.12] things that we call covarian derivative
+[42:18.56] operators
+[42:20.24] and then we've said what if we have two
+[42:21.92] different coordinate uh covariance
+[42:23.44] derivative operators
+[42:24.72] um how different can they really be and
+[42:27.76] then we've applied the
+[42:28.96] the various axioms that we demand or
+[42:31.44] conditions we demand of a covering
+[42:32.72] derivative operator and we see that
+[42:33.92] really the difference
+[42:35.28] of two covariate derivative operators on
+[42:37.76] a dual vector
+[42:38.72] can't be that that's strange in fact
+[42:40.40] it's just um
+[42:42.40] the difference is just a ordinary old
+[42:46.00] tensor field of type 1
+[42:47.44] 2 applied to the vector field the dual
+[42:50.16] vector field omega c itself
+[42:52.08] now the
+[42:55.44] further amazing consequence
+[42:59.36] once we've established this is that
+[43:02.00] actually that's all the information we
+[43:03.28] need to completely specify delta on all
+[43:06.16] tensor fields so the leibniz property
+[43:08.88] and four
+[43:10.88] now actually determines this
+[43:15.36] difference and thereby the freedom of
+[43:18.72] covering derivatives on all tenses
+[43:28.96] i'm not going to show it to you for all
+[43:30.24] tenses um it's just an inductive
+[43:32.32] argument i'm just going to show you how
+[43:33.84] this formula in the yellow book the red
+[43:36.32] box yellow formula here
+[43:37.68] determines the derivative operator on
+[43:39.52] all vector fields and then you'll see
+[43:40.80] the trick once you've seen the trick you
+[43:42.16] can generalize it
+[43:45.12] so let omega b be a dual vector field
+[43:48.64] and and t
+[43:52.72] a vector field
+[43:58.72] my other notation for that is x m
+[44:02.72] so what do we know we know according to
+[44:04.88] abstract index notation
+[44:06.64] that omega a tia is the contraction of
+[44:08.64] omega and t and is therefore a smooth
+[44:10.88] function
+[44:14.40] now four says that the delta the
+[44:17.68] derivative operators commute with
+[44:19.28] contractions right
+[44:22.00] so we already learned this
+[44:29.12] 4 already tells us that the difference
+[44:30.96] applied to a scalar function is 0.
+[44:35.76] sorry four isn't commuting with here it
+[44:38.08] is
+[44:40.64] now four is reduction to scalar function
+[44:42.32] so i apologize
+[44:44.16] i got confused here so condition four
+[44:47.52] is the a derivative operator reduces to
+[44:50.48] a scalar a vector field on a scalar
+[44:52.16] function
+[44:53.52] condition three is commutativity with
+[44:55.12] contraction that's what we're about to
+[44:56.48] use now
+[45:00.80] so now we use leibniz
+[45:04.00] n3
+[45:10.40] and we learned that
+[45:22.80] the following expression vanishes
+[45:27.44] now we substitute the definition of c
+[45:34.48] and what are we going to learn well we
+[45:37.68] we find that t b c c a
+[45:41.52] b omega c plus omega b
+[45:46.48] and we don't substitute in the second
+[45:48.16] one actually
+[45:50.48] we can't sorry because this thing we
+[45:53.84] don't even know what that is
+[45:58.24] yet but we definitely know what it is in
+[45:59.68] the first uh first term
+[46:01.28] of this expression so but what we have
+[46:04.08] learned is well we know what that is
+[46:06.56] this first term here that's just a
+[46:08.48] contraction of some some tenses
+[46:10.56] some tensor fields and this is almost
+[46:12.96] the thing that we want and then we use
+[46:14.24] the linearity
+[46:15.20] of these of these uh
+[46:19.20] derivative operator covariance
+[46:20.48] derivative operators
+[46:22.40] and we rearrange this this expression
+[46:24.56] here and
+[46:25.60] factor out omega b
+[46:32.40] to learn
+[46:45.52] so we're just factoring out omega b here
+[46:48.96] this expression vanishes or what's
+[46:51.44] another way of writing this
+[46:53.44] well another way of writing this is it
+[46:56.32] tells us how
+[46:57.36] these derivative operators act on
+[46:59.52] arbitrary vector fields
+[47:01.20] in terms of data that we already have
+[47:12.56] so this trick uh can be applied
+[47:15.92] inductively to find out now how delta
+[47:19.28] and delta twiddle act on an arbitrary
+[47:21.20] tensor field and namely what's the
+[47:22.64] difference between these two actions
+[47:24.80] so as an exercise i mean it's not such a
+[47:27.68] hard exercise
+[47:29.52] now that you've seen the trick it's just
+[47:31.84] a bit tedious and you have to get down
+[47:33.28] there and do it
+[47:34.72] we learned that the action of a
+[47:36.80] covariant derivative operator on a
+[47:38.56] tensor of type
+[47:39.92] kl is already determined once you know
+[47:43.68] this
+[47:44.64] tensorfield c
+[47:52.40] and what you get is this
+[47:58.56] expression here
+[48:16.00] so you get that the action of a
+[48:17.68] derivative operator on an arbitrary
+[48:19.12] tensor field is the same as the other
+[48:20.80] derivative operator
+[48:22.16] plus all the contracting with the c
+[48:25.28] tensor in all the places you can
+[48:27.60] contract it one by one
+[48:31.76] and summing up the answer
+[48:47.36] so in other words
+[48:54.40] the action of delta a
+[48:58.56] twiddle minus delta a
+[49:04.16] on arbitrary
+[49:09.28] tensor fields of type kl is determined
+[49:12.00] already by
+[49:13.52] the data of a
+[49:17.44] tensor field of type um
+[49:21.52] want to
+[49:26.08] and the converse is also true right you
+[49:28.00] know converse if
+[49:30.24] if someone hands you or if you decide to
+[49:32.00] hand me a tensor
+[49:33.92] field of type
+[49:37.20] c a b
+[49:46.88] then this determines a derivative
+[49:49.44] operator
+[49:51.44] as above
+[49:58.88] i've just realized something that i have
+[50:00.32] to correct i'll do that in a second
+[50:10.84] converse
+[50:15.92] so given this field of numbers here
+[50:18.00] functions here
+[50:21.84] and a derivative operator
+[50:28.56] delta a twiddle then defining
+[50:46.56] the delta a defined by
+[50:52.24] delta a twiddle at sorry by star star
+[50:57.52] is also a derivative operator
+[51:06.88] and now i realized there's something
+[51:08.56] that uh
+[51:10.72] is slightly incorrect potentially what
+[51:13.04] i've been writing
+[51:14.16] so i've been saying that this object
+[51:17.28] here c is a tensor that was not quite
+[51:19.28] correct
+[51:19.76] not a tensor in the sense of general
+[51:21.20] relativity and i knew this confusion was
+[51:22.96] going to happen at some point here
+[51:25.20] and i did it i apologize
+[51:32.08] i made this mistake so c
+[51:35.36] c a b is n does not
+[51:38.40] this is an annoying part of the perhaps
+[51:41.52] the abstract index notation and the
+[51:43.12] terminology surrounding differential
+[51:44.56] geometry c c a b
+[51:45.76] is a list of functions or you can think
+[51:47.60] of it uh
+[51:49.28] alternatively as an element of this
+[51:51.28] tensor product
+[51:52.56] vector space here for all points p in
+[51:54.24] the manifold
+[51:56.72] very very important warning ccab does
+[51:59.12] not transform as a tensor of type
+[52:06.32] uh one two
+[52:10.80] it actually obeys a different
+[52:11.92] transformation law
+[52:16.64] so it doesn't transform as a tensor
+[52:18.40] field
+[52:23.44] of type uh 1 2
+[52:27.04] under change of b coordinates
+[52:35.20] and so earlier i think i inadvertently
+[52:37.84] implied that it did so i better go
+[52:39.36] through
+[52:39.76] and correct the note so we'll go back
+[52:41.76] slowly so c
+[52:42.80] c a b is a list of functions
+[52:46.64] or it's a element of this vector space
+[52:50.56] at each point p in the manifold
+[52:53.04] um okay so far this is
+[52:56.24] okay what i've written here yeah i don't
+[52:59.76] think
+[53:04.00] i think i may have gotten away with it i
+[53:05.44] don't think i actually wrote ccab
+[53:08.16] is a tensor of type one two at any point
+[53:14.72] looks okay so but i'll just i'll
+[53:18.32] go through these notes here and stress
+[53:19.84] this point one more time because i can
+[53:22.64] anticipate that this is confusing
+[53:26.16] so delta twiddle minus delta
+[53:29.20] a is a thing it's a map of tensors
+[53:33.92] of type one zero one at p
+[53:37.84] this does not uh imply that
+[53:42.48] c that i've defined down here is a
+[53:45.92] tensor field it's a linear map of
+[53:48.56] tensors at each point
+[53:50.24] p in the manifold so this is all true
+[53:52.64] here by duality
+[53:54.84] um c can be interpreted as a map
+[53:58.88] from v star tensor v p tends to v p to r
+[54:02.24] or as an element of v p tensor v p star
+[54:06.24] tends to v b star at all points in the
+[54:08.84] manifold
+[54:10.48] if you were to change your coordinate
+[54:12.24] basis then c
+[54:13.92] c a b transforms in a way that's not a
+[54:16.08] tensor field
+[54:17.20] and that's where one should be a little
+[54:19.84] bit um
+[54:21.28] cautious with this abstract index
+[54:22.84] notation
+[54:25.02] [Music]
+[54:27.04] because it sort of implies that
+[54:30.88] c a b is a tensor field of type one two
+[54:35.44] so i'll put it in red here but c c a b
+[54:38.80] is warning
+[54:44.72] is not a tensor
+[54:48.24] field right field is the operative word
+[54:51.20] here
+[54:53.76] of type t one two why not because if you
+[54:56.88] were to change coordinate bases and
+[54:58.40] recalculate c c a b
+[55:00.40] then you get something that is not what
+[55:02.48] you would expect from the tensor
+[55:04.16] transformation law
+[55:06.24] it transforms in a way just not
+[55:11.20] it does not transform as a tensor field
+[55:13.92] of type
+[55:15.36] t12 in fact you get some extra terms
+[55:20.00] all right um there's a very important
+[55:22.24] example
+[55:25.04] of the application
+[55:30.00] of these observations
+[55:34.24] is namely when delta a twiddle is the
+[55:37.28] ordinary
+[55:38.24] derivative operator that i introduced
+[55:40.48] above
+[55:44.08] so in this case we
+[55:47.12] just use a different notation
+[55:57.12] and for these c coefficients functions
+[56:13.52] and we call them crystal symbols and we
+[56:16.48] just
+[56:16.80] write for the
+[56:24.24] derivative operator we use the following
+[56:28.84] notation
+[56:31.68] which in coordinates so if you go to a
+[56:33.60] coordinate basis
+[56:36.08] you can then
+[56:39.36] write the action
+[56:42.64] of this derivative operator covering
+[56:44.48] derivative on a
+[56:45.76] vector field as such
+[56:56.84] oops
+[57:02.96] okay that's it for today we've
+[57:05.52] introduced abstractly
+[57:07.84] the list of requirements that we
+[57:10.88] demand from any covariant derivative
+[57:12.64] operator that we attach
+[57:14.16] or associate with parallel transport on
+[57:16.24] a differentiable manifold
+[57:18.40] in the next lecture we're going to see
+[57:19.92] how the data of
+[57:21.52] the metric on a manifold is enough to
+[57:24.24] complete
+[57:25.28] uh uniquely uh isolate one particular
+[57:28.48] special derivative operator and that's
+[57:31.68] the one that will play
+[57:32.72] a feature feature a key role in the
+[57:34.72] formulation of general relativity
+[57:36.96] but that's it for today thank you very
+[57:38.56] much and good bye

@@ -1,0 +1,834 @@
+# General Relativity, Lecture 19: FLRW cont. and static rotationally invariant solutions
+# YouTube: https://www.youtube.com/watch?v=fIJnVlmTL3o
+# Auto-generated transcript
+
+[00:00.56] hello and welcome back to introduction
+[00:02.24] to general relativity
+[00:03.60] in the previous lecture we started
+[00:05.52] looking at the
+[00:06.80] solutions to einstein's field equations
+[00:09.12] for a homogeneous and isotropic universe
+[00:11.20] and in particular we discussed some
+[00:13.84] qualitative aspects of the solutions
+[00:15.84] that we could infer already on the basis
+[00:17.84] of the general structure of the defining
+[00:19.60] equations of motion
+[00:21.04] in today's lecture we're going to solve
+[00:22.72] the equations analytically
+[00:24.56] and then uh portray and then discuss
+[00:27.20] several aspects
+[00:28.16] of these analytic solutions and finally
+[00:31.52] at the last part of the lecture i'm
+[00:32.80] going to introduce the topic
+[00:34.96] of static rotationally symmetric space
+[00:38.96] times
+[00:41.60] okay just to remind you the equations
+[00:44.32] governing the dynamics of a
+[00:46.08] homogeneous isotopic universe are
+[00:48.24] summarized here with equations one
+[00:49.84] and two and these are
+[00:53.04] a set of non-linear ordinary
+[00:55.60] differential equations not
+[00:56.96] partial differential equations anymore
+[00:58.32] but ordinary differential equations
+[01:00.40] and you can solve these in a variety of
+[01:02.88] circumstances for a
+[01:04.16] variety of values of k remember k is -1
+[01:06.56] 0 or 1
+[01:07.84] and rho and p can be variously positive
+[01:10.88] or negative depending
+[01:12.08] on the dark energy constant coming from
+[01:14.88] the cosmological constant
+[01:17.44] so we have a uh we can go ahead and
+[01:20.32] solve these equations we can also use
+[01:22.08] this
+[01:22.48] additional equation that i
+[01:25.52] summarized in the previous lecture so
+[01:27.76] this equation you can
+[01:29.20] derive by eliminating a from the
+[01:32.56] a double dot from the previous two
+[01:34.08] equations if you just eliminate a double
+[01:36.08] dot you can actually
+[01:37.36] arrive at this equation here and using
+[01:39.92] this equation we can
+[01:41.28] uh we can already infer
+[01:44.48] a couple of statements about the
+[01:47.28] evolution
+[01:48.00] of the energy density and a
+[01:53.60] so one of the we have to always consider
+[01:56.32] that there's several
+[01:57.28] models that we could uh contemplate one
+[02:00.40] is for example the universe comprised of
+[02:02.08] dust which is like these idealized dots
+[02:04.16] that come from
+[02:04.88] galaxies and in such a dust-like
+[02:08.72] uh distribution of matter
+[02:12.56] we can that's where the the pressure
+[02:15.20] term is zero
+[02:16.40] so the dots are moving the little point
+[02:18.48] particles representing galaxies move on
+[02:20.24] on the geodesics of isotropic observers
+[02:22.72] then this equation simplifies slightly i
+[02:24.80] mean
+[02:25.12] a little bit right and uh
+[02:29.04] and we can realize that that's actually
+[02:31.36] just a total derivative
+[02:33.04] you know in disguise so this is really
+[02:35.92] easy to then integrate so it's actually
+[02:37.52] a total derivative of the function
+[02:39.12] rho a cubed equals zero which tells us
+[02:42.48] of course
+[02:43.28] that in any such dust like universe that
+[02:46.48] rho
+[02:46.88] times a cubed is a constant
+[02:50.72] and that's good that's actually really a
+[02:53.36] sanity check on
+[02:54.48] on the equation because what does it
+[02:56.00] tell us it tells us that
+[02:57.84] uh that this is just a conservation law
+[03:01.84] right in disguise
+[03:04.88] it's the conservation of rest mass of
+[03:07.52] the dust
+[03:08.56] because a determines the volume of the
+[03:10.88] universe and
+[03:11.76] grow the energy density so you better
+[03:14.56] not have that
+[03:15.92] uh rest mass has been created or
+[03:17.52] destroyed here and that's
+[03:19.36] that that's this uh solution tells us
+[03:22.24] exactly that
+[03:24.80] now that's just for the dust light
+[03:26.08] universe but there is another
+[03:27.84] scenario that we can contemplate i mean
+[03:29.76] there's many scenarios to contemplate
+[03:31.76] but let's consider now uh the the
+[03:34.72] radiation
+[03:35.60] dominated uh situation
+[03:42.48] where rho equals
+[03:46.16] p over three
+[03:50.48] and in this case
+[03:53.52] we find by a very similar argument that
+[03:55.60] rho times a to the four
+[03:58.96] is a constant
+[04:03.60] it's just a total derivative argument
+[04:05.04] again um and this looks a different a
+[04:07.20] little different to the dust case you
+[04:08.48] know is there a conservation of breast
+[04:09.84] mass going on here well
+[04:11.44] uh not quite right because there is no
+[04:13.12] wrist mass for a photon
+[04:16.72] i mean you can't stop a photon but of
+[04:19.04] course there's energy
+[04:20.48] associated to a photon and so here what
+[04:23.52] interprets
+[04:27.52] the result as follows
+[04:33.12] so the photon number
+[04:40.64] the photon number density right you said
+[04:42.32] the num the number of modes
+[04:45.44] photonic modes you have in a volume well
+[04:48.48] that scales
+[04:49.52] uh as the inverse of the volume right
+[04:53.60] as a to the minus three and as the
+[04:56.96] universe
+[04:57.76] is expanding or whatever contracting
+[05:01.44] uh it's getting also however
+[05:05.28] there's a frequency component to the
+[05:06.80] photons energy and
+[05:09.52] the point is the the photonic mode is
+[05:12.48] getting stretched or contracted as the
+[05:14.32] universe is changing
+[05:15.84] and that actually contributes an
+[05:17.28] additional redshift a to the minus
+[05:19.20] one so the hence the radiation
+[05:26.40] uh hence we obtained this slightly
+[05:28.88] adjusted
+[05:29.60] conservation of drawn above here that
+[05:31.28] the rho times a to the four is a
+[05:32.96] constant not times row times 83 and
+[05:34.64] that's really due to the redshift of the
+[05:36.84] photon
+[05:38.08] and now that tells us actually something
+[05:40.16] quite kind of interesting right
+[05:42.40] uh namely that dust doesn't dominate the
+[05:45.68] evolution of the universe in the past
+[05:47.28] rather radiation does
+[05:54.56] so as we you know in the past of our
+[05:56.32] universe a went to zero
+[05:58.00] well that diverges quicker rho times a
+[06:00.32] to the four diverges quicker than rho
+[06:02.08] times a to the three so the contribution
+[06:04.64] or the contribution due to the radiation
+[06:07.20] actually dominates
+[06:09.12] in the past or dominated in the past
+[06:19.52] so let's just now specialize this is a
+[06:22.00] statement that's independent of k
+[06:23.84] if you take a look at the equation we
+[06:25.84] were solving and
+[06:27.52] the solution k didn't feature in it but
+[06:29.68] of course k has got a feature somehow
+[06:32.64] whether or not the universe is
+[06:33.68] hyperboloid spherical or
+[06:36.16] spatially flat is going to play a role
+[06:39.04] uh and now we have to make a bit of a
+[06:40.88] finer case
+[06:41.92] distinction
+[06:45.92] so if k equals 0 or
+[06:49.92] k equals minus 1
+[06:57.44] then and further we assume
+[07:01.44] the now we continue to assume that rho
+[07:05.76] and p
+[07:06.32] are greater than zero then we we learn
+[07:09.36] that that a
+[07:10.00] is a dot is zero
+[07:14.48] and the fact that the universe is
+[07:15.60] therefore what do we learn well we
+[07:17.12] learned that internal
+[07:18.64] that we were in a state of eternal
+[07:20.32] expansion because expansion
+[07:22.16] of the universe has been established
+[07:24.00] right today we have expansion
+[07:36.96] and if you observe that you have
+[07:38.72] expansion that naming that a dot is
+[07:40.24] greater than naught
+[07:41.20] and you're in the k equals minus one
+[07:42.64] scenario then on the right hand side of
+[07:44.16] this equation one here you have only
+[07:45.44] positive stuff so the the derivative in
+[07:47.44] a
+[07:47.92] can never go to zero
+[07:52.72] in that scenario when k is either flat
+[07:55.28] uh representing the flat
+[07:56.48] spatial slices or k is representing
+[08:00.16] hyperbolic
+[08:01.28] space like as spatial slices
+[08:07.04] further rho must decrease
+[08:17.60] as a increases
+[08:31.52] thus rho times a squared tends to zero
+[08:34.32] as a tends infinity
+[08:41.60] now for k equals 0
+[08:44.72] this expansion velocity so a dot
+[08:46.96] represents essentially the
+[08:48.16] velocity of expansion a dot that tends
+[08:54.80] to zero
+[08:55.36] as tau tends to infinity
+[08:58.72] but for k equals minus one
+[09:02.96] a dot tends to one as del tends to
+[09:06.84] infinity
+[09:08.80] and finally we can talk about the k
+[09:10.48] equals plus one case for k equals plus
+[09:12.88] one
+[09:17.12] we actually have another situation where
+[09:19.76] k equals plus one
+[09:21.44] then this negative term here can take
+[09:23.12] over in the right hand side to one
+[09:28.08] and it we can infer that the universe
+[09:31.04] ends
+[09:32.72] in the opposite of a big bang which
+[09:34.48] would be a big crunch
+[09:40.72] okay this is still at a qualitative
+[09:42.16] level now let's just
+[09:44.56] get the exact solutions
+[10:02.56] and all now describe how you can
+[10:05.68] obtain these exact solutions
+[10:09.04] in the case of say a dust dominated
+[10:12.00] universe
+[10:17.04] and then you'll be able to infer how one
+[10:20.64] can get the
+[10:21.36] solutions for other situations
+[10:26.96] now you can rearrange equation one
+[10:30.00] to look like this
+[10:35.28] where c equals 8 pi rho a cubed
+[10:40.80] divided by 3 is a constant right the c
+[10:43.76] really here is a constant
+[10:45.12] this is meant to be big c because rho
+[10:48.08] times a cubed in a dust dominated
+[10:49.92] universe is a constant
+[10:53.76] and similarly for radiation
+[10:57.52] dominated or a universe with only
+[11:00.24] radiation
+[11:02.48] type
+[11:05.60] radiation content then you also have a
+[11:08.16] similar equation but with an a squared
+[11:09.84] there
+[11:13.04] where the constant c prime is now 8 pi
+[11:15.52] rho a to the 4 remember rho times a to
+[11:17.60] the 4 is a constant
+[11:19.68] now this is a nonlinear differential
+[11:22.88] equation now
+[11:24.24] in a and you can
+[11:27.44] solve it by standard techniques right
+[11:30.72] this is you work out what the derivative
+[11:33.04] of a is and then it's an integral and
+[11:35.04] then you work out the integral and the
+[11:36.60] constants um
+[11:43.60] this is you can do it
+[11:48.80] but i'm not going to do it here because
+[11:50.32] this is this is sort of something that
+[11:51.68] you might encounter already in a
+[11:53.12] non-linear differential equations course
+[11:55.12] i won't say that it's super trivial like
+[11:57.28] the integrals are
+[11:58.32] so mildly mildly irritating that you
+[12:01.20] have to do
+[12:02.64] and the answers
+[12:07.68] that you get
+[12:12.80] have a bunch of constants that are
+[12:14.16] buried implicitly in them and it's a bit
+[12:16.40] can be a bit awkward to extract
+[12:20.24] this information from
+[12:23.36] the solutions that you find
+[12:26.72] but it's not
+[12:29.92] you know there's no sort of fundamental
+[12:31.68] physical reasons for things being
+[12:35.92] difficult it's just slightly awkward on
+[12:37.84] a mathematical level
+[12:42.96] so this eta is a constant of integration
+[12:45.76] that appears
+[12:50.96] when you when you integrate these
+[13:04.84] equations
+[13:44.72] so the case of k0 is somewhat simpler to
+[13:47.60] derive
+[13:49.60] there's a little symbol on my notes that
+[13:52.00] i cannot read for the moment
+[13:53.76] i will just
+[13:59.52] look up the correct answer so i don't
+[14:01.52] write down the wrong thing there
+[14:08.80] okay this is nine c
+[14:11.92] over four so the flat case is pretty
+[14:14.40] easy to integrate actually
+[14:15.60] you won't have any trouble there the
+[14:17.20] only difficult ones are the spherical
+[14:18.72] ones
+[14:19.12] and the hyperbolic ones
+[14:24.48] but once you've done the spherical one
+[14:25.76] the hyperbolic one no longer becomes a
+[14:28.84] challenge
+[14:30.80] and then you should hopefully confirm
+[14:36.72] these
+[14:40.16] solutions for a prime
+[14:52.32] prime of course
+[15:02.48] and you should come arrive at a table
+[15:04.32] that looks kind of like this one
+[15:06.64] up to the labeling of your constants
+[15:10.40] so these this is this is an enumeration
+[15:12.80] a case distinction of all the possible
+[15:14.48] choices of k
+[15:15.44] and whether or not you have a dust
+[15:16.88] dominated or radiation dominated
+[15:19.60] energy stress energy content of the
+[15:22.00] universe
+[15:25.04] now these solutions have a name uh well
+[15:28.72] the spherical solution
+[15:33.52] or indeed
+[15:39.12] sometimes all
+[15:44.16] are called
+[15:50.40] the friedman the metro robertson walker
+[15:54.32] cosmology
+[16:07.04] and i'll just briefly sketch
+[16:10.16] the solutions
+[16:15.44] for the various cases so one is this one
+[16:17.84] that ends in the big crunch that's k
+[16:19.20] equals plus one
+[16:20.88] one of them is the k
+[16:23.92] equals zero and one of them turns off to
+[16:26.40] k equals
+[16:29.28] it tends off to one and it turns off the
+[16:31.36] tower and that's the
+[16:32.40] k equals minus one solution
+[16:35.44] so that pretty much concludes the
+[16:37.84] discussion
+[16:38.96] of cosmology for this course i mean this
+[16:42.16] is just
+[16:42.96] so much more that you could say
+[16:46.00] about cosmology and solutions to
+[16:48.64] einstein's equations and shaft field
+[16:50.32] equations
+[16:52.24] in describing universes homogeneous and
+[16:55.04] isotropic universes
+[16:56.56] we won't consider these topics any
+[16:58.48] further in this course but rather you
+[17:00.16] can use this discussion as a springboard
+[17:01.84] into
+[17:02.56] reading the more advanced literature on
+[17:04.32] this topic
+[17:05.76] instead i want to take out discussion
+[17:07.60] now
+[17:11.36] to the other celebrated
+[17:14.56] solution of einstein's field equations
+[17:18.72] so it's really roughly speaking there's
+[17:20.80] two two major well-known solutions to
+[17:22.96] electron field equations one is this
+[17:24.40] flrw solution
+[17:26.16] and the other is the schwarzschild
+[17:27.52] solution which pertains to
+[17:29.60] static solutions nothing changes in time
+[17:32.88] of rotationally invariant distributions
+[17:36.08] of matter or
+[17:40.48] or the gravitational field generated by
+[17:42.48] a spherical
+[17:44.16] symmetric body
+[17:50.00] and in order to to write down the
+[17:52.56] solution
+[17:53.20] i'm going to spend the rest of this
+[17:55.36] lecture talking about
+[17:56.96] what it could mean for a stationary
+[17:59.60] first base zone to be stationary and
+[18:01.04] what it can mean for a space time to be
+[18:03.12] rotationally invariant this is uh this
+[18:06.08] discussion will be posed at a level
+[18:08.00] of intermediate rigor what do i mean so
+[18:11.04] we'll try and make uh clean definitions
+[18:14.80] uh but i'm not gonna bother proving
+[18:16.40] things too too much
+[18:18.24] and because in the end this discussion
+[18:19.92] is a motivation for a
+[18:21.52] uh hypothesis for a metric so in the end
+[18:24.16] we're just gonna write down a metric
+[18:25.92] and the metric uh will then be the basis
+[18:29.20] as an unzips for a solution to
+[18:31.68] einstein's field equations and at that
+[18:33.28] point
+[18:33.76] who cares where uh how we got to it uh
+[18:37.20] the metric either solves einstein's
+[18:38.72] field equations or not
+[18:40.48] um and hence the slightly advanced
+[18:43.20] mathematical
+[18:44.32] uh preliminary discussion required to
+[18:46.32] sort of derive this form of the metric
+[18:48.72] um isn't so important i mean the the end
+[18:51.12] here is the objective namely does this
+[18:52.72] metric solve einstein's field equations
+[18:54.24] and if so
+[18:55.68] what can we learn from that how we got
+[18:58.16] to that guess that simplified form of
+[18:59.92] the metric
+[19:00.48] is helpful for you to know but it isn't
+[19:02.88] critical right
+[19:03.76] it's it's sufficient to remember the
+[19:06.00] form of the metric but how did we get
+[19:07.68] there well i'll give you some
+[19:10.16] a i'll give you some
+[19:14.72] motivation for this metric which is
+[19:16.96] based on rigorous mathematics
+[19:20.72] and firstly well if we're gonna do
+[19:23.36] something rigorous we need some
+[19:24.24] definitions
+[19:25.04] so we gotta explore what is meant by the
+[19:28.40] word stationary and static
+[19:33.36] so we're interested in a stationary uh
+[19:35.52] indeed a static solution to ionize field
+[19:37.36] equation is one that doesn't change in
+[19:50.84] time
+[20:00.56] and here is the first definition that we
+[20:03.12] can exploit
+[20:03.84] to capture this concept
+[20:14.88] so this is a perfectly rigorous
+[20:16.48] definition now a space time m is a
+[20:18.40] stationary
+[20:19.36] if there is exists a one parameter group
+[20:22.16] phi t
+[20:22.80] of isometries whose orbits are time like
+[20:26.00] curves
+[20:26.96] and these are somehow the time
+[20:28.16] translates
+[20:30.96] so that's what it means for a space time
+[20:32.40] to be stationary
+[20:35.68] there's an equivalent formulation
+[20:44.64] if there exists
+[20:50.40] the time like
+[20:54.40] killing vector field
+[21:01.52] that's a different way to say it right
+[21:05.20] now stationary is not static
+[21:27.92] so space time
+[21:32.48] m is static
+[21:38.00] if it is stationary
+[21:47.36] and
+[21:50.72] there exists
+[21:55.04] now some additional structure namely a
+[21:57.12] space like hypersurface
+[22:05.44] which is orthogonal
+[22:14.56] to the orbits of uh this isometry group
+[22:19.84] now this is a little bit uh more subtle
+[22:24.24] the consequences of this definition and
+[22:26.72] this is where i am gonna
+[22:28.56] skip some of the the mathematical
+[22:32.64] discussion but i will say it here
+[22:36.24] in case you want to chase this up on
+[22:37.84] your own
+[22:40.00] so fabinho's theorem on integrability
+[22:46.48] tells us this is equivalent to requiring
+[22:53.12] that this time like killing vector field
+[22:56.32] x i a
+[23:05.68] additionally satisfies
+[23:11.04] this equation here
+[23:14.72] this has got to do with the community
+[23:20.84] commuting
+[23:22.88] with parallel transports
+[23:31.76] and uh we're not going to prove this
+[23:34.84] here
+[23:43.20] because as i said earlier it is just
+[23:48.84] motivation
+[23:54.80] so there are examples of space times
+[23:57.76] that aren't stationary
+[23:58.96] so this is space time there isn't uh
+[24:02.72] not a uh one parameter group of
+[24:05.44] isometries whose orbits are time-like
+[24:07.28] curves this it is
+[24:08.56] counter example and there are space
+[24:11.76] terms that are stationary and not static
+[24:15.52] so in coordinates let's just illustrate
+[24:30.84] now
+[24:34.16] just trying now illustrate the this
+[24:37.44] these definitions and what it means in
+[24:40.24] coordinates
+[24:41.92] so i'm going to draw
+[24:45.12] big sigma
+[24:52.16] and big sigma is this
+[24:55.68] hyper surface
+[24:59.12] and on big sigma you've got you can
+[25:02.64] look at this time like killing vector
+[25:04.56] field on big sigma
+[25:05.84] here it is x i a a bunch of vectors
+[25:11.20] on big sigma
+[25:14.32] and these vectors
+[25:18.08] are all orthogonal in a static
+[25:21.60] universe to this hypersurface sigma and
+[25:28.40] in
+[25:31.60] and this will allow us actually to
+[25:33.92] construct
+[25:35.04] a uh foliation of our
+[25:40.84] space-time
+[25:44.56] so if sigma x i a is not zero
+[25:48.00] on sigma of course it could be zero
+[25:49.84] right that would also be orthogonal
+[25:52.16] uh so we have to additionally assume
+[25:54.32] that x i
+[25:55.36] is not zero then what we can do is
+[25:59.60] we can build a neighborhood
+[26:04.16] around the hypersurface
+[26:08.16] i'll call the neighborhood n and i'll
+[26:11.28] draw it now
+[26:17.68] so the neighborhood is
+[26:21.76] like this little little chunk of space
+[26:24.16] time around
+[26:28.24] the hyperservice sigma
+[26:36.80] and then we'll also be able
+[26:40.64] to introduce other hypersurfaces related
+[26:43.60] to sigma by
+[26:44.48] translating the whole hypersurface along
+[26:47.20] the geodesics
+[26:49.28] generated by psi a so anyway to begin
+[26:52.80] with we've got this neighborhood n
+[26:54.08] and is this orange some parallel pivot
+[26:57.52] like thing
+[27:04.64] so as long as psi a is not zero then
+[27:06.40] every point of our hyperservice sigma
+[27:10.32] will lie on a unique orbit
+[27:27.60] so now we're going to choose some
+[27:32.84] coordinates
+[27:37.92] on our hyper surface and we're going to
+[27:39.36] extend these to a coordinate system of
+[27:40.80] that whole space time
+[27:45.12] so we're going to label
+[27:48.64] each point p in this neighborhood
+[27:52.24] and this fattened thickened version of
+[27:55.68] the hypersurface
+[28:02.80] by the parameter t
+[28:05.92] of the orbit
+[28:10.80] reaching p and the coordinates
+[28:18.40] x mu of the point
+[28:23.44] in sigma connected
+[28:28.80] to p
+[28:34.56] so we've coordinatized this patterned or
+[28:36.80] thickened piece
+[28:38.08] of our space time
+[28:45.52] but we can do we can infer slightly more
+[28:48.16] because
+[28:48.72] this coordinate system isn't generated
+[28:50.56] by just any old vector field
+[28:52.80] it's generated by a killing vector field
+[28:59.36] which means it's generated by an
+[29:00.72] isometry
+[29:11.60] and that means that the metric if you if
+[29:13.52] you choose to express your metric
+[29:15.52] in this coordinate system then the
+[29:17.92] metric components
+[29:28.00] in the system are independent
+[29:32.56] of t
+[29:41.60] and as sigma t which is
+[29:45.12] the set of
+[29:50.00] points
+[29:53.36] reached by five t
+[29:56.56] from sigma so i'm going to draw sigma t
+[29:58.56] now sigma t is like a another hyper
+[30:00.48] surface right
+[30:06.48] every point in sigma t is just the image
+[30:09.04] of sigma
+[30:09.92] under phi of t
+[30:17.84] all right as this is an image of a bunch
+[30:20.80] of points under an isometry
+[30:23.52] we learn that sigma t is also orthogonal
+[30:30.24] to the vector field the killing vector
+[30:32.24] field
+[30:35.28] uh xi8
+[30:44.64] or orthogonal to the orbits
+[30:50.32] of phi of t to make it
+[30:54.88] to use a language that's consistent with
+[30:56.64] the definition of static
+[30:59.12] and uh in these coordinates now we can
+[31:02.80] actually infer a bit of a simplification
+[31:04.88] for the metric
+[31:12.64] the metric takes a very particular form
+[31:18.96] namely d s squared is
+[31:22.08] minus v squared something that depends
+[31:24.32] on the coordinates of the hypersurface
+[31:26.24] but not time
+[31:29.12] plus some spatial stuff which is
+[31:32.40] decoupled
+[31:33.84] there's no space time components
+[31:46.40] and what is v the scalar factor well
+[31:48.56] it's got to be the length of the
+[31:51.92] killing vector field
+[31:55.44] so we've already thrown out we got we
+[31:57.12] got time time components we've got space
+[31:58.96] based components but we have no space
+[32:00.40] time components now
+[32:01.60] thanks for a static
+[32:04.72] metric it's already a simplification
+[32:08.08] right instead of looking for
+[32:09.84] 10 things we're now looking for
+[32:13.68] seven things i think right three five
+[32:16.48] six
+[32:16.80] seven seven functions
+[32:20.72] so seven is fewer than ten but still not
+[32:23.28] like
+[32:24.24] still quite a lot of things but we
+[32:25.92] haven't exploited the fact that we're
+[32:27.12] looking for
+[32:28.24] something that's spherically symmetric
+[32:32.48] this is just static the metric that i've
+[32:35.12] just written down here metric star
+[32:38.64] let's now take a look and see if we can
+[32:41.20] use spherical
+[32:42.00] symmetry to further simplify the form of
+[32:45.60] the metric
+[32:48.88] now what does it mean spherical symmetry
+[32:50.96] well again
+[32:52.48] you know you look to the symmetries
+[32:53.92] right the word symmetry tells you
+[32:55.28] everything
+[33:02.56] and in particular
+[33:05.60] for something to be spherically
+[33:06.88] symmetric it must mean that of all the
+[33:08.64] symmetries that your manifold
+[33:10.08] has
+[33:13.20] there must be a subgroup that's
+[33:15.20] equivalent to the symmetries of a sphere
+[33:18.40] so a space-time atmospherically
+[33:20.00] symmetric
+[33:22.88] if it's isometry group right that's the
+[33:24.80] group of all its symmetries
+[33:30.32] it contains a subgroup
+[33:33.36] so there must be a bunch of sub of sub
+[33:35.36] symmetries
+[33:36.80] uh which are equivalent to those of the
+[33:39.68] sphere
+[33:43.12] and the symmetries of the sphere is the
+[33:44.64] lead group so3
+[33:46.16] the rotations
+[33:51.44] and well you there's a kind of
+[33:53.04] degenerate way
+[33:54.56] where that could be the case and so we
+[33:57.12] want to prevent that
+[33:58.40] um namely your space-time might be just
+[34:01.04] a point
+[34:02.24] right that that the isometry group sort
+[34:04.96] of degenerately contains a
+[34:06.48] representation
+[34:07.52] it contains a subgroup isomorphic so3
+[34:11.20] uh so we want to somehow prevent such
+[34:15.12] weird degenerate situations
+[34:17.84] so we say that the orbits
+[34:21.84] of the subgroup these form got to form
+[34:24.16] sub-manifolds
+[34:25.52] and those sub-manifolds better be
+[34:29.12] if you morph it to s2
+[34:36.24] the surface of the sphere
+[34:40.72] and now let's let's try and deduce some
+[34:43.60] um
+[34:44.72] consequences of this definition well the
+[34:47.84] first is
+[34:48.48] that the full space time metric
+[34:54.64] g a b the full metric whatever it is
+[34:58.72] because these s2s these surfaces of the
+[35:01.12] sphere these orbits of the this
+[35:02.96] isometric group are sub manifolds now
+[35:07.36] they this metric induces
+[35:10.80] a metric on each orbit
+[35:18.88] and because of the so3 symmetry because
+[35:21.36] of this rotation invariance
+[35:25.84] because these isometries
+[35:31.20] this induced metric
+[35:35.52] we'll call it habit
+[35:45.44] because the full spacetime metric is
+[35:48.08] invariant under
+[35:49.12] these rotations we must have that the
+[35:50.88] induced metric
+[35:52.64] is a multiple
+[36:04.40] of the metric of a two-sphere
+[36:18.32] right because there's no other way to
+[36:20.16] have a so
+[36:22.48] three invariant metric that induces
+[36:26.00] a metric on the sphere there's no other
+[36:29.84] possible metric you can write on the
+[36:31.20] two-sphere
+[36:39.76] that's invariant other rotations
+[36:49.12] and we could what is this constant
+[36:52.16] of proportionality we could label it by
+[36:54.08] the area of the orbit sphere itself
+[37:05.84] so we can introduce some notation we
+[37:07.52] could you know once we've labeled our
+[37:10.00] uh uh our metrics on all these induced
+[37:13.36] orbits we could
+[37:14.56] label them instead by a radii like
+[37:17.60] coordinate which is
+[37:21.12] given by interpreting a literally as the
+[37:23.36] area of the orbit
+[37:25.12] sphere
+[37:29.36] and then we can introduce coordinates
+[37:33.36] on each of these orbit spheres
+[37:56.88] you know we just use the the metric of
+[37:58.80] this the two sphere which is unique
+[38:01.28] the rotation invariant
+[38:06.56] and now we know that the or the metric
+[38:09.20] hab
+[38:09.84] induced on each orbit sphere must look
+[38:11.52] like this
+[38:13.52] so the picture you should have in mind
+[38:14.72] as you know here is a constant time
+[38:16.32] slice here
+[38:21.84] take a point p and
+[38:25.04] act on it with all the
+[38:28.56] rotations that
+[38:32.88] come from the subgroup isomorphic so3
+[38:35.44] and then you draw yourself an so
+[38:38.16] at a sphere s2
+[38:47.52] and now we have a sphere we got a uh
+[38:50.88] we can choose a coordinate system uh
+[38:56.32] just spherical coordinates on this
+[38:58.84] sphere
+[39:06.64] now this is in the case where the
+[39:07.76] spacetime is just rotationally invariant
+[39:09.36] but not necessarily static
+[39:11.36] but now we can put all this together now
+[39:13.44] so if this space time is
+[39:15.28] static as well
+[39:24.96] and we have to assume that the time like
+[39:28.24] killing vector field site a
+[39:31.36] is unique
+[39:39.28] then this time like
+[39:42.64] killing vector field is orthogonal to
+[39:44.64] the
+[39:47.68] orbit spheres
+[39:51.76] and by the way i should have said you
+[39:52.88] know you pick one point you you you
+[39:54.64] apply the the isometry group to draw out
+[39:56.72] a sphere s2
+[39:57.84] now pick another point that's not on the
+[39:59.28] sphere and say inside and then you draw
+[40:01.76] well another sphere right
+[40:04.88] and you can see how by repeating this
+[40:06.80] process for all points
+[40:10.00] on a constant time slice you foliate
+[40:12.32] your constant time
+[40:13.44] slice with spheres
+[40:26.08] so the science must be uh in the case x
+[40:29.44] i is unique
+[40:30.24] then these cells are orthogonal to the
+[40:32.24] the orbit spheres
+[40:33.60] and why is that well if you project
+[40:37.68] psi onto one of these orbit spheres
+[40:41.68] and then uh this has to be invariant
+[40:45.20] but the only invariant the only vector
+[40:47.12] field invariant on the sphere
+[40:50.64] is that the zero vector field so that's
+[40:52.88] why x i a is orthogonal to the orbit
+[40:54.96] spheres
+[40:58.24] and um thus
+[41:01.76] the orbit spheres
+[41:05.44] actually lie in
+[41:09.28] sigma t right
+[41:12.96] which is orthogonal to the x is
+[41:16.48] well now let's put all of this together
+[41:18.16] into a to build a coordinate system
+[41:26.72] and hence write out the metric that
+[41:28.64] we're going to use as our
+[41:30.72] unzips to solve einstein's field
+[41:32.40] equations this is all this discussion
+[41:34.32] today has all been just motivation
+[41:36.48] for a particular choice of metric
+[41:40.40] so we start by choosing a fiducial
+[41:41.84] sphere just pick your favorite sphere
+[41:44.08] in the hypersurface sigma
+[41:48.16] and you know choose spherical
+[41:51.04] coordinates on it
+[42:04.48] and now we're going to propagate this
+[42:06.56] coordinate system out
+[42:07.84] to the the whole entirety of sigma
+[42:13.76] just as we did for homogeneous and
+[42:15.20] isotropic uh space times
+[42:17.44] we're going to take geodesics
+[42:21.44] orthogonal
+[42:24.56] to the sphere to to build a full
+[42:26.80] coordinate system
+[42:27.84] of the or to carry out these coordinates
+[42:31.12] outwards
+[42:37.68] to other spheres
+[42:44.48] and so the geodesic parameter
+[42:48.00] that carries these coordinates outwards
+[42:49.68] we could call it r the radius
+[42:58.64] and so we've coordinated sigma t
+[43:03.36] and now
+[43:06.40] combining the coordinate system we have
+[43:11.44] when we described the static universe
+[43:14.56] so we we have the static universe and
+[43:18.00] the metric text is very particular form
+[43:19.52] here star
+[43:20.64] so combining that
+[43:24.96] with this new coordinate system we're
+[43:26.72] building here
+[43:36.80] we're going to combine this to build
+[43:38.84] coordinates
+[43:41.92] on our full space time
+[43:47.28] labeled by t r theta and phi and in
+[43:54.40] these
+[43:55.44] coordinates
+[44:01.04] our metric becomes the following
+[44:12.08] there's the temporal component which has
+[44:13.76] a it depends on the radius
+[44:18.32] and here comes the spatial component
+[44:19.84] which has now been highly constrained
+[44:23.68] due to rotational variance to be
+[44:26.40] effectively just
+[44:27.36] the metric of
+[44:30.64] the standard sphere and that
+[44:33.68] concludes our discussion of static
+[44:37.36] spherically symmetric space times
+[44:42.96] if you like you can summarize this
+[44:45.44] lecture as saying
+[44:46.80] we hereby assume that the metric has
+[44:48.56] this form
+[44:50.56] written there the goal
+[44:53.76] in the coming lectures
+[44:57.28] is to substitute this formula metric
+[44:59.04] into the vacuum einstein's field
+[45:00.24] equations
+[45:02.88] and to solve for these functions
+[45:07.84] f and h that's
+[45:11.20] the only degree of freedom left over in
+[45:13.36] this metric
+[45:14.64] and that's the task which we'll turn
+[45:18.00] to in the next lecture but that's it for
+[45:20.00] today
+[45:21.04] thank you very much and see you next
+[45:22.48] time goodbye

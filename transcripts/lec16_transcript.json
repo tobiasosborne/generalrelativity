@@ -1,0 +1,2872 @@
+{
+  "title": "General Relativity, Lecture 16: isotropy and homogeneity in cosmology",
+  "video_id": "ghpQF1Pl23E",
+  "url": "https://www.youtube.com/watch?v=ghpQF1Pl23E",
+  "transcript": [
+    {
+      "start": 0.08,
+      "duration": 3.04,
+      "text": "hello and welcome back to introduction"
+    },
+    {
+      "start": 1.839,
+      "duration": 2.96,
+      "text": "to general relativity"
+    },
+    {
+      "start": 3.12,
+      "duration": 4.239,
+      "text": "in today's lecture we're going to take a"
+    },
+    {
+      "start": 4.799,
+      "duration": 5.201,
+      "text": "look at cosmology"
+    },
+    {
+      "start": 7.359,
+      "duration": 3.681,
+      "text": "and namely space times with homogeneity"
+    },
+    {
+      "start": 10.0,
+      "duration": 4.559,
+      "text": "and isotropy"
+    },
+    {
+      "start": 11.04,
+      "duration": 6.159,
+      "text": "and we're going to attempt to set up the"
+    },
+    {
+      "start": 14.559,
+      "duration": 4.081,
+      "text": "equations of such a homogeneous and"
+    },
+    {
+      "start": 17.199,
+      "duration": 3.84,
+      "text": "isotropic space time"
+    },
+    {
+      "start": 18.64,
+      "duration": 4.08,
+      "text": "in order that we in the next lecture"
+    },
+    {
+      "start": 21.039,
+      "duration": 3.361,
+      "text": "solve einstein's equations or"
+    },
+    {
+      "start": 22.72,
+      "duration": 6.08,
+      "text": "move to the solution of einstein's"
+    },
+    {
+      "start": 24.4,
+      "duration": 4.4,
+      "text": "equations in this cosmological context"
+    },
+    {
+      "start": 28.88,
+      "duration": 4.16,
+      "text": "so if you recall from the previous"
+    },
+    {
+      "start": 30.8,
+      "duration": 3.439,
+      "text": "lecture we introduced the notions of"
+    },
+    {
+      "start": 33.04,
+      "duration": 4.72,
+      "text": "homogeneity"
+    },
+    {
+      "start": 34.239,
+      "duration": 5.281,
+      "text": "and isotropy and today"
+    },
+    {
+      "start": 37.76,
+      "duration": 5.08,
+      "text": "we're going to take those discussions"
+    },
+    {
+      "start": 39.52,
+      "duration": 4.64,
+      "text": "and implement them at the level of the"
+    },
+    {
+      "start": 42.84,
+      "duration": 4.76,
+      "text": "metric"
+    },
+    {
+      "start": 44.16,
+      "duration": 9.76,
+      "text": "so suppose our manifold m modeling"
+    },
+    {
+      "start": 47.6,
+      "duration": 6.32,
+      "text": "space time modeling the entire universe"
+    },
+    {
+      "start": 56.96,
+      "duration": 6.239,
+      "text": "let's suppose that our space time is"
+    },
+    {
+      "start": 59.76,
+      "duration": 3.439,
+      "text": "homogeneous and isotropic"
+    },
+    {
+      "start": 71.6,
+      "duration": 3.92,
+      "text": "so the con the question now is what"
+    },
+    {
+      "start": 73.68,
+      "duration": 3.119,
+      "text": "consequences does that have for the"
+    },
+    {
+      "start": 75.52,
+      "duration": 3.2,
+      "text": "fundamental degree of freedom"
+    },
+    {
+      "start": 76.799,
+      "duration": 10.96,
+      "text": "that we need to describe our spacetime"
+    },
+    {
+      "start": 78.72,
+      "duration": 12.96,
+      "text": "namely the metric"
+    },
+    {
+      "start": 87.759,
+      "duration": 5.761,
+      "text": "so the metric gab is the fundamental"
+    },
+    {
+      "start": 91.68,
+      "duration": 5.6,
+      "text": "fundamental a dynamical variable that"
+    },
+    {
+      "start": 93.52,
+      "duration": 3.76,
+      "text": "we're solving for in general relativity"
+    },
+    {
+      "start": 97.52,
+      "duration": 3.599,
+      "text": "and that's our goal today to work out if"
+    },
+    {
+      "start": 100.24,
+      "duration": 2.8,
+      "text": "what if any"
+    },
+    {
+      "start": 101.119,
+      "duration": 3.441,
+      "text": "are there consequences of homogeneity"
+    },
+    {
+      "start": 103.04,
+      "duration": 4.24,
+      "text": "isotropy for the metric"
+    },
+    {
+      "start": 104.56,
+      "duration": 4.8,
+      "text": "now our the hope here is that by"
+    },
+    {
+      "start": 107.28,
+      "duration": 4.4,
+      "text": "assuming the symmetries of homogenating"
+    },
+    {
+      "start": 109.36,
+      "duration": 4.399,
+      "text": "isotropy the metric gets simplified"
+    },
+    {
+      "start": 111.68,
+      "duration": 3.68,
+      "text": "and when you simplify something you can"
+    },
+    {
+      "start": 113.759,
+      "duration": 3.841,
+      "text": "throw away degrees of freedom that you"
+    },
+    {
+      "start": 115.36,
+      "duration": 4.56,
+      "text": "have to"
+    },
+    {
+      "start": 117.6,
+      "duration": 3.6,
+      "text": "take into a consideration so that the"
+    },
+    {
+      "start": 119.92,
+      "duration": 2.799,
+      "text": "problem that you have to solve the"
+    },
+    {
+      "start": 121.2,
+      "duration": 3.199,
+      "text": "einstein's field equations"
+    },
+    {
+      "start": 122.719,
+      "duration": 5.281,
+      "text": "hopefully becomes simpler indeed of"
+    },
+    {
+      "start": 124.399,
+      "duration": 5.761,
+      "text": "course it does"
+    },
+    {
+      "start": 128.0,
+      "duration": 4.48,
+      "text": "to work out these consequences it's very"
+    },
+    {
+      "start": 130.16,
+      "duration": 5.68,
+      "text": "helpful"
+    },
+    {
+      "start": 132.48,
+      "duration": 6.72,
+      "text": "um to restrict"
+    },
+    {
+      "start": 135.84,
+      "duration": 6.8,
+      "text": "the metric the general"
+    },
+    {
+      "start": 139.2,
+      "duration": 7.36,
+      "text": "metric of space-time"
+    },
+    {
+      "start": 142.64,
+      "duration": 7.76,
+      "text": "g a b we want to restrict that"
+    },
+    {
+      "start": 146.56,
+      "duration": 7.759,
+      "text": "to a three dimensional metric"
+    },
+    {
+      "start": 150.4,
+      "duration": 6.64,
+      "text": "h a b depending on t"
+    },
+    {
+      "start": 154.319,
+      "duration": 6.161,
+      "text": "on these surfaces sigma t that we"
+    },
+    {
+      "start": 157.04,
+      "duration": 3.44,
+      "text": "introduced in the previous lecture"
+    },
+    {
+      "start": 161.2,
+      "duration": 4.319,
+      "text": "so it's a really important uh device"
+    },
+    {
+      "start": 164.4,
+      "duration": 2.559,
+      "text": "that we're going to employ now we're"
+    },
+    {
+      "start": 165.519,
+      "duration": 2.72,
+      "text": "going to instead of looking firstly at"
+    },
+    {
+      "start": 166.959,
+      "duration": 1.92,
+      "text": "the full metric gab we're going to"
+    },
+    {
+      "start": 168.239,
+      "duration": 2.401,
+      "text": "instead"
+    },
+    {
+      "start": 168.879,
+      "duration": 5.121,
+      "text": "look at the three-dimensional induced"
+    },
+    {
+      "start": 170.64,
+      "duration": 5.76,
+      "text": "metric on sigma t"
+    },
+    {
+      "start": 174.0,
+      "duration": 4.64,
+      "text": "and study the consequences of"
+    },
+    {
+      "start": 176.4,
+      "duration": 4.4,
+      "text": "homogeneity and isotropy"
+    },
+    {
+      "start": 178.64,
+      "duration": 4.64,
+      "text": "for this induced metric and then later"
+    },
+    {
+      "start": 180.8,
+      "duration": 2.48,
+      "text": "we will"
+    },
+    {
+      "start": 183.36,
+      "duration": 5.519,
+      "text": "embed the metric h a b back into g a b"
+    },
+    {
+      "start": 186.8,
+      "duration": 5.359,
+      "text": "and then argue that we don't have to add"
+    },
+    {
+      "start": 188.879,
+      "duration": 3.28,
+      "text": "that many extra degrees of freedom"
+    },
+    {
+      "start": 193.68,
+      "duration": 4.24,
+      "text": "all right then let's take a look at"
+    },
+    {
+      "start": 195.12,
+      "duration": 5.039,
+      "text": "homogeneity what does this mean"
+    },
+    {
+      "start": 197.92,
+      "duration": 4.0,
+      "text": "for the metric hab the induced"
+    },
+    {
+      "start": 200.159,
+      "duration": 5.281,
+      "text": "three-dimensional metric"
+    },
+    {
+      "start": 201.92,
+      "duration": 6.239,
+      "text": "h-a-b well it means that there exists an"
+    },
+    {
+      "start": 205.44,
+      "duration": 2.719,
+      "text": "isometry"
+    },
+    {
+      "start": 208.319,
+      "duration": 4.881,
+      "text": "of h-a-b so diphymorphism that preserves"
+    },
+    {
+      "start": 211.76,
+      "duration": 6.88,
+      "text": "the"
+    },
+    {
+      "start": 213.2,
+      "duration": 8.8,
+      "text": "the metric which takes"
+    },
+    {
+      "start": 218.64,
+      "duration": 6.8,
+      "text": "any point p"
+    },
+    {
+      "start": 222.0,
+      "duration": 4.4,
+      "text": "in this surface sigma t hyper surface"
+    },
+    {
+      "start": 225.44,
+      "duration": 3.68,
+      "text": "sigma t"
+    },
+    {
+      "start": 226.4,
+      "duration": 4.399,
+      "text": "to another point q in sigma t that's"
+    },
+    {
+      "start": 229.12,
+      "duration": 6.8,
+      "text": "what homogeneity means"
+    },
+    {
+      "start": 230.799,
+      "duration": 10.481,
+      "text": "and isotropy what does it mean"
+    },
+    {
+      "start": 235.92,
+      "duration": 7.84,
+      "text": "there exists an isometry"
+    },
+    {
+      "start": 241.28,
+      "duration": 4.159,
+      "text": "of h a b well i should put t everywhere"
+    },
+    {
+      "start": 243.76,
+      "duration": 3.44,
+      "text": "but when i forget to put t then"
+    },
+    {
+      "start": 245.439,
+      "duration": 3.52,
+      "text": "i'm still talking about h e b restricted"
+    },
+    {
+      "start": 247.2,
+      "duration": 5.64,
+      "text": "to sigma t"
+    },
+    {
+      "start": 248.959,
+      "duration": 7.12,
+      "text": "um no we're not"
+    },
+    {
+      "start": 252.84,
+      "duration": 8.679,
+      "text": "isotropy we can phrase it differently"
+    },
+    {
+      "start": 256.079,
+      "duration": 5.44,
+      "text": "isotropy implies that it is impossible"
+    },
+    {
+      "start": 264.88,
+      "duration": 4.96,
+      "text": "to construct a geometrically preferred"
+    },
+    {
+      "start": 267.36,
+      "duration": 2.48,
+      "text": "vector"
+    },
+    {
+      "start": 279.28,
+      "duration": 5.84,
+      "text": "in big sigma t"
+    },
+    {
+      "start": 283.6,
+      "duration": 3.52,
+      "text": "now we're going to take aim at the"
+    },
+    {
+      "start": 285.12,
+      "duration": 5.04,
+      "text": "second constraint first of all"
+    },
+    {
+      "start": 287.12,
+      "duration": 6.079,
+      "text": "and then uh use homogeneity"
+    },
+    {
+      "start": 290.16,
+      "duration": 4.4,
+      "text": "later and the way we're going to take"
+    },
+    {
+      "start": 293.199,
+      "duration": 2.961,
+      "text": "aim at the second constraint is we're"
+    },
+    {
+      "start": 294.56,
+      "duration": 2.8,
+      "text": "going to try and"
+    },
+    {
+      "start": 296.16,
+      "duration": 3.68,
+      "text": "we're going to try and build a"
+    },
+    {
+      "start": 297.36,
+      "duration": 3.44,
+      "text": "geometrically preferred vector on sigma"
+    },
+    {
+      "start": 299.84,
+      "duration": 2.48,
+      "text": "t"
+    },
+    {
+      "start": 300.8,
+      "duration": 3.119,
+      "text": "there's a handful of ways where you"
+    },
+    {
+      "start": 302.32,
+      "duration": 4.319,
+      "text": "could do this and"
+    },
+    {
+      "start": 303.919,
+      "duration": 4.081,
+      "text": "i will go through in detail one style of"
+    },
+    {
+      "start": 306.639,
+      "duration": 3.681,
+      "text": "argumentation which would"
+    },
+    {
+      "start": 308.0,
+      "duration": 4.16,
+      "text": "in principle select out a geometrically"
+    },
+    {
+      "start": 310.32,
+      "duration": 3.68,
+      "text": "preferred vector on sigma t"
+    },
+    {
+      "start": 312.16,
+      "duration": 4.24,
+      "text": "and then by arguing that that can't be"
+    },
+    {
+      "start": 314.0,
+      "duration": 5.52,
+      "text": "the case we will"
+    },
+    {
+      "start": 316.4,
+      "duration": 4.639,
+      "text": "uh infer a very very"
+    },
+    {
+      "start": 319.52,
+      "duration": 3.2,
+      "text": "substantial simplification of the metric"
+    },
+    {
+      "start": 321.039,
+      "duration": 5.041,
+      "text": "h a b"
+    },
+    {
+      "start": 322.72,
+      "duration": 3.36,
+      "text": "all right so"
+    },
+    {
+      "start": 327.039,
+      "duration": 6.801,
+      "text": "here it goes the second constraint"
+    },
+    {
+      "start": 330.72,
+      "duration": 3.12,
+      "text": "namely isotropy"
+    },
+    {
+      "start": 336.84,
+      "duration": 5.079,
+      "text": "uh implies the following"
+    },
+    {
+      "start": 343.44,
+      "duration": 4.319,
+      "text": "so what we're going to do is we're going"
+    },
+    {
+      "start": 345.6,
+      "duration": 2.159,
+      "text": "to"
+    },
+    {
+      "start": 348.72,
+      "duration": 6.4,
+      "text": "we'll build a uh"
+    },
+    {
+      "start": 352.08,
+      "duration": 3.04,
+      "text": "riemann tensor"
+    },
+    {
+      "start": 358.16,
+      "duration": 5.28,
+      "text": "for sigma t as follows right we just"
+    },
+    {
+      "start": 360.4,
+      "duration": 3.04,
+      "text": "take the metric"
+    },
+    {
+      "start": 364.0,
+      "duration": 3.84,
+      "text": "h a b"
+    },
+    {
+      "start": 370.319,
+      "duration": 3.121,
+      "text": "and we build the riemann tensor"
+    },
+    {
+      "start": 372.16,
+      "duration": 1.84,
+      "text": "following the rules of the previous"
+    },
+    {
+      "start": 373.44,
+      "duration": 2.96,
+      "text": "lectures"
+    },
+    {
+      "start": 374.0,
+      "duration": 4.16,
+      "text": "this is the beauty of having done all"
+    },
+    {
+      "start": 376.4,
+      "duration": 5.04,
+      "text": "this hard work in the past"
+    },
+    {
+      "start": 378.16,
+      "duration": 5.28,
+      "text": "12 lectures or so we can just"
+    },
+    {
+      "start": 381.44,
+      "duration": 3.92,
+      "text": "uh by doing all that hard work in"
+    },
+    {
+      "start": 383.44,
+      "duration": 3.199,
+      "text": "arbitrary space-time dimensions we can"
+    },
+    {
+      "start": 385.36,
+      "duration": 2.88,
+      "text": "do these kind of tricks without having"
+    },
+    {
+      "start": 386.639,
+      "duration": 3.601,
+      "text": "to add any kind of argument we just say"
+    },
+    {
+      "start": 388.24,
+      "duration": 4.56,
+      "text": "here's a metric on a three-dimensional"
+    },
+    {
+      "start": 390.24,
+      "duration": 5.92,
+      "text": "manifold just construct the riemann"
+    },
+    {
+      "start": 392.8,
+      "duration": 3.36,
+      "text": "tensor and now you know what that means"
+    },
+    {
+      "start": 397.199,
+      "duration": 2.961,
+      "text": "so we construct the riemann tensor and"
+    },
+    {
+      "start": 398.639,
+      "duration": 3.361,
+      "text": "we got to give it distinguish it somehow"
+    },
+    {
+      "start": 400.16,
+      "duration": 2.8,
+      "text": "from the renal tensor of our spacetime m"
+    },
+    {
+      "start": 402.0,
+      "duration": 2.72,
+      "text": "and so we put this little"
+    },
+    {
+      "start": 402.96,
+      "duration": 4.239,
+      "text": "brackets three of the top left"
+    },
+    {
+      "start": 404.72,
+      "duration": 6.0,
+      "text": "superscript"
+    },
+    {
+      "start": 407.199,
+      "duration": 6.72,
+      "text": "now we can raise the index"
+    },
+    {
+      "start": 410.72,
+      "duration": 3.199,
+      "text": "c if we so like"
+    },
+    {
+      "start": 417.599,
+      "duration": 7.921,
+      "text": "and then we get this object here"
+    },
+    {
+      "start": 420.72,
+      "duration": 7.919,
+      "text": "r a b c d which is just defined to be"
+    },
+    {
+      "start": 425.52,
+      "duration": 5.6,
+      "text": "r a b c prime d h c"
+    },
+    {
+      "start": 428.639,
+      "duration": 3.68,
+      "text": "prime c so that's just the raised i've"
+    },
+    {
+      "start": 431.12,
+      "duration": 3.72,
+      "text": "just raised an index on"
+    },
+    {
+      "start": 432.319,
+      "duration": 4.0,
+      "text": "our three dimensional riemann curvature"
+    },
+    {
+      "start": 434.84,
+      "duration": 5.0,
+      "text": "tensor"
+    },
+    {
+      "start": 436.319,
+      "duration": 3.521,
+      "text": "and the reason we did this is we can"
+    },
+    {
+      "start": 440.319,
+      "duration": 3.761,
+      "text": "interpret i mean we could have"
+    },
+    {
+      "start": 442.4,
+      "duration": 4.32,
+      "text": "interpreted it before but whatever"
+    },
+    {
+      "start": 444.08,
+      "duration": 4.72,
+      "text": "this makes it much more explicit we can"
+    },
+    {
+      "start": 446.72,
+      "duration": 5.12,
+      "text": "interpret this"
+    },
+    {
+      "start": 448.8,
+      "duration": 3.04,
+      "text": "as a linear map"
+    },
+    {
+      "start": 454.479,
+      "duration": 4.801,
+      "text": "so our three-dimensional riemann test is"
+    },
+    {
+      "start": 457.36,
+      "duration": 5.36,
+      "text": "now interpreted as a linear map"
+    },
+    {
+      "start": 459.28,
+      "duration": 7.759,
+      "text": "from a subspace"
+    },
+    {
+      "start": 462.72,
+      "duration": 7.599,
+      "text": "well first of all it's from zero to"
+    },
+    {
+      "start": 467.039,
+      "duration": 3.921,
+      "text": "two tenses of type zero two and that"
+    },
+    {
+      "start": 470.319,
+      "duration": 4.481,
+      "text": "much is"
+    },
+    {
+      "start": 470.96,
+      "duration": 3.84,
+      "text": "pretty much clear uh"
+    },
+    {
+      "start": 475.84,
+      "duration": 4.24,
+      "text": "at a point p at any point p"
+    },
+    {
+      "start": 481.28,
+      "duration": 3.759,
+      "text": "now there's something kind of remarkable"
+    },
+    {
+      "start": 483.12,
+      "duration": 5.199,
+      "text": "about this linear map"
+    },
+    {
+      "start": 485.039,
+      "duration": 5.041,
+      "text": "that is that it not only um"
+    },
+    {
+      "start": 488.319,
+      "duration": 4.16,
+      "text": "maps from tensors of type zero two to"
+    },
+    {
+      "start": 490.08,
+      "duration": 4.48,
+      "text": "type zero two but also"
+    },
+    {
+      "start": 492.479,
+      "duration": 4.72,
+      "text": "takes the subspace of anti-symmetric"
+    },
+    {
+      "start": 494.56,
+      "duration": 5.28,
+      "text": "tenses of type zero two to itself"
+    },
+    {
+      "start": 497.199,
+      "duration": 3.761,
+      "text": "so it preserves the subspace so that's a"
+    },
+    {
+      "start": 499.84,
+      "duration": 4.24,
+      "text": "little exercise for you"
+    },
+    {
+      "start": 500.96,
+      "duration": 6.799,
+      "text": "so you gotta argue that"
+    },
+    {
+      "start": 504.08,
+      "duration": 6.799,
+      "text": "this linear map"
+    },
+    {
+      "start": 507.759,
+      "duration": 12.801,
+      "text": "3 a b c d"
+    },
+    {
+      "start": 510.879,
+      "duration": 12.64,
+      "text": "annihilates symmetric tenses"
+    },
+    {
+      "start": 520.56,
+      "duration": 4.16,
+      "text": "in t02 okay that's an important little"
+    },
+    {
+      "start": 523.519,
+      "duration": 4.401,
+      "text": "exercise for you to"
+    },
+    {
+      "start": 524.72,
+      "duration": 11.119,
+      "text": "convince yourself that way"
+    },
+    {
+      "start": 527.92,
+      "duration": 7.919,
+      "text": "we induce a linear map"
+    },
+    {
+      "start": 538.48,
+      "duration": 5.2,
+      "text": "l going from w to w"
+    },
+    {
+      "start": 546.839,
+      "duration": 3.0,
+      "text": "from"
+    },
+    {
+      "start": 551.32,
+      "duration": 3.0,
+      "text": "rabcd"
+    },
+    {
+      "start": 554.48,
+      "duration": 9.2,
+      "text": "where w is the space"
+    },
+    {
+      "start": 558.48,
+      "duration": 8.32,
+      "text": "of two forms"
+    },
+    {
+      "start": 563.68,
+      "duration": 5.279,
+      "text": "at this at the point at a point p so"
+    },
+    {
+      "start": 566.8,
+      "duration": 5.68,
+      "text": "remember two forms are anti-symmetric"
+    },
+    {
+      "start": 568.959,
+      "duration": 3.521,
+      "text": "tenses of type zero two"
+    },
+    {
+      "start": 573.44,
+      "duration": 4.24,
+      "text": "and now uh this this linear map right"
+    },
+    {
+      "start": 576.0,
+      "duration": 3.6,
+      "text": "we're moving we're mapping from"
+    },
+    {
+      "start": 577.68,
+      "duration": 3.68,
+      "text": "uh now a real vector space to a real"
+    },
+    {
+      "start": 579.6,
+      "duration": 4.239,
+      "text": "vector space we have a linear map"
+    },
+    {
+      "start": 581.36,
+      "duration": 3.76,
+      "text": "and what kind of linear map is it well"
+    },
+    {
+      "start": 583.839,
+      "duration": 3.921,
+      "text": "it turns out that it's a pretty nice"
+    },
+    {
+      "start": 585.12,
+      "duration": 2.64,
+      "text": "linear map"
+    },
+    {
+      "start": 588.48,
+      "duration": 5.76,
+      "text": "so the symmetric property of the riemann"
+    },
+    {
+      "start": 591.279,
+      "duration": 2.961,
+      "text": "curvature tensor"
+    },
+    {
+      "start": 596.88,
+      "duration": 3.36,
+      "text": "that you argued in as an exercise in a"
+    },
+    {
+      "start": 599.36,
+      "duration": 3.76,
+      "text": "previous lecture"
+    },
+    {
+      "start": 600.24,
+      "duration": 3.52,
+      "text": "so that you can swap these indices a b"
+    },
+    {
+      "start": 603.12,
+      "duration": 3.2,
+      "text": "and c d"
+    },
+    {
+      "start": 603.76,
+      "duration": 2.56,
+      "text": "as a pair"
+    },
+    {
+      "start": 607.839,
+      "duration": 4.0,
+      "text": "this symmetry property implies"
+    },
+    {
+      "start": 612.16,
+      "duration": 7.679,
+      "text": "that l is a symmetric matrix"
+    },
+    {
+      "start": 623.92,
+      "duration": 4.479,
+      "text": "and further it's on an inner product"
+    },
+    {
+      "start": 630.839,
+      "duration": 3.0,
+      "text": "space"
+    },
+    {
+      "start": 634.8,
+      "duration": 4.56,
+      "text": "the inner product space is that of all"
+    },
+    {
+      "start": 636.959,
+      "duration": 5.601,
+      "text": "uh is w the space of any symmetric"
+    },
+    {
+      "start": 639.36,
+      "duration": 4.96,
+      "text": "two tenses uh type zero two tensors and"
+    },
+    {
+      "start": 642.56,
+      "duration": 3.839,
+      "text": "what's the inner product well"
+    },
+    {
+      "start": 644.32,
+      "duration": 3.12,
+      "text": "you know you've gotta distinguished"
+    },
+    {
+      "start": 646.399,
+      "duration": 3.841,
+      "text": "inner product here"
+    },
+    {
+      "start": 647.44,
+      "duration": 2.8,
+      "text": "uh furnished by"
+    },
+    {
+      "start": 650.88,
+      "duration": 6.959,
+      "text": "ajb right the the tensor the"
+    },
+    {
+      "start": 654.56,
+      "duration": 6.8,
+      "text": "metric on sigma t"
+    },
+    {
+      "start": 657.839,
+      "duration": 5.761,
+      "text": "so we've got ourselves a a symmetric"
+    },
+    {
+      "start": 661.36,
+      "duration": 3.919,
+      "text": "matrix acting on an inner product space"
+    },
+    {
+      "start": 663.6,
+      "duration": 2.4,
+      "text": "and whenever you are fortunate enough to"
+    },
+    {
+      "start": 665.279,
+      "duration": 3.12,
+      "text": "have"
+    },
+    {
+      "start": 666.0,
+      "duration": 3.12,
+      "text": "a uh symmetric matrix or on an inner"
+    },
+    {
+      "start": 668.399,
+      "duration": 2.961,
+      "text": "product space"
+    },
+    {
+      "start": 669.12,
+      "duration": 6.719,
+      "text": "then you you know that the matrix is"
+    },
+    {
+      "start": 671.36,
+      "duration": 4.479,
+      "text": "diagonal and it has real eigenvalues"
+    },
+    {
+      "start": 692.399,
+      "duration": 4.801,
+      "text": "so the matrix l has real eigenvalues and"
+    },
+    {
+      "start": 695.36,
+      "duration": 3.919,
+      "text": "eigenvectors so let's just diagonalize"
+    },
+    {
+      "start": 697.2,
+      "duration": 2.079,
+      "text": "it"
+    },
+    {
+      "start": 699.36,
+      "duration": 6.32,
+      "text": "well if we do that then we have a"
+    },
+    {
+      "start": 702.88,
+      "duration": 5.92,
+      "text": "basis independent way of selecting a"
+    },
+    {
+      "start": 705.68,
+      "duration": 5.92,
+      "text": "geometrically distinct two form at p"
+    },
+    {
+      "start": 708.8,
+      "duration": 3.839,
+      "text": "if if if the eigenvalues are not"
+    },
+    {
+      "start": 711.6,
+      "duration": 4.64,
+      "text": "degenerate"
+    },
+    {
+      "start": 712.639,
+      "duration": 6.401,
+      "text": "so there's three"
+    },
+    {
+      "start": 716.24,
+      "duration": 2.8,
+      "text": "eigenvalues"
+    },
+    {
+      "start": 720.72,
+      "duration": 3.28,
+      "text": "i'm not much mistaken this is space of"
+    },
+    {
+      "start": 723.04,
+      "duration": 8.239,
+      "text": "two forms"
+    },
+    {
+      "start": 724.0,
+      "duration": 10.72,
+      "text": "has dimension"
+    },
+    {
+      "start": 731.279,
+      "duration": 7.921,
+      "text": "three choose two"
+    },
+    {
+      "start": 734.72,
+      "duration": 7.679,
+      "text": "which is three right yeah"
+    },
+    {
+      "start": 739.2,
+      "duration": 6.639,
+      "text": "so this matrix l has three eigenvalues"
+    },
+    {
+      "start": 742.399,
+      "duration": 3.44,
+      "text": "and three eigenvectors"
+    },
+    {
+      "start": 746.079,
+      "duration": 3.521,
+      "text": "and the argument is that"
+    },
+    {
+      "start": 751.36,
+      "duration": 4.479,
+      "text": "all eigenvalues of l"
+    },
+    {
+      "start": 756.639,
+      "duration": 5.76,
+      "text": "are degenerate or equal"
+    },
+    {
+      "start": 759.68,
+      "duration": 4.8,
+      "text": "let's just say cool is easy to write to"
+    },
+    {
+      "start": 762.399,
+      "duration": 3.68,
+      "text": "all the imo's of l are equal"
+    },
+    {
+      "start": 764.48,
+      "duration": 3.12,
+      "text": "now why is that well suppose they"
+    },
+    {
+      "start": 766.079,
+      "duration": 3.841,
+      "text": "weren't equal that would mean"
+    },
+    {
+      "start": 767.6,
+      "duration": 3.12,
+      "text": "that there was one eigenvalue one odd"
+    },
+    {
+      "start": 769.92,
+      "duration": 3.28,
+      "text": "one out right"
+    },
+    {
+      "start": 770.72,
+      "duration": 4.559,
+      "text": "and from that you would be able to"
+    },
+    {
+      "start": 773.2,
+      "duration": 5.12,
+      "text": "select at every point p in the manifold"
+    },
+    {
+      "start": 775.279,
+      "duration": 4.321,
+      "text": "a two form corresponding to this one odd"
+    },
+    {
+      "start": 778.32,
+      "duration": 4.079,
+      "text": "one out"
+    },
+    {
+      "start": 779.6,
+      "duration": 4.96,
+      "text": "and that two form would be a distinct"
+    },
+    {
+      "start": 782.399,
+      "duration": 5.361,
+      "text": "distinguished two form chosen in a basis"
+    },
+    {
+      "start": 784.56,
+      "duration": 4.8,
+      "text": "uh independent prescription and that"
+    },
+    {
+      "start": 787.76,
+      "duration": 4.96,
+      "text": "would be a preferred"
+    },
+    {
+      "start": 789.36,
+      "duration": 5.52,
+      "text": "2 form at p but a 2 form"
+    },
+    {
+      "start": 792.72,
+      "duration": 3.679,
+      "text": "can always be completed to a unique 3"
+    },
+    {
+      "start": 794.88,
+      "duration": 3.04,
+      "text": "form up to a sign"
+    },
+    {
+      "start": 796.399,
+      "duration": 3.521,
+      "text": "and that would therefore choose a"
+    },
+    {
+      "start": 797.92,
+      "duration": 3.76,
+      "text": "preferred vector at p so that's why the"
+    },
+    {
+      "start": 799.92,
+      "duration": 4.32,
+      "text": "eigenvalues"
+    },
+    {
+      "start": 801.68,
+      "duration": 2.56,
+      "text": "are equal"
+    },
+    {
+      "start": 806.8,
+      "duration": 4.4,
+      "text": "and i'll just summarize that discussion"
+    },
+    {
+      "start": 808.48,
+      "duration": 7.359,
+      "text": "as otherwise we could"
+    },
+    {
+      "start": 811.2,
+      "duration": 7.04,
+      "text": "construct our preferred"
+    },
+    {
+      "start": 815.839,
+      "duration": 2.401,
+      "text": "vector"
+    },
+    {
+      "start": 821.44,
+      "duration": 5.759,
+      "text": "at the point p and so we learned that l"
+    },
+    {
+      "start": 825.04,
+      "duration": 4.64,
+      "text": "is proportional to the identity matrix"
+    },
+    {
+      "start": 827.199,
+      "duration": 5.921,
+      "text": "the three by three identity matrix"
+    },
+    {
+      "start": 829.68,
+      "duration": 6.959,
+      "text": "and this means that the"
+    },
+    {
+      "start": 833.12,
+      "duration": 7.12,
+      "text": "riemann tensor r a b c d"
+    },
+    {
+      "start": 836.639,
+      "duration": 3.601,
+      "text": "the with the appropriately raised"
+    },
+    {
+      "start": 840.959,
+      "duration": 5.041,
+      "text": "indices it has the following form if you"
+    },
+    {
+      "start": 844.16,
+      "duration": 4.72,
+      "text": "just"
+    },
+    {
+      "start": 846.0,
+      "duration": 4.32,
+      "text": "work it out as an exercise what identity"
+    },
+    {
+      "start": 848.88,
+      "duration": 2.8,
+      "text": "matrix must mean"
+    },
+    {
+      "start": 850.32,
+      "duration": 4.079,
+      "text": "in terms of the components of the"
+    },
+    {
+      "start": 851.68,
+      "duration": 4.24,
+      "text": "riemann tensor then this this"
+    },
+    {
+      "start": 854.399,
+      "duration": 4.0,
+      "text": "formula here involving these delta"
+    },
+    {
+      "start": 855.92,
+      "duration": 2.479,
+      "text": "functions"
+    },
+    {
+      "start": 860.24,
+      "duration": 4.159,
+      "text": "and this k here is the constant of"
+    },
+    {
+      "start": 868.839,
+      "duration": 3.0,
+      "text": "proportionality"
+    },
+    {
+      "start": 874.56,
+      "duration": 3.839,
+      "text": "that constant and proportionality there"
+    },
+    {
+      "start": 880.56,
+      "duration": 19.279,
+      "text": "and is it a constant well it really is a"
+    },
+    {
+      "start": 882.72,
+      "duration": 17.119,
+      "text": "constant thanks to homogeneity"
+    },
+    {
+      "start": 901.92,
+      "duration": 3.039,
+      "text": "but if you're not satisfied with that"
+    },
+    {
+      "start": 903.279,
+      "duration": 4.8,
+      "text": "statement then let's just prove it"
+    },
+    {
+      "start": 904.959,
+      "duration": 3.12,
+      "text": "uh independently"
+    },
+    {
+      "start": 910.48,
+      "duration": 3.359,
+      "text": "obviously argue this"
+    },
+    {
+      "start": 920.959,
+      "duration": 6.88,
+      "text": "so what we're going to do is we're going"
+    },
+    {
+      "start": 921.839,
+      "duration": 6.0,
+      "text": "to lower the indices c and d"
+    },
+    {
+      "start": 930.8,
+      "duration": 5.92,
+      "text": "and we will have the following"
+    },
+    {
+      "start": 934.959,
+      "duration": 4.161,
+      "text": "three-dimensional riemann curvature"
+    },
+    {
+      "start": 936.72,
+      "duration": 5.119,
+      "text": "tensor for sigma"
+    },
+    {
+      "start": 939.12,
+      "duration": 2.719,
+      "text": "t"
+    },
+    {
+      "start": 942.48,
+      "duration": 7.2,
+      "text": "and now we're going to uh infer"
+    },
+    {
+      "start": 945.68,
+      "duration": 10.159,
+      "text": "that isotropy alone will"
+    },
+    {
+      "start": 949.68,
+      "duration": 6.159,
+      "text": "ensure that k is a constant"
+    },
+    {
+      "start": 956.88,
+      "duration": 4.879,
+      "text": "and the way we will do that is we'll"
+    },
+    {
+      "start": 958.079,
+      "duration": 3.68,
+      "text": "look at the bianchi identity so"
+    },
+    {
+      "start": 966.32,
+      "duration": 3.04,
+      "text": "the bianchi identity says that zero"
+    },
+    {
+      "start": 968.56,
+      "duration": 5.839,
+      "text": "equals"
+    },
+    {
+      "start": 969.36,
+      "duration": 5.039,
+      "text": "the covariant derivative of the three"
+    },
+    {
+      "start": 976.48,
+      "duration": 3.76,
+      "text": "dimensional riemann curvature tensor"
+    },
+    {
+      "start": 981.04,
+      "duration": 6.96,
+      "text": "which because of the form of"
+    },
+    {
+      "start": 984.639,
+      "duration": 4.721,
+      "text": "the metric of the rerun curvature tens"
+    },
+    {
+      "start": 988.0,
+      "duration": 4.0,
+      "text": "as a function of the metric and the fact"
+    },
+    {
+      "start": 989.36,
+      "duration": 5.839,
+      "text": "that the covariant derivative associated"
+    },
+    {
+      "start": 992.0,
+      "duration": 6.8,
+      "text": "to the metric"
+    },
+    {
+      "start": 995.199,
+      "duration": 3.601,
+      "text": "when applied to the metric vanishes"
+    },
+    {
+      "start": 1007.199,
+      "duration": 6.401,
+      "text": "we learn that this"
+    },
+    {
+      "start": 1010.72,
+      "duration": 4.32,
+      "text": "bianchi identity is the same as just"
+    },
+    {
+      "start": 1013.6,
+      "duration": 2.4,
+      "text": "applying the covariance derivative to"
+    },
+    {
+      "start": 1015.04,
+      "duration": 4.88,
+      "text": "this"
+    },
+    {
+      "start": 1016.0,
+      "duration": 7.279,
+      "text": "this uh scalar k"
+    },
+    {
+      "start": 1019.92,
+      "duration": 4.879,
+      "text": "now if the dimension of the manifold is"
+    },
+    {
+      "start": 1023.279,
+      "duration": 3.68,
+      "text": "greater than or equal to three because"
+    },
+    {
+      "start": 1024.799,
+      "duration": 3.601,
+      "text": "if the dimensions two and one things are"
+    },
+    {
+      "start": 1026.959,
+      "duration": 3.12,
+      "text": "highly degenerate and you don't get any"
+    },
+    {
+      "start": 1028.4,
+      "duration": 3.439,
+      "text": "new information there"
+    },
+    {
+      "start": 1030.079,
+      "duration": 3.6,
+      "text": "then the fact that the right hand side"
+    },
+    {
+      "start": 1031.839,
+      "duration": 5.041,
+      "text": "of this equation vanishes"
+    },
+    {
+      "start": 1033.679,
+      "duration": 4.0,
+      "text": "well that tells us uh that can happen if"
+    },
+    {
+      "start": 1036.88,
+      "duration": 5.439,
+      "text": "and only if"
+    },
+    {
+      "start": 1037.679,
+      "duration": 8.4,
+      "text": "d e k is vanishing or in other words um"
+    },
+    {
+      "start": 1042.319,
+      "duration": 3.76,
+      "text": "k is constant on sigma t"
+    },
+    {
+      "start": 1046.559,
+      "duration": 3.681,
+      "text": "so we've learned something pretty pretty"
+    },
+    {
+      "start": 1048.4,
+      "duration": 6.0,
+      "text": "remarkable via this this"
+    },
+    {
+      "start": 1050.24,
+      "duration": 5.76,
+      "text": "sequence of um of steps"
+    },
+    {
+      "start": 1054.4,
+      "duration": 4.399,
+      "text": "you know we start by in building an"
+    },
+    {
+      "start": 1056.0,
+      "duration": 6.4,
+      "text": "induced riemann curvature tensor"
+    },
+    {
+      "start": 1058.799,
+      "duration": 6.561,
+      "text": "on this uh hypersurface sigma t"
+    },
+    {
+      "start": 1062.4,
+      "duration": 4.8,
+      "text": "we use isotropy to restrict the"
+    },
+    {
+      "start": 1065.36,
+      "duration": 3.199,
+      "text": "structure of this riemann curvature"
+    },
+    {
+      "start": 1067.2,
+      "duration": 5.68,
+      "text": "tensor"
+    },
+    {
+      "start": 1068.559,
+      "duration": 4.801,
+      "text": "and then we learn that that implies in"
+    },
+    {
+      "start": 1072.88,
+      "duration": 2.24,
+      "text": "turn"
+    },
+    {
+      "start": 1073.36,
+      "duration": 3.92,
+      "text": "that the riemann curvature tensor has a"
+    },
+    {
+      "start": 1075.12,
+      "duration": 6.72,
+      "text": "specific form in terms of the induced"
+    },
+    {
+      "start": 1077.28,
+      "duration": 4.56,
+      "text": "metric hab"
+    },
+    {
+      "start": 1082.64,
+      "duration": 13.2,
+      "text": "and that becomes a definition now"
+    },
+    {
+      "start": 1102.88,
+      "duration": 3.919,
+      "text": "so it's based on manifold where the"
+    },
+    {
+      "start": 1105.28,
+      "duration": 3.6,
+      "text": "curvature tensor has this very"
+    },
+    {
+      "start": 1106.799,
+      "duration": 4.561,
+      "text": "particular form that we've derived here"
+    },
+    {
+      "start": 1108.88,
+      "duration": 3.2,
+      "text": "as a consequence of isotropy and so on"
+    },
+    {
+      "start": 1111.36,
+      "duration": 5.04,
+      "text": "there's a"
+    },
+    {
+      "start": 1112.08,
+      "duration": 11.76,
+      "text": "consequence of isotropy as a name"
+    },
+    {
+      "start": 1116.4,
+      "duration": 7.44,
+      "text": "it's called uh with k constant"
+    },
+    {
+      "start": 1124.24,
+      "duration": 3.92,
+      "text": "it's called a space of constant"
+    },
+    {
+      "start": 1125.6,
+      "duration": 2.56,
+      "text": "curvature"
+    },
+    {
+      "start": 1134.16,
+      "duration": 3.84,
+      "text": "sort of not hard to imagine the the"
+    },
+    {
+      "start": 1136.0,
+      "duration": 3.84,
+      "text": "physics behind this definition"
+    },
+    {
+      "start": 1138.0,
+      "duration": 3.2,
+      "text": "you know whichever way you do your"
+    },
+    {
+      "start": 1139.84,
+      "duration": 3.12,
+      "text": "little remember the riemann curvature"
+    },
+    {
+      "start": 1141.2,
+      "duration": 4.479,
+      "text": "tensor tells you the failure of"
+    },
+    {
+      "start": 1142.96,
+      "duration": 4.16,
+      "text": "parallel transport operations to commute"
+    },
+    {
+      "start": 1145.679,
+      "duration": 2.24,
+      "text": "and it's saying no matter which way you"
+    },
+    {
+      "start": 1147.12,
+      "duration": 2.799,
+      "text": "do these little"
+    },
+    {
+      "start": 1147.919,
+      "duration": 3.281,
+      "text": "parallel transport operations you get"
+    },
+    {
+      "start": 1149.919,
+      "duration": 4.241,
+      "text": "the same failure to come"
+    },
+    {
+      "start": 1151.2,
+      "duration": 6.08,
+      "text": "to to commute so the curvature is"
+    },
+    {
+      "start": 1154.16,
+      "duration": 3.12,
+      "text": "constant in every direction"
+    },
+    {
+      "start": 1162.84,
+      "duration": 6.68,
+      "text": "curvature"
+    },
+    {
+      "start": 1164.559,
+      "duration": 9.12,
+      "text": "so now we've got this highly restrictive"
+    },
+    {
+      "start": 1169.52,
+      "duration": 7.6,
+      "text": "definition and consequence"
+    },
+    {
+      "start": 1173.679,
+      "duration": 3.441,
+      "text": "a highly restrictive"
+    },
+    {
+      "start": 1177.44,
+      "duration": 2.88,
+      "text": "structure of the riemann curvature so"
+    },
+    {
+      "start": 1179.039,
+      "duration": 3.841,
+      "text": "we're going to describe some"
+    },
+    {
+      "start": 1180.32,
+      "duration": 13.52,
+      "text": "representative space times that exhaust"
+    },
+    {
+      "start": 1182.88,
+      "duration": 10.96,
+      "text": "the possible options of the values of k"
+    },
+    {
+      "start": 1202.32,
+      "duration": 3.28,
+      "text": "you know we've said the riemann"
+    },
+    {
+      "start": 1203.36,
+      "duration": 5.04,
+      "text": "curvature tensor has to have this form"
+    },
+    {
+      "start": 1205.6,
+      "duration": 3.52,
+      "text": "now we're going to describe now a"
+    },
+    {
+      "start": 1208.4,
+      "duration": 2.96,
+      "text": "complete"
+    },
+    {
+      "start": 1209.12,
+      "duration": 5.439,
+      "text": "list of space times that exhibit this"
+    },
+    {
+      "start": 1211.36,
+      "duration": 3.199,
+      "text": "riemann curvature tensor"
+    },
+    {
+      "start": 1218.559,
+      "duration": 3.681,
+      "text": "and these will represent our"
+    },
+    {
+      "start": 1223.28,
+      "duration": 8.16,
+      "text": "hypotheses hypothesis models for"
+    },
+    {
+      "start": 1226.88,
+      "duration": 4.56,
+      "text": "homogeneous and isotropic space times"
+    },
+    {
+      "start": 1232.32,
+      "duration": 3.2,
+      "text": "all right we've got three cases to deal"
+    },
+    {
+      "start": 1234.159,
+      "duration": 4.561,
+      "text": "with firstly"
+    },
+    {
+      "start": 1235.52,
+      "duration": 6.8,
+      "text": "the case k is bigger than zero"
+    },
+    {
+      "start": 1238.72,
+      "duration": 5.12,
+      "text": "and this is achieved you can"
+    },
+    {
+      "start": 1242.32,
+      "duration": 4.64,
+      "text": "go ahead and calculate the riemann"
+    },
+    {
+      "start": 1243.84,
+      "duration": 6.8,
+      "text": "curvature tensor for this space time"
+    },
+    {
+      "start": 1246.96,
+      "duration": 3.68,
+      "text": "by sigma"
+    },
+    {
+      "start": 1252.0,
+      "duration": 11.84,
+      "text": "t being three spheres embedded in"
+    },
+    {
+      "start": 1255.76,
+      "duration": 8.08,
+      "text": "r four"
+    },
+    {
+      "start": 1275.28,
+      "duration": 7.2,
+      "text": "now remember this r4 is a fictitious r4"
+    },
+    {
+      "start": 1278.4,
+      "duration": 13.44,
+      "text": "the three spheres are considered as in"
+    },
+    {
+      "start": 1282.48,
+      "duration": 9.36,
+      "text": "intrinsic manifolds by themselves"
+    },
+    {
+      "start": 1292.24,
+      "duration": 8.16,
+      "text": "now this r here is the radius of this"
+    },
+    {
+      "start": 1295.76,
+      "duration": 4.64,
+      "text": "three sphere and the corresponding"
+    },
+    {
+      "start": 1302.84,
+      "duration": 3.0,
+      "text": "metric"
+    },
+    {
+      "start": 1307.039,
+      "duration": 3.841,
+      "text": "is described in spherical coordinates"
+    },
+    {
+      "start": 1314.64,
+      "duration": 3.36,
+      "text": "what is it well it's this is one"
+    },
+    {
+      "start": 1317.2,
+      "duration": 3.68,
+      "text": "representative"
+    },
+    {
+      "start": 1318.0,
+      "duration": 3.2,
+      "text": "way of writing a metric uh here we have"
+    },
+    {
+      "start": 1320.88,
+      "duration": 4.96,
+      "text": "the"
+    },
+    {
+      "start": 1321.2,
+      "duration": 6.24,
+      "text": "angle variables and radial variables is"
+    },
+    {
+      "start": 1325.84,
+      "duration": 6.959,
+      "text": "vanished because we're on the surface of"
+    },
+    {
+      "start": 1327.44,
+      "duration": 8.479,
+      "text": "the sphere"
+    },
+    {
+      "start": 1332.799,
+      "duration": 6.481,
+      "text": "so the case k bigger than zero positive"
+    },
+    {
+      "start": 1335.919,
+      "duration": 6.081,
+      "text": "curvature so to speak uh is that"
+    },
+    {
+      "start": 1339.28,
+      "duration": 3.6,
+      "text": "is achieved by three dimensional spheres"
+    },
+    {
+      "start": 1342.0,
+      "duration": 2.159,
+      "text": "and you can think of these three"
+    },
+    {
+      "start": 1342.88,
+      "duration": 3.84,
+      "text": "dimensional spheres"
+    },
+    {
+      "start": 1344.159,
+      "duration": 4.161,
+      "text": "explicitly as being embedded in r4 but"
+    },
+    {
+      "start": 1346.72,
+      "duration": 3.04,
+      "text": "this alpha has got nothing to do with"
+    },
+    {
+      "start": 1348.32,
+      "duration": 2.8,
+      "text": "the four dimensional space time that we"
+    },
+    {
+      "start": 1349.76,
+      "duration": 3.6,
+      "text": "live in it's just a way of"
+    },
+    {
+      "start": 1351.12,
+      "duration": 3.76,
+      "text": "describing these manifolds uh as"
+    },
+    {
+      "start": 1353.36,
+      "duration": 3.52,
+      "text": "embedded manifolds you must think of"
+    },
+    {
+      "start": 1354.88,
+      "duration": 3.36,
+      "text": "these three spheres as actually being"
+    },
+    {
+      "start": 1356.88,
+      "duration": 3.2,
+      "text": "intrinsically defined as"
+    },
+    {
+      "start": 1358.24,
+      "duration": 4.24,
+      "text": "three-dimensional manifolds"
+    },
+    {
+      "start": 1360.08,
+      "duration": 4.16,
+      "text": "and the metric is just the standard one"
+    },
+    {
+      "start": 1362.48,
+      "duration": 6.24,
+      "text": "in spherical coordinates"
+    },
+    {
+      "start": 1364.24,
+      "duration": 4.48,
+      "text": "now this this is an example uh"
+    },
+    {
+      "start": 1369.52,
+      "duration": 6.32,
+      "text": "this is called a closed universe"
+    },
+    {
+      "start": 1381.36,
+      "duration": 6.319,
+      "text": "this case where the manifold is this"
+    },
+    {
+      "start": 1384.48,
+      "duration": 5.92,
+      "text": "the spatial slices are close us three"
+    },
+    {
+      "start": 1387.679,
+      "duration": 4.0,
+      "text": "spheres because it's compact right"
+    },
+    {
+      "start": 1390.4,
+      "duration": 4.8,
+      "text": "everything's connected to everything"
+    },
+    {
+      "start": 1391.679,
+      "duration": 5.441,
+      "text": "there's no going off to infinity"
+    },
+    {
+      "start": 1395.2,
+      "duration": 3.52,
+      "text": "okay the case k equals naught well"
+    },
+    {
+      "start": 1397.12,
+      "duration": 6.72,
+      "text": "that's pretty easy right this is just"
+    },
+    {
+      "start": 1398.72,
+      "duration": 5.12,
+      "text": "flat 3d space"
+    },
+    {
+      "start": 1405.52,
+      "duration": 3.76,
+      "text": "and the metric is just that familiar d x"
+    },
+    {
+      "start": 1408.159,
+      "duration": 4.481,
+      "text": "squared plus d y"
+    },
+    {
+      "start": 1409.28,
+      "duration": 8.56,
+      "text": "squared plus d z squared this is"
+    },
+    {
+      "start": 1412.64,
+      "duration": 5.2,
+      "text": "called an open universe for"
+    },
+    {
+      "start": 1419.84,
+      "duration": 5.28,
+      "text": "i hope fairly obvious reasons"
+    },
+    {
+      "start": 1422.96,
+      "duration": 4.0,
+      "text": "all right uh well infinity is not"
+    },
+    {
+      "start": 1425.12,
+      "duration": 5.039,
+      "text": "explicitly included in this this"
+    },
+    {
+      "start": 1426.96,
+      "duration": 5.04,
+      "text": "this slice so you can go off to infinity"
+    },
+    {
+      "start": 1430.159,
+      "duration": 3.361,
+      "text": "in various directions we can also"
+    },
+    {
+      "start": 1432.0,
+      "duration": 4.4,
+      "text": "describe the metric using"
+    },
+    {
+      "start": 1433.52,
+      "duration": 4.24,
+      "text": "uh spherical coordinates um we may do"
+    },
+    {
+      "start": 1436.4,
+      "duration": 3.68,
+      "text": "that we in fact i think we do do that"
+    },
+    {
+      "start": 1437.76,
+      "duration": 4.24,
+      "text": "later on"
+    },
+    {
+      "start": 1440.08,
+      "duration": 3.599,
+      "text": "that's a nexus a little warm-up exercise"
+    },
+    {
+      "start": 1442.0,
+      "duration": 3.279,
+      "text": "view to remember how to express the"
+    },
+    {
+      "start": 1443.679,
+      "duration": 3.441,
+      "text": "metric of flats based on the spherical"
+    },
+    {
+      "start": 1445.279,
+      "duration": 2.64,
+      "text": "coordinates and the the somewhat"
+    },
+    {
+      "start": 1447.12,
+      "duration": 2.799,
+      "text": "interesting case"
+    },
+    {
+      "start": 1447.919,
+      "duration": 3.76,
+      "text": "also of there is a third case when"
+    },
+    {
+      "start": 1449.919,
+      "duration": 3.12,
+      "text": "there's negative curve"
+    },
+    {
+      "start": 1451.679,
+      "duration": 4.321,
+      "text": "what you might call negative curvature"
+    },
+    {
+      "start": 1453.039,
+      "duration": 20.801,
+      "text": "when k is less than equal to zero"
+    },
+    {
+      "start": 1456.0,
+      "duration": 17.84,
+      "text": "and that's obtained by hyperboloids"
+    },
+    {
+      "start": 1475.279,
+      "duration": 3.28,
+      "text": "so you can think of hyperboloids as"
+    },
+    {
+      "start": 1476.799,
+      "duration": 7.281,
+      "text": "being hypersurfaces"
+    },
+    {
+      "start": 1478.559,
+      "duration": 5.521,
+      "text": "in r4 embedded manifolds in r4"
+    },
+    {
+      "start": 1485.039,
+      "duration": 4.721,
+      "text": "with obeying this hyperbola equation"
+    },
+    {
+      "start": 1488.4,
+      "duration": 6.24,
+      "text": "here"
+    },
+    {
+      "start": 1489.76,
+      "duration": 4.88,
+      "text": "radius r and the metric"
+    },
+    {
+      "start": 1499.279,
+      "duration": 3.681,
+      "text": "in hyperbolic coordinates"
+    },
+    {
+      "start": 1507.2,
+      "duration": 6.959,
+      "text": "the metric reads d s squared equals"
+    },
+    {
+      "start": 1510.4,
+      "duration": 7.44,
+      "text": "d psi squared plus sinch squared"
+    },
+    {
+      "start": 1514.159,
+      "duration": 7.52,
+      "text": "psi d theta squared plus"
+    },
+    {
+      "start": 1517.84,
+      "duration": 12.0,
+      "text": "sine squared theta d phi squared"
+    },
+    {
+      "start": 1521.679,
+      "duration": 8.161,
+      "text": "and this is also an open universe"
+    },
+    {
+      "start": 1536.799,
+      "duration": 5.921,
+      "text": "now we've print we've presented a list"
+    },
+    {
+      "start": 1540.64,
+      "duration": 4.32,
+      "text": "of representative space times that"
+    },
+    {
+      "start": 1542.72,
+      "duration": 6.079,
+      "text": "exhaust all the possible"
+    },
+    {
+      "start": 1544.96,
+      "duration": 7.04,
+      "text": "values of k we can now"
+    },
+    {
+      "start": 1548.799,
+      "duration": 3.681,
+      "text": "take these spatial slice metrics and and"
+    },
+    {
+      "start": 1552.0,
+      "duration": 3.84,
+      "text": "uh"
+    },
+    {
+      "start": 1552.48,
+      "duration": 4.72,
+      "text": "embed them and use them to induce the"
+    },
+    {
+      "start": 1555.84,
+      "duration": 4.64,
+      "text": "full metric of space"
+    },
+    {
+      "start": 1557.2,
+      "duration": 4.959,
+      "text": "of four dimensional space-time"
+    },
+    {
+      "start": 1560.48,
+      "duration": 4.4,
+      "text": "and to do this we're going to exploit"
+    },
+    {
+      "start": 1562.159,
+      "duration": 6.681,
+      "text": "isotropy and homogeneity once again"
+    },
+    {
+      "start": 1564.88,
+      "duration": 6.159,
+      "text": "so the point being that as isotropic"
+    },
+    {
+      "start": 1568.84,
+      "duration": 5.88,
+      "text": "observers"
+    },
+    {
+      "start": 1571.039,
+      "duration": 3.681,
+      "text": "move on world lines"
+    },
+    {
+      "start": 1576.32,
+      "duration": 12.719,
+      "text": "orthogonal to sigma t"
+    },
+    {
+      "start": 1585.44,
+      "duration": 6.479,
+      "text": "we can express the metric the full"
+    },
+    {
+      "start": 1589.039,
+      "duration": 2.88,
+      "text": "4d metric"
+    },
+    {
+      "start": 1593.76,
+      "duration": 6.08,
+      "text": "as follows"
+    },
+    {
+      "start": 1609.279,
+      "duration": 6.321,
+      "text": "so we've"
+    },
+    {
+      "start": 1613.36,
+      "duration": 2.24,
+      "text": "got"
+    },
+    {
+      "start": 1616.4,
+      "duration": 5.44,
+      "text": "an additional piece of data essentially"
+    },
+    {
+      "start": 1618.4,
+      "duration": 3.44,
+      "text": "that appears in the metric here"
+    },
+    {
+      "start": 1622.64,
+      "duration": 4.08,
+      "text": "you got to explain what that is or"
+    },
+    {
+      "start": 1623.919,
+      "duration": 5.841,
+      "text": "remind you what that is"
+    },
+    {
+      "start": 1626.72,
+      "duration": 6.079,
+      "text": "so here u a is the"
+    },
+    {
+      "start": 1629.76,
+      "duration": 3.039,
+      "text": "tangent vector"
+    },
+    {
+      "start": 1635.76,
+      "duration": 7.519,
+      "text": "for the isotropic observer"
+    },
+    {
+      "start": 1641.279,
+      "duration": 3.841,
+      "text": "all the observers right this field of"
+    },
+    {
+      "start": 1643.279,
+      "duration": 5.76,
+      "text": "isotropic observers"
+    },
+    {
+      "start": 1645.12,
+      "duration": 6.159,
+      "text": "and uh h-a-b-t"
+    },
+    {
+      "start": 1649.039,
+      "duration": 2.24,
+      "text": "is"
+    },
+    {
+      "start": 1652.88,
+      "duration": 20.08,
+      "text": "one of the metrics above"
+    },
+    {
+      "start": 1669.039,
+      "duration": 3.921,
+      "text": "now we can make things"
+    },
+    {
+      "start": 1674.08,
+      "duration": 5.12,
+      "text": "more consistent by uh the following"
+    },
+    {
+      "start": 1677.039,
+      "duration": 4.721,
+      "text": "observation"
+    },
+    {
+      "start": 1679.2,
+      "duration": 3.12,
+      "text": "so we note that all isotropic observers"
+    },
+    {
+      "start": 1681.76,
+      "duration": 3.76,
+      "text": "are going to"
+    },
+    {
+      "start": 1682.32,
+      "duration": 6.4,
+      "text": "assign the same proper time tau"
+    },
+    {
+      "start": 1685.52,
+      "duration": 4.72,
+      "text": "to the surface sigma t and so what we're"
+    },
+    {
+      "start": 1688.72,
+      "duration": 5.12,
+      "text": "going to do is"
+    },
+    {
+      "start": 1690.24,
+      "duration": 6.159,
+      "text": "express our metric"
+    },
+    {
+      "start": 1693.84,
+      "duration": 18.0,
+      "text": "in a coordinate system adapted to the"
+    },
+    {
+      "start": 1696.399,
+      "duration": 15.441,
+      "text": "proper tone"
+    },
+    {
+      "start": 1724.96,
+      "duration": 4.319,
+      "text": "so in the these coordinates"
+    },
+    {
+      "start": 1732.0,
+      "duration": 9.679,
+      "text": "our metric becomes the following"
+    },
+    {
+      "start": 1739.279,
+      "duration": 3.76,
+      "text": "we have the following metric d s squared"
+    },
+    {
+      "start": 1741.679,
+      "duration": 3.281,
+      "text": "is minus d"
+    },
+    {
+      "start": 1743.039,
+      "duration": 4.401,
+      "text": "tau squared right the constant in front"
+    },
+    {
+      "start": 1744.96,
+      "duration": 5.92,
+      "text": "of d tau is one that's the proper time"
+    },
+    {
+      "start": 1747.44,
+      "duration": 5.599,
+      "text": "plus there's a function a squared tau"
+    },
+    {
+      "start": 1750.88,
+      "duration": 3.919,
+      "text": "which is more or less the the the"
+    },
+    {
+      "start": 1753.039,
+      "duration": 3.52,
+      "text": "constant k"
+    },
+    {
+      "start": 1754.799,
+      "duration": 3.441,
+      "text": "and then you have three options right"
+    },
+    {
+      "start": 1756.559,
+      "duration": 11.281,
+      "text": "you have either"
+    },
+    {
+      "start": 1758.24,
+      "duration": 9.6,
+      "text": "closed three sphere"
+    },
+    {
+      "start": 1768.24,
+      "duration": 4.48,
+      "text": "you have flat three space"
+    },
+    {
+      "start": 1778.48,
+      "duration": 20.319,
+      "text": "or you have hyperboloid"
+    },
+    {
+      "start": 1794.48,
+      "duration": 4.319,
+      "text": "and this is called the friedmann"
+    },
+    {
+      "start": 1800.3,
+      "duration": 3.24,
+      "text": "[Music]"
+    },
+    {
+      "start": 1806.84,
+      "duration": 3.0,
+      "text": "lemaitre"
+    },
+    {
+      "start": 1810.559,
+      "duration": 2.641,
+      "text": "robertson"
+    },
+    {
+      "start": 1815.6,
+      "duration": 2.799,
+      "text": "walker metric"
+    },
+    {
+      "start": 1819.84,
+      "duration": 19.839,
+      "text": "or flrw metric"
+    },
+    {
+      "start": 1837.2,
+      "duration": 3.04,
+      "text": "and this is going to be our fundamental"
+    },
+    {
+      "start": 1839.679,
+      "duration": 3.761,
+      "text": "model"
+    },
+    {
+      "start": 1840.24,
+      "duration": 3.919,
+      "text": "for highly simplified of course for the"
+    },
+    {
+      "start": 1843.44,
+      "duration": 7.599,
+      "text": "universe"
+    },
+    {
+      "start": 1844.159,
+      "duration": 9.281,
+      "text": "in the next couple of lectures"
+    },
+    {
+      "start": 1851.039,
+      "duration": 3.441,
+      "text": "so what we've done is by assuming"
+    },
+    {
+      "start": 1853.44,
+      "duration": 4.88,
+      "text": "homogeneity"
+    },
+    {
+      "start": 1854.48,
+      "duration": 6.96,
+      "text": "and isotropy we've reduced the task"
+    },
+    {
+      "start": 1858.32,
+      "duration": 6.079,
+      "text": "of finding the metric"
+    },
+    {
+      "start": 1861.44,
+      "duration": 3.599,
+      "text": "of the of a universe of a highly"
+    },
+    {
+      "start": 1864.399,
+      "duration": 2.88,
+      "text": "symmetric"
+    },
+    {
+      "start": 1865.039,
+      "duration": 3.12,
+      "text": "version of our universe to the task of"
+    },
+    {
+      "start": 1867.279,
+      "duration": 4.081,
+      "text": "finding"
+    },
+    {
+      "start": 1868.159,
+      "duration": 6.64,
+      "text": "just one single scalar function a"
+    },
+    {
+      "start": 1871.36,
+      "duration": 9.199,
+      "text": "tao and that's a"
+    },
+    {
+      "start": 1874.799,
+      "duration": 5.76,
+      "text": "huge simplification"
+    },
+    {
+      "start": 1882.64,
+      "duration": 7.039,
+      "text": "we just need to solve"
+    },
+    {
+      "start": 1886.96,
+      "duration": 4.559,
+      "text": "for a tau just one single scalar"
+    },
+    {
+      "start": 1889.679,
+      "duration": 4.24,
+      "text": "function a of tau"
+    },
+    {
+      "start": 1891.519,
+      "duration": 3.681,
+      "text": "that's an extraordinary simplification"
+    },
+    {
+      "start": 1893.919,
+      "duration": 3.921,
+      "text": "and we hope"
+    },
+    {
+      "start": 1895.2,
+      "duration": 4.24,
+      "text": "sincerely and it is indeed a well"
+    },
+    {
+      "start": 1897.84,
+      "duration": 3.04,
+      "text": "justified hope that when we substitute"
+    },
+    {
+      "start": 1899.44,
+      "duration": 2.88,
+      "text": "this metric into einstein's field"
+    },
+    {
+      "start": 1900.88,
+      "duration": 3.039,
+      "text": "equations with the appropriate"
+    },
+    {
+      "start": 1902.32,
+      "duration": 3.28,
+      "text": "stress energy tensor on the right hand"
+    },
+    {
+      "start": 1903.919,
+      "duration": 5.36,
+      "text": "side that"
+    },
+    {
+      "start": 1905.6,
+      "duration": 5.6,
+      "text": "we'll be able to reduce all of the 16 or"
+    },
+    {
+      "start": 1909.279,
+      "duration": 3.681,
+      "text": "whatever 10 einstein field equations"
+    },
+    {
+      "start": 1911.2,
+      "duration": 3.68,
+      "text": "down to a single differential equation"
+    },
+    {
+      "start": 1912.96,
+      "duration": 3.92,
+      "text": "say for a of tau and that hope is"
+    },
+    {
+      "start": 1914.88,
+      "duration": 2.48,
+      "text": "realizable and we will be able to solve"
+    },
+    {
+      "start": 1916.88,
+      "duration": 3.12,
+      "text": "for a"
+    },
+    {
+      "start": 1917.36,
+      "duration": 4.88,
+      "text": "of tau and but that however will be the"
+    },
+    {
+      "start": 1920.0,
+      "duration": 4.399,
+      "text": "subject of the next lecture"
+    },
+    {
+      "start": 1922.24,
+      "duration": 3.36,
+      "text": "that's it for this lecture thank you"
+    },
+    {
+      "start": 1924.399,
+      "duration": 3.841,
+      "text": "very much and"
+    },
+    {
+      "start": 1925.6,
+      "duration": 2.64,
+      "text": "goodbye"
+    }
+  ]
+}

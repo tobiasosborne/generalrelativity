@@ -1,0 +1,5482 @@
+{
+  "title": "General Relativity, Lecture 4: Tangent vectors",
+  "video_id": "WTVI_BHiiyM",
+  "url": "https://www.youtube.com/watch?v=WTVI_BHiiyM",
+  "transcript": [
+    {
+      "start": 0.0,
+      "duration": 4.24,
+      "text": "hello and welcome back to introduction"
+    },
+    {
+      "start": 1.36,
+      "duration": 5.12,
+      "text": "to general relativity in lecture four"
+    },
+    {
+      "start": 4.24,
+      "duration": 4.24,
+      "text": "today's lecture we are going to look at"
+    },
+    {
+      "start": 6.48,
+      "duration": 5.199,
+      "text": "the definition of tangent space"
+    },
+    {
+      "start": 8.48,
+      "duration": 4.239,
+      "text": "for a manifold if you recall in the"
+    },
+    {
+      "start": 11.679,
+      "duration": 2.88,
+      "text": "previous video"
+    },
+    {
+      "start": 12.719,
+      "duration": 3.681,
+      "text": "we introduced the notion of a smooth"
+    },
+    {
+      "start": 14.559,
+      "duration": 2.881,
+      "text": "manifold and also we commence the"
+    },
+    {
+      "start": 16.4,
+      "duration": 2.879,
+      "text": "definition"
+    },
+    {
+      "start": 17.44,
+      "duration": 5.28,
+      "text": "of what it means to have a tangent"
+    },
+    {
+      "start": 19.279,
+      "duration": 6.641,
+      "text": "vector to a smooth manifold"
+    },
+    {
+      "start": 22.72,
+      "duration": 4.799,
+      "text": "and the substance of that definition was"
+    },
+    {
+      "start": 25.92,
+      "duration": 3.599,
+      "text": "that we were going to replace the"
+    },
+    {
+      "start": 27.519,
+      "duration": 4.481,
+      "text": "ordinary geometric notion of a tangent"
+    },
+    {
+      "start": 29.519,
+      "duration": 3.921,
+      "text": "vector to a smooth embedded manifold"
+    },
+    {
+      "start": 32.0,
+      "duration": 3.2,
+      "text": "with the notion of a directional"
+    },
+    {
+      "start": 33.44,
+      "duration": 3.44,
+      "text": "derivative"
+    },
+    {
+      "start": 35.2,
+      "duration": 4.08,
+      "text": "so today we're going to take a little"
+    },
+    {
+      "start": 36.88,
+      "duration": 4.72,
+      "text": "bit more time investigating"
+    },
+    {
+      "start": 39.28,
+      "duration": 6.56,
+      "text": "directional derivatives their"
+    },
+    {
+      "start": 41.6,
+      "duration": 4.24,
+      "text": "relationship to tangent vectors"
+    },
+    {
+      "start": 46.399,
+      "duration": 3.361,
+      "text": "and using directional derivatives as a"
+    },
+    {
+      "start": 49.12,
+      "duration": 9.279,
+      "text": "means"
+    },
+    {
+      "start": 49.76,
+      "duration": 10.959,
+      "text": "to define tangent vectors intrinsically"
+    },
+    {
+      "start": 58.399,
+      "duration": 4.721,
+      "text": "hence first topic that we will cover"
+    },
+    {
+      "start": 60.719,
+      "duration": 2.881,
+      "text": "today is that of directional derivatives"
+    },
+    {
+      "start": 63.12,
+      "duration": 2.96,
+      "text": "as"
+    },
+    {
+      "start": 63.6,
+      "duration": 2.48,
+      "text": "vectors"
+    },
+    {
+      "start": 66.64,
+      "duration": 3.76,
+      "text": "so this is maybe not the way you have"
+    },
+    {
+      "start": 68.88,
+      "duration": 3.2,
+      "text": "been thinking about directional"
+    },
+    {
+      "start": 70.4,
+      "duration": 2.0,
+      "text": "derivatives up to now but you can think"
+    },
+    {
+      "start": 72.08,
+      "duration": 2.64,
+      "text": "of"
+    },
+    {
+      "start": 72.4,
+      "duration": 3.759,
+      "text": "directional derivative operators as"
+    },
+    {
+      "start": 74.72,
+      "duration": 3.2,
+      "text": "vectors"
+    },
+    {
+      "start": 76.159,
+      "duration": 4.721,
+      "text": "i'll show you how you do it you start"
+    },
+    {
+      "start": 77.92,
+      "duration": 6.72,
+      "text": "with a n triple of numbers"
+    },
+    {
+      "start": 80.88,
+      "duration": 6.32,
+      "text": "from rn in other words a vector"
+    },
+    {
+      "start": 84.64,
+      "duration": 3.04,
+      "text": "components of a vector i mean and you"
+    },
+    {
+      "start": 87.2,
+      "duration": 3.76,
+      "text": "note"
+    },
+    {
+      "start": 87.68,
+      "duration": 3.28,
+      "text": "that this defines"
+    },
+    {
+      "start": 93.04,
+      "duration": 11.119,
+      "text": "a directional derivative"
+    },
+    {
+      "start": 101.6,
+      "duration": 14.24,
+      "text": "according via the following formula oops"
+    },
+    {
+      "start": 104.159,
+      "duration": 11.681,
+      "text": "directional derivative at a point"
+    },
+    {
+      "start": 118.079,
+      "duration": 2.72,
+      "text": "as follows"
+    },
+    {
+      "start": 122.24,
+      "duration": 4.08,
+      "text": "the way this works is you suppose"
+    },
+    {
+      "start": 126.719,
+      "duration": 5.841,
+      "text": "f is a at least one time differentiable"
+    },
+    {
+      "start": 130.16,
+      "duration": 2.4,
+      "text": "function"
+    },
+    {
+      "start": 137.04,
+      "duration": 3.12,
+      "text": "from r into r"
+    },
+    {
+      "start": 140.4,
+      "duration": 3.44,
+      "text": "and define"
+    },
+    {
+      "start": 145.12,
+      "duration": 3.52,
+      "text": "v dot grad"
+    },
+    {
+      "start": 153.44,
+      "duration": 3.519,
+      "text": "here i'm using the einstein summation"
+    },
+    {
+      "start": 156.08,
+      "duration": 3.68,
+      "text": "notation to sum"
+    },
+    {
+      "start": 156.959,
+      "duration": 4.321,
+      "text": "over this repeated index here so i'll"
+    },
+    {
+      "start": 159.76,
+      "duration": 2.0,
+      "text": "replace that with the summation today"
+    },
+    {
+      "start": 161.28,
+      "duration": 3.52,
+      "text": "but i"
+    },
+    {
+      "start": 161.76,
+      "duration": 5.6,
+      "text": "probably in future will not do this"
+    },
+    {
+      "start": 164.8,
+      "duration": 3.76,
+      "text": "so v dot grad is a differential operator"
+    },
+    {
+      "start": 167.36,
+      "duration": 3.68,
+      "text": "that you can define"
+    },
+    {
+      "start": 168.56,
+      "duration": 4.16,
+      "text": "but that's and indeed that's a"
+    },
+    {
+      "start": 171.04,
+      "duration": 2.479,
+      "text": "directional derivative but i want to"
+    },
+    {
+      "start": 172.72,
+      "duration": 2.879,
+      "text": "talk about"
+    },
+    {
+      "start": 173.519,
+      "duration": 5.761,
+      "text": "the more specific notion of a"
+    },
+    {
+      "start": 175.599,
+      "duration": 3.681,
+      "text": "directional derivative at a point"
+    },
+    {
+      "start": 182.64,
+      "duration": 4.16,
+      "text": "so i'll put this in brackets so that"
+    },
+    {
+      "start": 185.12,
+      "duration": 4.64,
+      "text": "notation means direct"
+    },
+    {
+      "start": 186.8,
+      "duration": 3.92,
+      "text": "is is this linear differential operator"
+    },
+    {
+      "start": 189.76,
+      "duration": 3.92,
+      "text": "but the notion"
+    },
+    {
+      "start": 190.72,
+      "duration": 3.84,
+      "text": "of a directional derivative at a point"
+    },
+    {
+      "start": 193.68,
+      "duration": 3.52,
+      "text": "well that's this"
+    },
+    {
+      "start": 194.56,
+      "duration": 4.319,
+      "text": "this notion here you differentiate with"
+    },
+    {
+      "start": 197.2,
+      "duration": 4.56,
+      "text": "respect to v dot grad"
+    },
+    {
+      "start": 198.879,
+      "duration": 5.041,
+      "text": "the function f and then you substitute"
+    },
+    {
+      "start": 201.76,
+      "duration": 2.16,
+      "text": "in"
+    },
+    {
+      "start": 204.4,
+      "duration": 3.52,
+      "text": "f as a function of the argument and then"
+    },
+    {
+      "start": 205.84,
+      "duration": 4.8,
+      "text": "you substitute in x is this point p"
+    },
+    {
+      "start": 207.92,
+      "duration": 2.72,
+      "text": "that you care about"
+    },
+    {
+      "start": 210.959,
+      "duration": 4.081,
+      "text": "and although we write that this way"
+    },
+    {
+      "start": 215.76,
+      "duration": 10.32,
+      "text": "so this a more specific notion only"
+    },
+    {
+      "start": 218.799,
+      "duration": 9.52,
+      "text": "makes sense at a point p"
+    },
+    {
+      "start": 226.08,
+      "duration": 4.96,
+      "text": "what i mean by a directional derivative"
+    },
+    {
+      "start": 228.319,
+      "duration": 2.721,
+      "text": "at a point p"
+    },
+    {
+      "start": 231.28,
+      "duration": 6.239,
+      "text": "so given a vector in r n we can define a"
+    },
+    {
+      "start": 234.48,
+      "duration": 8.479,
+      "text": "directional derivative at point p"
+    },
+    {
+      "start": 237.519,
+      "duration": 5.44,
+      "text": "by the formula in the red box here"
+    },
+    {
+      "start": 252.879,
+      "duration": 4.721,
+      "text": "directional derivative of point p"
+    },
+    {
+      "start": 255.92,
+      "duration": 3.039,
+      "text": "conversely given a directional"
+    },
+    {
+      "start": 257.6,
+      "duration": 4.56,
+      "text": "derivative at point p"
+    },
+    {
+      "start": 258.959,
+      "duration": 3.201,
+      "text": "we can obtain a vector"
+    },
+    {
+      "start": 267.6,
+      "duration": 6.56,
+      "text": "given some v dot"
+    },
+    {
+      "start": 270.639,
+      "duration": 4.0,
+      "text": "grad at some point p i'll just use the"
+    },
+    {
+      "start": 274.16,
+      "duration": 2.479,
+      "text": "point"
+    },
+    {
+      "start": 274.639,
+      "duration": 3.361,
+      "text": "the the p subscript p notation to"
+    },
+    {
+      "start": 276.639,
+      "duration": 3.28,
+      "text": "indicate that you have to evaluate this"
+    },
+    {
+      "start": 278.0,
+      "duration": 5.84,
+      "text": "at point p"
+    },
+    {
+      "start": 279.919,
+      "duration": 3.921,
+      "text": "um we obtain"
+    },
+    {
+      "start": 284.8,
+      "duration": 2.56,
+      "text": "a vector"
+    },
+    {
+      "start": 288.16,
+      "duration": 5.039,
+      "text": "in rn just read off those coefficients"
+    },
+    {
+      "start": 291.919,
+      "duration": 3.121,
+      "text": "in the definition of a directional"
+    },
+    {
+      "start": 293.199,
+      "duration": 4.801,
+      "text": "derivative at point p and then you have"
+    },
+    {
+      "start": 295.04,
+      "duration": 6.56,
+      "text": "yourself a vector in rn"
+    },
+    {
+      "start": 298.0,
+      "duration": 4.88,
+      "text": "further and this is what encourages us"
+    },
+    {
+      "start": 301.6,
+      "duration": 2.8,
+      "text": "to make this"
+    },
+    {
+      "start": 302.88,
+      "duration": 4.72,
+      "text": "analogy between directional derivatives"
+    },
+    {
+      "start": 304.4,
+      "duration": 5.2,
+      "text": "and tangent vectors uh concrete"
+    },
+    {
+      "start": 307.6,
+      "duration": 3.92,
+      "text": "directional derivatives form a the"
+    },
+    {
+      "start": 309.6,
+      "duration": 5.28,
+      "text": "directional derivatives at"
+    },
+    {
+      "start": 311.52,
+      "duration": 3.36,
+      "text": "p form a vector space"
+    },
+    {
+      "start": 323.759,
+      "duration": 6.561,
+      "text": "that we can identify with tangent space"
+    },
+    {
+      "start": 327.68,
+      "duration": 2.64,
+      "text": "to the surface"
+    },
+    {
+      "start": 332.479,
+      "duration": 5.041,
+      "text": "and this is going to be the the idea of"
+    },
+    {
+      "start": 335.28,
+      "duration": 4.56,
+      "text": "directional derivatives at a point p"
+    },
+    {
+      "start": 337.52,
+      "duration": 4.16,
+      "text": "you know here's the picture that we"
+    },
+    {
+      "start": 339.84,
+      "duration": 4.079,
+      "text": "currently have we have rn here"
+    },
+    {
+      "start": 341.68,
+      "duration": 4.0,
+      "text": "we have a point p and then we have this"
+    },
+    {
+      "start": 343.919,
+      "duration": 5.761,
+      "text": "idea of a directional derivative"
+    },
+    {
+      "start": 345.68,
+      "duration": 5.28,
+      "text": "at point p and we're identifying that"
+    },
+    {
+      "start": 349.68,
+      "duration": 4.88,
+      "text": "one to one"
+    },
+    {
+      "start": 350.96,
+      "duration": 6.959,
+      "text": "with is the point p and here's a"
+    },
+    {
+      "start": 354.56,
+      "duration": 5.04,
+      "text": "a vector v at point p"
+    },
+    {
+      "start": 357.919,
+      "duration": 4.0,
+      "text": "tan that we think of as our tangent"
+    },
+    {
+      "start": 359.6,
+      "duration": 4.159,
+      "text": "vector"
+    },
+    {
+      "start": 361.919,
+      "duration": 3.12,
+      "text": "so this is this correspondence between"
+    },
+    {
+      "start": 363.759,
+      "duration": 3.44,
+      "text": "direction divided by p"
+    },
+    {
+      "start": 365.039,
+      "duration": 3.6,
+      "text": "and tangent vectors that's the way we're"
+    },
+    {
+      "start": 367.199,
+      "duration": 3.041,
+      "text": "going to make sense of"
+    },
+    {
+      "start": 368.639,
+      "duration": 3.12,
+      "text": "tangent vectors intrinsically for"
+    },
+    {
+      "start": 370.24,
+      "duration": 3.44,
+      "text": "manifolds because it turns out"
+    },
+    {
+      "start": 371.759,
+      "duration": 4.321,
+      "text": "although we can't define tangent vector"
+    },
+    {
+      "start": 373.68,
+      "duration": 4.56,
+      "text": "directly intrinsically on a manifold"
+    },
+    {
+      "start": 376.08,
+      "duration": 3.92,
+      "text": "we can define directional derivatives at"
+    },
+    {
+      "start": 378.24,
+      "duration": 3.44,
+      "text": "a point p on a manifold without"
+    },
+    {
+      "start": 380.0,
+      "duration": 4.639,
+      "text": "making reference to the the ambient"
+    },
+    {
+      "start": 381.68,
+      "duration": 2.959,
+      "text": "space at all"
+    },
+    {
+      "start": 385.759,
+      "duration": 3.681,
+      "text": "before we do that we have to say what is"
+    },
+    {
+      "start": 387.52,
+      "duration": 3.679,
+      "text": "it intrinsically that we want from a"
+    },
+    {
+      "start": 389.44,
+      "duration": 4.72,
+      "text": "directional derivative at a point p"
+    },
+    {
+      "start": 391.199,
+      "duration": 4.241,
+      "text": "on a manifold and for that i'm going to"
+    },
+    {
+      "start": 394.16,
+      "duration": 3.599,
+      "text": "know two properties right"
+    },
+    {
+      "start": 395.44,
+      "duration": 2.319,
+      "text": "note"
+    },
+    {
+      "start": 400.479,
+      "duration": 8.481,
+      "text": "v dot grad at p"
+    },
+    {
+      "start": 404.479,
+      "duration": 8.241,
+      "text": "satisfies the following two properties"
+    },
+    {
+      "start": 408.96,
+      "duration": 3.76,
+      "text": "and these are crucial for our"
+    },
+    {
+      "start": 412.88,
+      "duration": 4.24,
+      "text": "subsequent generalization of the words"
+    },
+    {
+      "start": 415.12,
+      "duration": 4.639,
+      "text": "directional derivative to manifolds"
+    },
+    {
+      "start": 417.12,
+      "duration": 5.44,
+      "text": "firstly if you take the scalar"
+    },
+    {
+      "start": 419.759,
+      "duration": 4.641,
+      "text": "combination of two"
+    },
+    {
+      "start": 422.56,
+      "duration": 3.919,
+      "text": "functions then the directional"
+    },
+    {
+      "start": 424.4,
+      "duration": 5.04,
+      "text": "derivative at point p"
+    },
+    {
+      "start": 426.479,
+      "duration": 4.16,
+      "text": "of these two functions is the scalar"
+    },
+    {
+      "start": 429.44,
+      "duration": 3.68,
+      "text": "combination of their directional"
+    },
+    {
+      "start": 430.639,
+      "duration": 2.481,
+      "text": "derivatives"
+    },
+    {
+      "start": 433.84,
+      "duration": 5.759,
+      "text": "so this they're linearity"
+    },
+    {
+      "start": 439.84,
+      "duration": 7.68,
+      "text": "so for all f g"
+    },
+    {
+      "start": 443.919,
+      "duration": 6.961,
+      "text": "functions and for"
+    },
+    {
+      "start": 447.52,
+      "duration": 5.119,
+      "text": "all a b real numbers"
+    },
+    {
+      "start": 450.88,
+      "duration": 3.439,
+      "text": "we have this linearity and the second"
+    },
+    {
+      "start": 452.639,
+      "duration": 2.96,
+      "text": "thing is the circle lug nuts property if"
+    },
+    {
+      "start": 454.319,
+      "duration": 3.121,
+      "text": "you have two scalar functions"
+    },
+    {
+      "start": 455.599,
+      "duration": 3.681,
+      "text": "f and g you apply a directional"
+    },
+    {
+      "start": 457.44,
+      "duration": 3.52,
+      "text": "derivative to them then that's the same"
+    },
+    {
+      "start": 459.28,
+      "duration": 2.479,
+      "text": "as evaluating the function at the point"
+    },
+    {
+      "start": 460.96,
+      "duration": 3.04,
+      "text": "p"
+    },
+    {
+      "start": 461.759,
+      "duration": 3.361,
+      "text": "and taking the directional derivative of"
+    },
+    {
+      "start": 464.0,
+      "duration": 3.039,
+      "text": "the scalar function g"
+    },
+    {
+      "start": 465.12,
+      "duration": 3.759,
+      "text": "plus evaluating the function g at the"
+    },
+    {
+      "start": 467.039,
+      "duration": 6.401,
+      "text": "point p and taking"
+    },
+    {
+      "start": 468.879,
+      "duration": 10.961,
+      "text": "the directional derivative of p of f"
+    },
+    {
+      "start": 473.44,
+      "duration": 6.4,
+      "text": "that's the leibniz property"
+    },
+    {
+      "start": 484.0,
+      "duration": 4.4,
+      "text": "and now some notation before we continue"
+    },
+    {
+      "start": 490.24,
+      "duration": 3.92,
+      "text": "i in the previous video i in the"
+    },
+    {
+      "start": 492.8,
+      "duration": 2.72,
+      "text": "additional material at the end i"
+    },
+    {
+      "start": 494.16,
+      "duration": 4.4,
+      "text": "referred to calligraphic f"
+    },
+    {
+      "start": 495.52,
+      "duration": 5.359,
+      "text": "as the as a"
+    },
+    {
+      "start": 498.56,
+      "duration": 3.68,
+      "text": "differentiable structure here however"
+    },
+    {
+      "start": 500.879,
+      "duration": 1.921,
+      "text": "probably for the rest of this course i'm"
+    },
+    {
+      "start": 502.24,
+      "duration": 3.76,
+      "text": "going to"
+    },
+    {
+      "start": 502.8,
+      "duration": 6.48,
+      "text": "also use calligraphic f of m as"
+    },
+    {
+      "start": 506.0,
+      "duration": 6.56,
+      "text": "to denote the set of all c"
+    },
+    {
+      "start": 509.28,
+      "duration": 3.28,
+      "text": "infinity functions"
+    },
+    {
+      "start": 512.8,
+      "duration": 6.479,
+      "text": "from m to r"
+    },
+    {
+      "start": 516.32,
+      "duration": 3.839,
+      "text": "where m is a manifold we will uh this"
+    },
+    {
+      "start": 519.279,
+      "duration": 2.081,
+      "text": "notion"
+    },
+    {
+      "start": 520.159,
+      "duration": 3.601,
+      "text": "it should be cleared from the context"
+    },
+    {
+      "start": 521.36,
+      "duration": 6.479,
+      "text": "whenever i what i mean"
+    },
+    {
+      "start": 523.76,
+      "duration": 6.72,
+      "text": "by the respective notations"
+    },
+    {
+      "start": 527.839,
+      "duration": 3.201,
+      "text": "and so the big idea now to be able to"
+    },
+    {
+      "start": 530.48,
+      "duration": 3.84,
+      "text": "define"
+    },
+    {
+      "start": 531.04,
+      "duration": 5.04,
+      "text": "a tangent vector for a manifold is to"
+    },
+    {
+      "start": 534.32,
+      "duration": 4.72,
+      "text": "first define the vector space of"
+    },
+    {
+      "start": 536.08,
+      "duration": 2.96,
+      "text": "directional derivatives"
+    },
+    {
+      "start": 540.08,
+      "duration": 3.36,
+      "text": "on a manifold and then just call that by"
+    },
+    {
+      "start": 543.04,
+      "duration": 3.799,
+      "text": "fear"
+    },
+    {
+      "start": 543.44,
+      "duration": 6.399,
+      "text": "just declare that to be the tangent"
+    },
+    {
+      "start": 546.839,
+      "duration": 3.0,
+      "text": "space"
+    },
+    {
+      "start": 564.08,
+      "duration": 3.759,
+      "text": "and how do we define uh"
+    },
+    {
+      "start": 568.08,
+      "duration": 3.68,
+      "text": "a directional derivative on a manifold"
+    },
+    {
+      "start": 570.0,
+      "duration": 3.519,
+      "text": "well we just take these two properties"
+    },
+    {
+      "start": 571.76,
+      "duration": 5.04,
+      "text": "that are highlighted above one and two"
+    },
+    {
+      "start": 573.519,
+      "duration": 6.88,
+      "text": "and declare such"
+    },
+    {
+      "start": 576.8,
+      "duration": 6.24,
+      "text": "maps to be directional derivatives so"
+    },
+    {
+      "start": 580.399,
+      "duration": 4.321,
+      "text": "we define a vector space vp associated"
+    },
+    {
+      "start": 583.04,
+      "duration": 4.479,
+      "text": "to a point p in a manifold m"
+    },
+    {
+      "start": 584.72,
+      "duration": 2.799,
+      "text": "to be the set"
+    },
+    {
+      "start": 588.32,
+      "duration": 3.519,
+      "text": "of all"
+    },
+    {
+      "start": 592.08,
+      "duration": 8.72,
+      "text": "maps which goes from the space of"
+    },
+    {
+      "start": 596.56,
+      "duration": 7.6,
+      "text": "c infinity functions on m to r"
+    },
+    {
+      "start": 600.8,
+      "duration": 6.88,
+      "text": "which obey these two properties"
+    },
+    {
+      "start": 604.16,
+      "duration": 3.52,
+      "text": "one and two"
+    },
+    {
+      "start": 608.24,
+      "duration": 4.159,
+      "text": "there's a little exercise to get you"
+    },
+    {
+      "start": 609.68,
+      "duration": 5.68,
+      "text": "used to these kinds of things"
+    },
+    {
+      "start": 612.399,
+      "duration": 7.44,
+      "text": "and the exercise is to prove or to"
+    },
+    {
+      "start": 615.36,
+      "duration": 4.479,
+      "text": "convince yourself"
+    },
+    {
+      "start": 624.24,
+      "duration": 4.24,
+      "text": "that if h so this exercise is a couple"
+    },
+    {
+      "start": 627.839,
+      "duration": 6.0,
+      "text": "of parts a"
+    },
+    {
+      "start": 628.48,
+      "duration": 5.359,
+      "text": "convince yourself if h is constant"
+    },
+    {
+      "start": 640.16,
+      "duration": 7.679,
+      "text": "then vh0"
+    },
+    {
+      "start": 648.079,
+      "duration": 6.081,
+      "text": "and you're only allowed to use"
+    },
+    {
+      "start": 650.0,
+      "duration": 4.16,
+      "text": "properties one wanting to one and two"
+    },
+    {
+      "start": 658.399,
+      "duration": 4.481,
+      "text": "and the second part of this exercise is"
+    },
+    {
+      "start": 660.56,
+      "duration": 5.04,
+      "text": "to convince yourself that vp so defined"
+    },
+    {
+      "start": 662.88,
+      "duration": 2.72,
+      "text": "as a vector space"
+    },
+    {
+      "start": 673.279,
+      "duration": 5.521,
+      "text": "so you can add subtract blah blah blah"
+    },
+    {
+      "start": 675.6,
+      "duration": 3.2,
+      "text": "multiply by scalars"
+    },
+    {
+      "start": 680.24,
+      "duration": 3.12,
+      "text": "so that's some exercises to get you"
+    },
+    {
+      "start": 681.68,
+      "duration": 5.04,
+      "text": "warmed up into"
+    },
+    {
+      "start": 683.36,
+      "duration": 4.719,
+      "text": "and used to this notion now we have to"
+    },
+    {
+      "start": 686.72,
+      "duration": 5.04,
+      "text": "ask ourselves a question"
+    },
+    {
+      "start": 688.079,
+      "duration": 6.241,
+      "text": "it's all very well to introduce these"
+    },
+    {
+      "start": 691.76,
+      "duration": 3.759,
+      "text": "directional derivative thingies that um"
+    },
+    {
+      "start": 694.32,
+      "duration": 2.72,
+      "text": "do we dare call them directional"
+    },
+    {
+      "start": 695.519,
+      "duration": 2.801,
+      "text": "derivatives on the smooth manifold well"
+    },
+    {
+      "start": 697.04,
+      "duration": 3.44,
+      "text": "not quite yet"
+    },
+    {
+      "start": 698.32,
+      "duration": 5.519,
+      "text": "because the question is maybe we have"
+    },
+    {
+      "start": 700.48,
+      "duration": 3.359,
+      "text": "created a monster"
+    },
+    {
+      "start": 710.48,
+      "duration": 4.64,
+      "text": "so what could have gone wrong well in"
+    },
+    {
+      "start": 712.16,
+      "duration": 4.64,
+      "text": "defining these linear maps vp"
+    },
+    {
+      "start": 715.12,
+      "duration": 3.76,
+      "text": "these directional derivatives v"
+    },
+    {
+      "start": 716.8,
+      "duration": 5.2,
+      "text": "satisfying those properties one and two"
+    },
+    {
+      "start": 718.88,
+      "duration": 4.32,
+      "text": "it could be that uh we've created"
+    },
+    {
+      "start": 722.0,
+      "duration": 2.48,
+      "text": "you know certainly we've created a"
+    },
+    {
+      "start": 723.2,
+      "duration": 3.6,
+      "text": "vector space you've proved that to"
+    },
+    {
+      "start": 724.48,
+      "duration": 3.76,
+      "text": "yourself in the exercise just then"
+    },
+    {
+      "start": 726.8,
+      "duration": 3.44,
+      "text": "but it could be that we've created a"
+    },
+    {
+      "start": 728.24,
+      "duration": 3.52,
+      "text": "horrible vector space a nightmare vector"
+    },
+    {
+      "start": 730.24,
+      "duration": 3.36,
+      "text": "space with a continuous"
+    },
+    {
+      "start": 731.76,
+      "duration": 3.68,
+      "text": "with a huge infinite number of"
+    },
+    {
+      "start": 733.6,
+      "duration": 6.0,
+      "text": "dimensions that has nothing"
+    },
+    {
+      "start": 735.44,
+      "duration": 4.16,
+      "text": "to do with tangent vectors all together"
+    },
+    {
+      "start": 741.2,
+      "duration": 4.639,
+      "text": "so eg you know we could have even though"
+    },
+    {
+      "start": 744.24,
+      "duration": 3.76,
+      "text": "we want to have a tangent space of"
+    },
+    {
+      "start": 745.839,
+      "duration": 4.401,
+      "text": "dimension n"
+    },
+    {
+      "start": 748.0,
+      "duration": 3.92,
+      "text": "we may have uh inadvertently by being"
+    },
+    {
+      "start": 750.24,
+      "duration": 4.08,
+      "text": "careless in our definition created a"
+    },
+    {
+      "start": 751.92,
+      "duration": 6.479,
+      "text": "huge vector space"
+    },
+    {
+      "start": 754.32,
+      "duration": 6.24,
+      "text": "say an infinite dimensional vector space"
+    },
+    {
+      "start": 758.399,
+      "duration": 4.161,
+      "text": "uh which has nothing to do with tangent"
+    },
+    {
+      "start": 760.56,
+      "duration": 2.56,
+      "text": "vectors when you specialize the notion"
+    },
+    {
+      "start": 762.56,
+      "duration": 2.88,
+      "text": "back to"
+    },
+    {
+      "start": 763.12,
+      "duration": 3.44,
+      "text": "euclidean space this is not the case"
+    },
+    {
+      "start": 765.44,
+      "duration": 4.639,
+      "text": "obviously i wouldn't"
+    },
+    {
+      "start": 766.56,
+      "duration": 4.32,
+      "text": "have done that to just be a waste of"
+    },
+    {
+      "start": 770.079,
+      "duration": 2.401,
+      "text": "your time"
+    },
+    {
+      "start": 770.88,
+      "duration": 3.44,
+      "text": "and there's a theorem that uh"
+    },
+    {
+      "start": 772.48,
+      "duration": 4.159,
+      "text": "establishes"
+    },
+    {
+      "start": 774.32,
+      "duration": 4.0,
+      "text": "this uh firstly that the dimension of"
+    },
+    {
+      "start": 776.639,
+      "duration": 4.961,
+      "text": "this vector space is the hope for"
+    },
+    {
+      "start": 778.32,
+      "duration": 5.6,
+      "text": "n and secondly cements the notion"
+    },
+    {
+      "start": 781.6,
+      "duration": 5.679,
+      "text": "of these directional derivatives as the"
+    },
+    {
+      "start": 783.92,
+      "duration": 5.2,
+      "text": "correct analog of tangent vector"
+    },
+    {
+      "start": 787.279,
+      "duration": 3.441,
+      "text": "and that's the theorem we prove we'll"
+    },
+    {
+      "start": 789.12,
+      "duration": 3.04,
+      "text": "state and prove this theorem"
+    },
+    {
+      "start": 790.72,
+      "duration": 3.52,
+      "text": "typically in this course i won't be"
+    },
+    {
+      "start": 792.16,
+      "duration": 4.16,
+      "text": "proving theorems but this one"
+    },
+    {
+      "start": 794.24,
+      "duration": 3.76,
+      "text": "uh is is a is a theorem that we can"
+    },
+    {
+      "start": 796.32,
+      "duration": 3.519,
+      "text": "prove without too much difficulty"
+    },
+    {
+      "start": 798.0,
+      "duration": 3.6,
+      "text": "and can makes reference essentially only"
+    },
+    {
+      "start": 799.839,
+      "duration": 4.0,
+      "text": "to multi-variable calculus"
+    },
+    {
+      "start": 801.6,
+      "duration": 3.919,
+      "text": "and i think in going through the proofs"
+    },
+    {
+      "start": 803.839,
+      "duration": 3.12,
+      "text": "you gain a lot of intuition about this"
+    },
+    {
+      "start": 805.519,
+      "duration": 3.201,
+      "text": "this vector space so we're going to go"
+    },
+    {
+      "start": 806.959,
+      "duration": 3.68,
+      "text": "through the proof however for"
+    },
+    {
+      "start": 808.72,
+      "duration": 5.6,
+      "text": "examination purposes i wouldn't really"
+    },
+    {
+      "start": 810.639,
+      "duration": 7.041,
+      "text": "ask you to reproduce this proof"
+    },
+    {
+      "start": 814.32,
+      "duration": 7.28,
+      "text": "here we go so let m be an n"
+    },
+    {
+      "start": 817.68,
+      "duration": 3.92,
+      "text": "dimensional smooth manifold"
+    },
+    {
+      "start": 823.04,
+      "duration": 3.12,
+      "text": "i'm almost certainly going to drop real"
+    },
+    {
+      "start": 825.279,
+      "duration": 2.881,
+      "text": "smooth"
+    },
+    {
+      "start": 826.16,
+      "duration": 3.2,
+      "text": "these adjectives as we go along we know"
+    },
+    {
+      "start": 828.16,
+      "duration": 2.4,
+      "text": "what we mean in this course we're going"
+    },
+    {
+      "start": 829.36,
+      "duration": 3.839,
+      "text": "to be talking about real smooth"
+    },
+    {
+      "start": 830.56,
+      "duration": 2.639,
+      "text": "manifolds"
+    },
+    {
+      "start": 838.24,
+      "duration": 6.959,
+      "text": "let p be a point in the manifold"
+    },
+    {
+      "start": 842.0,
+      "duration": 6.88,
+      "text": "and let b let v"
+    },
+    {
+      "start": 845.199,
+      "duration": 12.64,
+      "text": "of p be this thing we defined above"
+    },
+    {
+      "start": 848.88,
+      "duration": 8.959,
+      "text": "and we now call it tangent space at p"
+    },
+    {
+      "start": 860.0,
+      "duration": 5.519,
+      "text": "the theorem that we will um this theorem"
+    },
+    {
+      "start": 863.519,
+      "duration": 5.201,
+      "text": "says"
+    },
+    {
+      "start": 865.519,
+      "duration": 6.32,
+      "text": "that the dimension of v of p"
+    },
+    {
+      "start": 868.72,
+      "duration": 3.119,
+      "text": "is exactly n"
+    },
+    {
+      "start": 873.839,
+      "duration": 6.321,
+      "text": "so that largely cements"
+    },
+    {
+      "start": 876.959,
+      "duration": 3.841,
+      "text": "this vector space as the a reasonable"
+    },
+    {
+      "start": 880.16,
+      "duration": 2.96,
+      "text": "analog"
+    },
+    {
+      "start": 880.8,
+      "duration": 3.52,
+      "text": "for tangent vectors but as we go through"
+    },
+    {
+      "start": 883.12,
+      "duration": 5.36,
+      "text": "the proof you'll see that"
+    },
+    {
+      "start": 884.32,
+      "duration": 7.519,
+      "text": "it actually makes that connection"
+    },
+    {
+      "start": 888.48,
+      "duration": 3.359,
+      "text": "slightly more precise"
+    },
+    {
+      "start": 897.199,
+      "duration": 5.681,
+      "text": "before we do the proof actually i'll"
+    },
+    {
+      "start": 900.24,
+      "duration": 13.599,
+      "text": "just introduce"
+    },
+    {
+      "start": 902.88,
+      "duration": 10.959,
+      "text": "some notation"
+    },
+    {
+      "start": 918.56,
+      "duration": 8.959,
+      "text": "notation definition i guess"
+    },
+    {
+      "start": 926.48,
+      "duration": 3.84,
+      "text": "the reason we're going to introduce the"
+    },
+    {
+      "start": 927.519,
+      "duration": 6.24,
+      "text": "notation is we're going to introduce a"
+    },
+    {
+      "start": 930.32,
+      "duration": 5.84,
+      "text": "candidate basis for this vector space"
+    },
+    {
+      "start": 933.759,
+      "duration": 4.32,
+      "text": "and for that candidate basis we need"
+    },
+    {
+      "start": 936.16,
+      "duration": 2.4,
+      "text": "some notation and it'll turn out that in"
+    },
+    {
+      "start": 938.079,
+      "duration": 2.081,
+      "text": "fact"
+    },
+    {
+      "start": 938.56,
+      "duration": 3.76,
+      "text": "this candidate basis will be a very"
+    },
+    {
+      "start": 940.16,
+      "duration": 6.88,
+      "text": "familiar set of things indeed"
+    },
+    {
+      "start": 942.32,
+      "duration": 4.72,
+      "text": "so here's my cartoon of a manifold m"
+    },
+    {
+      "start": 948.48,
+      "duration": 4.56,
+      "text": "we're going to consider a point p we're"
+    },
+    {
+      "start": 951.279,
+      "duration": 6.321,
+      "text": "going to consider"
+    },
+    {
+      "start": 953.04,
+      "duration": 4.56,
+      "text": "the chart around the point p"
+    },
+    {
+      "start": 958.24,
+      "duration": 4.08,
+      "text": "we're going to consider the"
+    },
+    {
+      "start": 959.04,
+      "duration": 5.76,
+      "text": "corresponding map to rn"
+    },
+    {
+      "start": 962.32,
+      "duration": 3.439,
+      "text": "which we'll call psi consider this the"
+    },
+    {
+      "start": 964.8,
+      "duration": 4.0,
+      "text": "set in"
+    },
+    {
+      "start": 965.759,
+      "duration": 3.921,
+      "text": "rn that it gets mapped to the chart call"
+    },
+    {
+      "start": 968.8,
+      "duration": 4.88,
+      "text": "it u"
+    },
+    {
+      "start": 969.68,
+      "duration": 6.719,
+      "text": "and the point p gets mapped to psi of p"
+    },
+    {
+      "start": 973.68,
+      "duration": 4.079,
+      "text": "we're also going to consider also"
+    },
+    {
+      "start": 976.399,
+      "duration": 2.8,
+      "text": "playing a role in this theorem is a"
+    },
+    {
+      "start": 977.759,
+      "duration": 3.601,
+      "text": "function on the manifold"
+    },
+    {
+      "start": 979.199,
+      "duration": 5.921,
+      "text": "if the function maps just to the real"
+    },
+    {
+      "start": 981.36,
+      "duration": 3.76,
+      "text": "number line which is also a manifold"
+    },
+    {
+      "start": 985.6,
+      "duration": 3.039,
+      "text": "and there's the function evaluated at p"
+    },
+    {
+      "start": 988.0,
+      "duration": 6.399,
+      "text": "it"
+    },
+    {
+      "start": 988.639,
+      "duration": 5.76,
+      "text": "finds itself on the real number line"
+    },
+    {
+      "start": 995.04,
+      "duration": 3.84,
+      "text": "and with this notation in hand we're"
+    },
+    {
+      "start": 996.56,
+      "duration": 7.519,
+      "text": "going to introduce"
+    },
+    {
+      "start": 998.88,
+      "duration": 5.199,
+      "text": "a special basis now for tangent space"
+    },
+    {
+      "start": 1006.24,
+      "duration": 5.599,
+      "text": "and let's see let's uh give this"
+    },
+    {
+      "start": 1012.079,
+      "duration": 4.161,
+      "text": "declare what these objects are first of"
+    },
+    {
+      "start": 1013.759,
+      "duration": 5.921,
+      "text": "all before we move on"
+    },
+    {
+      "start": 1016.24,
+      "duration": 6.48,
+      "text": "let psi be a map from"
+    },
+    {
+      "start": 1019.68,
+      "duration": 6.639,
+      "text": "o a subset of our manifold onto rm"
+    },
+    {
+      "start": 1022.72,
+      "duration": 7.44,
+      "text": "rn one to one one two be a"
+    },
+    {
+      "start": 1026.319,
+      "duration": 5.201,
+      "text": "chart with the point that we care about"
+    },
+    {
+      "start": 1030.16,
+      "duration": 2.799,
+      "text": "actually in it"
+    },
+    {
+      "start": 1031.52,
+      "duration": 4.24,
+      "text": "the point choosing a chart where the"
+    },
+    {
+      "start": 1032.959,
+      "duration": 2.801,
+      "text": "point's not in it"
+    },
+    {
+      "start": 1036.0,
+      "duration": 7.52,
+      "text": "now if f is a nice smooth function on m"
+    },
+    {
+      "start": 1040.72,
+      "duration": 3.68,
+      "text": "then the first thing we can say is that"
+    },
+    {
+      "start": 1043.52,
+      "duration": 4.559,
+      "text": "the function"
+    },
+    {
+      "start": 1044.4,
+      "duration": 6.8,
+      "text": "f composed with psi inverse right you go"
+    },
+    {
+      "start": 1048.079,
+      "duration": 6.321,
+      "text": "back from rn into the manifold"
+    },
+    {
+      "start": 1051.2,
+      "duration": 6.24,
+      "text": "it maps from u inside rn"
+    },
+    {
+      "start": 1054.4,
+      "duration": 5.36,
+      "text": "to r well that that that's a c infinity"
+    },
+    {
+      "start": 1057.44,
+      "duration": 2.32,
+      "text": "function"
+    },
+    {
+      "start": 1060.88,
+      "duration": 5.76,
+      "text": "right if you just look at this this"
+    },
+    {
+      "start": 1062.88,
+      "duration": 6.159,
+      "text": "diagram that i've drawn here if i"
+    },
+    {
+      "start": 1066.64,
+      "duration": 3.44,
+      "text": "go backwards you know i'm at psi of p"
+    },
+    {
+      "start": 1069.039,
+      "duration": 4.081,
+      "text": "inside rn"
+    },
+    {
+      "start": 1070.08,
+      "duration": 6.08,
+      "text": "oops i can see a mistake there"
+    },
+    {
+      "start": 1073.12,
+      "duration": 6.4,
+      "text": "rn so if we're at the point psi"
+    },
+    {
+      "start": 1076.16,
+      "duration": 3.84,
+      "text": "p and we go backwards via psi inverse"
+    },
+    {
+      "start": 1079.52,
+      "duration": 3.519,
+      "text": "then we go"
+    },
+    {
+      "start": 1080.0,
+      "duration": 5.76,
+      "text": "down here via f then the"
+    },
+    {
+      "start": 1083.039,
+      "duration": 3.441,
+      "text": "what we've defined is a function that"
+    },
+    {
+      "start": 1085.76,
+      "duration": 9.36,
+      "text": "goes"
+    },
+    {
+      "start": 1086.48,
+      "duration": 9.76,
+      "text": "from u to r"
+    },
+    {
+      "start": 1095.12,
+      "duration": 3.439,
+      "text": "and then what we're going to do is now"
+    },
+    {
+      "start": 1096.24,
+      "duration": 2.319,
+      "text": "given"
+    },
+    {
+      "start": 1099.039,
+      "duration": 6.241,
+      "text": "we're going to define for each of mu"
+    },
+    {
+      "start": 1102.64,
+      "duration": 4.32,
+      "text": "equals 1 all the way up to n we're going"
+    },
+    {
+      "start": 1105.28,
+      "duration": 4.56,
+      "text": "to define the following"
+    },
+    {
+      "start": 1106.96,
+      "duration": 2.88,
+      "text": "operators"
+    },
+    {
+      "start": 1110.0,
+      "duration": 3.679,
+      "text": "x mu these operators eat scalar"
+    },
+    {
+      "start": 1112.559,
+      "duration": 3.441,
+      "text": "functions and produce"
+    },
+    {
+      "start": 1113.679,
+      "duration": 2.321,
+      "text": "numbers"
+    },
+    {
+      "start": 1120.48,
+      "duration": 3.6,
+      "text": "and the scalar function that it eats is"
+    },
+    {
+      "start": 1123.2,
+      "duration": 4.32,
+      "text": "uh"
+    },
+    {
+      "start": 1124.08,
+      "duration": 13.76,
+      "text": "f composed with psi inverse"
+    },
+    {
+      "start": 1127.52,
+      "duration": 10.32,
+      "text": "and then we evaluate it at psi of p"
+    },
+    {
+      "start": 1139.84,
+      "duration": 5.36,
+      "text": "and these x muse these are coord these"
+    },
+    {
+      "start": 1142.0,
+      "duration": 3.2,
+      "text": "are the coordinates"
+    },
+    {
+      "start": 1146.72,
+      "duration": 7.04,
+      "text": "our current coordinate system of r n"
+    },
+    {
+      "start": 1151.84,
+      "duration": 3.6,
+      "text": "here's a little exercise for you before"
+    },
+    {
+      "start": 1153.76,
+      "duration": 6.0,
+      "text": "we get to the proof of the theorem"
+    },
+    {
+      "start": 1155.44,
+      "duration": 4.32,
+      "text": "x mu so defined"
+    },
+    {
+      "start": 1160.559,
+      "duration": 5.281,
+      "text": "are tangent vectors"
+    },
+    {
+      "start": 1168.0,
+      "duration": 4.4,
+      "text": "the elements of this space vp"
+    },
+    {
+      "start": 1171.28,
+      "duration": 2.8,
+      "text": "it's very important that you go through"
+    },
+    {
+      "start": 1172.4,
+      "duration": 2.32,
+      "text": "that proof just have to check properties"
+    },
+    {
+      "start": 1174.08,
+      "duration": 3.76,
+      "text": "one and two"
+    },
+    {
+      "start": 1174.72,
+      "duration": 4.88,
+      "text": "linearity and the leibniz property now"
+    },
+    {
+      "start": 1177.84,
+      "duration": 4.24,
+      "text": "let's get to the proof"
+    },
+    {
+      "start": 1179.6,
+      "duration": 4.24,
+      "text": "so we've got this this candidate basis"
+    },
+    {
+      "start": 1182.08,
+      "duration": 3.52,
+      "text": "in hand and we're going to now prove"
+    },
+    {
+      "start": 1183.84,
+      "duration": 8.32,
+      "text": "that every element of vp is a linear"
+    },
+    {
+      "start": 1185.6,
+      "duration": 8.16,
+      "text": "combination of these and vice versa now"
+    },
+    {
+      "start": 1192.16,
+      "duration": 4.24,
+      "text": "here we go"
+    },
+    {
+      "start": 1193.76,
+      "duration": 2.64,
+      "text": "suppose"
+    },
+    {
+      "start": 1197.2,
+      "duration": 6.479,
+      "text": "that big f now is some"
+    },
+    {
+      "start": 1200.48,
+      "duration": 3.199,
+      "text": "nice smooth function"
+    },
+    {
+      "start": 1205.84,
+      "duration": 2.88,
+      "text": "then there's this"
+    },
+    {
+      "start": 1212.0,
+      "duration": 11.6,
+      "text": "there's a way to expand if"
+    },
+    {
+      "start": 1220.64,
+      "duration": 3.2,
+      "text": "looks like a taylor series it's really"
+    },
+    {
+      "start": 1223.6,
+      "duration": 3.68,
+      "text": "an"
+    },
+    {
+      "start": 1223.84,
+      "duration": 3.44,
+      "text": "instance of this intermediate value"
+    },
+    {
+      "start": 1232.84,
+      "duration": 3.0,
+      "text": "theorem"
+    },
+    {
+      "start": 1248.24,
+      "duration": 3.679,
+      "text": "and here's the expansion in question so"
+    },
+    {
+      "start": 1250.32,
+      "duration": 2.16,
+      "text": "it's possible to you have a smooth"
+    },
+    {
+      "start": 1251.919,
+      "duration": 4.321,
+      "text": "function"
+    },
+    {
+      "start": 1252.48,
+      "duration": 5.28,
+      "text": "on rn right now when you evaluate the"
+    },
+    {
+      "start": 1256.24,
+      "duration": 4.88,
+      "text": "smooth function at a point"
+    },
+    {
+      "start": 1257.76,
+      "duration": 6.72,
+      "text": "other than some given point a then"
+    },
+    {
+      "start": 1261.12,
+      "duration": 6.48,
+      "text": "well you know it's another takes"
+    },
+    {
+      "start": 1264.48,
+      "duration": 3.679,
+      "text": "probably take some other value but if"
+    },
+    {
+      "start": 1267.6,
+      "duration": 3.199,
+      "text": "you were"
+    },
+    {
+      "start": 1268.159,
+      "duration": 4.241,
+      "text": "to say use taylor's theorem you might"
+    },
+    {
+      "start": 1270.799,
+      "duration": 7.041,
+      "text": "say that for"
+    },
+    {
+      "start": 1272.4,
+      "duration": 5.44,
+      "text": "x nearby to a f is a linear combination"
+    },
+    {
+      "start": 1278.32,
+      "duration": 5.76,
+      "text": "of the of the coordinate differences"
+    },
+    {
+      "start": 1282.08,
+      "duration": 3.52,
+      "text": "okay that would be taylor's do taylor's"
+    },
+    {
+      "start": 1284.08,
+      "duration": 2.8,
+      "text": "theorem to first order plus some higher"
+    },
+    {
+      "start": 1285.6,
+      "duration": 6.0,
+      "text": "order corrections"
+    },
+    {
+      "start": 1286.88,
+      "duration": 6.64,
+      "text": "but this theorem here this result here"
+    },
+    {
+      "start": 1291.6,
+      "duration": 3.439,
+      "text": "says something a bit stronger it says"
+    },
+    {
+      "start": 1293.52,
+      "duration": 4.24,
+      "text": "that for any"
+    },
+    {
+      "start": 1295.039,
+      "duration": 3.281,
+      "text": "smooth function on r n it's possible to"
+    },
+    {
+      "start": 1297.76,
+      "duration": 4.0,
+      "text": "write"
+    },
+    {
+      "start": 1298.32,
+      "duration": 5.599,
+      "text": "that function at an arbitrary point x as"
+    },
+    {
+      "start": 1301.76,
+      "duration": 3.2,
+      "text": "the function evaluated at a fixed point"
+    },
+    {
+      "start": 1303.919,
+      "duration": 5.441,
+      "text": "a"
+    },
+    {
+      "start": 1304.96,
+      "duration": 6.32,
+      "text": "plus some coordinate differences"
+    },
+    {
+      "start": 1309.36,
+      "duration": 3.76,
+      "text": "times by instead of the derivatives of"
+    },
+    {
+      "start": 1311.28,
+      "duration": 2.72,
+      "text": "our function you know the first order"
+    },
+    {
+      "start": 1313.12,
+      "duration": 3.919,
+      "text": "term"
+    },
+    {
+      "start": 1314.0,
+      "duration": 4.96,
+      "text": "in taylor's theorem some"
+    },
+    {
+      "start": 1317.039,
+      "duration": 4.161,
+      "text": "arbitrary scene from infinity functions"
+    },
+    {
+      "start": 1318.96,
+      "duration": 5.04,
+      "text": "h mu of x"
+    },
+    {
+      "start": 1321.2,
+      "duration": 4.0,
+      "text": "so this is well you know mediumly"
+    },
+    {
+      "start": 1324.0,
+      "duration": 2.88,
+      "text": "irritating"
+    },
+    {
+      "start": 1325.2,
+      "duration": 3.92,
+      "text": "it's not completely obvious how to prove"
+    },
+    {
+      "start": 1326.88,
+      "duration": 2.24,
+      "text": "this"
+    },
+    {
+      "start": 1329.679,
+      "duration": 6.161,
+      "text": "so this is a bonus problem for you to"
+    },
+    {
+      "start": 1337.679,
+      "duration": 4.081,
+      "text": "to prove this statement"
+    },
+    {
+      "start": 1344.84,
+      "duration": 3.0,
+      "text": "um"
+    },
+    {
+      "start": 1347.919,
+      "duration": 5.681,
+      "text": "and uh this is there's a variety of ways"
+    },
+    {
+      "start": 1351.12,
+      "duration": 2.48,
+      "text": "to prove it"
+    },
+    {
+      "start": 1353.76,
+      "duration": 4.0,
+      "text": "i know of at least two you could do it"
+    },
+    {
+      "start": 1355.52,
+      "duration": 3.76,
+      "text": "by by induction on the dimension"
+    },
+    {
+      "start": 1357.76,
+      "duration": 5.76,
+      "text": "or you could use the intermediate volume"
+    },
+    {
+      "start": 1359.28,
+      "duration": 4.24,
+      "text": "theorem what is the mean value theorem"
+    },
+    {
+      "start": 1365.36,
+      "duration": 4.559,
+      "text": "believe it's the mean value thing but"
+    },
+    {
+      "start": 1366.88,
+      "duration": 5.12,
+      "text": "i'm not"
+    },
+    {
+      "start": 1369.919,
+      "duration": 4.0,
+      "text": "have to look at the proof again now"
+    },
+    {
+      "start": 1372.0,
+      "duration": 3.76,
+      "text": "these functions these scalar functions h"
+    },
+    {
+      "start": 1373.919,
+      "duration": 4.401,
+      "text": "mu a"
+    },
+    {
+      "start": 1375.76,
+      "duration": 4.159,
+      "text": "they have an explicit representation"
+    },
+    {
+      "start": 1378.32,
+      "duration": 3.76,
+      "text": "they really are the first derivatives of"
+    },
+    {
+      "start": 1379.919,
+      "duration": 2.161,
+      "text": "f"
+    },
+    {
+      "start": 1382.159,
+      "duration": 7.52,
+      "text": "at x as they should be when when x is uh"
+    },
+    {
+      "start": 1385.6,
+      "duration": 6.959,
+      "text": "a but when evaluated at a but"
+    },
+    {
+      "start": 1389.679,
+      "duration": 6.0,
+      "text": "when h of mu is evaluated elsewhere then"
+    },
+    {
+      "start": 1392.559,
+      "duration": 3.12,
+      "text": "it's just some smooth function"
+    },
+    {
+      "start": 1397.679,
+      "duration": 2.88,
+      "text": "okay so this is this little lemma is"
+    },
+    {
+      "start": 1399.2,
+      "duration": 4.56,
+      "text": "something that we're going to use in our"
+    },
+    {
+      "start": 1400.559,
+      "duration": 6.561,
+      "text": "proof of the theorem"
+    },
+    {
+      "start": 1403.76,
+      "duration": 5.84,
+      "text": "and we're going to apply it precisely"
+    },
+    {
+      "start": 1407.12,
+      "duration": 3.84,
+      "text": "to the following scalar function so"
+    },
+    {
+      "start": 1409.6,
+      "duration": 2.24,
+      "text": "we've got a candidate scalar function"
+    },
+    {
+      "start": 1410.96,
+      "duration": 2.56,
+      "text": "that we care about"
+    },
+    {
+      "start": 1411.84,
+      "duration": 5.199,
+      "text": "we're going to say that big f is really"
+    },
+    {
+      "start": 1413.52,
+      "duration": 7.12,
+      "text": "f composed with psi inverse"
+    },
+    {
+      "start": 1417.039,
+      "duration": 4.321,
+      "text": "and a is none other than the point that"
+    },
+    {
+      "start": 1420.64,
+      "duration": 4.159,
+      "text": "we get upon"
+    },
+    {
+      "start": 1421.36,
+      "duration": 7.76,
+      "text": "projecting p into rn"
+    },
+    {
+      "start": 1424.799,
+      "duration": 5.441,
+      "text": "so then by star so this result star that"
+    },
+    {
+      "start": 1429.12,
+      "duration": 4.72,
+      "text": "you've proved now"
+    },
+    {
+      "start": 1430.24,
+      "duration": 3.6,
+      "text": "in your bonus exercises"
+    },
+    {
+      "start": 1434.72,
+      "duration": 7.439,
+      "text": "we have for all q in our"
+    },
+    {
+      "start": 1438.32,
+      "duration": 7.359,
+      "text": "in our chart the following"
+    },
+    {
+      "start": 1442.159,
+      "duration": 4.801,
+      "text": "result we have the f of q is little f of"
+    },
+    {
+      "start": 1445.679,
+      "duration": 4.88,
+      "text": "p"
+    },
+    {
+      "start": 1446.96,
+      "duration": 3.599,
+      "text": "plus the sum"
+    },
+    {
+      "start": 1451.6,
+      "duration": 7.28,
+      "text": "x mu composed with psi evaluated at q"
+    },
+    {
+      "start": 1455.76,
+      "duration": 5.44,
+      "text": "minus x mu composed with psi evaluated"
+    },
+    {
+      "start": 1458.88,
+      "duration": 2.32,
+      "text": "at p"
+    },
+    {
+      "start": 1461.6,
+      "duration": 4.8,
+      "text": "h mu psi q"
+    },
+    {
+      "start": 1466.799,
+      "duration": 4.641,
+      "text": "so i haven't done anything except take"
+    },
+    {
+      "start": 1469.12,
+      "duration": 5.12,
+      "text": "the definition"
+    },
+    {
+      "start": 1471.44,
+      "duration": 4.08,
+      "text": "i've taken this particular choice of big"
+    },
+    {
+      "start": 1474.24,
+      "duration": 4.64,
+      "text": "f"
+    },
+    {
+      "start": 1475.52,
+      "duration": 6.399,
+      "text": "and this particular choice of a"
+    },
+    {
+      "start": 1478.88,
+      "duration": 5.76,
+      "text": "and substituted it in"
+    },
+    {
+      "start": 1481.919,
+      "duration": 6.401,
+      "text": "to this equation star which is this"
+    },
+    {
+      "start": 1484.64,
+      "duration": 3.68,
+      "text": "result from multi-variable calculus"
+    },
+    {
+      "start": 1489.919,
+      "duration": 4.64,
+      "text": "that's all i've done and when you do"
+    },
+    {
+      "start": 1492.24,
+      "duration": 6.24,
+      "text": "that then"
+    },
+    {
+      "start": 1494.559,
+      "duration": 5.441,
+      "text": "you uh end up writing down"
+    },
+    {
+      "start": 1498.48,
+      "duration": 4.079,
+      "text": "the things that i've written down in"
+    },
+    {
+      "start": 1500.0,
+      "duration": 2.559,
+      "text": "star star"
+    },
+    {
+      "start": 1505.919,
+      "duration": 6.161,
+      "text": "so now let's suppose that"
+    },
+    {
+      "start": 1509.84,
+      "duration": 3.839,
+      "text": "v is an element of this vector space"
+    },
+    {
+      "start": 1512.08,
+      "duration": 3.92,
+      "text": "that we created above so it's a"
+    },
+    {
+      "start": 1513.679,
+      "duration": 5.281,
+      "text": "directional derivative obeying"
+    },
+    {
+      "start": 1516.0,
+      "duration": 7.52,
+      "text": "conditions 1 and 2."
+    },
+    {
+      "start": 1518.96,
+      "duration": 7.44,
+      "text": "we're going to apply this operator"
+    },
+    {
+      "start": 1523.52,
+      "duration": 5.759,
+      "text": "to the scalar function f and we're going"
+    },
+    {
+      "start": 1526.4,
+      "duration": 4.399,
+      "text": "to use this representation star star"
+    },
+    {
+      "start": 1529.279,
+      "duration": 3.28,
+      "text": "so let's go through it line by line see"
+    },
+    {
+      "start": 1530.799,
+      "duration": 5.281,
+      "text": "what happens so we apply v"
+    },
+    {
+      "start": 1532.559,
+      "duration": 5.36,
+      "text": "to f then according to star star"
+    },
+    {
+      "start": 1536.08,
+      "duration": 7.76,
+      "text": "we'll just replace the argument f with"
+    },
+    {
+      "start": 1537.919,
+      "duration": 5.921,
+      "text": "this representation above"
+    },
+    {
+      "start": 1544.64,
+      "duration": 4.88,
+      "text": "so i'm literally substituting star star"
+    },
+    {
+      "start": 1546.559,
+      "duration": 4.161,
+      "text": "in here in the argument"
+    },
+    {
+      "start": 1549.52,
+      "duration": 7.519,
+      "text": "i'll just leave that stuff in the"
+    },
+    {
+      "start": 1550.72,
+      "duration": 8.319,
+      "text": "brackets for the moment"
+    },
+    {
+      "start": 1557.039,
+      "duration": 4.961,
+      "text": "so i've taken this stuff this"
+    },
+    {
+      "start": 1559.039,
+      "duration": 7.201,
+      "text": "representation here"
+    },
+    {
+      "start": 1562.0,
+      "duration": 7.76,
+      "text": "and just pushed it into the argument of"
+    },
+    {
+      "start": 1566.24,
+      "duration": 8.16,
+      "text": "v there now let's"
+    },
+    {
+      "start": 1569.76,
+      "duration": 8.24,
+      "text": "properties 1 and 2 of the operator v and"
+    },
+    {
+      "start": 1574.4,
+      "duration": 3.6,
+      "text": "on the argument and see what comes out"
+    },
+    {
+      "start": 1581.279,
+      "duration": 6.561,
+      "text": "so we use linearity"
+    },
+    {
+      "start": 1585.6,
+      "duration": 3.04,
+      "text": "in the first and end leibniz property so"
+    },
+    {
+      "start": 1587.84,
+      "duration": 4.0,
+      "text": "1 and 2"
+    },
+    {
+      "start": 1588.64,
+      "duration": 3.2,
+      "text": "i'm going to use them all at once"
+    },
+    {
+      "start": 1592.0,
+      "duration": 3.84,
+      "text": "and if you use linearity then this when"
+    },
+    {
+      "start": 1594.32,
+      "duration": 2.32,
+      "text": "applied to this argument here then you"
+    },
+    {
+      "start": 1595.84,
+      "duration": 3.76,
+      "text": "get v of f"
+    },
+    {
+      "start": 1596.64,
+      "duration": 4.72,
+      "text": "p which has to be zero because f of p is"
+    },
+    {
+      "start": 1599.6,
+      "duration": 3.92,
+      "text": "a constant and v of a constant is zero"
+    },
+    {
+      "start": 1601.36,
+      "duration": 4.799,
+      "text": "you prove that already"
+    },
+    {
+      "start": 1603.52,
+      "duration": 4.159,
+      "text": "plus and then we use linearity to put it"
+    },
+    {
+      "start": 1606.159,
+      "duration": 7.681,
+      "text": "over the summation sign here and the"
+    },
+    {
+      "start": 1607.679,
+      "duration": 6.161,
+      "text": "leibniz property"
+    },
+    {
+      "start": 1623.679,
+      "duration": 3.36,
+      "text": "and the leibniz property says we must"
+    },
+    {
+      "start": 1626.0,
+      "duration": 2.96,
+      "text": "evaluate"
+    },
+    {
+      "start": 1627.039,
+      "duration": 3.681,
+      "text": "when we have a product of two functions"
+    },
+    {
+      "start": 1628.96,
+      "duration": 2.24,
+      "text": "we have to evaluate one of the point p"
+    },
+    {
+      "start": 1630.72,
+      "duration": 3.92,
+      "text": "and then"
+    },
+    {
+      "start": 1631.2,
+      "duration": 6.56,
+      "text": "apply v to the other and that's exactly"
+    },
+    {
+      "start": 1634.64,
+      "duration": 3.12,
+      "text": "what we're going to do here"
+    },
+    {
+      "start": 1638.799,
+      "duration": 4.641,
+      "text": "q at q setting q equals p or x equals to"
+    },
+    {
+      "start": 1642.159,
+      "duration": 4.721,
+      "text": "a"
+    },
+    {
+      "start": 1643.44,
+      "duration": 7.599,
+      "text": "and then uh we apply v to the"
+    },
+    {
+      "start": 1646.88,
+      "duration": 4.159,
+      "text": "scalar functions h mu"
+    },
+    {
+      "start": 1651.36,
+      "duration": 3.039,
+      "text": "but then the other part of leibniz comes"
+    },
+    {
+      "start": 1653.36,
+      "duration": 4.319,
+      "text": "along and says"
+    },
+    {
+      "start": 1654.399,
+      "duration": 5.441,
+      "text": "now we have to evaluate the h mu scalar"
+    },
+    {
+      "start": 1657.679,
+      "duration": 4.401,
+      "text": "function at p"
+    },
+    {
+      "start": 1659.84,
+      "duration": 4.48,
+      "text": "and then apply v to that coordinate"
+    },
+    {
+      "start": 1662.08,
+      "duration": 2.24,
+      "text": "stuff"
+    },
+    {
+      "start": 1666.32,
+      "duration": 3.599,
+      "text": "and here i will start using the einstein"
+    },
+    {
+      "start": 1668.48,
+      "duration": 5.04,
+      "text": "summation retention"
+    },
+    {
+      "start": 1669.919,
+      "duration": 5.36,
+      "text": "summation notation a bit more frequently"
+    },
+    {
+      "start": 1673.52,
+      "duration": 9.12,
+      "text": "to avoid writing out the summations all"
+    },
+    {
+      "start": 1675.279,
+      "duration": 11.28,
+      "text": "the time"
+    },
+    {
+      "start": 1682.64,
+      "duration": 6.8,
+      "text": "now evaluating"
+    },
+    {
+      "start": 1686.559,
+      "duration": 3.84,
+      "text": "this term in yellow here at the point x"
+    },
+    {
+      "start": 1689.44,
+      "duration": 4.16,
+      "text": "equals u"
+    },
+    {
+      "start": 1690.399,
+      "duration": 5.361,
+      "text": "mu at x equals a sorry or q equals p"
+    },
+    {
+      "start": 1693.6,
+      "duration": 3.28,
+      "text": "that gives us a straight out zero so"
+    },
+    {
+      "start": 1695.76,
+      "duration": 3.24,
+      "text": "that's gone"
+    },
+    {
+      "start": 1696.88,
+      "duration": 4.159,
+      "text": "in fact the only term that's left upon"
+    },
+    {
+      "start": 1699.0,
+      "duration": 4.36,
+      "text": "applying the uh"
+    },
+    {
+      "start": 1701.039,
+      "duration": 3.601,
+      "text": "directional derivative v is this last"
+    },
+    {
+      "start": 1703.36,
+      "duration": 4.4,
+      "text": "one here"
+    },
+    {
+      "start": 1704.64,
+      "duration": 3.12,
+      "text": "and so after all of this"
+    },
+    {
+      "start": 1708.24,
+      "duration": 8.319,
+      "text": "we obtain uh zero plus"
+    },
+    {
+      "start": 1711.44,
+      "duration": 8.64,
+      "text": "zero plus the sum as mu equals one to n"
+    },
+    {
+      "start": 1716.559,
+      "duration": 7.84,
+      "text": "um h mu composed with psi"
+    },
+    {
+      "start": 1720.08,
+      "duration": 9.68,
+      "text": "evaluated at p times by v"
+    },
+    {
+      "start": 1724.399,
+      "duration": 5.361,
+      "text": "of the muth coordinate of psi"
+    },
+    {
+      "start": 1731.84,
+      "duration": 5.76,
+      "text": "and uh how can you"
+    },
+    {
+      "start": 1735.76,
+      "duration": 4.08,
+      "text": "why is it that i've only got the the"
+    },
+    {
+      "start": 1737.6,
+      "duration": 5.439,
+      "text": "second term there well the first one is"
+    },
+    {
+      "start": 1739.84,
+      "duration": 3.199,
+      "text": "is zero right that's just"
+    },
+    {
+      "start": 1745.36,
+      "duration": 8.96,
+      "text": "sorry the second term is zero"
+    },
+    {
+      "start": 1753.039,
+      "duration": 2.88,
+      "text": "this term here is zero because it's just"
+    },
+    {
+      "start": 1754.32,
+      "duration": 2.64,
+      "text": "a constant it's just a number and v of"
+    },
+    {
+      "start": 1755.919,
+      "duration": 4.081,
+      "text": "any constant"
+    },
+    {
+      "start": 1756.96,
+      "duration": 3.04,
+      "text": "is zero"
+    },
+    {
+      "start": 1760.48,
+      "duration": 2.319,
+      "text": "and now"
+    },
+    {
+      "start": 1764.159,
+      "duration": 7.441,
+      "text": "we exploit remember"
+    },
+    {
+      "start": 1768.24,
+      "duration": 9.039,
+      "text": "that h mu at a is"
+    },
+    {
+      "start": 1771.6,
+      "duration": 8.72,
+      "text": "d f d x mu evaluated at x equals a"
+    },
+    {
+      "start": 1777.279,
+      "duration": 5.361,
+      "text": "and substituting that information in"
+    },
+    {
+      "start": 1780.32,
+      "duration": 2.32,
+      "text": "here"
+    },
+    {
+      "start": 1783.6,
+      "duration": 3.84,
+      "text": "tells us that v applied to f"
+    },
+    {
+      "start": 1787.6,
+      "duration": 3.28,
+      "text": "is really the sum as mu goes from one to"
+    },
+    {
+      "start": 1790.159,
+      "duration": 2.561,
+      "text": "n"
+    },
+    {
+      "start": 1790.88,
+      "duration": 3.12,
+      "text": "of d we've got to substitute for big f"
+    },
+    {
+      "start": 1792.72,
+      "duration": 4.559,
+      "text": "now which is little"
+    },
+    {
+      "start": 1794.0,
+      "duration": 6.64,
+      "text": "f composed with psi inverse dx mu"
+    },
+    {
+      "start": 1797.279,
+      "duration": 5.76,
+      "text": "evaluated at x equals a or otherwise"
+    },
+    {
+      "start": 1800.64,
+      "duration": 3.919,
+      "text": "known as psi p"
+    },
+    {
+      "start": 1803.039,
+      "duration": 5.841,
+      "text": "and then we've got some numbers that"
+    },
+    {
+      "start": 1804.559,
+      "duration": 8.161,
+      "text": "we'll call v mu"
+    },
+    {
+      "start": 1808.88,
+      "duration": 6.96,
+      "text": "so these blue thingies here"
+    },
+    {
+      "start": 1812.72,
+      "duration": 3.36,
+      "text": "they are just some numbers which we call"
+    },
+    {
+      "start": 1815.84,
+      "duration": 2.48,
+      "text": "v"
+    },
+    {
+      "start": 1816.08,
+      "duration": 2.24,
+      "text": "mu"
+    },
+    {
+      "start": 1819.919,
+      "duration": 4.401,
+      "text": "and this pinky stuff here"
+    },
+    {
+      "start": 1825.039,
+      "duration": 6.961,
+      "text": "is what we get over"
+    },
+    {
+      "start": 1828.72,
+      "duration": 3.92,
+      "text": "there but then look at this expression"
+    },
+    {
+      "start": 1832.0,
+      "duration": 4.88,
+      "text": "here"
+    },
+    {
+      "start": 1832.64,
+      "duration": 8.56,
+      "text": "we already named these things"
+    },
+    {
+      "start": 1836.88,
+      "duration": 7.84,
+      "text": "x mu of f so this tells us"
+    },
+    {
+      "start": 1841.2,
+      "duration": 5.92,
+      "text": "that v mu a v of f is none other than a"
+    },
+    {
+      "start": 1844.72,
+      "duration": 6.88,
+      "text": "linear combination"
+    },
+    {
+      "start": 1847.12,
+      "duration": 7.039,
+      "text": "of these x mu f's"
+    },
+    {
+      "start": 1851.6,
+      "duration": 2.559,
+      "text": "and we're done"
+    },
+    {
+      "start": 1855.36,
+      "duration": 3.679,
+      "text": "so we've managed to show that any"
+    },
+    {
+      "start": 1857.84,
+      "duration": 4.4,
+      "text": "directional derivative"
+    },
+    {
+      "start": 1859.039,
+      "duration": 4.561,
+      "text": "operator any v satisfying conditions one"
+    },
+    {
+      "start": 1862.24,
+      "duration": 2.559,
+      "text": "and two of the leibniz property in"
+    },
+    {
+      "start": 1863.6,
+      "duration": 3.12,
+      "text": "linearity"
+    },
+    {
+      "start": 1864.799,
+      "duration": 4.161,
+      "text": "when applied to a completely arbitrary"
+    },
+    {
+      "start": 1866.72,
+      "duration": 4.0,
+      "text": "scalar function on a manifold m"
+    },
+    {
+      "start": 1868.96,
+      "duration": 3.76,
+      "text": "is really just a linear combination of"
+    },
+    {
+      "start": 1870.72,
+      "duration": 5.36,
+      "text": "these n coordinate"
+    },
+    {
+      "start": 1872.72,
+      "duration": 7.839,
+      "text": "uh direct coordinate vectors x mu"
+    },
+    {
+      "start": 1876.08,
+      "duration": 4.479,
+      "text": "and the converse is obvious so"
+    },
+    {
+      "start": 1881.12,
+      "duration": 3.84,
+      "text": "what we have shown is we've not only"
+    },
+    {
+      "start": 1883.44,
+      "duration": 3.599,
+      "text": "shown that dimension of this vector"
+    },
+    {
+      "start": 1884.96,
+      "duration": 4.88,
+      "text": "space vp is the hooped for"
+    },
+    {
+      "start": 1887.039,
+      "duration": 3.841,
+      "text": "n we've also presented a basis and this"
+    },
+    {
+      "start": 1889.84,
+      "duration": 4.64,
+      "text": "basis"
+    },
+    {
+      "start": 1890.88,
+      "duration": 7.12,
+      "text": "really is the one that uh carries"
+    },
+    {
+      "start": 1894.48,
+      "duration": 5.199,
+      "text": "or connects with the the the notion of v"
+    },
+    {
+      "start": 1898.0,
+      "duration": 3.2,
+      "text": "as a directional derivative on euclidean"
+    },
+    {
+      "start": 1899.679,
+      "duration": 4.48,
+      "text": "space so it's"
+    },
+    {
+      "start": 1901.2,
+      "duration": 6.0,
+      "text": "it generalizes in a nice way and a"
+    },
+    {
+      "start": 1904.159,
+      "duration": 7.36,
+      "text": "natural way"
+    },
+    {
+      "start": 1907.2,
+      "duration": 4.319,
+      "text": "so i gave this this basis a name"
+    },
+    {
+      "start": 1912.0,
+      "duration": 3.519,
+      "text": "uh i said it aloud but let me just write"
+    },
+    {
+      "start": 1914.08,
+      "duration": 4.8,
+      "text": "it down"
+    },
+    {
+      "start": 1915.519,
+      "duration": 6.321,
+      "text": "so this basis x mu of v p is called the"
+    },
+    {
+      "start": 1918.88,
+      "duration": 2.96,
+      "text": "coordinate basis"
+    },
+    {
+      "start": 1930.159,
+      "duration": 6.161,
+      "text": "and it's often denoted depending on what"
+    },
+    {
+      "start": 1933.44,
+      "duration": 2.88,
+      "text": "textbook you look at"
+    },
+    {
+      "start": 1937.679,
+      "duration": 6.561,
+      "text": "uh x mu could be denoted d"
+    },
+    {
+      "start": 1941.039,
+      "duration": 7.52,
+      "text": "d x mu evaluated at p"
+    },
+    {
+      "start": 1944.24,
+      "duration": 7.439,
+      "text": "you might see it as uh d mu"
+    },
+    {
+      "start": 1948.559,
+      "duration": 6.161,
+      "text": "at p or"
+    },
+    {
+      "start": 1951.679,
+      "duration": 7.84,
+      "text": "uh some people just omit the p"
+    },
+    {
+      "start": 1954.72,
+      "duration": 4.799,
+      "text": "uh you never know right e mu"
+    },
+    {
+      "start": 1961.039,
+      "duration": 3.76,
+      "text": "the the textbook you pick up will denote"
+    },
+    {
+      "start": 1963.36,
+      "duration": 4.64,
+      "text": "this this basis"
+    },
+    {
+      "start": 1964.799,
+      "duration": 5.841,
+      "text": "in different notation depending"
+    },
+    {
+      "start": 1968.0,
+      "duration": 4.24,
+      "text": "so be prepared for there to be a wide"
+    },
+    {
+      "start": 1970.64,
+      "duration": 4.24,
+      "text": "variety of notations here"
+    },
+    {
+      "start": 1972.24,
+      "duration": 4.08,
+      "text": "for this basis now i'd just like to draw"
+    },
+    {
+      "start": 1974.88,
+      "duration": 5.2,
+      "text": "a little picture"
+    },
+    {
+      "start": 1976.32,
+      "duration": 5.839,
+      "text": "here's my cartoon of m again"
+    },
+    {
+      "start": 1980.08,
+      "duration": 4.319,
+      "text": "of this of this basis what does it look"
+    },
+    {
+      "start": 1982.159,
+      "duration": 2.24,
+      "text": "like"
+    },
+    {
+      "start": 1984.799,
+      "duration": 6.24,
+      "text": "what are you meant to think so here's"
+    },
+    {
+      "start": 1987.84,
+      "duration": 6.48,
+      "text": "m is uh d"
+    },
+    {
+      "start": 1991.039,
+      "duration": 4.64,
+      "text": "d x mu at p"
+    },
+    {
+      "start": 1994.32,
+      "duration": 3.76,
+      "text": "and you're meant to think you really are"
+    },
+    {
+      "start": 1995.679,
+      "duration": 4.401,
+      "text": "meant to think of it as a as a vector"
+    },
+    {
+      "start": 1998.08,
+      "duration": 4.079,
+      "text": "tangent to m of course you can't say the"
+    },
+    {
+      "start": 2000.08,
+      "duration": 5.28,
+      "text": "words tangent"
+    },
+    {
+      "start": 2002.159,
+      "duration": 5.681,
+      "text": "m without uh"
+    },
+    {
+      "start": 2005.36,
+      "duration": 3.52,
+      "text": "thinking of there being an ambient space"
+    },
+    {
+      "start": 2007.84,
+      "duration": 3.199,
+      "text": "but"
+    },
+    {
+      "start": 2008.88,
+      "duration": 4.32,
+      "text": "you think of at each point p there's one"
+    },
+    {
+      "start": 2011.039,
+      "duration": 4.48,
+      "text": "of these ddx mu thingies"
+    },
+    {
+      "start": 2013.2,
+      "duration": 3.44,
+      "text": "and under under psi under this"
+    },
+    {
+      "start": 2015.519,
+      "duration": 4.321,
+      "text": "coordinate"
+    },
+    {
+      "start": 2016.64,
+      "duration": 3.2,
+      "text": "chart psi"
+    },
+    {
+      "start": 2020.64,
+      "duration": 5.6,
+      "text": "these this vector operator at p"
+    },
+    {
+      "start": 2024.32,
+      "duration": 4.239,
+      "text": "becomes literally the vector operator"
+    },
+    {
+      "start": 2026.24,
+      "duration": 4.48,
+      "text": "that goes in the coordinate direction"
+    },
+    {
+      "start": 2028.559,
+      "duration": 4.72,
+      "text": "the corresponding coordinate direction"
+    },
+    {
+      "start": 2030.72,
+      "duration": 5.52,
+      "text": "in rn"
+    },
+    {
+      "start": 2033.279,
+      "duration": 2.961,
+      "text": "so at psi p"
+    },
+    {
+      "start": 2036.399,
+      "duration": 7.201,
+      "text": "this operator becomes d d x mu"
+    },
+    {
+      "start": 2040.159,
+      "duration": 6.561,
+      "text": "at psi p and so"
+    },
+    {
+      "start": 2043.6,
+      "duration": 6.16,
+      "text": "all these this is"
+    },
+    {
+      "start": 2046.72,
+      "duration": 6.399,
+      "text": "a field of operators"
+    },
+    {
+      "start": 2049.76,
+      "duration": 5.599,
+      "text": "and in under psi or in"
+    },
+    {
+      "start": 2053.119,
+      "duration": 3.121,
+      "text": "the corresponding coordinate chart all"
+    },
+    {
+      "start": 2055.359,
+      "duration": 3.48,
+      "text": "these vectors point"
+    },
+    {
+      "start": 2056.24,
+      "duration": 5.599,
+      "text": "exactly along the coordinate direction"
+    },
+    {
+      "start": 2058.839,
+      "duration": 3.0,
+      "text": "view"
+    },
+    {
+      "start": 2064.24,
+      "duration": 3.439,
+      "text": "okay so that's how you meant to think of"
+    },
+    {
+      "start": 2065.52,
+      "duration": 3.68,
+      "text": "these they're operators they eat scalar"
+    },
+    {
+      "start": 2067.679,
+      "duration": 3.44,
+      "text": "functions on the manifold"
+    },
+    {
+      "start": 2069.2,
+      "duration": 3.28,
+      "text": "and they correspond to at a point with"
+    },
+    {
+      "start": 2071.119,
+      "duration": 4.72,
+      "text": "the notion of a directional derivative"
+    },
+    {
+      "start": 2072.48,
+      "duration": 3.359,
+      "text": "in euclidean space at that point"
+    },
+    {
+      "start": 2080.639,
+      "duration": 4.641,
+      "text": "okay suppose but is it well defined is"
+    },
+    {
+      "start": 2083.44,
+      "duration": 2.719,
+      "text": "this notion now a good notion or have we"
+    },
+    {
+      "start": 2085.28,
+      "duration": 2.319,
+      "text": "just"
+    },
+    {
+      "start": 2086.159,
+      "duration": 3.68,
+      "text": "done something silly and introduce"
+    },
+    {
+      "start": 2087.599,
+      "duration": 5.361,
+      "text": "something horribly coordinate dependent"
+    },
+    {
+      "start": 2089.839,
+      "duration": 6.881,
+      "text": "well let's find out suppose we had"
+    },
+    {
+      "start": 2092.96,
+      "duration": 3.76,
+      "text": "chosen a different coordinate system"
+    },
+    {
+      "start": 2099.119,
+      "duration": 4.72,
+      "text": "or a different chart"
+    },
+    {
+      "start": 2104.72,
+      "duration": 5.68,
+      "text": "then we would have done everything with"
+    },
+    {
+      "start": 2106.4,
+      "duration": 4.0,
+      "text": "respect to a new or different coordinate"
+    },
+    {
+      "start": 2114.839,
+      "duration": 3.0,
+      "text": "basis"
+    },
+    {
+      "start": 2118.16,
+      "duration": 4.4,
+      "text": "so we're going to introduce second"
+    },
+    {
+      "start": 2119.599,
+      "duration": 2.961,
+      "text": "coordinate basis"
+    },
+    {
+      "start": 2124.24,
+      "duration": 8.879,
+      "text": "which we'll have to call x prime nu"
+    },
+    {
+      "start": 2130.16,
+      "duration": 4.32,
+      "text": "but can we express our first coordinate"
+    },
+    {
+      "start": 2133.119,
+      "duration": 2.48,
+      "text": "basis in terms of our second coordinate"
+    },
+    {
+      "start": 2134.48,
+      "duration": 3.359,
+      "text": "basis well you betcha"
+    },
+    {
+      "start": 2135.599,
+      "duration": 2.24,
+      "text": "right"
+    },
+    {
+      "start": 2143.599,
+      "duration": 6.721,
+      "text": "so x mu our original coordinate basis"
+    },
+    {
+      "start": 2147.04,
+      "duration": 3.28,
+      "text": "is a linear combination"
+    },
+    {
+      "start": 2150.88,
+      "duration": 6.0,
+      "text": "of these new coordinate bases and what"
+    },
+    {
+      "start": 2155.119,
+      "duration": 2.96,
+      "text": "kind of linear combination is it well"
+    },
+    {
+      "start": 2156.88,
+      "duration": 4.32,
+      "text": "you've got to compute"
+    },
+    {
+      "start": 2158.079,
+      "duration": 5.52,
+      "text": "the jacobian or the"
+    },
+    {
+      "start": 2161.2,
+      "duration": 4.08,
+      "text": "derivative of the new coordinate in the"
+    },
+    {
+      "start": 2163.599,
+      "duration": 5.041,
+      "text": "new basis with respect to the"
+    },
+    {
+      "start": 2165.28,
+      "duration": 5.52,
+      "text": "mu coordinate in the old basis at psi p"
+    },
+    {
+      "start": 2168.64,
+      "duration": 3.92,
+      "text": "that's the linear combination so this is"
+    },
+    {
+      "start": 2170.8,
+      "duration": 2.799,
+      "text": "a little exercise for you just to prove"
+    },
+    {
+      "start": 2172.56,
+      "duration": 4.0,
+      "text": "that"
+    },
+    {
+      "start": 2173.599,
+      "duration": 4.24,
+      "text": "there so that allows you to express one"
+    },
+    {
+      "start": 2176.56,
+      "duration": 2.64,
+      "text": "tangent vector expressed in one"
+    },
+    {
+      "start": 2177.839,
+      "duration": 10.0,
+      "text": "coordinate basis with respect to a new"
+    },
+    {
+      "start": 2179.2,
+      "duration": 8.639,
+      "text": "coordinate basis"
+    },
+    {
+      "start": 2190.16,
+      "duration": 4.4,
+      "text": "so little x prime nu denotes"
+    },
+    {
+      "start": 2197.04,
+      "duration": 4.799,
+      "text": "the newth oops"
+    },
+    {
+      "start": 2202.16,
+      "duration": 2.64,
+      "text": "component"
+    },
+    {
+      "start": 2208.4,
+      "duration": 7.199,
+      "text": "of psi prime composed psi inverse"
+    },
+    {
+      "start": 2211.76,
+      "duration": 5.44,
+      "text": "now i realize that we've got big x's and"
+    },
+    {
+      "start": 2215.599,
+      "duration": 3.52,
+      "text": "little x's in this story"
+    },
+    {
+      "start": 2217.2,
+      "duration": 3.52,
+      "text": "and the notation may not be entirely"
+    },
+    {
+      "start": 2219.119,
+      "duration": 3.681,
+      "text": "clear"
+    },
+    {
+      "start": 2220.72,
+      "duration": 3.44,
+      "text": "so let me just go backwards here through"
+    },
+    {
+      "start": 2222.8,
+      "duration": 4.88,
+      "text": "the notes and just"
+    },
+    {
+      "start": 2224.16,
+      "duration": 5.76,
+      "text": "slightly just use"
+    },
+    {
+      "start": 2227.68,
+      "duration": 5.2,
+      "text": "a notation that clara re update the"
+    },
+    {
+      "start": 2229.92,
+      "duration": 6.56,
+      "text": "notation here slightly to clarify this"
+    },
+    {
+      "start": 2232.88,
+      "duration": 6.479,
+      "text": "so we have this x mu here this is meant"
+    },
+    {
+      "start": 2236.48,
+      "duration": 5.44,
+      "text": "to be a capital x"
+    },
+    {
+      "start": 2239.359,
+      "duration": 4.561,
+      "text": "and this is meant to be this thing in"
+    },
+    {
+      "start": 2241.92,
+      "duration": 5.199,
+      "text": "blue is meant to be a little x"
+    },
+    {
+      "start": 2243.92,
+      "duration": 3.199,
+      "text": "so the thing in yellow"
+    },
+    {
+      "start": 2251.68,
+      "duration": 3.6,
+      "text": "that's a capital"
+    },
+    {
+      "start": 2255.359,
+      "duration": 2.48,
+      "text": "x"
+    },
+    {
+      "start": 2258.56,
+      "duration": 13.279,
+      "text": "and the thing in blue is lowercase"
+    },
+    {
+      "start": 2272.72,
+      "duration": 5.6,
+      "text": "so i this"
+    },
+    {
+      "start": 2276.16,
+      "duration": 3.04,
+      "text": "potential confusion won't last for so"
+    },
+    {
+      "start": 2278.32,
+      "duration": 3.279,
+      "text": "long"
+    },
+    {
+      "start": 2279.2,
+      "duration": 3.639,
+      "text": "basically assume every x is lower case"
+    },
+    {
+      "start": 2281.599,
+      "duration": 3.841,
+      "text": "unless"
+    },
+    {
+      "start": 2282.839,
+      "duration": 5.881,
+      "text": "i put"
+    },
+    {
+      "start": 2285.44,
+      "duration": 3.28,
+      "text": "little serifs on it"
+    },
+    {
+      "start": 2288.8,
+      "duration": 2.4,
+      "text": "so i'm just looking through here the"
+    },
+    {
+      "start": 2289.92,
+      "duration": 2.96,
+      "text": "notes to see if i've used any other"
+    },
+    {
+      "start": 2291.2,
+      "duration": 6.879,
+      "text": "instances of capital x here's one other"
+    },
+    {
+      "start": 2292.88,
+      "duration": 8.16,
+      "text": "instance of capital x here"
+    },
+    {
+      "start": 2298.079,
+      "duration": 2.961,
+      "text": "a capital x here"
+    },
+    {
+      "start": 2301.839,
+      "duration": 2.961,
+      "text": "capital x here"
+    },
+    {
+      "start": 2308.72,
+      "duration": 7.52,
+      "text": "capital x here here's another capital"
+    },
+    {
+      "start": 2313.2,
+      "duration": 5.12,
+      "text": "here's a capital and those are little"
+    },
+    {
+      "start": 2316.24,
+      "duration": 4.0,
+      "text": "x's so assume that all x is a lower case"
+    },
+    {
+      "start": 2318.32,
+      "duration": 4.16,
+      "text": "unless i take some time to decorate them"
+    },
+    {
+      "start": 2320.24,
+      "duration": 4.72,
+      "text": "with serifs"
+    },
+    {
+      "start": 2322.48,
+      "duration": 3.119,
+      "text": "in the end these kind of things"
+    },
+    {
+      "start": 2324.96,
+      "duration": 3.92,
+      "text": "shouldn't"
+    },
+    {
+      "start": 2325.599,
+      "duration": 5.121,
+      "text": "cause too much confusion because"
+    },
+    {
+      "start": 2328.88,
+      "duration": 4.88,
+      "text": "often the object that you're talking"
+    },
+    {
+      "start": 2330.72,
+      "duration": 3.04,
+      "text": "about is"
+    },
+    {
+      "start": 2334.0,
+      "duration": 3.92,
+      "text": "not is clear from the context but and by"
+    },
+    {
+      "start": 2336.96,
+      "duration": 4.879,
+      "text": "context i mean"
+    },
+    {
+      "start": 2337.92,
+      "duration": 3.919,
+      "text": "the things that it acts on"
+    },
+    {
+      "start": 2343.68,
+      "duration": 5.679,
+      "text": "okay so now we know how to express one"
+    },
+    {
+      "start": 2346.96,
+      "duration": 3.52,
+      "text": "coordinate basis in terms of for one"
+    },
+    {
+      "start": 2349.359,
+      "duration": 4.72,
+      "text": "chart in terms of the"
+    },
+    {
+      "start": 2350.48,
+      "duration": 4.639,
+      "text": "the coordinates of another chart now"
+    },
+    {
+      "start": 2354.079,
+      "duration": 4.481,
+      "text": "we're about ready"
+    },
+    {
+      "start": 2355.119,
+      "duration": 14.72,
+      "text": "to start building up mechanics"
+    },
+    {
+      "start": 2358.56,
+      "duration": 11.279,
+      "text": "on smooth manifolds"
+    },
+    {
+      "start": 2378.32,
+      "duration": 6.64,
+      "text": "so we've presented a nice basis x mu"
+    },
+    {
+      "start": 2382.0,
+      "duration": 3.52,
+      "text": "for our tangent space vp that means that"
+    },
+    {
+      "start": 2384.96,
+      "duration": 2.0,
+      "text": "any"
+    },
+    {
+      "start": 2385.52,
+      "duration": 3.839,
+      "text": "any tangent vector is a linear"
+    },
+    {
+      "start": 2386.96,
+      "duration": 5.04,
+      "text": "combination of this basis or whatever"
+    },
+    {
+      "start": 2389.359,
+      "duration": 3.121,
+      "text": "basis takes your fancy with respect to"
+    },
+    {
+      "start": 2392.0,
+      "duration": 3.28,
+      "text": "whatever"
+    },
+    {
+      "start": 2392.48,
+      "duration": 5.68,
+      "text": "coordinate chart takes your fancy so"
+    },
+    {
+      "start": 2395.28,
+      "duration": 2.88,
+      "text": "always now"
+    },
+    {
+      "start": 2398.64,
+      "duration": 3.04,
+      "text": "we can express tangent vectors in terms"
+    },
+    {
+      "start": 2401.119,
+      "duration": 3.281,
+      "text": "of"
+    },
+    {
+      "start": 2401.68,
+      "duration": 2.72,
+      "text": "this basis"
+    },
+    {
+      "start": 2406.8,
+      "duration": 6.96,
+      "text": "and how do we do we if you had chosen to"
+    },
+    {
+      "start": 2411.04,
+      "duration": 5.84,
+      "text": "use a different coordinate chart"
+    },
+    {
+      "start": 2413.76,
+      "duration": 6.16,
+      "text": "or you you're forced by circumstance"
+    },
+    {
+      "start": 2416.88,
+      "duration": 4.719,
+      "text": "to express your results in terms of"
+    },
+    {
+      "start": 2419.92,
+      "duration": 3.6,
+      "text": "another coordinate chart"
+    },
+    {
+      "start": 2421.599,
+      "duration": 4.081,
+      "text": "then you can express your tangent"
+    },
+    {
+      "start": 2423.52,
+      "duration": 5.04,
+      "text": "vectors"
+    },
+    {
+      "start": 2425.68,
+      "duration": 5.36,
+      "text": "in the new basis using this"
+    },
+    {
+      "start": 2428.56,
+      "duration": 5.68,
+      "text": "transformation rule"
+    },
+    {
+      "start": 2431.04,
+      "duration": 3.2,
+      "text": "that i wrote before"
+    },
+    {
+      "start": 2436.48,
+      "duration": 6.639,
+      "text": "so these coefficients of our vector"
+    },
+    {
+      "start": 2439.839,
+      "duration": 6.881,
+      "text": "v our tangent vector v"
+    },
+    {
+      "start": 2443.119,
+      "duration": 5.841,
+      "text": "in a new basis you can find them by"
+    },
+    {
+      "start": 2446.72,
+      "duration": 7.119,
+      "text": "multiplying them by them this"
+    },
+    {
+      "start": 2448.96,
+      "duration": 4.879,
+      "text": "multiplying them by this jacobian factor"
+    },
+    {
+      "start": 2456.88,
+      "duration": 3.28,
+      "text": "and this thing here is a name"
+    },
+    {
+      "start": 2463.04,
+      "duration": 4.799,
+      "text": "this is the vector transformation law"
+    },
+    {
+      "start": 2475.52,
+      "duration": 3.44,
+      "text": "and so now we've got a way to express"
+    },
+    {
+      "start": 2477.359,
+      "duration": 3.521,
+      "text": "vectors in one basis with respect to"
+    },
+    {
+      "start": 2478.96,
+      "duration": 3.28,
+      "text": "another basis we have a coordinate"
+    },
+    {
+      "start": 2480.88,
+      "duration": 3.04,
+      "text": "effectively we have the building blocks"
+    },
+    {
+      "start": 2482.24,
+      "duration": 5.359,
+      "text": "for a coordinate free"
+    },
+    {
+      "start": 2483.92,
+      "duration": 6.64,
+      "text": "notion of"
+    },
+    {
+      "start": 2487.599,
+      "duration": 2.961,
+      "text": "a tangent vector"
+    },
+    {
+      "start": 2492.319,
+      "duration": 5.28,
+      "text": "and now we can do mechanics do a little"
+    },
+    {
+      "start": 2494.8,
+      "duration": 2.799,
+      "text": "bit of mechanics"
+    },
+    {
+      "start": 2506.88,
+      "duration": 3.28,
+      "text": "so to do mechanics you need to have the"
+    },
+    {
+      "start": 2508.4,
+      "duration": 4.48,
+      "text": "notion of a trajectory of a"
+    },
+    {
+      "start": 2510.16,
+      "duration": 2.72,
+      "text": "test particle"
+    },
+    {
+      "start": 2517.76,
+      "duration": 6.079,
+      "text": "so a trajectory is none other than a"
+    },
+    {
+      "start": 2519.68,
+      "duration": 4.159,
+      "text": "smooth curve"
+    },
+    {
+      "start": 2528.96,
+      "duration": 3.92,
+      "text": "so we have a test particle moving in a"
+    },
+    {
+      "start": 2530.64,
+      "duration": 4.16,
+      "text": "manifold m"
+    },
+    {
+      "start": 2532.88,
+      "duration": 3.52,
+      "text": "and we're gonna we need a notion of a"
+    },
+    {
+      "start": 2534.8,
+      "duration": 2.88,
+      "text": "smooth curve that it follows"
+    },
+    {
+      "start": 2536.4,
+      "duration": 2.48,
+      "text": "it doesn't have to be smooth but we're"
+    },
+    {
+      "start": 2537.68,
+      "duration": 2.32,
+      "text": "going to stick with smooth throughout"
+    },
+    {
+      "start": 2538.88,
+      "duration": 4.719,
+      "text": "this course"
+    },
+    {
+      "start": 2540.0,
+      "duration": 8.0,
+      "text": "is a c infinity map"
+    },
+    {
+      "start": 2543.599,
+      "duration": 9.361,
+      "text": "c which goes from r into m"
+    },
+    {
+      "start": 2548.0,
+      "duration": 4.96,
+      "text": "or or an interval thereof"
+    },
+    {
+      "start": 2555.359,
+      "duration": 11.921,
+      "text": "so you could go from an interval i"
+    },
+    {
+      "start": 2565.52,
+      "duration": 3.04,
+      "text": "into m you don't have to have an"
+    },
+    {
+      "start": 2567.28,
+      "duration": 1.76,
+      "text": "infinitely long trajectory you could"
+    },
+    {
+      "start": 2568.56,
+      "duration": 3.519,
+      "text": "have sort of"
+    },
+    {
+      "start": 2569.04,
+      "duration": 3.92,
+      "text": "trajectory segments they're also smooth"
+    },
+    {
+      "start": 2572.079,
+      "duration": 2.481,
+      "text": "curves"
+    },
+    {
+      "start": 2572.96,
+      "duration": 3.52,
+      "text": "so the picture you should have here is"
+    },
+    {
+      "start": 2574.56,
+      "duration": 3.759,
+      "text": "that you've got you think of this"
+    },
+    {
+      "start": 2576.48,
+      "duration": 3.68,
+      "text": "you have the real numbers here you think"
+    },
+    {
+      "start": 2578.319,
+      "duration": 5.28,
+      "text": "of that as time"
+    },
+    {
+      "start": 2580.16,
+      "duration": 5.52,
+      "text": "proper time and"
+    },
+    {
+      "start": 2583.599,
+      "duration": 4.081,
+      "text": "c is a map that takes this the flat"
+    },
+    {
+      "start": 2585.68,
+      "duration": 8.159,
+      "text": "including one dimensional space"
+    },
+    {
+      "start": 2587.68,
+      "duration": 6.159,
+      "text": "r and gives us an image for each point"
+    },
+    {
+      "start": 2598.079,
+      "duration": 3.841,
+      "text": "so c is this map and then"
+    },
+    {
+      "start": 2602.56,
+      "duration": 4.96,
+      "text": "when applied to r it gives us this"
+    },
+    {
+      "start": 2604.4,
+      "duration": 7.76,
+      "text": "lovely trajectory"
+    },
+    {
+      "start": 2607.52,
+      "duration": 7.44,
+      "text": "inside m like so"
+    },
+    {
+      "start": 2612.16,
+      "duration": 3.6,
+      "text": "it's the image of c and at one point on"
+    },
+    {
+      "start": 2614.96,
+      "duration": 6.879,
+      "text": "r"
+    },
+    {
+      "start": 2615.76,
+      "duration": 6.079,
+      "text": "c gives us the point p itself"
+    },
+    {
+      "start": 2628.56,
+      "duration": 3.44,
+      "text": "now here's a nice thing if you have a"
+    },
+    {
+      "start": 2630.079,
+      "duration": 2.721,
+      "text": "curve a smooth curve in m you can"
+    },
+    {
+      "start": 2632.0,
+      "duration": 16.24,
+      "text": "associate"
+    },
+    {
+      "start": 2632.8,
+      "duration": 17.12,
+      "text": "to each point p on c a tangent vector"
+    },
+    {
+      "start": 2648.24,
+      "duration": 4.48,
+      "text": "so how do you go from having a curve to"
+    },
+    {
+      "start": 2649.92,
+      "duration": 2.8,
+      "text": "a tangent vector"
+    },
+    {
+      "start": 2653.359,
+      "duration": 3.121,
+      "text": "well this is the way some textbooks"
+    },
+    {
+      "start": 2655.04,
+      "duration": 2.96,
+      "text": "present tangent vectors in the first"
+    },
+    {
+      "start": 2656.48,
+      "duration": 4.72,
+      "text": "case"
+    },
+    {
+      "start": 2658.0,
+      "duration": 6.079,
+      "text": "so what you do is you set for"
+    },
+    {
+      "start": 2661.2,
+      "duration": 4.639,
+      "text": "a given f a given smooth function on m"
+    },
+    {
+      "start": 2664.079,
+      "duration": 3.76,
+      "text": "what you do is you set the"
+    },
+    {
+      "start": 2665.839,
+      "duration": 3.28,
+      "text": "t of f this is to be our differential"
+    },
+    {
+      "start": 2667.839,
+      "duration": 2.721,
+      "text": "directional derivative"
+    },
+    {
+      "start": 2669.119,
+      "duration": 4.0,
+      "text": "how do you get it well what you should"
+    },
+    {
+      "start": 2670.56,
+      "duration": 4.08,
+      "text": "do is you differentiate along the curve"
+    },
+    {
+      "start": 2673.119,
+      "duration": 6.641,
+      "text": "the function composed"
+    },
+    {
+      "start": 2674.64,
+      "duration": 5.12,
+      "text": "with c and then evaluated at the point p"
+    },
+    {
+      "start": 2683.92,
+      "duration": 7.12,
+      "text": "and then it's just a chain rule away"
+    },
+    {
+      "start": 2687.04,
+      "duration": 7.279,
+      "text": "from expressing things"
+    },
+    {
+      "start": 2691.04,
+      "duration": 3.279,
+      "text": "in our old notation"
+    },
+    {
+      "start": 2699.52,
+      "duration": 6.319,
+      "text": "big x mu of f"
+    },
+    {
+      "start": 2715.2,
+      "duration": 4.639,
+      "text": "where i've introduced some notation here"
+    },
+    {
+      "start": 2722.319,
+      "duration": 3.441,
+      "text": "the muth component of psi composed with"
+    },
+    {
+      "start": 2725.28,
+      "duration": 4.72,
+      "text": "c"
+    },
+    {
+      "start": 2725.76,
+      "duration": 7.52,
+      "text": "is just called x mu of t"
+    },
+    {
+      "start": 2730.0,
+      "duration": 5.44,
+      "text": "okay so that's how we get from a curve"
+    },
+    {
+      "start": 2733.28,
+      "duration": 14.559,
+      "text": "in a manifold we can get a derivative"
+    },
+    {
+      "start": 2735.44,
+      "duration": 12.399,
+      "text": "directional derivative operator"
+    },
+    {
+      "start": 2751.04,
+      "duration": 6.16,
+      "text": "now it's worth saying that this"
+    },
+    {
+      "start": 2752.16,
+      "duration": 5.04,
+      "text": "expansion works for any coordinate basis"
+    },
+    {
+      "start": 2758.839,
+      "duration": 3.0,
+      "text": "right"
+    },
+    {
+      "start": 2770.319,
+      "duration": 7.601,
+      "text": "any coordinate basis"
+    },
+    {
+      "start": 2774.0,
+      "duration": 3.92,
+      "text": "and we always find that the components"
+    },
+    {
+      "start": 2778.56,
+      "duration": 11.279,
+      "text": "of our tangent vector"
+    },
+    {
+      "start": 2782.48,
+      "duration": 7.359,
+      "text": "are given by d mu dx mu dt"
+    },
+    {
+      "start": 2790.319,
+      "duration": 2.481,
+      "text": "like so"
+    },
+    {
+      "start": 2794.96,
+      "duration": 3.44,
+      "text": "so i've said it already many times but i"
+    },
+    {
+      "start": 2796.96,
+      "duration": 4.08,
+      "text": "may as well write it out now"
+    },
+    {
+      "start": 2798.4,
+      "duration": 4.32,
+      "text": "again v p this vector space of"
+    },
+    {
+      "start": 2801.04,
+      "duration": 5.36,
+      "text": "directional derivatives of being"
+    },
+    {
+      "start": 2802.72,
+      "duration": 15.119,
+      "text": "linearity and leibniz is called"
+    },
+    {
+      "start": 2806.4,
+      "duration": 11.439,
+      "text": "the tangent space at p"
+    },
+    {
+      "start": 2821.2,
+      "duration": 5.04,
+      "text": "so this is just the tangent space at a"
+    },
+    {
+      "start": 2822.56,
+      "duration": 3.68,
+      "text": "given point we can"
+    },
+    {
+      "start": 2828.72,
+      "duration": 3.44,
+      "text": "tangent space we can also define tangent"
+    },
+    {
+      "start": 2831.2,
+      "duration": 2.8,
+      "text": "space"
+    },
+    {
+      "start": 2832.16,
+      "duration": 3.12,
+      "text": "for the whole manifold what is that well"
+    },
+    {
+      "start": 2834.0,
+      "duration": 3.28,
+      "text": "we just take the union"
+    },
+    {
+      "start": 2835.28,
+      "duration": 3.28,
+      "text": "we stick together all the tangent spaces"
+    },
+    {
+      "start": 2837.28,
+      "duration": 6.4,
+      "text": "for every point p"
+    },
+    {
+      "start": 2838.56,
+      "duration": 7.519,
+      "text": "on the manifold so if you take u of p"
+    },
+    {
+      "start": 2843.68,
+      "duration": 4.96,
+      "text": "of v of p we might give that a name we"
+    },
+    {
+      "start": 2846.079,
+      "duration": 3.921,
+      "text": "might call it tm"
+    },
+    {
+      "start": 2848.64,
+      "duration": 3.6,
+      "text": "so stick all these vector spaces"
+    },
+    {
+      "start": 2850.0,
+      "duration": 6.0,
+      "text": "together now what do you have"
+    },
+    {
+      "start": 2852.24,
+      "duration": 3.76,
+      "text": "you have the full tangent space"
+    },
+    {
+      "start": 2856.72,
+      "duration": 3.119,
+      "text": "for m"
+    },
+    {
+      "start": 2861.119,
+      "duration": 6.72,
+      "text": "now comes uh the warning and you know"
+    },
+    {
+      "start": 2864.079,
+      "duration": 5.841,
+      "text": "we've tried to build a vector space"
+    },
+    {
+      "start": 2867.839,
+      "duration": 3.441,
+      "text": "you know although our manifolds we can"
+    },
+    {
+      "start": 2869.92,
+      "duration": 3.76,
+      "text": "no longer"
+    },
+    {
+      "start": 2871.28,
+      "duration": 4.48,
+      "text": "our smooth manifolds may not necessarily"
+    },
+    {
+      "start": 2873.68,
+      "duration": 3.84,
+      "text": "be vector spaces we managed to associate"
+    },
+    {
+      "start": 2875.76,
+      "duration": 4.16,
+      "text": "a vector space to each point of a smooth"
+    },
+    {
+      "start": 2877.52,
+      "duration": 4.319,
+      "text": "manifold"
+    },
+    {
+      "start": 2879.92,
+      "duration": 3.199,
+      "text": "and you might start wondering well you"
+    },
+    {
+      "start": 2881.839,
+      "duration": 4.0,
+      "text": "know"
+    },
+    {
+      "start": 2883.119,
+      "duration": 4.561,
+      "text": "looks a bit like m is a smooth is a"
+    },
+    {
+      "start": 2885.839,
+      "duration": 3.121,
+      "text": "vector space"
+    },
+    {
+      "start": 2887.68,
+      "duration": 3.679,
+      "text": "okay this is where you've got to be real"
+    },
+    {
+      "start": 2888.96,
+      "duration": 5.28,
+      "text": "careful so although"
+    },
+    {
+      "start": 2891.359,
+      "duration": 4.48,
+      "text": "the dimensions of these vector spaces"
+    },
+    {
+      "start": 2894.24,
+      "duration": 2.16,
+      "text": "these all these different points are the"
+    },
+    {
+      "start": 2895.839,
+      "duration": 2.401,
+      "text": "same"
+    },
+    {
+      "start": 2896.4,
+      "duration": 3.28,
+      "text": "all right that was the theorem we proved"
+    },
+    {
+      "start": 2898.24,
+      "duration": 3.599,
+      "text": "for all points in"
+    },
+    {
+      "start": 2899.68,
+      "duration": 4.08,
+      "text": "m the dimensions of these vector spaces"
+    },
+    {
+      "start": 2901.839,
+      "duration": 5.201,
+      "text": "are the same"
+    },
+    {
+      "start": 2903.76,
+      "duration": 6.079,
+      "text": "uh although that is the true"
+    },
+    {
+      "start": 2907.04,
+      "duration": 4.0,
+      "text": "the and and further right when two"
+    },
+    {
+      "start": 2909.839,
+      "duration": 2.641,
+      "text": "vector spaces have the same dimension"
+    },
+    {
+      "start": 2911.04,
+      "duration": 4.799,
+      "text": "they're isomorphic there exists an"
+    },
+    {
+      "start": 2912.48,
+      "duration": 3.359,
+      "text": "isomorphism between them"
+    },
+    {
+      "start": 2917.839,
+      "duration": 3.841,
+      "text": "so thus vp is the same as vq there"
+    },
+    {
+      "start": 2920.72,
+      "duration": 4.08,
+      "text": "exists a"
+    },
+    {
+      "start": 2921.68,
+      "duration": 4.96,
+      "text": "rotation orthogonal linear or"
+    },
+    {
+      "start": 2924.8,
+      "duration": 4.559,
+      "text": "there is a linear transformation which"
+    },
+    {
+      "start": 2926.64,
+      "duration": 5.84,
+      "text": "which identifies vp with vq"
+    },
+    {
+      "start": 2929.359,
+      "duration": 6.24,
+      "text": "invertible linear transformation"
+    },
+    {
+      "start": 2932.48,
+      "duration": 3.599,
+      "text": "these are isomorphic vector spaces for"
+    },
+    {
+      "start": 2935.599,
+      "duration": 3.201,
+      "text": "all p"
+    },
+    {
+      "start": 2936.079,
+      "duration": 7.76,
+      "text": "and q although there exists these"
+    },
+    {
+      "start": 2938.8,
+      "duration": 5.039,
+      "text": "isomorphisms they're not natural"
+    },
+    {
+      "start": 2954.96,
+      "duration": 5.52,
+      "text": "uh they're completely they're chosen uh"
+    },
+    {
+      "start": 2958.72,
+      "duration": 3.68,
+      "text": "yeah there's no canonical way to choose"
+    },
+    {
+      "start": 2960.48,
+      "duration": 4.879,
+      "text": "an isomorphism between two vector spaces"
+    },
+    {
+      "start": 2962.4,
+      "duration": 2.959,
+      "text": "without extra data"
+    },
+    {
+      "start": 2965.68,
+      "duration": 6.159,
+      "text": "there's no standard way to choose this"
+    },
+    {
+      "start": 2968.839,
+      "duration": 3.0,
+      "text": "isomorphism"
+    },
+    {
+      "start": 2979.52,
+      "duration": 7.28,
+      "text": "isomorphism means identification"
+    },
+    {
+      "start": 2985.359,
+      "duration": 2.401,
+      "text": "in particular you could have two points"
+    },
+    {
+      "start": 2986.8,
+      "duration": 2.24,
+      "text": "that are really close and the"
+    },
+    {
+      "start": 2987.76,
+      "duration": 2.72,
+      "text": "isomorphisms or the"
+    },
+    {
+      "start": 2989.04,
+      "duration": 3.6,
+      "text": "identifications between these two vector"
+    },
+    {
+      "start": 2990.48,
+      "duration": 3.44,
+      "text": "spaces is wildly varying like super"
+    },
+    {
+      "start": 2992.64,
+      "duration": 3.12,
+      "text": "wildly varying"
+    },
+    {
+      "start": 2993.92,
+      "duration": 4.08,
+      "text": "as you change the points around the"
+    },
+    {
+      "start": 2995.76,
+      "duration": 3.839,
+      "text": "manifold you might think that's absurd"
+    },
+    {
+      "start": 2998.0,
+      "duration": 3.44,
+      "text": "i'm sure i could choose a smooth way of"
+    },
+    {
+      "start": 2999.599,
+      "duration": 4.24,
+      "text": "doing it well yeah"
+    },
+    {
+      "start": 3001.44,
+      "duration": 5.28,
+      "text": "yeah yeah you can but you need a little"
+    },
+    {
+      "start": 3003.839,
+      "duration": 2.881,
+      "text": "bit of extra data"
+    },
+    {
+      "start": 3009.04,
+      "duration": 4.799,
+      "text": "so this this isomorphism could be quite"
+    },
+    {
+      "start": 3011.44,
+      "duration": 2.399,
+      "text": "wild"
+    },
+    {
+      "start": 3020.48,
+      "duration": 5.76,
+      "text": "to get a good choice"
+    },
+    {
+      "start": 3024.16,
+      "duration": 4.0,
+      "text": "and i won't tell you what good means yet"
+    },
+    {
+      "start": 3026.24,
+      "duration": 3.119,
+      "text": "just put in quote marks get a good"
+    },
+    {
+      "start": 3028.16,
+      "duration": 4.72,
+      "text": "choice"
+    },
+    {
+      "start": 3029.359,
+      "duration": 3.521,
+      "text": "you need a bit of extra data"
+    },
+    {
+      "start": 3036.48,
+      "duration": 4.079,
+      "text": "okay so we can think of these tangent"
+    },
+    {
+      "start": 3038.559,
+      "duration": 5.28,
+      "text": "spaces as being there canonically"
+    },
+    {
+      "start": 3040.559,
+      "duration": 5.201,
+      "text": "associated to each point of the manifold"
+    },
+    {
+      "start": 3043.839,
+      "duration": 3.201,
+      "text": "we can almost think of them as being"
+    },
+    {
+      "start": 3045.76,
+      "duration": 3.599,
+      "text": "like the same"
+    },
+    {
+      "start": 3047.04,
+      "duration": 3.76,
+      "text": "and as soon as you can identify one"
+    },
+    {
+      "start": 3049.359,
+      "duration": 2.641,
+      "text": "tangent vector with another then you'll"
+    },
+    {
+      "start": 3050.8,
+      "duration": 2.48,
+      "text": "be able to add and subtract tangent"
+    },
+    {
+      "start": 3052.0,
+      "duration": 2.96,
+      "text": "vectors at different places"
+    },
+    {
+      "start": 3053.28,
+      "duration": 4.16,
+      "text": "but we can't do it yet we actually need"
+    },
+    {
+      "start": 3054.96,
+      "duration": 4.24,
+      "text": "a bit more information"
+    },
+    {
+      "start": 3057.44,
+      "duration": 3.76,
+      "text": "and that's the extra data that you get"
+    },
+    {
+      "start": 3059.2,
+      "duration": 5.2,
+      "text": "from a metric which we'll introduce"
+    },
+    {
+      "start": 3061.2,
+      "duration": 4.159,
+      "text": "in some later lectures but not now"
+    },
+    {
+      "start": 3064.4,
+      "duration": 2.64,
+      "text": "for now we're going to talk about"
+    },
+    {
+      "start": 3065.359,
+      "duration": 4.48,
+      "text": "manifolds without metric without this"
+    },
+    {
+      "start": 3067.04,
+      "duration": 2.799,
+      "text": "extra data"
+    },
+    {
+      "start": 3070.48,
+      "duration": 4.079,
+      "text": "okay we're almost at sort of doing a bit"
+    },
+    {
+      "start": 3072.4,
+      "duration": 4.24,
+      "text": "of mechanics on manifolds"
+    },
+    {
+      "start": 3074.559,
+      "duration": 3.441,
+      "text": "so a tangent field so we've talked about"
+    },
+    {
+      "start": 3076.64,
+      "duration": 2.64,
+      "text": "tangent vectors"
+    },
+    {
+      "start": 3078.0,
+      "duration": 4.559,
+      "text": "now we can talk about a thing called a"
+    },
+    {
+      "start": 3079.28,
+      "duration": 7.039,
+      "text": "field now what is a tangent field well"
+    },
+    {
+      "start": 3082.559,
+      "duration": 5.52,
+      "text": "uh it's just an assignment of tangent"
+    },
+    {
+      "start": 3086.319,
+      "duration": 4.081,
+      "text": "vectors right you know one for each"
+    },
+    {
+      "start": 3088.079,
+      "duration": 2.321,
+      "text": "point"
+    },
+    {
+      "start": 3093.76,
+      "duration": 4.079,
+      "text": "i even drew a couple"
+    },
+    {
+      "start": 3107.28,
+      "duration": 5.36,
+      "text": "so it's an assignment of a tangent"
+    },
+    {
+      "start": 3108.72,
+      "duration": 3.92,
+      "text": "vector 1 for each point of the manifold"
+    },
+    {
+      "start": 3115.2,
+      "duration": 5.919,
+      "text": "that's what a tangent field is dot"
+    },
+    {
+      "start": 3118.8,
+      "duration": 3.759,
+      "text": "we can characterize tangent vectors"
+    },
+    {
+      "start": 3121.119,
+      "duration": 3.121,
+      "text": "tangent fields"
+    },
+    {
+      "start": 3122.559,
+      "duration": 3.04,
+      "text": "so we can you know some tangent fields"
+    },
+    {
+      "start": 3124.24,
+      "duration": 4.96,
+      "text": "are better than others"
+    },
+    {
+      "start": 3125.599,
+      "duration": 3.601,
+      "text": "so we say v is smooth"
+    },
+    {
+      "start": 3130.8,
+      "duration": 3.039,
+      "text": "if for all f"
+    },
+    {
+      "start": 3134.16,
+      "duration": 3.439,
+      "text": "for all smooth functions on our manifold"
+    },
+    {
+      "start": 3136.079,
+      "duration": 6.48,
+      "text": "m"
+    },
+    {
+      "start": 3137.599,
+      "duration": 4.96,
+      "text": "when you apply v to f at p"
+    },
+    {
+      "start": 3144.0,
+      "duration": 8.079,
+      "text": "well sorry v applied to f is a c"
+    },
+    {
+      "start": 3147.2,
+      "duration": 6.08,
+      "text": "infinity function"
+    },
+    {
+      "start": 3152.079,
+      "duration": 3.04,
+      "text": "so it's really interesting that"
+    },
+    {
+      "start": 3153.28,
+      "duration": 3.68,
+      "text": "smoothness of a vector field can be"
+    },
+    {
+      "start": 3155.119,
+      "duration": 3.521,
+      "text": "defined without this extra data of a"
+    },
+    {
+      "start": 3156.96,
+      "duration": 4.879,
+      "text": "metric"
+    },
+    {
+      "start": 3158.64,
+      "duration": 4.0,
+      "text": "um even though we're formally not"
+    },
+    {
+      "start": 3161.839,
+      "duration": 3.52,
+      "text": "allowed"
+    },
+    {
+      "start": 3162.64,
+      "duration": 4.4,
+      "text": "because we we can define this notion"
+    },
+    {
+      "start": 3165.359,
+      "duration": 5.361,
+      "text": "without requiring"
+    },
+    {
+      "start": 3167.04,
+      "duration": 5.12,
+      "text": "uh the the without requiring that we"
+    },
+    {
+      "start": 3170.72,
+      "duration": 3.2,
+      "text": "compare"
+    },
+    {
+      "start": 3172.16,
+      "duration": 4.959,
+      "text": "vectors at nearby points it's kind of"
+    },
+    {
+      "start": 3173.92,
+      "duration": 3.199,
+      "text": "interesting that we get away with it"
+    },
+    {
+      "start": 3178.839,
+      "duration": 5.801,
+      "text": "okay"
+    },
+    {
+      "start": 3180.96,
+      "duration": 7.44,
+      "text": "there's a little lemma we should say"
+    },
+    {
+      "start": 3184.64,
+      "duration": 6.479,
+      "text": "so the coordinate basis"
+    },
+    {
+      "start": 3188.4,
+      "duration": 4.32,
+      "text": "fields now we can define a coordinate"
+    },
+    {
+      "start": 3191.119,
+      "duration": 6.801,
+      "text": "basis field"
+    },
+    {
+      "start": 3192.72,
+      "duration": 5.2,
+      "text": "capital x of mu they're all smooth"
+    },
+    {
+      "start": 3198.0,
+      "duration": 5.119,
+      "text": "in the sense above and the proof is"
+    },
+    {
+      "start": 3201.52,
+      "duration": 3.039,
+      "text": "this would give you some insights"
+    },
+    {
+      "start": 3203.119,
+      "duration": 2.24,
+      "text": "perhaps even into the definition of"
+    },
+    {
+      "start": 3204.559,
+      "duration": 2.961,
+      "text": "smoothness"
+    },
+    {
+      "start": 3205.359,
+      "duration": 4.161,
+      "text": "what you do is you apply this x mu to"
+    },
+    {
+      "start": 3207.52,
+      "duration": 4.559,
+      "text": "your favorite smooth function"
+    },
+    {
+      "start": 3209.52,
+      "duration": 4.559,
+      "text": "here's the here's how you apply it to an"
+    },
+    {
+      "start": 3212.079,
+      "duration": 5.28,
+      "text": "arbitrary"
+    },
+    {
+      "start": 3214.079,
+      "duration": 7.28,
+      "text": "function on the manifold and"
+    },
+    {
+      "start": 3217.359,
+      "duration": 6.881,
+      "text": "if you allow p to be the argument"
+    },
+    {
+      "start": 3221.359,
+      "duration": 4.881,
+      "text": "you can see that because psi is smooth f"
+    },
+    {
+      "start": 3224.24,
+      "duration": 3.68,
+      "text": "is smooth the first derivative is smooth"
+    },
+    {
+      "start": 3226.24,
+      "duration": 3.28,
+      "text": "and then you evaluate"
+    },
+    {
+      "start": 3227.92,
+      "duration": 9.919,
+      "text": "then evaluated for an arbitrary p you"
+    },
+    {
+      "start": 3229.52,
+      "duration": 10.64,
+      "text": "get a smooth function of p"
+    },
+    {
+      "start": 3237.839,
+      "duration": 2.321,
+      "text": "cool"
+    },
+    {
+      "start": 3240.96,
+      "duration": 2.56,
+      "text": "and thus"
+    },
+    {
+      "start": 3245.599,
+      "duration": 2.96,
+      "text": "an arbitrary"
+    },
+    {
+      "start": 3249.119,
+      "duration": 2.72,
+      "text": "tangent vector"
+    },
+    {
+      "start": 3253.52,
+      "duration": 3.28,
+      "text": "is a linear combination"
+    },
+    {
+      "start": 3260.48,
+      "duration": 7.04,
+      "text": "of x mu"
+    },
+    {
+      "start": 3264.4,
+      "duration": 4.88,
+      "text": "sorry not thus since"
+    },
+    {
+      "start": 3267.52,
+      "duration": 3.599,
+      "text": "an arbitrary tangent vector is a linear"
+    },
+    {
+      "start": 3269.28,
+      "duration": 4.319,
+      "text": "combination of the x muse we proved that"
+    },
+    {
+      "start": 3271.119,
+      "duration": 5.601,
+      "text": "in the theorem"
+    },
+    {
+      "start": 3273.599,
+      "duration": 6.801,
+      "text": "uh an arbitrary tangent vector v is a"
+    },
+    {
+      "start": 3276.72,
+      "duration": 8.96,
+      "text": "linear combination of these x muse then"
+    },
+    {
+      "start": 3280.4,
+      "duration": 8.32,
+      "text": "v is smooth if and only if"
+    },
+    {
+      "start": 3285.68,
+      "duration": 3.04,
+      "text": "its components"
+    },
+    {
+      "start": 3289.52,
+      "duration": 4.319,
+      "text": "v mu are smooth"
+    },
+    {
+      "start": 3294.24,
+      "duration": 4.079,
+      "text": "this gives us a nice criterion to"
+    },
+    {
+      "start": 3296.24,
+      "duration": 5.28,
+      "text": "determine if we have a smooth"
+    },
+    {
+      "start": 3298.319,
+      "duration": 4.881,
+      "text": "vector field so we've pretty much built"
+    },
+    {
+      "start": 3301.52,
+      "duration": 3.839,
+      "text": "everything up now to"
+    },
+    {
+      "start": 3303.2,
+      "duration": 5.28,
+      "text": "to talk about rudimentary form of"
+    },
+    {
+      "start": 3305.359,
+      "duration": 5.601,
+      "text": "mechanics on manifolds"
+    },
+    {
+      "start": 3308.48,
+      "duration": 3.04,
+      "text": "right so they make we we've got the"
+    },
+    {
+      "start": 3310.96,
+      "duration": 3.359,
+      "text": "notion"
+    },
+    {
+      "start": 3311.52,
+      "duration": 4.799,
+      "text": "of a tangent vector field and we've got"
+    },
+    {
+      "start": 3314.319,
+      "duration": 5.681,
+      "text": "the notion of a smooth curve"
+    },
+    {
+      "start": 3316.319,
+      "duration": 7.921,
+      "text": "so with it we can define"
+    },
+    {
+      "start": 3320.0,
+      "duration": 4.24,
+      "text": "a velocity field right"
+    },
+    {
+      "start": 3328.16,
+      "duration": 4.679,
+      "text": "a velocity field is just a is a tangent"
+    },
+    {
+      "start": 3330.799,
+      "duration": 5.04,
+      "text": "vector"
+    },
+    {
+      "start": 3332.839,
+      "duration": 3.0,
+      "text": "field"
+    },
+    {
+      "start": 3341.28,
+      "duration": 4.64,
+      "text": "and the solution to the equations of"
+    },
+    {
+      "start": 3346.839,
+      "duration": 3.0,
+      "text": "motion"
+    },
+    {
+      "start": 3352.96,
+      "duration": 13.52,
+      "text": "is a smooth curve"
+    },
+    {
+      "start": 3362.88,
+      "duration": 8.16,
+      "text": "c with"
+    },
+    {
+      "start": 3366.48,
+      "duration": 7.92,
+      "text": "t the tangent vector to the curve"
+    },
+    {
+      "start": 3371.04,
+      "duration": 3.36,
+      "text": "literally being v of f"
+    },
+    {
+      "start": 3375.2,
+      "duration": 4.0,
+      "text": "okay that's a topic we'll get into in"
+    },
+    {
+      "start": 3376.96,
+      "duration": 4.56,
+      "text": "the next lecture but for today"
+    },
+    {
+      "start": 3379.2,
+      "duration": 3.52,
+      "text": "we are finished so thank you very much"
+    },
+    {
+      "start": 3381.52,
+      "duration": 3.039,
+      "text": "for your time and i look forward to"
+    },
+    {
+      "start": 3382.72,
+      "duration": 4.48,
+      "text": "seeing you next week"
+    },
+    {
+      "start": 3384.559,
+      "duration": 2.641,
+      "text": "goodbye"
+    }
+  ]
+}

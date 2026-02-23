@@ -1,0 +1,1667 @@
+# General Relativity, Lecture 10: geodesics cont.; curvature
+# YouTube: https://www.youtube.com/watch?v=5yh0pUpeOMw
+# Auto-generated transcript
+
+[00:00.32] hello and welcome back to introduction
+[00:01.92] to general relativity in the previous
+[00:03.76] lecture
+[00:04.24] we introduced and discussed geodesics
+[00:06.88] today the objective is to also
+[00:08.64] talk about geodesics and provide a
+[00:10.40] second characterization
+[00:11.76] which is perhaps more intuitive of what
+[00:14.24] a geodesic is
+[00:15.36] on an arbitrary manifold after that
+[00:17.92] we're going to use
+[00:19.20] our discussion of parallel transport to
+[00:22.00] introduce a notion or intrinsic notion
+[00:24.00] of curvature of manifolds but first to
+[00:28.84] geodesics
+[00:30.48] suppose we have a manifold m
+[00:37.68] and we have two points on m
+[00:40.72] and we also have a derivative
+[00:44.24] operator associated to m
+[00:48.32] then we can associate to any
+[00:51.52] two points and any derivative operator
+[00:54.80] in a manifold a length
+[00:57.84] of the curve that joins these two points
+[01:00.00] so we imagine we have some curve
+[01:02.00] here that joins the two points
+[01:05.28] we'll call the two points p and q
+[01:10.96] and we can associate to such a curve a
+[01:14.08] length of course we need a metric
+[01:17.44] so the data of a derivative operator is
+[01:19.36] roughly speaking equivalent to the data
+[01:20.80] of a metric
+[01:22.08] but let's be explicit here
+[01:26.96] so we have ourselves a curve let's call
+[01:30.80] it c
+[01:32.40] we have two points p q we have a metric
+[01:34.48] we have a derivative operator we have a
+[01:35.84] manifold
+[01:36.88] and we can introduce the length
+[01:40.96] of the curve c
+[01:45.12] discussed previously
+[01:49.84] intuitively in previous lectures so the
+[01:52.72] length of c
+[01:56.00] with respect to g a b
+[02:00.72] delta a is just defined
+[02:05.44] to be the following expression you
+[02:07.76] integrate
+[02:09.28] over the length of the curve the inner
+[02:12.40] product between the two tangent vectors
+[02:14.48] between the tangent vector to the curve
+[02:17.20] along the length of the curve
+[02:22.64] so t a here is the tangent
+[02:26.08] curve to c
+[02:29.36] and t is the curve parameter
+[02:36.24] i'll draw on the picture here the
+[02:38.24] tangent vector so
+[02:39.44] to any point on the curve we have a
+[02:40.96] tangent vector t a
+[02:42.88] introduced introduced way back
+[02:45.92] in the earlier lectures and also
+[02:49.20] we assume just
+[02:53.04] that our metric can't just have any
+[02:56.24] metric for this expression to be well
+[02:57.60] defined
+[02:58.32] we assume that our metric gab has
+[03:02.84] signature
+[03:04.96] so when you diagonalize it as a matrix
+[03:06.80] you always get plus
+[03:08.08] positive eigenvalues
+[03:12.80] so implicit here now explicit is that
+[03:15.44] the
+[03:15.92] metric has positive signature
+[03:19.12] so we can define this length right
+[03:21.28] there's no no particular problems in
+[03:22.80] defining this quantity
+[03:25.68] it's the just integrate
+[03:28.96] infinitesimal lengths along the curve so
+[03:32.08] you've got to imagine that you have this
+[03:33.20] curve
+[03:34.16] c and you divide it up into little
+[03:36.48] pieces
+[03:38.32] you approximate each piece with a line
+[03:40.00] segment and then you use the
+[03:41.84] corresponding tangent vector
+[03:43.36] as the the linear approximant to the
+[03:45.20] curve then you calculate the
+[03:47.20] length of the tangent vector which is a
+[03:49.60] proxy for
+[03:50.40] the line segment and then you add them
+[03:52.48] all up and then you take the limit as
+[03:54.00] you
+[03:54.32] subdivide your curve into little smaller
+[03:56.24] smaller pieces and then you have an
+[03:57.84] expression for the length
+[03:59.04] hopefully this expression is intuitively
+[04:00.88] clear
+[04:02.96] so we can introduce this quantity uh
+[04:06.00] and what about for metrics a positive
+[04:08.48] signature
+[04:09.68] so in general relativity of course
+[04:13.12] our metric doesn't have positive
+[04:14.48] signature not always
+[04:16.24] um so for a metric with signature
+[04:23.36] we say minus one plus plus
+[04:27.36] plus we have to be a little bit more
+[04:29.76] creative with how we
+[04:30.72] define our our
+[04:34.64] our length our curve is said
+[04:40.08] to be time like
+[04:46.32] if when you compute the inner product of
+[04:49.68] the tangent vectors to the curve you get
+[04:51.04] a negative number right that's possible
+[04:52.72] now the sigma metric has negative
+[04:54.84] signature
+[04:58.48] if it's negative everywhere along the
+[05:00.88] curve
+[05:06.16] okay it's time like at that point let's
+[05:07.84] say
+[05:09.68] but it's got to be this this condition
+[05:10.96] is going to be true everywhere along the
+[05:12.08] curve
+[05:12.80] for the curve to be called time-like and
+[05:16.32] we have a different we have two other
+[05:18.40] kinds of kinds of curves that you're
+[05:19.84] certainly familiar from
+[05:21.04] or certainly familiar with from special
+[05:23.04] relativity we have null
+[05:27.04] curves they're ones where the inner
+[05:30.32] product of the tangent vector is exactly
+[05:31.92] zero everywhere
+[05:36.72] and we also have space like curves
+[05:40.64] that's where the inner product is
+[05:41.92] positive everywhere
+[05:50.64] so your three kinds of curves in in
+[05:53.84] manifolds with
+[05:54.72] uh laurencian's signature
+[05:57.76] minus one and the rest positive or all
+[05:59.36] minuses and one
+[06:00.88] positive for example so we have these
+[06:03.92] three kinds of
+[06:05.20] um
+[06:11.76] three kinds of special curves right not
+[06:14.00] every curve is
+[06:15.20] time like not every curve is space like
+[06:16.80] not every curve is null it's possible to
+[06:19.04] to write down curves in manifolds which
+[06:21.92] are sometimes null sometimes
+[06:23.92] time like sometimes space like they're
+[06:26.80] not physical
+[06:28.96] and as we'll see they can't be geodesics
+[06:32.40] but we can certainly write them down so
+[06:34.32] you've got to understand this definition
+[06:35.92] right as not being
+[06:37.76] for all curves like it's possible to
+[06:39.60] start off with a curve being null
+[06:41.04] going space-like and then going
+[06:43.28] time-like right i can draw that curve
+[06:45.04] but it's
+[06:45.60] no particle no solution to the equations
+[06:48.08] of motion
+[06:49.12] whatever field or or in special
+[06:52.24] relativity
+[06:53.28] no physical solution can can behave like
+[06:55.84] that
+[06:56.72] so that's that's a forbidden physically
+[06:59.76] forbidden but it's mathematically at
+[07:01.36] this point allowed
+[07:03.04] there's nothing that says that that's
+[07:04.32] wrong um
+[07:07.44] so i better for the future notes right
+[07:09.68] this is
+[07:10.72] unphysical
+[07:14.72] and then i'll highlight the portion so
+[07:16.40] it commences null
+[07:18.40] goes space like and then it goes
+[07:21.44] time like
+[07:24.72] so time like is green say
+[07:28.24] no it's yellow and
+[07:31.44] space like is blue it's certainly a
+[07:34.56] possible thing
+[07:35.28] to happen but as we'll see geodesics
+[07:37.52] cannot do that
+[07:41.36] and now that we've got these three
+[07:42.96] notions of
+[07:44.40] um of infinitesimal length
+[07:47.76] we're going to have to slightly expand
+[07:49.92] generalize or update our definition of
+[07:51.60] the length of the curve right because
+[07:53.28] okay the length of the curve still that
+[07:54.88] definition here still makes sense
+[07:58.16] when you have a null curve or a space
+[07:59.92] like curve in
+[08:02.08] you know lorenz you know kovskin setting
+[08:04.40] but if you had a timeline curve so
+[08:06.48] that's everywhere negative you can't
+[08:07.52] take the square root of it or if you did
+[08:08.80] you get an imaginary number um which is
+[08:12.56] you know you can certainly go that route
+[08:14.88] we're not going to do that though in
+[08:16.00] this lecture course
+[08:17.04] instead we're just going to say suppose
+[08:18.80] we have a timeline curve
+[08:26.16] you have a timeline of c well we define
+[08:33.52] instead of the length we call it the
+[08:35.28] proper time
+[08:41.52] so if you have a timeline curve then
+[08:43.28] instead of defining the length
+[08:47.12] of the geodesic you define the proper
+[08:50.08] time of the geodesic
+[08:51.28] well not g does it curve although of
+[08:53.92] course it will apply to geodesics
+[08:58.56] okay so now we have a definition that
+[09:02.32] covers
+[09:03.68] all the cases that we're going to
+[09:06.56] encounter in the world of geodesics
+[09:11.36] and oh yeah a side comment of course i
+[09:13.84] implicitly
+[09:16.48] implied this earlier but now let's say
+[09:18.00] it clearly so if a curve
+[09:21.12] c changes
+[09:25.36] from e g
+[09:28.56] time like to null or time like to space
+[09:32.00] like right that's where we're gonna have
+[09:33.36] real problems um
+[09:36.64] the length this implies the length is
+[09:38.48] just not defined
+[09:42.48] you can have fun trying to define a
+[09:43.92] length but we are just going to say it
+[09:45.68] is hereby not defined if the curve
+[09:47.76] changes from time like to space like
+[09:51.04] that's the particularly problematic
+[09:52.40] transition
+[09:55.92] and now we'll take a look at geodesics
+[09:58.48] this is the context of geodesics
+[10:00.80] we've already introduced geodesics in
+[10:02.16] the previous lecture so we can certainly
+[10:03.36] discuss the length of a geodesic
+[10:05.52] and what i'm going to argue in the
+[10:07.12] coming
+[10:08.56] next portion of the lecture is that a
+[10:10.24] geodesic has a very
+[10:11.92] uh the length of a geodesic enjoys a
+[10:14.48] very special property so that's the
+[10:16.00] objective now
+[10:17.36] but before we quite get to that argument
+[10:19.20] and you want to make some simpler
+[10:20.72] observations
+[10:22.08] so since for a geodesic
+[10:27.60] the tangent vector
+[10:39.68] it to the curve is parallel transported
+[10:42.80] along itself
+[11:00.64] now we learned that its norm can't
+[11:02.48] change right
+[11:06.16] the norm being the inner product of the
+[11:08.08] two of the tangent vectors itself which
+[11:10.40] is also known as just the metric
+[11:14.96] contracted
+[11:25.04] and what does that mean well i it it's a
+[11:27.76] basically
+[11:28.24] proof of uh the statement i just made
+[11:31.20] earlier that as
+[11:32.40] it cannot change
+[11:35.84] from null to time like
+[11:41.60] et cetera right you can't change a g
+[11:43.36] does it at time like you does it can't
+[11:45.52] change to being a space like one and so
+[11:47.12] on and so forth
+[11:49.52] and uh how can you convince yourself
+[11:54.40] that the norm doesn't change well just
+[11:56.88] take the derivative of
+[11:58.00] it right so that if you want to you know
+[12:01.12] why why does the norm not change
+[12:04.88] uh when we parallel transport a tangent
+[12:07.84] vector along itself
+[12:09.60] so let's just do a side computation
+[12:12.40] right
+[12:12.96] change in norm well
+[12:16.80] the change in the norm along the curve
+[12:21.36] is the directional derivative
+[12:24.80] of the norm we've got to take the
+[12:26.96] derivative of the norm as we go along
+[12:28.80] the curve
+[12:29.84] but now let's substitute our expression
+[12:31.36] for the norm so it's
+[12:33.12] tb delta b and then we get
+[12:36.24] g a b g-a-b-t-a-t-b
+[12:39.60] and then we apply the leibniz rule so
+[12:41.52] eventually you know you'll get pretty
+[12:42.88] good at these kind of computations
+[12:52.32] then you get g a b t b delta b
+[12:55.84] t a and you get a tb here
+[12:59.52] oh yeah i okay i hope it was kind of
+[13:04.84] clear
+[13:08.80] i should have not used the same index
+[13:10.72] here
+[13:12.32] so let's do c's and then
+[13:16.08] put c's here as well
+[13:21.36] and then there's a third term t
+[13:24.48] a delta oops tc
+[13:32.24] so if you look at this actually all
+[13:33.44] three terms of that niche right because
+[13:35.20] the first one vanishes because that's
+[13:36.80] one of the the defining properties of
+[13:38.64] the derivative operator associated to a
+[13:40.48] metric
+[13:41.04] meaning that the the derivative of the
+[13:44.08] metric itself is zero
+[13:45.44] and now look at this this term vanishes
+[13:47.20] here because ta is parallel transported
+[13:49.12] along itself and the same goes for this
+[13:50.48] argument here so that's why
+[13:52.88] when you parallel transport the tangent
+[13:55.84] vector
+[13:56.32] along of a curve along with the curve
+[13:59.60] the norm of the tangent vector cannot
+[14:02.16] change and when it normally cannot
+[14:03.36] change it can't change from being
+[14:04.64] analogy it is a
+[14:05.68] to a time like it is equal to a space
+[14:08.40] like geodesic
+[14:12.00] now you might worry justifiably worry
+[14:14.32] that the definition of the proper time
+[14:17.12] or of the length might be
+[14:20.48] might actually be um parameter
+[14:24.80] dependent right that would be kind of
+[14:26.08] stupid if if the
+[14:28.08] the the parameter we chose to specify
+[14:30.80] where we are along the curve
+[14:31.92] if our length depends on that parameter
+[14:34.72] then
+[14:35.52] that means that it depends on what mood
+[14:37.12] we were in on that day when we chose our
+[14:38.80] parametrization
+[14:40.08] turns out this is not the case of course
+[14:42.32] um
+[14:43.36] and i'll just give a brief argument why
+[14:45.12] before moving to
+[14:46.88] connecting geodesics to lengths so
+[14:50.24] l and tau
+[14:53.36] are re-parametrization
+[14:59.36] invariant
+[15:06.52] parameterization
+[15:11.68] invariant they don't change under
+[15:15.52] uh our choice of how we parametrize
+[15:17.68] where we are along the curve
+[15:19.36] so for example suppose we chose
+[15:24.64] s of t
+[15:30.40] instead of t to parameterize
+[15:36.40] our curve
+[15:40.48] to parametrize where we are along our
+[15:42.32] curve
+[15:43.76] then the new tangent vector
+[15:50.88] a little exercise for you is
+[15:54.08] s a is d t d s
+[15:57.84] t a you pretty much have to go to charts
+[15:59.68] that's one way to get
+[16:01.12] uh convince yourself of this
+[16:03.68] transformation law
+[16:05.20] and so now the length let's define the
+[16:07.84] length
+[16:10.64] let's just suppose we have a metric with
+[16:12.16] positive signature
+[16:14.72] so the length defined with respect to
+[16:16.88] this new parameter
+[16:18.08] s is well l prime is per definition just
+[16:21.12] the integral of the square root of g
+[16:22.80] a b s a s b where the s is the new
+[16:26.16] tangent vectors
+[16:30.40] but uh let's substitute for what we know
+[16:34.96] so we know that the new tangent vectors
+[16:36.48] are equal to the old tangent vectors
+[16:40.08] times by this whatever delay factor t
+[16:43.28] dt ds times ds but that's just equal to
+[16:46.08] l
+[16:46.32] so in fact the length of the curve
+[16:48.24] doesn't depend on what kind of parameter
+[16:50.08] we felt like choosing to to tell us
+[16:52.00] where we are along the curve
+[16:57.52] so now now comes the claim right
+[17:02.00] this is the the reason we're talking
+[17:03.20] about lengths of curves amongst others
+[17:05.20] and that is that geodesics uh have a
+[17:08.00] very beautiful property nearly they
+[17:09.36] extremize
+[17:10.80] the length of a curve joining two points
+[17:35.52] so that's the claim that we're going to
+[17:36.64] investigate now
+[17:38.72] we're not going to completely prove it
+[17:41.04] but we will investigate the claim
+[17:43.84] and to see what we can learn
+[17:53.36] once i show you this argument you should
+[17:55.60] be content
+[17:56.72] to generalize this to the most general
+[17:58.72] setting possible
+[18:01.20] okay to make this life simple
+[18:07.36] we're going to suppose p and q
+[18:10.64] are in a common chart
+[18:14.56] just so we don't have to keep changing
+[18:16.16] coordinates to get from one
+[18:18.24] point to the other that would be a bit
+[18:19.92] awkward
+[18:22.72] so a chart is just a map from m to rn
+[18:26.96] and when to make life even simpler we're
+[18:29.04] going to assume
+[18:31.44] that that c is space-like otherwise we
+[18:34.48] have to deal with the
+[18:35.52] proper time it's okay doesn't make any
+[18:38.72] particular new challenges
+[18:41.44] did for us the minus sign in proper time
+[18:43.12] yes i did okay do i see a space like
+[18:47.20] and then we're just gonna okay we have
+[18:48.72] to use a definition for the length
+[18:50.80] and i've got to name that definition
+[18:52.08] let's call it star from now on
+[18:56.88] so then star the length of our
+[19:00.56] curve in this case geodesic
+[19:04.96] is the integral from a to b of the sum
+[19:10.56] g mu u
+[19:20.40] so now we're working in a chart and with
+[19:22.24] coordinates so
+[19:24.96] so c the curve at the point parameter
+[19:28.08] value a
+[19:28.80] is p and c the curve with the parameter
+[19:32.08] value
+[19:32.64] b is q
+[19:39.76] and because we're working in a
+[19:40.88] coordinate chart that the tangent
+[19:42.56] vectors now
+[19:44.32] in this coordinate chart are dx mu dt
+[19:49.44] so it's just the tangent vector from
+[19:51.84] before
+[19:56.16] now comes uh so i'll draw a little
+[19:58.00] picture just so we've got a
+[20:01.44] concrete setting in mind here here's m
+[20:04.24] here's
+[20:04.80] p here's q here's a chart
+[20:09.04] draw that with gray here that contains
+[20:11.20] them
+[20:13.52] and then i'll draw rn underneath
+[20:24.56] there's our chart then we'll draw the
+[20:27.52] points p and
+[20:28.32] q in this coordinate system p is q
+[20:32.00] we have a curve that's connecting them
+[20:35.68] here's c here's our curve here which is
+[20:38.80] a bad picture to draw
+[20:40.80] um his c which was our
+[20:44.88] potential geodesic
+[20:48.48] i think that's all we need right now and
+[20:50.40] now the next part of the argument is
+[20:51.76] we're going to imagine
+[20:53.52] that we vary this curve slightly so
+[20:57.28] imagine that instead of
+[20:58.56] computing the length for the curve c
+[21:02.16] we're going to compute the curve for a
+[21:03.52] little variation of that curve so we
+[21:06.40] vary the curve away from the end points
+[21:08.08] at the endpoints which you leave the
+[21:09.12] curve
+[21:09.76] alone so let's just consider a new curve
+[21:14.24] and compute the length for this new
+[21:16.40] curve
+[21:22.40] so this is the green curve
+[21:27.28] is a variation is an infinitesimal
+[21:30.24] variation
+[21:42.24] right of psi compose c if we're being
+[21:44.56] super proper
+[21:45.68] so what does that mean that means that
+[21:46.88] the trajectory in our chart
+[21:49.28] of our geodesic is actually
+[21:53.20] varied to a different trajectory namely
+[21:56.48] x mu
+[21:57.20] plus some little teeny infinitesimal
+[21:59.60] variation which is the thing i've drawn
+[22:01.20] in green
+[22:04.16] and where just for some where we
+[22:07.12] actually
+[22:07.76] demand that d x mu
+[22:11.52] at the end point so d x mu a equals d
+[22:15.04] x mu b we're not going to vary the
+[22:18.08] the curve at the end points we're only
+[22:19.84] going to vary in the along along the
+[22:21.76] length of the curve
+[22:24.00] but not at its end points so then you
+[22:26.80] can ask the question you know how
+[22:29.04] does the length
+[22:33.28] of c prime
+[22:36.64] of the varied curve
+[22:45.04] change if you do a little variation
+[22:48.88] in the curve then the length's got to
+[22:50.16] change and it'll change to first order
+[22:52.00] and so on
+[22:52.80] we'll just collect terms to first order
+[22:54.88] because we're doing things
+[22:55.76] infinitesimally
+[22:58.32] infinitesimal just means we work to
+[23:00.00] first order
+[23:01.76] and then take things so small that the
+[23:03.28] second order terms can be made
+[23:04.56] arbitrarily small
+[23:06.40] so if you com if you substitute now
+[23:10.08] the the the new coordinates of the new
+[23:12.88] curve
+[23:15.20] the varied curve if you substitute those
+[23:17.28] into our expression
+[23:18.64] for the for the length
+[23:23.44] well then you get a new term
+[23:26.96] you get a new length right so you put
+[23:29.04] this into a length formula length
+[23:30.56] depends on
+[23:31.44] on the the curve so the length
+[23:35.12] if you substitute this new curve this
+[23:37.68] varied curve into the length
+[23:39.12] the length depends on the new curve
+[23:40.56] right but if you expand to first order
+[23:42.72] what should happen is you should get the
+[23:43.84] length of the original curve
+[23:45.52] plus some first order shift in the
+[23:47.52] length the length is going to respond to
+[23:49.20] the small variation in the length of the
+[23:51.20] curve
+[23:52.80] and they'll be higher order terms but we
+[23:54.40] won't focus on those so what what's the
+[23:56.08] the first order shift in the length
+[23:57.92] you know how does it change when we
+[23:59.28] slightly vary
+[24:01.36] how geodesic well
+[24:04.48] the answer is
+[24:08.64] this you're just going to do some taylor
+[24:10.88] expanding and then
+[24:12.32] you'll end up with this expression here
+[24:19.44] so this is a calculation that
+[24:22.72] you will be assumed to be able to do
+[24:42.40] it's just the taylor expansion of the
+[24:44.72] length formula
+[24:45.68] but this is one of these things
+[24:48.88] where although it's just a taylor
+[24:52.40] expansion
+[24:53.60] it can slow you down in your studies if
+[24:56.64] you're not able to fluidly just do these
+[24:58.56] kinds of calculations so this is just
+[25:00.16] really
+[25:02.88] you know i could do all the steps for
+[25:04.24] you i'm not going to because i'm a
+[25:07.04] big believer that you should
+[25:11.44] exercise yourself for these little
+[25:12.96] calculations
+[25:16.08] and uh therefore i'll leave this as an
+[25:18.96] exercise
+[25:20.64] so this is how the length responds to a
+[25:23.60] tiny
+[25:24.64] variation of the geodesic
+[25:28.24] so to make life
+[25:31.28] for us a little bit easier
+[25:37.28] let's assume we've chosen a
+[25:40.84] parametrization
+[25:43.60] where the tangent or the infinitesimal
+[25:47.44] norm is actually one
+[25:53.68] now can we always do that let's take a
+[25:55.36] look so if you go back to here
+[25:57.36] note that whenever you re-parameterize
+[26:00.16] whenever you re-parameterize
+[26:02.64] um
+[26:05.92] a curve so you choose a new parameter s
+[26:07.92] then the new tangent vector
+[26:10.80] can be computed according to this
+[26:12.32] formula here where
+[26:14.16] we've substituted we've differentiated
+[26:17.60] instead of
+[26:18.64] with respect to s but with respect to t
+[26:20.96] and d t d s
+[26:22.00] well s isn't pretty much an arbitrary
+[26:24.00] monotonic increasing function right
+[26:26.08] s is pretty much allowed to be whatever
+[26:27.76] arbitrary monotonic increasing function
+[26:29.52] you
+[26:29.76] so choose and
+[26:32.96] therefore
+[26:36.48] i'm going to draw a cartoon of s
+[26:42.48] since s is arbitrary monotonic
+[26:46.16] increasing function
+[26:47.12] then you're able to choose this
+[26:50.16] monotonic increasing function
+[26:51.60] always at every point along the curve so
+[26:54.72] that
+[26:55.04] the length of the tangent vector is
+[26:57.92] always one
+[26:58.96] just so you should convince yourself of
+[27:00.72] that fact
+[27:02.00] and so that's why we can assume this
+[27:03.76] from going forward that just makes life
+[27:05.52] easier for us remember
+[27:06.56] the length doesn't depend on the
+[27:07.76] parameterization we chose so we may as
+[27:09.52] well choose a nice one
+[27:13.44] now um let's test
+[27:16.72] our geodesics special when it comes to
+[27:18.96] length so
+[27:20.24] extremality what does that mean that
+[27:21.84] means that if you compute
+[27:23.52] the change in something that change is
+[27:25.92] zero
+[27:26.56] at a point and the point in this case is
+[27:29.12] a curve
+[27:29.84] so you've got to remember
+[27:34.88] l is a function we're doing variation or
+[27:37.44] calculus here is a function
+[27:39.68] functional of
+[27:42.80] functions right i.e
+[27:46.24] curves so l the length is a machine
+[27:52.16] you give it a curve and it gives you a
+[27:54.72] number
+[27:58.88] and so if you give and so the space of
+[28:02.40] inputs to the
+[28:03.52] machine that is length is the space of
+[28:05.84] all curves on a manifold
+[28:07.52] or all sufficiently smooth curves on a
+[28:09.04] manifold and
+[28:12.40] you've got to imagine there's a huge
+[28:13.92] infinite dimensional space and l is some
+[28:15.84] functional on that infinite dimensional
+[28:17.36] space
+[28:18.16] and for a given curve that's a point in
+[28:21.44] this
+[28:21.84] huge infinite dimensional space of all
+[28:23.44] curves you can evaluate dl
+[28:26.24] and ask does is the variation in the
+[28:28.88] length
+[28:29.84] zero or not
+[28:33.28] and of course
+[28:37.68] we're going to discover that for
+[28:38.80] geodesics this is the case
+[28:40.72] now but we're going to do it sort of
+[28:42.24] backwards we're going to say let's
+[28:43.68] suppose
+[28:44.72] let's just impose extreme melody let's
+[28:46.64] suppose that dl is zero
+[28:49.28] then when we make this supposition here
+[28:55.44] we we set the left-hand side of the
+[28:57.28] change in the length to zero
+[28:59.68] but that expression
+[29:03.84] then leads us to the following equation
+[29:06.96] that must be satisfied by the curve
+[29:09.36] right not any curve can be has been
+[29:11.44] extremely length
+[29:13.52] what sort of
+[29:18.72] what sort of curves enjoy
+[29:22.08] extrema lengths on a manifold
+[29:27.28] well you can think it through you know
+[29:30.24] you can set the
+[29:31.20] left hand side of this variation dl to
+[29:33.36] zero and then
+[29:35.92] you should conveyor to convince yourself
+[29:38.72] that the only way
+[29:40.24] that that can vanish that variation in a
+[29:43.92] length can vanish is if the following
+[29:45.60] equation
+[29:46.88] is satisfied
+[29:49.92] again little exercise this exercise
+[29:52.80] tests your fluidity
+[29:54.72] with calculus and tensor manipulations
+[30:04.16] there's the the expression i mean if you
+[30:06.88] look at the the
+[30:08.48] equation for the variation of the length
+[30:10.40] you should hopefully convince yourself
+[30:12.24] right that um the variation of the
+[30:14.64] length
+[30:16.24] uh has some derivatives in it and you
+[30:17.84] should know about integrating like parts
+[30:19.68] to get rid of derivatives of the
+[30:21.04] variation and then you try you should
+[30:22.56] try and make it true for all variations
+[30:26.00] um and then you should end up with the
+[30:29.28] equation i've just drawn here so
+[30:31.36] i'll actually put that extra melody
+[30:33.44] means dl is zero
+[30:34.80] for all variations right i didn't really
+[30:37.20] say that explicitly but i hope that's
+[30:38.56] kind of
+[30:39.28] implicitly clear was implicitly clear
+[30:42.56] that if you you vary the curve
+[30:47.12] the the length is extremal if no matter
+[30:49.92] how you vary so for all variations dx
+[30:52.64] alpha
+[30:53.20] that you get dl equals zero so imposing
+[30:55.84] that
+[30:56.32] should convince you that the following
+[30:58.08] equation is true
+[31:00.40] but this is just the geodesic equation
+[31:11.84] so if you have a geodesic then certainly
+[31:14.64] it extremizes
+[31:15.84] the length between two points and if you
+[31:18.64] have
+[31:19.28] a uh if you want to extreme as the
+[31:22.32] length then the curve that
+[31:23.68] does that is a geodesic so this is
+[31:26.72] an equivalent characterization of
+[31:28.08] geodesics one that's potentially
+[31:30.24] intuitively nicer
+[31:36.64] let's write that out a curve
+[31:40.04] extremizes
+[31:43.76] the length if and only if
+[31:46.96] it is a geodesic
+[31:52.56] okay that's pretty cool and there's
+[31:55.92] something really
+[31:56.80] magical about this and that is that
+[31:59.84] let's go back to this picture
+[32:02.40] up here now let's go to the one here
+[32:06.56] so you've got two points on the manifold
+[32:08.96] m and you've got a curve on the manifold
+[32:10.96] in
+[32:11.60] joining the two points and we just
+[32:15.04] concluded that
+[32:16.48] if you draw a curve between p and q of
+[32:18.96] minimum length
+[32:20.72] then it's a geodesic uh it's sorry
+[32:24.32] extremal length and this is the this is
+[32:25.92] the key point that i do want to get back
+[32:27.28] to in a minute
+[32:28.64] if the curvy draw between p and q is
+[32:30.88] extremal
+[32:32.80] then it's a geodesic but a geodesic
+[32:35.36] satisfies a local equation
+[32:37.68] right you can start at p and
+[32:43.20] you can solve for the geodesic that goes
+[32:46.24] from p to q as long as you know the
+[32:47.76] tangent vector the right tangent vector
+[32:49.44] poking out from p
+[32:51.52] you can solve for the the whole curve
+[32:53.76] locally you know bit by bit
+[32:55.60] so somehow the geodesic equation knows
+[32:57.60] about the global
+[32:59.04] structure of the manifold now
+[33:02.08] it's not strictly true right because you
+[33:03.36] needed to know that starting tangent
+[33:04.88] vector you need to know which direction
+[33:06.48] to to
+[33:07.04] exit from p so that you'll land on q so
+[33:09.92] that
+[33:10.24] that's that is implicit in a little bit
+[33:12.80] of global information about the manifold
+[33:14.56] but it's still
+[33:15.52] really striking that a local in
+[33:17.68] parameter equation
+[33:18.96] the geodesic equation can somehow know
+[33:22.88] with very minimal data about the the
+[33:25.04] general structure of the manifold around
+[33:26.64] the point
+[33:27.60] where you're exiting from i still find
+[33:29.28] that kind of magical
+[33:32.96] so there's some
+[33:36.48] neater things to to to to know about
+[33:39.20] geodesics
+[33:42.48] so you didn't have to use the length you
+[33:44.08] know you can extremize not only the
+[33:45.68] length to get a geodesic but actually
+[33:50.80] you can get the geodesic equation from
+[33:52.56] other functionals
+[33:59.36] you can get the geodesic equation by
+[34:01.20] varying the following lagrangian
+[34:26.40] so the following lagrangian so this is
+[34:28.16] this the grunge
+[34:32.56] is super simple you just take the the
+[34:34.96] tangent vectors to the curve and compute
+[34:36.96] the
+[34:41.52] inner product and by varying
+[34:44.56] this lagrangian obviously you have to
+[34:48.16] integrate it along
+[34:49.44] s or t sorry the curve parameter
+[34:53.52] you also get the geodesic equation is
+[34:56.24] satisfied so the minimum of the
+[34:57.68] extremized
+[34:58.64] the extremizer of the length is the same
+[35:00.64] as the extremizer of that lagrangian
+[35:02.24] there
+[35:02.80] and why do we like this um
+[35:06.80] because this can this is really useful
+[35:08.72] it can be really useful
+[35:13.60] because it can give a very efficient way
+[35:19.04] to compute some quick to compute
+[35:20.72] christopher symbols
+[35:29.12] it's one of these little tricks you
+[35:30.32] should bear in mind
+[35:33.04] so you know how to extremize the
+[35:34.48] lagrangian right you need the lagrange
+[35:36.16] equations dl
+[35:37.28] dx mu minus d dt
+[35:44.80] uh d l d
+[35:48.08] x whatever d mu d t
+[35:52.72] so that's how to extremize a lagrangian
+[35:55.36] and that's like a pretty
+[35:56.80] you know if you've got the the metric
+[35:59.52] and
+[36:00.56] you look at that expression then that
+[36:02.96] that might be an easier task right
+[36:05.28] than going in and just directly
+[36:07.12] computing the christopher symbols
+[36:11.04] now i want to talk about the word
+[36:12.64] extremize versus minimize
+[36:14.48] so extremize right this is a really
+[36:16.56] important difference
+[36:18.64] versus minimize
+[36:21.92] so extremizing sounds like minimizing
+[36:23.92] but it's very different
+[36:25.20] so if you've got a
+[36:28.40] function even in one dimensional minute
+[36:31.20] function minimization you should see the
+[36:32.72] difference
+[36:33.44] here's a function
+[36:37.12] um this last bit i want to get right so
+[36:41.12] it goes up it goes down and then it has
+[36:42.96] a
+[36:44.80] turning point like that yep
+[36:48.32] where are the extrema for this function
+[36:51.12] here well the extrema
+[36:52.72] is where the function doesn't change
+[36:54.48] anymore so this is where df
+[36:56.32] equals zero so this is the graph of f
+[36:58.64] versus say
+[36:59.84] x or t and here's another extreme and
+[37:03.44] down here d
+[37:04.16] f is zero and here's an extrema here i
+[37:06.48] didn't really try
+[37:07.36] i didn't really do a good job of drawing
+[37:08.88] it but um
+[37:14.16] no i didn't do a good job of drawing it
+[37:15.76] well let's just let's just stick with
+[37:17.60] with the with the even this is enough to
+[37:20.64] make the point
+[37:21.68] right you have a function like that
+[37:25.20] there's two extrema
+[37:26.48] only one of them is the minima
+[37:29.84] and things can get really bad so you
+[37:32.16] think okay i've extremized the function
+[37:33.84] therefore i found the minimum no no
+[37:35.52] no no right you found a maximum maybe
+[37:38.96] or you found a minimum or you may have
+[37:40.80] found one of many local minima the
+[37:42.88] function could look like that
+[37:44.72] and you can have arbitrarily nasty many
+[37:48.08] local minima these are all extremas here
+[37:49.92] that are drawn
+[37:51.76] you could have ended up in one of these
+[37:52.96] local minima when you extremize right
+[37:54.88] this is
+[37:55.36] all these points here satisfy df equals
+[37:57.60] zero so
+[37:58.64] it's a necessary but not sufficient
+[38:00.32] condition to be at a minimum
+[38:02.72] to extremize something
+[38:07.60] and let's for the specific case of
+[38:11.52] laurentian
+[38:12.64] manifold so for lorenz
+[38:18.88] signature manifolds
+[38:22.72] i'll just tell you a little bit about
+[38:24.48] what extremal
+[38:26.24] curves look like
+[38:31.44] so you might think that you found a
+[38:33.44] curve with minimum
+[38:35.84] time like
+[38:47.04] distance
+[38:51.52] but note the following
+[38:57.84] it turns out that if you've got two
+[39:00.64] points that time like separated
+[39:04.08] then they may have arbitrarily small
+[39:16.16] proper time so proper time
+[39:19.52] if you try you can always minimize the
+[39:21.20] proper time you bring it down to
+[39:22.80] essentially zero always and how does the
+[39:25.20] argument go well suppose you have
+[39:27.60] two points and the time-like separated
+[39:29.68] so pq
+[39:31.28] i'm not going to draw the light cone on
+[39:32.72] there you just have to imagine
+[39:34.56] that the time-lapse separated okay
+[39:36.40] here's a curve that joins p and q
+[39:38.88] that's going to have a non-zero proper
+[39:40.96] time this curve
+[39:43.20] but look at this radical curve i'm about
+[39:45.60] to draw here
+[39:46.40] this is also a curve joining p and q and
+[39:49.12] it's
+[39:49.68] it's uh it's physical
+[39:53.36] it's nearly null and then it flips
+[39:55.60] around to pointing nearly at the speed
+[39:57.68] of light here
+[39:58.64] and then goes flips around to going
+[40:00.40] nearly the speed of light here and then
+[40:01.68] goes up and
+[40:02.24] goes nearly the speed of light here that
+[40:03.52] actually has a lower proper time
+[40:06.32] because along these nearly null segments
+[40:08.56] the proper time is arbitrarily small
+[40:10.32] here
+[40:11.12] here and here so
+[40:14.48] this gray curve has
+[40:18.08] arbitrarily has smaller proper time
+[40:24.80] so beware of thinking of proper of the
+[40:28.08] proper time as somehow measuring the
+[40:30.00] length of the
+[40:30.88] nice smooth geodesic curves that
+[40:34.64] lower the make the proper time lower can
+[40:36.48] be made quite
+[40:37.68] nasty by making them nearly the speed of
+[40:40.80] light
+[40:44.08] so i'm not going to prove that statement
+[40:46.80] it's just an observation that you'll
+[40:48.48] have to believe or
+[40:50.72] investigate yourself so what what do you
+[40:53.52] get
+[40:53.92] when you you compute the geodesic
+[40:55.92] equation for a time-like curve
+[40:58.80] so a time-like curve is a geodesic
+[41:03.52] if it has the greatest possible time
+[41:12.32] oh sorry i said it the wrong way around
+[41:14.72] so if a curve
+[41:16.24] has of greatest proper time exists that
+[41:20.16] extremizes the proper time right because
+[41:22.48] it's the greatest the greatest means
+[41:24.00] that any variation can't get bigger
+[41:26.83] [Music]
+[41:27.92] it must be a time like geodesic
+[41:43.84] because of this very simple
+[41:45.76] one-dimensional calculus commentary
+[41:47.60] above
+[41:48.88] just because a you have a geodesic
+[41:51.12] doesn't mean that
+[41:52.16] it is the curve with the greatest proper
+[42:00.84] time
+[42:03.04] so the any if you have a g s geodesic
+[42:06.24] that goes from p to q
+[42:08.32] it need not maximize the proper time
+[42:29.20] okay that's just some warnings about
+[42:31.76] variation of calculus and maximizing and
+[42:33.84] minimizing things
+[42:35.44] be careful about thinking that
+[42:39.04] extremal points are minima or maxima
+[42:43.12] or quite often they're just local minima
+[42:44.88] or local maxima
+[42:48.40] our next topic is that of curvature of
+[42:51.20] manifolds
+[42:52.40] so we've now reached the point where
+[42:54.00] we've assembled enough mathematical
+[42:56.80] foundations to be able to discuss in an
+[42:59.28] intrinsic fashion the curvature of a
+[43:01.28] manifold
+[43:02.48] and this is a key ingredient in
+[43:04.32] einstein's general theory of relativity
+[43:07.20] so for the next lecture we will
+[43:11.28] discuss curvature and i'll give you two
+[43:13.44] characterizations of curvature
+[43:15.20] that are intrinsic to the manifold don't
+[43:17.68] require that we know the embedding
+[43:19.68] space in which the manifold lives
+[43:22.72] and at the end of the next lecture we'll
+[43:25.76] have assembled enough mathematical
+[43:28.80] constructions and definitions that we'll
+[43:30.32] be able to finally
+[43:32.16] move on to discussing einshein's general
+[43:34.64] theory of relativity
+[43:38.16] so the main observation and i've said it
+[43:41.04] enough times
+[43:42.56] uh in the past but it's worth
+[43:45.04] emphasizing
+[43:46.32] because it's such a key ingredient that
+[43:49.84] the main characterization of curvature
+[43:51.76] that we're going to use is that the path
+[43:54.16] that parallel transport may be path
+[43:56.88] dependent
+[44:01.44] and that the path dependence of parallel
+[44:04.48] transport is
+[44:05.76] a key intrinsic signature of
+[44:08.96] curvature
+[44:13.12] so if you parallel transport a vector
+[44:18.40] from the tangent space
+[44:22.24] at some point p to the tangent space at
+[44:25.36] some point
+[44:26.08] q then this gives
+[44:30.32] an intrinsic right it doesn't depend
+[44:32.96] parallel transport doesn't depend and
+[44:34.56] vectors don't depend on knowing
+[44:36.32] if your manifold is embedded in some
+[44:37.76] other manifold
+[44:40.96] it's an intrinsic proxy or signature
+[44:44.96] for curvature of m
+[44:50.72] and that's the main the main uh
+[44:53.52] observation that
+[44:54.72] forms the basis for the remane and
+[44:56.64] characterization of curvature of
+[44:57.92] manifolds
+[44:58.88] so what we're going to do is we're going
+[44:59.92] to define a measure of curvature
+[45:02.40] like how curved is a manifold as the
+[45:05.60] failure we're going to define this
+[45:06.80] measure to be the failure of successive
+[45:08.16] parallel transporting operations to
+[45:10.16] commute
+[45:12.00] and that'll define we'll find a way to
+[45:14.48] to
+[45:15.28] obtain a tensorial quantity so the
+[45:18.00] riemann curvature tensor
+[45:21.68] is going to be that thing defined by
+[45:26.72] the failure
+[45:31.36] of successive
+[45:36.16] parallel transport operations to commute
+[45:48.48] that's how we're going to define the
+[45:49.92] riemann curvature we'll find a way to do
+[45:51.92] that mathematically
+[45:54.48] and we'll do this
+[45:57.92] i'm going to do this derivation one time
+[46:00.64] with derivative operators and then i'm
+[46:02.08] going to
+[46:02.56] effectively do the derivation a second
+[46:04.08] time with uh successive parallel
+[46:05.92] transport operations
+[46:07.52] so uh that's the physical intuition that
+[46:10.64] lies behind the riemann curvature tensor
+[46:12.32] it's the failure of successive parallel
+[46:13.76] transport operations the compute the
+[46:15.04] actual mathematical definition of the
+[46:16.40] riemann curvature tensor
+[46:17.84] is in terms of derivative operators the
+[46:20.32] way to translate between these two
+[46:21.76] definitions
+[46:22.96] is to think of parallel
+[46:26.24] of parallel transport operations is
+[46:28.48] being
+[46:29.44] infinitesimal parallel transport
+[46:30.88] operations as being one-to-one
+[46:32.00] correspondence with derivative operators
+[46:34.00] so what we can do is we're going to
+[46:37.68] start by studying
+[46:44.56] and the action of not one but
+[46:48.08] two covering derivative
+[46:51.68] derivative operators
+[46:56.64] on an arbitrary
+[47:01.20] dual vector field
+[47:04.96] omega well i know c and
+[47:08.80] to make this uh conclusions to bring
+[47:12.16] them up the quickest we're going to
+[47:13.36] suppose we additionally have a
+[47:15.20] arbitrary smooth function f so you
+[47:18.00] really got to think of delta a delta b
+[47:19.84] as kind of being two infinitesimal
+[47:21.68] parallel transports
+[47:26.00] so let's consider
+[47:32.48] the following expressions delta a
+[47:35.76] delta b applied to f omega c
+[47:39.36] so if c is a dual vector field then f
+[47:41.04] times omega c is the dual vector field
+[47:43.44] and we're going to apply we're going to
+[47:45.52] try and parallel transport it along
+[47:49.20] one vector direction which is indexed by
+[47:50.96] slot a and another vector direction
+[47:52.88] which
+[47:53.20] is indexed by slot b and
+[47:56.56] to carry out this computation we just
+[47:58.16] use several properties of the
+[48:00.96] the derivative operator delta a firstly
+[48:03.04] we're going to use the leibniz property
+[48:04.56] and the fact that on scalar functions it
+[48:06.16] reduces to the normal derivative
+[48:15.60] in fact no we're not even going to
+[48:16.64] bother using that we're going to use
+[48:19.52] adjust the likeness property here in the
+[48:21.04] first line and then we just use
+[48:22.16] leibniz's property again
+[48:24.16] in the second line here
+[48:29.60] so we can get four terms depending on
+[48:31.28] where this delta operator lands
+[48:46.84] okay and
+[48:49.84] note that this is this is going to enjoy
+[48:53.92] some
+[48:54.40] interesting properties in particular the
+[48:56.16] first term here because
+[48:57.44] we've assumed our derivative operator is
+[48:58.88] torsion free we know that delta a delta
+[49:00.80] b bf will be the same as delta b delta
+[49:02.64] af
+[49:05.12] and the the two terms in the middle had
+[49:07.84] we done b
+[49:08.64] then a well we would have gotten the
+[49:10.88] same two terms in the middle
+[49:12.32] and in fact the only term that would
+[49:15.84] uh between if we change the order of
+[49:17.60] these parallel transport operations as
+[49:19.12] the last one
+[49:20.24] so that's i've already essentially given
+[49:22.72] you the proof
+[49:24.88] of the next statement the one that
+[49:26.16] really will characterize the riemann
+[49:27.92] curvature tensor
+[49:29.04] let's consider the difference of doing a
+[49:31.52] teeny infinitesimal parallel transport
+[49:33.52] along the a slot
+[49:34.80] vector and the b slot vector the
+[49:37.52] difference of doing it one way and the
+[49:39.12] other
+[49:42.00] well it's a little exercise where i
+[49:43.68] basically told you how to do it
+[49:45.60] um you know that this is true right
+[49:53.28] you see that the difference of these two
+[49:54.80] derivative operators when applied to f
+[49:56.48] omega c
+[49:57.12] is the same as f of these derivative
+[49:58.80] operators applied to omega c
+[50:00.32] but we've seen that before this kind of
+[50:02.32] structure
+[50:05.36] um you know we've when we were talking
+[50:07.52] about derivative operators we considered
+[50:09.44] their actions
+[50:10.56] on on scalar functions
+[50:14.32] multiplied by dual vector fields and we
+[50:16.08] saw that the action of a derivative
+[50:17.76] operator commutes with a scalar function
+[50:19.52] f
+[50:20.24] and then we applied a intermediate mean
+[50:22.88] value type
+[50:23.68] argument to show that delta a
+[50:27.04] omega b depends only on the value of the
+[50:30.48] dual vector field at the point
+[50:31.92] p under consideration the same reasoning
+[50:33.84] applies here
+[50:39.44] so since this is true
+[50:44.24] for all f we learn that
+[50:48.72] delta a delta b minus delta b delta a
+[50:52.96] omega c
+[50:56.00] only depends
+[50:59.92] on the value of
+[51:03.52] omega c at the point p where you are
+[51:05.44] right that's the key
+[51:07.28] consequence of this little computation
+[51:11.68] so uh now we learn that the commutator
+[51:14.40] of these derivatives
+[51:19.52] uh defines a map
+[51:26.00] i'll just write it out as a map from
+[51:29.12] tenses of type zero one to tenses of
+[51:31.36] type
+[51:32.40] zero three
+[51:37.36] and in other words
+[51:40.64] there exists a matrix representation for
+[51:42.40] this linear map
+[51:51.84] r a b c d which is a tensor of type 1
+[51:56.24] 3
+[51:59.36] such that for all
+[52:02.64] dual fields
+[52:06.00] we have the following representation
+[52:23.36] and now i've just defined for you the
+[52:25.20] riemann curvature tensor
+[52:34.24] it does turn out to be tension in this
+[52:44.84] case
+[52:49.20] so our abcd is something called the
+[52:50.96] riemann curvature tensor
+[52:52.80] and mathematically you can see it sort
+[52:55.52] of
+[52:56.40] measures the difference in parallel
+[52:59.60] making little infinitesimal parallel
+[53:01.20] transports
+[53:02.64] along two directions
+[53:05.76] now that that intuitive interpretation
+[53:08.96] of this mathematical equation can be
+[53:10.48] made more precise and that's what we're
+[53:11.76] going to do now
+[53:15.36] so i'm going to give we're going to i'll
+[53:18.40] give a
+[53:19.36] argument now to you that will relate
+[53:24.24] our abcd to the failure
+[53:28.96] of successive parallel transports
+[53:42.80] and to do that i'm going to draw for you
+[53:45.20] a picture
+[53:48.16] to explain this
+[53:57.84] so we'll put a slightly orange
+[54:02.88] now what you've got to imagine here is
+[54:04.64] that we've got a manifold
+[54:06.56] m which is this which i've now drawn as
+[54:09.60] a three-dimensional
+[54:10.72] manifold here m is
+[54:17.28] for this for the next part of this
+[54:18.56] argument you've got to imagine it's
+[54:20.16] important
+[54:20.88] that we have you think of the manifold
+[54:23.60] as being
+[54:24.32] um higher dimensional than just
+[54:28.56] uh one so in particular
+[54:33.04] it's very important that m in this
+[54:36.84] characterization
+[54:38.24] looks maybe arbitrary dimensional
+[54:45.04] so m here
+[54:49.12] is this orange surface sorry orange
+[54:52.48] volume right in this in this story and
+[54:55.52] then what's going to happen
+[54:57.12] is we're going to talk about
+[54:58.32] successively parallel transporting a
+[55:00.48] vector
+[55:02.40] in two different ways so we're going to
+[55:05.12] start with some point p
+[55:07.20] and p is in a surface
+[55:10.24] s it's also in a big manifold here
+[55:13.76] and we're going to imagine is we start
+[55:15.20] at p and we
+[55:17.76] and that there is some two-dimensional
+[55:20.32] surface
+[55:21.36] s that p lies in as well this is really
+[55:24.56] important
+[55:26.40] and we're going to parallel transport
+[55:27.84] our vector along
+[55:30.00] one curve in s along another curviness
+[55:32.24] along another one and then back to where
+[55:33.76] it started from
+[55:40.48] so suppose you have a vector v
+[55:46.40] at p and then you parallel transport it
+[55:48.72] along like
+[55:49.76] one direction in your your
+[55:51.36] two-dimensional surface
+[55:54.00] and then you parallel transport along
+[55:56.56] this next part of a little square that
+[55:58.16] you've drawn in your surface
+[55:59.76] and then so on your parallel transport
+[56:01.52] it back
+[56:04.40] and then i don't know at the end of it
+[56:05.92] you end up with a new vector v
+[56:07.60] prime which is the result
+[56:11.76] of having parallel transported your
+[56:14.32] vector around this little square
+[56:16.00] inside this surface s of dimension
+[56:20.16] two so you've got four portions to this
+[56:23.20] parallel transport
+[56:28.64] depending on where you're going around
+[56:30.08] this little square
+[56:33.28] and we're going to to make things a
+[56:35.76] little bit easier we're going to
+[56:36.56] coordinate
+[56:37.52] our manifold and say that these portions
+[56:39.92] are on
+[56:42.40] constant coordinate
+[56:47.04] lines so that this little square is
+[56:50.08] is in uh
+[56:54.72] this little square is
+[56:57.76] realized by doing a little
+[57:01.12] transports along constant coordinate
+[57:03.60] curves
+[57:04.48] in the surface s i'll write this out in
+[57:06.32] equations in a minute
+[57:08.16] so the coordinate of the point p is 0
+[57:11.12] zero the coordinate of the first
+[57:13.20] point on the journey is zero comma delta
+[57:15.12] t so we have two coordinates
+[57:21.84] of the surface s now of course m has n
+[57:24.72] coordinates but s is a two dimensional
+[57:26.48] surface defined by
+[57:28.08] by two coordinates just to call them a
+[57:30.48] little less little t so this is
+[57:32.56] big s
+[57:36.72] and the second point on our journey is
+[57:39.28] delta s
+[57:40.40] delta t i could put deltas in there
+[57:44.32] sorry i shouldn't have done that
+[57:48.80] uh the second point in our journey is
+[57:50.16] delta s delta t the third point in our
+[57:52.24] journey is delta s comma zero
+[57:54.64] and the starting point is zero zero
+[57:58.08] so we take now you see the data what do
+[58:00.64] we need to
+[58:01.60] you know what what data is required to
+[58:03.60] even set up the scenario we need to have
+[58:06.24] uh a surface a surface is defined by
+[58:08.88] maybe
+[58:09.60] two vectors or you can imagine that it's
+[58:11.52] a kind of flat surface defined by two
+[58:13.20] vectors so
+[58:14.24] to even talk about a surface in a
+[58:15.76] manifold you need the data of at least
+[58:17.20] say two vectors right
+[58:20.24] you also need the data of another vector
+[58:21.92] v
+[58:23.36] that's the vector that's being parallel
+[58:24.80] transported around the surface
+[58:27.12] and uh you need the metric and you need
+[58:30.16] a parallel and your covariant derivative
+[58:31.68] operator to talk about this scenario
+[58:33.36] here so now let's write out that's the
+[58:35.04] picture
+[58:35.60] of the scenario i'm now about to
+[58:37.28] describe
+[58:40.80] so in slightly more precise
+[58:45.12] words and equations so we consider a
+[58:48.84] loop
+[58:52.72] starting at some point p in the manifold
+[58:55.44] and this loop is defined
+[59:03.04] by a two-dimensional surface
+[59:08.96] s
+[59:12.16] through p and so the coordinates
+[59:16.80] we can choose some coordinates that we
+[59:18.64] like for s
+[59:23.28] let's just call our coordinate system
+[59:24.80] whatever s comma t
+[59:29.44] and of course in the picture above i've
+[59:31.84] made it clear that the coordinate system
+[59:35.20] that the origin of this coordinate
+[59:36.48] system is exactly the point p
+[59:40.64] then the loop that we're going to
+[59:42.80] parallel transport our
+[59:44.08] vector around
+[59:50.64] is defined by the following four steps
+[59:53.20] we start at the point zero zero in
+[59:55.04] coordinates on s we go to the location
+[59:57.60] zero delta t
+[59:59.12] by path parallel transport operation one
+[60:01.76] we go to
+[60:02.64] the location delta s delta t uh
+[60:06.00] by parallel transport two we get
+[60:09.04] two delta s comma zero by three
+[60:13.36] and then we finally end up at zero zero
+[60:15.84] by parallel transport four
+[60:20.08] finishing our path
+[60:24.64] so to do this parallel transport well
+[60:27.28] we're going to need a vector
+[60:28.80] so that v be a vector
+[60:34.16] an arbitrary vector right not just any
+[60:35.84] vector an arbitrary vector
+[60:48.56] and we're going to parallel transport it
+[60:59.36] around the loop
+[61:03.20] and to make the computation a bit easier
+[61:07.76] we're going to suppose we have
+[61:11.36] an arbitrary
+[61:14.88] dual vector field defined everywhere on
+[61:18.16] the manifold this is just helpful for
+[61:19.76] the computation you don't need it
+[61:27.68] what the the the style of argument we're
+[61:29.68] going to use is we're going to construct
+[61:30.96] a scalar quantity
+[61:32.64] and consider that and then parallel
+[61:34.40] transport the scalar quantity around and
+[61:36.32] it just is easier to do the computation
+[61:38.32] then at the end we let omega a be
+[61:39.92] arbitrary and cancel it out
+[61:42.08] so omega a just plays the role of
+[61:43.76] turning of of
+[61:46.24] of like an arbitrary test dual vector so
+[61:52.08] now can
+[61:53.12] to actually do our computation we
+[61:55.68] consider
+[61:56.72] v a omega a and now that's a scalar
+[61:59.36] function
+[61:59.84] on the manifold and that makes some
+[62:01.28] operations a bit easier to do
+[62:04.84] mathematically
+[62:06.80] now let's look at the change in this
+[62:08.24] scalar function
+[62:17.84] along the first part of our little loop
+[62:25.20] how is it defined well we're going to
+[62:27.12] make an infinitesimal loop
+[62:32.16] or i said equivalently we just
+[62:34.64] considered things to first order
+[62:38.64] and now here's something that may
+[62:41.28] through you for a second um
+[62:51.68] we're going to evaluate the first order
+[62:53.52] change at the midpoint between
+[62:56.00] the point where we are where we're going
+[62:57.20] to end up
+[63:01.76] of now i said first order up to now but
+[63:03.68] i lied in fact we're going to do this
+[63:05.52] computation to second order this is one
+[63:07.04] of these
+[63:08.88] uh rare occasions where you do need to
+[63:11.04] go to second order
+[63:23.04] so evaluating this expression for the
+[63:25.84] the change delta 1 in the scalar
+[63:27.84] function v
+[63:28.40] a omega a if you evaluate that at the
+[63:30.48] midpoint you actually get an expression
+[63:31.92] that's correct to second order
+[63:36.56] even the second order term is correct
+[63:39.92] that's a handy trick to know if you want
+[63:42.32] if you have to do a calculation that's
+[63:43.76] correct
+[63:44.40] to second order you could either include
+[63:46.48] the second order term and evaluate it at
+[63:48.32] the end point
+[63:49.20] or you could take just the first order
+[63:50.96] term and insert the midpoint here
+[63:53.12] it's pretty a neat and handy trick for
+[63:56.00] doing calculations the second order that
+[63:57.68] you should remember
+[63:59.60] so delta 1 is
+[64:03.20] big delta t t b d
+[64:06.32] delta b v a omega i'm just using the
+[64:10.40] fact that on scalar functions
+[64:13.12] the derivative operator reduces on
+[64:15.52] scalar functions
+[64:16.64] to the normal derivative operator
+[64:22.24] and then if we just apply leibniz
+[64:24.24] property
+[64:25.36] and use the fact that va is parallel
+[64:27.68] transported
+[64:29.52] then we get the following expression
+[64:50.96] okay delta one has this expression
+[64:55.44] oh i mean maybe not
+[64:59.36] i better make it explicit here ta is a
+[65:01.52] tangent vector
+[65:03.28] it's not a it's the
+[65:12.88] is the tangent vector to the curve with
+[65:17.20] constant s coordinate
+[65:22.24] and parallel transport operation means
+[65:24.72] that ta
+[65:33.84] yeah so
+[65:39.92] similarly
+[65:43.36] just do the same argument
+[65:50.72] we obtain uh for the change along the
+[65:53.84] third part of our journey
+[65:58.24] the following expression right on parts
+[66:00.64] one and two
+[66:01.28] one and three of our journey we're
+[66:02.80] changing
+[66:04.64] t the t coordinate
+[66:09.68] so all the changes between these two
+[66:11.28] expressions is where you evaluate them
+[66:14.40] namely at the midpoint of these two
+[66:17.68] coordinates
+[66:24.64] so then what we're going to do is we've
+[66:25.92] got two parts of the change
+[66:28.08] in our function along our parallel
+[66:30.40] transport around the loop
+[66:31.84] let's combine them and then i'll leave
+[66:33.76] the other two to as an exercise
+[66:37.28] it's just going to be an exercise in
+[66:38.64] changing esses with tees
+[66:47.92] so i'm just going to add them up
+[66:49.92] subtract them sorry
+[66:51.68] or add up the first term and to the
+[66:55.04] inverse of the second term
+[67:11.84] and we're going to call this stuff
+[67:18.96] later i'm going to give it a name right
+[67:20.80] now we're not and we're just going to
+[67:22.40] notice one thing about this expression
+[67:24.16] right as a function of delta s
+[67:26.48] this vanishes as delta s goes to zero
+[67:42.48] as it should do right you know if you
+[67:44.16] parallel transport along the curve and
+[67:45.76] go back the way you came you better get
+[67:47.20] zero
+[67:54.64] and interestingly
+[67:59.76] if you go through the computation and
+[68:01.12] work out
+[68:04.08] d2 plus d4
+[68:12.64] then you see that it goes to zero as
+[68:14.40] delta t goes to zero
+[68:17.12] so actually what we've learned is that
+[68:19.12] parallel transport around the loop is
+[68:20.88] path
+[68:21.36] independent to first order
+[69:01.20] so parallel transport around a loop is
+[69:03.04] path independent
+[69:10.16] to first order i mean it's definitely
+[69:12.08] path dependent it's just path
+[69:13.76] independent to first order so the path
+[69:17.20] of dependence appears in second order
+[69:37.68] so now our goal is to get the path uh
+[69:40.24] depend the second order dependence on
+[69:42.08] parallel transport to second order
+[69:45.12] by explicitly isolating out the second
+[69:48.88] order terms
+[69:50.40] so to get second order dependence
+[69:52.64] consider the parallel
+[69:54.00] transport
+[69:59.76] of our vector va
+[70:04.32] and of a second vector which you can
+[70:06.96] define
+[70:07.60] a covector dual vector
+[70:14.00] along t equals delta t or along
+[70:21.68] this is a weird device what we're about
+[70:23.12] to use but i'll draw a picture to try
+[70:24.56] and
+[70:25.12] explain the construction here
+[70:30.72] so here's our vector v that we've
+[70:33.12] parallel transported up to the midpoint
+[70:41.52] and then we're going to parallel
+[70:42.40] transport along this dotted line here
+[70:57.76] and this dotted line is
+[71:01.04] the curve t is delta t over two
+[71:04.88] not delta t see
+[71:08.00] here's the point delta t zero delta t
+[71:10.08] here's the point delta s
+[71:11.52] delta t up here here's the coordinate
+[71:14.88] zero zero
+[71:15.84] so we're parallel transporting va along
+[71:17.92] this mid curve
+[71:19.28] so we're not going to parallel transport
+[71:20.64] it all the way around the loop we're
+[71:21.92] just gonna
+[71:22.96] send it up to the up to the mid
+[71:26.00] curve and we're also going to parallel
+[71:28.08] transport this other vector
+[71:29.44] this covac dual vector tb omega a along
+[71:31.92] the same curve
+[71:34.16] um why are we doing that well because if
+[71:37.04] you look here at the difference
+[71:41.28] delta 1 delta 2 you notice that we're
+[71:43.36] evaluating things at midpoints right and
+[71:45.20] what we want to do is we want to compute
+[71:47.36] the difference between
+[71:50.56] these two terms that i've highlighted in
+[71:52.24] yellow va is is
+[71:54.00] this is of course common here
+[71:59.04] so you pull it out as a common factor we
+[72:01.44] want to evaluate the difference
+[72:02.88] of these two yellow highlighted terms
+[72:05.44] and
+[72:06.84] well they're evaluated
+[72:09.28] at uh different points in the loop
+[72:12.64] in fact va although va i said it's
+[72:14.64] common of course it isn't right va here
+[72:16.40] the second blue one
+[72:18.56] is evaluated at the other point in the
+[72:21.60] curve
+[72:22.72] so but i'm highlighted in green
+[72:28.80] so we want to get in order to actually
+[72:31.28] compare these two quantities well we
+[72:32.72] need to
+[72:33.52] evaluate them at the same point and
+[72:36.24] here's a trick to doing that so we
+[72:37.92] imagine
+[72:38.80] we're going to parallel transport the
+[72:40.80] yellow dual vector
+[72:41.92] yellow highlighted dual vector to the
+[72:43.76] midpoint of the
+[72:45.36] the part 3 of our parallel transport
+[72:49.84] then we'll just mathematically subtract
+[72:51.44] them at that point there
+[72:57.52] now we've already determined that to
+[72:59.76] first order
+[73:07.28] the vector v a at delta s
+[73:10.64] delta t over 2 is
+[73:14.32] equal to v a at
+[73:18.80] delta oops at zero delta t
+[73:22.48] over two because parallel transport is
+[73:25.84] path independent to first order
+[73:31.12] so the the only quantity that does
+[73:35.60] change along the red dotted curve
+[73:42.56] is t t b delta b omega c
+[73:47.44] omega a
+[73:52.00] so at delta t over 2 it differs
+[73:59.44] from the same
+[74:02.56] joule vector evaluated
+[74:05.68] at delta t oops did it the wrong way
+[74:08.48] around here
+[74:09.04] put the delta s first
+[74:17.92] all right these two quantities
+[74:19.20] potentially differ in fact they almost
+[74:20.80] certainly differ because omega is an
+[74:22.24] arbitrary dual vector field on the loop
+[74:27.68] and this quantity differs from yeah
+[74:30.56] obviously differs that but it's
+[74:31.84] we can't compare these two quantities
+[74:33.36] yet there are different places so we
+[74:34.48] have to parallel transport them
+[74:36.48] so it it also differs
+[74:39.68] from this dual vector field parallel
+[74:41.92] transported to
+[74:43.84] delta s delta t over two
+[74:47.28] and how does it differ well
+[74:50.88] just go back to your defining properties
+[74:54.24] of parallel transport and work out
+[74:56.00] that the first order the parallel
+[74:57.60] transport
+[75:04.32] of the dual vector is given by the
+[75:08.84] formula
+[75:11.92] the first order is given by uh
+[75:13.76] integrating the the equation of motion
+[75:16.16] for the parallel transport of a dual
+[75:18.08] vector you can do it to first order
+[75:21.68] so i'll just leave that as an exercise
+[75:26.00] and we're now parallel transporting
+[75:27.76] along the constant s
+[75:36.84] coordinate
+[75:38.24] a concert t sorry
+[75:47.76] call the star star
+[76:04.84] substituting
+[76:06.00] star star
+[76:09.04] into the expression for delta 1 plus
+[76:11.60] delta 3
+[76:14.48] now gives us our desired second order
+[76:18.84] dependence
+[76:32.84] and similarly for delta two plus delta
+[76:37.04] four
+[76:46.80] now let's put them all together right we
+[76:48.40] need to understand
+[76:52.48] what the total change is as we go around
+[76:54.80] the whole loop
+[76:55.68] of our quantity va
+[76:59.12] omega a
+[77:03.84] and well exercise
+[77:09.76] it turns out that that
+[77:12.80] when you add up the change over all
+[77:16.40] the four legs of the journey
+[77:20.72] that you end up with the following
+[77:28.84] expression
+[77:34.00] i think i've got a bracket too many
+[77:39.68] no looks right
+[77:46.72] and now let's rearrange things
+[77:55.20] and we'll see that we get quite a
+[78:00.00] familiar expression
+[78:06.16] namely we get the commutator of these
+[78:07.92] two derivative operators applied to the
+[78:10.40] dual vector
+[78:23.04] now the reason why i could go from the
+[78:24.96] first line to the second line
+[78:29.04] but i'll get to that in a sec but i want
+[78:30.48] to highlight of course that what comes
+[78:32.40] out
+[78:32.96] is that the the second order dependence
+[78:36.32] of the change in parallel transport of
+[78:39.20] vector v
+[78:40.24] is dependent it is controlled by the
+[78:42.80] riemann curvature tensor
+[78:46.64] so but how did i go from lines one to
+[78:52.84] two
+[78:54.80] so here we used the fact
+[79:00.48] that for coordinate vector fields that
+[79:08.08] the lead record
+[79:20.84] vanishes
+[79:34.64] which in our case was dds ddt
+[79:45.28] so we've learned that this variation
+[79:54.24] delta v a omega a
+[80:00.00] now is a bit where we cancel off this
+[80:01.52] dual vector field it can hold for all
+[80:09.44] omega a only
+[80:16.84] if
+[80:19.20] to first order or in delta s and d delta
+[80:22.80] t
+[80:23.04] separately or more correctly to second
+[80:25.44] order
+[80:26.40] in delta s delta delta s
+[80:30.24] and delta t uh that the
+[80:34.00] variation the the the path the
+[80:37.04] difference in the parallel transport of
+[80:38.64] delta
+[80:39.28] of va around these two legs or around
+[80:42.08] the whole loop
+[80:43.04] obeys this equation here
+[80:48.40] and this gives us our second
+[80:50.56] interpretation
+[80:52.16] of the riemann curvature tensor you know
+[80:54.00] the first was really as a mathematical
+[80:55.52] definition the second here
+[80:56.96] is as the failure
+[81:00.08] of parallel successive parallel
+[81:02.32] transformation operations
+[81:03.84] to commute
+[81:08.08] so this concludes this lecture on
+[81:10.80] geodesics
+[81:11.76] and the riemann curvature tensor in the
+[81:13.28] next lecture we're going to
+[81:15.36] continue our discussion of curvature and
+[81:17.84] establish a whole bunch
+[81:19.04] of properties of the riemann curvature
+[81:20.80] tensor we're going to introduce some
+[81:22.56] derived quantities
+[81:24.16] and we're going to relate in the most
+[81:27.20] important consequence
+[81:28.88] of uh this discussion we're going to
+[81:30.72] relate the green montgomery tensor
+[81:32.80] to the divergence of nearby geodesics
+[81:35.76] but that's it for now
+[81:36.80] thank you and goodbye

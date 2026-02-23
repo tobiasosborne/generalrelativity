@@ -1,0 +1,4412 @@
+{
+  "title": "General Relativity, Lecture 23: null geodesics for the Schwarzschild metric",
+  "video_id": "oKfXjiAqV1k",
+  "url": "https://www.youtube.com/watch?v=oKfXjiAqV1k",
+  "transcript": [
+    {
+      "start": 0.0,
+      "duration": 2.879,
+      "text": "hello and welcome back to the last"
+    },
+    {
+      "start": 1.439,
+      "duration": 2.48,
+      "text": "lecture of introduction to general"
+    },
+    {
+      "start": 2.879,
+      "duration": 3.44,
+      "text": "relativity"
+    },
+    {
+      "start": 3.919,
+      "duration": 4.881,
+      "text": "in today's lecture we will detail the"
+    },
+    {
+      "start": 6.319,
+      "duration": 5.36,
+      "text": "calculations of the deflection of light"
+    },
+    {
+      "start": 8.8,
+      "duration": 4.4,
+      "text": "by heavenly bodies for me this is one of"
+    },
+    {
+      "start": 11.679,
+      "duration": 3.361,
+      "text": "the most spectacular predictions of"
+    },
+    {
+      "start": 13.2,
+      "duration": 5.12,
+      "text": "general relativity that light itself"
+    },
+    {
+      "start": 15.04,
+      "duration": 5.6,
+      "text": "is curved by the gravitational field and"
+    },
+    {
+      "start": 18.32,
+      "duration": 3.119,
+      "text": "even more spectacular is that this"
+    },
+    {
+      "start": 20.64,
+      "duration": 4.16,
+      "text": "curvature"
+    },
+    {
+      "start": 21.439,
+      "duration": 5.281,
+      "text": "can be detected with terrestrial"
+    },
+    {
+      "start": 24.8,
+      "duration": 4.04,
+      "text": "observations and was detected in fact"
+    },
+    {
+      "start": 26.72,
+      "duration": 4.639,
+      "text": "back in 1919"
+    },
+    {
+      "start": 28.84,
+      "duration": 5.719,
+      "text": "already so to"
+    },
+    {
+      "start": 31.359,
+      "duration": 6.961,
+      "text": "commence the discussion of this uh"
+    },
+    {
+      "start": 34.559,
+      "duration": 6.721,
+      "text": "calculation we should recall uh"
+    },
+    {
+      "start": 38.32,
+      "duration": 2.96,
+      "text": "a couple of facts"
+    },
+    {
+      "start": 41.6,
+      "duration": 4.639,
+      "text": "about the the motion or the structure of"
+    },
+    {
+      "start": 44.96,
+      "duration": 4.64,
+      "text": "geodesics"
+    },
+    {
+      "start": 46.239,
+      "duration": 3.361,
+      "text": "in the schwarzschild solution"
+    },
+    {
+      "start": 49.68,
+      "duration": 3.28,
+      "text": "so we've got this energy equation so"
+    },
+    {
+      "start": 52.16,
+      "duration": 3.6,
+      "text": "remember"
+    },
+    {
+      "start": 52.96,
+      "duration": 4.16,
+      "text": "that we model the geodesic in the"
+    },
+    {
+      "start": 55.76,
+      "duration": 4.56,
+      "text": "schwarzschild"
+    },
+    {
+      "start": 57.12,
+      "duration": 5.439,
+      "text": "solution we obtained a"
+    },
+    {
+      "start": 60.32,
+      "duration": 3.36,
+      "text": "effective one-dimensional classical"
+    },
+    {
+      "start": 62.559,
+      "duration": 4.401,
+      "text": "mechanics model"
+    },
+    {
+      "start": 63.68,
+      "duration": 8.16,
+      "text": "that corresponds"
+    },
+    {
+      "start": 66.96,
+      "duration": 8.159,
+      "text": "to the geodesic coordinates"
+    },
+    {
+      "start": 71.84,
+      "duration": 6.08,
+      "text": "the schwarzschild solution and key here"
+    },
+    {
+      "start": 75.119,
+      "duration": 4.161,
+      "text": "is the following energy equation so by"
+    },
+    {
+      "start": 77.92,
+      "duration": 3.12,
+      "text": "introducing"
+    },
+    {
+      "start": 79.28,
+      "duration": 3.28,
+      "text": "uh an effective energy equation this is"
+    },
+    {
+      "start": 81.04,
+      "duration": 5.28,
+      "text": "not the energy"
+    },
+    {
+      "start": 82.56,
+      "duration": 7.519,
+      "text": "of the null geodesic directly um"
+    },
+    {
+      "start": 86.32,
+      "duration": 7.68,
+      "text": "it's just an effective interpretation of"
+    },
+    {
+      "start": 90.079,
+      "duration": 7.521,
+      "text": "this quantity for uh geodesics"
+    },
+    {
+      "start": 94.0,
+      "duration": 5.04,
+      "text": "as a using this one-dimensional analogy"
+    },
+    {
+      "start": 97.6,
+      "duration": 3.92,
+      "text": "one-dimensional classical mechanic"
+    },
+    {
+      "start": 99.04,
+      "duration": 4.0,
+      "text": "analogy now for analgeodesics there's"
+    },
+    {
+      "start": 101.52,
+      "duration": 2.0,
+      "text": "this constant kappa if you can go back"
+    },
+    {
+      "start": 103.04,
+      "duration": 3.039,
+      "text": "and look"
+    },
+    {
+      "start": 103.52,
+      "duration": 3.279,
+      "text": "into equation lectures 21 and 22 to"
+    },
+    {
+      "start": 106.079,
+      "duration": 2.241,
+      "text": "understand that"
+    },
+    {
+      "start": 106.799,
+      "duration": 4.161,
+      "text": "this constant kappa is zero for"
+    },
+    {
+      "start": 108.32,
+      "duration": 4.72,
+      "text": "analgesics"
+    },
+    {
+      "start": 110.96,
+      "duration": 4.08,
+      "text": "so if you look at this energy equation"
+    },
+    {
+      "start": 113.04,
+      "duration": 3.92,
+      "text": "it looks like that of a single"
+    },
+    {
+      "start": 115.04,
+      "duration": 3.359,
+      "text": "non-relativistic particle moving in this"
+    },
+    {
+      "start": 116.96,
+      "duration": 4.72,
+      "text": "funny potential this kind of"
+    },
+    {
+      "start": 118.399,
+      "duration": 6.72,
+      "text": "quartic cubic quadratic potential um"
+    },
+    {
+      "start": 121.68,
+      "duration": 4.719,
+      "text": "and uh well we might as well isolate"
+    },
+    {
+      "start": 125.119,
+      "duration": 5.521,
+      "text": "this effective potential"
+    },
+    {
+      "start": 126.399,
+      "duration": 6.801,
+      "text": "just to just to emphasize this point"
+    },
+    {
+      "start": 130.64,
+      "duration": 3.12,
+      "text": "so there's an effective radial potential"
+    },
+    {
+      "start": 133.2,
+      "duration": 4.32,
+      "text": "that this"
+    },
+    {
+      "start": 133.76,
+      "duration": 7.36,
+      "text": "fictitious particle is moving in and"
+    },
+    {
+      "start": 137.52,
+      "duration": 6.32,
+      "text": "it is based on the angular"
+    },
+    {
+      "start": 141.12,
+      "duration": 3.04,
+      "text": "effective angular momentum and the mass"
+    },
+    {
+      "start": 143.84,
+      "duration": 3.6,
+      "text": "of"
+    },
+    {
+      "start": 144.16,
+      "duration": 5.2,
+      "text": "the celestial body"
+    },
+    {
+      "start": 147.44,
+      "duration": 4.0,
+      "text": "so that's some potential right so you we"
+    },
+    {
+      "start": 149.36,
+      "duration": 4.32,
+      "text": "can plot this we so choose"
+    },
+    {
+      "start": 151.44,
+      "duration": 4.0,
+      "text": "and what we will find is something that"
+    },
+    {
+      "start": 153.68,
+      "duration": 4.8,
+      "text": "doesn't look unlike"
+    },
+    {
+      "start": 155.44,
+      "duration": 9.28,
+      "text": "the kinds of potentials that you have"
+    },
+    {
+      "start": 158.48,
+      "duration": 8.88,
+      "text": "by binding subatomic particles to nuclei"
+    },
+    {
+      "start": 164.72,
+      "duration": 3.599,
+      "text": "so potential looks something like this"
+    },
+    {
+      "start": 167.36,
+      "duration": 4.159,
+      "text": "goes up and"
+    },
+    {
+      "start": 168.319,
+      "duration": 4.56,
+      "text": "decays off and uh"
+    },
+    {
+      "start": 171.519,
+      "duration": 3.521,
+      "text": "we want to understand this potential"
+    },
+    {
+      "start": 172.879,
+      "duration": 4.64,
+      "text": "because the radial motion"
+    },
+    {
+      "start": 175.04,
+      "duration": 4.24,
+      "text": "is really determined by a classical"
+    },
+    {
+      "start": 177.519,
+      "duration": 3.44,
+      "text": "particle moving in this potential"
+    },
+    {
+      "start": 179.28,
+      "duration": 3.52,
+      "text": "so obviously it's kind of important to"
+    },
+    {
+      "start": 180.959,
+      "duration": 3.441,
+      "text": "understand this potential"
+    },
+    {
+      "start": 182.8,
+      "duration": 3.04,
+      "text": "and in particular there's you know one"
+    },
+    {
+      "start": 184.4,
+      "duration": 2.72,
+      "text": "important point here in this potential"
+    },
+    {
+      "start": 185.84,
+      "duration": 4.08,
+      "text": "namely this potential"
+    },
+    {
+      "start": 187.12,
+      "duration": 4.32,
+      "text": "uh stationary point here and that's"
+    },
+    {
+      "start": 189.92,
+      "duration": 2.959,
+      "text": "going to play an important role in any"
+    },
+    {
+      "start": 191.44,
+      "duration": 3.36,
+      "text": "classical motion"
+    },
+    {
+      "start": 192.879,
+      "duration": 4.161,
+      "text": "in this potential so if you have some"
+    },
+    {
+      "start": 194.8,
+      "duration": 4.0,
+      "text": "classical particle radial particle"
+    },
+    {
+      "start": 197.04,
+      "duration": 3.68,
+      "text": "you can imagine several scenarios like"
+    },
+    {
+      "start": 198.8,
+      "duration": 3.68,
+      "text": "this radial particle"
+    },
+    {
+      "start": 200.72,
+      "duration": 3.84,
+      "text": "this what particle zooms up the"
+    },
+    {
+      "start": 202.48,
+      "duration": 4.479,
+      "text": "potential doesn't have enough energy to"
+    },
+    {
+      "start": 204.56,
+      "duration": 4.319,
+      "text": "crest the potential and zooms away again"
+    },
+    {
+      "start": 206.959,
+      "duration": 3.681,
+      "text": "that would reflect an orbit of a null"
+    },
+    {
+      "start": 208.879,
+      "duration": 3.121,
+      "text": "geodesic that"
+    },
+    {
+      "start": 210.64,
+      "duration": 3.679,
+      "text": "comes close to the heavenly body and"
+    },
+    {
+      "start": 212.0,
+      "duration": 5.12,
+      "text": "then goes away or maybe the heaven"
+    },
+    {
+      "start": 214.319,
+      "duration": 4.081,
+      "text": "the the incoming particle has enough"
+    },
+    {
+      "start": 217.12,
+      "duration": 4.64,
+      "text": "energy to go over"
+    },
+    {
+      "start": 218.4,
+      "duration": 7.119,
+      "text": "the potential barrier and then it decays"
+    },
+    {
+      "start": 221.76,
+      "duration": 5.52,
+      "text": "or accelerates to negative in"
+    },
+    {
+      "start": 225.519,
+      "duration": 3.841,
+      "text": "potential energy so in other words"
+    },
+    {
+      "start": 227.28,
+      "duration": 3.519,
+      "text": "that's represents an analogy or desert"
+    },
+    {
+      "start": 229.36,
+      "duration": 4.72,
+      "text": "which gets caught"
+    },
+    {
+      "start": 230.799,
+      "duration": 4.8,
+      "text": "by this potential captured"
+    },
+    {
+      "start": 234.08,
+      "duration": 4.32,
+      "text": "and so it's obviously very important"
+    },
+    {
+      "start": 235.599,
+      "duration": 3.761,
+      "text": "that we uh understand where this point"
+    },
+    {
+      "start": 238.4,
+      "duration": 3.52,
+      "text": "is"
+    },
+    {
+      "start": 239.36,
+      "duration": 4.56,
+      "text": "that i've highlighted in yellow how can"
+    },
+    {
+      "start": 241.92,
+      "duration": 3.12,
+      "text": "we work that out well this is now first"
+    },
+    {
+      "start": 243.92,
+      "duration": 3.12,
+      "text": "year calculus"
+    },
+    {
+      "start": 245.04,
+      "duration": 3.119,
+      "text": "we can just take the derivative of the"
+    },
+    {
+      "start": 247.04,
+      "duration": 2.8,
+      "text": "effective potential"
+    },
+    {
+      "start": 248.159,
+      "duration": 3.121,
+      "text": "and set it to zero that'll give us the"
+    },
+    {
+      "start": 249.84,
+      "duration": 2.959,
+      "text": "stationary points there's only one"
+    },
+    {
+      "start": 251.28,
+      "duration": 4.56,
+      "text": "stationary point which you can sort of"
+    },
+    {
+      "start": 252.799,
+      "duration": 3.041,
+      "text": "see graphically"
+    },
+    {
+      "start": 257.12,
+      "duration": 3.28,
+      "text": "and doing that derivative which is what"
+    },
+    {
+      "start": 258.959,
+      "duration": 5.441,
+      "text": "i'm doing here"
+    },
+    {
+      "start": 260.4,
+      "duration": 4.0,
+      "text": "leads us to the following equation"
+    },
+    {
+      "start": 265.6,
+      "duration": 7.36,
+      "text": "minus three minus 2 m plus r"
+    },
+    {
+      "start": 269.919,
+      "duration": 4.0,
+      "text": "and well you know this goes away right"
+    },
+    {
+      "start": 272.96,
+      "duration": 3.44,
+      "text": "for solving"
+    },
+    {
+      "start": 273.919,
+      "duration": 3.601,
+      "text": "for the for the maxima or for the"
+    },
+    {
+      "start": 276.4,
+      "duration": 4.799,
+      "text": "extrema"
+    },
+    {
+      "start": 277.52,
+      "duration": 8.239,
+      "text": "and we learned that the maxima"
+    },
+    {
+      "start": 281.199,
+      "duration": 7.521,
+      "text": "is at r equals 3m"
+    },
+    {
+      "start": 285.759,
+      "duration": 3.841,
+      "text": "so what does that tell us well for large"
+    },
+    {
+      "start": 288.72,
+      "duration": 3.12,
+      "text": "masses"
+    },
+    {
+      "start": 289.6,
+      "duration": 3.68,
+      "text": "you know suppose m goes asymptotically"
+    },
+    {
+      "start": 291.84,
+      "duration": 3.2,
+      "text": "towards infinity it can't internal"
+    },
+    {
+      "start": 293.28,
+      "duration": 4.72,
+      "text": "relativity but suppose"
+    },
+    {
+      "start": 295.04,
+      "duration": 4.879,
+      "text": "then uh analogy it is again the presence"
+    },
+    {
+      "start": 298.0,
+      "duration": 3.44,
+      "text": "of a large mass will clearly be strongly"
+    },
+    {
+      "start": 299.919,
+      "duration": 2.801,
+      "text": "affected right because this maximum is"
+    },
+    {
+      "start": 301.44,
+      "duration": 4.64,
+      "text": "very high and so"
+    },
+    {
+      "start": 302.72,
+      "duration": 5.68,
+      "text": "you have um uh and then"
+    },
+    {
+      "start": 306.08,
+      "duration": 3.76,
+      "text": "the potential will spread out and so"
+    },
+    {
+      "start": 308.4,
+      "duration": 2.96,
+      "text": "this will"
+    },
+    {
+      "start": 309.84,
+      "duration": 4.96,
+      "text": "lead to very noticeable effects to the"
+    },
+    {
+      "start": 311.36,
+      "duration": 3.44,
+      "text": "propagation of null geodesics"
+    },
+    {
+      "start": 316.0,
+      "duration": 3.44,
+      "text": "so i'll just indicate on this plot that"
+    },
+    {
+      "start": 317.6,
+      "duration": 3.92,
+      "text": "this is the point 3 m"
+    },
+    {
+      "start": 319.44,
+      "duration": 4.24,
+      "text": "and you know for scale i'll sort of put"
+    },
+    {
+      "start": 321.52,
+      "duration": 4.64,
+      "text": "on a couple of other points"
+    },
+    {
+      "start": 323.68,
+      "duration": 2.48,
+      "text": "there we go"
+    },
+    {
+      "start": 328.479,
+      "duration": 4.56,
+      "text": "now uh we want to understand in the rest"
+    },
+    {
+      "start": 332.08,
+      "duration": 4.16,
+      "text": "of this video"
+    },
+    {
+      "start": 333.039,
+      "duration": 4.16,
+      "text": "how does analog geodesic propagate in"
+    },
+    {
+      "start": 336.24,
+      "duration": 4.0,
+      "text": "the presence of"
+    },
+    {
+      "start": 337.199,
+      "duration": 3.681,
+      "text": "such a uh in the presence of a heavenly"
+    },
+    {
+      "start": 340.24,
+      "duration": 3.92,
+      "text": "body"
+    },
+    {
+      "start": 340.88,
+      "duration": 4.8,
+      "text": "so for that um to set up the the"
+    },
+    {
+      "start": 344.16,
+      "duration": 3.92,
+      "text": "scenario here we have a heavenly body"
+    },
+    {
+      "start": 345.68,
+      "duration": 5.359,
+      "text": "like the sun"
+    },
+    {
+      "start": 348.08,
+      "duration": 4.8,
+      "text": "and we have a geodesic so there's all"
+    },
+    {
+      "start": 351.039,
+      "duration": 3.201,
+      "text": "sorts of scenarios but those scenarios"
+    },
+    {
+      "start": 352.88,
+      "duration": 13.28,
+      "text": "we're going to focus on here is we'll"
+    },
+    {
+      "start": 354.24,
+      "duration": 13.28,
+      "text": "focus on scattering type scenarios"
+    },
+    {
+      "start": 366.16,
+      "duration": 3.039,
+      "text": "so that's our goal for the rest of the"
+    },
+    {
+      "start": 367.52,
+      "duration": 3.04,
+      "text": "lecture so scattering type scenario you"
+    },
+    {
+      "start": 369.199,
+      "duration": 4.241,
+      "text": "know you have"
+    },
+    {
+      "start": 370.56,
+      "duration": 3.12,
+      "text": "uh infinite sort of infinitely far away"
+    },
+    {
+      "start": 373.44,
+      "duration": 1.759,
+      "text": "t"
+    },
+    {
+      "start": 373.68,
+      "duration": 4.0,
+      "text": "equals minus infinity you have an"
+    },
+    {
+      "start": 375.199,
+      "duration": 2.481,
+      "text": "incoming"
+    },
+    {
+      "start": 378.0,
+      "duration": 3.039,
+      "text": "null geodesic and then that's not"
+    },
+    {
+      "start": 380.16,
+      "duration": 3.52,
+      "text": "affected by"
+    },
+    {
+      "start": 381.039,
+      "duration": 4.081,
+      "text": "the schwarzschild uh geometry infinitely"
+    },
+    {
+      "start": 383.68,
+      "duration": 2.959,
+      "text": "far away this right shot geometry is"
+    },
+    {
+      "start": 385.12,
+      "duration": 3.28,
+      "text": "asymptotically flat"
+    },
+    {
+      "start": 386.639,
+      "duration": 3.601,
+      "text": "and as this knowledge does it comes"
+    },
+    {
+      "start": 388.4,
+      "duration": 4.48,
+      "text": "towards the heavenly body"
+    },
+    {
+      "start": 390.24,
+      "duration": 4.0,
+      "text": "the geodesic is going to be affected by"
+    },
+    {
+      "start": 392.88,
+      "duration": 2.159,
+      "text": "the curvature of the schwarzschild"
+    },
+    {
+      "start": 394.24,
+      "duration": 2.56,
+      "text": "solution"
+    },
+    {
+      "start": 395.039,
+      "duration": 5.28,
+      "text": "and will be deflected and then"
+    },
+    {
+      "start": 396.8,
+      "duration": 3.519,
+      "text": "infinitely far away in the future"
+    },
+    {
+      "start": 400.4,
+      "duration": 4.079,
+      "text": "it'll propagate eventually in a straight"
+    },
+    {
+      "start": 402.08,
+      "duration": 5.44,
+      "text": "line again"
+    },
+    {
+      "start": 404.479,
+      "duration": 4.401,
+      "text": "and to understand this type of scenario"
+    },
+    {
+      "start": 407.52,
+      "duration": 5.44,
+      "text": "it's very convenient"
+    },
+    {
+      "start": 408.88,
+      "duration": 6.4,
+      "text": "not to use the position of the the"
+    },
+    {
+      "start": 412.96,
+      "duration": 3.76,
+      "text": "particle or photon in this case but to"
+    },
+    {
+      "start": 415.28,
+      "duration": 2.16,
+      "text": "actually use a slightly different"
+    },
+    {
+      "start": 416.72,
+      "duration": 3.759,
+      "text": "parameter"
+    },
+    {
+      "start": 417.44,
+      "duration": 6.08,
+      "text": "to measure the relative position of"
+    },
+    {
+      "start": 420.479,
+      "duration": 4.241,
+      "text": "the incoming analgesic and the heavenly"
+    },
+    {
+      "start": 423.52,
+      "duration": 3.04,
+      "text": "body"
+    },
+    {
+      "start": 424.72,
+      "duration": 3.759,
+      "text": "and so for that we're going to set up a"
+    },
+    {
+      "start": 426.56,
+      "duration": 4.8,
+      "text": "coordinate called the impact parameter"
+    },
+    {
+      "start": 428.479,
+      "duration": 4.481,
+      "text": "and but to do that first we'll have to"
+    },
+    {
+      "start": 431.36,
+      "duration": 3.6,
+      "text": "talk a little bit about asymptotic"
+    },
+    {
+      "start": 432.96,
+      "duration": 5.359,
+      "text": "flatness"
+    },
+    {
+      "start": 434.96,
+      "duration": 6.48,
+      "text": "and identify which constants"
+    },
+    {
+      "start": 438.319,
+      "duration": 6.32,
+      "text": "in these solutions correspond to what"
+    },
+    {
+      "start": 441.44,
+      "duration": 8.56,
+      "text": "impact parameters and how to define them"
+    },
+    {
+      "start": 444.639,
+      "duration": 8.321,
+      "text": "so the first step is to define uh"
+    },
+    {
+      "start": 450.0,
+      "duration": 3.44,
+      "text": "uh to identify inside the constants l"
+    },
+    {
+      "start": 452.96,
+      "duration": 2.079,
+      "text": "and e"
+    },
+    {
+      "start": 453.44,
+      "duration": 3.199,
+      "text": "inside our governing equation for the"
+    },
+    {
+      "start": 455.039,
+      "duration": 3.921,
+      "text": "geodesic uh an"
+    },
+    {
+      "start": 456.639,
+      "duration": 3.601,
+      "text": "important other constant namely we"
+    },
+    {
+      "start": 458.96,
+      "duration": 4.0,
+      "text": "notice that"
+    },
+    {
+      "start": 460.24,
+      "duration": 3.76,
+      "text": "l divided by e represents the distance"
+    },
+    {
+      "start": 462.96,
+      "duration": 3.76,
+      "text": "of closest approach"
+    },
+    {
+      "start": 464.0,
+      "duration": 2.72,
+      "text": "to the center"
+    },
+    {
+      "start": 467.36,
+      "duration": 12.48,
+      "text": "i'll argue how to show that i'll show"
+    },
+    {
+      "start": 469.199,
+      "duration": 10.641,
+      "text": "you how to argue that in a second"
+    },
+    {
+      "start": 488.879,
+      "duration": 3.6,
+      "text": "all right so here's how you might argue"
+    },
+    {
+      "start": 490.4,
+      "duration": 3.68,
+      "text": "this it's not so difficult"
+    },
+    {
+      "start": 492.479,
+      "duration": 4.72,
+      "text": "so you know you go to a coordinate"
+    },
+    {
+      "start": 494.08,
+      "duration": 6.799,
+      "text": "system where the heavenly bodies at"
+    },
+    {
+      "start": 497.199,
+      "duration": 3.68,
+      "text": "well we're using just simply"
+    },
+    {
+      "start": 503.12,
+      "duration": 7.28,
+      "text": "polar coordinates so the black line here"
+    },
+    {
+      "start": 506.56,
+      "duration": 3.84,
+      "text": "is a uh"
+    },
+    {
+      "start": 511.12,
+      "duration": 4.32,
+      "text": "geodesic this is in the case where m is"
+    },
+    {
+      "start": 514.719,
+      "duration": 5.841,
+      "text": "naught"
+    },
+    {
+      "start": 515.44,
+      "duration": 7.36,
+      "text": "so i should put that up here"
+    },
+    {
+      "start": 520.56,
+      "duration": 2.24,
+      "text": "so"
+    },
+    {
+      "start": 523.599,
+      "duration": 3.92,
+      "text": "suppose m is not so we've got a flat a"
+    },
+    {
+      "start": 525.519,
+      "duration": 2.961,
+      "text": "flat geometry so we have the heavenly"
+    },
+    {
+      "start": 527.519,
+      "duration": 7.921,
+      "text": "body here at the"
+    },
+    {
+      "start": 528.48,
+      "duration": 9.2,
+      "text": "center of the coordinate system"
+    },
+    {
+      "start": 535.44,
+      "duration": 4.56,
+      "text": "and you imagine a geodesic propagating"
+    },
+    {
+      "start": 537.68,
+      "duration": 2.32,
+      "text": "along"
+    },
+    {
+      "start": 540.399,
+      "duration": 5.841,
+      "text": "a photon moving along this geodesic"
+    },
+    {
+      "start": 543.68,
+      "duration": 5.92,
+      "text": "and you specify the position of this"
+    },
+    {
+      "start": 546.24,
+      "duration": 6.4,
+      "text": "photon with a radius and a"
+    },
+    {
+      "start": 549.6,
+      "duration": 5.76,
+      "text": "angle variable phi and then"
+    },
+    {
+      "start": 552.64,
+      "duration": 3.84,
+      "text": "you note that the position of closest"
+    },
+    {
+      "start": 555.36,
+      "duration": 2.64,
+      "text": "approach"
+    },
+    {
+      "start": 556.48,
+      "duration": 3.84,
+      "text": "is here with the intersection of the"
+    },
+    {
+      "start": 558.0,
+      "duration": 6.0,
+      "text": "geodesic and the coordinate y axis"
+    },
+    {
+      "start": 560.32,
+      "duration": 3.68,
+      "text": "in yellow um"
+    },
+    {
+      "start": 564.959,
+      "duration": 4.641,
+      "text": "this y intersect is at r naught that's"
+    },
+    {
+      "start": 567.519,
+      "duration": 4.961,
+      "text": "the position of closest approach"
+    },
+    {
+      "start": 569.6,
+      "duration": 4.32,
+      "text": "and uh x is equal to t that's the actual"
+    },
+    {
+      "start": 572.48,
+      "duration": 4.72,
+      "text": "trajectory so the"
+    },
+    {
+      "start": 573.92,
+      "duration": 4.88,
+      "text": "the trajectory itself follows has these"
+    },
+    {
+      "start": 577.2,
+      "duration": 5.28,
+      "text": "coordinates as a function of time"
+    },
+    {
+      "start": 578.8,
+      "duration": 6.88,
+      "text": "y is always r naught and x is equal to t"
+    },
+    {
+      "start": 582.48,
+      "duration": 6.32,
+      "text": "and then you uh you can"
+    },
+    {
+      "start": 585.68,
+      "duration": 5.36,
+      "text": "calculate l divided by e or r squared"
+    },
+    {
+      "start": 588.8,
+      "duration": 4.4,
+      "text": "times by d phi dt for the solution"
+    },
+    {
+      "start": 591.04,
+      "duration": 3.359,
+      "text": "and then you set uh you find that the"
+    },
+    {
+      "start": 593.2,
+      "duration": 3.28,
+      "text": "time point when"
+    },
+    {
+      "start": 594.399,
+      "duration": 3.841,
+      "text": "the trajectory is intersecting the y"
+    },
+    {
+      "start": 596.48,
+      "duration": 2.08,
+      "text": "axis and you'll find that l divided by e"
+    },
+    {
+      "start": 598.24,
+      "duration": 3.599,
+      "text": "and d"
+    },
+    {
+      "start": 598.56,
+      "duration": 5.839,
+      "text": "gives r naught so that's uh"
+    },
+    {
+      "start": 601.839,
+      "duration": 4.24,
+      "text": "that that gives us that interpretation"
+    },
+    {
+      "start": 604.399,
+      "duration": 6.241,
+      "text": "that the case"
+    },
+    {
+      "start": 606.079,
+      "duration": 7.601,
+      "text": "m is naught now uh"
+    },
+    {
+      "start": 610.64,
+      "duration": 6.56,
+      "text": "l divided by e does not necessarily"
+    },
+    {
+      "start": 613.68,
+      "duration": 7.76,
+      "text": "uh equal the position"
+    },
+    {
+      "start": 617.2,
+      "duration": 9.36,
+      "text": "of closest approach"
+    },
+    {
+      "start": 621.44,
+      "duration": 5.12,
+      "text": "for a curved geometry however"
+    },
+    {
+      "start": 627.76,
+      "duration": 3.6,
+      "text": "as mentioned several times the"
+    },
+    {
+      "start": 630.48,
+      "duration": 4.4,
+      "text": "schwarzschild"
+    },
+    {
+      "start": 631.36,
+      "duration": 16.32,
+      "text": "solution or geometry"
+    },
+    {
+      "start": 634.88,
+      "duration": 14.32,
+      "text": "is asymptotically flat"
+    },
+    {
+      "start": 647.68,
+      "duration": 3.04,
+      "text": "and so by the way i should have stressed"
+    },
+    {
+      "start": 649.2,
+      "duration": 4.24,
+      "text": "this"
+    },
+    {
+      "start": 650.72,
+      "duration": 3.119,
+      "text": "l divided by e equals r naught no matter"
+    },
+    {
+      "start": 653.44,
+      "duration": 7.44,
+      "text": "what"
+    },
+    {
+      "start": 653.839,
+      "duration": 10.0,
+      "text": "t is in this flat case here"
+    },
+    {
+      "start": 660.88,
+      "duration": 4.639,
+      "text": "so in particular l divided by e equals r"
+    },
+    {
+      "start": 663.839,
+      "duration": 2.321,
+      "text": "naught when the trajectory is infinitely"
+    },
+    {
+      "start": 665.519,
+      "duration": 2.161,
+      "text": "far away"
+    },
+    {
+      "start": 666.16,
+      "duration": 3.6,
+      "text": "from the scattering center or the"
+    },
+    {
+      "start": 667.68,
+      "duration": 4.56,
+      "text": "heavenly body"
+    },
+    {
+      "start": 669.76,
+      "duration": 3.84,
+      "text": "now the schwarzschild geometry is"
+    },
+    {
+      "start": 672.24,
+      "duration": 2.96,
+      "text": "asymptotically flat so when you're"
+    },
+    {
+      "start": 673.6,
+      "duration": 2.32,
+      "text": "infinitely far away from the heavenly"
+    },
+    {
+      "start": 675.2,
+      "duration": 3.84,
+      "text": "body"
+    },
+    {
+      "start": 675.92,
+      "duration": 3.12,
+      "text": "then you"
+    },
+    {
+      "start": 680.16,
+      "duration": 4.799,
+      "text": "you can interpret everything as you"
+    },
+    {
+      "start": 681.839,
+      "duration": 8.641,
+      "text": "would for a flat geometry"
+    },
+    {
+      "start": 684.959,
+      "duration": 8.0,
+      "text": "so in particular for a light ray"
+    },
+    {
+      "start": 690.48,
+      "duration": 2.479,
+      "text": "photon"
+    },
+    {
+      "start": 693.839,
+      "duration": 3.44,
+      "text": "very far from the origin"
+    },
+    {
+      "start": 701.44,
+      "duration": 7.04,
+      "text": "so r is much bigger than the the m"
+    },
+    {
+      "start": 704.56,
+      "duration": 3.92,
+      "text": "parameter the constant"
+    },
+    {
+      "start": 709.12,
+      "duration": 6.88,
+      "text": "l divided by e represents an apparent"
+    },
+    {
+      "start": 714.32,
+      "duration": 5.12,
+      "text": "impact parameter so one thing i should"
+    },
+    {
+      "start": 716.0,
+      "duration": 3.44,
+      "text": "say is that r naught here"
+    },
+    {
+      "start": 719.839,
+      "duration": 13.361,
+      "text": "is what we call an impact parameter"
+    },
+    {
+      "start": 731.76,
+      "duration": 3.28,
+      "text": "r naught is an impact parameter what"
+    },
+    {
+      "start": 733.2,
+      "duration": 2.639,
+      "text": "does that mean it means a displacement"
+    },
+    {
+      "start": 735.04,
+      "duration": 3.359,
+      "text": "relative"
+    },
+    {
+      "start": 735.839,
+      "duration": 3.521,
+      "text": "to so you imagine the scattering uh"
+    },
+    {
+      "start": 738.399,
+      "duration": 4.161,
+      "text": "trajectory"
+    },
+    {
+      "start": 739.36,
+      "duration": 6.08,
+      "text": "and you measure the the distance"
+    },
+    {
+      "start": 742.56,
+      "duration": 4.64,
+      "text": "of the closest approach of the"
+    },
+    {
+      "start": 745.44,
+      "duration": 2.639,
+      "text": "scattering trajectory to your target and"
+    },
+    {
+      "start": 747.2,
+      "duration": 4.319,
+      "text": "that represents"
+    },
+    {
+      "start": 748.079,
+      "duration": 6.961,
+      "text": "your impact parameter"
+    },
+    {
+      "start": 751.519,
+      "duration": 3.521,
+      "text": "how we define the impact parameter"
+    },
+    {
+      "start": 755.36,
+      "duration": 4.479,
+      "text": "now uh for the"
+    },
+    {
+      "start": 760.48,
+      "duration": 3.28,
+      "text": "schwarzschild geometry when m is not"
+    },
+    {
+      "start": 762.959,
+      "duration": 4.161,
+      "text": "zero"
+    },
+    {
+      "start": 763.76,
+      "duration": 5.44,
+      "text": "uh we can by thinking"
+    },
+    {
+      "start": 767.12,
+      "duration": 3.279,
+      "text": "asymptotically imagining that the the"
+    },
+    {
+      "start": 769.2,
+      "duration": 3.759,
+      "text": "like impinging"
+    },
+    {
+      "start": 770.399,
+      "duration": 3.12,
+      "text": "light ray is infinitely far away from"
+    },
+    {
+      "start": 772.959,
+      "duration": 4.0,
+      "text": "the"
+    },
+    {
+      "start": 773.519,
+      "duration": 4.56,
+      "text": "heavenly body we can hereby interpret"
+    },
+    {
+      "start": 776.959,
+      "duration": 6.641,
+      "text": "therefore the constant"
+    },
+    {
+      "start": 778.079,
+      "duration": 5.521,
+      "text": "l divided by e as an apparent"
+    },
+    {
+      "start": 785.44,
+      "duration": 3.28,
+      "text": "impact parameter"
+    },
+    {
+      "start": 796.48,
+      "duration": 5.919,
+      "text": "so b we'll call it b l b is"
+    },
+    {
+      "start": 799.519,
+      "duration": 2.88,
+      "text": "l divided by e"
+    },
+    {
+      "start": 808.56,
+      "duration": 4.719,
+      "text": "and so b this constant l divided by e"
+    },
+    {
+      "start": 811.2,
+      "duration": 5.84,
+      "text": "represents sort of the distance between"
+    },
+    {
+      "start": 813.279,
+      "duration": 4.881,
+      "text": "the the axis which"
+    },
+    {
+      "start": 817.04,
+      "duration": 3.039,
+      "text": "runs right through the center of the"
+    },
+    {
+      "start": 818.16,
+      "duration": 5.359,
+      "text": "heavenly body and the"
+    },
+    {
+      "start": 820.079,
+      "duration": 3.44,
+      "text": "impingement trajectory"
+    },
+    {
+      "start": 826.399,
+      "duration": 6.401,
+      "text": "and so now imagine you look at the"
+    },
+    {
+      "start": 828.72,
+      "duration": 4.08,
+      "text": "heavenly body and you are a light ray"
+    },
+    {
+      "start": 835.92,
+      "duration": 3.68,
+      "text": "so there's the heavenly body and you are"
+    },
+    {
+      "start": 837.519,
+      "duration": 3.041,
+      "text": "the light ray and you are impingement on"
+    },
+    {
+      "start": 839.6,
+      "duration": 2.4,
+      "text": "this"
+    },
+    {
+      "start": 840.56,
+      "duration": 3.6,
+      "text": "uh celeste your body so you're"
+    },
+    {
+      "start": 842.0,
+      "duration": 4.0,
+      "text": "infinitely far away you're looking at it"
+    },
+    {
+      "start": 844.16,
+      "duration": 3.679,
+      "text": "and you're you're heading towards it"
+    },
+    {
+      "start": 846.0,
+      "duration": 3.279,
+      "text": "of course no time passes right you're on"
+    },
+    {
+      "start": 847.839,
+      "duration": 4.881,
+      "text": "the library so this"
+    },
+    {
+      "start": 849.279,
+      "duration": 4.641,
+      "text": "but uh whatever invoke your imagination"
+    },
+    {
+      "start": 852.72,
+      "duration": 4.08,
+      "text": "that you are a light ray"
+    },
+    {
+      "start": 853.92,
+      "duration": 4.479,
+      "text": "and then you are you could depending on"
+    },
+    {
+      "start": 856.8,
+      "duration": 2.56,
+      "text": "how far away you are from the scattering"
+    },
+    {
+      "start": 858.399,
+      "duration": 3.68,
+      "text": "center of this"
+    },
+    {
+      "start": 859.36,
+      "duration": 2.719,
+      "text": "heavenly body"
+    },
+    {
+      "start": 862.72,
+      "duration": 6.119,
+      "text": "you are in when you're infinitely far"
+    },
+    {
+      "start": 866.079,
+      "duration": 4.32,
+      "text": "away the scattering center is a distance"
+    },
+    {
+      "start": 868.839,
+      "duration": 4.68,
+      "text": "b"
+    },
+    {
+      "start": 870.399,
+      "duration": 6.161,
+      "text": "equals l divided by e effectively"
+    },
+    {
+      "start": 873.519,
+      "duration": 6.32,
+      "text": "away from your uh initial"
+    },
+    {
+      "start": 876.56,
+      "duration": 4.959,
+      "text": "trajectory so you imagine your light ray"
+    },
+    {
+      "start": 879.839,
+      "duration": 3.921,
+      "text": "trajectory heads"
+    },
+    {
+      "start": 881.519,
+      "duration": 3.201,
+      "text": "parallel to the axis running through the"
+    },
+    {
+      "start": 883.76,
+      "duration": 3.6,
+      "text": "heavenly body"
+    },
+    {
+      "start": 884.72,
+      "duration": 3.04,
+      "text": "and b measures the distance displacement"
+    },
+    {
+      "start": 887.36,
+      "duration": 3.12,
+      "text": "of"
+    },
+    {
+      "start": 887.76,
+      "duration": 3.6,
+      "text": "the impingement axis uh trajectory from"
+    },
+    {
+      "start": 890.48,
+      "duration": 2.64,
+      "text": "this axis"
+    },
+    {
+      "start": 891.36,
+      "duration": 3.36,
+      "text": "as the light ray gets closer of course"
+    },
+    {
+      "start": 893.12,
+      "duration": 2.64,
+      "text": "to the heavenly body so this circle with"
+    },
+    {
+      "start": 894.72,
+      "duration": 2.799,
+      "text": "a cross in it means"
+    },
+    {
+      "start": 895.76,
+      "duration": 4.079,
+      "text": "the the sort of the target point that"
+    },
+    {
+      "start": 897.519,
+      "duration": 6.56,
+      "text": "the light ray is would effectively"
+    },
+    {
+      "start": 899.839,
+      "duration": 4.24,
+      "text": "hit if there was no curved geometry"
+    },
+    {
+      "start": 906.56,
+      "duration": 3.839,
+      "text": "now it's important to note that right"
+    },
+    {
+      "start": 909.199,
+      "duration": 3.921,
+      "text": "because"
+    },
+    {
+      "start": 910.399,
+      "duration": 3.601,
+      "text": "the geometry is curved this effective"
+    },
+    {
+      "start": 913.12,
+      "duration": 3.12,
+      "text": "distance will"
+    },
+    {
+      "start": 914.0,
+      "duration": 3.519,
+      "text": "be closed once the trajectory gets close"
+    },
+    {
+      "start": 916.24,
+      "duration": 4.399,
+      "text": "to the heavenly body because"
+    },
+    {
+      "start": 917.519,
+      "duration": 4.081,
+      "text": "the geometry affects the geodesic and it"
+    },
+    {
+      "start": 920.639,
+      "duration": 4.161,
+      "text": "could be that the"
+    },
+    {
+      "start": 921.6,
+      "duration": 5.12,
+      "text": "particle gets trapped or not by"
+    },
+    {
+      "start": 924.8,
+      "duration": 3.92,
+      "text": "this heavenly body right it depends on"
+    },
+    {
+      "start": 926.72,
+      "duration": 3.2,
+      "text": "on this radial motion"
+    },
+    {
+      "start": 928.72,
+      "duration": 3.44,
+      "text": "so if you go back to here to this is"
+    },
+    {
+      "start": 929.92,
+      "duration": 5.599,
+      "text": "this radial potential if you are"
+    },
+    {
+      "start": 932.16,
+      "duration": 4.479,
+      "text": "if the radial uh energy is insufficient"
+    },
+    {
+      "start": 935.519,
+      "duration": 3.76,
+      "text": "to crest this"
+    },
+    {
+      "start": 936.639,
+      "duration": 3.841,
+      "text": "maxima then the the impingement"
+    },
+    {
+      "start": 939.279,
+      "duration": 5.041,
+      "text": "trajectory will come"
+    },
+    {
+      "start": 940.48,
+      "duration": 5.44,
+      "text": "in and uh be affected by the celestial"
+    },
+    {
+      "start": 944.32,
+      "duration": 6.24,
+      "text": "body and fly away"
+    },
+    {
+      "start": 945.92,
+      "duration": 4.64,
+      "text": "however for energies greater than"
+    },
+    {
+      "start": 952.16,
+      "duration": 4.239,
+      "text": "actually i don't like this wobbly circle"
+    },
+    {
+      "start": 953.759,
+      "duration": 6.241,
+      "text": "draw a real circle"
+    },
+    {
+      "start": 956.399,
+      "duration": 7.44,
+      "text": "if you have an energy greater than"
+    },
+    {
+      "start": 960.0,
+      "duration": 3.839,
+      "text": "vf maxima"
+    },
+    {
+      "start": 966.399,
+      "duration": 3.44,
+      "text": "so if the incoming"
+    },
+    {
+      "start": 970.88,
+      "duration": 3.04,
+      "text": "light ray has"
+    },
+    {
+      "start": 975.519,
+      "duration": 6.56,
+      "text": "energy half e squared"
+    },
+    {
+      "start": 978.959,
+      "duration": 6.961,
+      "text": "greater than v f"
+    },
+    {
+      "start": 982.079,
+      "duration": 6.961,
+      "text": "v max which is 3m"
+    },
+    {
+      "start": 985.92,
+      "duration": 3.12,
+      "text": "then it is"
+    },
+    {
+      "start": 989.12,
+      "duration": 2.88,
+      "text": "captured right"
+    },
+    {
+      "start": 992.639,
+      "duration": 4.721,
+      "text": "so that's defined by this red circle"
+    },
+    {
+      "start": 995.92,
+      "duration": 3.599,
+      "text": "here so any"
+    },
+    {
+      "start": 997.36,
+      "duration": 4.88,
+      "text": "as we'll see any light incoming light"
+    },
+    {
+      "start": 999.519,
+      "duration": 5.601,
+      "text": "ray that has an energy"
+    },
+    {
+      "start": 1002.24,
+      "duration": 5.68,
+      "text": "bigger than uh enough to to crest the"
+    },
+    {
+      "start": 1005.12,
+      "duration": 5.76,
+      "text": "the radial potential maxima"
+    },
+    {
+      "start": 1007.92,
+      "duration": 4.64,
+      "text": "will be these energies will be defined"
+    },
+    {
+      "start": 1010.88,
+      "duration": 3.28,
+      "text": "by a circle the circle won't have"
+    },
+    {
+      "start": 1012.56,
+      "duration": 2.959,
+      "text": "necessarily have the same radius as the"
+    },
+    {
+      "start": 1014.16,
+      "duration": 4.239,
+      "text": "celestial body"
+    },
+    {
+      "start": 1015.519,
+      "duration": 4.56,
+      "text": "and then you will find that if your"
+    },
+    {
+      "start": 1018.399,
+      "duration": 2.24,
+      "text": "impact parameter lies within this red"
+    },
+    {
+      "start": 1020.079,
+      "duration": 2.961,
+      "text": "circle"
+    },
+    {
+      "start": 1020.639,
+      "duration": 4.721,
+      "text": "then you will be captured and so this is"
+    },
+    {
+      "start": 1023.04,
+      "duration": 3.999,
+      "text": "this red circle has a name"
+    },
+    {
+      "start": 1025.36,
+      "duration": 4.079,
+      "text": "and the area of that circle is very"
+    },
+    {
+      "start": 1027.039,
+      "duration": 5.361,
+      "text": "important and that's called the impact"
+    },
+    {
+      "start": 1029.439,
+      "duration": 2.961,
+      "text": "the the cross section"
+    },
+    {
+      "start": 1032.88,
+      "duration": 6.959,
+      "text": "so because some trajectories"
+    },
+    {
+      "start": 1042.799,
+      "duration": 10.641,
+      "text": "they can reach r equals zero and hence"
+    },
+    {
+      "start": 1045.679,
+      "duration": 12.161,
+      "text": "be captured"
+    },
+    {
+      "start": 1053.44,
+      "duration": 4.4,
+      "text": "we estimate this capture area"
+    },
+    {
+      "start": 1058.64,
+      "duration": 3.12,
+      "text": "or capture radius"
+    },
+    {
+      "start": 1062.96,
+      "duration": 6.0,
+      "text": "or capture"
+    },
+    {
+      "start": 1066.08,
+      "duration": 2.88,
+      "text": "cross section"
+    },
+    {
+      "start": 1073.919,
+      "duration": 3.201,
+      "text": "of the object"
+    },
+    {
+      "start": 1078.72,
+      "duration": 6.319,
+      "text": "so this is ie area"
+    },
+    {
+      "start": 1082.16,
+      "duration": 2.879,
+      "text": "of the target"
+    },
+    {
+      "start": 1085.6,
+      "duration": 2.8,
+      "text": "that captures"
+    },
+    {
+      "start": 1088.64,
+      "duration": 2.64,
+      "text": "geodesic"
+    },
+    {
+      "start": 1093.12,
+      "duration": 3.76,
+      "text": "and that area we traditionally use the"
+    },
+    {
+      "start": 1095.2,
+      "duration": 3.359,
+      "text": "symbol signal the scattering the sigma"
+    },
+    {
+      "start": 1096.88,
+      "duration": 2.0,
+      "text": "in scattering theory for this area and"
+    },
+    {
+      "start": 1098.559,
+      "duration": 3.201,
+      "text": "it's"
+    },
+    {
+      "start": 1098.88,
+      "duration": 3.2,
+      "text": "pi times the capture radius squared so"
+    },
+    {
+      "start": 1101.76,
+      "duration": 3.36,
+      "text": "the"
+    },
+    {
+      "start": 1102.08,
+      "duration": 6.16,
+      "text": "capture radius is b c squared"
+    },
+    {
+      "start": 1105.12,
+      "duration": 4.88,
+      "text": "and to to calculate bc the capture"
+    },
+    {
+      "start": 1108.24,
+      "duration": 4.799,
+      "text": "radius and therefore the red circle so"
+    },
+    {
+      "start": 1110.0,
+      "duration": 3.039,
+      "text": "this is the red circle"
+    },
+    {
+      "start": 1114.799,
+      "duration": 3.201,
+      "text": "so the red circle is the effective sort"
+    },
+    {
+      "start": 1117.12,
+      "duration": 3.679,
+      "text": "of"
+    },
+    {
+      "start": 1118.0,
+      "duration": 4.0,
+      "text": "target area where an incoming nonzero"
+    },
+    {
+      "start": 1120.799,
+      "duration": 4.401,
+      "text": "design will be captured by"
+    },
+    {
+      "start": 1122.0,
+      "duration": 3.2,
+      "text": "the heavenly body"
+    },
+    {
+      "start": 1126.0,
+      "duration": 3.679,
+      "text": "and how do we we want to calculate now"
+    },
+    {
+      "start": 1127.6,
+      "duration": 3.92,
+      "text": "bc and to do that we've got to relate bc"
+    },
+    {
+      "start": 1129.679,
+      "duration": 3.921,
+      "text": "to the energy and that energy better be"
+    },
+    {
+      "start": 1131.52,
+      "duration": 6.32,
+      "text": "bigger than the maximum of the radial"
+    },
+    {
+      "start": 1133.6,
+      "duration": 4.24,
+      "text": "uh effective potential"
+    },
+    {
+      "start": 1148.799,
+      "duration": 4.481,
+      "text": "okay so we need to know the height of"
+    },
+    {
+      "start": 1150.16,
+      "duration": 3.12,
+      "text": "the maximum potential"
+    },
+    {
+      "start": 1154.559,
+      "duration": 5.441,
+      "text": "so a half e squared has got to equal"
+    },
+    {
+      "start": 1158.0,
+      "duration": 4.84,
+      "text": "the potential at the maximum that's when"
+    },
+    {
+      "start": 1160.0,
+      "duration": 4.72,
+      "text": "the radius is three times"
+    },
+    {
+      "start": 1162.84,
+      "duration": 4.36,
+      "text": "m"
+    },
+    {
+      "start": 1164.72,
+      "duration": 4.8,
+      "text": "and that equals a little calculation"
+    },
+    {
+      "start": 1167.2,
+      "duration": 2.32,
+      "text": "later"
+    },
+    {
+      "start": 1169.84,
+      "duration": 10.0,
+      "text": "l squared m divided by two times"
+    },
+    {
+      "start": 1173.039,
+      "duration": 6.801,
+      "text": "three m cubed"
+    },
+    {
+      "start": 1181.28,
+      "duration": 3.44,
+      "text": "and uh well we need to work out what is"
+    },
+    {
+      "start": 1183.76,
+      "duration": 2.56,
+      "text": "the the b"
+    },
+    {
+      "start": 1184.72,
+      "duration": 3.52,
+      "text": "parameter not the e you know it's all"
+    },
+    {
+      "start": 1186.32,
+      "duration": 6.32,
+      "text": "very well to have e but what well"
+    },
+    {
+      "start": 1188.24,
+      "duration": 6.08,
+      "text": "uh we want b well b is uh defined to be"
+    },
+    {
+      "start": 1192.64,
+      "duration": 3.2,
+      "text": "l divided by e right so we just need to"
+    },
+    {
+      "start": 1194.32,
+      "duration": 3.359,
+      "text": "rearrange this equation to find l"
+    },
+    {
+      "start": 1195.84,
+      "duration": 4.88,
+      "text": "divided by e's"
+    },
+    {
+      "start": 1197.679,
+      "duration": 4.401,
+      "text": "and that's super easy here because you"
+    },
+    {
+      "start": 1200.72,
+      "duration": 3.52,
+      "text": "can already see there's an e squared on"
+    },
+    {
+      "start": 1202.08,
+      "duration": 4.959,
+      "text": "one side and an l squared on the other"
+    },
+    {
+      "start": 1204.24,
+      "duration": 4.88,
+      "text": "and we end up with this equation l"
+    },
+    {
+      "start": 1207.039,
+      "duration": 5.201,
+      "text": "squared divided by e squared equals"
+    },
+    {
+      "start": 1209.12,
+      "duration": 6.4,
+      "text": "27 m squared uh"
+    },
+    {
+      "start": 1212.24,
+      "duration": 9.6,
+      "text": "and that tells us that b c is"
+    },
+    {
+      "start": 1215.52,
+      "duration": 6.32,
+      "text": "root three or three to the three halves"
+    },
+    {
+      "start": 1222.4,
+      "duration": 2.639,
+      "text": "times m"
+    },
+    {
+      "start": 1226.32,
+      "duration": 5.28,
+      "text": "so now we know the apparent in and thus"
+    },
+    {
+      "start": 1229.12,
+      "duration": 4.24,
+      "text": "now we know the apparent impact radius"
+    },
+    {
+      "start": 1231.6,
+      "duration": 4.079,
+      "text": "capture radius if you like of this"
+    },
+    {
+      "start": 1233.36,
+      "duration": 4.48,
+      "text": "heavenly body"
+    },
+    {
+      "start": 1235.679,
+      "duration": 3.761,
+      "text": "and now we can work out the impact cross"
+    },
+    {
+      "start": 1237.84,
+      "duration": 4.959,
+      "text": "section sigma to be"
+    },
+    {
+      "start": 1239.44,
+      "duration": 6.32,
+      "text": "27 pi m squared so the bigger the m"
+    },
+    {
+      "start": 1242.799,
+      "duration": 4.641,
+      "text": "the larger the cross section and so for"
+    },
+    {
+      "start": 1245.76,
+      "duration": 2.799,
+      "text": "something like a black hole solution"
+    },
+    {
+      "start": 1247.44,
+      "duration": 2.32,
+      "text": "which we won't be able to cover in an"
+    },
+    {
+      "start": 1248.559,
+      "duration": 3.281,
+      "text": "introductory course on general"
+    },
+    {
+      "start": 1249.76,
+      "duration": 5.039,
+      "text": "relativity but which is indeed covered"
+    },
+    {
+      "start": 1251.84,
+      "duration": 4.56,
+      "text": "uh which is indeed uh modeled by"
+    },
+    {
+      "start": 1254.799,
+      "duration": 3.841,
+      "text": "schwarzschild solution"
+    },
+    {
+      "start": 1256.4,
+      "duration": 3.36,
+      "text": "you can see that the larger m the the"
+    },
+    {
+      "start": 1258.64,
+      "duration": 4.88,
+      "text": "larger this"
+    },
+    {
+      "start": 1259.76,
+      "duration": 6.799,
+      "text": "capture cross section that such a"
+    },
+    {
+      "start": 1263.52,
+      "duration": 3.039,
+      "text": "celestial body will have"
+    },
+    {
+      "start": 1266.72,
+      "duration": 6.8,
+      "text": "now trajectories whose impact parameter"
+    },
+    {
+      "start": 1269.84,
+      "duration": 8.16,
+      "text": "or impact effective impact distance"
+    },
+    {
+      "start": 1273.52,
+      "duration": 8.24,
+      "text": "which exceed this bc capture radius"
+    },
+    {
+      "start": 1278.0,
+      "duration": 3.76,
+      "text": "well they they won't be captured right"
+    },
+    {
+      "start": 1285.12,
+      "duration": 3.36,
+      "text": "so if you're heading towards a black"
+    },
+    {
+      "start": 1286.559,
+      "duration": 3.441,
+      "text": "hole and b"
+    },
+    {
+      "start": 1288.48,
+      "duration": 4.0,
+      "text": "is bigger than bc then you won't be"
+    },
+    {
+      "start": 1290.0,
+      "duration": 2.48,
+      "text": "sucked in"
+    },
+    {
+      "start": 1294.72,
+      "duration": 5.36,
+      "text": "now our goal is"
+    },
+    {
+      "start": 1298.159,
+      "duration": 4.0,
+      "text": "to understand how much you're deflected"
+    },
+    {
+      "start": 1300.08,
+      "duration": 5.92,
+      "text": "by"
+    },
+    {
+      "start": 1302.159,
+      "duration": 5.201,
+      "text": "as you zoom past this massive celestial"
+    },
+    {
+      "start": 1306.0,
+      "duration": 5.12,
+      "text": "object"
+    },
+    {
+      "start": 1307.36,
+      "duration": 3.76,
+      "text": "and you are analogy to think"
+    },
+    {
+      "start": 1311.52,
+      "duration": 6.0,
+      "text": "so for that we want to uh understand the"
+    },
+    {
+      "start": 1314.64,
+      "duration": 3.36,
+      "text": "the value of the angular parameter phi"
+    },
+    {
+      "start": 1317.52,
+      "duration": 2.88,
+      "text": "is a function"
+    },
+    {
+      "start": 1318.0,
+      "duration": 3.44,
+      "text": "of the radius parameter well from"
+    },
+    {
+      "start": 1320.4,
+      "duration": 12.8,
+      "text": "lecture 22"
+    },
+    {
+      "start": 1321.44,
+      "duration": 13.56,
+      "text": "we actually obtained this formula"
+    },
+    {
+      "start": 1333.2,
+      "duration": 3.599,
+      "text": "and we can"
+    },
+    {
+      "start": 1335.0,
+      "duration": 5.88,
+      "text": "[Music]"
+    },
+    {
+      "start": 1336.799,
+      "duration": 7.041,
+      "text": "study this this uh this quantity and"
+    },
+    {
+      "start": 1340.88,
+      "duration": 3.76,
+      "text": "try and understand how much total"
+    },
+    {
+      "start": 1343.84,
+      "duration": 4.0,
+      "text": "deflection"
+    },
+    {
+      "start": 1344.64,
+      "duration": 5.44,
+      "text": "a incoming trajectory will experience"
+    },
+    {
+      "start": 1347.84,
+      "duration": 4.24,
+      "text": "so if we go back to the the picture here"
+    },
+    {
+      "start": 1350.08,
+      "duration": 4.32,
+      "text": "i have of the scattering setup"
+    },
+    {
+      "start": 1352.08,
+      "duration": 3.92,
+      "text": "so here here comes the the particle"
+    },
+    {
+      "start": 1354.4,
+      "duration": 3.6,
+      "text": "comes in"
+    },
+    {
+      "start": 1356.0,
+      "duration": 3.12,
+      "text": "and then it has some we want to"
+    },
+    {
+      "start": 1358.0,
+      "duration": 4.159,
+      "text": "understand"
+    },
+    {
+      "start": 1359.12,
+      "duration": 6.0,
+      "text": "what's the the total angle"
+    },
+    {
+      "start": 1362.159,
+      "duration": 2.961,
+      "text": "phi deflection"
+    },
+    {
+      "start": 1366.0,
+      "duration": 4.4,
+      "text": "that's our goal now just to work out"
+    },
+    {
+      "start": 1372.32,
+      "duration": 3.76,
+      "text": "delta phi which measures the total angle"
+    },
+    {
+      "start": 1374.88,
+      "duration": 4.159,
+      "text": "of deflection"
+    },
+    {
+      "start": 1376.08,
+      "duration": 13.76,
+      "text": "of the knowledge as it zooms past the"
+    },
+    {
+      "start": 1379.039,
+      "duration": 10.801,
+      "text": "heavenly body"
+    },
+    {
+      "start": 1401.6,
+      "duration": 3.36,
+      "text": "so the goal is to calculate total"
+    },
+    {
+      "start": 1403.039,
+      "duration": 4.0,
+      "text": "angular shift total angular deflection"
+    },
+    {
+      "start": 1404.96,
+      "duration": 5.199,
+      "text": "how does that define well just work out"
+    },
+    {
+      "start": 1407.039,
+      "duration": 5.361,
+      "text": "your radial variable for"
+    },
+    {
+      "start": 1410.159,
+      "duration": 3.201,
+      "text": "tau is plus infinity this is your affine"
+    },
+    {
+      "start": 1412.4,
+      "duration": 3.519,
+      "text": "parameter"
+    },
+    {
+      "start": 1413.36,
+      "duration": 3.76,
+      "text": "and subtract from it the angle when tau"
+    },
+    {
+      "start": 1415.919,
+      "duration": 4.561,
+      "text": "is minus infinity"
+    },
+    {
+      "start": 1417.12,
+      "duration": 3.36,
+      "text": "and that's your total deflection"
+    },
+    {
+      "start": 1429.6,
+      "duration": 4.88,
+      "text": "now for such trajectories the turning"
+    },
+    {
+      "start": 1432.08,
+      "duration": 2.4,
+      "text": "point"
+    },
+    {
+      "start": 1436.72,
+      "duration": 6.4,
+      "text": "is at a radial coordinate r equals"
+    },
+    {
+      "start": 1439.919,
+      "duration": 6.561,
+      "text": "r naught and r naught well"
+    },
+    {
+      "start": 1443.12,
+      "duration": 3.36,
+      "text": "we can work that out in a second"
+    },
+    {
+      "start": 1447.6,
+      "duration": 3.52,
+      "text": "and we the way we can work out r naught"
+    },
+    {
+      "start": 1449.44,
+      "duration": 2.719,
+      "text": "is we can go back to this radial"
+    },
+    {
+      "start": 1451.12,
+      "duration": 3.36,
+      "text": "potential"
+    },
+    {
+      "start": 1452.159,
+      "duration": 3.681,
+      "text": "here so remember here's the radial"
+    },
+    {
+      "start": 1454.48,
+      "duration": 4.16,
+      "text": "potential experienced by"
+    },
+    {
+      "start": 1455.84,
+      "duration": 4.8,
+      "text": "the effective particle and you have an"
+    },
+    {
+      "start": 1458.64,
+      "duration": 3.279,
+      "text": "incoming trajectory"
+    },
+    {
+      "start": 1460.64,
+      "duration": 3.36,
+      "text": "and then it comes up it doesn't have"
+    },
+    {
+      "start": 1461.919,
+      "duration": 4.161,
+      "text": "enough energy to crest the"
+    },
+    {
+      "start": 1464.0,
+      "duration": 5.2,
+      "text": "potential and that turning point here"
+    },
+    {
+      "start": 1466.08,
+      "duration": 3.12,
+      "text": "that's r naught"
+    },
+    {
+      "start": 1471.44,
+      "duration": 4.56,
+      "text": "we want to work out r naught how do we"
+    },
+    {
+      "start": 1474.4,
+      "duration": 2.96,
+      "text": "work out r naught well r naught is when"
+    },
+    {
+      "start": 1476.0,
+      "duration": 11.84,
+      "text": "the energy equals"
+    },
+    {
+      "start": 1477.36,
+      "duration": 10.48,
+      "text": "the effective potential energy"
+    },
+    {
+      "start": 1489.36,
+      "duration": 6.24,
+      "text": "and we"
+    },
+    {
+      "start": 1492.48,
+      "duration": 3.12,
+      "text": "have ourselves"
+    },
+    {
+      "start": 1497.44,
+      "duration": 3.2,
+      "text": "by rearranging we bring the energy over"
+    },
+    {
+      "start": 1500.08,
+      "duration": 3.36,
+      "text": "through"
+    },
+    {
+      "start": 1500.64,
+      "duration": 3.36,
+      "text": "to the right hand side so that we can"
+    },
+    {
+      "start": 1503.44,
+      "duration": 1.92,
+      "text": "replace"
+    },
+    {
+      "start": 1504.0,
+      "duration": 4.4,
+      "text": "l squared divided by e squared with the"
+    },
+    {
+      "start": 1505.36,
+      "duration": 3.04,
+      "text": "impact parameter squared"
+    },
+    {
+      "start": 1511.84,
+      "duration": 5.439,
+      "text": "and then well we do a little bit more"
+    },
+    {
+      "start": 1513.679,
+      "duration": 3.6,
+      "text": "rearranging to get an equation"
+    },
+    {
+      "start": 1517.76,
+      "duration": 3.2,
+      "text": "which we'll call equation one"
+    },
+    {
+      "start": 1521.36,
+      "duration": 8.08,
+      "text": "it should get a cubic equation for this"
+    },
+    {
+      "start": 1523.12,
+      "duration": 8.72,
+      "text": "turning point"
+    },
+    {
+      "start": 1529.44,
+      "duration": 5.2,
+      "text": "so we've got to find the zero of a cubic"
+    },
+    {
+      "start": 1531.84,
+      "duration": 5.439,
+      "text": "polynomial equation you can do that"
+    },
+    {
+      "start": 1534.64,
+      "duration": 4.24,
+      "text": "it is analytically solvable up to"
+    },
+    {
+      "start": 1537.279,
+      "duration": 4.081,
+      "text": "quartic equations you can find these"
+    },
+    {
+      "start": 1538.88,
+      "duration": 2.48,
+      "text": "zeros"
+    },
+    {
+      "start": 1541.679,
+      "duration": 4.161,
+      "text": "and uh well i'll just quote the answer"
+    },
+    {
+      "start": 1544.64,
+      "duration": 12.88,
+      "text": "to you"
+    },
+    {
+      "start": 1545.84,
+      "duration": 15.28,
+      "text": "because it's a pain"
+    },
+    {
+      "start": 1557.52,
+      "duration": 6.24,
+      "text": "so the the largest radius for which the"
+    },
+    {
+      "start": 1561.12,
+      "duration": 5.439,
+      "text": "potential equals the total energy is the"
+    },
+    {
+      "start": 1563.76,
+      "duration": 2.799,
+      "text": "largest zero"
+    },
+    {
+      "start": 1566.799,
+      "duration": 4.721,
+      "text": "of that cubic polynomial"
+    },
+    {
+      "start": 1570.159,
+      "duration": 2.561,
+      "text": "and i'll just quote that i mean you"
+    },
+    {
+      "start": 1571.52,
+      "duration": 3.44,
+      "text": "could work it out numerically if you"
+    },
+    {
+      "start": 1572.72,
+      "duration": 6.079,
+      "text": "want or you can just believe me"
+    },
+    {
+      "start": 1574.96,
+      "duration": 7.88,
+      "text": "that it is 2b root 3 cos"
+    },
+    {
+      "start": 1578.799,
+      "duration": 8.0,
+      "text": "one third arc cos"
+    },
+    {
+      "start": 1582.84,
+      "duration": 6.92,
+      "text": "minus three to the three halves"
+    },
+    {
+      "start": 1586.799,
+      "duration": 2.961,
+      "text": "m on b"
+    },
+    {
+      "start": 1591.52,
+      "duration": 3.36,
+      "text": "so that's okay you can believe me and"
+    },
+    {
+      "start": 1594.32,
+      "duration": 3.76,
+      "text": "now"
+    },
+    {
+      "start": 1594.88,
+      "duration": 6.24,
+      "text": "um now that we have the the"
+    },
+    {
+      "start": 1598.08,
+      "duration": 5.04,
+      "text": "turning point that's the"
+    },
+    {
+      "start": 1601.12,
+      "duration": 3.919,
+      "text": "distance the closest distance of the"
+    },
+    {
+      "start": 1603.12,
+      "duration": 3.12,
+      "text": "trajectory to the heavenly body"
+    },
+    {
+      "start": 1605.039,
+      "duration": 3.52,
+      "text": "we can go ahead and solve this"
+    },
+    {
+      "start": 1606.24,
+      "duration": 5.84,
+      "text": "differential equation here so this"
+    },
+    {
+      "start": 1608.559,
+      "duration": 6.161,
+      "text": "differential equation uh"
+    },
+    {
+      "start": 1612.08,
+      "duration": 5.92,
+      "text": "is the one that will allow us to compute"
+    },
+    {
+      "start": 1614.72,
+      "duration": 3.28,
+      "text": "the total angular shift"
+    },
+    {
+      "start": 1620.24,
+      "duration": 3.6,
+      "text": "that's the one we want to integrate now"
+    },
+    {
+      "start": 1621.76,
+      "duration": 3.44,
+      "text": "actually"
+    },
+    {
+      "start": 1623.84,
+      "duration": 2.8,
+      "text": "the total angular shift is we're just"
+    },
+    {
+      "start": 1625.2,
+      "duration": 2.56,
+      "text": "going to integrate both sides and then"
+    },
+    {
+      "start": 1626.64,
+      "duration": 4.56,
+      "text": "set"
+    },
+    {
+      "start": 1627.76,
+      "duration": 5.6,
+      "text": "input the limits we know that when tau"
+    },
+    {
+      "start": 1631.2,
+      "duration": 10.64,
+      "text": "is minus infinity r is minus infinity"
+    },
+    {
+      "start": 1633.36,
+      "duration": 8.48,
+      "text": "r is infinity and so on"
+    },
+    {
+      "start": 1657.52,
+      "duration": 3.039,
+      "text": "uh this this equation here takes a"
+    },
+    {
+      "start": 1659.279,
+      "duration": 3.52,
+      "text": "little justifying right so"
+    },
+    {
+      "start": 1660.559,
+      "duration": 3.681,
+      "text": "we're going to integrate this equation"
+    },
+    {
+      "start": 1662.799,
+      "duration": 3.441,
+      "text": "uh from"
+    },
+    {
+      "start": 1664.24,
+      "duration": 3.12,
+      "text": "the point of closest the radius of"
+    },
+    {
+      "start": 1666.24,
+      "duration": 4.24,
+      "text": "closest approach to"
+    },
+    {
+      "start": 1667.36,
+      "duration": 4.24,
+      "text": "infinity now i put a 2 in front of there"
+    },
+    {
+      "start": 1670.48,
+      "duration": 4.16,
+      "text": "why is that well"
+    },
+    {
+      "start": 1671.6,
+      "duration": 5.28,
+      "text": "you've got two parts to this angular"
+    },
+    {
+      "start": 1674.64,
+      "duration": 3.44,
+      "text": "shift differential equation so if you"
+    },
+    {
+      "start": 1676.88,
+      "duration": 3.44,
+      "text": "look at the first"
+    },
+    {
+      "start": 1678.08,
+      "duration": 3.52,
+      "text": "epoch right the analogy does it's"
+    },
+    {
+      "start": 1680.32,
+      "duration": 1.68,
+      "text": "getting closer closer closer closer"
+    },
+    {
+      "start": 1681.6,
+      "duration": 3.439,
+      "text": "closer"
+    },
+    {
+      "start": 1682.0,
+      "duration": 6.559,
+      "text": "until it reaches the point r"
+    },
+    {
+      "start": 1685.039,
+      "duration": 6.0,
+      "text": "equals r naught of closest approach"
+    },
+    {
+      "start": 1688.559,
+      "duration": 4.0,
+      "text": "and then it gets further and out now if"
+    },
+    {
+      "start": 1691.039,
+      "duration": 3.36,
+      "text": "you imagine the angular shift"
+    },
+    {
+      "start": 1692.559,
+      "duration": 3.441,
+      "text": "generated part through this trajectory"
+    },
+    {
+      "start": 1694.399,
+      "duration": 4.801,
+      "text": "well the angular shift"
+    },
+    {
+      "start": 1696.0,
+      "duration": 4.64,
+      "text": "uh adds up right as you come in it gets"
+    },
+    {
+      "start": 1699.2,
+      "duration": 4.16,
+      "text": "more and more and more and then"
+    },
+    {
+      "start": 1700.64,
+      "duration": 3.84,
+      "text": "you've got a symmetric um epoch where"
+    },
+    {
+      "start": 1703.36,
+      "duration": 3.679,
+      "text": "the particle is now"
+    },
+    {
+      "start": 1704.48,
+      "duration": 3.84,
+      "text": "exiting the potential well the"
+    },
+    {
+      "start": 1707.039,
+      "duration": 3.921,
+      "text": "gravitational well"
+    },
+    {
+      "start": 1708.32,
+      "duration": 4.479,
+      "text": "and there the angular deflection just"
+    },
+    {
+      "start": 1710.96,
+      "duration": 2.64,
+      "text": "adds up so we get twice the angular"
+    },
+    {
+      "start": 1712.799,
+      "duration": 2.48,
+      "text": "deflection"
+    },
+    {
+      "start": 1713.6,
+      "duration": 3.439,
+      "text": "we get a contribution when the radius"
+    },
+    {
+      "start": 1715.279,
+      "duration": 3.52,
+      "text": "comes in to"
+    },
+    {
+      "start": 1717.039,
+      "duration": 3.36,
+      "text": "r naught and we have a contribution from"
+    },
+    {
+      "start": 1718.799,
+      "duration": 3.36,
+      "text": "when the radius goes from r naught back"
+    },
+    {
+      "start": 1720.399,
+      "duration": 4.321,
+      "text": "to r equals infinity again that's why"
+    },
+    {
+      "start": 1722.159,
+      "duration": 4.081,
+      "text": "there's a two here"
+    },
+    {
+      "start": 1724.72,
+      "duration": 3.839,
+      "text": "at the front of this integral so this"
+    },
+    {
+      "start": 1726.24,
+      "duration": 5.76,
+      "text": "integral is just literally integrating"
+    },
+    {
+      "start": 1728.559,
+      "duration": 6.081,
+      "text": "this yellow boxed expression on the"
+    },
+    {
+      "start": 1732.0,
+      "duration": 2.64,
+      "text": "right hand side"
+    },
+    {
+      "start": 1735.76,
+      "duration": 4.08,
+      "text": "so it's symmetric about"
+    },
+    {
+      "start": 1742.72,
+      "duration": 2.88,
+      "text": "i equals r"
+    },
+    {
+      "start": 1746.72,
+      "duration": 3.76,
+      "text": "and now okay so this is a bit of"
+    },
+    {
+      "start": 1748.399,
+      "duration": 5.601,
+      "text": "painless integral um"
+    },
+    {
+      "start": 1750.48,
+      "duration": 6.88,
+      "text": "you just have to believe me"
+    },
+    {
+      "start": 1754.0,
+      "duration": 4.159,
+      "text": "or work it out that you know making the"
+    },
+    {
+      "start": 1757.36,
+      "duration": 10.48,
+      "text": "following"
+    },
+    {
+      "start": 1758.159,
+      "duration": 9.681,
+      "text": "substitution is a good thing to do"
+    },
+    {
+      "start": 1768.08,
+      "duration": 4.16,
+      "text": "makes it look a tad easier"
+    },
+    {
+      "start": 1776.159,
+      "duration": 6.4,
+      "text": "but this integral is not trivial"
+    },
+    {
+      "start": 1779.279,
+      "duration": 6.241,
+      "text": "one thing we can do however is set m"
+    },
+    {
+      "start": 1782.559,
+      "duration": 6.561,
+      "text": "is zero and just as a sanity check you"
+    },
+    {
+      "start": 1785.52,
+      "duration": 3.6,
+      "text": "know what happens when m is zero"
+    },
+    {
+      "start": 1792.399,
+      "duration": 3.601,
+      "text": "well when m is zero we have flat space"
+    },
+    {
+      "start": 1794.159,
+      "duration": 5.52,
+      "text": "time and we calculate"
+    },
+    {
+      "start": 1796.0,
+      "duration": 6.08,
+      "text": "as an exercise that uh the total angular"
+    },
+    {
+      "start": 1799.679,
+      "duration": 2.401,
+      "text": "shift"
+    },
+    {
+      "start": 1802.799,
+      "duration": 3.36,
+      "text": "is pi okay as it should be right when"
+    },
+    {
+      "start": 1805.279,
+      "duration": 3.841,
+      "text": "you come in"
+    },
+    {
+      "start": 1806.159,
+      "duration": 4.88,
+      "text": "if you look at now the trajectory of a"
+    },
+    {
+      "start": 1809.12,
+      "duration": 6.72,
+      "text": "null geodesic in the flat"
+    },
+    {
+      "start": 1811.039,
+      "duration": 4.801,
+      "text": "case well phi goes from minus"
+    },
+    {
+      "start": 1817.12,
+      "duration": 6.72,
+      "text": "pi to pi"
+    },
+    {
+      "start": 1830.399,
+      "duration": 3.841,
+      "text": "and since we've defined the angular"
+    },
+    {
+      "start": 1832.399,
+      "duration": 4.16,
+      "text": "shift in the way that we have here"
+    },
+    {
+      "start": 1834.24,
+      "duration": 17.6,
+      "text": "you can see that the total angular shift"
+    },
+    {
+      "start": 1836.559,
+      "duration": 15.281,
+      "text": "is pi"
+    },
+    {
+      "start": 1852.559,
+      "duration": 3.84,
+      "text": "now let's investigate delta phi as a"
+    },
+    {
+      "start": 1855.279,
+      "duration": 2.321,
+      "text": "function of m"
+    },
+    {
+      "start": 1856.399,
+      "duration": 3.041,
+      "text": "right we really want to understand"
+    },
+    {
+      "start": 1857.6,
+      "duration": 6.64,
+      "text": "what's the angular shift"
+    },
+    {
+      "start": 1859.44,
+      "duration": 8.239,
+      "text": "in the case where uh we"
+    },
+    {
+      "start": 1864.24,
+      "duration": 5.84,
+      "text": "are interested in"
+    },
+    {
+      "start": 1867.679,
+      "duration": 5.12,
+      "text": "realistic celestial bodies like the sun"
+    },
+    {
+      "start": 1870.08,
+      "duration": 2.719,
+      "text": "or something like that"
+    },
+    {
+      "start": 1877.44,
+      "duration": 18.64,
+      "text": "well it's non-trivial"
+    },
+    {
+      "start": 1892.399,
+      "duration": 3.681,
+      "text": "that's because this limit"
+    },
+    {
+      "start": 1900.0,
+      "duration": 7.84,
+      "text": "becomes singular"
+    },
+    {
+      "start": 1907.919,
+      "duration": 3.041,
+      "text": "at m equals zero"
+    },
+    {
+      "start": 1911.2,
+      "duration": 3.359,
+      "text": "which is a pain right because if you"
+    },
+    {
+      "start": 1912.559,
+      "duration": 3.84,
+      "text": "want to expand around the smallness of"
+    },
+    {
+      "start": 1914.559,
+      "duration": 3.041,
+      "text": "m and something becomes singular at the"
+    },
+    {
+      "start": 1916.399,
+      "duration": 2.801,
+      "text": "thing that you're expanding around then"
+    },
+    {
+      "start": 1917.6,
+      "duration": 3.919,
+      "text": "the taylor series approximation doesn't"
+    },
+    {
+      "start": 1919.2,
+      "duration": 4.479,
+      "text": "work exactly there"
+    },
+    {
+      "start": 1921.519,
+      "duration": 4.0,
+      "text": "so we're going to avoid this uh in the"
+    },
+    {
+      "start": 1923.679,
+      "duration": 5.201,
+      "text": "following way"
+    },
+    {
+      "start": 1925.519,
+      "duration": 5.121,
+      "text": "we promote instead so this is"
+    },
+    {
+      "start": 1928.88,
+      "duration": 3.039,
+      "text": "interrelationship between m and r naught"
+    },
+    {
+      "start": 1930.64,
+      "duration": 1.84,
+      "text": "but instead what we're going to do is we"
+    },
+    {
+      "start": 1931.919,
+      "duration": 3.681,
+      "text": "promote"
+    },
+    {
+      "start": 1932.48,
+      "duration": 5.199,
+      "text": "m and r naught to independent variables"
+    },
+    {
+      "start": 1935.6,
+      "duration": 3.52,
+      "text": "and then we will do our expansion and"
+    },
+    {
+      "start": 1937.679,
+      "duration": 5.681,
+      "text": "then we'll set"
+    },
+    {
+      "start": 1939.12,
+      "duration": 7.72,
+      "text": "we'll fix uh m to be equal to r naught"
+    },
+    {
+      "start": 1943.36,
+      "duration": 6.48,
+      "text": "m to depend on r naught in the correct"
+    },
+    {
+      "start": 1946.84,
+      "duration": 3.0,
+      "text": "fashion"
+    },
+    {
+      "start": 1953.919,
+      "duration": 9.921,
+      "text": "so we'll compare delta phi which is now"
+    },
+    {
+      "start": 1957.039,
+      "duration": 6.801,
+      "text": "a function of m and r naught"
+    },
+    {
+      "start": 1977.679,
+      "duration": 3.681,
+      "text": "and we'll compare this angular"
+    },
+    {
+      "start": 1978.96,
+      "duration": 11.52,
+      "text": "deflection for light rays with the same"
+    },
+    {
+      "start": 1981.36,
+      "duration": 12.159,
+      "text": "r naught"
+    },
+    {
+      "start": 1990.48,
+      "duration": 5.12,
+      "text": "the first step is to eliminate b"
+    },
+    {
+      "start": 1993.519,
+      "duration": 3.52,
+      "text": "via equation one right so equation one"
+    },
+    {
+      "start": 1995.6,
+      "duration": 3.199,
+      "text": "up here is the equation for the turning"
+    },
+    {
+      "start": 1997.039,
+      "duration": 3.681,
+      "text": "point"
+    },
+    {
+      "start": 1998.799,
+      "duration": 5.201,
+      "text": "and that tells us that b is a function"
+    },
+    {
+      "start": 2000.72,
+      "duration": 5.52,
+      "text": "of r naught and m"
+    },
+    {
+      "start": 2004.0,
+      "duration": 3.519,
+      "text": "that gives us a total angular deflection"
+    },
+    {
+      "start": 2006.24,
+      "duration": 5.12,
+      "text": "to be 2"
+    },
+    {
+      "start": 2007.519,
+      "duration": 5.76,
+      "text": "0 goes from integral goes from 0 to 1"
+    },
+    {
+      "start": 2011.36,
+      "duration": 8.48,
+      "text": "over r naught"
+    },
+    {
+      "start": 2013.279,
+      "duration": 6.561,
+      "text": "so substituting in that value of b"
+    },
+    {
+      "start": 2024.799,
+      "duration": 3.6,
+      "text": "gives us this nasty looking thing"
+    },
+    {
+      "start": 2029.76,
+      "duration": 4.08,
+      "text": "and now the goal is to expand"
+    },
+    {
+      "start": 2034.72,
+      "duration": 5.28,
+      "text": "we've gotten rid of b out of the story"
+    },
+    {
+      "start": 2037.519,
+      "duration": 6.16,
+      "text": "now so we're going to expand"
+    },
+    {
+      "start": 2040.0,
+      "duration": 6.32,
+      "text": "delta phi as a function of"
+    },
+    {
+      "start": 2043.679,
+      "duration": 3.36,
+      "text": "the smallest as the taylor series and"
+    },
+    {
+      "start": 2046.32,
+      "duration": 2.8,
+      "text": "the smallest of"
+    },
+    {
+      "start": 2047.039,
+      "duration": 2.081,
+      "text": "m"
+    },
+    {
+      "start": 2059.44,
+      "duration": 2.88,
+      "text": "so i've just drawn the first two terms"
+    },
+    {
+      "start": 2060.96,
+      "duration": 4.879,
+      "text": "of a taylor series well we already know"
+    },
+    {
+      "start": 2062.32,
+      "duration": 3.519,
+      "text": "what the zeroth order term is it's pi"
+    },
+    {
+      "start": 2067.52,
+      "duration": 4.159,
+      "text": "so we need to work out the the first"
+    },
+    {
+      "start": 2070.32,
+      "duration": 2.24,
+      "text": "order correction and for that we need to"
+    },
+    {
+      "start": 2071.679,
+      "duration": 4.16,
+      "text": "do"
+    },
+    {
+      "start": 2072.56,
+      "duration": 3.279,
+      "text": "this derivative"
+    },
+    {
+      "start": 2076.24,
+      "duration": 5.439,
+      "text": "of this angular deflection as a function"
+    },
+    {
+      "start": 2078.72,
+      "duration": 4.879,
+      "text": "of m and set it to m is zero"
+    },
+    {
+      "start": 2081.679,
+      "duration": 3.601,
+      "text": "remembering that we've decoupled m and r"
+    },
+    {
+      "start": 2083.599,
+      "duration": 6.24,
+      "text": "naught right"
+    },
+    {
+      "start": 2085.28,
+      "duration": 4.559,
+      "text": "by making r naught independent"
+    },
+    {
+      "start": 2099.2,
+      "duration": 3.919,
+      "text": "and that's a you know somewhat tedious"
+    },
+    {
+      "start": 2101.839,
+      "duration": 1.921,
+      "text": "derivative we'll just pass the"
+    },
+    {
+      "start": 2103.119,
+      "duration": 4.881,
+      "text": "derivative"
+    },
+    {
+      "start": 2103.76,
+      "duration": 4.24,
+      "text": "with respect to m through the integral"
+    },
+    {
+      "start": 2114.839,
+      "duration": 3.0,
+      "text": "sign"
+    },
+    {
+      "start": 2121.839,
+      "duration": 3.681,
+      "text": "and this simplifies a little a little"
+    },
+    {
+      "start": 2128.839,
+      "duration": 4.28,
+      "text": "bit"
+    },
+    {
+      "start": 2130.72,
+      "duration": 3.359,
+      "text": "by substituting or using the"
+    },
+    {
+      "start": 2133.119,
+      "duration": 4.48,
+      "text": "relationship between"
+    },
+    {
+      "start": 2134.079,
+      "duration": 3.52,
+      "text": "r naught and the impact parameter"
+    },
+    {
+      "start": 2143.599,
+      "duration": 3.52,
+      "text": "we arrive at the following much simpler"
+    },
+    {
+      "start": 2146.56,
+      "duration": 3.039,
+      "text": "expression"
+    },
+    {
+      "start": 2147.119,
+      "duration": 4.401,
+      "text": "4 divided by b and so here we've used"
+    },
+    {
+      "start": 2149.599,
+      "duration": 5.041,
+      "text": "something right we've used the fact"
+    },
+    {
+      "start": 2151.52,
+      "duration": 5.2,
+      "text": "that um r naught equals b"
+    },
+    {
+      "start": 2154.64,
+      "duration": 3.52,
+      "text": "naught so there's you know a kind of"
+    },
+    {
+      "start": 2156.72,
+      "duration": 3.119,
+      "text": "warning warning here right"
+    },
+    {
+      "start": 2158.16,
+      "duration": 3.6,
+      "text": "what's happened here i've changed r"
+    },
+    {
+      "start": 2159.839,
+      "duration": 5.76,
+      "text": "naught for b naught"
+    },
+    {
+      "start": 2161.76,
+      "duration": 3.839,
+      "text": "um well we've used"
+    },
+    {
+      "start": 2167.2,
+      "duration": 6.639,
+      "text": "the following taylor series"
+    },
+    {
+      "start": 2178.96,
+      "duration": 11.2,
+      "text": "so if you remember we've got this"
+    },
+    {
+      "start": 2186.96,
+      "duration": 5.119,
+      "text": "equation here that uh sets"
+    },
+    {
+      "start": 2190.16,
+      "duration": 4.64,
+      "text": "r naught as a function of b if you look"
+    },
+    {
+      "start": 2192.079,
+      "duration": 4.561,
+      "text": "at this for long enough you"
+    },
+    {
+      "start": 2194.8,
+      "duration": 4.039,
+      "text": "should see that r naught is effectively"
+    },
+    {
+      "start": 2196.64,
+      "duration": 5.439,
+      "text": "determined by b in this equation"
+    },
+    {
+      "start": 2198.839,
+      "duration": 6.601,
+      "text": "and we want to understand that"
+    },
+    {
+      "start": 2202.079,
+      "duration": 3.361,
+      "text": "to lowest order in m"
+    },
+    {
+      "start": 2205.76,
+      "duration": 3.28,
+      "text": "there's m features there as well so"
+    },
+    {
+      "start": 2207.44,
+      "duration": 4.08,
+      "text": "we've used the fact that when you take"
+    },
+    {
+      "start": 2209.04,
+      "duration": 5.52,
+      "text": "cos of the third of r cos of x"
+    },
+    {
+      "start": 2211.52,
+      "duration": 4.48,
+      "text": "then that equals root 3 over 2"
+    },
+    {
+      "start": 2214.56,
+      "duration": 4.48,
+      "text": "the first couple of terms in the taylor"
+    },
+    {
+      "start": 2216.0,
+      "duration": 6.16,
+      "text": "series plus x over 6 minus x squared"
+    },
+    {
+      "start": 2219.04,
+      "duration": 6.4,
+      "text": "over 12 root 3 blah blah blah blah"
+    },
+    {
+      "start": 2222.16,
+      "duration": 6.88,
+      "text": "so using um the fact that r naught"
+    },
+    {
+      "start": 2225.44,
+      "duration": 7.2,
+      "text": "is 2 b over root three"
+    },
+    {
+      "start": 2229.04,
+      "duration": 4.4,
+      "text": "so r naught is two b over root three cos"
+    },
+    {
+      "start": 2232.64,
+      "duration": 4.88,
+      "text": "one third"
+    },
+    {
+      "start": 2233.44,
+      "duration": 4.08,
+      "text": "arc cos of this argument there"
+    },
+    {
+      "start": 2237.76,
+      "duration": 3.599,
+      "text": "we can obtain a relationship correct to"
+    },
+    {
+      "start": 2240.56,
+      "duration": 4.559,
+      "text": "first order"
+    },
+    {
+      "start": 2241.359,
+      "duration": 6.561,
+      "text": "in m of the inter relationship between"
+    },
+    {
+      "start": 2245.119,
+      "duration": 2.801,
+      "text": "r naught and b"
+    },
+    {
+      "start": 2254.0,
+      "duration": 17.839,
+      "text": "and this equals b minus three m so to"
+    },
+    {
+      "start": 2257.52,
+      "duration": 14.319,
+      "text": "zeroth order r naught is b right"
+    },
+    {
+      "start": 2273.68,
+      "duration": 5.679,
+      "text": "and so to order m we've just learned"
+    },
+    {
+      "start": 2277.359,
+      "duration": 5.201,
+      "text": "that delta phi"
+    },
+    {
+      "start": 2279.359,
+      "duration": 5.841,
+      "text": "is approximately pi"
+    },
+    {
+      "start": 2282.56,
+      "duration": 4.24,
+      "text": "plus 4 m over b and this is the"
+    },
+    {
+      "start": 2285.2,
+      "duration": 3.6,
+      "text": "correction"
+    },
+    {
+      "start": 2286.8,
+      "duration": 3.92,
+      "text": "so before we continue with the"
+    },
+    {
+      "start": 2288.8,
+      "duration": 5.039,
+      "text": "correction i should just pause"
+    },
+    {
+      "start": 2290.72,
+      "duration": 5.6,
+      "text": "to distinguish"
+    },
+    {
+      "start": 2293.839,
+      "duration": 3.921,
+      "text": "two angular deflections that have"
+    },
+    {
+      "start": 2296.32,
+      "duration": 4.88,
+      "text": "appeared in this lecture"
+    },
+    {
+      "start": 2297.76,
+      "duration": 7.0,
+      "text": "so delta phi is the total change"
+    },
+    {
+      "start": 2301.2,
+      "duration": 6.56,
+      "text": "in angular variable throughout the"
+    },
+    {
+      "start": 2304.76,
+      "duration": 3.0,
+      "text": "trajectory's"
+    },
+    {
+      "start": 2310.839,
+      "duration": 3.0,
+      "text": "lifetime"
+    },
+    {
+      "start": 2331.2,
+      "duration": 3.04,
+      "text": "all right so delta phi is a very simple"
+    },
+    {
+      "start": 2332.8,
+      "duration": 2.24,
+      "text": "thing to interpret it's just the total"
+    },
+    {
+      "start": 2334.24,
+      "duration": 3.76,
+      "text": "angular"
+    },
+    {
+      "start": 2335.04,
+      "duration": 3.68,
+      "text": "change of the trajectory and so that's"
+    },
+    {
+      "start": 2338.0,
+      "duration": 3.2,
+      "text": "why"
+    },
+    {
+      "start": 2338.72,
+      "duration": 3.84,
+      "text": "when for flat space time the total"
+    },
+    {
+      "start": 2341.2,
+      "duration": 4.399,
+      "text": "angular change is simply pi"
+    },
+    {
+      "start": 2342.56,
+      "duration": 3.039,
+      "text": "right you go from phi"
+    },
+    {
+      "start": 2345.76,
+      "duration": 5.44,
+      "text": "is effectively zero through to pi"
+    },
+    {
+      "start": 2348.8,
+      "duration": 3.68,
+      "text": "or phi is minus pi over two to pi over"
+    },
+    {
+      "start": 2351.2,
+      "duration": 2.56,
+      "text": "two depending on where you set the zero"
+    },
+    {
+      "start": 2352.48,
+      "duration": 3.84,
+      "text": "to pi"
+    },
+    {
+      "start": 2353.76,
+      "duration": 3.52,
+      "text": "now there's an additional angular change"
+    },
+    {
+      "start": 2356.32,
+      "duration": 5.2,
+      "text": "which"
+    },
+    {
+      "start": 2357.28,
+      "duration": 6.4,
+      "text": "in the figure up here i had written as"
+    },
+    {
+      "start": 2361.52,
+      "duration": 3.92,
+      "text": "uh big delta phi but actually i should"
+    },
+    {
+      "start": 2363.68,
+      "duration": 4.0,
+      "text": "have written it as little delta pi"
+    },
+    {
+      "start": 2365.44,
+      "duration": 3.679,
+      "text": "there's an additional angular shift due"
+    },
+    {
+      "start": 2367.68,
+      "duration": 5.04,
+      "text": "to the curvature of the"
+    },
+    {
+      "start": 2369.119,
+      "duration": 6.081,
+      "text": "geodesic and that"
+    },
+    {
+      "start": 2372.72,
+      "duration": 4.48,
+      "text": "is this correction factor and that is"
+    },
+    {
+      "start": 2375.2,
+      "duration": 4.96,
+      "text": "delta phi"
+    },
+    {
+      "start": 2377.2,
+      "duration": 4.72,
+      "text": "little delta phi just so that we don't"
+    },
+    {
+      "start": 2380.16,
+      "duration": 5.76,
+      "text": "confuse our notations"
+    },
+    {
+      "start": 2381.92,
+      "duration": 7.52,
+      "text": "so for a trajectory moving in a"
+    },
+    {
+      "start": 2385.92,
+      "duration": 6.72,
+      "text": "small celestial body such as the sun"
+    },
+    {
+      "start": 2389.44,
+      "duration": 6.0,
+      "text": "there is or can be a perceptible"
+    },
+    {
+      "start": 2392.64,
+      "duration": 3.36,
+      "text": "correction to the total angular variable"
+    },
+    {
+      "start": 2395.44,
+      "duration": 5.04,
+      "text": "change"
+    },
+    {
+      "start": 2396.0,
+      "duration": 7.76,
+      "text": "throughout a trajectory's lifetime so"
+    },
+    {
+      "start": 2400.48,
+      "duration": 10.56,
+      "text": "for example for a light ray"
+    },
+    {
+      "start": 2403.76,
+      "duration": 10.88,
+      "text": "grazing or touching the edge of the sun"
+    },
+    {
+      "start": 2411.04,
+      "duration": 3.6,
+      "text": "uh this this correction"
+    },
+    {
+      "start": 2414.88,
+      "duration": 3.36,
+      "text": "is about um"
+    },
+    {
+      "start": 2419.4,
+      "duration": 7.48,
+      "text": "1.75 seconds of arc"
+    },
+    {
+      "start": 2423.119,
+      "duration": 3.761,
+      "text": "so it's just about perceptible"
+    },
+    {
+      "start": 2426.96,
+      "duration": 6.56,
+      "text": "uh it was uh confirmed in 1919"
+    },
+    {
+      "start": 2431.839,
+      "duration": 3.121,
+      "text": "although the error bars have always been"
+    },
+    {
+      "start": 2433.52,
+      "duration": 4.559,
+      "text": "pretty high on this"
+    },
+    {
+      "start": 2434.96,
+      "duration": 5.44,
+      "text": "sort of experiment"
+    },
+    {
+      "start": 2438.079,
+      "duration": 4.721,
+      "text": "and this was by the dyson eddington"
+    },
+    {
+      "start": 2440.4,
+      "duration": 5.76,
+      "text": "davidson"
+    },
+    {
+      "start": 2442.8,
+      "duration": 7.279,
+      "text": "collaboration uh the this is"
+    },
+    {
+      "start": 2446.16,
+      "duration": 4.8,
+      "text": "difficult to uh get the error bars down"
+    },
+    {
+      "start": 2450.079,
+      "duration": 3.681,
+      "text": "because the sun"
+    },
+    {
+      "start": 2450.96,
+      "duration": 4.399,
+      "text": "is such a bright emitter in the sky um"
+    },
+    {
+      "start": 2453.76,
+      "duration": 4.88,
+      "text": "in fact it's far better to look at the"
+    },
+    {
+      "start": 2455.359,
+      "duration": 6.321,
+      "text": "bending of radio waves"
+    },
+    {
+      "start": 2458.64,
+      "duration": 5.04,
+      "text": "by uh from quasars"
+    },
+    {
+      "start": 2461.68,
+      "duration": 3.6,
+      "text": "there you can get the error bars a lot"
+    },
+    {
+      "start": 2463.68,
+      "duration": 4.159,
+      "text": "further down and so these predictions"
+    },
+    {
+      "start": 2465.28,
+      "duration": 2.559,
+      "text": "have been"
+    },
+    {
+      "start": 2468.319,
+      "duration": 2.721,
+      "text": "confirmed"
+    },
+    {
+      "start": 2471.359,
+      "duration": 10.48,
+      "text": "by experiments"
+    },
+    {
+      "start": 2482.079,
+      "duration": 3.201,
+      "text": "give better confirmation"
+    },
+    {
+      "start": 2488.24,
+      "duration": 4.0,
+      "text": "so that's it for this lecture and indeed"
+    },
+    {
+      "start": 2490.88,
+      "duration": 4.08,
+      "text": "for this course"
+    },
+    {
+      "start": 2492.24,
+      "duration": 3.28,
+      "text": "thank you for joining me on this journey"
+    },
+    {
+      "start": 2494.96,
+      "duration": 3.28,
+      "text": "through"
+    },
+    {
+      "start": 2495.52,
+      "duration": 4.0,
+      "text": "uh einstein's general theory of"
+    },
+    {
+      "start": 2498.24,
+      "duration": 2.96,
+      "text": "relativity"
+    },
+    {
+      "start": 2499.52,
+      "duration": 3.12,
+      "text": "i hope you'll agree with me that it's an"
+    },
+    {
+      "start": 2501.2,
+      "duration": 4.32,
+      "text": "extraordinary theory"
+    },
+    {
+      "start": 2502.64,
+      "duration": 4.56,
+      "text": "that is that has a level of beauty that"
+    },
+    {
+      "start": 2505.52,
+      "duration": 4.24,
+      "text": "is unparalleled by"
+    },
+    {
+      "start": 2507.2,
+      "duration": 4.399,
+      "text": "many other theories in physics we've"
+    },
+    {
+      "start": 2509.76,
+      "duration": 4.0,
+      "text": "only really scratched the surface"
+    },
+    {
+      "start": 2511.599,
+      "duration": 3.041,
+      "text": "of the general theory of relativity"
+    },
+    {
+      "start": 2513.76,
+      "duration": 3.599,
+      "text": "there's been active"
+    },
+    {
+      "start": 2514.64,
+      "duration": 3.84,
+      "text": "research in this area since the early"
+    },
+    {
+      "start": 2517.359,
+      "duration": 3.521,
+      "text": "20s"
+    },
+    {
+      "start": 2518.48,
+      "duration": 3.04,
+      "text": "and that's nearly a century of active"
+    },
+    {
+      "start": 2520.88,
+      "duration": 3.04,
+      "text": "research"
+    },
+    {
+      "start": 2521.52,
+      "duration": 3.2,
+      "text": "on uh einstein's general theory of"
+    },
+    {
+      "start": 2523.92,
+      "duration": 2.64,
+      "text": "relativity"
+    },
+    {
+      "start": 2524.72,
+      "duration": 3.76,
+      "text": "and there's now an immense amount of"
+    },
+    {
+      "start": 2526.56,
+      "duration": 4.0,
+      "text": "things known and an immense number of"
+    },
+    {
+      "start": 2528.48,
+      "duration": 5.359,
+      "text": "interesting and fascinating topics"
+    },
+    {
+      "start": 2530.56,
+      "duration": 6.08,
+      "text": "and these problems are of ever greater"
+    },
+    {
+      "start": 2533.839,
+      "duration": 5.441,
+      "text": "significance as we understand"
+    },
+    {
+      "start": 2536.64,
+      "duration": 3.92,
+      "text": "and perform better cosmological"
+    },
+    {
+      "start": 2539.28,
+      "duration": 3.68,
+      "text": "observations of our universe"
+    },
+    {
+      "start": 2540.56,
+      "duration": 4.16,
+      "text": "universe and in fact in a way the"
+    },
+    {
+      "start": 2542.96,
+      "duration": 2.8,
+      "text": "largest mysteries that remain open in"
+    },
+    {
+      "start": 2544.72,
+      "duration": 4.119,
+      "text": "physics are those"
+    },
+    {
+      "start": 2545.76,
+      "duration": 4.319,
+      "text": "that arise in general relativity and"
+    },
+    {
+      "start": 2548.839,
+      "duration": 4.28,
+      "text": "cosmology"
+    },
+    {
+      "start": 2550.079,
+      "duration": 3.681,
+      "text": "but that's it for today and for this"
+    },
+    {
+      "start": 2553.119,
+      "duration": 3.281,
+      "text": "course"
+    },
+    {
+      "start": 2553.76,
+      "duration": 4.079,
+      "text": "thank you for joining me and i'll see"
+    },
+    {
+      "start": 2556.4,
+      "duration": 3.919,
+      "text": "you hopefully next time"
+    },
+    {
+      "start": 2557.839,
+      "duration": 2.48,
+      "text": "goodbye"
+    }
+  ]
+}

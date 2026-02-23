@@ -1,0 +1,4587 @@
+{
+  "title": "General Relativity, Lecture 14: solving linearised Einstein's field equations",
+  "video_id": "aQKrBNEwlBA",
+  "url": "https://www.youtube.com/watch?v=aQKrBNEwlBA",
+  "transcript": [
+    {
+      "start": 0.64,
+      "duration": 3.039,
+      "text": "hello and welcome back to introduction"
+    },
+    {
+      "start": 2.32,
+      "duration": 3.68,
+      "text": "to general relativity"
+    },
+    {
+      "start": 3.679,
+      "duration": 3.12,
+      "text": "in the previous lecture we left off"
+    },
+    {
+      "start": 6.0,
+      "duration": 3.44,
+      "text": "discussing"
+    },
+    {
+      "start": 6.799,
+      "duration": 4.88,
+      "text": "linearized gravity that is solutions"
+    },
+    {
+      "start": 9.44,
+      "duration": 4.48,
+      "text": "untransferred equations where we"
+    },
+    {
+      "start": 11.679,
+      "duration": 3.601,
+      "text": "consider the perturbations in the"
+    },
+    {
+      "start": 13.92,
+      "duration": 5.359,
+      "text": "geometry to"
+    },
+    {
+      "start": 15.28,
+      "duration": 6.159,
+      "text": "only to linear order in the perturbation"
+    },
+    {
+      "start": 19.279,
+      "duration": 3.84,
+      "text": "around a flat space-time solution well"
+    },
+    {
+      "start": 21.439,
+      "duration": 4.0,
+      "text": "that's the objective"
+    },
+    {
+      "start": 23.119,
+      "duration": 3.441,
+      "text": "in this lecture and in that previous"
+    },
+    {
+      "start": 25.439,
+      "duration": 2.961,
+      "text": "lecture we ended off"
+    },
+    {
+      "start": 26.56,
+      "duration": 3.76,
+      "text": "discussing diffiomorphisms and"
+    },
+    {
+      "start": 28.4,
+      "duration": 2.56,
+      "text": "isometries and the reason we were"
+    },
+    {
+      "start": 30.32,
+      "duration": 2.399,
+      "text": "looking at"
+    },
+    {
+      "start": 30.96,
+      "duration": 2.96,
+      "text": "this topic was because we wanted to"
+    },
+    {
+      "start": 32.719,
+      "duration": 2.961,
+      "text": "understand the gauge freedom of"
+    },
+    {
+      "start": 33.92,
+      "duration": 2.96,
+      "text": "einstein's general theory of relativity"
+    },
+    {
+      "start": 35.68,
+      "duration": 3.6,
+      "text": "and how we can use it"
+    },
+    {
+      "start": 36.88,
+      "duration": 3.839,
+      "text": "to simplify the linearized equations of"
+    },
+    {
+      "start": 39.28,
+      "duration": 3.119,
+      "text": "motion that arise"
+    },
+    {
+      "start": 40.719,
+      "duration": 3.041,
+      "text": "from linearizing einstein's field"
+    },
+    {
+      "start": 42.399,
+      "duration": 2.961,
+      "text": "equations"
+    },
+    {
+      "start": 43.76,
+      "duration": 3.16,
+      "text": "so in today's lecture we're going to"
+    },
+    {
+      "start": 45.36,
+      "duration": 4.24,
+      "text": "continue our discussion of"
+    },
+    {
+      "start": 46.92,
+      "duration": 4.44,
+      "text": "diviomorphisms and isometries and in"
+    },
+    {
+      "start": 49.6,
+      "duration": 4.16,
+      "text": "particular look at infinitesimal"
+    },
+    {
+      "start": 51.36,
+      "duration": 4.16,
+      "text": "diffumorphisms and isometries and"
+    },
+    {
+      "start": 53.76,
+      "duration": 3.68,
+      "text": "show how they can be exploited to"
+    },
+    {
+      "start": 55.52,
+      "duration": 4.24,
+      "text": "simplify the linearized einstein's field"
+    },
+    {
+      "start": 57.44,
+      "duration": 4.16,
+      "text": "equations"
+    },
+    {
+      "start": 59.76,
+      "duration": 3.439,
+      "text": "before that we just have to spend a"
+    },
+    {
+      "start": 61.6,
+      "duration": 4.24,
+      "text": "little bit more time discussing"
+    },
+    {
+      "start": 63.199,
+      "duration": 4.001,
+      "text": "uh diffumorphisms and the gauge"
+    },
+    {
+      "start": 65.84,
+      "duration": 4.639,
+      "text": "structure of general relativity before"
+    },
+    {
+      "start": 67.2,
+      "duration": 7.04,
+      "text": "we look at infinitesimal diffumorphisms"
+    },
+    {
+      "start": 70.479,
+      "duration": 3.761,
+      "text": "so if we have a diphymorphism"
+    },
+    {
+      "start": 75.6,
+      "duration": 7.04,
+      "text": "phi between two manifolds m and n"
+    },
+    {
+      "start": 80.08,
+      "duration": 5.359,
+      "text": "then as i emphasized in a very early"
+    },
+    {
+      "start": 82.64,
+      "duration": 6.88,
+      "text": "lecture in this course"
+    },
+    {
+      "start": 85.439,
+      "duration": 7.04,
+      "text": "the manifolds m and n have identical"
+    },
+    {
+      "start": 89.52,
+      "duration": 2.959,
+      "text": "manifold structure"
+    },
+    {
+      "start": 99.04,
+      "duration": 4.16,
+      "text": "okay that's just the the in other words"
+    },
+    {
+      "start": 101.28,
+      "duration": 5.44,
+      "text": "diffumorphisms are the morphisms in the"
+    },
+    {
+      "start": 103.2,
+      "duration": 3.52,
+      "text": "category of smooth manifolds"
+    },
+    {
+      "start": 107.04,
+      "duration": 4.8,
+      "text": "and this means that the the topologies"
+    },
+    {
+      "start": 109.119,
+      "duration": 6.401,
+      "text": "you get induced on the manifolds"
+    },
+    {
+      "start": 111.84,
+      "duration": 8.239,
+      "text": "are equivalent and also the"
+    },
+    {
+      "start": 115.52,
+      "duration": 4.559,
+      "text": "the smoothness structures and so on"
+    },
+    {
+      "start": 120.479,
+      "duration": 4.481,
+      "text": "now you have to observe that general"
+    },
+    {
+      "start": 123.28,
+      "duration": 6.56,
+      "text": "relativity"
+    },
+    {
+      "start": 124.96,
+      "duration": 4.88,
+      "text": "describes nature"
+    },
+    {
+      "start": 131.28,
+      "duration": 4.4,
+      "text": "in terms of a manifold right"
+    },
+    {
+      "start": 141.04,
+      "duration": 4.72,
+      "text": "in terms of a manifold m and"
+    },
+    {
+      "start": 144.08,
+      "duration": 3.12,
+      "text": "right there's some additional data it's"
+    },
+    {
+      "start": 145.76,
+      "duration": 2.64,
+      "text": "not just that you have a manifold"
+    },
+    {
+      "start": 147.2,
+      "duration": 4.64,
+      "text": "structure that encodes"
+    },
+    {
+      "start": 148.4,
+      "duration": 6.44,
+      "text": "all of the space time"
+    },
+    {
+      "start": 151.84,
+      "duration": 4.8,
+      "text": "you you have some additional tensor"
+    },
+    {
+      "start": 154.84,
+      "duration": 5.0,
+      "text": "fields"
+    },
+    {
+      "start": 156.64,
+      "duration": 4.879,
+      "text": "in general relativity uh a list of"
+    },
+    {
+      "start": 159.84,
+      "duration": 3.759,
+      "text": "tensor fields i've written t"
+    },
+    {
+      "start": 161.519,
+      "duration": 5.601,
+      "text": "subscript with j in brackets to indicate"
+    },
+    {
+      "start": 163.599,
+      "duration": 3.521,
+      "text": "there's more than one such tensor field"
+    },
+    {
+      "start": 168.239,
+      "duration": 2.401,
+      "text": "and the point is that in general"
+    },
+    {
+      "start": 169.68,
+      "duration": 2.559,
+      "text": "relativity we don't just have the"
+    },
+    {
+      "start": 170.64,
+      "duration": 3.12,
+      "text": "manifold structure of course we have"
+    },
+    {
+      "start": 172.239,
+      "duration": 3.28,
+      "text": "uh a couple of tensor fields that are"
+    },
+    {
+      "start": 173.76,
+      "duration": 3.44,
+      "text": "highly relevant for einstein's field"
+    },
+    {
+      "start": 175.519,
+      "duration": 4.08,
+      "text": "equations the ritchie tensor"
+    },
+    {
+      "start": 177.2,
+      "duration": 3.92,
+      "text": "the richie scala the einstein tensor we"
+    },
+    {
+      "start": 179.599,
+      "duration": 3.92,
+      "text": "also have the stress energy tensor these"
+    },
+    {
+      "start": 181.12,
+      "duration": 4.64,
+      "text": "tenses all play a key"
+    },
+    {
+      "start": 183.519,
+      "duration": 5.841,
+      "text": "role in the destruction in the"
+    },
+    {
+      "start": 185.76,
+      "duration": 5.839,
+      "text": "description of nature"
+    },
+    {
+      "start": 189.36,
+      "duration": 3.28,
+      "text": "so since general relativity describes"
+    },
+    {
+      "start": 191.599,
+      "duration": 3.28,
+      "text": "nature in terms of"
+    },
+    {
+      "start": 192.64,
+      "duration": 4.48,
+      "text": "of a manifold and some tensor fields"
+    },
+    {
+      "start": 194.879,
+      "duration": 4.881,
+      "text": "that write them tj's just a list of"
+    },
+    {
+      "start": 197.12,
+      "duration": 6.0,
+      "text": "sensor fields"
+    },
+    {
+      "start": 199.76,
+      "duration": 5.28,
+      "text": "then if some manifold and the requisite"
+    },
+    {
+      "start": 203.12,
+      "duration": 5.52,
+      "text": "list of appropriate tensors"
+    },
+    {
+      "start": 205.04,
+      "duration": 6.88,
+      "text": "fields and another manifold say n"
+    },
+    {
+      "start": 208.64,
+      "duration": 6.64,
+      "text": "with a push pulled back"
+    },
+    {
+      "start": 211.92,
+      "duration": 8.239,
+      "text": "as appropriate list of tensorfields uh"
+    },
+    {
+      "start": 215.28,
+      "duration": 4.879,
+      "text": "have physical identical properties"
+    },
+    {
+      "start": 225.36,
+      "duration": 4.159,
+      "text": "there's no if there i'll rewrite that"
+    },
+    {
+      "start": 239.04,
+      "duration": 3.199,
+      "text": "so here we are getting into the gauge"
+    },
+    {
+      "start": 240.64,
+      "duration": 3.44,
+      "text": "structure of general relativity so if we"
+    },
+    {
+      "start": 242.239,
+      "duration": 2.64,
+      "text": "have a manifold with some tensorfields"
+    },
+    {
+      "start": 244.08,
+      "duration": 4.32,
+      "text": "on it dj"
+    },
+    {
+      "start": 244.879,
+      "duration": 6.881,
+      "text": "then endodymorphism phi then"
+    },
+    {
+      "start": 248.4,
+      "duration": 4.96,
+      "text": "the argument is that m and its list of"
+    },
+    {
+      "start": 251.76,
+      "duration": 4.479,
+      "text": "tensorfields tj"
+    },
+    {
+      "start": 253.36,
+      "duration": 4.8,
+      "text": "and n the image of the diffumorphism and"
+    },
+    {
+      "start": 256.239,
+      "duration": 4.72,
+      "text": "the appropriately pushed forward"
+    },
+    {
+      "start": 258.16,
+      "duration": 4.479,
+      "text": "uh tensorfields 5 star tj have"
+    },
+    {
+      "start": 260.959,
+      "duration": 2.8,
+      "text": "identically physically identical"
+    },
+    {
+      "start": 262.639,
+      "duration": 4.0,
+      "text": "properties"
+    },
+    {
+      "start": 263.759,
+      "duration": 2.88,
+      "text": "and the reason is"
+    },
+    {
+      "start": 267.84,
+      "duration": 4.639,
+      "text": "because this is because right"
+    },
+    {
+      "start": 274.96,
+      "duration": 11.6,
+      "text": "uh all operational quantities"
+    },
+    {
+      "start": 283.44,
+      "duration": 3.12,
+      "text": "in general relativity"
+    },
+    {
+      "start": 289.44,
+      "duration": 4.0,
+      "text": "are built operational means you can"
+    },
+    {
+      "start": 291.36,
+      "duration": 6.0,
+      "text": "design an experiment to measure them"
+    },
+    {
+      "start": 293.44,
+      "duration": 7.36,
+      "text": "are built from these tensor fields tj"
+    },
+    {
+      "start": 297.36,
+      "duration": 3.44,
+      "text": "in a coordinate free manner"
+    },
+    {
+      "start": 308.479,
+      "duration": 5.681,
+      "text": "and what does that mean well that means"
+    },
+    {
+      "start": 310.56,
+      "duration": 3.6,
+      "text": "that jacobian factors cancel"
+    },
+    {
+      "start": 318.8,
+      "duration": 10.8,
+      "text": "under contraction"
+    },
+    {
+      "start": 325.68,
+      "duration": 3.92,
+      "text": "tensor operations or tensor"
+    },
+    {
+      "start": 336.84,
+      "duration": 3.0,
+      "text": "transformations"
+    },
+    {
+      "start": 340.16,
+      "duration": 3.36,
+      "text": "so in this way like"
+    },
+    {
+      "start": 343.759,
+      "duration": 5.041,
+      "text": "it's a very simple argument ultimately"
+    },
+    {
+      "start": 346.639,
+      "duration": 2.161,
+      "text": "uh"
+    },
+    {
+      "start": 350.84,
+      "duration": 5.32,
+      "text": "diffiomorphisms"
+    },
+    {
+      "start": 353.44,
+      "duration": 2.72,
+      "text": "comprise"
+    },
+    {
+      "start": 357.28,
+      "duration": 10.56,
+      "text": "the gauge freedom of general relativity"
+    },
+    {
+      "start": 370.8,
+      "duration": 3.2,
+      "text": "now that's a fairly general argument but"
+    },
+    {
+      "start": 372.8,
+      "duration": 3.04,
+      "text": "it doesn't actually help us in the"
+    },
+    {
+      "start": 374.0,
+      "duration": 3.52,
+      "text": "discussion we may have now of the"
+    },
+    {
+      "start": 375.84,
+      "duration": 3.6,
+      "text": "linearized einstein"
+    },
+    {
+      "start": 377.52,
+      "duration": 4.0,
+      "text": "field equations and the reason is is"
+    },
+    {
+      "start": 379.44,
+      "duration": 5.52,
+      "text": "that we want a slightly more"
+    },
+    {
+      "start": 381.52,
+      "duration": 4.399,
+      "text": "specific uh form of diffiomorphism that"
+    },
+    {
+      "start": 384.96,
+      "duration": 2.56,
+      "text": "we want to focus on maybe"
+    },
+    {
+      "start": 385.919,
+      "duration": 3.761,
+      "text": "infinitesimally small or"
+    },
+    {
+      "start": 387.52,
+      "duration": 3.44,
+      "text": "near identity diffumorphisms and those"
+    },
+    {
+      "start": 389.68,
+      "duration": 3.44,
+      "text": "are the ones that we'll use to simplify"
+    },
+    {
+      "start": 390.96,
+      "duration": 3.959,
+      "text": "the linearized einstein field equations"
+    },
+    {
+      "start": 393.12,
+      "duration": 4.799,
+      "text": "to talk about infinitesimal"
+    },
+    {
+      "start": 394.919,
+      "duration": 3.0,
+      "text": "diffumorphisms"
+    },
+    {
+      "start": 402.88,
+      "duration": 3.12,
+      "text": "leads us to the topic of the lead"
+    },
+    {
+      "start": 404.639,
+      "duration": 5.201,
+      "text": "derivative and"
+    },
+    {
+      "start": 406.0,
+      "duration": 3.84,
+      "text": "killing vector fields"
+    },
+    {
+      "start": 419.52,
+      "duration": 3.28,
+      "text": "so we're going to introduce some"
+    },
+    {
+      "start": 420.72,
+      "duration": 5.599,
+      "text": "additional mathematical infrastructure"
+    },
+    {
+      "start": 422.8,
+      "duration": 6.799,
+      "text": "and in order to describe quantitatively"
+    },
+    {
+      "start": 426.319,
+      "duration": 3.28,
+      "text": "infinitesimally small"
+    },
+    {
+      "start": 434.84,
+      "duration": 4.44,
+      "text": "diphymorphisms"
+    },
+    {
+      "start": 437.36,
+      "duration": 3.52,
+      "text": "okay we start as before with a manifold"
+    },
+    {
+      "start": 439.28,
+      "duration": 3.919,
+      "text": "m and now"
+    },
+    {
+      "start": 440.88,
+      "duration": 4.319,
+      "text": "we suppose we have a not one"
+    },
+    {
+      "start": 443.199,
+      "duration": 5.641,
+      "text": "diffumorphism"
+    },
+    {
+      "start": 445.199,
+      "duration": 6.641,
+      "text": "but a one parameter group of"
+    },
+    {
+      "start": 448.84,
+      "duration": 3.0,
+      "text": "diffumorphisms"
+    },
+    {
+      "start": 461.919,
+      "duration": 8.641,
+      "text": "and uh we can note that"
+    },
+    {
+      "start": 467.199,
+      "duration": 3.361,
+      "text": "such a flow phi"
+    },
+    {
+      "start": 472.0,
+      "duration": 8.479,
+      "text": "is generated by a vector field"
+    },
+    {
+      "start": 476.84,
+      "duration": 7.96,
+      "text": "v okay that's something that i"
+    },
+    {
+      "start": 480.479,
+      "duration": 7.241,
+      "text": "discussed previously in earlier lectures"
+    },
+    {
+      "start": 484.8,
+      "duration": 5.2,
+      "text": "but now we've got a general group of"
+    },
+    {
+      "start": 487.72,
+      "duration": 5.96,
+      "text": "diffiomorphisms"
+    },
+    {
+      "start": 490.0,
+      "duration": 6.16,
+      "text": "we are perfectly able to apply"
+    },
+    {
+      "start": 493.68,
+      "duration": 5.28,
+      "text": "the action of this group of diffultisms"
+    },
+    {
+      "start": 496.16,
+      "duration": 5.84,
+      "text": "to tensorfields"
+    },
+    {
+      "start": 498.96,
+      "duration": 3.04,
+      "text": "so we can use"
+    },
+    {
+      "start": 502.639,
+      "duration": 6.96,
+      "text": "phi star t right this is the map induced"
+    },
+    {
+      "start": 506.72,
+      "duration": 2.879,
+      "text": "on tensor fields"
+    },
+    {
+      "start": 512.959,
+      "duration": 5.76,
+      "text": "to define well so what we could define a"
+    },
+    {
+      "start": 516.479,
+      "duration": 3.601,
+      "text": "flow intensive field but we can also use"
+    },
+    {
+      "start": 518.719,
+      "duration": 4.721,
+      "text": "phi star of t to define"
+    },
+    {
+      "start": 520.08,
+      "duration": 3.36,
+      "text": "a derivative type operator"
+    },
+    {
+      "start": 528.72,
+      "duration": 3.2,
+      "text": "different or distinct from the"
+    },
+    {
+      "start": 530.64,
+      "duration": 4.0,
+      "text": "covariance derivative that we've been"
+    },
+    {
+      "start": 531.92,
+      "duration": 5.68,
+      "text": "discussing so far"
+    },
+    {
+      "start": 534.64,
+      "duration": 5.84,
+      "text": "and this derivative operator is called"
+    },
+    {
+      "start": 537.6,
+      "duration": 2.88,
+      "text": "the lead derivative"
+    },
+    {
+      "start": 547.68,
+      "duration": 7.839,
+      "text": "on tenses and the the point about"
+    },
+    {
+      "start": 553.68,
+      "duration": 3.599,
+      "text": "this derivative operator is that it's"
+    },
+    {
+      "start": 555.519,
+      "duration": 2.961,
+      "text": "with respect to this vector field v"
+    },
+    {
+      "start": 557.279,
+      "duration": 3.12,
+      "text": "if you don't have the vector field v"
+    },
+    {
+      "start": 558.48,
+      "duration": 4.24,
+      "text": "then you can't make sense of a um"
+    },
+    {
+      "start": 560.399,
+      "duration": 3.601,
+      "text": "the derivative and how is it defined"
+    },
+    {
+      "start": 562.72,
+      "duration": 5.119,
+      "text": "well uh as"
+    },
+    {
+      "start": 564.0,
+      "duration": 7.2,
+      "text": "all good derivatives infinitesimally"
+    },
+    {
+      "start": 567.839,
+      "duration": 3.761,
+      "text": "the way it's defined is you you think of"
+    },
+    {
+      "start": 571.2,
+      "duration": 3.44,
+      "text": "the"
+    },
+    {
+      "start": 571.6,
+      "duration": 6.88,
+      "text": "flow phi star as"
+    },
+    {
+      "start": 574.64,
+      "duration": 3.84,
+      "text": "generating a kind of translation"
+    },
+    {
+      "start": 579.04,
+      "duration": 4.08,
+      "text": "and then that that translation depends"
+    },
+    {
+      "start": 581.6,
+      "duration": 3.76,
+      "text": "on a parameter t"
+    },
+    {
+      "start": 583.12,
+      "duration": 3.04,
+      "text": "so you translate a bit in the reverse"
+    },
+    {
+      "start": 585.36,
+      "duration": 1.919,
+      "text": "direction"
+    },
+    {
+      "start": 586.16,
+      "duration": 3.359,
+      "text": "and then you subtract away the"
+    },
+    {
+      "start": 587.279,
+      "duration": 5.281,
+      "text": "untranslated object"
+    },
+    {
+      "start": 589.519,
+      "duration": 3.041,
+      "text": "so in particular"
+    },
+    {
+      "start": 593.68,
+      "duration": 3.68,
+      "text": "we define the lead derivative of a"
+    },
+    {
+      "start": 595.44,
+      "duration": 4.88,
+      "text": "tensor field a1 through decay"
+    },
+    {
+      "start": 597.36,
+      "duration": 4.64,
+      "text": "b1 through to bl as the difference of"
+    },
+    {
+      "start": 600.32,
+      "duration": 4.32,
+      "text": "two tensors"
+    },
+    {
+      "start": 602.0,
+      "duration": 4.72,
+      "text": "one tensor is located that is the"
+    },
+    {
+      "start": 604.64,
+      "duration": 6.24,
+      "text": "difference of two tensors"
+    },
+    {
+      "start": 606.72,
+      "duration": 7.44,
+      "text": "they both arrive from a tensor field t"
+    },
+    {
+      "start": 610.88,
+      "duration": 8.24,
+      "text": "um but"
+    },
+    {
+      "start": 614.16,
+      "duration": 8.0,
+      "text": "this tensor here in yellow"
+    },
+    {
+      "start": 619.12,
+      "duration": 3.04,
+      "text": "is evaluated"
+    },
+    {
+      "start": 622.24,
+      "duration": 7.36,
+      "text": "at the point phi t"
+    },
+    {
+      "start": 625.839,
+      "duration": 8.0,
+      "text": "of some point p and"
+    },
+    {
+      "start": 629.6,
+      "duration": 4.239,
+      "text": "this one in blue here"
+    },
+    {
+      "start": 638.48,
+      "duration": 3.359,
+      "text": "is evaluated"
+    },
+    {
+      "start": 643.12,
+      "duration": 7.12,
+      "text": "at p so that way the tensor in yellow"
+    },
+    {
+      "start": 646.88,
+      "duration": 6.88,
+      "text": "after being after phi star"
+    },
+    {
+      "start": 650.24,
+      "duration": 7.68,
+      "text": "minus dx on it is at the same point"
+    },
+    {
+      "start": 653.76,
+      "duration": 4.16,
+      "text": "as the tensor and t in blue"
+    },
+    {
+      "start": 659.519,
+      "duration": 6.961,
+      "text": "so you can uh i won't draw too much on"
+    },
+    {
+      "start": 663.12,
+      "duration": 5.92,
+      "text": "the mathematical details of"
+    },
+    {
+      "start": 666.48,
+      "duration": 4.32,
+      "text": "the lead derivative uh you should as a"
+    },
+    {
+      "start": 669.04,
+      "duration": 6.799,
+      "text": "good exercise check that l v"
+    },
+    {
+      "start": 670.8,
+      "duration": 5.039,
+      "text": "t is a tensor field"
+    },
+    {
+      "start": 678.399,
+      "duration": 11.44,
+      "text": "so um and that you got to check that"
+    },
+    {
+      "start": 681.44,
+      "duration": 8.399,
+      "text": "lv obeys the liveness property"
+    },
+    {
+      "start": 691.12,
+      "duration": 4.399,
+      "text": "and of course the that is linear"
+    },
+    {
+      "start": 698.72,
+      "duration": 3.44,
+      "text": "okay all these properties are vital if"
+    },
+    {
+      "start": 700.88,
+      "duration": 2.88,
+      "text": "you want to"
+    },
+    {
+      "start": 702.16,
+      "duration": 4.08,
+      "text": "regard l as a kind of derivative"
+    },
+    {
+      "start": 703.76,
+      "duration": 2.48,
+      "text": "operator"
+    },
+    {
+      "start": 706.64,
+      "duration": 3.199,
+      "text": "so there's a remark we can make at this"
+    },
+    {
+      "start": 708.399,
+      "duration": 2.88,
+      "text": "stage before"
+    },
+    {
+      "start": 709.839,
+      "duration": 3.521,
+      "text": "progressing and discussing more"
+    },
+    {
+      "start": 711.279,
+      "duration": 6.56,
+      "text": "properties of the lead derivative"
+    },
+    {
+      "start": 713.36,
+      "duration": 4.479,
+      "text": "it's defined also for scalar functions"
+    },
+    {
+      "start": 719.44,
+      "duration": 3.12,
+      "text": "by"
+    },
+    {
+      "start": 720.44,
+      "duration": 5.0,
+      "text": "[Music]"
+    },
+    {
+      "start": 722.56,
+      "duration": 2.88,
+      "text": "following formula"
+    },
+    {
+      "start": 727.6,
+      "duration": 3.679,
+      "text": "namely that the lead derivative applied"
+    },
+    {
+      "start": 730.959,
+      "duration": 3.12,
+      "text": "to"
+    },
+    {
+      "start": 731.279,
+      "duration": 4.24,
+      "text": "a scalar function is just the vector v"
+    },
+    {
+      "start": 734.079,
+      "duration": 3.841,
+      "text": "applied to the scalar function at the"
+    },
+    {
+      "start": 735.519,
+      "duration": 2.401,
+      "text": "point p"
+    },
+    {
+      "start": 739.12,
+      "duration": 9.839,
+      "text": "now here's a homework"
+    },
+    {
+      "start": 744.959,
+      "duration": 6.961,
+      "text": "uh argue"
+    },
+    {
+      "start": 748.959,
+      "duration": 3.601,
+      "text": "that the lead derivative v of a vector"
+    },
+    {
+      "start": 751.92,
+      "duration": 4.32,
+      "text": "field"
+    },
+    {
+      "start": 752.56,
+      "duration": 5.68,
+      "text": "component w a is none other than the"
+    },
+    {
+      "start": 756.24,
+      "duration": 3.36,
+      "text": "commutator of v and w the eighth"
+    },
+    {
+      "start": 758.24,
+      "duration": 3.76,
+      "text": "component of the commutator of a"
+    },
+    {
+      "start": 759.6,
+      "duration": 3.679,
+      "text": "v and w so that's a very important"
+    },
+    {
+      "start": 762.0,
+      "duration": 4.079,
+      "text": "homework exercise we're going to build"
+    },
+    {
+      "start": 763.279,
+      "duration": 5.281,
+      "text": "on this when we discuss"
+    },
+    {
+      "start": 766.079,
+      "duration": 7.76,
+      "text": "the action of the lead derivative on"
+    },
+    {
+      "start": 768.56,
+      "duration": 5.279,
+      "text": "more complicated tensor fields"
+    },
+    {
+      "start": 775.36,
+      "duration": 4.479,
+      "text": "so now we're going to describe"
+    },
+    {
+      "start": 778.399,
+      "duration": 3.041,
+      "text": "we're going to derive an alternative"
+    },
+    {
+      "start": 779.839,
+      "duration": 2.8,
+      "text": "formula you know right you know"
+    },
+    {
+      "start": 781.44,
+      "duration": 2.399,
+      "text": "i've got a formula now for the lead"
+    },
+    {
+      "start": 782.639,
+      "duration": 2.961,
+      "text": "derivative right it's this thing with"
+    },
+    {
+      "start": 783.839,
+      "duration": 3.921,
+      "text": "the blue and yellow tenses"
+    },
+    {
+      "start": 785.6,
+      "duration": 3.12,
+      "text": "but we it's not so helpful if you want"
+    },
+    {
+      "start": 787.76,
+      "duration": 3.36,
+      "text": "to talk about"
+    },
+    {
+      "start": 788.72,
+      "duration": 3.52,
+      "text": "the the action of l on composite tensor"
+    },
+    {
+      "start": 791.12,
+      "duration": 4.24,
+      "text": "fields"
+    },
+    {
+      "start": 792.24,
+      "duration": 4.719,
+      "text": "or you want the specific action uh on a"
+    },
+    {
+      "start": 795.36,
+      "duration": 3.44,
+      "text": "specific tensor field in terms of"
+    },
+    {
+      "start": 796.959,
+      "duration": 4.88,
+      "text": "objects you can already compute"
+    },
+    {
+      "start": 798.8,
+      "duration": 4.24,
+      "text": "it's our goal now so now note that for"
+    },
+    {
+      "start": 801.839,
+      "duration": 5.761,
+      "text": "all dual vectors"
+    },
+    {
+      "start": 803.04,
+      "duration": 9.599,
+      "text": "mu in the dual vector space vp star"
+    },
+    {
+      "start": 807.6,
+      "duration": 8.479,
+      "text": "and all vector vectors vp"
+    },
+    {
+      "start": 812.639,
+      "duration": 5.76,
+      "text": "so because of the the action of"
+    },
+    {
+      "start": 816.079,
+      "duration": 4.0,
+      "text": "the lead derivative on scalar functions"
+    },
+    {
+      "start": 818.399,
+      "duration": 3.521,
+      "text": "we have that when you contract a dual"
+    },
+    {
+      "start": 820.079,
+      "duration": 3.44,
+      "text": "vector against the normal vector you get"
+    },
+    {
+      "start": 821.92,
+      "duration": 3.279,
+      "text": "well that's a scalar function right"
+    },
+    {
+      "start": 823.519,
+      "duration": 5.12,
+      "text": "so the lead derivative of that there's a"
+    },
+    {
+      "start": 825.199,
+      "duration": 8.241,
+      "text": "formula for that that's just applying"
+    },
+    {
+      "start": 828.639,
+      "duration": 6.161,
+      "text": "v to this contraction"
+    },
+    {
+      "start": 833.44,
+      "duration": 5.04,
+      "text": "and we may as well give this thing a"
+    },
+    {
+      "start": 834.8,
+      "duration": 3.68,
+      "text": "name star"
+    },
+    {
+      "start": 840.0,
+      "duration": 4.8,
+      "text": "but there's also a second way to compute"
+    },
+    {
+      "start": 842.56,
+      "duration": 2.24,
+      "text": "uh"
+    },
+    {
+      "start": 845.12,
+      "duration": 3.279,
+      "text": "the action of a vector field on a scalar"
+    },
+    {
+      "start": 847.12,
+      "duration": 2.56,
+      "text": "function"
+    },
+    {
+      "start": 848.399,
+      "duration": 3.041,
+      "text": "and that involves the covariance"
+    },
+    {
+      "start": 849.68,
+      "duration": 2.88,
+      "text": "derivative associated to the metric that"
+    },
+    {
+      "start": 851.44,
+      "duration": 4.639,
+      "text": "we have implicitly"
+    },
+    {
+      "start": 852.56,
+      "duration": 5.279,
+      "text": "lying around here um so this is the"
+    },
+    {
+      "start": 856.079,
+      "duration": 3.921,
+      "text": "second formula for the action"
+    },
+    {
+      "start": 857.839,
+      "duration": 3.761,
+      "text": "of a vector on a scalar field is true"
+    },
+    {
+      "start": 860.0,
+      "duration": 4.32,
+      "text": "not just for the one that we have"
+    },
+    {
+      "start": 861.6,
+      "duration": 4.88,
+      "text": "for the metric under um consideration"
+    },
+    {
+      "start": 864.32,
+      "duration": 5.12,
+      "text": "it's actually true for all"
+    },
+    {
+      "start": 866.48,
+      "duration": 2.96,
+      "text": "covariance derivatives"
+    },
+    {
+      "start": 869.68,
+      "duration": 5.519,
+      "text": "which is kind of interesting right um"
+    },
+    {
+      "start": 873.6,
+      "duration": 3.12,
+      "text": "now that's one way of computing the lead"
+    },
+    {
+      "start": 875.199,
+      "duration": 3.76,
+      "text": "derivative"
+    },
+    {
+      "start": 876.72,
+      "duration": 3.76,
+      "text": "of this of the scalar contraction but"
+    },
+    {
+      "start": 878.959,
+      "duration": 1.921,
+      "text": "there is another way right and that's"
+    },
+    {
+      "start": 880.48,
+      "duration": 5.359,
+      "text": "because"
+    },
+    {
+      "start": 880.88,
+      "duration": 4.959,
+      "text": "leibniz property uh allows us"
+    },
+    {
+      "start": 887.6,
+      "duration": 7.28,
+      "text": "to compute the lead derivative"
+    },
+    {
+      "start": 892.639,
+      "duration": 2.241,
+      "text": "by"
+    },
+    {
+      "start": 896.8,
+      "duration": 7.52,
+      "text": "separately applying the lead derivative"
+    },
+    {
+      "start": 900.32,
+      "duration": 4.0,
+      "text": "to the dual vector and to w"
+    },
+    {
+      "start": 905.199,
+      "duration": 5.041,
+      "text": "so i need to name this second equation"
+    },
+    {
+      "start": 907.12,
+      "duration": 3.12,
+      "text": "here that we're going to make use of"
+    },
+    {
+      "start": 910.72,
+      "duration": 3.52,
+      "text": "here we go so the leibniz property"
+    },
+    {
+      "start": 912.639,
+      "duration": 2.241,
+      "text": "allows us to to compute the lead"
+    },
+    {
+      "start": 914.24,
+      "duration": 2.8,
+      "text": "derivative"
+    },
+    {
+      "start": 914.88,
+      "duration": 4.48,
+      "text": "first to the dual vector mu then to the"
+    },
+    {
+      "start": 917.04,
+      "duration": 5.599,
+      "text": "dual vector to the normal vector w"
+    },
+    {
+      "start": 919.36,
+      "duration": 6.8,
+      "text": "so we have that l v of mu a w a"
+    },
+    {
+      "start": 922.639,
+      "duration": 7.841,
+      "text": "is none other than w a"
+    },
+    {
+      "start": 926.16,
+      "duration": 7.52,
+      "text": "and do l of v on mu a first"
+    },
+    {
+      "start": 930.48,
+      "duration": 6.32,
+      "text": "uh plus then do mu of a on l of"
+    },
+    {
+      "start": 933.68,
+      "duration": 6.48,
+      "text": "v on w but remember star star"
+    },
+    {
+      "start": 936.8,
+      "duration": 7.2,
+      "text": "tells us that that's equal to the eighth"
+    },
+    {
+      "start": 940.16,
+      "duration": 3.84,
+      "text": "component of the commutator of"
+    },
+    {
+      "start": 946.8,
+      "duration": 2.64,
+      "text": "v and w"
+    },
+    {
+      "start": 951.44,
+      "duration": 3.92,
+      "text": "so we've combined two different lines of"
+    },
+    {
+      "start": 953.92,
+      "duration": 3.12,
+      "text": "derivation into one"
+    },
+    {
+      "start": 955.36,
+      "duration": 5.68,
+      "text": "and that actually determines the action"
+    },
+    {
+      "start": 957.04,
+      "duration": 4.0,
+      "text": "of the lead derivative on dual vectors"
+    },
+    {
+      "start": 966.839,
+      "duration": 3.0,
+      "text": "explicitly"
+    },
+    {
+      "start": 971.6,
+      "duration": 12.239,
+      "text": "firstly apply the vector field v a v to"
+    },
+    {
+      "start": 974.72,
+      "duration": 9.119,
+      "text": "the contraction of mu a and w a"
+    },
+    {
+      "start": 990.959,
+      "duration": 3.361,
+      "text": "using the leibniz property of the"
+    },
+    {
+      "start": 992.959,
+      "duration": 3.12,
+      "text": "covariant derivative so we've got two"
+    },
+    {
+      "start": 994.32,
+      "duration": 4.8,
+      "text": "kinds of"
+    },
+    {
+      "start": 996.079,
+      "duration": 5.361,
+      "text": "derivative operators here and also"
+    },
+    {
+      "start": 999.12,
+      "duration": 3.279,
+      "text": "note that the commutator of v and w the"
+    },
+    {
+      "start": 1001.44,
+      "duration": 3.759,
+      "text": "eighth component"
+    },
+    {
+      "start": 1002.399,
+      "duration": 6.321,
+      "text": "also has another expression in terms of"
+    },
+    {
+      "start": 1005.199,
+      "duration": 3.521,
+      "text": "covariance derivative operators that we"
+    },
+    {
+      "start": 1008.839,
+      "duration": 3.0,
+      "text": "derived"
+    },
+    {
+      "start": 1020.959,
+      "duration": 2.8,
+      "text": "so we find"
+    },
+    {
+      "start": 1027.76,
+      "duration": 3.679,
+      "text": "noting these two formulae"
+    },
+    {
+      "start": 1032.88,
+      "duration": 7.039,
+      "text": "we find that the action of the"
+    },
+    {
+      "start": 1036.799,
+      "duration": 6.64,
+      "text": "the derivative on a joule vector mu a"
+    },
+    {
+      "start": 1039.919,
+      "duration": 6.64,
+      "text": "is given by v b delta b"
+    },
+    {
+      "start": 1043.439,
+      "duration": 8.24,
+      "text": "on mu a plus mu b"
+    },
+    {
+      "start": 1046.559,
+      "duration": 7.281,
+      "text": "delta a on vb"
+    },
+    {
+      "start": 1051.679,
+      "duration": 3.761,
+      "text": "so we love the explicit formula now for"
+    },
+    {
+      "start": 1053.84,
+      "duration": 4.88,
+      "text": "the action of the lead derivative"
+    },
+    {
+      "start": 1055.44,
+      "duration": 6.4,
+      "text": "on a dual vector it involves"
+    },
+    {
+      "start": 1058.72,
+      "duration": 4.8,
+      "text": "the usual derivative operator delta"
+    },
+    {
+      "start": 1061.84,
+      "duration": 3.76,
+      "text": "now you can repeat this argument do an"
+    },
+    {
+      "start": 1063.52,
+      "duration": 6.8,
+      "text": "induction um"
+    },
+    {
+      "start": 1065.6,
+      "duration": 8.88,
+      "text": "by induction that for general"
+    },
+    {
+      "start": 1070.32,
+      "duration": 11.52,
+      "text": "tensorfield t the lead derivative"
+    },
+    {
+      "start": 1074.48,
+      "duration": 7.36,
+      "text": "has the following form"
+    },
+    {
+      "start": 1092.559,
+      "duration": 3.281,
+      "text": "so i'll leave that as an exercise"
+    },
+    {
+      "start": 1133.52,
+      "duration": 18.32,
+      "text": "and this formula is true for all"
+    },
+    {
+      "start": 1135.679,
+      "duration": 16.161,
+      "text": "derivative operators delta"
+    },
+    {
+      "start": 1161.2,
+      "duration": 5.92,
+      "text": "and now we're actually in a position to"
+    },
+    {
+      "start": 1164.32,
+      "duration": 5.04,
+      "text": "derive the gauge freedom of general of"
+    },
+    {
+      "start": 1167.12,
+      "duration": 3.52,
+      "text": "linearized general relativity"
+    },
+    {
+      "start": 1169.36,
+      "duration": 3.52,
+      "text": "so the gauge freedom of general"
+    },
+    {
+      "start": 1170.64,
+      "duration": 3.52,
+      "text": "relativity is that of divimorphisms"
+    },
+    {
+      "start": 1172.88,
+      "duration": 2.96,
+      "text": "but that of linearized general"
+    },
+    {
+      "start": 1174.16,
+      "duration": 2.879,
+      "text": "relativity will turn out to be well"
+    },
+    {
+      "start": 1175.84,
+      "duration": 3.199,
+      "text": "infinite"
+    },
+    {
+      "start": 1177.039,
+      "duration": 4.561,
+      "text": "muscle is implementedly close to the"
+    },
+    {
+      "start": 1179.039,
+      "duration": 2.561,
+      "text": "identity"
+    },
+    {
+      "start": 1183.2,
+      "duration": 5.2,
+      "text": "so let's actually derive that now so if"
+    },
+    {
+      "start": 1185.36,
+      "duration": 3.04,
+      "text": "phi lambda"
+    },
+    {
+      "start": 1189.44,
+      "duration": 4.4,
+      "text": "is a one parameter group of"
+    },
+    {
+      "start": 1190.84,
+      "duration": 3.0,
+      "text": "diffumorphisms"
+    },
+    {
+      "start": 1207.84,
+      "duration": 5.839,
+      "text": "then as i argued just before m"
+    },
+    {
+      "start": 1210.88,
+      "duration": 4.24,
+      "text": "with the tensorflow of the metric and"
+    },
+    {
+      "start": 1213.679,
+      "duration": 4.641,
+      "text": "all the other"
+    },
+    {
+      "start": 1215.12,
+      "duration": 6.64,
+      "text": "tensor fields and m"
+    },
+    {
+      "start": 1218.32,
+      "duration": 6.08,
+      "text": "with the metric phi lambda star"
+    },
+    {
+      "start": 1221.76,
+      "duration": 4.159,
+      "text": "applied to the metric right you know m"
+    },
+    {
+      "start": 1224.4,
+      "duration": 3.12,
+      "text": "is the same right we're applying a"
+    },
+    {
+      "start": 1225.919,
+      "duration": 4.0,
+      "text": "diffumorphism from the manifold to"
+    },
+    {
+      "start": 1227.52,
+      "duration": 2.399,
+      "text": "itself"
+    },
+    {
+      "start": 1230.32,
+      "duration": 6.56,
+      "text": "these two pairs represent"
+    },
+    {
+      "start": 1234.159,
+      "duration": 2.721,
+      "text": "the same"
+    },
+    {
+      "start": 1237.679,
+      "duration": 2.561,
+      "text": "space time"
+    },
+    {
+      "start": 1244.72,
+      "duration": 6.24,
+      "text": "so if"
+    },
+    {
+      "start": 1248.48,
+      "duration": 2.48,
+      "text": "further"
+    },
+    {
+      "start": 1253.28,
+      "duration": 3.2,
+      "text": "we allow the metric"
+    },
+    {
+      "start": 1260.84,
+      "duration": 3.0,
+      "text": "g"
+    },
+    {
+      "start": 1264.4,
+      "duration": 4.24,
+      "text": "to depend smoothly on some parameter"
+    },
+    {
+      "start": 1271.28,
+      "duration": 6.56,
+      "text": "we'll name this parameter also lambda"
+    },
+    {
+      "start": 1284.96,
+      "duration": 3.04,
+      "text": "then we can"
+    },
+    {
+      "start": 1288.159,
+      "duration": 4.88,
+      "text": "ask what perturbations and this is the"
+    },
+    {
+      "start": 1290.4,
+      "duration": 2.639,
+      "text": "key point"
+    },
+    {
+      "start": 1296.24,
+      "duration": 7.12,
+      "text": "around the metric"
+    },
+    {
+      "start": 1299.44,
+      "duration": 6.56,
+      "text": "uh gab 0 lambda equals 0 which just"
+    },
+    {
+      "start": 1303.36,
+      "duration": 4.48,
+      "text": "equals our original metric gab"
+    },
+    {
+      "start": 1306.0,
+      "duration": 3.52,
+      "text": "we can ask what kinds of perturbations"
+    },
+    {
+      "start": 1307.84,
+      "duration": 6.719,
+      "text": "of a metric"
+    },
+    {
+      "start": 1309.52,
+      "duration": 5.039,
+      "text": "uh look like local diffumorphisms"
+    },
+    {
+      "start": 1315.6,
+      "duration": 4.16,
+      "text": "so we're going to name these"
+    },
+    {
+      "start": 1316.72,
+      "duration": 6.0,
+      "text": "perturbations and call it gamma a b"
+    },
+    {
+      "start": 1319.76,
+      "duration": 4.96,
+      "text": "so the perturbations of a general"
+    },
+    {
+      "start": 1322.72,
+      "duration": 4.959,
+      "text": "perturbation of a metric"
+    },
+    {
+      "start": 1324.72,
+      "duration": 5.04,
+      "text": "we'll call gamma a b and you just get"
+    },
+    {
+      "start": 1327.679,
+      "duration": 3.441,
+      "text": "them by differentiating g"
+    },
+    {
+      "start": 1329.76,
+      "duration": 3.2,
+      "text": "with respect to lambda and then setting"
+    },
+    {
+      "start": 1331.12,
+      "duration": 4.559,
+      "text": "lambda equals zero"
+    },
+    {
+      "start": 1332.96,
+      "duration": 4.48,
+      "text": "we're going to ask what perturbations of"
+    },
+    {
+      "start": 1335.679,
+      "duration": 6.48,
+      "text": "this form"
+    },
+    {
+      "start": 1337.44,
+      "duration": 9.16,
+      "text": "are of the form or are actually"
+    },
+    {
+      "start": 1342.159,
+      "duration": 7.441,
+      "text": "just infinitesimal"
+    },
+    {
+      "start": 1346.6,
+      "duration": 3.0,
+      "text": "diffumorphisms"
+    },
+    {
+      "start": 1357.28,
+      "duration": 4.56,
+      "text": "i.e perturbations"
+    },
+    {
+      "start": 1362.64,
+      "duration": 7.2,
+      "text": "of the form gamma a b"
+    },
+    {
+      "start": 1366.48,
+      "duration": 3.92,
+      "text": "prime is of the form of d d lambda no"
+    },
+    {
+      "start": 1369.84,
+      "duration": 4.56,
+      "text": "longer of g"
+    },
+    {
+      "start": 1370.4,
+      "duration": 5.279,
+      "text": "a b lambda not a general perturbation"
+    },
+    {
+      "start": 1374.4,
+      "duration": 4.72,
+      "text": "dimension but ones that are"
+    },
+    {
+      "start": 1375.679,
+      "duration": 5.041,
+      "text": "infinitesimal results of acting"
+    },
+    {
+      "start": 1379.12,
+      "duration": 3.2,
+      "text": "with our one parameter group of"
+    },
+    {
+      "start": 1380.72,
+      "duration": 4.8,
+      "text": "diffumorphisms"
+    },
+    {
+      "start": 1382.32,
+      "duration": 3.2,
+      "text": "around lambda equals zero"
+    },
+    {
+      "start": 1387.76,
+      "duration": 6.799,
+      "text": "so it's an exercise"
+    },
+    {
+      "start": 1390.88,
+      "duration": 3.679,
+      "text": "of just writing out the flow"
+    },
+    {
+      "start": 1401.44,
+      "duration": 2.719,
+      "text": "we see that"
+    },
+    {
+      "start": 1408.72,
+      "duration": 6.72,
+      "text": "exactly gamma prime is exactly a"
+    },
+    {
+      "start": 1412.159,
+      "duration": 4.161,
+      "text": "perturbation arising from a morphism"
+    },
+    {
+      "start": 1415.44,
+      "duration": 4.239,
+      "text": "when gamma a b"
+    },
+    {
+      "start": 1416.32,
+      "duration": 6.32,
+      "text": "prime equals gamma a b minus lv"
+    },
+    {
+      "start": 1419.679,
+      "duration": 2.961,
+      "text": "times g a b"
+    },
+    {
+      "start": 1425.6,
+      "duration": 5.28,
+      "text": "where v right there's a v mentioned here"
+    },
+    {
+      "start": 1428.64,
+      "duration": 4.88,
+      "text": "and the v is is the vector field"
+    },
+    {
+      "start": 1430.88,
+      "duration": 2.64,
+      "text": "generating"
+    },
+    {
+      "start": 1442.84,
+      "duration": 15.16,
+      "text": "phi"
+    },
+    {
+      "start": 1445.36,
+      "duration": 14.0,
+      "text": "oops florify lambda"
+    },
+    {
+      "start": 1458.0,
+      "duration": 3.52,
+      "text": "there you go we have now a definitive"
+    },
+    {
+      "start": 1459.36,
+      "duration": 4.64,
+      "text": "answer uh for what"
+    },
+    {
+      "start": 1461.52,
+      "duration": 3.68,
+      "text": "perturbation generated by infinitesimal"
+    },
+    {
+      "start": 1464.0,
+      "duration": 4.159,
+      "text": "different moles looks like and"
+    },
+    {
+      "start": 1465.2,
+      "duration": 4.56,
+      "text": "hence these perturbations are precisely"
+    },
+    {
+      "start": 1468.159,
+      "duration": 3.52,
+      "text": "the gauge freedom of linearized general"
+    },
+    {
+      "start": 1469.76,
+      "duration": 3.84,
+      "text": "relativity we have an answer"
+    },
+    {
+      "start": 1471.679,
+      "duration": 3.441,
+      "text": "but there's we want a slightly more"
+    },
+    {
+      "start": 1473.6,
+      "duration": 5.52,
+      "text": "convenient formula for this"
+    },
+    {
+      "start": 1475.12,
+      "duration": 4.0,
+      "text": "and we can get that by applying"
+    },
+    {
+      "start": 1479.279,
+      "duration": 8.561,
+      "text": "this formula that we derived earlier"
+    },
+    {
+      "start": 1481.679,
+      "duration": 6.161,
+      "text": "let's call it triple star maybe"
+    },
+    {
+      "start": 1494.32,
+      "duration": 2.77,
+      "text": "we can actually get a slightly more"
+    },
+    {
+      "start": 1495.52,
+      "duration": 3.68,
+      "text": "explicit formula"
+    },
+    {
+      "start": 1497.09,
+      "duration": 4.829,
+      "text": "[Music]"
+    },
+    {
+      "start": 1499.2,
+      "duration": 5.52,
+      "text": "for the action of the the derivative of"
+    },
+    {
+      "start": 1501.919,
+      "duration": 2.801,
+      "text": "the metric gab"
+    },
+    {
+      "start": 1505.52,
+      "duration": 7.039,
+      "text": "and we get v of c delta c"
+    },
+    {
+      "start": 1509.44,
+      "duration": 6.32,
+      "text": "g a b plus g c"
+    },
+    {
+      "start": 1512.559,
+      "duration": 6.401,
+      "text": "b delta a v c plus"
+    },
+    {
+      "start": 1515.76,
+      "duration": 6.08,
+      "text": "of course the action of"
+    },
+    {
+      "start": 1518.96,
+      "duration": 2.88,
+      "text": "the lead derivative"
+    },
+    {
+      "start": 1522.0,
+      "duration": 3.52,
+      "text": "of the covariance derivative on the"
+    },
+    {
+      "start": 1523.679,
+      "duration": 5.201,
+      "text": "vector field itself"
+    },
+    {
+      "start": 1525.52,
+      "duration": 7.44,
+      "text": "but if you note here one of these terms"
+    },
+    {
+      "start": 1528.88,
+      "duration": 6.159,
+      "text": "will vanish because if we use the metric"
+    },
+    {
+      "start": 1532.96,
+      "duration": 4.16,
+      "text": "if we use the derivative operator"
+    },
+    {
+      "start": 1535.039,
+      "duration": 5.12,
+      "text": "determined by the metric which we will"
+    },
+    {
+      "start": 1537.12,
+      "duration": 4.48,
+      "text": "right in general relativity then the"
+    },
+    {
+      "start": 1540.159,
+      "duration": 2.561,
+      "text": "covariant derivative of the metric is"
+    },
+    {
+      "start": 1541.6,
+      "duration": 3.36,
+      "text": "zero right it's one of the key"
+    },
+    {
+      "start": 1542.72,
+      "duration": 5.12,
+      "text": "properties that defines"
+    },
+    {
+      "start": 1544.96,
+      "duration": 4.64,
+      "text": "the covariant derivative so we're only"
+    },
+    {
+      "start": 1547.84,
+      "duration": 4.56,
+      "text": "left with two terms"
+    },
+    {
+      "start": 1549.6,
+      "duration": 2.8,
+      "text": "and we see that"
+    },
+    {
+      "start": 1552.799,
+      "duration": 5.12,
+      "text": "infinitesimal diffumorphism so this very"
+    },
+    {
+      "start": 1556.24,
+      "duration": 2.48,
+      "text": "particular form involving the curvature"
+    },
+    {
+      "start": 1557.919,
+      "duration": 6.721,
+      "text": "derivative"
+    },
+    {
+      "start": 1558.72,
+      "duration": 5.92,
+      "text": "applied to v so now we can actually"
+    },
+    {
+      "start": 1565.12,
+      "duration": 9.12,
+      "text": "say what a gauge transformation"
+    },
+    {
+      "start": 1570.0,
+      "duration": 4.24,
+      "text": "explicitly of linearized"
+    },
+    {
+      "start": 1576.32,
+      "duration": 6.64,
+      "text": "generate relativity looks like it"
+    },
+    {
+      "start": 1579.6,
+      "duration": 6.559,
+      "text": "is then a"
+    },
+    {
+      "start": 1582.96,
+      "duration": 7.44,
+      "text": "transformation of the form where the"
+    },
+    {
+      "start": 1586.159,
+      "duration": 6.721,
+      "text": "gamma a b gets mapped to gamma a b prime"
+    },
+    {
+      "start": 1590.4,
+      "duration": 3.519,
+      "text": "which is just equal to gamma a b minus"
+    },
+    {
+      "start": 1592.88,
+      "duration": 6.96,
+      "text": "delta a"
+    },
+    {
+      "start": 1593.919,
+      "duration": 5.921,
+      "text": "v b minus delta b v a"
+    },
+    {
+      "start": 1602.72,
+      "duration": 4.4,
+      "text": "and we can write that slightly more"
+    },
+    {
+      "start": 1604.48,
+      "duration": 2.64,
+      "text": "compactly"
+    },
+    {
+      "start": 1607.36,
+      "duration": 3.6,
+      "text": "using bracket notation there it's a"
+    },
+    {
+      "start": 1610.159,
+      "duration": 4.321,
+      "text": "symmetrized"
+    },
+    {
+      "start": 1610.96,
+      "duration": 3.52,
+      "text": "application of the derivative operator"
+    },
+    {
+      "start": 1618.0,
+      "duration": 2.48,
+      "text": "so if"
+    },
+    {
+      "start": 1621.52,
+      "duration": 6.32,
+      "text": "if this vanishes"
+    },
+    {
+      "start": 1631.6,
+      "duration": 3.199,
+      "text": "then we've got a particularly special"
+    },
+    {
+      "start": 1633.2,
+      "duration": 4.079,
+      "text": "form of"
+    },
+    {
+      "start": 1634.799,
+      "duration": 4.161,
+      "text": "uh infinitesimal gauge transformation"
+    },
+    {
+      "start": 1637.279,
+      "duration": 2.961,
+      "text": "namely we have an infinitesimal isometry"
+    },
+    {
+      "start": 1638.96,
+      "duration": 16.88,
+      "text": "right we just mean that the metric"
+    },
+    {
+      "start": 1640.24,
+      "duration": 15.6,
+      "text": "doesn't change"
+    },
+    {
+      "start": 1665.6,
+      "duration": 4.24,
+      "text": "and we have a name for such a thing"
+    },
+    {
+      "start": 1673.6,
+      "duration": 10.24,
+      "text": "and that is va is called"
+    },
+    {
+      "start": 1678.32,
+      "duration": 5.52,
+      "text": "a killing vector field"
+    },
+    {
+      "start": 1687.039,
+      "duration": 4.161,
+      "text": "these will turn up in a handful of"
+    },
+    {
+      "start": 1688.399,
+      "duration": 4.961,
+      "text": "contexts in the future"
+    },
+    {
+      "start": 1691.2,
+      "duration": 6.64,
+      "text": "and further more this equation which"
+    },
+    {
+      "start": 1693.36,
+      "duration": 4.48,
+      "text": "i've actually mentioned before"
+    },
+    {
+      "start": 1698.88,
+      "duration": 2.96,
+      "text": "killing's equation"
+    },
+    {
+      "start": 1702.399,
+      "duration": 3.52,
+      "text": "is precisely this condition that v"
+    },
+    {
+      "start": 1705.279,
+      "duration": 4.241,
+      "text": "generates"
+    },
+    {
+      "start": 1705.919,
+      "duration": 6.801,
+      "text": "an infinitesimal isometry"
+    },
+    {
+      "start": 1709.52,
+      "duration": 5.519,
+      "text": "now that we've got the precise"
+    },
+    {
+      "start": 1712.72,
+      "duration": 4.48,
+      "text": "linearized gauge degrees of freedom of"
+    },
+    {
+      "start": 1715.039,
+      "duration": 3.921,
+      "text": "linearized"
+    },
+    {
+      "start": 1717.2,
+      "duration": 3.92,
+      "text": "general relativity in hand we're in a"
+    },
+    {
+      "start": 1718.96,
+      "duration": 3.28,
+      "text": "position to simplify the linearized"
+    },
+    {
+      "start": 1721.12,
+      "duration": 3.12,
+      "text": "einstein equation"
+    },
+    {
+      "start": 1722.24,
+      "duration": 3.36,
+      "text": "and substantially simplify it to the"
+    },
+    {
+      "start": 1724.24,
+      "duration": 3.84,
+      "text": "point where we can"
+    },
+    {
+      "start": 1725.6,
+      "duration": 5.04,
+      "text": "pretty explicitly solve it without too"
+    },
+    {
+      "start": 1728.08,
+      "duration": 2.56,
+      "text": "much pain"
+    },
+    {
+      "start": 1733.679,
+      "duration": 8.0,
+      "text": "so let's return now to our discussion of"
+    },
+    {
+      "start": 1737.52,
+      "duration": 4.159,
+      "text": "the linearized einstein"
+    },
+    {
+      "start": 1742.399,
+      "duration": 7.28,
+      "text": "equation and if you recall"
+    },
+    {
+      "start": 1746.24,
+      "duration": 7.12,
+      "text": "a linearized einstein equation called i"
+    },
+    {
+      "start": 1749.679,
+      "duration": 7.921,
+      "text": "has the form of gab1 so the linearized"
+    },
+    {
+      "start": 1753.36,
+      "duration": 8.0,
+      "text": "einstein tensor which is dc dc"
+    },
+    {
+      "start": 1757.6,
+      "duration": 7.84,
+      "text": "gamma bar a b plus dc"
+    },
+    {
+      "start": 1761.36,
+      "duration": 6.96,
+      "text": "d b gamma a"
+    },
+    {
+      "start": 1765.44,
+      "duration": 2.88,
+      "text": "c bar"
+    },
+    {
+      "start": 1770.159,
+      "duration": 6.801,
+      "text": "minus a half a to b a b d c"
+    },
+    {
+      "start": 1773.36,
+      "duration": 4.48,
+      "text": "d d gamma c d bar and that's all got to"
+    },
+    {
+      "start": 1776.96,
+      "duration": 4.88,
+      "text": "equal"
+    },
+    {
+      "start": 1777.84,
+      "duration": 4.0,
+      "text": "the stress energy tensor"
+    },
+    {
+      "start": 1783.039,
+      "duration": 3.601,
+      "text": "and the aim now i mean this is a pretty"
+    },
+    {
+      "start": 1785.039,
+      "duration": 4.88,
+      "text": "complicated i mean it's linear"
+    },
+    {
+      "start": 1786.64,
+      "duration": 6.72,
+      "text": "right it's linear in gamma a b bar"
+    },
+    {
+      "start": 1789.919,
+      "duration": 6.401,
+      "text": "so what are we complaining about well"
+    },
+    {
+      "start": 1793.36,
+      "duration": 4.48,
+      "text": "uh nothing really i mean you could solve"
+    },
+    {
+      "start": 1796.32,
+      "duration": 2.8,
+      "text": "linear pdes pretty easily"
+    },
+    {
+      "start": 1797.84,
+      "duration": 3.28,
+      "text": "but you don't want to right you don't"
+    },
+    {
+      "start": 1799.12,
+      "duration": 3.84,
+      "text": "want to solve a complicated linear pde"
+    },
+    {
+      "start": 1801.12,
+      "duration": 3.679,
+      "text": "when you can solve a simpler linear pde"
+    },
+    {
+      "start": 1802.96,
+      "duration": 3.68,
+      "text": "so that's just"
+    },
+    {
+      "start": 1804.799,
+      "duration": 4.48,
+      "text": "and we can we're in a position where we"
+    },
+    {
+      "start": 1806.64,
+      "duration": 4.56,
+      "text": "might be able to do this"
+    },
+    {
+      "start": 1809.279,
+      "duration": 3.441,
+      "text": "because we aim we can use this"
+    },
+    {
+      "start": 1811.2,
+      "duration": 2.16,
+      "text": "linearized gauge freedom that we have to"
+    },
+    {
+      "start": 1812.72,
+      "duration": 2.959,
+      "text": "just re"
+    },
+    {
+      "start": 1813.36,
+      "duration": 10.48,
+      "text": "find a new gauge just do a diffumorphism"
+    },
+    {
+      "start": 1815.679,
+      "duration": 8.161,
+      "text": "until this equation looks a bit simpler"
+    },
+    {
+      "start": 1825.919,
+      "duration": 3.681,
+      "text": "so the aim of the game now is to find a"
+    },
+    {
+      "start": 1828.08,
+      "duration": 8.319,
+      "text": "linearized"
+    },
+    {
+      "start": 1829.6,
+      "duration": 10.079,
+      "text": "infinitesimal diphymorphism"
+    },
+    {
+      "start": 1836.399,
+      "duration": 3.28,
+      "text": "which simplifies one"
+    },
+    {
+      "start": 1842.159,
+      "duration": 4.4,
+      "text": "you know obviously there is one right i"
+    },
+    {
+      "start": 1845.52,
+      "duration": 6.32,
+      "text": "wouldn't go through all this trouble if"
+    },
+    {
+      "start": 1846.559,
+      "duration": 5.281,
+      "text": "there wasn't one"
+    },
+    {
+      "start": 1853.6,
+      "duration": 3.439,
+      "text": "so what are we doing we're looking for a"
+    },
+    {
+      "start": 1855.2,
+      "duration": 5.92,
+      "text": "vector field"
+    },
+    {
+      "start": 1857.039,
+      "duration": 6.081,
+      "text": "which generates an infinitesimal"
+    },
+    {
+      "start": 1861.12,
+      "duration": 4.08,
+      "text": "anamorphism let's call this vector field"
+    },
+    {
+      "start": 1863.12,
+      "duration": 4.08,
+      "text": "psi a"
+    },
+    {
+      "start": 1865.2,
+      "duration": 3.839,
+      "text": "such that what is this vector field got"
+    },
+    {
+      "start": 1867.2,
+      "duration": 3.52,
+      "text": "to do well when we do this gauge"
+    },
+    {
+      "start": 1869.039,
+      "duration": 4.161,
+      "text": "transformation when we rewrite the"
+    },
+    {
+      "start": 1870.72,
+      "duration": 5.839,
+      "text": "metric in terms of the new"
+    },
+    {
+      "start": 1873.2,
+      "duration": 4.319,
+      "text": "slightly perturbed but gauge equivalent"
+    },
+    {
+      "start": 1876.559,
+      "duration": 3.281,
+      "text": "metric"
+    },
+    {
+      "start": 1877.519,
+      "duration": 3.921,
+      "text": "we want that the the thingy that we get"
+    },
+    {
+      "start": 1879.84,
+      "duration": 4.48,
+      "text": "out"
+    },
+    {
+      "start": 1881.44,
+      "duration": 6.4,
+      "text": "the new metric we know that it's a bit"
+    },
+    {
+      "start": 1884.32,
+      "duration": 3.52,
+      "text": "it simplifies equation one"
+    },
+    {
+      "start": 1891.6,
+      "duration": 4.079,
+      "text": "okay that'll be pretty pretty great if"
+    },
+    {
+      "start": 1893.12,
+      "duration": 2.559,
+      "text": "we could do that"
+    },
+    {
+      "start": 1895.919,
+      "duration": 3.281,
+      "text": "and how do we do it well"
+    },
+    {
+      "start": 1900.32,
+      "duration": 8.56,
+      "text": "there's a pretty simple condition"
+    },
+    {
+      "start": 1907.76,
+      "duration": 2.639,
+      "text": "i mean let's just go back to the"
+    },
+    {
+      "start": 1908.88,
+      "duration": 2.48,
+      "text": "equation and sort of guess what it might"
+    },
+    {
+      "start": 1910.399,
+      "duration": 3.841,
+      "text": "be"
+    },
+    {
+      "start": 1911.36,
+      "duration": 4.08,
+      "text": "a helpful thing to do um you know"
+    },
+    {
+      "start": 1914.24,
+      "duration": 3.2,
+      "text": "several places"
+    },
+    {
+      "start": 1915.44,
+      "duration": 3.76,
+      "text": "in this equation you see the combination"
+    },
+    {
+      "start": 1917.44,
+      "duration": 3.44,
+      "text": "of a"
+    },
+    {
+      "start": 1919.2,
+      "duration": 3.12,
+      "text": "derivative operator applied to the"
+    },
+    {
+      "start": 1920.88,
+      "duration": 2.96,
+      "text": "metric like here so there's the"
+    },
+    {
+      "start": 1922.32,
+      "duration": 2.32,
+      "text": "derivative operator applied to the"
+    },
+    {
+      "start": 1923.84,
+      "duration": 2.4,
+      "text": "metric"
+    },
+    {
+      "start": 1924.64,
+      "duration": 3.279,
+      "text": "here the derivative operator is applied"
+    },
+    {
+      "start": 1926.24,
+      "duration": 3.6,
+      "text": "to the metric again"
+    },
+    {
+      "start": 1927.919,
+      "duration": 7.921,
+      "text": "so maybe you could arrange for the first"
+    },
+    {
+      "start": 1929.84,
+      "duration": 6.0,
+      "text": "derivative of the metric to vanish"
+    },
+    {
+      "start": 1948.48,
+      "duration": 2.799,
+      "text": "and you're going to see in a second how"
+    },
+    {
+      "start": 1949.76,
+      "duration": 14.08,
+      "text": "this equation actually helps us achieve"
+    },
+    {
+      "start": 1951.279,
+      "duration": 12.561,
+      "text": "this goal"
+    },
+    {
+      "start": 1964.08,
+      "duration": 3.199,
+      "text": "so equation two"
+    },
+    {
+      "start": 1973.12,
+      "duration": 6.799,
+      "text": "then ensures"
+    },
+    {
+      "start": 1977.039,
+      "duration": 2.88,
+      "text": "that and"
+    },
+    {
+      "start": 1988.32,
+      "duration": 4.56,
+      "text": "that combination actually vanishes okay"
+    },
+    {
+      "start": 1990.559,
+      "duration": 4.801,
+      "text": "that's a"
+    },
+    {
+      "start": 1992.88,
+      "duration": 5.76,
+      "text": "little exercise just go through and"
+    },
+    {
+      "start": 1995.36,
+      "duration": 3.28,
+      "text": "substitute for gamma bar"
+    },
+    {
+      "start": 1999.6,
+      "duration": 6.24,
+      "text": "substitute uh this gauge transformed"
+    },
+    {
+      "start": 2003.679,
+      "duration": 4.081,
+      "text": "gamma a b into the expression for gamma"
+    },
+    {
+      "start": 2005.84,
+      "duration": 4.559,
+      "text": "by a b and then convince yourself that"
+    },
+    {
+      "start": 2007.76,
+      "duration": 2.639,
+      "text": "that's the case"
+    },
+    {
+      "start": 2012.799,
+      "duration": 6.561,
+      "text": "so in this now we've chosen a gauge"
+    },
+    {
+      "start": 2016.159,
+      "duration": 5.76,
+      "text": "a simpler parametrization of the"
+    },
+    {
+      "start": 2019.36,
+      "duration": 2.559,
+      "text": "manifold"
+    },
+    {
+      "start": 2022.399,
+      "duration": 11.441,
+      "text": "and many terms in the linearized"
+    },
+    {
+      "start": 2023.919,
+      "duration": 11.681,
+      "text": "einstein's equation vanish now"
+    },
+    {
+      "start": 2033.84,
+      "duration": 4.0,
+      "text": "and it becomes super simple now so"
+    },
+    {
+      "start": 2035.6,
+      "duration": 6.319,
+      "text": "linearized einstein's equation becomes"
+    },
+    {
+      "start": 2037.84,
+      "duration": 7.28,
+      "text": "dc dc gamma a b bar equals minus 16"
+    },
+    {
+      "start": 2041.919,
+      "duration": 6.88,
+      "text": "pi tab"
+    },
+    {
+      "start": 2045.12,
+      "duration": 3.679,
+      "text": "it's almost as simple as it can be"
+    },
+    {
+      "start": 2050.24,
+      "duration": 11.599,
+      "text": "this is like a four-dimensional version"
+    },
+    {
+      "start": 2052.079,
+      "duration": 9.76,
+      "text": "of poisson's equation"
+    },
+    {
+      "start": 2061.919,
+      "duration": 5.2,
+      "text": "and it's kind of interesting to note"
+    },
+    {
+      "start": 2063.599,
+      "duration": 3.52,
+      "text": "that the this has uh"
+    },
+    {
+      "start": 2072.839,
+      "duration": 5.401,
+      "text": "includes"
+    },
+    {
+      "start": 2074.0,
+      "duration": 4.24,
+      "text": "in the vacuum case where tab equals zero"
+    },
+    {
+      "start": 2081.44,
+      "duration": 3.919,
+      "text": "this is exactly the field equations for"
+    },
+    {
+      "start": 2084.56,
+      "duration": 5.279,
+      "text": "a spin"
+    },
+    {
+      "start": 2085.359,
+      "duration": 4.48,
+      "text": "two field"
+    },
+    {
+      "start": 2102.4,
+      "duration": 6.0,
+      "text": "it's pretty interesting massless"
+    },
+    {
+      "start": 2105.92,
+      "duration": 4.32,
+      "text": "and that's why people talk about uh the"
+    },
+    {
+      "start": 2108.4,
+      "duration": 4.08,
+      "text": "field equations of quantum gravity being"
+    },
+    {
+      "start": 2110.24,
+      "duration": 7.359,
+      "text": "for a spin to"
+    },
+    {
+      "start": 2112.48,
+      "duration": 7.119,
+      "text": "graviton field"
+    },
+    {
+      "start": 2117.599,
+      "duration": 3.041,
+      "text": "all right now we've got this linearized"
+    },
+    {
+      "start": 2119.599,
+      "duration": 2.721,
+      "text": "einstein equation"
+    },
+    {
+      "start": 2120.64,
+      "duration": 3.04,
+      "text": "we've massaged it into a form which is"
+    },
+    {
+      "start": 2122.32,
+      "duration": 2.72,
+      "text": "sufficiently simple that we might be"
+    },
+    {
+      "start": 2123.68,
+      "duration": 2.8,
+      "text": "able to really go ahead and solve it in"
+    },
+    {
+      "start": 2125.04,
+      "duration": 3.44,
+      "text": "some special cases"
+    },
+    {
+      "start": 2126.48,
+      "duration": 3.52,
+      "text": "well now let's go ahead and solve it in"
+    },
+    {
+      "start": 2128.48,
+      "duration": 2.8,
+      "text": "some special cases"
+    },
+    {
+      "start": 2130.0,
+      "duration": 3.119,
+      "text": "so we're going to take a look at one"
+    },
+    {
+      "start": 2131.28,
+      "duration": 3.68,
+      "text": "particular limit this is really a vital"
+    },
+    {
+      "start": 2133.119,
+      "duration": 4.0,
+      "text": "limit if we're to have any faith"
+    },
+    {
+      "start": 2134.96,
+      "duration": 4.56,
+      "text": "in general relativity as being an"
+    },
+    {
+      "start": 2137.119,
+      "duration": 5.201,
+      "text": "extension of"
+    },
+    {
+      "start": 2139.52,
+      "duration": 5.04,
+      "text": "our known laws of physics applicable in"
+    },
+    {
+      "start": 2142.32,
+      "duration": 4.16,
+      "text": "the classical non-relativistic domain"
+    },
+    {
+      "start": 2144.56,
+      "duration": 4.559,
+      "text": "namely we want to check out if general"
+    },
+    {
+      "start": 2146.48,
+      "duration": 5.68,
+      "text": "relativity is consistent with newtonian"
+    },
+    {
+      "start": 2149.119,
+      "duration": 4.881,
+      "text": "gravity when gravity is weak and the"
+    },
+    {
+      "start": 2152.16,
+      "duration": 6.0,
+      "text": "relative motion of sources is much"
+    },
+    {
+      "start": 2154.0,
+      "duration": 7.52,
+      "text": "smaller than c"
+    },
+    {
+      "start": 2158.16,
+      "duration": 3.36,
+      "text": "so this is uh"
+    },
+    {
+      "start": 2161.92,
+      "duration": 4.0,
+      "text": "newtonian limit is the limit where"
+    },
+    {
+      "start": 2166.079,
+      "duration": 8.321,
+      "text": "one let's say ah"
+    },
+    {
+      "start": 2172.56,
+      "duration": 3.36,
+      "text": "gravity is weak we don't want super"
+    },
+    {
+      "start": 2174.4,
+      "duration": 4.88,
+      "text": "strong gravitational fields"
+    },
+    {
+      "start": 2175.92,
+      "duration": 5.919,
+      "text": "to talk about the newtonian limit"
+    },
+    {
+      "start": 2179.28,
+      "duration": 3.12,
+      "text": "uh we want relative motion of the"
+    },
+    {
+      "start": 2181.839,
+      "duration": 4.481,
+      "text": "sources"
+    },
+    {
+      "start": 2182.4,
+      "duration": 6.56,
+      "text": "being quite small you don't want things"
+    },
+    {
+      "start": 2186.32,
+      "duration": 3.84,
+      "text": "zooming by neither speed of light or"
+    },
+    {
+      "start": 2188.96,
+      "duration": 4.8,
+      "text": "orbiting each other"
+    },
+    {
+      "start": 2190.16,
+      "duration": 6.24,
+      "text": "the orbital velocity that's close to the"
+    },
+    {
+      "start": 2193.76,
+      "duration": 2.64,
+      "text": "speed of light"
+    },
+    {
+      "start": 2197.92,
+      "duration": 4.8,
+      "text": "and see uh the material stresses"
+    },
+    {
+      "start": 2206.4,
+      "duration": 11.199,
+      "text": "have to be pretty small as well"
+    },
+    {
+      "start": 2215.44,
+      "duration": 3.76,
+      "text": "you know most of the mass energy density"
+    },
+    {
+      "start": 2217.599,
+      "duration": 5.52,
+      "text": "has to be in the form of mass energy"
+    },
+    {
+      "start": 2219.2,
+      "duration": 3.919,
+      "text": "density rather than material stress"
+    },
+    {
+      "start": 2223.2,
+      "duration": 2.879,
+      "text": "you can't have the material made up of"
+    },
+    {
+      "start": 2224.72,
+      "duration": 5.119,
+      "text": "little particles zooming around at the"
+    },
+    {
+      "start": 2226.079,
+      "duration": 3.76,
+      "text": "speed near the speed of light"
+    },
+    {
+      "start": 2230.96,
+      "duration": 3.2,
+      "text": "okay these assumptions"
+    },
+    {
+      "start": 2240.96,
+      "duration": 3.84,
+      "text": "allow us to do some simplifications"
+    },
+    {
+      "start": 2253.68,
+      "duration": 5.2,
+      "text": "they not only allow us to"
+    },
+    {
+      "start": 2256.88,
+      "duration": 3.44,
+      "text": "infer the existence of a global"
+    },
+    {
+      "start": 2258.88,
+      "duration": 3.6,
+      "text": "coordinates in"
+    },
+    {
+      "start": 2260.32,
+      "duration": 3.039,
+      "text": "global coordinate system i mean that's"
+    },
+    {
+      "start": 2262.48,
+      "duration": 2.879,
+      "text": "in"
+    },
+    {
+      "start": 2263.359,
+      "duration": 2.881,
+      "text": "implicit or explicitly stated at the"
+    },
+    {
+      "start": 2265.359,
+      "duration": 4.561,
+      "text": "beginning of our discussion of"
+    },
+    {
+      "start": 2266.24,
+      "duration": 4.16,
+      "text": "linearized einstein's field equations"
+    },
+    {
+      "start": 2269.92,
+      "duration": 2.48,
+      "text": "but"
+    },
+    {
+      "start": 2270.4,
+      "duration": 5.76,
+      "text": "the it's they allow us to infer the"
+    },
+    {
+      "start": 2272.4,
+      "duration": 3.76,
+      "text": "existence of a global inertial"
+    },
+    {
+      "start": 2276.24,
+      "duration": 2.96,
+      "text": "coordinate system"
+    },
+    {
+      "start": 2283.2,
+      "duration": 5.52,
+      "text": "of the flat metric such"
+    },
+    {
+      "start": 2286.24,
+      "duration": 4.16,
+      "text": "that it's all very well to have a global"
+    },
+    {
+      "start": 2288.72,
+      "duration": 5.6,
+      "text": "initial coordinate system"
+    },
+    {
+      "start": 2290.4,
+      "duration": 3.92,
+      "text": "but furthermore such that uh"
+    },
+    {
+      "start": 2295.599,
+      "duration": 3.041,
+      "text": "the stress energy tensor has essentially"
+    },
+    {
+      "start": 2297.44,
+      "duration": 4.399,
+      "text": "just got the"
+    },
+    {
+      "start": 2298.64,
+      "duration": 3.199,
+      "text": "time time component"
+    },
+    {
+      "start": 2302.48,
+      "duration": 3.92,
+      "text": "so all the other 15 components are"
+    },
+    {
+      "start": 2310.839,
+      "duration": 3.0,
+      "text": "vanishing"
+    },
+    {
+      "start": 2321.44,
+      "duration": 7.84,
+      "text": "so this tab is the unit"
+    },
+    {
+      "start": 2324.56,
+      "duration": 7.279,
+      "text": "tangent vector pointing in the time"
+    },
+    {
+      "start": 2329.28,
+      "duration": 2.559,
+      "text": "direction"
+    },
+    {
+      "start": 2334.72,
+      "duration": 7.04,
+      "text": "uh so that's an additional assumption"
+    },
+    {
+      "start": 2340.16,
+      "duration": 3.6,
+      "text": "that these assumptions may allow us to"
+    },
+    {
+      "start": 2341.76,
+      "duration": 5.04,
+      "text": "make this additional simplification of"
+    },
+    {
+      "start": 2343.76,
+      "duration": 3.04,
+      "text": "the stress energy tensor"
+    },
+    {
+      "start": 2347.2,
+      "duration": 10.72,
+      "text": "and what does it mean well"
+    },
+    {
+      "start": 2354.4,
+      "duration": 3.52,
+      "text": "approximation two means"
+    },
+    {
+      "start": 2359.119,
+      "duration": 10.72,
+      "text": "that the momentum densities are small"
+    },
+    {
+      "start": 2372.0,
+      "duration": 3.2,
+      "text": "and the stresses are small"
+    },
+    {
+      "start": 2380.839,
+      "duration": 4.361,
+      "text": "and uh sources are slowly moving"
+    },
+    {
+      "start": 2386.88,
+      "duration": 3.68,
+      "text": "well yeah we've already assumed that"
+    },
+    {
+      "start": 2389.92,
+      "duration": 2.48,
+      "text": "right"
+    },
+    {
+      "start": 2390.56,
+      "duration": 7.279,
+      "text": "since the sort however what's a"
+    },
+    {
+      "start": 2392.4,
+      "duration": 5.439,
+      "text": "consequence of that assumption"
+    },
+    {
+      "start": 2402.56,
+      "duration": 3.84,
+      "text": "since the sources are slowly moving"
+    },
+    {
+      "start": 2407.44,
+      "duration": 3.84,
+      "text": "what we're going to do is we're going to"
+    },
+    {
+      "start": 2408.56,
+      "duration": 6.32,
+      "text": "exploit that to look for"
+    },
+    {
+      "start": 2411.28,
+      "duration": 14.559,
+      "text": "solutions where the metric basically"
+    },
+    {
+      "start": 2414.88,
+      "duration": 10.959,
+      "text": "doesn't change"
+    },
+    {
+      "start": 2426.72,
+      "duration": 3.92,
+      "text": "so that's what does that mean that the"
+    },
+    {
+      "start": 2428.4,
+      "duration": 5.439,
+      "text": "time derivatives"
+    },
+    {
+      "start": 2430.64,
+      "duration": 5.679,
+      "text": "of gamma a b are"
+    },
+    {
+      "start": 2433.839,
+      "duration": 4.401,
+      "text": "neglected right so if the sources are"
+    },
+    {
+      "start": 2436.319,
+      "duration": 3.76,
+      "text": "sufficiently slowly moving"
+    },
+    {
+      "start": 2438.24,
+      "duration": 3.28,
+      "text": "then we just assume that the"
+    },
+    {
+      "start": 2440.079,
+      "duration": 5.121,
+      "text": "gravitational field is"
+    },
+    {
+      "start": 2441.52,
+      "duration": 9.04,
+      "text": "instantaneously responded to the"
+    },
+    {
+      "start": 2445.2,
+      "duration": 5.36,
+      "text": "to the sources and hence the time"
+    },
+    {
+      "start": 2450.839,
+      "duration": 4.121,
+      "text": "derivatives uh"
+    },
+    {
+      "start": 2452.4,
+      "duration": 2.56,
+      "text": "vanishing"
+    },
+    {
+      "start": 2458.16,
+      "duration": 8.08,
+      "text": "so a whole bunch of coordinates"
+    },
+    {
+      "start": 2461.359,
+      "duration": 7.121,
+      "text": "uh components sorry"
+    },
+    {
+      "start": 2466.24,
+      "duration": 5.359,
+      "text": "of the linearized einstein field"
+    },
+    {
+      "start": 2468.48,
+      "duration": 3.119,
+      "text": "equation will vanish"
+    },
+    {
+      "start": 2471.68,
+      "duration": 2.96,
+      "text": "so here's the linearized linear field"
+    },
+    {
+      "start": 2473.28,
+      "duration": 3.92,
+      "text": "equation in the gauge where everything"
+    },
+    {
+      "start": 2474.64,
+      "duration": 5.92,
+      "text": "is nice and simple"
+    },
+    {
+      "start": 2477.2,
+      "duration": 5.919,
+      "text": "so gamma bar a b minus 16 pi"
+    },
+    {
+      "start": 2480.56,
+      "duration": 2.559,
+      "text": "t a b"
+    },
+    {
+      "start": 2486.0,
+      "duration": 3.599,
+      "text": "so in this new coordinate system"
+    },
+    {
+      "start": 2490.16,
+      "duration": 5.679,
+      "text": "a whole bunch of components"
+    },
+    {
+      "start": 2493.28,
+      "duration": 2.559,
+      "text": "will vanish"
+    },
+    {
+      "start": 2516.079,
+      "duration": 7.121,
+      "text": "a whole bunch of components on the right"
+    },
+    {
+      "start": 2517.359,
+      "duration": 7.521,
+      "text": "hand side vanish"
+    },
+    {
+      "start": 2523.2,
+      "duration": 3.36,
+      "text": "the only time the right hand side where"
+    },
+    {
+      "start": 2524.88,
+      "duration": 5.92,
+      "text": "the stress energy tensor is"
+    },
+    {
+      "start": 2526.56,
+      "duration": 11.279,
+      "text": "appears is"
+    },
+    {
+      "start": 2530.8,
+      "duration": 7.039,
+      "text": "in the zero zero component"
+    },
+    {
+      "start": 2545.2,
+      "duration": 9.04,
+      "text": "and in that case we get"
+    },
+    {
+      "start": 2548.48,
+      "duration": 5.76,
+      "text": "minus 16 pi rho on the right hand side"
+    },
+    {
+      "start": 2557.52,
+      "duration": 3.04,
+      "text": "now this i've drawn this delta squared"
+    },
+    {
+      "start": 2559.359,
+      "duration": 6.48,
+      "text": "here now this"
+    },
+    {
+      "start": 2560.56,
+      "duration": 5.279,
+      "text": "i guess it's worth flagging this right"
+    },
+    {
+      "start": 2567.76,
+      "duration": 4.319,
+      "text": "this has got nothing to do with the"
+    },
+    {
+      "start": 2569.119,
+      "duration": 2.96,
+      "text": "covariance derivative"
+    },
+    {
+      "start": 2574.56,
+      "duration": 5.279,
+      "text": "this is the usual laplace operator"
+    },
+    {
+      "start": 2581.839,
+      "duration": 4.721,
+      "text": "your original three-dimensional laplace"
+    },
+    {
+      "start": 2585.119,
+      "duration": 2.72,
+      "text": "operator"
+    },
+    {
+      "start": 2586.56,
+      "duration": 3.84,
+      "text": "because the time derivatives are"
+    },
+    {
+      "start": 2587.839,
+      "duration": 6.401,
+      "text": "vanished the dc dc"
+    },
+    {
+      "start": 2590.4,
+      "duration": 5.84,
+      "text": "here simplifies to the the plus"
+    },
+    {
+      "start": 2594.24,
+      "duration": 3.68,
+      "text": "operator right there's no fourth time"
+    },
+    {
+      "start": 2596.24,
+      "duration": 3.839,
+      "text": "component so that that's pretty"
+    },
+    {
+      "start": 2597.92,
+      "duration": 5.199,
+      "text": "convenient"
+    },
+    {
+      "start": 2600.079,
+      "duration": 4.561,
+      "text": "so we're left with solving well a whole"
+    },
+    {
+      "start": 2603.119,
+      "duration": 3.601,
+      "text": "bunch of independent poisson"
+    },
+    {
+      "start": 2604.64,
+      "duration": 5.439,
+      "text": "equations some with the source one term"
+    },
+    {
+      "start": 2606.72,
+      "duration": 3.359,
+      "text": "of the source and 15 without"
+    },
+    {
+      "start": 2612.88,
+      "duration": 2.959,
+      "text": "so the solution let's just solve it"
+    },
+    {
+      "start": 2614.56,
+      "duration": 3.2,
+      "text": "right we know to solve poisson's"
+    },
+    {
+      "start": 2615.839,
+      "duration": 3.201,
+      "text": "equation that's like"
+    },
+    {
+      "start": 2617.76,
+      "duration": 4.079,
+      "text": "you should be able to do it you sleep by"
+    },
+    {
+      "start": 2619.04,
+      "duration": 2.799,
+      "text": "now"
+    },
+    {
+      "start": 2622.88,
+      "duration": 4.479,
+      "text": "so the solution to poisson's equation"
+    },
+    {
+      "start": 2625.04,
+      "duration": 2.319,
+      "text": "here"
+    },
+    {
+      "start": 2628.56,
+      "duration": 3.039,
+      "text": "and what we're going to call this"
+    },
+    {
+      "start": 2632.839,
+      "duration": 3.321,
+      "text": "equation"
+    },
+    {
+      "start": 2634.0,
+      "duration": 3.599,
+      "text": "just rewrite it rather than introducing"
+    },
+    {
+      "start": 2636.16,
+      "duration": 4.72,
+      "text": "yet another equation label"
+    },
+    {
+      "start": 2637.599,
+      "duration": 5.041,
+      "text": "so the solution of this equation well"
+    },
+    {
+      "start": 2640.88,
+      "duration": 3.68,
+      "text": "under the assumption right that the"
+    },
+    {
+      "start": 2642.64,
+      "duration": 7.199,
+      "text": "metric vanishes the metric perturbation"
+    },
+    {
+      "start": 2644.56,
+      "duration": 5.279,
+      "text": "vanishes as we go to infinity"
+    },
+    {
+      "start": 2651.28,
+      "duration": 3.12,
+      "text": "well that's pretty easy there's not many"
+    },
+    {
+      "start": 2653.2,
+      "duration": 3.6,
+      "text": "solutions that have that property of"
+    },
+    {
+      "start": 2654.4,
+      "duration": 4.24,
+      "text": "poisson's equivalent equation"
+    },
+    {
+      "start": 2656.8,
+      "duration": 3.519,
+      "text": "namely the metric components themselves"
+    },
+    {
+      "start": 2658.64,
+      "duration": 5.199,
+      "text": "have to vanish it's pretty much the only"
+    },
+    {
+      "start": 2660.319,
+      "duration": 3.52,
+      "text": "way you can get it to work"
+    },
+    {
+      "start": 2668.24,
+      "duration": 4.0,
+      "text": "and now we can use this information"
+    },
+    {
+      "start": 2673.04,
+      "duration": 17.6,
+      "text": "and further solve the final"
+    },
+    {
+      "start": 2677.2,
+      "duration": 17.2,
+      "text": "poisson equation"
+    },
+    {
+      "start": 2690.64,
+      "duration": 8.56,
+      "text": "namely we find that we can express the"
+    },
+    {
+      "start": 2694.4,
+      "duration": 4.8,
+      "text": "solution in the following terms"
+    },
+    {
+      "start": 2700.88,
+      "duration": 4.64,
+      "text": "so t is this timeline unit vector"
+    },
+    {
+      "start": 2704.079,
+      "duration": 3.28,
+      "text": "pointing in the time as"
+    },
+    {
+      "start": 2705.52,
+      "duration": 3.2,
+      "text": "is the unit vector pointing in the time"
+    },
+    {
+      "start": 2707.359,
+      "duration": 3.441,
+      "text": "direction"
+    },
+    {
+      "start": 2708.72,
+      "duration": 3.599,
+      "text": "and we've introduced this phi what's phi"
+    },
+    {
+      "start": 2710.8,
+      "duration": 5.12,
+      "text": "well phi is just"
+    },
+    {
+      "start": 2712.319,
+      "duration": 7.52,
+      "text": "well a solution to the poisson equation"
+    },
+    {
+      "start": 2715.92,
+      "duration": 3.919,
+      "text": "so we sort of"
+    },
+    {
+      "start": 2734.96,
+      "duration": 4.639,
+      "text": "fine okay so we've got this"
+    },
+    {
+      "start": 2741.119,
+      "duration": 6.401,
+      "text": "solution now to the full linearized"
+    },
+    {
+      "start": 2744.64,
+      "duration": 6.64,
+      "text": "einstein equations"
+    },
+    {
+      "start": 2747.52,
+      "duration": 5.36,
+      "text": "so we're done right so this is"
+    },
+    {
+      "start": 2751.28,
+      "duration": 4.88,
+      "text": "phi here is just the usual gravitational"
+    },
+    {
+      "start": 2752.88,
+      "duration": 5.199,
+      "text": "potential of newton's theory"
+    },
+    {
+      "start": 2756.16,
+      "duration": 6.4,
+      "text": "well let's see are we done i mean like"
+    },
+    {
+      "start": 2758.079,
+      "duration": 4.481,
+      "text": "okay that's very good we've we've solved"
+    },
+    {
+      "start": 2762.8,
+      "duration": 4.08,
+      "text": "einstein's uh linearized einstein"
+    },
+    {
+      "start": 2765.28,
+      "duration": 3.2,
+      "text": "equations"
+    },
+    {
+      "start": 2766.88,
+      "duration": 2.959,
+      "text": "in this particular limit and we've found"
+    },
+    {
+      "start": 2768.48,
+      "duration": 2.879,
+      "text": "something that looks suspiciously like"
+    },
+    {
+      "start": 2769.839,
+      "duration": 2.561,
+      "text": "newtonian theory but we haven't actually"
+    },
+    {
+      "start": 2771.359,
+      "duration": 4.081,
+      "text": "deduced that it's"
+    },
+    {
+      "start": 2772.4,
+      "duration": 6.48,
+      "text": "newtonian reduced to the newtonian limit"
+    },
+    {
+      "start": 2775.44,
+      "duration": 7.76,
+      "text": "to do that we need to understand"
+    },
+    {
+      "start": 2778.88,
+      "duration": 4.32,
+      "text": "the motion of test particles"
+    },
+    {
+      "start": 2784.4,
+      "duration": 6.0,
+      "text": "you know how do test particles move in"
+    },
+    {
+      "start": 2786.72,
+      "duration": 3.68,
+      "text": "this this particular geometry"
+    },
+    {
+      "start": 2791.839,
+      "duration": 4.161,
+      "text": "well according to the the fundamental"
+    },
+    {
+      "start": 2794.48,
+      "duration": 3.2,
+      "text": "assumption of general relativity we have"
+    },
+    {
+      "start": 2796.0,
+      "duration": 4.079,
+      "text": "to solve the geodesic equation to get"
+    },
+    {
+      "start": 2797.68,
+      "duration": 6.159,
+      "text": "that their motion"
+    },
+    {
+      "start": 2800.079,
+      "duration": 6.24,
+      "text": "the motion of test particles"
+    },
+    {
+      "start": 2803.839,
+      "duration": 3.28,
+      "text": "and the geodesic equation well that's"
+    },
+    {
+      "start": 2806.319,
+      "duration": 2.641,
+      "text": "you know"
+    },
+    {
+      "start": 2807.119,
+      "duration": 4.0,
+      "text": "an equation we've talked about several"
+    },
+    {
+      "start": 2808.96,
+      "duration": 4.399,
+      "text": "times now in this lecture course"
+    },
+    {
+      "start": 2811.119,
+      "duration": 3.521,
+      "text": "in this particular context we can write"
+    },
+    {
+      "start": 2813.359,
+      "duration": 4.48,
+      "text": "it out in terms of"
+    },
+    {
+      "start": 2814.64,
+      "duration": 3.199,
+      "text": "crystal symbols"
+    },
+    {
+      "start": 2820.16,
+      "duration": 2.72,
+      "text": "as follows"
+    },
+    {
+      "start": 2827.52,
+      "duration": 3.92,
+      "text": "so that's the geodesic equation and now"
+    },
+    {
+      "start": 2830.079,
+      "duration": 2.161,
+      "text": "that we've got the metric we can work"
+    },
+    {
+      "start": 2831.44,
+      "duration": 2.8,
+      "text": "out gamma"
+    },
+    {
+      "start": 2832.24,
+      "duration": 3.52,
+      "text": "and we can then thereby write out this"
+    },
+    {
+      "start": 2834.24,
+      "duration": 4.8,
+      "text": "differential equation and solve it and"
+    },
+    {
+      "start": 2835.76,
+      "duration": 3.28,
+      "text": "find the motion of test bodies"
+    },
+    {
+      "start": 2842.64,
+      "duration": 4.32,
+      "text": "and this is with respect to global"
+    },
+    {
+      "start": 2844.0,
+      "duration": 2.96,
+      "text": "inertial coordinates"
+    },
+    {
+      "start": 2854.64,
+      "duration": 4.8,
+      "text": "so but we don't have to just tediously"
+    },
+    {
+      "start": 2856.72,
+      "duration": 4.72,
+      "text": "do all"
+    },
+    {
+      "start": 2859.44,
+      "duration": 3.6,
+      "text": "hundreds of calculations here we can use"
+    },
+    {
+      "start": 2861.44,
+      "duration": 3.44,
+      "text": "a lot of simplifications to do this"
+    },
+    {
+      "start": 2863.04,
+      "duration": 3.12,
+      "text": "calculation quite quickly"
+    },
+    {
+      "start": 2864.88,
+      "duration": 3.12,
+      "text": "and the first assumption we're going to"
+    },
+    {
+      "start": 2866.16,
+      "duration": 3.679,
+      "text": "make to simplify our lives is"
+    },
+    {
+      "start": 2868.0,
+      "duration": 5.119,
+      "text": "that of assuming that the test body"
+    },
+    {
+      "start": 2869.839,
+      "duration": 6.641,
+      "text": "moves slowly"
+    },
+    {
+      "start": 2873.119,
+      "duration": 6.0,
+      "text": "with respect to the speed of light"
+    },
+    {
+      "start": 2876.48,
+      "duration": 5.2,
+      "text": "so that uh the derivative or the"
+    },
+    {
+      "start": 2879.119,
+      "duration": 5.44,
+      "text": "velocity of our test particle"
+    },
+    {
+      "start": 2881.68,
+      "duration": 4.32,
+      "text": "is really one zero zero zero right"
+    },
+    {
+      "start": 2884.559,
+      "duration": 4.0,
+      "text": "that's the simplest assumption we can"
+    },
+    {
+      "start": 2886.0,
+      "duration": 5.68,
+      "text": "make about our test body"
+    },
+    {
+      "start": 2888.559,
+      "duration": 4.721,
+      "text": "that it's moving basically not moving at"
+    },
+    {
+      "start": 2891.68,
+      "duration": 5.36,
+      "text": "all"
+    },
+    {
+      "start": 2893.28,
+      "duration": 8.559,
+      "text": "and that the the coordinate time"
+    },
+    {
+      "start": 2897.04,
+      "duration": 4.799,
+      "text": "is equal to the proper time"
+    },
+    {
+      "start": 2902.079,
+      "duration": 4.161,
+      "text": "or is approximately the same as the"
+    },
+    {
+      "start": 2903.599,
+      "duration": 2.641,
+      "text": "proper time"
+    },
+    {
+      "start": 2907.839,
+      "duration": 3.52,
+      "text": "and when we make that assumption we see"
+    },
+    {
+      "start": 2909.28,
+      "duration": 3.92,
+      "text": "that loads of equations here vanish"
+    },
+    {
+      "start": 2911.359,
+      "duration": 4.0,
+      "text": "right we don't have to hardly any of the"
+    },
+    {
+      "start": 2913.2,
+      "duration": 5.84,
+      "text": "components here are going to matter"
+    },
+    {
+      "start": 2915.359,
+      "duration": 6.72,
+      "text": "for the calculation of the acceleration"
+    },
+    {
+      "start": 2919.04,
+      "duration": 3.039,
+      "text": "of our test particle"
+    },
+    {
+      "start": 2922.96,
+      "duration": 6.879,
+      "text": "so the geodesic equation simplifies"
+    },
+    {
+      "start": 2926.839,
+      "duration": 3.0,
+      "text": "beautifully"
+    },
+    {
+      "start": 2933.2,
+      "duration": 3.44,
+      "text": "and we only have to deal with these four"
+    },
+    {
+      "start": 2934.8,
+      "duration": 4.72,
+      "text": "components of the"
+    },
+    {
+      "start": 2936.64,
+      "duration": 2.88,
+      "text": "crystal symbols"
+    },
+    {
+      "start": 2941.04,
+      "duration": 7.68,
+      "text": "and you can work out those components"
+    },
+    {
+      "start": 2945.76,
+      "duration": 2.96,
+      "text": "in terms of gamma"
+    },
+    {
+      "start": 2951.92,
+      "duration": 4.399,
+      "text": "these four components here are just"
+    },
+    {
+      "start": 2954.079,
+      "duration": 5.841,
+      "text": "given by a minus a half d"
+    },
+    {
+      "start": 2956.319,
+      "duration": 8.8,
+      "text": "d x mu gamma naught naught"
+    },
+    {
+      "start": 2959.92,
+      "duration": 5.199,
+      "text": "um but that simplifies to d phi d x mu"
+    },
+    {
+      "start": 2965.359,
+      "duration": 5.601,
+      "text": "for the three components that are really"
+    },
+    {
+      "start": 2967.119,
+      "duration": 5.761,
+      "text": "important to us"
+    },
+    {
+      "start": 2970.96,
+      "duration": 14.879,
+      "text": "so you know time derivatives are"
+    },
+    {
+      "start": 2972.88,
+      "duration": 12.959,
+      "text": "neglected here"
+    },
+    {
+      "start": 2986.72,
+      "duration": 3.2,
+      "text": "and so the motion we've now simplified"
+    },
+    {
+      "start": 2989.52,
+      "duration": 3.92,
+      "text": "things"
+    },
+    {
+      "start": 2989.92,
+      "duration": 8.72,
+      "text": "sufficiently to be able to express the"
+    },
+    {
+      "start": 2993.44,
+      "duration": 8.639,
+      "text": "motion of the test particle"
+    },
+    {
+      "start": 2998.64,
+      "duration": 5.04,
+      "text": "in terms of the gravitational potential"
+    },
+    {
+      "start": 3002.079,
+      "duration": 3.04,
+      "text": "or in terms of a quantity that we can"
+    },
+    {
+      "start": 3003.68,
+      "duration": 2.24,
+      "text": "now interpret as a gravitational"
+    },
+    {
+      "start": 3005.119,
+      "duration": 8.161,
+      "text": "potential"
+    },
+    {
+      "start": 3005.92,
+      "duration": 9.36,
+      "text": "it's minus grad phi"
+    },
+    {
+      "start": 3013.28,
+      "duration": 5.2,
+      "text": "and this a vector is none other than the"
+    },
+    {
+      "start": 3015.28,
+      "duration": 3.2,
+      "text": "derivative of the position"
+    },
+    {
+      "start": 3018.88,
+      "duration": 8.959,
+      "text": "twice with respect to t"
+    },
+    {
+      "start": 3031.2,
+      "duration": 3.04,
+      "text": "so the a the acceleration of the"
+    },
+    {
+      "start": 3032.8,
+      "duration": 2.0,
+      "text": "particle is defined with respect to the"
+    },
+    {
+      "start": 3034.24,
+      "duration": 3.44,
+      "text": "global"
+    },
+    {
+      "start": 3034.8,
+      "duration": 4.0,
+      "text": "inertial coordinate system so we've"
+    },
+    {
+      "start": 3037.68,
+      "duration": 3.84,
+      "text": "managed to obtain"
+    },
+    {
+      "start": 3038.8,
+      "duration": 3.84,
+      "text": "exactly the acceleration of a test"
+    },
+    {
+      "start": 3041.52,
+      "duration": 4.079,
+      "text": "particle with respect to the"
+    },
+    {
+      "start": 3042.64,
+      "duration": 5.919,
+      "text": "gravitational field"
+    },
+    {
+      "start": 3045.599,
+      "duration": 4.641,
+      "text": "of a heavenly body in the newtonian"
+    },
+    {
+      "start": 3048.559,
+      "duration": 3.04,
+      "text": "limit"
+    },
+    {
+      "start": 3050.24,
+      "duration": 2.8,
+      "text": "however it's worth stressing that the"
+    },
+    {
+      "start": 3051.599,
+      "duration": 3.121,
+      "text": "interpretation of the solution and"
+    },
+    {
+      "start": 3053.04,
+      "duration": 4.64,
+      "text": "general relativity"
+    },
+    {
+      "start": 3054.72,
+      "duration": 4.56,
+      "text": "is is vastly different than in newtonian"
+    },
+    {
+      "start": 3057.68,
+      "duration": 3.919,
+      "text": "theory"
+    },
+    {
+      "start": 3059.28,
+      "duration": 3.68,
+      "text": "so you know imagine we have a heavenly"
+    },
+    {
+      "start": 3061.599,
+      "duration": 3.601,
+      "text": "body like the sun"
+    },
+    {
+      "start": 3062.96,
+      "duration": 5.44,
+      "text": "well in general relativity it curves"
+    },
+    {
+      "start": 3065.2,
+      "duration": 5.68,
+      "text": "space time by the mass energy density"
+    },
+    {
+      "start": 3068.4,
+      "duration": 3.679,
+      "text": "the earth which is in our case the test"
+    },
+    {
+      "start": 3070.88,
+      "duration": 3.6,
+      "text": "body"
+    },
+    {
+      "start": 3072.079,
+      "duration": 5.28,
+      "text": "is in free fall and it moves on the"
+    },
+    {
+      "start": 3074.48,
+      "duration": 6.48,
+      "text": "geodesics of the curve space time"
+    },
+    {
+      "start": 3077.359,
+      "duration": 6.72,
+      "text": "metric given by the sun which is"
+    },
+    {
+      "start": 3080.96,
+      "duration": 5.76,
+      "text": "gab which sold"
+    },
+    {
+      "start": 3084.079,
+      "duration": 4.401,
+      "text": "einstein's field equations and because"
+    },
+    {
+      "start": 3086.72,
+      "duration": 5.04,
+      "text": "space-time is now curved"
+    },
+    {
+      "start": 3088.48,
+      "duration": 6.48,
+      "text": "the uh the the geodesic"
+    },
+    {
+      "start": 3091.76,
+      "duration": 7.12,
+      "text": "motion of the test body actually closes"
+    },
+    {
+      "start": 3094.96,
+      "duration": 5.84,
+      "text": "and forms an orbit and the final note is"
+    },
+    {
+      "start": 3098.88,
+      "duration": 2.4,
+      "text": "that the background inertial observers"
+    },
+    {
+      "start": 3100.8,
+      "duration": 2.16,
+      "text": "which"
+    },
+    {
+      "start": 3101.28,
+      "duration": 3.2,
+      "text": "define the global inertial coordinate"
+    },
+    {
+      "start": 3102.96,
+      "duration": 3.359,
+      "text": "system um"
+    },
+    {
+      "start": 3104.48,
+      "duration": 3.68,
+      "text": "they're the ones in general relativity"
+    },
+    {
+      "start": 3106.319,
+      "duration": 4.641,
+      "text": "which are undergoing acceleration that's"
+    },
+    {
+      "start": 3108.16,
+      "duration": 5.919,
+      "text": "in stark contrast to the newtonian"
+    },
+    {
+      "start": 3110.96,
+      "duration": 5.92,
+      "text": "special relativity type picture that"
+    },
+    {
+      "start": 3114.079,
+      "duration": 4.801,
+      "text": "one has had previously okay but that's"
+    },
+    {
+      "start": 3116.88,
+      "duration": 6.0,
+      "text": "it for today for this lecture today"
+    },
+    {
+      "start": 3118.88,
+      "duration": 4.0,
+      "text": "thank you very much and good bye"
+    }
+  ]
+}

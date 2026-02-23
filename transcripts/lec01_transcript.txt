@@ -1,0 +1,1373 @@
+# General Relativity, Lecture 1: mass, universality of free fall, and prerelativity gravitation
+# YouTube: https://www.youtube.com/watch?v=hyW4m4Z-9pY
+# Auto-generated transcript
+
+[00:00.16] g'day my name is tobias osborne welcome
+[00:02.72] to introduction to general relativity
+[00:04.96] i'm looking forward to you joining me on
+[00:07.20] this journey through physics most
+[00:08.72] elegant and beautiful of theories
+[00:11.28] i vividly recall the lecture in my first
+[00:14.40] year physics
+[00:15.20] degree where i first encountered general
+[00:17.28] relativity
+[00:18.48] at the time i was strongly contemplating
+[00:20.72] a move to computer science
+[00:22.32] but after that lecture i was hooked i
+[00:24.72] remember being amazed at the connection
+[00:26.64] between the curvature of space-time and
+[00:28.64] the motion of freely falling bodies
+[00:32.64] this is really the subject that drew me
+[00:34.32] into physics in the first place
+[00:36.40] it's not the one that kept me here but
+[00:38.08] it's certainly the one that drew me to
+[00:39.44] him
+[00:40.72] and i'm looking forward to teaching you
+[00:42.64] this most amazing and elegant of
+[00:45.04] theories
+[00:46.00] it's really no exaggeration that
+[00:49.04] physicists regard general relativity as
+[00:51.28] one of the most beautiful
+[00:52.72] physical theories that we have the words
+[00:56.00] elegant
+[00:57.12] and beautiful very appropriately
+[01:00.72] describe the theory of general
+[01:02.32] relativity indeed there's somehow an
+[01:04.24] element of the divine
+[01:05.76] in the way that general relativity works
+[01:08.16] and holds together
+[01:10.24] and i'm very much looking forward to
+[01:12.48] sharing all of this with you in the
+[01:14.00] coming course
+[01:16.00] but i should say before we go too much
+[01:18.08] into this course
+[01:19.60] it must be said that general relativity
+[01:21.36] is wrong
+[01:22.96] it's wrong because as far as we know it
+[01:25.52] does is not
+[01:26.32] compatible with the theory of quantum
+[01:28.40] mechanics or at least
+[01:30.08] not in a way that's compelling so we
+[01:33.36] need to correct
+[01:34.32] or find a deeper more underlying theory
+[01:38.24] for the the physics of nature itself
+[01:41.36] nonetheless even though general
+[01:42.80] relativity is wrong
+[01:44.40] it has proven to be spectacularly
+[01:46.08] successful in almost all cosmological
+[01:48.88] uh areas the predictions of general
+[01:51.76] relativity have been
+[01:53.12] confirmed to an extraordinary level of
+[01:55.12] degree of accuracy
+[01:58.48] what's the format of this lecture so
+[02:00.80] this lecture series will cover some
+[02:03.04] 10 to 13 weeks there will be
+[02:05.44] approximately two lectures a week
+[02:07.60] i will record the videos for the
+[02:09.44] lectures it will be presented
+[02:10.72] asynchronously and i will upload the
+[02:12.64] lectures
+[02:13.28] usually on monday or tuesday in the week
+[02:17.92] for students at the leibniz university
+[02:20.48] of hanover
+[02:21.44] you can find all information regarding
+[02:23.84] the organization
+[02:25.36] and the examination requirements for
+[02:27.36] this course
+[02:28.48] on the study p webpage
+[02:35.36] there will be a textbook that i will be
+[02:37.52] following for this course the textbook
+[02:39.36] will be that of
+[02:40.24] uh wald this is world's
+[02:43.60] general relativity textbook
+[02:52.40] this is world's general relativity
+[02:54.08] textbook that we will be following
+[02:56.00] in this course
+[02:59.12] um however i won't be following it to
+[03:01.92] the page
+[03:02.64] or the letter and i will deviate
+[03:05.76] occasionally
+[03:06.56] indeed straight away from the book to
+[03:08.96] introduce
+[03:09.84] material from other sources i think it's
+[03:12.40] worth mentioning
+[03:13.92] uh two two sources in particular that i
+[03:16.72] will be
+[03:22.24] i will spend i i will consult for
+[03:25.12] additional material
+[03:27.04] there's the so-called telephone book
+[03:30.72] messenger thorne and wheeler
+[03:33.04] this massive book is a fantastic
+[03:35.68] discussion
+[03:36.72] of general aspects of general relativity
+[03:39.04] i will certainly be consulting
+[03:43.28] this book on occasion and also
+[03:46.08] weinberg's gravitation and cosmology
+[03:48.80] is really a fantastic resource for
+[03:50.72] explicit calculations
+[03:54.24] now the presentation or the rather the
+[03:58.00] structure of this course
+[04:01.20] the emphasis in this course will be over
+[04:03.28] mathematical methods
+[04:04.88] over the physics so
+[04:08.32] my ultimate goal
+[04:12.08] is to introduce to you the mathematics
+[04:16.40] and the mathematical methods underlying
+[04:18.72] general relativity of course i will
+[04:21.52] not be neglecting the physics and i will
+[04:24.32] be
+[04:24.64] indeed spending a long time talking
+[04:27.60] about
+[04:28.08] the physical basis for the general
+[04:29.84] relativity but it is certainly my goal
+[04:33.12] to spend a long time introducing you to
+[04:35.68] the mathematical methods of general
+[04:37.60] relativity
+[04:38.56] and there's multiple reasons why one
+[04:40.48] might want to do that
+[04:42.32] although i mean you can discuss general
+[04:44.40] relativity
+[04:45.44] practically without ever really
+[04:48.08] seriously getting in delving into
+[04:49.60] differential geometry
+[04:50.96] you can work most of the time with one
+[04:53.36] coordinate patch as we'll see
+[04:54.96] in one coordinate system you can talk
+[04:57.12] about the motion
+[04:58.40] of particles in a curve space time
+[05:01.52] without making reference to geodesic
+[05:04.00] equations in coordinate free notation
+[05:05.76] blah blah blah
+[05:06.88] we can do general relativity in a very
+[05:09.28] concrete and explicit way
+[05:10.80] you will certainly find references and
+[05:12.16] resources where that's the case
+[05:14.32] however i do want to spend some time
+[05:17.20] getting you familiar with the
+[05:18.32] mathematical methods of general
+[05:19.68] relativity
+[05:20.72] in particular the mathematical methods
+[05:22.80] of differential geometry
+[05:25.20] for many of you this is the first time
+[05:27.68] you will see
+[05:29.12] differential geometry and uh and
+[05:32.32] use these tools in earnest differential
+[05:34.96] geometry
+[05:35.68] isn't really necessary to describe much
+[05:38.16] of the phenomenon physics
+[05:39.84] the up to now in your your degree in
+[05:42.16] your studies of physics
+[05:43.60] however you will find that if you want
+[05:45.92] to go further in physics
+[05:48.08] that it underlies multiple
+[05:52.32] it underlies multiple uh current
+[05:54.40] research areas in
+[05:56.24] in physics and most most notably
+[05:59.92] anytime you want to do anything with
+[06:01.36] quantum gravity and string theory
+[06:04.80] you'd better be sure
+[06:08.00] that you are up to date with your
+[06:11.44] differential geometry knowledge and also
+[06:15.04] uh the the basic methods theorems and
+[06:18.16] results from differential geometry
+[06:20.32] so that's why we're going to spend a lot
+[06:22.32] of time in this course
+[06:23.60] building this theory up the theory isn't
+[06:26.40] in all of its
+[06:27.20] its breadth and depth isn't strictly
+[06:28.88] needed to describe most of
+[06:30.72] the content of general relativity
+[06:32.48] however you will need it for any further
+[06:35.36] studies in physics and certainly if you
+[06:37.60] wish to pursue a research career in
+[06:39.44] physics
+[06:40.08] a knowledge of differential geometry can
+[06:41.68] do no wrong
+[06:43.44] i should mention that there's some
+[06:46.16] additional resources
+[06:48.16] there's
+[06:51.68] perhaps my favorite video reference
+[06:54.48] would be the
+[06:55.28] videos of lenny suskin on general
+[06:56.88] relativity uh do check them out he has
+[06:59.76] an absolutely different perspective to
+[07:01.36] the perspective
+[07:02.00] that i'll be presenting here and i would
+[07:03.36] say completely complementary perspective
+[07:05.36] to the perspective i'm presenting here
+[07:08.16] so do check out
+[07:09.12] lenny suskin's videos on general
+[07:10.88] relativity
+[07:14.56] so that's it for the basic
+[07:16.00] organizational uh
+[07:17.76] announcements for this course from now
+[07:20.88] on
+[07:21.44] we will be commencing
+[07:24.80] our studies of einstein's theory of
+[07:27.44] general relativity
+[07:29.44] and in particular we're going to
+[07:31.76] commence
+[07:32.72] today in lecture one with
+[07:35.84] pre-relativity gravitation
+[07:42.48] so how is it is a short review
+[07:46.48] of gravitation the theory of gravitation
+[07:50.64] before relativity
+[07:55.36] before the uh it was combined with a
+[07:57.84] theory of relativity
+[07:59.04] by einstein now i should point out
+[08:02.48] that i'm assuming before i go on i
+[08:05.36] realize i should point out
+[08:06.80] that i'm going to assume some prior
+[08:08.32] knowledge i'm going to assume
+[08:10.16] that you know in particular there's one
+[08:12.56] thing i really assume
+[08:13.84] and that is that you've you've
+[08:16.48] self-studied or you've seen a course or
+[08:18.24] you've participated in a course on
+[08:19.84] special relativity
+[08:21.52] this is really vital i will not pause
+[08:24.64] to review most of the concepts of
+[08:26.96] special relativity we're going to go
+[08:28.16] straight in
+[08:29.28] and be discussing all aspects of general
+[08:32.64] relativity
+[08:34.08] without too much review of the special
+[08:36.80] relativity foundations
+[08:38.40] do make sure you know this stuff you can
+[08:40.56] get this in a multitude of places now
+[08:42.72] videos
+[08:43.36] books tutorials um if you speak german
+[08:46.40] then you can certainly take a look at my
+[08:48.56] tv show physique ah videos in particular
+[08:51.52] the last
+[08:52.08] couple of videos in that course
+[08:55.44] i gave an introduction to special
+[08:57.84] relativity actually
+[08:59.28] it's probably the material i discussed
+[09:00.88] there would be sufficient
+[09:03.28] basis for this course furthermore i'm
+[09:05.92] going to assume a little bit more
+[09:07.28] i'm going to assume that you know
+[09:08.32] calculus
+[09:10.72] that that's extremely vital we can't do
+[09:13.12] calculus or manifolds if we don't know
+[09:14.72] calculus you've got to know that
+[09:16.64] learn that and also it's vital that you
+[09:19.28] know linear algebra
+[09:23.36] in physics a knowledge of calculus and
+[09:26.00] linear algebra is absolutely essential
+[09:28.24] there's a hidden fourth
+[09:33.12] prerequisite in all the physical courses
+[09:36.24] and that's the subject of combinatorics
+[09:40.00] unless you're doing some kind of hard
+[09:41.44] combinatorics at the end you probably
+[09:42.80] haven't done any science so it's vital
+[09:44.80] that you also are familiar with some
+[09:46.32] basic notions from combinatorics
+[09:48.08] counting things pigeonhole principles
+[09:50.32] that can't hurt we won't explicitly use
+[09:52.56] these techniques
+[09:53.36] in this course but there will be
+[09:54.48] occasion that sometimes our problems
+[09:56.16] will reduce the counting problems
+[09:58.64] so these are the three core
+[10:00.24] prerequisites make sure you know your
+[10:01.60] calculus
+[10:02.32] well fundamental theorem of calculus
+[10:04.32] multivariable calculus you need to know
+[10:05.92] how to change variables
+[10:07.12] in a multi-dimensional integral you need
+[10:10.00] to know linear algebra
+[10:11.36] do you know what a matrix is as a linear
+[10:13.60] mapping how do what's an eigenvalue
+[10:15.36] what's an eigenvector
+[10:16.56] make sure you know that stuff and
+[10:18.40] combinatorics to the extent that you
+[10:20.16] know about basic counting
+[10:22.00] finite sets perhaps finite graphs these
+[10:25.52] prerequisites are vital we can't i would
+[10:28.00] suggest that you pause this video right
+[10:29.68] now
+[10:30.08] and make sure you're familiar with these
+[10:31.44] things
+[10:33.44] before listening on all right let's get
+[10:36.80] started
+[10:37.44] with a quick overview today
+[10:40.56] on gravity pre-relativity
+[10:45.20] so we'll start with the underlying
+[10:48.24] assumption of
+[10:49.20] newtonian physics so
+[10:53.76] gravity pre einstein was
+[10:56.96] that of newton and in
+[11:00.80] newtonian physics one can uh summarize
+[11:03.92] or
+[11:06.24] quantify or extract the fundamental
+[11:09.04] assumptions underlying
+[11:10.40] newtonian physics and the underlying
+[11:13.28] assumption
+[11:14.64] that we will break and so this is really
+[11:16.80] a a common thread in all of physics
+[11:19.84] is that one makes assumptions or
+[11:22.32] implicitly makes assumptions
+[11:23.76] in physical theories and that as one
+[11:25.92] learns more about the universe one is
+[11:27.52] forced to
+[11:28.16] re-evaluate and potentially change or
+[11:30.64] break these assumptions and that's
+[11:32.00] certainly the case
+[11:32.88] in the development of general relativity
+[11:35.28] and the core assumption
+[11:36.48] that will be broken in the transition
+[11:39.84] from
+[11:40.40] pre-relativity to relativity physics is
+[11:43.04] that of the assumption of the existence
+[11:45.28] of a preferred reference frame
+[11:48.32] so in newtonian physics underlying it
+[11:50.80] all
+[11:51.76] is the assumption of the existence of a
+[11:55.04] preferred
+[11:58.08] reference frame of or reference
+[12:01.60] system not only
+[12:05.04] of of rulers
+[12:08.24] but also um clocks
+[12:14.08] so i'll just say a preferred reference
+[12:15.68] system
+[12:17.20] and clocks
+[12:20.88] so this is the assumption
+[12:24.08] of newtonian physics in newtonian
+[12:27.28] physics we assume the existence of a
+[12:28.80] preferred reference system
+[12:30.08] and clocks
+[12:33.28] and we could denote or draw such a
+[12:36.24] reference system
+[12:38.56] something like this three coordinate
+[12:41.44] axes
+[12:43.68] and we would call this system
+[12:47.60] inertial so this this reference system
+[12:50.56] is preferred
+[12:53.04] and inertial if the trajectories
+[12:57.12] of a finite test mass or free test mass
+[13:00.64] let's say
+[13:01.36] upon which no force acts moves along a
+[13:03.44] straight line
+[13:09.04] so i'll highlight that here
+[13:16.08] in this particular preferred reference
+[13:17.92] frame free test masses
+[13:22.48] so it's important to say that free means
+[13:25.04] no force acts
+[13:29.20] that these move along a straight
+[13:34.88] trajectory
+[13:45.04] and do they move along the straight
+[13:46.24] trajectory at a non-constant rate node
+[13:48.08] they move along the straight
+[13:49.36] trajectory at a constant rate and the
+[13:52.08] clocks
+[13:54.96] they tick at a constant rate in this
+[13:56.64] preferred reference frame
+[14:06.48] so in particular this means a constant
+[14:08.48] displacement per unit time
+[14:12.96] and this is in a so-called inertial
+[14:16.32] reference frame
+[14:18.00] or indeed inertial reference frames are
+[14:20.80] defined
+[14:24.56] with respect to this property that free
+[14:26.56] test masses move on straight
+[14:27.92] trajectories at constant rates
+[14:32.08] there is one preferred reference frame a
+[14:34.40] system in clocks but you can get other
+[14:35.84] ones by making so-called galilean boosts
+[14:39.44] if you move a constant velocity with
+[14:40.88] respect to this preferred reference
+[14:42.08] flame then you will also
+[14:43.44] note that all three test masses move
+[14:46.64] along straight trajectories at a
+[14:48.16] constant rate uniformly in time
+[14:51.36] and now is the moment to recall
+[14:54.64] newton's second law
+[14:59.12] which tells us the trajectory or how to
+[15:01.20] calculate the trajectories
+[15:02.64] of particles in such reference frame
+[15:06.24] and it's written with respect
+[15:11.20] to an inertial reference system as
+[15:16.64] the following
+[15:20.24] so with respect to
+[15:24.84] um an inertial
+[15:31.12] reference system
+[15:34.40] so just remember
+[15:37.68] this formulation of newtonian mechanics
+[15:49.04] namely the acceleration of the test mass
+[15:52.16] or test particle
+[15:54.16] is determined by the force acting on it
+[15:58.08] so f here this is more for notation sake
+[16:01.20] f is denotes the force force is a three
+[16:03.28] vector here
+[16:04.80] m i denotes the so-called inertial mass
+[16:07.52] of the particle
+[16:09.92] and x double dot is the acceleration
+[16:15.20] of the test particle so this is newton's
+[16:18.56] second law
+[16:19.44] underlying newtonian physics
+[16:25.84] now interestingly you can write this is
+[16:28.16] all with respect to an inertial
+[16:29.44] reference frame
+[16:30.88] but you can write the equations of
+[16:33.60] motions with respect to
+[16:34.96] non-inertial reference frames
+[16:38.96] and that's a key
+[16:44.72] this is something we're going to do a
+[16:46.00] lot
+[16:49.04] in general relativity because we're
+[16:50.56] going to have test masses moving in
+[16:52.80] in gravitational fields gravitational
+[16:55.28] fields induce acceleration so with
+[16:56.96] respect to say static lab-based
+[16:58.64] reference frames
+[17:00.16] where particles will move on uh
+[17:03.44] they will be falling and accelerating
+[17:05.36] but with respect to the accelerating
+[17:06.96] reference frame of a
+[17:08.16] freely falling test mass things will
+[17:09.60] look different
+[17:11.44] so with respect to non-inertial
+[17:13.28] reference system
+[17:16.84] frame
+[17:22.96] we can also write out newton's equations
+[17:26.40] newton's second law there's no
+[17:27.60] difficulty in doing this
+[17:29.44] and how do we do this well we
+[17:32.48] we introduce some unit vectors
+[17:37.52] this is one way of doing it we can do it
+[17:39.04] another way in the next lecture
+[17:40.72] so we define three unit vectors
+[17:50.56] and we'll call them x hat prime
+[17:53.60] and the thing about these unit vectors x
+[17:55.28] hat prime t
+[17:57.12] is that they change with time
+[18:00.64] so they describe the unit vectors with
+[18:03.44] respect to
+[18:04.16] a moving accelerating reference frame so
+[18:06.88] they hear the three unit vectors that
+[18:08.32] we're going to use to describe things in
+[18:10.08] our accelerating or non-inertial
+[18:12.32] reference frame
+[18:15.60] so we introduce these three unit vectors
+[18:17.36] x prime y prime z
+[18:18.64] prime we assume that the orthonormal
+[18:22.48] and in an inertial
+[18:25.52] reference frame determined sorry in a
+[18:28.48] non-inertial right
+[18:30.73] [Music]
+[18:33.36] frame determined by these vectors then
+[18:36.16] trajectories of straight lines might
+[18:38.08] look curved because if you're
+[18:39.44] accelerating with respect to
+[18:41.04] an inertial reference frame the
+[18:42.48] trajectory of a free
+[18:45.12] test mass won't look straight anymore
+[18:48.00] you're accelerating
+[18:51.20] so in a reference frame with respect
+[18:54.40] to this basis
+[19:02.72] let's start it off in our old reference
+[19:08.84] frame
+[19:12.24] so if we go back to our initial
+[19:15.68] inertial reference frame let's go back
+[19:18.00] up here i've drawn it here
+[19:19.20] then one can introduce the unit vectors
+[19:22.96] pointing along the coordinate axis as x
+[19:25.20] hat y hat and z hat these
+[19:27.12] are the original unit vectors so in the
+[19:30.08] reference
+[19:30.56] with respect to the old basis
+[19:35.12] we can write the trajectory
+[19:38.40] of the test mass as we can decompose it
+[19:41.36] with respect to these three unit vectors
+[19:42.80] so we have w
+[19:43.68] x w x is the coordinate
+[19:47.20] component in the x direction of the
+[19:50.64] displacement vector of this test mass w
+[19:54.00] y it's also the y component so on blah
+[19:56.40] blah blah
+[19:57.28] w z
+[20:00.64] and uh and fine so we've described with
+[20:03.44] these three numbers the trajectory
+[20:05.68] of a of a particle with respect to an
+[20:08.00] inertial reference frame
+[20:09.76] these are just the coordinates
+[20:16.96] but of course we want to describe things
+[20:19.28] with respect to
+[20:20.00] our new reference frame how do we do
+[20:21.84] that well
+[20:23.60] we just write everything
+[20:26.80] in terms of this new basis it's a it's a
+[20:29.28] moving basis this basis moves in time
+[20:31.44] okay remember these
+[20:34.40] x y's and z's are vectors okay one short
+[20:37.04] aside on notation
+[20:40.64] i use um
+[20:46.84] notation
+[20:48.80] i use the underline to denote a 3 vector
+[20:53.12] or even a 4 vector this just denotes a
+[20:55.76] vector
+[21:00.08] if you've watched any of my other videos
+[21:01.68] or been through any of my other courses
+[21:03.52] you'll you'll probably be familiar with
+[21:04.88] this notation
+[21:05.60] i tend to use lowercase letters to
+[21:07.44] denote vectors
+[21:08.88] uh then matrices
+[21:12.16] i put three two lines underneath
+[21:17.20] so a matrix times by a vector looks
+[21:20.40] something like
+[21:21.52] this tend to use that notation but that
+[21:25.28] i'm not going to use a three-line
+[21:26.48] notation for tensors i think that's
+[21:27.92] ridiculous for some reason
+[21:29.44] and so we're not going to be doing that
+[21:31.12] tenses will always be clear from context
+[21:33.68] when we introduce them like i'm not
+[21:35.12] expecting that you know what a tensor is
+[21:37.44] um that's something we're going to
+[21:39.20] introduce in this course
+[21:40.80] i i won't use underline notation
+[21:49.04] so if you're watching this again for
+[21:50.88] review i won't be using this underline
+[21:53.44] notation instead we'll probably that
+[21:55.44] will have shifted over to index notation
+[21:57.36] by that point
+[21:58.00] here also i should
+[22:01.76] pause to mention index notation
+[22:05.76] also something that you should have
+[22:07.12] picked up in a special relativity course
+[22:09.84] or
+[22:10.24] even indeed a reasonably advanced course
+[22:12.80] of mechanics
+[22:14.48] we refer to elements of vectors and
+[22:17.04] matrices with the
+[22:18.16] also with index notation so if we have a
+[22:20.64] vector a
+[22:21.84] then we can denote the x component
+[22:25.12] of a
+[22:30.56] with a square brackets and an x or
+[22:34.00] we might write it as ax
+[22:40.08] similarly for matrices
+[22:43.76] if i have the x y component of a matrix
+[22:50.72] then i'm also going to use the notation
+[22:53.12] x subscript x y
+[22:55.60] probably in fact very quickly we're
+[22:58.24] going to see
+[22:58.88] that when we move to relativity physics
+[23:00.48] i'll be putting that index upstairs as
+[23:02.24] well we'll explain the upstairs notation
+[23:04.08] when we get there
+[23:06.80] so there it is that's some notations
+[23:08.72] that we're going to be using when we're
+[23:10.08] expressing
+[23:10.96] uh vector quantities in newtonian
+[23:13.68] physics and certainly we're going to
+[23:15.28] this notation will transition to the
+[23:17.36] relativity world
+[23:18.96] as well all right so there's
+[23:22.08] if we go back to here what was our goal
+[23:23.44] well we have a trajectory
+[23:28.88] with respect to an inertial reference
+[23:30.96] frame but we can also express that
+[23:32.16] trajectory with respect to a
+[23:33.44] non-inertial reference frame
+[23:35.12] as soon as we've chosen a
+[23:38.96] set of unit vectors for the
+[23:42.88] non-inertial reference frame no problems
+[23:45.04] there that's a it's a little
+[23:47.04] linear algebra computation
+[23:53.04] and when you do that so suppose you
+[23:56.24] insist on working with respect to a
+[23:57.76] non-inertial reference frame
+[23:59.28] well just substitute this stuff into
+[24:01.20] here this stuff here into newton's
+[24:03.04] second law and then you'll see that you
+[24:04.48] get
+[24:04.88] that newton's second law looks different
+[24:09.44] so we're going to that's a homework
+[24:10.96] question also we'll see it in the next
+[24:12.24] lecture anyway
+[24:13.52] um so
+[24:18.72] and one way of summarizing this i
+[24:20.24] suppose is that physics in
+[24:22.16] non-inertial reference frames
+[24:32.72] you know as captured by the second law
+[24:40.48] newton's second law not the second law
+[24:42.72] of thermodynamics
+[24:44.24] as captured by newton's second law gives
+[24:46.88] rise
+[24:51.20] to additional force like terms
+[25:00.72] and uh these are called inertial forces
+[25:05.60] and i'll give you some examples so we
+[25:08.08] have
+[25:09.68] the centrifugal force centripetal force
+[25:14.40] coriolis euler
+[25:19.36] et cetera et cetera depending on the
+[25:21.68] non-inertial reference frame
+[25:23.20] that you you have to work with you'll
+[25:25.60] pick up different additional terms
+[25:27.52] on the right hand side
+[25:31.04] and and this is there will be a homework
+[25:33.36] question on this
+[25:44.08] okay we're going to distinguish forces
+[25:46.88] or true forces from such
+[25:48.64] apparent forces
+[25:59.52] so this you know obviously these
+[26:03.20] centripetal centrifugal coriolis euler
+[26:05.76] and so on forces
+[26:06.88] they're not true right it's just that we
+[26:09.12] we decided to be
+[26:10.72] a bit stubborn and describe physics with
+[26:12.72] respect to an accelerating reference
+[26:14.16] frame
+[26:15.28] so true forces are ones
+[26:18.32] that don't arise from being in a
+[26:20.64] non-inertial reference frame
+[26:27.36] so such apparent inertial forces
+[26:31.92] so that's really crucial that we
+[26:33.12] distinguish between these
+[26:35.44] these two things in particular in
+[26:39.20] newtonian physics
+[26:44.88] this is one of those core assumptions
+[26:47.04] that we're going to have to revisit when
+[26:48.40] we go to the relativity
+[26:49.92] and go to general relativity so in
+[26:52.88] particular in newtonian physics
+[26:57.12] uh gravity is a true force
+[27:04.64] but this will not be true
+[27:09.68] in grgr of course is general relativity
+[27:14.00] the pretty much universally accepted
+[27:16.16] acronym for general relativities g are
+[27:18.00] they pretty much universally accepted
+[27:19.52] acronym for special relativity is sr
+[27:24.40] okay that's just a short
+[27:27.44] reminder to set some notation of the of
+[27:30.32] some concepts underlying
+[27:31.84] newtonian physics and indeed these are
+[27:33.44] concepts we're going to have to revisit
+[27:34.64] when we
+[27:35.44] uh build up general relativity now
+[27:39.84] let's uh in particular these are the
+[27:42.00] this is the concept of force
+[27:43.36] in newtonian physics and reference
+[27:44.88] frames now let's discuss
+[27:46.84] mass mass is another concept that's uh
+[27:50.48] fundamental in newtonian physics and
+[27:52.08] also in relativity physics
+[27:53.76] and also in quantum mechanics to
+[27:58.56] but it turns out that although it seems
+[28:01.92] intuitively clear
+[28:03.68] that you know what mass is capturing
+[28:05.68] there's in fact
+[28:06.80] several independent notions or
+[28:09.20] conceptually distinct
+[28:11.12] quantities that you can call mass and
+[28:13.76] this we should
+[28:15.68] separate out these these different
+[28:19.04] conceptually distinct quantities uh
+[28:22.00] because
+[28:23.52] arguing that they're the same is a is a
+[28:26.24] good deal of interest it
+[28:27.52] led to a good deal of interesting
+[28:28.84] physics so there's at least
+[28:31.92] uh i'll say at least because depending
+[28:34.96] on how
+[28:36.08] baroque you're feeling you might be able
+[28:37.44] to think of ways to
+[28:40.48] have a notion of mass that i'm captured
+[28:43.04] by these lower three but i think these
+[28:44.56] three will capture everything in utonium
+[28:46.72] physics
+[28:47.84] there's at least three conceptually
+[28:53.44] distinct quantities
+[28:57.44] that we could call mass i'm going to
+[28:59.92] distinguish between them right
+[29:02.00] so the first one is the so-called
+[29:03.60] inertial mass the one familiar
+[29:06.16] from the second law that i wrote down
+[29:08.00] just above and i even introduced it up
+[29:10.84] there
+[29:13.44] and
+[29:17.28] do it differently this is the constant
+[29:20.48] of proportionality
+[29:30.40] this is the constant proportionality
+[29:31.92] newton's second law
+[29:39.44] so newton's second law right in
+[29:41.12] abbreviated vector form is f
+[29:42.88] equals m a what's this m m is the
+[29:45.60] inertial mass
+[29:46.48] right of the particle it's the constant
+[29:47.92] of proportionality that relates
+[29:49.12] acceleration to the force
+[29:54.56] but there's another notion in fact two
+[29:57.92] other notions which are
+[29:59.44] not often distinguished but you should
+[30:02.32] distinguish them it's an exercise to
+[30:03.92] prove that in fact they're the same
+[30:05.52] the next notion is the notion of active
+[30:08.88] gravitational mass
+[30:16.16] and so this is the
+[30:19.20] the mass that appears
+[30:22.24] in the law that produces the
+[30:23.84] gravitational field that other masses
+[30:25.44] respond to
+[30:53.36] so if you recall the gravitational force
+[30:56.40] law
+[30:57.20] g is the gravitational field produced by
+[31:00.72] a mass and it has it
+[31:04.16] is described by the following formula
+[31:06.48] minus big g
+[31:07.76] times by m little g a this is the circle
+[31:11.04] active mass
+[31:12.88] x minus x prime which is the
+[31:15.20] displacement between
+[31:16.40] the producing mass and the the test mass
+[31:19.20] that
+[31:20.08] responds to this field
+[31:24.88] divided by x minus x prime cubed
+[31:29.92] so x prime is the location
+[31:36.16] of the generating mass sorry i probably
+[31:38.56] said it the wrong way around let me
+[31:40.88] write it correctly so x prime is the
+[31:44.08] location of the generating mass
+[31:46.48] and the g
+[31:50.24] is the gravitational constant
+[31:59.68] given by the following number 6.6743015
+[32:06.64] is uncertain times 10 to the minus 11 is
+[32:10.56] massively tiny meters cubed
+[32:15.52] kilograms minus one seconds minus two
+[32:22.64] so the fact that big g is so tiny makes
+[32:26.00] understanding quantum gravity is so
+[32:27.44] difficult
+[32:32.40] okay so we have a notion of a of
+[32:34.56] so-called active gravitational mass
+[32:36.24] that's the the mass that's responsible
+[32:38.08] for producing
+[32:41.36] a gravitational field but there's
+[32:44.00] another one right there's another notion
+[32:45.60] of mass that's
+[32:46.40] sort of at least our priori uh
+[32:51.36] independent notion or conceptually
+[32:53.04] distinct notion that's the passive
+[32:54.56] gravitational mass
+[33:01.28] and this is the mass that responds to an
+[33:03.20] external gravitational field
+[33:04.88] by accelerating
+[33:08.32] so this is the notion of mass that's
+[33:11.44] responsible for responding
+[33:15.44] to an external
+[33:19.76] gravitational field
+[33:30.24] by accelerating and the formula for that
+[33:33.52] is given by newton's second law m
+[33:37.12] g we'll call this m subscript g
+[33:40.56] but now with a p at the top times by g
+[33:43.28] the gravitational field
+[33:49.44] so it's the passive gravitational mass
+[33:55.20] now it is assumed
+[34:00.40] should note this right it's an
+[34:01.60] assumption underlying a lot of physics
+[34:03.44] that these masses
+[34:04.56] are not negative so this is a typical
+[34:07.68] assumption
+[34:08.48] but not proved right you can't deduce
+[34:10.80] the non-negativity of mass
+[34:13.28] it's an assumption and observed
+[34:15.52] supported by extensive object
+[34:18.16] physics observations
+[34:22.32] but it's an assumption that these are
+[34:24.56] all
+[34:25.44] non-negative uh interestingly
+[34:29.52] it is possible to to build physics
+[34:32.96] with the negative masses it's not
+[34:36.08] at least immediately inconsistent there
+[34:37.84] have been attempts to build physics with
+[34:39.52] negative masses and things
+[34:41.44] hold together it's very fascinating the
+[34:44.96] physics of negative masses
+[34:46.40] they're more like negative charges and
+[34:48.24] all kinds of crazy things can happen
+[34:49.84] when you have negative masses but it
+[34:51.28] doesn't
+[34:52.00] lead to immediate breakdowns of the laws
+[34:54.08] of physics at least
+[34:55.44] as far as what uh if you if you think
+[34:58.08] about it
+[34:59.44] if you try and pursue the theory there's
+[35:01.84] no obvious breakdowns
+[35:05.36] in physics and people have pursued this
+[35:10.56] now there's a reason why we don't talk
+[35:12.00] about these three masses
+[35:13.68] these three concepts three distinct
+[35:16.08] conceptually distinct
+[35:17.44] notions of mass because there's actually
+[35:19.36] relationships that you can prove and
+[35:20.96] pretty much immediately
+[35:27.60] between these three concepts
+[35:38.80] and it's an exercise for you to show
+[35:41.44] that really we don't bother with the
+[35:42.72] difference between passive and active
+[35:44.98] [Music]
+[35:48.56] gravitational mass
+[35:52.48] and the reason we don't ever bother with
+[35:53.76] it is because if you use newton's third
+[35:56.84] law
+[36:03.76] you can actually show
+[36:10.72] you can argue that mga
+[36:13.76] the active gravitational mass divided by
+[36:16.72] mgp
+[36:17.76] the passive gravitational mass is a
+[36:20.24] universal constant
+[36:25.60] so if you choose your units right you
+[36:27.44] can just arrange for them to be the same
+[36:35.84] we conclude that mga equals mg
+[36:39.68] p equals some universal gravitational
+[36:42.80] mass so that's why you never really talk
+[36:44.48] about
+[36:44.88] the difference between these two
+[36:46.64] gravitational masses
+[36:48.56] you can just use newton's third law so
+[36:50.16] it's a very good exercise for you to
+[36:51.92] think this through
+[36:52.96] do do these exercises they will also
+[36:55.52] appear on the exercise sheets anyway
+[36:57.68] so you're pretty much forced to do these
+[36:59.28] exercises if you're taking this course
+[37:02.72] now you know we we can get bold now
+[37:05.44] we've seen that the active and the
+[37:06.64] passive gravitational masses
+[37:08.00] are the same so maybe we can just prove
+[37:10.00] using newton's whatever laws that
+[37:12.16] um there's a direct relationship between
+[37:15.04] the
+[37:15.36] inertial and gravitational mass well you
+[37:18.24] can't
+[37:19.04] and that's really an amazing
+[37:25.20] this has led to you know this is part of
+[37:27.20] the ingredients that led
+[37:28.56] einstein to the general theory of
+[37:29.92] relativity that the fact that you can't
+[37:32.16] prove that the same but
+[37:36.48] and this is crucial
+[37:39.84] they appear to be equal right so
+[37:42.88] this has been tested a lot there's
+[37:45.20] extensive
+[37:45.92] so these these quantities these concepts
+[37:48.32] of gravitational inertial mass
+[37:50.08] uh uh uh independent conceptual notions
+[37:54.40] however extensive experimental
+[37:58.72] evidence suggests right it doesn't
+[38:02.88] prove it suggests that mg
+[38:05.92] equals mi
+[38:09.36] so the hypothesis that they're
+[38:12.88] equal hasn't been rejected yet
+[38:16.64] could be that they're not equal there
+[38:18.00] are extensive experiments there are
+[38:19.52] experiments continuing to this day that
+[38:21.20] test the relationship between mg and mi
+[38:23.28] but there's no
+[38:24.56] so far there's no contradiction to the
+[38:26.88] hypothesis
+[38:28.16] that mg equals mi
+[38:31.44] this leads us to the following postulate
+[38:40.72] which we're going to call the
+[38:41.60] universality of free fall or uff
+[38:44.48] for short
+[38:50.16] and the universality free pool what does
+[38:51.68] it say it says that in the gravitational
+[38:53.28] field g
+[38:54.16] the orbit of a test mass only depends on
+[38:56.16] initial conditions
+[38:57.60] and given initial conditions the same
+[39:00.40] then
+[39:00.88] the same trajectory will be the same for
+[39:02.80] all test messages our way around
+[39:38.80] so the orbit in a gravitational field g
+[39:41.28] the orbit of a test mass
+[39:44.08] only depends on the initial conditions
+[39:46.00] that's the statement of universality of
+[39:47.68] free fall
+[39:49.12] and if you have the same initial
+[39:51.92] conditions then you can get the same
+[39:53.36] trajectory for all test masses
+[39:57.52] cool so initial conditions i'll
+[40:01.04] abbreviate with ic
+[40:05.84] so the same ics initial conditions will
+[40:08.56] give
+[40:09.04] the same trajectories
+[40:12.88] not for just one test mass but for all
+[40:15.12] test masses
+[40:23.04] so let's investigate some consequences
+[40:24.88] of the universality of free fall this
+[40:26.56] postulate
+[40:30.64] so we assume that we have a test mass
+[40:33.44] which is a point
+[40:34.40] right okay i haven't said this um so far
+[40:38.72] but you should visualize a test mass as
+[40:42.00] a point
+[40:45.28] i'll just write that in quote marks
+[40:46.88] because the minute you invoke quantum
+[40:48.16] mechanics all this goes completely crazy
+[40:51.04] and even indeed points in general
+[40:52.72] relativity are pretty
+[40:55.20] pretty uh
+[40:58.48] let's say hairy topics you know if you
+[41:01.36] concentrate a certain amount of mass
+[41:03.20] into a teeny tiny radius you're going to
+[41:05.44] get black holes
+[41:06.56] so but it's an idealized notion the
+[41:09.36] notion of a test mass as a point
+[41:12.80] so you have a test mass in a
+[41:14.16] gravitational field so you
+[41:15.84] you can draw a gravitational field as a
+[41:18.40] bunch of arrows that sort of point to
+[41:19.84] something heavy
+[41:20.72] like a planet this is a gravitational
+[41:23.92] field g it depends on your position
+[41:27.84] and so you've got a test mass in this
+[41:29.44] gravitational field
+[41:31.28] and so i'll draw the test mass i don't
+[41:32.88] know
+[41:34.40] green maybe so here's the test map
+[41:38.88] make sure it's actually green when i say
+[41:40.32] it's green here's the test mass it's
+[41:42.08] this green dot
+[41:42.88] and it's moving on some trajectory in
+[41:44.80] this gravitational field generated by
+[41:46.64] this
+[41:47.04] heavy object according to the
+[41:48.40] gravitational force law
+[41:50.72] and uh well what trajectory does it
+[41:52.72] follow well this one right
+[41:54.88] we apply newton's second law mg times by
+[41:58.16] the gravitational field where do we
+[41:59.52] evaluate it where the particle is
+[42:01.36] x t
+[42:05.12] and it's going to be equal to the
+[42:06.72] inertial mass times by
+[42:08.96] the acceleration of this particle
+[42:13.20] or test mass and rewriting this
+[42:17.76] we see that the acceleration of the test
+[42:19.68] mass is equal to the ratio
+[42:21.84] of the inert of the gravitational and
+[42:23.68] inertial masses
+[42:29.12] times by the gravitational force field
+[42:31.52] and it's this ratio
+[42:32.80] which will be a universal constant
+[42:35.04] according to uff
+[42:53.52] so we're going to choose units from now
+[42:56.84] on
+[43:00.80] so that mg equals mi
+[43:14.16] so i've sort of implied this already but
+[43:16.96] there's an important remark
+[43:24.84] uff is not a consequence of
+[43:28.32] newtonian theory
+[43:41.92] it's a falsifiable hypothesis
+[43:53.12] and two uff relates to test masses
+[44:04.48] now test masses is already sort of
+[44:06.40] implied or a bit of a subtle concept
+[44:08.72] because you can't have a finite mass and
+[44:10.96] an infinite
+[44:11.84] infinitely small volume
+[44:17.04] further you know what happens
+[44:20.80] when you have lots of test masses and
+[44:22.72] they generate their own gravitational
+[44:24.24] fields
+[44:25.04] there's an element of subtlety there
+[44:26.40] that we won't delve too deeply into
+[44:28.40] because we will resolve this
+[44:29.92] in general relativity anyway
+[44:37.44] so now i've spent some time
+[44:40.64] reviewing some concepts in newtonian
+[44:43.44] physics
+[44:44.80] the next part of the lecture today will
+[44:47.20] be
+[44:47.92] beginning the transition from newtonian
+[44:49.92] physics to general relativity
+[44:51.60] and we'll see how some of these concepts
+[44:53.44] these fundamental assumptions allowing
+[44:54.88] newtonian physics have to be revised
+[44:57.28] and how other aspects of nutrient
+[44:58.80] physics will inform the development of
+[45:01.12] general relativity
+[45:13.20] so this next part of the lecture will be
+[45:14.64] called from newtonian gravity to general
+[45:16.88] relativity
+[45:20.48] and here we're going to
+[45:23.52] explain
+[45:28.00] how you might first attempt to
+[45:29.68] incorporate relativity in newtonian
+[45:31.44] physics together and gravity
+[45:34.32] and i'll also expand a little bit on how
+[45:37.12] gravity and special relativity are
+[45:41.68] incompatible although i say that
+[45:44.08] essentially with quote marks because as
+[45:45.68] you'll see
+[45:46.48] that the more you think about it the
+[45:48.48] more you can make
+[45:50.16] gravity compatible especially relativity
+[45:52.08] the closer you get to general relativity
+[45:57.04] so but as we're going to transition from
+[45:58.96] u-turning to general relativity
+[46:00.80] newtonian gravity to general relativity
+[46:02.32] the first step we want to do is to
+[46:03.60] formulate newtonian gravity as a field
+[46:05.44] theory
+[46:07.04] so this is uh this is indeed possible
+[46:14.32] you probably haven't seen it formulated
+[46:15.84] like this
+[46:18.16] and uh it's a more or less essential
+[46:21.36] ingredient if we want to express
+[46:22.64] newtonian gravity as
+[46:24.24] somehow a theory compatible special
+[46:26.84] relativity
+[46:28.72] and the motivation comes from
+[46:30.08] electrodynamics right
+[46:33.76] you know electrodynamics is compatible
+[46:38.72] with special relativity the reason it's
+[46:40.24] compatible with special relativity is
+[46:41.68] that
+[46:42.72] the information propagates at the speed
+[46:44.56] of light and that
+[46:46.32] lawrence transformations leave maxwell's
+[46:48.00] equation this variant
+[46:50.56] so electrodynamics and sr
+[46:54.24] are compatible right that's the that's
+[46:56.24] the motivation for why we're going to
+[46:57.84] try and
+[46:59.20] discuss newtonian theory as a field
+[47:00.96] theory you can do it newtonian
+[47:02.48] gravity is a field theory and since
+[47:05.84] and you know why would we even think
+[47:07.68] this is possible well because basically
+[47:09.36] newtonian
+[47:10.08] gravity looks very very much like
+[47:11.76] electrostatics right
+[47:16.32] so
+[47:21.76] so newtonian gravity is sort of like
+[47:24.16] electrostatics
+[47:29.44] and when you do electrodynamics you
+[47:31.60] learn how to make
+[47:32.88] electrodynamics right you have your
+[47:34.72] static theory this electrostatics theory
+[47:36.64] you add in dynamics and then woof
+[47:38.32] it's uh you get maxwell's equations and
+[47:41.52] all
+[47:41.84] is compatible with special relativity
+[47:44.64] and we could hope
+[47:45.76] by doing the same right you know we
+[47:47.20] start with elect newton gravity as a
+[47:49.84] static
+[47:50.40] field theory we could hope that by
+[47:52.72] modifying it in a similar way we might
+[47:54.96] get
+[47:56.08] a beautiful theory of gravity and
+[47:59.20] combined with relativity
+[48:02.40] so let me just before before i explain
+[48:05.44] why that doesn't quite work
+[48:07.92] let's highlight some similarities
+[48:09.60] between
+[48:14.80] newton gravity or gravito statics
+[48:18.24] and electrostatics
+[48:31.52] so that's our next goal let's highlight
+[48:33.52] some similarities right
+[48:35.36] well firstly the gravitational field
+[48:42.00] is determined by an equation where do
+[48:44.80] you get
+[48:45.12] what is the gravitational field for a
+[48:46.56] start well you give it a time
+[48:48.96] and a location and it'll give you a
+[48:50.48] force vector so the gravitational field
+[48:52.72] is a field it takes in a time coordinate
+[48:55.04] it takes in a space coordinate and it
+[48:56.96] gives you a vector
+[49:02.88] right time
+[49:06.08] space you give it a time and a space and
+[49:09.20] the gravitational field as a
+[49:10.48] mathematical object hands you a vector
+[49:12.40] force vector
+[49:16.08] so mathematically a gravitational the
+[49:18.16] gravitational field is a field right you
+[49:20.00] give it a location space time and it
+[49:21.36] gives you a vector so it's a vector
+[49:22.64] field
+[49:23.12] just like the the electric field right
+[49:26.24] and so what's a source for this field
+[49:29.36] well the gravitational masses right
+[49:32.88] any mass
+[49:38.40] so the gravitational mass density is a
+[49:40.64] source for the gravitational
+[49:42.40] field so mathematically the
+[49:43.68] gravitational force field is a field
+[49:46.16] and it's generated or is sourced by the
+[49:49.52] the density of gravitational mass and
+[49:52.32] the density of gravitational mass is
+[49:53.84] also a field we call it rho it goes to
+[49:55.76] row plus because we assume that mass is
+[49:57.68] non-negative
+[49:59.44] so rho give it a time and space it's
+[50:02.16] mathematically a field as well it just
+[50:03.68] tells you how much
+[50:04.80] mass density is in that location of
+[50:07.52] space time
+[50:09.20] and how does mass density
+[50:12.88] uh source the gravitational field well
+[50:14.48] has to obey an equation well this
+[50:15.84] equation right that the divergence of
+[50:17.28] the gravitational
+[50:18.32] field equals minus 4 pi big g
+[50:21.76] times rho it's just like coulomb's law
+[50:24.84] right
+[50:33.92] it's just like coulomb's law so
+[50:36.32] newtonian physics if you have some mass
+[50:38.00] density around gravitational mass
+[50:39.52] density
+[50:40.48] then that generates the gravitational
+[50:42.56] field how do you compute it we'll take
+[50:44.08] the divergence of the gravitational
+[50:46.56] field force field and set it equal to
+[50:49.04] minus 4 pi g times
+[50:50.40] rho then you've got yourself
+[50:54.48] the gravitational field
+[50:57.60] big g here
+[51:01.28] uh so this is just like coulomb's law
+[51:03.28] right this is looking good right
+[51:05.28] when we built up electrodynamics we
+[51:06.88] started out with electrostatics and then
+[51:08.96] we added in dynamics and then everything
+[51:10.88] worked fine
+[51:12.16] now because of basic vector rules
+[51:15.76] vector differential operator rules we
+[51:17.60] have that
+[51:19.04] if you take the curl
+[51:25.12] of uh of g
+[51:28.48] you get zero
+[51:36.16] so g is conservative
+[51:40.08] just like the electric field
+[51:46.80] so what can that what does that tell us
+[51:48.80] it does actually tell us something
+[51:50.80] just as in electrostatics you know
+[51:54.40] by poincares
+[51:57.76] lemma
+[52:02.08] we learn the existence of a potential
+[52:06.16] phi which is also a field a scalar field
+[52:11.20] so that or such that the gravitational
+[52:13.76] field g can be obtained by
+[52:16.16] taking the the minus the gradient of the
+[52:18.40] scalar
+[52:19.20] gravitational potential and these minus
+[52:21.52] signs are convention
+[52:23.84] you put plus sign there if you're
+[52:25.12] feeling perverse
+[52:27.84] but then you have to propagate it
+[52:29.04] everywhere throughout your calculations
+[52:38.24] so we just as in electrostatic statics
+[52:48.48] we can divide a uh we can obtain a field
+[52:51.92] equation
+[52:52.96] for phi the gravitational potential
+[53:13.36] you can derive a field equation the
+[53:14.96] laplace operated times by phi
+[53:18.00] is four pi g rho
+[53:21.36] so the scalar potential is determined by
+[53:23.60] the mass density gravitational mass
+[53:25.36] density
+[53:26.80] where that's porcelain equation
+[53:38.96] if you want a review of electrodynamics
+[53:42.96] and you happen to speak german then you
+[53:44.32] can check out my two edition pcb
+[53:46.16] lectures
+[53:49.92] otherwise there are no shortage of very
+[53:51.92] good lectures on youtube
+[53:53.84] or tutorials on the basics of
+[53:55.84] electrodynamics
+[53:58.16] so so far gravit the newton gravity
+[54:00.64] looks very much like
+[54:01.84] electrostatics in fact sort of symbol
+[54:04.56] for symbol
+[54:05.28] you can substitute everything now we've
+[54:08.64] got a
+[54:11.36] a lawrence force law so there's an
+[54:13.12] equation of motion for test masses
+[54:17.68] which would be the analog of the
+[54:19.76] lawrence law
+[54:23.44] and that is that the acceleration of a
+[54:25.68] test mass
+[54:27.44] is minus grad phi t
+[54:30.96] evaluated where the test mass actually
+[54:36.84] is
+[54:42.56] and that's also a very interesting
+[54:48.24] analog of electrostatics
+[54:52.32] or i should say that i've assumed here
+[54:56.40] so for the mathematically
+[54:59.76] minded there is some assumptions
+[55:03.52] underlying
+[55:05.68] the the solution to possible equation
+[55:09.28] um that i'm about to to show i'm going
+[55:12.48] to assume here
+[55:13.60] that the support of the gravitational
+[55:16.32] mass
+[55:17.60] density field is compact what does that
+[55:20.96] mean it means that there's not a
+[55:22.24] continuous distribution of matter
+[55:23.60] throughout the universe in fact
+[55:25.04] the distribution of matter is stuck in
+[55:27.12] finite regions
+[55:29.20] so if you know some topology which is
+[55:32.64] not strictly necessary for this
+[55:34.00] course what i'm assuming here is that
+[55:37.60] the closure of the set
+[55:39.20] of points where the gravitational mass
+[55:40.72] density is not zero
+[55:43.20] that that set is compact
+[55:47.68] and since we're in uh
+[55:56.40] in euclidean space then we can invoke
+[55:58.56] the heiner boggle theorem and we learned
+[56:00.24] that that's
+[56:01.20] a closed and bounded region so if the
+[56:04.24] mass density
+[56:05.04] gravitational mass density we're going
+[56:06.64] to assume
+[56:08.88] that the gravitational mass densities is
+[56:11.44] restricted to finite regions
+[56:16.40] we've got this this possible equation
+[56:18.72] for the gravitational
+[56:20.64] scalar potential
+[56:23.68] uh can we deduce the gravitational
+[56:25.52] scalar potential as a function of rho
+[56:27.20] well yes we can we've done that in
+[56:28.88] electrode statics
+[56:32.00] and as long as you're a bit careful
+[56:33.20] about your boundary conditions
+[56:38.64] to prevent weird soliton solutions
+[56:43.44] so as long as the gravitational scalar
+[56:45.44] potential is assumed to decay to zero
+[56:47.84] as you go out to infinity
+[56:51.68] then we get a unique solution for the
+[56:54.72] gravitational scalar potential just as
+[56:56.56] we do in electrostatics
+[56:58.08] it's minus g the integral over all of
+[57:00.48] space
+[57:03.04] so three dimensional integral you take
+[57:05.44] the gravitational
+[57:06.56] you take the gravitational mass density
+[57:09.44] divided by x minus x
+[57:10.96] prime take the norm and integrate that
+[57:14.56] over all of space and uh
+[57:18.40] and then you have a nice well-defined
+[57:19.92] gravitational scale of potential
+[57:24.72] and so
+[57:27.76] we have a beautiful analog
+[57:33.04] of electrostatics that we might call
+[57:36.32] grabato statics
+[57:46.88] and seeing this you'll be like this is
+[57:49.92] great
+[57:51.60] well let's just do what we did for
+[57:52.84] electrodynamics and we've combined
+[57:56.48] relativity and gravitational newtonian
+[57:58.32] gravity theory
+[57:59.52] so let's just
+[58:02.80] talk a little bit about what happens if
+[58:04.72] you try and do that so how to add
+[58:06.84] dynamics
+[58:08.96] to the gravitational field
+[58:12.64] so at the moment the gravitational field
+[58:14.48] in this discussion is static it doesn't
+[58:16.24] change with time
+[58:23.36] so we have you know some options for how
+[58:25.60] to add dynamics
+[58:26.64] to the gravitational field so what
+[58:28.32] happens if the the mass density that
+[58:30.40] sources the gravitational field what
+[58:31.60] happens if that changes well we could
+[58:33.52] just assume instantaneous propagation
+[58:44.08] or we could add dynamics to the
+[58:45.36] gravitational field by
+[58:47.20] assuming a scalar wave equation for five
+[58:53.52] just that's not what happened in
+[58:56.16] electrodynamics but hey right we could
+[58:57.60] do it here
+[59:01.84] it's allowed we could do the
+[59:03.76] electrodynamics thing
+[59:05.36] we could complete the gravitational
+[59:09.20] scalar
+[59:10.32] potential to a vector to a four vector
+[59:16.00] it's a third option and just like for
+[59:20.12] electrodynamics
+[59:27.36] or we could complete
+[59:33.36] phi to a tensor
+[59:36.96] in this case a symmetric 10. so this
+[59:38.48] will make more sense as we go through
+[59:40.00] the course
+[59:42.40] that'll be a fourth options fifth five
+[59:44.24] fifths and six options but
+[59:45.68] interestingly some things happen when
+[59:48.48] you follow up these assumptions
+[59:50.16] now there's a very beautiful discussion
+[59:51.84] of this in mexico and wheeler chapter
+[59:53.44] seven i highly recommend you go and take
+[59:54.88] a look at it
+[59:57.84] where they follow up all of these
+[59:59.04] options for adding dynamics to the
+[60:01.12] gravitational field so
+[60:03.92] i don't really need to say much about
+[60:05.20] the zeroth version there's obvious
+[60:07.20] causality problems that make it
+[60:08.80] incompatible
+[60:10.24] with special relativity
+[60:15.68] you know you can see by moving masses
+[60:17.60] around you can signal faster than the
+[60:19.20] speed of light
+[60:20.32] so you know zero is out right you can't
+[60:22.40] do that
+[60:24.48] now one you can do but
+[60:27.84] it's ruled out by observations because
+[60:29.92] it there's no bending of light
+[60:32.24] which has been observed
+[60:35.76] two you can do uh as well
+[60:38.80] but there's problems with the perihelion
+[60:41.28] procession
+[60:51.84] so that's ruled out by experiments as
+[60:53.44] well and also you get negative energy
+[60:56.32] waves
+[61:02.64] it's pretty bad so we're left with three
+[61:06.24] or are we left with three maybe there's
+[61:07.52] more options so three
+[61:09.76] if you follow up completing the scalar
+[61:12.64] gravitational potential to a
+[61:14.08] full tensor the rank two tensor
+[61:17.52] then you actually uh
+[61:20.56] discover something pretty amazing
+[61:25.52] this route leads to the linearized
+[61:28.80] einstein equation
+[61:44.16] and sort of implicitly and indirectly
+[61:47.04] you go to gr
+[61:49.52] so really by taking newton's
+[61:53.20] theory of gravity and trying to make it
+[61:55.36] compatible with special relativity and
+[61:57.04] the observations
+[61:58.96] and available experimental observations
+[62:01.12] you are forced
+[62:02.00] to think of completing the gravitational
+[62:04.48] scale potential to a tensor
+[62:06.32] when you go down that root you discover
+[62:07.92] that the dynamics you give to the
+[62:09.20] gravitational field
+[62:10.24] are governed by linearized form of
+[62:11.52] einstein's field equations and then by
+[62:13.68] somewhat indirect but you know logically
+[62:16.96] uh logically okay argument you can then
+[62:20.08] get
+[62:20.64] um general relativity or deduce general
+[62:22.56] relativity
+[62:24.08] we are not going to do that this way and
+[62:26.32] einstein certainly did not follow this
+[62:28.08] route or at least
+[62:29.04] we don't know from the historical record
+[62:31.20] whether einstein followed this route
+[62:34.16] instead we're going to discover general
+[62:35.60] relativity in a completely different
+[62:37.28] other way
+[62:38.88] that's it for lecture one thank you for
+[62:42.32] joining me on this journey and i look
+[62:44.00] forward to seeing you in the next

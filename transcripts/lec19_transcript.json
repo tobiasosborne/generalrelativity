@@ -1,0 +1,4157 @@
+{
+  "title": "General Relativity, Lecture 19: FLRW cont. and static rotationally invariant solutions",
+  "video_id": "fIJnVlmTL3o",
+  "url": "https://www.youtube.com/watch?v=fIJnVlmTL3o",
+  "transcript": [
+    {
+      "start": 0.56,
+      "duration": 3.04,
+      "text": "hello and welcome back to introduction"
+    },
+    {
+      "start": 2.24,
+      "duration": 3.28,
+      "text": "to general relativity"
+    },
+    {
+      "start": 3.6,
+      "duration": 3.199,
+      "text": "in the previous lecture we started"
+    },
+    {
+      "start": 5.52,
+      "duration": 3.6,
+      "text": "looking at the"
+    },
+    {
+      "start": 6.799,
+      "duration": 4.401,
+      "text": "solutions to einstein's field equations"
+    },
+    {
+      "start": 9.12,
+      "duration": 4.72,
+      "text": "for a homogeneous and isotropic universe"
+    },
+    {
+      "start": 11.2,
+      "duration": 4.639,
+      "text": "and in particular we discussed some"
+    },
+    {
+      "start": 13.84,
+      "duration": 4.0,
+      "text": "qualitative aspects of the solutions"
+    },
+    {
+      "start": 15.839,
+      "duration": 3.761,
+      "text": "that we could infer already on the basis"
+    },
+    {
+      "start": 17.84,
+      "duration": 3.199,
+      "text": "of the general structure of the defining"
+    },
+    {
+      "start": 19.6,
+      "duration": 3.12,
+      "text": "equations of motion"
+    },
+    {
+      "start": 21.039,
+      "duration": 3.521,
+      "text": "in today's lecture we're going to solve"
+    },
+    {
+      "start": 22.72,
+      "duration": 4.479,
+      "text": "the equations analytically"
+    },
+    {
+      "start": 24.56,
+      "duration": 3.6,
+      "text": "and then uh portray and then discuss"
+    },
+    {
+      "start": 27.199,
+      "duration": 4.32,
+      "text": "several aspects"
+    },
+    {
+      "start": 28.16,
+      "duration": 4.64,
+      "text": "of these analytic solutions and finally"
+    },
+    {
+      "start": 31.519,
+      "duration": 3.441,
+      "text": "at the last part of the lecture i'm"
+    },
+    {
+      "start": 32.8,
+      "duration": 6.16,
+      "text": "going to introduce the topic"
+    },
+    {
+      "start": 34.96,
+      "duration": 6.32,
+      "text": "of static rotationally symmetric space"
+    },
+    {
+      "start": 38.96,
+      "duration": 2.32,
+      "text": "times"
+    },
+    {
+      "start": 41.6,
+      "duration": 4.479,
+      "text": "okay just to remind you the equations"
+    },
+    {
+      "start": 44.32,
+      "duration": 3.919,
+      "text": "governing the dynamics of a"
+    },
+    {
+      "start": 46.079,
+      "duration": 3.761,
+      "text": "homogeneous isotopic universe are"
+    },
+    {
+      "start": 48.239,
+      "duration": 4.8,
+      "text": "summarized here with equations one"
+    },
+    {
+      "start": 49.84,
+      "duration": 5.76,
+      "text": "and two and these are"
+    },
+    {
+      "start": 53.039,
+      "duration": 3.921,
+      "text": "a set of non-linear ordinary"
+    },
+    {
+      "start": 55.6,
+      "duration": 2.72,
+      "text": "differential equations not"
+    },
+    {
+      "start": 56.96,
+      "duration": 3.439,
+      "text": "partial differential equations anymore"
+    },
+    {
+      "start": 58.32,
+      "duration": 4.559,
+      "text": "but ordinary differential equations"
+    },
+    {
+      "start": 60.399,
+      "duration": 3.76,
+      "text": "and you can solve these in a variety of"
+    },
+    {
+      "start": 62.879,
+      "duration": 3.681,
+      "text": "circumstances for a"
+    },
+    {
+      "start": 64.159,
+      "duration": 3.681,
+      "text": "variety of values of k remember k is -1"
+    },
+    {
+      "start": 66.56,
+      "duration": 4.32,
+      "text": "0 or 1"
+    },
+    {
+      "start": 67.84,
+      "duration": 4.24,
+      "text": "and rho and p can be variously positive"
+    },
+    {
+      "start": 70.88,
+      "duration": 4.0,
+      "text": "or negative depending"
+    },
+    {
+      "start": 72.08,
+      "duration": 5.359,
+      "text": "on the dark energy constant coming from"
+    },
+    {
+      "start": 74.88,
+      "duration": 5.44,
+      "text": "the cosmological constant"
+    },
+    {
+      "start": 77.439,
+      "duration": 4.641,
+      "text": "so we have a uh we can go ahead and"
+    },
+    {
+      "start": 80.32,
+      "duration": 2.159,
+      "text": "solve these equations we can also use"
+    },
+    {
+      "start": 82.08,
+      "duration": 3.44,
+      "text": "this"
+    },
+    {
+      "start": 82.479,
+      "duration": 5.28,
+      "text": "additional equation that i"
+    },
+    {
+      "start": 85.52,
+      "duration": 3.68,
+      "text": "summarized in the previous lecture so"
+    },
+    {
+      "start": 87.759,
+      "duration": 4.801,
+      "text": "this equation you can"
+    },
+    {
+      "start": 89.2,
+      "duration": 4.879,
+      "text": "derive by eliminating a from the"
+    },
+    {
+      "start": 92.56,
+      "duration": 3.519,
+      "text": "a double dot from the previous two"
+    },
+    {
+      "start": 94.079,
+      "duration": 3.281,
+      "text": "equations if you just eliminate a double"
+    },
+    {
+      "start": 96.079,
+      "duration": 3.841,
+      "text": "dot you can actually"
+    },
+    {
+      "start": 97.36,
+      "duration": 3.92,
+      "text": "arrive at this equation here and using"
+    },
+    {
+      "start": 99.92,
+      "duration": 4.559,
+      "text": "this equation we can"
+    },
+    {
+      "start": 101.28,
+      "duration": 6.0,
+      "text": "uh we can already infer"
+    },
+    {
+      "start": 104.479,
+      "duration": 3.521,
+      "text": "a couple of statements about the"
+    },
+    {
+      "start": 107.28,
+      "duration": 4.4,
+      "text": "evolution"
+    },
+    {
+      "start": 108.0,
+      "duration": 3.68,
+      "text": "of the energy density and a"
+    },
+    {
+      "start": 113.6,
+      "duration": 3.68,
+      "text": "so one of the we have to always consider"
+    },
+    {
+      "start": 116.32,
+      "duration": 4.079,
+      "text": "that there's several"
+    },
+    {
+      "start": 117.28,
+      "duration": 4.799,
+      "text": "models that we could uh contemplate one"
+    },
+    {
+      "start": 120.399,
+      "duration": 3.76,
+      "text": "is for example the universe comprised of"
+    },
+    {
+      "start": 122.079,
+      "duration": 2.801,
+      "text": "dust which is like these idealized dots"
+    },
+    {
+      "start": 124.159,
+      "duration": 4.561,
+      "text": "that come from"
+    },
+    {
+      "start": 124.88,
+      "duration": 7.28,
+      "text": "galaxies and in such a dust-like"
+    },
+    {
+      "start": 128.72,
+      "duration": 3.44,
+      "text": "uh distribution of matter"
+    },
+    {
+      "start": 132.56,
+      "duration": 3.84,
+      "text": "we can that's where the the pressure"
+    },
+    {
+      "start": 135.2,
+      "duration": 3.28,
+      "text": "term is zero"
+    },
+    {
+      "start": 136.4,
+      "duration": 3.839,
+      "text": "so the dots are moving the little point"
+    },
+    {
+      "start": 138.48,
+      "duration": 4.24,
+      "text": "particles representing galaxies move on"
+    },
+    {
+      "start": 140.239,
+      "duration": 4.561,
+      "text": "on the geodesics of isotropic observers"
+    },
+    {
+      "start": 142.72,
+      "duration": 2.4,
+      "text": "then this equation simplifies slightly i"
+    },
+    {
+      "start": 144.8,
+      "duration": 4.24,
+      "text": "mean"
+    },
+    {
+      "start": 145.12,
+      "duration": 6.24,
+      "text": "a little bit right and uh"
+    },
+    {
+      "start": 149.04,
+      "duration": 4.0,
+      "text": "and we can realize that that's actually"
+    },
+    {
+      "start": 151.36,
+      "duration": 4.56,
+      "text": "just a total derivative"
+    },
+    {
+      "start": 153.04,
+      "duration": 4.479,
+      "text": "you know in disguise so this is really"
+    },
+    {
+      "start": 155.92,
+      "duration": 3.2,
+      "text": "easy to then integrate so it's actually"
+    },
+    {
+      "start": 157.519,
+      "duration": 4.961,
+      "text": "a total derivative of the function"
+    },
+    {
+      "start": 159.12,
+      "duration": 4.16,
+      "text": "rho a cubed equals zero which tells us"
+    },
+    {
+      "start": 162.48,
+      "duration": 4.0,
+      "text": "of course"
+    },
+    {
+      "start": 163.28,
+      "duration": 3.599,
+      "text": "that in any such dust like universe that"
+    },
+    {
+      "start": 166.48,
+      "duration": 4.24,
+      "text": "rho"
+    },
+    {
+      "start": 166.879,
+      "duration": 6.481,
+      "text": "times a cubed is a constant"
+    },
+    {
+      "start": 170.72,
+      "duration": 3.76,
+      "text": "and that's good that's actually really a"
+    },
+    {
+      "start": 173.36,
+      "duration": 2.64,
+      "text": "sanity check on"
+    },
+    {
+      "start": 174.48,
+      "duration": 3.36,
+      "text": "on the equation because what does it"
+    },
+    {
+      "start": 176.0,
+      "duration": 5.84,
+      "text": "tell us it tells us that"
+    },
+    {
+      "start": 177.84,
+      "duration": 7.039,
+      "text": "uh that this is just a conservation law"
+    },
+    {
+      "start": 181.84,
+      "duration": 5.679,
+      "text": "right in disguise"
+    },
+    {
+      "start": 184.879,
+      "duration": 3.681,
+      "text": "it's the conservation of rest mass of"
+    },
+    {
+      "start": 187.519,
+      "duration": 3.36,
+      "text": "the dust"
+    },
+    {
+      "start": 188.56,
+      "duration": 3.2,
+      "text": "because a determines the volume of the"
+    },
+    {
+      "start": 190.879,
+      "duration": 3.681,
+      "text": "universe and"
+    },
+    {
+      "start": 191.76,
+      "duration": 4.16,
+      "text": "grow the energy density so you better"
+    },
+    {
+      "start": 194.56,
+      "duration": 2.959,
+      "text": "not have that"
+    },
+    {
+      "start": 195.92,
+      "duration": 3.44,
+      "text": "uh rest mass has been created or"
+    },
+    {
+      "start": 197.519,
+      "duration": 4.72,
+      "text": "destroyed here and that's"
+    },
+    {
+      "start": 199.36,
+      "duration": 5.439,
+      "text": "that that's this uh solution tells us"
+    },
+    {
+      "start": 202.239,
+      "duration": 3.841,
+      "text": "exactly that"
+    },
+    {
+      "start": 204.799,
+      "duration": 3.041,
+      "text": "now that's just for the dust light"
+    },
+    {
+      "start": 206.08,
+      "duration": 3.68,
+      "text": "universe but there is another"
+    },
+    {
+      "start": 207.84,
+      "duration": 3.92,
+      "text": "scenario that we can contemplate i mean"
+    },
+    {
+      "start": 209.76,
+      "duration": 4.96,
+      "text": "there's many scenarios to contemplate"
+    },
+    {
+      "start": 211.76,
+      "duration": 3.839,
+      "text": "but let's consider now uh the the"
+    },
+    {
+      "start": 214.72,
+      "duration": 5.04,
+      "text": "radiation"
+    },
+    {
+      "start": 215.599,
+      "duration": 4.161,
+      "text": "dominated uh situation"
+    },
+    {
+      "start": 222.48,
+      "duration": 6.399,
+      "text": "where rho equals"
+    },
+    {
+      "start": 226.159,
+      "duration": 2.72,
+      "text": "p over three"
+    },
+    {
+      "start": 230.48,
+      "duration": 5.119,
+      "text": "and in this case"
+    },
+    {
+      "start": 233.519,
+      "duration": 5.44,
+      "text": "we find by a very similar argument that"
+    },
+    {
+      "start": 235.599,
+      "duration": 6.241,
+      "text": "rho times a to the four"
+    },
+    {
+      "start": 238.959,
+      "duration": 2.881,
+      "text": "is a constant"
+    },
+    {
+      "start": 243.599,
+      "duration": 3.601,
+      "text": "it's just a total derivative argument"
+    },
+    {
+      "start": 245.04,
+      "duration": 3.44,
+      "text": "again um and this looks a different a"
+    },
+    {
+      "start": 247.2,
+      "duration": 2.64,
+      "text": "little different to the dust case you"
+    },
+    {
+      "start": 248.48,
+      "duration": 2.959,
+      "text": "know is there a conservation of breast"
+    },
+    {
+      "start": 249.84,
+      "duration": 3.28,
+      "text": "mass going on here well"
+    },
+    {
+      "start": 251.439,
+      "duration": 4.8,
+      "text": "uh not quite right because there is no"
+    },
+    {
+      "start": 253.12,
+      "duration": 3.119,
+      "text": "wrist mass for a photon"
+    },
+    {
+      "start": 256.72,
+      "duration": 3.759,
+      "text": "i mean you can't stop a photon but of"
+    },
+    {
+      "start": 259.04,
+      "duration": 4.48,
+      "text": "course there's energy"
+    },
+    {
+      "start": 260.479,
+      "duration": 5.601,
+      "text": "associated to a photon and so here what"
+    },
+    {
+      "start": 263.52,
+      "duration": 2.56,
+      "text": "interprets"
+    },
+    {
+      "start": 267.52,
+      "duration": 4.399,
+      "text": "the result as follows"
+    },
+    {
+      "start": 273.12,
+      "duration": 3.2,
+      "text": "so the photon number"
+    },
+    {
+      "start": 280.639,
+      "duration": 4.801,
+      "text": "the photon number density right you said"
+    },
+    {
+      "start": 282.32,
+      "duration": 6.159,
+      "text": "the num the number of modes"
+    },
+    {
+      "start": 285.44,
+      "duration": 4.08,
+      "text": "photonic modes you have in a volume well"
+    },
+    {
+      "start": 288.479,
+      "duration": 5.121,
+      "text": "that scales"
+    },
+    {
+      "start": 289.52,
+      "duration": 7.44,
+      "text": "uh as the inverse of the volume right"
+    },
+    {
+      "start": 293.6,
+      "duration": 4.159,
+      "text": "as a to the minus three and as the"
+    },
+    {
+      "start": 296.96,
+      "duration": 4.48,
+      "text": "universe"
+    },
+    {
+      "start": 297.759,
+      "duration": 7.521,
+      "text": "is expanding or whatever contracting"
+    },
+    {
+      "start": 301.44,
+      "duration": 5.36,
+      "text": "uh it's getting also however"
+    },
+    {
+      "start": 305.28,
+      "duration": 4.24,
+      "text": "there's a frequency component to the"
+    },
+    {
+      "start": 306.8,
+      "duration": 5.679,
+      "text": "photons energy and"
+    },
+    {
+      "start": 309.52,
+      "duration": 4.8,
+      "text": "the point is the the photonic mode is"
+    },
+    {
+      "start": 312.479,
+      "duration": 3.361,
+      "text": "getting stretched or contracted as the"
+    },
+    {
+      "start": 314.32,
+      "duration": 2.96,
+      "text": "universe is changing"
+    },
+    {
+      "start": 315.84,
+      "duration": 3.359,
+      "text": "and that actually contributes an"
+    },
+    {
+      "start": 317.28,
+      "duration": 8.56,
+      "text": "additional redshift a to the minus"
+    },
+    {
+      "start": 319.199,
+      "duration": 6.641,
+      "text": "one so the hence the radiation"
+    },
+    {
+      "start": 326.4,
+      "duration": 3.2,
+      "text": "uh hence we obtained this slightly"
+    },
+    {
+      "start": 328.88,
+      "duration": 2.4,
+      "text": "adjusted"
+    },
+    {
+      "start": 329.6,
+      "duration": 3.36,
+      "text": "conservation of drawn above here that"
+    },
+    {
+      "start": 331.28,
+      "duration": 3.359,
+      "text": "the rho times a to the four is a"
+    },
+    {
+      "start": 332.96,
+      "duration": 3.88,
+      "text": "constant not times row times 83 and"
+    },
+    {
+      "start": 334.639,
+      "duration": 3.441,
+      "text": "that's really due to the redshift of the"
+    },
+    {
+      "start": 336.84,
+      "duration": 3.32,
+      "text": "photon"
+    },
+    {
+      "start": 338.08,
+      "duration": 4.32,
+      "text": "and now that tells us actually something"
+    },
+    {
+      "start": 340.16,
+      "duration": 5.52,
+      "text": "quite kind of interesting right"
+    },
+    {
+      "start": 342.4,
+      "duration": 4.88,
+      "text": "uh namely that dust doesn't dominate the"
+    },
+    {
+      "start": 345.68,
+      "duration": 8.16,
+      "text": "evolution of the universe in the past"
+    },
+    {
+      "start": 347.28,
+      "duration": 6.56,
+      "text": "rather radiation does"
+    },
+    {
+      "start": 354.56,
+      "duration": 3.44,
+      "text": "so as we you know in the past of our"
+    },
+    {
+      "start": 356.319,
+      "duration": 4.0,
+      "text": "universe a went to zero"
+    },
+    {
+      "start": 358.0,
+      "duration": 4.08,
+      "text": "well that diverges quicker rho times a"
+    },
+    {
+      "start": 360.319,
+      "duration": 4.32,
+      "text": "to the four diverges quicker than rho"
+    },
+    {
+      "start": 362.08,
+      "duration": 5.119,
+      "text": "times a to the three so the contribution"
+    },
+    {
+      "start": 364.639,
+      "duration": 4.481,
+      "text": "or the contribution due to the radiation"
+    },
+    {
+      "start": 367.199,
+      "duration": 6.72,
+      "text": "actually dominates"
+    },
+    {
+      "start": 369.12,
+      "duration": 4.799,
+      "text": "in the past or dominated in the past"
+    },
+    {
+      "start": 379.52,
+      "duration": 4.32,
+      "text": "so let's just now specialize this is a"
+    },
+    {
+      "start": 382.0,
+      "duration": 3.84,
+      "text": "statement that's independent of k"
+    },
+    {
+      "start": 383.84,
+      "duration": 3.68,
+      "text": "if you take a look at the equation we"
+    },
+    {
+      "start": 385.84,
+      "duration": 3.84,
+      "text": "were solving and"
+    },
+    {
+      "start": 387.52,
+      "duration": 5.119,
+      "text": "the solution k didn't feature in it but"
+    },
+    {
+      "start": 389.68,
+      "duration": 4.0,
+      "text": "of course k has got a feature somehow"
+    },
+    {
+      "start": 392.639,
+      "duration": 3.521,
+      "text": "whether or not the universe is"
+    },
+    {
+      "start": 393.68,
+      "duration": 5.359,
+      "text": "hyperboloid spherical or"
+    },
+    {
+      "start": 396.16,
+      "duration": 4.72,
+      "text": "spatially flat is going to play a role"
+    },
+    {
+      "start": 399.039,
+      "duration": 2.88,
+      "text": "uh and now we have to make a bit of a"
+    },
+    {
+      "start": 400.88,
+      "duration": 3.599,
+      "text": "finer case"
+    },
+    {
+      "start": 401.919,
+      "duration": 2.56,
+      "text": "distinction"
+    },
+    {
+      "start": 405.919,
+      "duration": 7.28,
+      "text": "so if k equals 0 or"
+    },
+    {
+      "start": 409.919,
+      "duration": 3.28,
+      "text": "k equals minus 1"
+    },
+    {
+      "start": 417.44,
+      "duration": 8.319,
+      "text": "then and further we assume"
+    },
+    {
+      "start": 421.44,
+      "duration": 4.879,
+      "text": "the now we continue to assume that rho"
+    },
+    {
+      "start": 425.759,
+      "duration": 3.601,
+      "text": "and p"
+    },
+    {
+      "start": 426.319,
+      "duration": 3.681,
+      "text": "are greater than zero then we we learn"
+    },
+    {
+      "start": 429.36,
+      "duration": 4.32,
+      "text": "that that a"
+    },
+    {
+      "start": 430.0,
+      "duration": 3.68,
+      "text": "is a dot is zero"
+    },
+    {
+      "start": 434.479,
+      "duration": 2.641,
+      "text": "and the fact that the universe is"
+    },
+    {
+      "start": 435.599,
+      "duration": 3.04,
+      "text": "therefore what do we learn well we"
+    },
+    {
+      "start": 437.12,
+      "duration": 3.199,
+      "text": "learned that internal"
+    },
+    {
+      "start": 438.639,
+      "duration": 3.521,
+      "text": "that we were in a state of eternal"
+    },
+    {
+      "start": 440.319,
+      "duration": 3.681,
+      "text": "expansion because expansion"
+    },
+    {
+      "start": 442.16,
+      "duration": 9.68,
+      "text": "of the universe has been established"
+    },
+    {
+      "start": 444.0,
+      "duration": 7.84,
+      "text": "right today we have expansion"
+    },
+    {
+      "start": 456.96,
+      "duration": 3.28,
+      "text": "and if you observe that you have"
+    },
+    {
+      "start": 458.72,
+      "duration": 2.479,
+      "text": "expansion that naming that a dot is"
+    },
+    {
+      "start": 460.24,
+      "duration": 2.399,
+      "text": "greater than naught"
+    },
+    {
+      "start": 461.199,
+      "duration": 2.961,
+      "text": "and you're in the k equals minus one"
+    },
+    {
+      "start": 462.639,
+      "duration": 2.801,
+      "text": "scenario then on the right hand side of"
+    },
+    {
+      "start": 464.16,
+      "duration": 3.28,
+      "text": "this equation one here you have only"
+    },
+    {
+      "start": 465.44,
+      "duration": 2.479,
+      "text": "positive stuff so the the derivative in"
+    },
+    {
+      "start": 467.44,
+      "duration": 3.599,
+      "text": "a"
+    },
+    {
+      "start": 467.919,
+      "duration": 3.12,
+      "text": "can never go to zero"
+    },
+    {
+      "start": 472.72,
+      "duration": 3.759,
+      "text": "in that scenario when k is either flat"
+    },
+    {
+      "start": 475.28,
+      "duration": 4.88,
+      "text": "uh representing the flat"
+    },
+    {
+      "start": 476.479,
+      "duration": 4.801,
+      "text": "spatial slices or k is representing"
+    },
+    {
+      "start": 480.16,
+      "duration": 5.759,
+      "text": "hyperbolic"
+    },
+    {
+      "start": 481.28,
+      "duration": 4.639,
+      "text": "space like as spatial slices"
+    },
+    {
+      "start": 487.039,
+      "duration": 6.801,
+      "text": "further rho must decrease"
+    },
+    {
+      "start": 497.599,
+      "duration": 10.241,
+      "text": "as a increases"
+    },
+    {
+      "start": 511.52,
+      "duration": 10.079,
+      "text": "thus rho times a squared tends to zero"
+    },
+    {
+      "start": 514.32,
+      "duration": 10.4,
+      "text": "as a tends infinity"
+    },
+    {
+      "start": 521.599,
+      "duration": 5.36,
+      "text": "now for k equals 0"
+    },
+    {
+      "start": 524.72,
+      "duration": 3.44,
+      "text": "this expansion velocity so a dot"
+    },
+    {
+      "start": 526.959,
+      "duration": 7.841,
+      "text": "represents essentially the"
+    },
+    {
+      "start": 528.16,
+      "duration": 7.2,
+      "text": "velocity of expansion a dot that tends"
+    },
+    {
+      "start": 534.8,
+      "duration": 3.92,
+      "text": "to zero"
+    },
+    {
+      "start": 535.36,
+      "duration": 7.599,
+      "text": "as tau tends to infinity"
+    },
+    {
+      "start": 538.72,
+      "duration": 8.119,
+      "text": "but for k equals minus one"
+    },
+    {
+      "start": 542.959,
+      "duration": 5.841,
+      "text": "a dot tends to one as del tends to"
+    },
+    {
+      "start": 546.839,
+      "duration": 3.641,
+      "text": "infinity"
+    },
+    {
+      "start": 548.8,
+      "duration": 4.08,
+      "text": "and finally we can talk about the k"
+    },
+    {
+      "start": 550.48,
+      "duration": 4.64,
+      "text": "equals plus one case for k equals plus"
+    },
+    {
+      "start": 552.88,
+      "duration": 2.24,
+      "text": "one"
+    },
+    {
+      "start": 557.12,
+      "duration": 4.32,
+      "text": "we actually have another situation where"
+    },
+    {
+      "start": 559.76,
+      "duration": 3.36,
+      "text": "k equals plus one"
+    },
+    {
+      "start": 561.44,
+      "duration": 5.76,
+      "text": "then this negative term here can take"
+    },
+    {
+      "start": 563.12,
+      "duration": 4.08,
+      "text": "over in the right hand side to one"
+    },
+    {
+      "start": 568.08,
+      "duration": 4.64,
+      "text": "and it we can infer that the universe"
+    },
+    {
+      "start": 571.04,
+      "duration": 3.44,
+      "text": "ends"
+    },
+    {
+      "start": 572.72,
+      "duration": 5.679,
+      "text": "in the opposite of a big bang which"
+    },
+    {
+      "start": 574.48,
+      "duration": 3.919,
+      "text": "would be a big crunch"
+    },
+    {
+      "start": 580.72,
+      "duration": 3.84,
+      "text": "okay this is still at a qualitative"
+    },
+    {
+      "start": 582.16,
+      "duration": 9.679,
+      "text": "level now let's just"
+    },
+    {
+      "start": 584.56,
+      "duration": 7.279,
+      "text": "get the exact solutions"
+    },
+    {
+      "start": 602.56,
+      "duration": 6.48,
+      "text": "and all now describe how you can"
+    },
+    {
+      "start": 605.68,
+      "duration": 6.32,
+      "text": "obtain these exact solutions"
+    },
+    {
+      "start": 609.04,
+      "duration": 5.359,
+      "text": "in the case of say a dust dominated"
+    },
+    {
+      "start": 612.0,
+      "duration": 2.399,
+      "text": "universe"
+    },
+    {
+      "start": 617.04,
+      "duration": 4.32,
+      "text": "and then you'll be able to infer how one"
+    },
+    {
+      "start": 620.64,
+      "duration": 4.639,
+      "text": "can get the"
+    },
+    {
+      "start": 621.36,
+      "duration": 3.919,
+      "text": "solutions for other situations"
+    },
+    {
+      "start": 626.959,
+      "duration": 6.88,
+      "text": "now you can rearrange equation one"
+    },
+    {
+      "start": 630.0,
+      "duration": 3.839,
+      "text": "to look like this"
+    },
+    {
+      "start": 635.279,
+      "duration": 5.12,
+      "text": "where c equals 8 pi rho a cubed"
+    },
+    {
+      "start": 640.8,
+      "duration": 4.32,
+      "text": "divided by 3 is a constant right the c"
+    },
+    {
+      "start": 643.76,
+      "duration": 4.319,
+      "text": "really here is a constant"
+    },
+    {
+      "start": 645.12,
+      "duration": 4.8,
+      "text": "this is meant to be big c because rho"
+    },
+    {
+      "start": 648.079,
+      "duration": 4.961,
+      "text": "times a cubed in a dust dominated"
+    },
+    {
+      "start": 649.92,
+      "duration": 3.12,
+      "text": "universe is a constant"
+    },
+    {
+      "start": 653.76,
+      "duration": 3.68,
+      "text": "and similarly for radiation"
+    },
+    {
+      "start": 657.519,
+      "duration": 4.961,
+      "text": "dominated or a universe with only"
+    },
+    {
+      "start": 660.24,
+      "duration": 4.48,
+      "text": "radiation"
+    },
+    {
+      "start": 662.48,
+      "duration": 2.24,
+      "text": "type"
+    },
+    {
+      "start": 665.6,
+      "duration": 4.239,
+      "text": "radiation content then you also have a"
+    },
+    {
+      "start": 668.16,
+      "duration": 3.919,
+      "text": "similar equation but with an a squared"
+    },
+    {
+      "start": 669.839,
+      "duration": 2.24,
+      "text": "there"
+    },
+    {
+      "start": 673.04,
+      "duration": 4.56,
+      "text": "where the constant c prime is now 8 pi"
+    },
+    {
+      "start": 675.519,
+      "duration": 4.161,
+      "text": "rho a to the 4 remember rho times a to"
+    },
+    {
+      "start": 677.6,
+      "duration": 5.28,
+      "text": "the 4 is a constant"
+    },
+    {
+      "start": 679.68,
+      "duration": 4.56,
+      "text": "now this is a nonlinear differential"
+    },
+    {
+      "start": 682.88,
+      "duration": 4.56,
+      "text": "equation now"
+    },
+    {
+      "start": 684.24,
+      "duration": 6.48,
+      "text": "in a and you can"
+    },
+    {
+      "start": 687.44,
+      "duration": 5.6,
+      "text": "solve it by standard techniques right"
+    },
+    {
+      "start": 690.72,
+      "duration": 4.32,
+      "text": "this is you work out what the derivative"
+    },
+    {
+      "start": 693.04,
+      "duration": 3.56,
+      "text": "of a is and then it's an integral and"
+    },
+    {
+      "start": 695.04,
+      "duration": 8.56,
+      "text": "then you work out the integral and the"
+    },
+    {
+      "start": 696.6,
+      "duration": 10.359,
+      "text": "constants um"
+    },
+    {
+      "start": 703.6,
+      "duration": 3.359,
+      "text": "this is you can do it"
+    },
+    {
+      "start": 708.8,
+      "duration": 2.88,
+      "text": "but i'm not going to do it here because"
+    },
+    {
+      "start": 710.32,
+      "duration": 2.8,
+      "text": "this is this is sort of something that"
+    },
+    {
+      "start": 711.68,
+      "duration": 3.44,
+      "text": "you might encounter already in a"
+    },
+    {
+      "start": 713.12,
+      "duration": 4.159,
+      "text": "non-linear differential equations course"
+    },
+    {
+      "start": 715.12,
+      "duration": 3.2,
+      "text": "i won't say that it's super trivial like"
+    },
+    {
+      "start": 717.279,
+      "duration": 3.921,
+      "text": "the integrals are"
+    },
+    {
+      "start": 718.32,
+      "duration": 4.319,
+      "text": "so mildly mildly irritating that you"
+    },
+    {
+      "start": 721.2,
+      "duration": 6.48,
+      "text": "have to do"
+    },
+    {
+      "start": 722.639,
+      "duration": 9.2,
+      "text": "and the answers"
+    },
+    {
+      "start": 727.68,
+      "duration": 4.159,
+      "text": "that you get"
+    },
+    {
+      "start": 732.8,
+      "duration": 3.599,
+      "text": "have a bunch of constants that are"
+    },
+    {
+      "start": 734.16,
+      "duration": 5.919,
+      "text": "buried implicitly in them and it's a bit"
+    },
+    {
+      "start": 736.399,
+      "duration": 3.68,
+      "text": "can be a bit awkward to extract"
+    },
+    {
+      "start": 740.24,
+      "duration": 6.24,
+      "text": "this information from"
+    },
+    {
+      "start": 743.36,
+      "duration": 3.12,
+      "text": "the solutions that you find"
+    },
+    {
+      "start": 746.72,
+      "duration": 4.96,
+      "text": "but it's not"
+    },
+    {
+      "start": 749.92,
+      "duration": 5.919,
+      "text": "you know there's no sort of fundamental"
+    },
+    {
+      "start": 751.68,
+      "duration": 4.159,
+      "text": "physical reasons for things being"
+    },
+    {
+      "start": 755.92,
+      "duration": 5.28,
+      "text": "difficult it's just slightly awkward on"
+    },
+    {
+      "start": 757.839,
+      "duration": 3.361,
+      "text": "a mathematical level"
+    },
+    {
+      "start": 762.959,
+      "duration": 5.44,
+      "text": "so this eta is a constant of integration"
+    },
+    {
+      "start": 765.76,
+      "duration": 2.639,
+      "text": "that appears"
+    },
+    {
+      "start": 770.959,
+      "duration": 3.521,
+      "text": "when you when you integrate these"
+    },
+    {
+      "start": 784.839,
+      "duration": 3.0,
+      "text": "equations"
+    },
+    {
+      "start": 824.72,
+      "duration": 4.88,
+      "text": "so the case of k0 is somewhat simpler to"
+    },
+    {
+      "start": 827.6,
+      "duration": 4.4,
+      "text": "derive"
+    },
+    {
+      "start": 829.6,
+      "duration": 4.16,
+      "text": "there's a little symbol on my notes that"
+    },
+    {
+      "start": 832.0,
+      "duration": 4.32,
+      "text": "i cannot read for the moment"
+    },
+    {
+      "start": 833.76,
+      "duration": 2.56,
+      "text": "i will just"
+    },
+    {
+      "start": 839.519,
+      "duration": 5.361,
+      "text": "look up the correct answer so i don't"
+    },
+    {
+      "start": 841.519,
+      "duration": 3.361,
+      "text": "write down the wrong thing there"
+    },
+    {
+      "start": 848.8,
+      "duration": 5.599,
+      "text": "okay this is nine c"
+    },
+    {
+      "start": 851.92,
+      "duration": 3.68,
+      "text": "over four so the flat case is pretty"
+    },
+    {
+      "start": 854.399,
+      "duration": 2.8,
+      "text": "easy to integrate actually"
+    },
+    {
+      "start": 855.6,
+      "duration": 3.12,
+      "text": "you won't have any trouble there the"
+    },
+    {
+      "start": 857.199,
+      "duration": 1.921,
+      "text": "only difficult ones are the spherical"
+    },
+    {
+      "start": 858.72,
+      "duration": 4.0,
+      "text": "ones"
+    },
+    {
+      "start": 859.12,
+      "duration": 3.6,
+      "text": "and the hyperbolic ones"
+    },
+    {
+      "start": 864.48,
+      "duration": 4.359,
+      "text": "but once you've done the spherical one"
+    },
+    {
+      "start": 865.76,
+      "duration": 5.04,
+      "text": "the hyperbolic one no longer becomes a"
+    },
+    {
+      "start": 868.839,
+      "duration": 6.281,
+      "text": "challenge"
+    },
+    {
+      "start": 870.8,
+      "duration": 4.32,
+      "text": "and then you should hopefully confirm"
+    },
+    {
+      "start": 876.72,
+      "duration": 2.32,
+      "text": "these"
+    },
+    {
+      "start": 880.16,
+      "duration": 5.679,
+      "text": "solutions for a prime"
+    },
+    {
+      "start": 892.32,
+      "duration": 7.519,
+      "text": "prime of course"
+    },
+    {
+      "start": 902.48,
+      "duration": 4.159,
+      "text": "and you should come arrive at a table"
+    },
+    {
+      "start": 904.32,
+      "duration": 6.079,
+      "text": "that looks kind of like this one"
+    },
+    {
+      "start": 906.639,
+      "duration": 6.161,
+      "text": "up to the labeling of your constants"
+    },
+    {
+      "start": 910.399,
+      "duration": 4.081,
+      "text": "so these this is this is an enumeration"
+    },
+    {
+      "start": 912.8,
+      "duration": 2.64,
+      "text": "a case distinction of all the possible"
+    },
+    {
+      "start": 914.48,
+      "duration": 2.4,
+      "text": "choices of k"
+    },
+    {
+      "start": 915.44,
+      "duration": 4.16,
+      "text": "and whether or not you have a dust"
+    },
+    {
+      "start": 916.88,
+      "duration": 5.12,
+      "text": "dominated or radiation dominated"
+    },
+    {
+      "start": 919.6,
+      "duration": 4.88,
+      "text": "energy stress energy content of the"
+    },
+    {
+      "start": 922.0,
+      "duration": 2.48,
+      "text": "universe"
+    },
+    {
+      "start": 925.04,
+      "duration": 6.88,
+      "text": "now these solutions have a name uh well"
+    },
+    {
+      "start": 928.72,
+      "duration": 3.2,
+      "text": "the spherical solution"
+    },
+    {
+      "start": 933.519,
+      "duration": 2.88,
+      "text": "or indeed"
+    },
+    {
+      "start": 939.12,
+      "duration": 4.24,
+      "text": "sometimes all"
+    },
+    {
+      "start": 944.16,
+      "duration": 3.039,
+      "text": "are called"
+    },
+    {
+      "start": 950.399,
+      "duration": 6.721,
+      "text": "the friedman the metro robertson walker"
+    },
+    {
+      "start": 954.32,
+      "duration": 2.8,
+      "text": "cosmology"
+    },
+    {
+      "start": 967.04,
+      "duration": 6.0,
+      "text": "and i'll just briefly sketch"
+    },
+    {
+      "start": 970.16,
+      "duration": 2.88,
+      "text": "the solutions"
+    },
+    {
+      "start": 975.44,
+      "duration": 3.759,
+      "text": "for the various cases so one is this one"
+    },
+    {
+      "start": 977.839,
+      "duration": 3.041,
+      "text": "that ends in the big crunch that's k"
+    },
+    {
+      "start": 979.199,
+      "duration": 4.721,
+      "text": "equals plus one"
+    },
+    {
+      "start": 980.88,
+      "duration": 5.519,
+      "text": "one of them is the k"
+    },
+    {
+      "start": 983.92,
+      "duration": 5.039,
+      "text": "equals zero and one of them turns off to"
+    },
+    {
+      "start": 986.399,
+      "duration": 2.56,
+      "text": "k equals"
+    },
+    {
+      "start": 989.279,
+      "duration": 3.12,
+      "text": "it tends off to one and it turns off the"
+    },
+    {
+      "start": 991.36,
+      "duration": 4.08,
+      "text": "tower and that's the"
+    },
+    {
+      "start": 992.399,
+      "duration": 5.44,
+      "text": "k equals minus one solution"
+    },
+    {
+      "start": 995.44,
+      "duration": 3.519,
+      "text": "so that pretty much concludes the"
+    },
+    {
+      "start": 997.839,
+      "duration": 4.321,
+      "text": "discussion"
+    },
+    {
+      "start": 998.959,
+      "duration": 4.0,
+      "text": "of cosmology for this course i mean this"
+    },
+    {
+      "start": 1002.16,
+      "duration": 3.84,
+      "text": "is just"
+    },
+    {
+      "start": 1002.959,
+      "duration": 5.68,
+      "text": "so much more that you could say"
+    },
+    {
+      "start": 1006.0,
+      "duration": 4.32,
+      "text": "about cosmology and solutions to"
+    },
+    {
+      "start": 1008.639,
+      "duration": 3.601,
+      "text": "einstein's equations and shaft field"
+    },
+    {
+      "start": 1010.32,
+      "duration": 4.72,
+      "text": "equations"
+    },
+    {
+      "start": 1012.24,
+      "duration": 4.32,
+      "text": "in describing universes homogeneous and"
+    },
+    {
+      "start": 1015.04,
+      "duration": 3.44,
+      "text": "isotropic universes"
+    },
+    {
+      "start": 1016.56,
+      "duration": 3.6,
+      "text": "we won't consider these topics any"
+    },
+    {
+      "start": 1018.48,
+      "duration": 3.359,
+      "text": "further in this course but rather you"
+    },
+    {
+      "start": 1020.16,
+      "duration": 2.4,
+      "text": "can use this discussion as a springboard"
+    },
+    {
+      "start": 1021.839,
+      "duration": 2.48,
+      "text": "into"
+    },
+    {
+      "start": 1022.56,
+      "duration": 3.2,
+      "text": "reading the more advanced literature on"
+    },
+    {
+      "start": 1024.319,
+      "duration": 3.281,
+      "text": "this topic"
+    },
+    {
+      "start": 1025.76,
+      "duration": 4.079,
+      "text": "instead i want to take out discussion"
+    },
+    {
+      "start": 1027.6,
+      "duration": 2.239,
+      "text": "now"
+    },
+    {
+      "start": 1031.36,
+      "duration": 7.36,
+      "text": "to the other celebrated"
+    },
+    {
+      "start": 1034.559,
+      "duration": 6.24,
+      "text": "solution of einstein's field equations"
+    },
+    {
+      "start": 1038.72,
+      "duration": 4.239,
+      "text": "so it's really roughly speaking there's"
+    },
+    {
+      "start": 1040.799,
+      "duration": 3.601,
+      "text": "two two major well-known solutions to"
+    },
+    {
+      "start": 1042.959,
+      "duration": 3.201,
+      "text": "electron field equations one is this"
+    },
+    {
+      "start": 1044.4,
+      "duration": 3.12,
+      "text": "flrw solution"
+    },
+    {
+      "start": 1046.16,
+      "duration": 3.44,
+      "text": "and the other is the schwarzschild"
+    },
+    {
+      "start": 1047.52,
+      "duration": 5.36,
+      "text": "solution which pertains to"
+    },
+    {
+      "start": 1049.6,
+      "duration": 6.48,
+      "text": "static solutions nothing changes in time"
+    },
+    {
+      "start": 1052.88,
+      "duration": 7.6,
+      "text": "of rotationally invariant distributions"
+    },
+    {
+      "start": 1056.08,
+      "duration": 6.4,
+      "text": "of matter or"
+    },
+    {
+      "start": 1060.48,
+      "duration": 3.68,
+      "text": "or the gravitational field generated by"
+    },
+    {
+      "start": 1062.48,
+      "duration": 5.36,
+      "text": "a spherical"
+    },
+    {
+      "start": 1064.16,
+      "duration": 3.68,
+      "text": "symmetric body"
+    },
+    {
+      "start": 1070.0,
+      "duration": 3.2,
+      "text": "and in order to to write down the"
+    },
+    {
+      "start": 1072.559,
+      "duration": 2.801,
+      "text": "solution"
+    },
+    {
+      "start": 1073.2,
+      "duration": 3.76,
+      "text": "i'm going to spend the rest of this"
+    },
+    {
+      "start": 1075.36,
+      "duration": 4.24,
+      "text": "lecture talking about"
+    },
+    {
+      "start": 1076.96,
+      "duration": 4.079,
+      "text": "what it could mean for a stationary"
+    },
+    {
+      "start": 1079.6,
+      "duration": 3.52,
+      "text": "first base zone to be stationary and"
+    },
+    {
+      "start": 1081.039,
+      "duration": 5.041,
+      "text": "what it can mean for a space time to be"
+    },
+    {
+      "start": 1083.12,
+      "duration": 4.88,
+      "text": "rotationally invariant this is uh this"
+    },
+    {
+      "start": 1086.08,
+      "duration": 4.959,
+      "text": "discussion will be posed at a level"
+    },
+    {
+      "start": 1088.0,
+      "duration": 6.799,
+      "text": "of intermediate rigor what do i mean so"
+    },
+    {
+      "start": 1091.039,
+      "duration": 5.361,
+      "text": "we'll try and make uh clean definitions"
+    },
+    {
+      "start": 1094.799,
+      "duration": 3.441,
+      "text": "uh but i'm not gonna bother proving"
+    },
+    {
+      "start": 1096.4,
+      "duration": 3.519,
+      "text": "things too too much"
+    },
+    {
+      "start": 1098.24,
+      "duration": 3.28,
+      "text": "and because in the end this discussion"
+    },
+    {
+      "start": 1099.919,
+      "duration": 4.241,
+      "text": "is a motivation for a"
+    },
+    {
+      "start": 1101.52,
+      "duration": 4.399,
+      "text": "uh hypothesis for a metric so in the end"
+    },
+    {
+      "start": 1104.16,
+      "duration": 5.04,
+      "text": "we're just gonna write down a metric"
+    },
+    {
+      "start": 1105.919,
+      "duration": 5.76,
+      "text": "and the metric uh will then be the basis"
+    },
+    {
+      "start": 1109.2,
+      "duration": 4.08,
+      "text": "as an unzips for a solution to"
+    },
+    {
+      "start": 1111.679,
+      "duration": 2.081,
+      "text": "einstein's field equations and at that"
+    },
+    {
+      "start": 1113.28,
+      "duration": 3.92,
+      "text": "point"
+    },
+    {
+      "start": 1113.76,
+      "duration": 4.96,
+      "text": "who cares where uh how we got to it uh"
+    },
+    {
+      "start": 1117.2,
+      "duration": 3.28,
+      "text": "the metric either solves einstein's"
+    },
+    {
+      "start": 1118.72,
+      "duration": 4.48,
+      "text": "field equations or not"
+    },
+    {
+      "start": 1120.48,
+      "duration": 3.84,
+      "text": "um and hence the slightly advanced"
+    },
+    {
+      "start": 1123.2,
+      "duration": 3.12,
+      "text": "mathematical"
+    },
+    {
+      "start": 1124.32,
+      "duration": 4.4,
+      "text": "uh preliminary discussion required to"
+    },
+    {
+      "start": 1126.32,
+      "duration": 4.8,
+      "text": "sort of derive this form of the metric"
+    },
+    {
+      "start": 1128.72,
+      "duration": 4.0,
+      "text": "um isn't so important i mean the the end"
+    },
+    {
+      "start": 1131.12,
+      "duration": 3.12,
+      "text": "here is the objective namely does this"
+    },
+    {
+      "start": 1132.72,
+      "duration": 2.959,
+      "text": "metric solve einstein's field equations"
+    },
+    {
+      "start": 1134.24,
+      "duration": 3.92,
+      "text": "and if so"
+    },
+    {
+      "start": 1135.679,
+      "duration": 4.24,
+      "text": "what can we learn from that how we got"
+    },
+    {
+      "start": 1138.16,
+      "duration": 2.32,
+      "text": "to that guess that simplified form of"
+    },
+    {
+      "start": 1139.919,
+      "duration": 2.961,
+      "text": "the metric"
+    },
+    {
+      "start": 1140.48,
+      "duration": 3.28,
+      "text": "is helpful for you to know but it isn't"
+    },
+    {
+      "start": 1142.88,
+      "duration": 3.12,
+      "text": "critical right"
+    },
+    {
+      "start": 1143.76,
+      "duration": 3.919,
+      "text": "it's it's sufficient to remember the"
+    },
+    {
+      "start": 1146.0,
+      "duration": 4.16,
+      "text": "form of the metric but how did we get"
+    },
+    {
+      "start": 1147.679,
+      "duration": 7.041,
+      "text": "there well i'll give you some"
+    },
+    {
+      "start": 1150.16,
+      "duration": 6.8,
+      "text": "a i'll give you some"
+    },
+    {
+      "start": 1154.72,
+      "duration": 5.76,
+      "text": "motivation for this metric which is"
+    },
+    {
+      "start": 1156.96,
+      "duration": 3.52,
+      "text": "based on rigorous mathematics"
+    },
+    {
+      "start": 1160.72,
+      "duration": 3.52,
+      "text": "and firstly well if we're gonna do"
+    },
+    {
+      "start": 1163.36,
+      "duration": 1.679,
+      "text": "something rigorous we need some"
+    },
+    {
+      "start": 1164.24,
+      "duration": 4.16,
+      "text": "definitions"
+    },
+    {
+      "start": 1165.039,
+      "duration": 7.041,
+      "text": "so we gotta explore what is meant by the"
+    },
+    {
+      "start": 1168.4,
+      "duration": 3.68,
+      "text": "word stationary and static"
+    },
+    {
+      "start": 1173.36,
+      "duration": 4.0,
+      "text": "so we're interested in a stationary uh"
+    },
+    {
+      "start": 1175.52,
+      "duration": 5.039,
+      "text": "indeed a static solution to ionize field"
+    },
+    {
+      "start": 1177.36,
+      "duration": 3.199,
+      "text": "equation is one that doesn't change in"
+    },
+    {
+      "start": 1190.84,
+      "duration": 3.0,
+      "text": "time"
+    },
+    {
+      "start": 1200.559,
+      "duration": 3.281,
+      "text": "and here is the first definition that we"
+    },
+    {
+      "start": 1203.12,
+      "duration": 4.72,
+      "text": "can exploit"
+    },
+    {
+      "start": 1203.84,
+      "duration": 4.0,
+      "text": "to capture this concept"
+    },
+    {
+      "start": 1214.88,
+      "duration": 3.52,
+      "text": "so this is a perfectly rigorous"
+    },
+    {
+      "start": 1216.48,
+      "duration": 2.88,
+      "text": "definition now a space time m is a"
+    },
+    {
+      "start": 1218.4,
+      "duration": 3.759,
+      "text": "stationary"
+    },
+    {
+      "start": 1219.36,
+      "duration": 3.439,
+      "text": "if there is exists a one parameter group"
+    },
+    {
+      "start": 1222.159,
+      "duration": 3.841,
+      "text": "phi t"
+    },
+    {
+      "start": 1222.799,
+      "duration": 4.161,
+      "text": "of isometries whose orbits are time like"
+    },
+    {
+      "start": 1226.0,
+      "duration": 2.159,
+      "text": "curves"
+    },
+    {
+      "start": 1226.96,
+      "duration": 3.92,
+      "text": "and these are somehow the time"
+    },
+    {
+      "start": 1228.159,
+      "duration": 2.721,
+      "text": "translates"
+    },
+    {
+      "start": 1230.96,
+      "duration": 4.719,
+      "text": "so that's what it means for a space time"
+    },
+    {
+      "start": 1232.4,
+      "duration": 6.72,
+      "text": "to be stationary"
+    },
+    {
+      "start": 1235.679,
+      "duration": 3.441,
+      "text": "there's an equivalent formulation"
+    },
+    {
+      "start": 1244.64,
+      "duration": 5.2,
+      "text": "if there exists"
+    },
+    {
+      "start": 1250.4,
+      "duration": 3.68,
+      "text": "the time like"
+    },
+    {
+      "start": 1254.4,
+      "duration": 3.12,
+      "text": "killing vector field"
+    },
+    {
+      "start": 1261.52,
+      "duration": 16.32,
+      "text": "that's a different way to say it right"
+    },
+    {
+      "start": 1265.2,
+      "duration": 12.64,
+      "text": "now stationary is not static"
+    },
+    {
+      "start": 1287.919,
+      "duration": 3.921,
+      "text": "so space time"
+    },
+    {
+      "start": 1292.48,
+      "duration": 3.36,
+      "text": "m is static"
+    },
+    {
+      "start": 1298.0,
+      "duration": 7.84,
+      "text": "if it is stationary"
+    },
+    {
+      "start": 1307.36,
+      "duration": 2.319,
+      "text": "and"
+    },
+    {
+      "start": 1310.72,
+      "duration": 2.959,
+      "text": "there exists"
+    },
+    {
+      "start": 1315.039,
+      "duration": 5.76,
+      "text": "now some additional structure namely a"
+    },
+    {
+      "start": 1317.12,
+      "duration": 3.679,
+      "text": "space like hypersurface"
+    },
+    {
+      "start": 1325.44,
+      "duration": 8.4,
+      "text": "which is orthogonal"
+    },
+    {
+      "start": 1334.559,
+      "duration": 4.401,
+      "text": "to the orbits of uh this isometry group"
+    },
+    {
+      "start": 1339.84,
+      "duration": 6.88,
+      "text": "now this is a little bit uh more subtle"
+    },
+    {
+      "start": 1344.24,
+      "duration": 4.319,
+      "text": "the consequences of this definition and"
+    },
+    {
+      "start": 1346.72,
+      "duration": 5.92,
+      "text": "this is where i am gonna"
+    },
+    {
+      "start": 1348.559,
+      "duration": 7.681,
+      "text": "skip some of the the mathematical"
+    },
+    {
+      "start": 1352.64,
+      "duration": 5.2,
+      "text": "discussion but i will say it here"
+    },
+    {
+      "start": 1356.24,
+      "duration": 3.76,
+      "text": "in case you want to chase this up on"
+    },
+    {
+      "start": 1357.84,
+      "duration": 6.56,
+      "text": "your own"
+    },
+    {
+      "start": 1360.0,
+      "duration": 4.4,
+      "text": "so fabinho's theorem on integrability"
+    },
+    {
+      "start": 1366.48,
+      "duration": 4.4,
+      "text": "tells us this is equivalent to requiring"
+    },
+    {
+      "start": 1373.12,
+      "duration": 5.84,
+      "text": "that this time like killing vector field"
+    },
+    {
+      "start": 1376.32,
+      "duration": 2.64,
+      "text": "x i a"
+    },
+    {
+      "start": 1385.679,
+      "duration": 4.641,
+      "text": "additionally satisfies"
+    },
+    {
+      "start": 1391.039,
+      "duration": 3.12,
+      "text": "this equation here"
+    },
+    {
+      "start": 1394.72,
+      "duration": 3.36,
+      "text": "this has got to do with the community"
+    },
+    {
+      "start": 1400.84,
+      "duration": 5.48,
+      "text": "commuting"
+    },
+    {
+      "start": 1402.88,
+      "duration": 3.44,
+      "text": "with parallel transports"
+    },
+    {
+      "start": 1411.76,
+      "duration": 6.08,
+      "text": "and uh we're not going to prove this"
+    },
+    {
+      "start": 1414.84,
+      "duration": 3.0,
+      "text": "here"
+    },
+    {
+      "start": 1423.2,
+      "duration": 5.04,
+      "text": "because as i said earlier it is just"
+    },
+    {
+      "start": 1428.84,
+      "duration": 3.0,
+      "text": "motivation"
+    },
+    {
+      "start": 1434.799,
+      "duration": 4.161,
+      "text": "so there are examples of space times"
+    },
+    {
+      "start": 1437.76,
+      "duration": 4.96,
+      "text": "that aren't stationary"
+    },
+    {
+      "start": 1438.96,
+      "duration": 6.48,
+      "text": "so this is space time there isn't uh"
+    },
+    {
+      "start": 1442.72,
+      "duration": 4.559,
+      "text": "not a uh one parameter group of"
+    },
+    {
+      "start": 1445.44,
+      "duration": 3.119,
+      "text": "isometries whose orbits are time-like"
+    },
+    {
+      "start": 1447.279,
+      "duration": 4.481,
+      "text": "curves this it is"
+    },
+    {
+      "start": 1448.559,
+      "duration": 6.801,
+      "text": "counter example and there are space"
+    },
+    {
+      "start": 1451.76,
+      "duration": 3.6,
+      "text": "terms that are stationary and not static"
+    },
+    {
+      "start": 1455.52,
+      "duration": 4.72,
+      "text": "so in coordinates let's just illustrate"
+    },
+    {
+      "start": 1470.84,
+      "duration": 3.0,
+      "text": "now"
+    },
+    {
+      "start": 1474.159,
+      "duration": 6.081,
+      "text": "just trying now illustrate the this"
+    },
+    {
+      "start": 1477.44,
+      "duration": 4.479,
+      "text": "these definitions and what it means in"
+    },
+    {
+      "start": 1480.24,
+      "duration": 4.72,
+      "text": "coordinates"
+    },
+    {
+      "start": 1481.919,
+      "duration": 3.041,
+      "text": "so i'm going to draw"
+    },
+    {
+      "start": 1485.12,
+      "duration": 2.72,
+      "text": "big sigma"
+    },
+    {
+      "start": 1492.159,
+      "duration": 6.241,
+      "text": "and big sigma is this"
+    },
+    {
+      "start": 1495.679,
+      "duration": 2.721,
+      "text": "hyper surface"
+    },
+    {
+      "start": 1499.12,
+      "duration": 5.439,
+      "text": "and on big sigma you've got you can"
+    },
+    {
+      "start": 1502.64,
+      "duration": 3.2,
+      "text": "look at this time like killing vector"
+    },
+    {
+      "start": 1504.559,
+      "duration": 6.401,
+      "text": "field on big sigma"
+    },
+    {
+      "start": 1505.84,
+      "duration": 5.12,
+      "text": "here it is x i a a bunch of vectors"
+    },
+    {
+      "start": 1511.2,
+      "duration": 6.56,
+      "text": "on big sigma"
+    },
+    {
+      "start": 1514.32,
+      "duration": 3.44,
+      "text": "and these vectors"
+    },
+    {
+      "start": 1518.08,
+      "duration": 10.32,
+      "text": "are all orthogonal in a static"
+    },
+    {
+      "start": 1521.6,
+      "duration": 8.959,
+      "text": "universe to this hypersurface sigma and"
+    },
+    {
+      "start": 1528.4,
+      "duration": 2.159,
+      "text": "in"
+    },
+    {
+      "start": 1531.6,
+      "duration": 3.439,
+      "text": "and this will allow us actually to"
+    },
+    {
+      "start": 1533.919,
+      "duration": 5.521,
+      "text": "construct"
+    },
+    {
+      "start": 1535.039,
+      "duration": 4.401,
+      "text": "a uh foliation of our"
+    },
+    {
+      "start": 1540.84,
+      "duration": 3.0,
+      "text": "space-time"
+    },
+    {
+      "start": 1544.559,
+      "duration": 5.281,
+      "text": "so if sigma x i a is not zero"
+    },
+    {
+      "start": 1548.0,
+      "duration": 4.159,
+      "text": "on sigma of course it could be zero"
+    },
+    {
+      "start": 1549.84,
+      "duration": 4.48,
+      "text": "right that would also be orthogonal"
+    },
+    {
+      "start": 1552.159,
+      "duration": 3.201,
+      "text": "uh so we have to additionally assume"
+    },
+    {
+      "start": 1554.32,
+      "duration": 5.28,
+      "text": "that x i"
+    },
+    {
+      "start": 1555.36,
+      "duration": 7.679,
+      "text": "is not zero then what we can do is"
+    },
+    {
+      "start": 1559.6,
+      "duration": 3.439,
+      "text": "we can build a neighborhood"
+    },
+    {
+      "start": 1564.159,
+      "duration": 3.441,
+      "text": "around the hypersurface"
+    },
+    {
+      "start": 1568.159,
+      "duration": 5.76,
+      "text": "i'll call the neighborhood n and i'll"
+    },
+    {
+      "start": 1571.279,
+      "duration": 2.64,
+      "text": "draw it now"
+    },
+    {
+      "start": 1577.679,
+      "duration": 3.201,
+      "text": "so the neighborhood is"
+    },
+    {
+      "start": 1581.76,
+      "duration": 5.36,
+      "text": "like this little little chunk of space"
+    },
+    {
+      "start": 1584.159,
+      "duration": 2.961,
+      "text": "time around"
+    },
+    {
+      "start": 1588.24,
+      "duration": 3.36,
+      "text": "the hyperservice sigma"
+    },
+    {
+      "start": 1596.799,
+      "duration": 6.801,
+      "text": "and then we'll also be able"
+    },
+    {
+      "start": 1600.64,
+      "duration": 3.84,
+      "text": "to introduce other hypersurfaces related"
+    },
+    {
+      "start": 1603.6,
+      "duration": 3.6,
+      "text": "to sigma by"
+    },
+    {
+      "start": 1604.48,
+      "duration": 4.799,
+      "text": "translating the whole hypersurface along"
+    },
+    {
+      "start": 1607.2,
+      "duration": 5.599,
+      "text": "the geodesics"
+    },
+    {
+      "start": 1609.279,
+      "duration": 4.801,
+      "text": "generated by psi a so anyway to begin"
+    },
+    {
+      "start": 1612.799,
+      "duration": 4.721,
+      "text": "with we've got this neighborhood n"
+    },
+    {
+      "start": 1614.08,
+      "duration": 6.079,
+      "text": "and is this orange some parallel pivot"
+    },
+    {
+      "start": 1617.52,
+      "duration": 2.639,
+      "text": "like thing"
+    },
+    {
+      "start": 1624.64,
+      "duration": 5.68,
+      "text": "so as long as psi a is not zero then"
+    },
+    {
+      "start": 1626.4,
+      "duration": 15.44,
+      "text": "every point of our hyperservice sigma"
+    },
+    {
+      "start": 1630.32,
+      "duration": 11.52,
+      "text": "will lie on a unique orbit"
+    },
+    {
+      "start": 1647.6,
+      "duration": 3.52,
+      "text": "so now we're going to choose some"
+    },
+    {
+      "start": 1652.84,
+      "duration": 3.0,
+      "text": "coordinates"
+    },
+    {
+      "start": 1657.919,
+      "duration": 2.88,
+      "text": "on our hyper surface and we're going to"
+    },
+    {
+      "start": 1659.36,
+      "duration": 4.4,
+      "text": "extend these to a coordinate system of"
+    },
+    {
+      "start": 1660.799,
+      "duration": 2.961,
+      "text": "that whole space time"
+    },
+    {
+      "start": 1665.12,
+      "duration": 7.12,
+      "text": "so we're going to label"
+    },
+    {
+      "start": 1668.64,
+      "duration": 7.039,
+      "text": "each point p in this neighborhood"
+    },
+    {
+      "start": 1672.24,
+      "duration": 10.559,
+      "text": "and this fattened thickened version of"
+    },
+    {
+      "start": 1675.679,
+      "duration": 10.24,
+      "text": "the hypersurface"
+    },
+    {
+      "start": 1682.799,
+      "duration": 5.921,
+      "text": "by the parameter t"
+    },
+    {
+      "start": 1685.919,
+      "duration": 2.801,
+      "text": "of the orbit"
+    },
+    {
+      "start": 1690.799,
+      "duration": 7.041,
+      "text": "reaching p and the coordinates"
+    },
+    {
+      "start": 1698.399,
+      "duration": 9.841,
+      "text": "x mu of the point"
+    },
+    {
+      "start": 1703.44,
+      "duration": 4.8,
+      "text": "in sigma connected"
+    },
+    {
+      "start": 1708.799,
+      "duration": 3.041,
+      "text": "to p"
+    },
+    {
+      "start": 1714.559,
+      "duration": 3.521,
+      "text": "so we've coordinatized this patterned or"
+    },
+    {
+      "start": 1716.799,
+      "duration": 8.721,
+      "text": "thickened piece"
+    },
+    {
+      "start": 1718.08,
+      "duration": 10.079,
+      "text": "of our space time"
+    },
+    {
+      "start": 1725.52,
+      "duration": 3.2,
+      "text": "but we can do we can infer slightly more"
+    },
+    {
+      "start": 1728.159,
+      "duration": 2.4,
+      "text": "because"
+    },
+    {
+      "start": 1728.72,
+      "duration": 4.079,
+      "text": "this coordinate system isn't generated"
+    },
+    {
+      "start": 1730.559,
+      "duration": 8.801,
+      "text": "by just any old vector field"
+    },
+    {
+      "start": 1732.799,
+      "duration": 7.921,
+      "text": "it's generated by a killing vector field"
+    },
+    {
+      "start": 1739.36,
+      "duration": 4.0,
+      "text": "which means it's generated by an"
+    },
+    {
+      "start": 1740.72,
+      "duration": 2.64,
+      "text": "isometry"
+    },
+    {
+      "start": 1751.6,
+      "duration": 3.92,
+      "text": "and that means that the metric if you if"
+    },
+    {
+      "start": 1753.52,
+      "duration": 4.399,
+      "text": "you choose to express your metric"
+    },
+    {
+      "start": 1755.52,
+      "duration": 12.32,
+      "text": "in this coordinate system then the"
+    },
+    {
+      "start": 1757.919,
+      "duration": 9.921,
+      "text": "metric components"
+    },
+    {
+      "start": 1768.0,
+      "duration": 3.52,
+      "text": "in the system are independent"
+    },
+    {
+      "start": 1772.559,
+      "duration": 12.561,
+      "text": "of t"
+    },
+    {
+      "start": 1781.6,
+      "duration": 7.52,
+      "text": "and as sigma t which is"
+    },
+    {
+      "start": 1785.12,
+      "duration": 4.0,
+      "text": "the set of"
+    },
+    {
+      "start": 1790.0,
+      "duration": 2.48,
+      "text": "points"
+    },
+    {
+      "start": 1793.36,
+      "duration": 5.199,
+      "text": "reached by five t"
+    },
+    {
+      "start": 1796.559,
+      "duration": 3.921,
+      "text": "from sigma so i'm going to draw sigma t"
+    },
+    {
+      "start": 1798.559,
+      "duration": 4.48,
+      "text": "now sigma t is like a another hyper"
+    },
+    {
+      "start": 1800.48,
+      "duration": 2.559,
+      "text": "surface right"
+    },
+    {
+      "start": 1806.48,
+      "duration": 3.439,
+      "text": "every point in sigma t is just the image"
+    },
+    {
+      "start": 1809.039,
+      "duration": 3.681,
+      "text": "of sigma"
+    },
+    {
+      "start": 1809.919,
+      "duration": 2.801,
+      "text": "under phi of t"
+    },
+    {
+      "start": 1817.84,
+      "duration": 5.68,
+      "text": "all right as this is an image of a bunch"
+    },
+    {
+      "start": 1820.799,
+      "duration": 7.12,
+      "text": "of points under an isometry"
+    },
+    {
+      "start": 1823.52,
+      "duration": 4.399,
+      "text": "we learn that sigma t is also orthogonal"
+    },
+    {
+      "start": 1830.24,
+      "duration": 4.319,
+      "text": "to the vector field the killing vector"
+    },
+    {
+      "start": 1832.24,
+      "duration": 2.319,
+      "text": "field"
+    },
+    {
+      "start": 1835.279,
+      "duration": 3.441,
+      "text": "uh xi8"
+    },
+    {
+      "start": 1844.64,
+      "duration": 10.24,
+      "text": "or orthogonal to the orbits"
+    },
+    {
+      "start": 1850.32,
+      "duration": 6.32,
+      "text": "of phi of t to make it"
+    },
+    {
+      "start": 1854.88,
+      "duration": 4.24,
+      "text": "to use a language that's consistent with"
+    },
+    {
+      "start": 1856.64,
+      "duration": 6.159,
+      "text": "the definition of static"
+    },
+    {
+      "start": 1859.12,
+      "duration": 5.76,
+      "text": "and uh in these coordinates now we can"
+    },
+    {
+      "start": 1862.799,
+      "duration": 4.72,
+      "text": "actually infer a bit of a simplification"
+    },
+    {
+      "start": 1864.88,
+      "duration": 2.639,
+      "text": "for the metric"
+    },
+    {
+      "start": 1872.64,
+      "duration": 9.44,
+      "text": "the metric takes a very particular form"
+    },
+    {
+      "start": 1878.96,
+      "duration": 5.36,
+      "text": "namely d s squared is"
+    },
+    {
+      "start": 1882.08,
+      "duration": 4.16,
+      "text": "minus v squared something that depends"
+    },
+    {
+      "start": 1884.32,
+      "duration": 4.8,
+      "text": "on the coordinates of the hypersurface"
+    },
+    {
+      "start": 1886.24,
+      "duration": 6.159,
+      "text": "but not time"
+    },
+    {
+      "start": 1889.12,
+      "duration": 4.72,
+      "text": "plus some spatial stuff which is"
+    },
+    {
+      "start": 1892.399,
+      "duration": 14.0,
+      "text": "decoupled"
+    },
+    {
+      "start": 1893.84,
+      "duration": 14.719,
+      "text": "there's no space time components"
+    },
+    {
+      "start": 1906.399,
+      "duration": 5.52,
+      "text": "and what is v the scalar factor well"
+    },
+    {
+      "start": 1908.559,
+      "duration": 6.321,
+      "text": "it's got to be the length of the"
+    },
+    {
+      "start": 1911.919,
+      "duration": 2.961,
+      "text": "killing vector field"
+    },
+    {
+      "start": 1915.44,
+      "duration": 3.52,
+      "text": "so we've already thrown out we got we"
+    },
+    {
+      "start": 1917.12,
+      "duration": 3.279,
+      "text": "got time time components we've got space"
+    },
+    {
+      "start": 1918.96,
+      "duration": 2.64,
+      "text": "based components but we have no space"
+    },
+    {
+      "start": 1920.399,
+      "duration": 4.321,
+      "text": "time components now"
+    },
+    {
+      "start": 1921.6,
+      "duration": 6.48,
+      "text": "thanks for a static"
+    },
+    {
+      "start": 1924.72,
+      "duration": 5.12,
+      "text": "metric it's already a simplification"
+    },
+    {
+      "start": 1928.08,
+      "duration": 5.599,
+      "text": "right instead of looking for"
+    },
+    {
+      "start": 1929.84,
+      "duration": 6.64,
+      "text": "10 things we're now looking for"
+    },
+    {
+      "start": 1933.679,
+      "duration": 3.12,
+      "text": "seven things i think right three five"
+    },
+    {
+      "start": 1936.48,
+      "duration": 4.24,
+      "text": "six"
+    },
+    {
+      "start": 1936.799,
+      "duration": 6.48,
+      "text": "seven seven functions"
+    },
+    {
+      "start": 1940.72,
+      "duration": 3.52,
+      "text": "so seven is fewer than ten but still not"
+    },
+    {
+      "start": 1943.279,
+      "duration": 2.64,
+      "text": "like"
+    },
+    {
+      "start": 1944.24,
+      "duration": 2.88,
+      "text": "still quite a lot of things but we"
+    },
+    {
+      "start": 1945.919,
+      "duration": 2.321,
+      "text": "haven't exploited the fact that we're"
+    },
+    {
+      "start": 1947.12,
+      "duration": 5.36,
+      "text": "looking for"
+    },
+    {
+      "start": 1948.24,
+      "duration": 6.88,
+      "text": "something that's spherically symmetric"
+    },
+    {
+      "start": 1952.48,
+      "duration": 6.079,
+      "text": "this is just static the metric that i've"
+    },
+    {
+      "start": 1955.12,
+      "duration": 3.439,
+      "text": "just written down here metric star"
+    },
+    {
+      "start": 1958.64,
+      "duration": 3.36,
+      "text": "let's now take a look and see if we can"
+    },
+    {
+      "start": 1961.2,
+      "duration": 4.4,
+      "text": "use spherical"
+    },
+    {
+      "start": 1962.0,
+      "duration": 6.08,
+      "text": "symmetry to further simplify the form of"
+    },
+    {
+      "start": 1965.6,
+      "duration": 2.48,
+      "text": "the metric"
+    },
+    {
+      "start": 1968.88,
+      "duration": 3.6,
+      "text": "now what does it mean spherical symmetry"
+    },
+    {
+      "start": 1970.96,
+      "duration": 2.959,
+      "text": "well again"
+    },
+    {
+      "start": 1972.48,
+      "duration": 2.799,
+      "text": "you know you look to the symmetries"
+    },
+    {
+      "start": 1973.919,
+      "duration": 3.921,
+      "text": "right the word symmetry tells you"
+    },
+    {
+      "start": 1975.279,
+      "duration": 2.561,
+      "text": "everything"
+    },
+    {
+      "start": 1982.559,
+      "duration": 2.96,
+      "text": "and in particular"
+    },
+    {
+      "start": 1985.6,
+      "duration": 3.04,
+      "text": "for something to be spherically"
+    },
+    {
+      "start": 1986.88,
+      "duration": 3.2,
+      "text": "symmetric it must mean that of all the"
+    },
+    {
+      "start": 1988.64,
+      "duration": 3.759,
+      "text": "symmetries that your manifold"
+    },
+    {
+      "start": 1990.08,
+      "duration": 2.319,
+      "text": "has"
+    },
+    {
+      "start": 1993.2,
+      "duration": 5.199,
+      "text": "there must be a subgroup that's"
+    },
+    {
+      "start": 1995.2,
+      "duration": 4.8,
+      "text": "equivalent to the symmetries of a sphere"
+    },
+    {
+      "start": 1998.399,
+      "duration": 4.081,
+      "text": "so a space-time atmospherically"
+    },
+    {
+      "start": 2000.0,
+      "duration": 2.48,
+      "text": "symmetric"
+    },
+    {
+      "start": 2002.88,
+      "duration": 5.36,
+      "text": "if it's isometry group right that's the"
+    },
+    {
+      "start": 2004.799,
+      "duration": 3.441,
+      "text": "group of all its symmetries"
+    },
+    {
+      "start": 2010.32,
+      "duration": 5.04,
+      "text": "it contains a subgroup"
+    },
+    {
+      "start": 2013.36,
+      "duration": 3.439,
+      "text": "so there must be a bunch of sub of sub"
+    },
+    {
+      "start": 2015.36,
+      "duration": 4.319,
+      "text": "symmetries"
+    },
+    {
+      "start": 2016.799,
+      "duration": 5.281,
+      "text": "uh which are equivalent to those of the"
+    },
+    {
+      "start": 2019.679,
+      "duration": 2.401,
+      "text": "sphere"
+    },
+    {
+      "start": 2023.12,
+      "duration": 3.039,
+      "text": "and the symmetries of the sphere is the"
+    },
+    {
+      "start": 2024.64,
+      "duration": 4.32,
+      "text": "lead group so3"
+    },
+    {
+      "start": 2026.159,
+      "duration": 2.801,
+      "text": "the rotations"
+    },
+    {
+      "start": 2031.44,
+      "duration": 3.119,
+      "text": "and well you there's a kind of"
+    },
+    {
+      "start": 2033.039,
+      "duration": 4.081,
+      "text": "degenerate way"
+    },
+    {
+      "start": 2034.559,
+      "duration": 3.84,
+      "text": "where that could be the case and so we"
+    },
+    {
+      "start": 2037.12,
+      "duration": 3.919,
+      "text": "want to prevent that"
+    },
+    {
+      "start": 2038.399,
+      "duration": 3.841,
+      "text": "um namely your space-time might be just"
+    },
+    {
+      "start": 2041.039,
+      "duration": 3.921,
+      "text": "a point"
+    },
+    {
+      "start": 2042.24,
+      "duration": 4.24,
+      "text": "right that that the isometry group sort"
+    },
+    {
+      "start": 2044.96,
+      "duration": 2.559,
+      "text": "of degenerately contains a"
+    },
+    {
+      "start": 2046.48,
+      "duration": 4.72,
+      "text": "representation"
+    },
+    {
+      "start": 2047.519,
+      "duration": 7.6,
+      "text": "it contains a subgroup isomorphic so3"
+    },
+    {
+      "start": 2051.2,
+      "duration": 6.639,
+      "text": "uh so we want to somehow prevent such"
+    },
+    {
+      "start": 2055.119,
+      "duration": 6.72,
+      "text": "weird degenerate situations"
+    },
+    {
+      "start": 2057.839,
+      "duration": 6.32,
+      "text": "so we say that the orbits"
+    },
+    {
+      "start": 2061.839,
+      "duration": 3.681,
+      "text": "of the subgroup these form got to form"
+    },
+    {
+      "start": 2064.159,
+      "duration": 4.96,
+      "text": "sub-manifolds"
+    },
+    {
+      "start": 2065.52,
+      "duration": 10.319,
+      "text": "and those sub-manifolds better be"
+    },
+    {
+      "start": 2069.119,
+      "duration": 6.72,
+      "text": "if you morph it to s2"
+    },
+    {
+      "start": 2076.24,
+      "duration": 3.359,
+      "text": "the surface of the sphere"
+    },
+    {
+      "start": 2080.72,
+      "duration": 4.0,
+      "text": "and now let's let's try and deduce some"
+    },
+    {
+      "start": 2083.599,
+      "duration": 4.24,
+      "text": "um"
+    },
+    {
+      "start": 2084.72,
+      "duration": 3.76,
+      "text": "consequences of this definition well the"
+    },
+    {
+      "start": 2087.839,
+      "duration": 4.24,
+      "text": "first is"
+    },
+    {
+      "start": 2088.48,
+      "duration": 3.599,
+      "text": "that the full space time metric"
+    },
+    {
+      "start": 2094.639,
+      "duration": 6.48,
+      "text": "g a b the full metric whatever it is"
+    },
+    {
+      "start": 2098.72,
+      "duration": 4.24,
+      "text": "because these s2s these surfaces of the"
+    },
+    {
+      "start": 2101.119,
+      "duration": 6.24,
+      "text": "sphere these orbits of the this"
+    },
+    {
+      "start": 2102.96,
+      "duration": 7.84,
+      "text": "isometric group are sub manifolds now"
+    },
+    {
+      "start": 2107.359,
+      "duration": 10.48,
+      "text": "they this metric induces"
+    },
+    {
+      "start": 2110.8,
+      "duration": 7.039,
+      "text": "a metric on each orbit"
+    },
+    {
+      "start": 2118.88,
+      "duration": 6.0,
+      "text": "and because of the so3 symmetry because"
+    },
+    {
+      "start": 2121.359,
+      "duration": 3.521,
+      "text": "of this rotation invariance"
+    },
+    {
+      "start": 2125.839,
+      "duration": 8.401,
+      "text": "because these isometries"
+    },
+    {
+      "start": 2131.2,
+      "duration": 3.04,
+      "text": "this induced metric"
+    },
+    {
+      "start": 2135.52,
+      "duration": 12.559,
+      "text": "we'll call it habit"
+    },
+    {
+      "start": 2145.44,
+      "duration": 3.679,
+      "text": "because the full spacetime metric is"
+    },
+    {
+      "start": 2148.079,
+      "duration": 2.801,
+      "text": "invariant under"
+    },
+    {
+      "start": 2149.119,
+      "duration": 3.521,
+      "text": "these rotations we must have that the"
+    },
+    {
+      "start": 2150.88,
+      "duration": 8.959,
+      "text": "induced metric"
+    },
+    {
+      "start": 2152.64,
+      "duration": 7.199,
+      "text": "is a multiple"
+    },
+    {
+      "start": 2164.4,
+      "duration": 9.439,
+      "text": "of the metric of a two-sphere"
+    },
+    {
+      "start": 2178.32,
+      "duration": 4.16,
+      "text": "right because there's no other way to"
+    },
+    {
+      "start": 2180.16,
+      "duration": 5.84,
+      "text": "have a so"
+    },
+    {
+      "start": 2182.48,
+      "duration": 7.359,
+      "text": "three invariant metric that induces"
+    },
+    {
+      "start": 2186.0,
+      "duration": 5.2,
+      "text": "a metric on the sphere there's no other"
+    },
+    {
+      "start": 2189.839,
+      "duration": 3.921,
+      "text": "possible metric you can write on the"
+    },
+    {
+      "start": 2191.2,
+      "duration": 2.56,
+      "text": "two-sphere"
+    },
+    {
+      "start": 2199.76,
+      "duration": 3.44,
+      "text": "that's invariant other rotations"
+    },
+    {
+      "start": 2209.119,
+      "duration": 4.96,
+      "text": "and we could what is this constant"
+    },
+    {
+      "start": 2212.16,
+      "duration": 5.76,
+      "text": "of proportionality we could label it by"
+    },
+    {
+      "start": 2214.079,
+      "duration": 3.841,
+      "text": "the area of the orbit sphere itself"
+    },
+    {
+      "start": 2225.839,
+      "duration": 4.161,
+      "text": "so we can introduce some notation we"
+    },
+    {
+      "start": 2227.52,
+      "duration": 5.839,
+      "text": "could you know once we've labeled our"
+    },
+    {
+      "start": 2230.0,
+      "duration": 4.56,
+      "text": "uh uh our metrics on all these induced"
+    },
+    {
+      "start": 2233.359,
+      "duration": 4.24,
+      "text": "orbits we could"
+    },
+    {
+      "start": 2234.56,
+      "duration": 6.559,
+      "text": "label them instead by a radii like"
+    },
+    {
+      "start": 2237.599,
+      "duration": 5.76,
+      "text": "coordinate which is"
+    },
+    {
+      "start": 2241.119,
+      "duration": 4.0,
+      "text": "given by interpreting a literally as the"
+    },
+    {
+      "start": 2243.359,
+      "duration": 4.24,
+      "text": "area of the orbit"
+    },
+    {
+      "start": 2245.119,
+      "duration": 2.48,
+      "text": "sphere"
+    },
+    {
+      "start": 2249.359,
+      "duration": 3.521,
+      "text": "and then we can introduce coordinates"
+    },
+    {
+      "start": 2253.359,
+      "duration": 4.48,
+      "text": "on each of these orbit spheres"
+    },
+    {
+      "start": 2276.88,
+      "duration": 4.4,
+      "text": "you know we just use the the metric of"
+    },
+    {
+      "start": 2278.8,
+      "duration": 7.039,
+      "text": "this the two sphere which is unique"
+    },
+    {
+      "start": 2281.28,
+      "duration": 4.559,
+      "text": "the rotation invariant"
+    },
+    {
+      "start": 2286.56,
+      "duration": 3.279,
+      "text": "and now we know that the or the metric"
+    },
+    {
+      "start": 2289.2,
+      "duration": 2.32,
+      "text": "hab"
+    },
+    {
+      "start": 2289.839,
+      "duration": 3.681,
+      "text": "induced on each orbit sphere must look"
+    },
+    {
+      "start": 2291.52,
+      "duration": 3.2,
+      "text": "like this"
+    },
+    {
+      "start": 2293.52,
+      "duration": 2.8,
+      "text": "so the picture you should have in mind"
+    },
+    {
+      "start": 2294.72,
+      "duration": 5.119,
+      "text": "as you know here is a constant time"
+    },
+    {
+      "start": 2296.32,
+      "duration": 3.519,
+      "text": "slice here"
+    },
+    {
+      "start": 2301.839,
+      "duration": 6.721,
+      "text": "take a point p and"
+    },
+    {
+      "start": 2305.04,
+      "duration": 7.84,
+      "text": "act on it with all the"
+    },
+    {
+      "start": 2308.56,
+      "duration": 6.88,
+      "text": "rotations that"
+    },
+    {
+      "start": 2312.88,
+      "duration": 5.28,
+      "text": "come from the subgroup isomorphic so3"
+    },
+    {
+      "start": 2315.44,
+      "duration": 12.08,
+      "text": "and then you draw yourself an so"
+    },
+    {
+      "start": 2318.16,
+      "duration": 12.72,
+      "text": "at a sphere s2"
+    },
+    {
+      "start": 2327.52,
+      "duration": 7.92,
+      "text": "and now we have a sphere we got a uh"
+    },
+    {
+      "start": 2330.88,
+      "duration": 4.56,
+      "text": "we can choose a coordinate system uh"
+    },
+    {
+      "start": 2336.32,
+      "duration": 5.519,
+      "text": "just spherical coordinates on this"
+    },
+    {
+      "start": 2338.839,
+      "duration": 3.0,
+      "text": "sphere"
+    },
+    {
+      "start": 2346.64,
+      "duration": 2.719,
+      "text": "now this is in the case where the"
+    },
+    {
+      "start": 2347.76,
+      "duration": 3.599,
+      "text": "spacetime is just rotationally invariant"
+    },
+    {
+      "start": 2349.359,
+      "duration": 4.081,
+      "text": "but not necessarily static"
+    },
+    {
+      "start": 2351.359,
+      "duration": 3.921,
+      "text": "but now we can put all this together now"
+    },
+    {
+      "start": 2353.44,
+      "duration": 4.8,
+      "text": "so if this space time is"
+    },
+    {
+      "start": 2355.28,
+      "duration": 2.96,
+      "text": "static as well"
+    },
+    {
+      "start": 2364.96,
+      "duration": 6.399,
+      "text": "and we have to assume that the time like"
+    },
+    {
+      "start": 2368.24,
+      "duration": 5.76,
+      "text": "killing vector field site a"
+    },
+    {
+      "start": 2371.359,
+      "duration": 2.641,
+      "text": "is unique"
+    },
+    {
+      "start": 2379.28,
+      "duration": 5.36,
+      "text": "then this time like"
+    },
+    {
+      "start": 2382.64,
+      "duration": 4.16,
+      "text": "killing vector field is orthogonal to"
+    },
+    {
+      "start": 2384.64,
+      "duration": 2.16,
+      "text": "the"
+    },
+    {
+      "start": 2387.68,
+      "duration": 2.88,
+      "text": "orbit spheres"
+    },
+    {
+      "start": 2391.76,
+      "duration": 2.88,
+      "text": "and by the way i should have said you"
+    },
+    {
+      "start": 2392.88,
+      "duration": 3.84,
+      "text": "know you pick one point you you you"
+    },
+    {
+      "start": 2394.64,
+      "duration": 3.199,
+      "text": "apply the the isometry group to draw out"
+    },
+    {
+      "start": 2396.72,
+      "duration": 2.56,
+      "text": "a sphere s2"
+    },
+    {
+      "start": 2397.839,
+      "duration": 3.921,
+      "text": "now pick another point that's not on the"
+    },
+    {
+      "start": 2399.28,
+      "duration": 5.6,
+      "text": "sphere and say inside and then you draw"
+    },
+    {
+      "start": 2401.76,
+      "duration": 5.04,
+      "text": "well another sphere right"
+    },
+    {
+      "start": 2404.88,
+      "duration": 5.12,
+      "text": "and you can see how by repeating this"
+    },
+    {
+      "start": 2406.8,
+      "duration": 5.519,
+      "text": "process for all points"
+    },
+    {
+      "start": 2410.0,
+      "duration": 3.44,
+      "text": "on a constant time slice you foliate"
+    },
+    {
+      "start": 2412.319,
+      "duration": 13.52,
+      "text": "your constant time"
+    },
+    {
+      "start": 2413.44,
+      "duration": 12.399,
+      "text": "slice with spheres"
+    },
+    {
+      "start": 2426.079,
+      "duration": 4.161,
+      "text": "so the science must be uh in the case x"
+    },
+    {
+      "start": 2429.44,
+      "duration": 2.8,
+      "text": "i is unique"
+    },
+    {
+      "start": 2430.24,
+      "duration": 3.359,
+      "text": "then these cells are orthogonal to the"
+    },
+    {
+      "start": 2432.24,
+      "duration": 5.2,
+      "text": "the orbit spheres"
+    },
+    {
+      "start": 2433.599,
+      "duration": 3.841,
+      "text": "and why is that well if you project"
+    },
+    {
+      "start": 2437.68,
+      "duration": 7.52,
+      "text": "psi onto one of these orbit spheres"
+    },
+    {
+      "start": 2441.68,
+      "duration": 5.439,
+      "text": "and then uh this has to be invariant"
+    },
+    {
+      "start": 2445.2,
+      "duration": 5.28,
+      "text": "but the only invariant the only vector"
+    },
+    {
+      "start": 2447.119,
+      "duration": 3.361,
+      "text": "field invariant on the sphere"
+    },
+    {
+      "start": 2450.64,
+      "duration": 4.32,
+      "text": "is that the zero vector field so that's"
+    },
+    {
+      "start": 2452.88,
+      "duration": 4.479,
+      "text": "why x i a is orthogonal to the orbit"
+    },
+    {
+      "start": 2454.96,
+      "duration": 2.399,
+      "text": "spheres"
+    },
+    {
+      "start": 2458.24,
+      "duration": 6.48,
+      "text": "and um thus"
+    },
+    {
+      "start": 2461.76,
+      "duration": 2.96,
+      "text": "the orbit spheres"
+    },
+    {
+      "start": 2465.44,
+      "duration": 3.12,
+      "text": "actually lie in"
+    },
+    {
+      "start": 2469.28,
+      "duration": 2.96,
+      "text": "sigma t right"
+    },
+    {
+      "start": 2472.96,
+      "duration": 5.2,
+      "text": "which is orthogonal to the x is"
+    },
+    {
+      "start": 2476.48,
+      "duration": 5.359,
+      "text": "well now let's put all of this together"
+    },
+    {
+      "start": 2478.16,
+      "duration": 3.679,
+      "text": "into a to build a coordinate system"
+    },
+    {
+      "start": 2486.72,
+      "duration": 4.0,
+      "text": "and hence write out the metric that"
+    },
+    {
+      "start": 2488.64,
+      "duration": 3.76,
+      "text": "we're going to use as our"
+    },
+    {
+      "start": 2490.72,
+      "duration": 3.599,
+      "text": "unzips to solve einstein's field"
+    },
+    {
+      "start": 2492.4,
+      "duration": 4.08,
+      "text": "equations this is all this discussion"
+    },
+    {
+      "start": 2494.319,
+      "duration": 6.081,
+      "text": "today has all been just motivation"
+    },
+    {
+      "start": 2496.48,
+      "duration": 5.359,
+      "text": "for a particular choice of metric"
+    },
+    {
+      "start": 2500.4,
+      "duration": 3.679,
+      "text": "so we start by choosing a fiducial"
+    },
+    {
+      "start": 2501.839,
+      "duration": 6.321,
+      "text": "sphere just pick your favorite sphere"
+    },
+    {
+      "start": 2504.079,
+      "duration": 6.961,
+      "text": "in the hypersurface sigma"
+    },
+    {
+      "start": 2508.16,
+      "duration": 15.679,
+      "text": "and you know choose spherical"
+    },
+    {
+      "start": 2511.04,
+      "duration": 12.799,
+      "text": "coordinates on it"
+    },
+    {
+      "start": 2524.48,
+      "duration": 3.359,
+      "text": "and now we're going to propagate this"
+    },
+    {
+      "start": 2526.56,
+      "duration": 5.519,
+      "text": "coordinate system out"
+    },
+    {
+      "start": 2527.839,
+      "duration": 4.24,
+      "text": "to the the whole entirety of sigma"
+    },
+    {
+      "start": 2533.76,
+      "duration": 3.68,
+      "text": "just as we did for homogeneous and"
+    },
+    {
+      "start": 2535.2,
+      "duration": 6.159,
+      "text": "isotropic uh space times"
+    },
+    {
+      "start": 2537.44,
+      "duration": 3.919,
+      "text": "we're going to take geodesics"
+    },
+    {
+      "start": 2541.44,
+      "duration": 2.639,
+      "text": "orthogonal"
+    },
+    {
+      "start": 2544.56,
+      "duration": 3.279,
+      "text": "to the sphere to to build a full"
+    },
+    {
+      "start": 2546.8,
+      "duration": 4.319,
+      "text": "coordinate system"
+    },
+    {
+      "start": 2547.839,
+      "duration": 5.76,
+      "text": "of the or to carry out these coordinates"
+    },
+    {
+      "start": 2551.119,
+      "duration": 2.48,
+      "text": "outwards"
+    },
+    {
+      "start": 2557.68,
+      "duration": 10.32,
+      "text": "to other spheres"
+    },
+    {
+      "start": 2564.48,
+      "duration": 5.2,
+      "text": "and so the geodesic parameter"
+    },
+    {
+      "start": 2568.0,
+      "duration": 10.64,
+      "text": "that carries these coordinates outwards"
+    },
+    {
+      "start": 2569.68,
+      "duration": 12.96,
+      "text": "we could call it r the radius"
+    },
+    {
+      "start": 2578.64,
+      "duration": 4.0,
+      "text": "and so we've coordinated sigma t"
+    },
+    {
+      "start": 2583.359,
+      "duration": 2.48,
+      "text": "and now"
+    },
+    {
+      "start": 2586.4,
+      "duration": 4.959,
+      "text": "combining the coordinate system we have"
+    },
+    {
+      "start": 2591.44,
+      "duration": 6.56,
+      "text": "when we described the static universe"
+    },
+    {
+      "start": 2594.56,
+      "duration": 4.96,
+      "text": "so we we have the static universe and"
+    },
+    {
+      "start": 2598.0,
+      "duration": 2.64,
+      "text": "the metric text is very particular form"
+    },
+    {
+      "start": 2599.52,
+      "duration": 4.079,
+      "text": "here star"
+    },
+    {
+      "start": 2600.64,
+      "duration": 2.959,
+      "text": "so combining that"
+    },
+    {
+      "start": 2604.96,
+      "duration": 4.399,
+      "text": "with this new coordinate system we're"
+    },
+    {
+      "start": 2606.72,
+      "duration": 2.639,
+      "text": "building here"
+    },
+    {
+      "start": 2616.8,
+      "duration": 5.039,
+      "text": "we're going to combine this to build"
+    },
+    {
+      "start": 2618.839,
+      "duration": 3.0,
+      "text": "coordinates"
+    },
+    {
+      "start": 2621.92,
+      "duration": 3.199,
+      "text": "on our full space time"
+    },
+    {
+      "start": 2627.28,
+      "duration": 8.16,
+      "text": "labeled by t r theta and phi and in"
+    },
+    {
+      "start": 2634.4,
+      "duration": 3.6,
+      "text": "these"
+    },
+    {
+      "start": 2635.44,
+      "duration": 2.56,
+      "text": "coordinates"
+    },
+    {
+      "start": 2641.04,
+      "duration": 8.799,
+      "text": "our metric becomes the following"
+    },
+    {
+      "start": 2652.079,
+      "duration": 5.52,
+      "text": "there's the temporal component which has"
+    },
+    {
+      "start": 2653.76,
+      "duration": 3.839,
+      "text": "a it depends on the radius"
+    },
+    {
+      "start": 2658.319,
+      "duration": 5.361,
+      "text": "and here comes the spatial component"
+    },
+    {
+      "start": 2659.839,
+      "duration": 6.561,
+      "text": "which has now been highly constrained"
+    },
+    {
+      "start": 2663.68,
+      "duration": 3.679,
+      "text": "due to rotational variance to be"
+    },
+    {
+      "start": 2666.4,
+      "duration": 3.84,
+      "text": "effectively just"
+    },
+    {
+      "start": 2667.359,
+      "duration": 2.881,
+      "text": "the metric of"
+    },
+    {
+      "start": 2670.64,
+      "duration": 6.719,
+      "text": "the standard sphere and that"
+    },
+    {
+      "start": 2673.68,
+      "duration": 7.679,
+      "text": "concludes our discussion of static"
+    },
+    {
+      "start": 2677.359,
+      "duration": 4.0,
+      "text": "spherically symmetric space times"
+    },
+    {
+      "start": 2682.96,
+      "duration": 3.84,
+      "text": "if you like you can summarize this"
+    },
+    {
+      "start": 2685.44,
+      "duration": 3.12,
+      "text": "lecture as saying"
+    },
+    {
+      "start": 2686.8,
+      "duration": 3.76,
+      "text": "we hereby assume that the metric has"
+    },
+    {
+      "start": 2688.56,
+      "duration": 5.2,
+      "text": "this form"
+    },
+    {
+      "start": 2690.56,
+      "duration": 6.16,
+      "text": "written there the goal"
+    },
+    {
+      "start": 2693.76,
+      "duration": 2.96,
+      "text": "in the coming lectures"
+    },
+    {
+      "start": 2697.28,
+      "duration": 2.96,
+      "text": "is to substitute this formula metric"
+    },
+    {
+      "start": 2699.04,
+      "duration": 3.68,
+      "text": "into the vacuum einstein's field"
+    },
+    {
+      "start": 2700.24,
+      "duration": 2.48,
+      "text": "equations"
+    },
+    {
+      "start": 2702.88,
+      "duration": 4.56,
+      "text": "and to solve for these functions"
+    },
+    {
+      "start": 2707.839,
+      "duration": 5.52,
+      "text": "f and h that's"
+    },
+    {
+      "start": 2711.2,
+      "duration": 3.44,
+      "text": "the only degree of freedom left over in"
+    },
+    {
+      "start": 2713.359,
+      "duration": 4.641,
+      "text": "this metric"
+    },
+    {
+      "start": 2714.64,
+      "duration": 5.36,
+      "text": "and that's the task which we'll turn"
+    },
+    {
+      "start": 2718.0,
+      "duration": 3.04,
+      "text": "to in the next lecture but that's it for"
+    },
+    {
+      "start": 2720.0,
+      "duration": 2.48,
+      "text": "today"
+    },
+    {
+      "start": 2721.04,
+      "duration": 4.48,
+      "text": "thank you very much and see you next"
+    },
+    {
+      "start": 2722.48,
+      "duration": 3.04,
+      "text": "time goodbye"
+    }
+  ]
+}

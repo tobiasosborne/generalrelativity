@@ -1,0 +1,1496 @@
+# General Relativity, Lecture 6: tensors continued, current vector, energy-momentum tensor, and metric
+# YouTube: https://www.youtube.com/watch?v=VaxfWLWsYj8
+# Auto-generated transcript
+
+[00:00.08] hello and welcome back to introduction
+[00:01.60] to general relativity in the previous
+[00:03.60] lecture we introduced
+[00:04.80] tensors which are a way to capture
+[00:08.72] multi-dimensional information on
+[00:10.72] manifolds
+[00:12.56] these vectors tensors belong to a vector
+[00:14.96] space a vector space constructed by the
+[00:16.64] tensor product
+[00:18.56] in the previous lecture we only
+[00:19.92] considered the basic
+[00:21.60] vector space construction of the tensor
+[00:24.16] product
+[00:24.64] and we basically essentially completely
+[00:27.44] ignored the structure of the underlying
+[00:29.20] manifold
+[00:30.56] and in other words we applied the tensor
+[00:32.32] product to the vector space vp
+[00:34.72] at a point in the manifold the purpose
+[00:37.28] of today's lecture
+[00:38.64] is to study the consequences of the
+[00:40.80] extra data provided to us by the
+[00:42.88] manifold
+[00:44.00] namely we have not just one vector space
+[00:46.00] but a field of vector spaces one at each
+[00:48.08] point on the manifold
+[00:49.52] and according under maps of the manifold
+[00:52.32] various
+[00:53.12] aspects of these vector spaces change
+[00:56.00] that's the purpose of today's lecture to
+[00:57.84] understand how do things change under
+[01:00.88] changes of coordinates of the manifold
+[01:02.64] so how do vectors
+[01:04.64] joule vectors tenses how do they behave
+[01:07.60] under
+[01:08.08] mappings of the manifold in question so
+[01:11.36] to commence this discussion we'll start
+[01:14.88] by
+[01:15.76] recalling the the
+[01:19.44] definitions or rather the notations the
+[01:22.48] operations we've considered in the
+[01:23.60] previous lecture and apply them
+[01:25.68] more directly to the general case of the
+[01:28.80] vector space vp
+[01:29.92] at a manifold so let p be a point in a
+[01:38.84] manifold
+[01:44.96] vp the tangent space at the point
+[01:55.20] let's now study
+[02:01.36] the behavior of vp
+[02:05.12] or elements v v p elements v star and v
+[02:09.52] p star etc
+[02:13.68] under changes of coordinates
+[02:18.08] on the main manifold
+[02:29.60] so let's take a look at vbstar
+[02:37.04] so namely vp star is the jewel of the
+[02:39.84] tangent space vp
+[02:43.28] vp star is has a name
+[02:47.20] when when you take the the jewel of the
+[02:49.76] tangent space you give the resulting
+[02:51.52] vector space v star a name you call it
+[02:53.36] the cotangent
+[02:54.48] space in differential geometry
+[02:58.88] and the elements of vp
+[03:02.72] star are now called covariant vectors
+[03:15.36] given a basis we have a basis for vp
+[03:22.72] this is the standard coordinate basis
+[03:24.72] that we've been considering in the
+[03:25.92] previous lectures
+[03:27.12] we formally define
+[03:33.68] a joule basis
+[03:39.04] e mu
+[03:42.64] and we employ a very suggestive notation
+[03:45.84] although
+[03:46.40] at this point you should be cautioned
+[03:48.40] against interpreting this notation too
+[03:50.08] literally
+[03:51.20] this is just a symbol
+[03:57.92] uh symbol so far
+[04:02.56] later it'll acquire an interpretation of
+[04:06.00] an integration measure but
+[04:07.52] for now we define this dual basis well
+[04:12.16] you know how how do you define the joule
+[04:13.84] basis well with a chronic delta
+[04:16.24] right if you have a basis then you get a
+[04:17.92] basis for the dual vector space
+[04:19.44] um just by
+[04:22.88] introducing the the relations
+[04:26.16] the dual vector basis e mu according to
+[04:29.20] the fact that when you apply
+[04:30.40] e mu to an element of v p you better get
+[04:33.28] the
+[04:33.60] basis vector of v p but you get uh one
+[04:36.08] if they're the
+[04:37.12] corresponding basis elements but if you
+[04:39.84] apply the notation here
+[04:43.04] then you get this very peculiar looking
+[04:48.56] relation here namely that dxmu
+[04:53.28] interpreted as a linear function on
+[04:55.84] tangent vectors
+[04:57.28] has to obey this chronic delta
+[04:58.88] equivalence relation
+[05:03.20] now again i want to stress dx mu is a
+[05:05.60] notation
+[05:06.24] nothing more at this point it's a highly
+[05:07.84] suggestive notation but don't
+[05:10.40] look to interpret it any further dx mu
+[05:13.60] is a symbol for a linear function on
+[05:16.72] the
+[05:20.08] there's a symbol it's a linear function
+[05:25.36] of tangent vectors
+[05:30.16] defined by
+[05:34.48] star nothing more nothing goes it's just
+[05:37.04] a symbol so far
+[05:39.28] probably the most confusing part about
+[05:42.32] differential geometry and general
+[05:43.92] relativity is that the notation
+[05:46.80] is so highly suggestive and it it asks
+[05:50.08] you
+[05:51.36] you you are very motivated to try and
+[05:53.60] interpret these symbols further
+[05:55.84] further you know put more meaning into
+[05:57.60] them than what's handed to you in the
+[05:58.80] definition
+[06:00.00] that's not the case dx mu is just a
+[06:02.56] linear function of code of tangent
+[06:04.16] vectors nothing more nothing less
+[06:05.68] it's nothing to do with derivatives and
+[06:08.32] so uh
+[06:09.44] integration measures or anything yet
+[06:16.96] now what happens under a change of basis
+[06:19.68] now
+[06:21.68] change of basis is perhaps a poor choice
+[06:24.56] of words at this point because we have a
+[06:26.08] vector space vp
+[06:27.28] and we have a basis for vp and we can
+[06:29.52] change that vector space
+[06:31.28] but what we should say is change of
+[06:33.60] coordinate system
+[06:36.32] if you change your coordinate system of
+[06:38.08] your manifold
+[06:39.84] you get a different basis for vp
+[06:43.92] we know how this basis behaves under a
+[06:47.28] change of coordinate system
+[06:51.04] so we know that a vector with components
+[06:53.92] v
+[06:54.24] mu in the original coordinate system
+[06:58.64] has components v mu prime in the new
+[07:01.60] coordinate
+[07:02.00] systems according to this jacobian
+[07:07.04] rule and that was the vector trans
+[07:10.96] this is the so-called vector
+[07:12.32] transformation law
+[07:16.80] we derived this change of basis formula
+[07:19.36] when we introduce
+[07:20.24] tangent vectors
+[07:23.92] so if we change a coordinate system a
+[07:25.68] vector a
+[07:27.36] a coordinate system is extra data handed
+[07:29.60] to you by a manifold
+[07:31.92] and it provides you with a basis for
+[07:34.48] your vector space vp if you change your
+[07:36.32] coordinate system you change your
+[07:37.76] your basis for the vector space vp and
+[07:40.16] therefore a vector in one basis looks
+[07:42.00] different in the new basis and how does
+[07:43.36] it look different
+[07:44.00] well via this jacobian factor here
+[07:48.96] so what does how does the components of
+[07:51.84] a covector or covariant vector look like
+[07:54.64] in a new
+[07:55.68] uh with respect to this new choice of of
+[07:58.56] um
+[07:59.28] of bases so here we go let
+[08:02.48] omega be a covariant vector
+[08:07.92] well because we have already a basis for
+[08:11.04] the vector space vp induced by the dx
+[08:13.60] muse
+[08:14.64] we can always write omega as
+[08:17.76] a linear combination
+[08:22.80] of these basis vectors
+[08:27.36] now how does that omega look like in
+[08:31.12] terms of the
+[08:32.08] basis vectors induced by
+[08:35.92] the change of coordinate chart
+[08:40.72] so we want to understand what how to
+[08:42.48] calculate omega
+[08:43.84] prime mu primes how does that look
+[08:48.88] well let's the way to do it is to
+[08:51.68] construct a basis
+[08:52.88] independent quantity that you can then
+[08:55.44] study
+[08:56.40] to infer the behavior of bases dependent
+[08:59.68] things
+[09:00.08] so apply omega to v so omega is a
+[09:03.28] omega is nothing more than a linear
+[09:05.36] function of
+[09:06.32] tangent vectors v is a tangent vector
+[09:09.12] and if you apply omega to v
+[09:10.40] you get a number right that that's the
+[09:12.24] definition of
+[09:13.60] tangent vector tangent of
+[09:17.12] of joule of a vector
+[09:20.96] that if you apply a linear function to a
+[09:22.72] vector you get a real number so we know
+[09:24.56] that omega v is just a number
+[09:26.00] doesn't depend on the basis but now
+[09:28.40] let's expand
+[09:29.52] our tangent vector in terms of our
+[09:31.60] coordinate basis
+[09:32.80] that comes from this chart that we've
+[09:34.40] decided to focus on
+[09:37.76] and well omega is a linear function so i
+[09:40.64] can push it past the summation symbol
+[09:42.40] here
+[09:44.32] and remember these funny d d x mu's ps
+[09:47.20] are just
+[09:48.08] formal elements of a vector space now
+[09:49.76] omega eats vectors
+[09:51.28] and produces numbers and what number
+[09:54.40] does it produce well it produces
+[09:56.96] omega mu the components in
+[10:01.04] the original vector space
+[10:04.08] but this is also equal exactly the same
+[10:07.92] quantity as if
+[10:09.52] if we computed the vector in
+[10:12.72] the in a new chart right
+[10:20.08] and we use the vector transformation law
+[10:22.00] to write this vector in the new
+[10:24.00] coordinate system in terms of
+[10:27.20] the old so we get a jacobian factor so
+[10:30.08] we can
+[10:30.80] also equivalently write
+[10:34.16] the vector here as this linear
+[10:36.80] combination
+[10:37.52] of basis vectors oops there's no yep
+[10:42.16] doesn't need a primus in here
+[10:47.04] and so then we can use the fact that
+[10:49.12] omega is a linear function
+[10:50.56] of vectors and so on to infer that
+[10:55.52] omega prime mu prime
+[10:58.80] contracted with v mu via this jacobian
+[11:02.72] factor
+[11:06.64] is exactly equal to omega mu
+[11:12.80] contracted with v mu now you
+[11:16.32] see here i'm getting i'm starting to get
+[11:18.72] um
+[11:20.00] careless with the summations so let's go
+[11:22.56] and put the summations in but you
+[11:24.48] sooner or later i just expect you to be
+[11:26.00] able to interpret these expressions as
+[11:27.60] written
+[11:28.56] putting in the summation symbols as
+[11:30.16] required so on the left here i've got a
+[11:32.00] repeated mu index so that really means
+[11:33.92] in the einstein summation attention sum
+[11:35.52] of mu
+[11:36.40] here i've got a repeated mu index and a
+[11:38.64] repeated mu prime index so i have two
+[11:40.48] summations that are required here
+[11:44.48] so we learn that the components of the
+[11:47.36] dual vector omega
+[11:48.48] with respect to the new basis
+[11:52.00] can be obtained by
+[12:00.64] this uh
+[12:04.00] inverting this jacobian matrix here
+[12:07.84] right so we got the omega mu so this is
+[12:10.00] true for all v mu
+[12:11.04] here so we have the omega mu is equal to
+[12:14.56] the sum
+[12:15.36] i'm not even going to do the summations
+[12:16.80] anymore
+[12:23.44] right so we know that omega mu the
+[12:25.12] components in the old basis
+[12:26.72] are related to the components in the new
+[12:28.72] basis via this jacobian factor but we
+[12:30.80] want to invert this expression and we
+[12:32.48] can right because the jacobian is
+[12:34.88] invertible matrix so we learned that the
+[12:38.00] components of
+[12:38.96] the dual vector with respect to the new
+[12:40.56] basis are d
+[12:42.08] x mu d x prime mu prime so the inverse
+[12:45.52] of these jacobian factors
+[12:54.24] so that's how the components of a joule
+[12:57.12] vector look like
+[12:58.00] in a new coordinate basis
+[13:02.24] they're related by the change of
+[13:03.76] variables formula in this fashion here
+[13:08.72] so in general
+[13:15.60] for a tensor t of type
+[13:19.12] kl
+[13:22.40] we can work out via an equivalent
+[13:26.24] or analogous argument how the components
+[13:29.04] change when we change the coordinate
+[13:30.64] basis
+[13:33.60] so i'm going to employ the following
+[13:35.12] notation
+[13:38.56] to refer to this the components of this
+[13:40.56] tensor
+[13:47.12] so the underline here indicates
+[13:51.12] mu 1 all the way up to mu k the
+[13:53.92] underline here indicates
+[13:55.84] oops the same but the underline here
+[13:58.24] indicates
+[14:00.24] mu 1 all the way up to new l
+[14:04.00] and the sum here is over all the indices
+[14:11.44] so if we choose and and v mu
+[14:14.64] is a basis which basis is it well it's d
+[14:18.08] very tediously d d x mu one at p
+[14:21.44] tensor d d x mu two at p
+[14:28.00] d
+[14:29.46] [Music]
+[14:31.36] mu k at p and then we've got v new
+[14:35.12] joule basis has got to be d x new
+[14:38.24] one at p d d x nu two
+[14:41.44] at p and you can drop it at p because
+[14:44.24] it's understood from now on
+[14:48.00] and so applying these two rules that we
+[14:51.28] have the vector transformation law which
+[14:53.44] is
+[14:54.48] up here
+[14:57.68] so the vector transformation law tells
+[14:59.52] us how the components of a vector change
+[15:01.44] when you change the coordinate chart
+[15:03.52] or coordinate system
+[15:06.80] and the covector covariant vector
+[15:09.36] transformation law here
+[15:11.44] tells us how
+[15:15.60] the components of a covariant vector
+[15:17.76] transformation
+[15:19.04] had transformed under change of basis
+[15:23.92] you can actually just put these two
+[15:25.28] expressions together to and then
+[15:27.92] apply the similar argument apply t to a
+[15:31.60] to smooth vector and
+[15:35.20] um co-vector fields and then you learn
+[15:39.28] that the components
+[15:42.48] of a tensor under a change of
+[15:45.20] coordinates
+[15:48.64] behave as follows
+[15:56.64] so the components of t in a new
+[15:59.28] coordinate system
+[16:04.56] are given by the so-called tensor
+[16:06.64] transformation law so t
+[16:08.32] prime mu one prime all the way up to mu
+[16:11.36] k prime nu one prime all the way to l
+[16:14.32] prime
+[16:15.44] are given by a sum over mu one
+[16:19.04] to mu k nu one up to new l
+[16:23.60] so they're given in terms of the old
+[16:24.88] components
+[16:29.60] multiplied by these jacobian type
+[16:33.04] factors here
+[16:52.32] okay so that's the you can
+[16:55.76] quickly convince yourself of this by
+[16:57.36] applying the tensor to various
+[16:59.60] contracting the tensor with smooth bases
+[17:03.12] vector fields or simple tensors
+[17:06.16] and here we and when you do you infer
+[17:09.68] that the components of a tensor in one
+[17:11.44] coordinate system have to look like this
+[17:13.20] in the new coordinate system
+[17:26.16] so that's the so-called tensor
+[17:28.72] transformation law
+[17:39.20] i'm going to label star i think
+[17:46.88] now here we come to the sort of
+[17:49.20] terminological
+[17:50.32] overlaps that inevitably happen when you
+[17:53.04] have
+[17:53.68] uh fields using similar things similar
+[17:58.84] quantities
+[18:00.16] we're going to call a collection so
+[18:05.28] a collection of numbers
+[18:09.84] t mu underline new underline depending
+[18:13.12] on
+[18:13.44] position p in a manifold
+[18:20.24] that transform like star
+[18:27.68] uh is what is classically referred to as
+[18:29.52] a tensor
+[18:31.12] what i'll call a tensor field
+[18:44.00] so that's something that that
+[18:45.20] classically you'll hear people saying
+[18:47.28] this thing is a tensor this thing is not
+[18:48.80] a tensor
+[18:49.52] and they'll have in mind a manifold and
+[18:51.44] they'll have in mind a collection of
+[18:53.12] numbers
+[18:53.60] transforming according to star
+[18:57.60] now i want to stress here two things the
+[19:00.16] first thing
+[19:01.68] is that what we call a tensor
+[19:04.88] depends on whether or not we have the
+[19:06.16] data of a manifold there's i called by a
+[19:08.24] tensor any element of a tensor product
+[19:09.84] of vector spaces forget the manifolds
+[19:11.76] there are no manifolds
+[19:13.60] and a collection of numbers
+[19:17.12] um that associated to a manifold that
+[19:20.64] when you change coordinates
+[19:22.00] transform according to this
+[19:23.20] transformational star that's what i'll
+[19:25.20] call a tensor field well at least i'll
+[19:26.88] try and do that
+[19:28.00] i might forget to do that
+[19:31.28] so that's a very important definition so
+[19:34.16] another point that i want to stress the
+[19:35.68] second point
+[19:36.72] is that you can have collections of
+[19:38.24] numbers defined on manifolds that don't
+[19:40.48] transform like star
+[19:41.92] just because you write them just because
+[19:43.52] you have a collection of numbers doesn't
+[19:44.72] mean they transform like star when you
+[19:46.16] change coordinate systems
+[19:48.40] so that's uh such those
+[19:51.68] are non-examples of tensorfields that
+[19:53.76] that uh they're not bad
+[19:55.52] it can happen and will happen that we
+[19:57.28] will have collections of numbers that we
+[19:59.28] associate to points in a manifold but
+[20:00.96] they just don't transform like that
+[20:03.20] it's the generic situation so tensor
+[20:06.08] fields are quite special
+[20:07.60] vector fields are a subset sub case of
+[20:10.16] tensor fields
+[20:12.96] and covariance fields are also a subset
+[20:16.00] now here's a an important oopsie here's
+[20:18.96] an important
+[20:20.00] uh notion that we can apply immediately
+[20:22.48] to tensor fields
+[20:24.32] we i haven't said anything about how
+[20:26.24] smooth the tensor field is
+[20:28.48] right it might might not even be
+[20:30.00] differentiable it could transform that
+[20:31.44] way but not be differentiable
+[20:34.88] let's sort that that out so a smooth
+[20:36.96] tensor field of type kl
+[20:39.20] is one for which
+[20:44.32] the following scalar function
+[20:52.48] is smooth
+[21:05.84] so for all smooth
+[21:13.92] omega 1
+[21:18.00] through omega k and smooth
+[21:21.52] v1 through vl um
+[21:28.40] and oh i noticed that i haven't told you
+[21:30.24] what it means to have a smooth
+[21:32.00] covariant covector dual vector
+[21:36.56] so if you have a dual vector field of
+[21:39.12] dual vectors then that is smooth
+[21:43.36] if uh for all
+[21:48.00] smooth v omega v is c
+[21:51.04] infinity okay this is how we can assess
+[21:54.56] the smoothness of the tensor field
+[21:56.08] remember a tensor you can always
+[21:57.44] interpret in two ways as an element of a
+[21:59.20] tensor product vector space or as a
+[22:00.72] multi-linear map of
+[22:02.16] the joule of those vector spaces here
+[22:04.56] we're
+[22:05.44] thinking of this tensor field as a joule
+[22:08.24] as a multilinear map
+[22:09.52] as it's a multi-linear map we can insert
+[22:11.36] in the arguments
+[22:12.56] k co vectors covariant vectors l dual
+[22:15.76] vector
+[22:16.24] l normal tangent vectors and that's a a
+[22:19.36] number now
+[22:20.56] and we can assess how smooth this
+[22:22.24] function is
+[22:24.24] by uh we easily says how smooth a number
+[22:28.08] is a function on a smooth manifold and
+[22:29.84] we therefore define a tensor field to be
+[22:32.00] smooth if
+[22:33.12] it the that this number t
+[22:36.56] omega blah blah blah is smooth for all
+[22:38.56] smooth arguments
+[22:42.80] now this is highly abstract in the past
+[22:45.36] couple of lectures i've
+[22:46.56] built up this very abstract formalism to
+[22:48.48] talk about very general
+[22:49.92] collections of multilinear objects
+[22:52.64] associated to manifolds
+[22:54.40] why did we bother with all of this well
+[22:56.32] the answer is of course we're actually
+[22:58.00] going to need it
+[22:58.80] when we describe various quantities
+[23:01.12] physical quantities associated to
+[23:02.56] manifolds in it
+[23:04.80] but even before that i would argue that
+[23:06.72] we need this formalism to talk about
+[23:08.88] the various quantities that can appear
+[23:10.64] in physics and now i'm just going to
+[23:12.40] give you for the rest of the lecture
+[23:14.40] um for the rest of the lecture i'm going
+[23:16.80] to list
+[23:17.60] a bunch of examples the most important
+[23:19.68] examples in
+[23:21.20] physics of tenses so and vectors and
+[23:24.72] tenses
+[23:25.84] and this will serve as a motivation for
+[23:28.72] the
+[23:29.04] previous couple of lectures where we've
+[23:31.04] built up all this formalism now we're
+[23:32.56] going to
+[23:33.84] exploit the formalism to label various
+[23:36.80] quantities that you've probably seen
+[23:38.16] before
+[23:38.80] so the rest of this lecture is now going
+[23:40.16] to be concerned with examples
+[23:47.36] and it's going to be very helpful to
+[23:50.48] take all these quantities that you
+[23:51.76] probably
+[23:53.04] are very familiar with and start
+[23:55.04] reinterpreting them as tensor fields or
+[23:57.28] vector fields on manifolds
+[24:02.64] so the first thing first example uh
+[24:05.92] is presented by currents and densities
+[24:08.08] in special
+[24:09.04] relativity so what manifold we always if
+[24:12.40] you're talking about tensors vector
+[24:13.76] fields and so on you should name the
+[24:15.04] manifold at the beginning
+[24:16.80] so the manifold we have is r13
+[24:20.32] it's not yet the distinction between
+[24:22.16] time and space is not yet
+[24:23.76] important we're just thinking of that as
+[24:26.00] the manifold r4
+[24:27.76] but it will become presently important
+[24:30.00] when we think about various
+[24:31.56] diffumorphisms of this manifold
+[24:33.52] so i will leave i would
+[24:36.96] delete that identification because it
+[24:39.04] actually will become important in this
+[24:40.64] example
+[24:42.16] so imagine we just got flat minkowski
+[24:44.88] spacetime
+[24:46.80] here's my cartoon of flat minkowski's
+[24:49.20] base time there's the light cone here
+[24:51.84] associated to an event at the origin
+[24:55.69] [Music]
+[24:58.84] um
+[25:01.60] and we've got space and time
+[25:07.92] so this is the manifold that plays a
+[25:09.92] major role in
+[25:11.20] special relativity and suppose we have a
+[25:14.00] system of
+[25:14.56] n particles moving in the space time
+[25:20.32] okay that was a bad particle here we
+[25:22.40] don't want anything moving faster than
+[25:23.76] the speed of light
+[25:25.36] so here's a bunch of particles and each
+[25:27.28] particle
+[25:28.48] has a position xjt
+[25:32.96] at a certain time and it has a charge
+[25:36.56] so they're charged particle potentially
+[25:38.64] charged particles qj
+[25:41.04] so we have n particles
+[25:52.56] and we're going to label them one
+[25:55.20] through to
+[25:56.00] capital n so we have these particles
+[26:00.24] and they're moving around in space-time
+[26:06.16] and we want to assess like how many of
+[26:10.08] them
+[26:11.04] are in a certain place a location in
+[26:13.84] space time
+[26:14.64] and where are they going so when you
+[26:16.64] have a bunch of charged particles
+[26:19.52] and you want to assess where they are
+[26:20.96] and where they're going then you can
+[26:22.32] form the density
+[26:23.36] and current you can construct the
+[26:25.44] density and current so that
+[26:27.60] let's let's talk about the density and
+[26:30.08] in particular the density of charge here
+[26:34.80] we could equally as well have consider
+[26:37.20] think of the charge as their mass
+[26:39.12] so just charge so we're looking at the
+[26:41.28] density of this quantity that we're
+[26:42.56] calling qj
+[26:44.08] so the density for this distribution of
+[26:46.48] particles
+[26:47.20] is a function right the density is
+[26:50.72] zero if there's no particles there and a
+[26:52.96] delta function if there is a particle
+[26:54.64] there
+[26:56.72] so the density is very very interes a
+[26:58.56] very very simple
+[27:00.80] [Music]
+[27:02.80] simple function and here it is
+[27:07.44] so the density of charge
+[27:10.96] of these n particles is given by a bunch
+[27:13.20] of delta functions so these are dirac
+[27:15.12] delta functions go
+[27:16.24] google it if you don't know what they
+[27:17.52] are i believe you do know what they are
+[27:20.08] you've uh one of the prerequisites of
+[27:22.32] this course
+[27:23.44] is that you you know calculus linear
+[27:25.28] algebra and basic physics and
+[27:27.12] the direct delta function is covered in
+[27:28.72] multiple ways during the first
+[27:30.64] year of most physics degrees so the
+[27:34.08] density of charge
+[27:35.20] throughout space at a given time
+[27:38.40] slice throughout space the density of
+[27:40.24] charge is a bunch of delta functions so
+[27:41.76] there's
+[27:42.24] no charge where there's no particle and
+[27:43.76] there's a you know infinite charge where
+[27:45.60] the point particle is
+[27:47.52] but of course when you integrate over
+[27:49.04] all of space time or
+[27:50.56] oh sorry over all of space that'll give
+[27:52.64] you the total charge
+[27:53.76] it'll give you a finite number now where
+[27:56.00] are these particles going or where is
+[27:57.84] the
+[27:58.24] the charge going to to answer that
+[28:01.44] question we introduce the current
+[28:03.60] which is a three vector and
+[28:06.96] this current is also a sum of delta
+[28:10.64] functions
+[28:11.84] so it's given by
+[28:17.28] the following expression where now we
+[28:21.12] also include the velocity
+[28:24.48] of these particles so we multiply the
+[28:26.32] charge by the velocity
+[28:27.60] and multiply that by a direct delta
+[28:31.28] function where the particle is and that
+[28:32.56] gives us the instantaneous
+[28:34.48] uh velocity vector of the chart or the
+[28:37.52] instantaneous current vector of this
+[28:39.04] point particle with charge qj
+[28:41.84] now this is sort of done in a mishmash
+[28:43.92] of three vectors and four vectors we can
+[28:45.68] define a four vector
+[28:52.56] and hence this four vector will have a
+[28:53.92] chance of being a tangent
+[28:55.92] an element of a tangent space so we can
+[28:58.00] define a form vector j
+[28:59.20] mu by setting
+[29:03.60] j mu is this
+[29:07.04] j is this following vector here you put
+[29:08.96] the the density at the top right in the
+[29:10.64] timeline component and then you just put
+[29:12.40] the rest of the current vector
+[29:13.68] underneath it
+[29:17.44] so now you've got an exercise you've got
+[29:19.92] to synthesize the information you've
+[29:21.52] received about defining tangent spaces
+[29:24.00] and what you know about special
+[29:26.32] relativity
+[29:28.16] so you it's a you're a slightly
+[29:30.56] non-trivial exercise and that is
+[29:32.56] you've got to argue
+[29:36.16] that j mu is
+[29:40.32] a vector
+[29:44.08] you know in vp it's it's it's a vector
+[29:46.96] not a
+[29:47.60] covariant vector under
+[29:50.64] changes of coordinates
+[29:58.16] so it's a vector field
+[30:08.48] and the changes of coordinates what
+[30:10.08] changes of coordinates are appropriate
+[30:11.52] for minkowski spacetime well lawrence
+[30:13.44] transformations they are the
+[30:14.64] the diphyomorphisms of the minkowski
+[30:20.84] manifolds
+[30:30.56] lawrence transformations are the ones
+[30:35.20] are the changes of coordinates that are
+[30:36.80] allowed in special relativity
+[30:41.76] so i you know all about special
+[30:44.16] relativity that was one of the
+[30:45.28] prerequisites of this course
+[30:47.12] so you know exactly how to interpret
+[30:48.80] this expression here
+[30:51.28] so when you make changes of coordinates
+[30:53.68] according to a lorentz transformation
+[30:56.40] you can study how the vector this vector
+[30:59.44] j
+[30:59.76] mu transforms and you know how it should
+[31:02.88] transform if it's to be interpreted as a
+[31:05.04] vector field
+[31:06.24] it should transform exactly like this
+[31:08.40] equation here the vector transformation
+[31:10.24] law
+[31:11.68] so you've got to check that that's
+[31:14.00] actually the case
+[31:14.88] for this quantity called the current or
+[31:17.60] the four current
+[31:18.72] in this case it's fall vector jmu that's
+[31:21.44] your job that's the first job for you
+[31:23.04] right now
+[31:24.40] i highly advise that you pause the video
+[31:26.32] to do that calculation
+[31:27.60] it's a little bit non-trivial i must
+[31:29.20] admit um because you've got
+[31:32.08] the the expression here makes reference
+[31:34.24] to time
+[31:35.52] and so you know that gets transformed so
+[31:37.60] you have to think be a little bit
+[31:38.72] creative
+[31:39.20] about this this argument all right
+[31:42.48] energy momentum tensor
+[31:46.00] so this is something that
+[31:50.00] it plays an extraordinarily important
+[31:52.00] role in general relativity but is
+[31:53.84] often sort of you know not not
+[31:56.40] particularly well described
+[31:58.72] in special relativity textbooks and
+[32:02.08] often even in general relativity
+[32:04.16] textbooks
+[32:05.28] um it can be a little bit mystifying how
+[32:07.92] they introduce the stress energy or
+[32:09.76] energy momentum tensor
+[32:11.92] now uh i'm going to deviate from the
+[32:14.48] textbook of wall to give you
+[32:16.32] what i think is a far more transparent
+[32:21.36] definition of the energy momentum tensor
+[32:24.56] so again we're going to work with this
+[32:26.32] nice simple manifold of minkowski space
+[32:29.04] time
+[32:29.92] we're going to consider our
+[32:32.96] our collection of n particles moving
+[32:36.64] in
+[32:40.56] in minkowski space time
+[32:45.52] and they're moving so there must be some
+[32:48.56] associated energy momentum for vectors
+[32:53.12] for each particle so each particle
+[32:57.20] has an energy momentum for vector at a
+[33:00.32] given
+[33:00.88] time and its location
+[33:06.80] so i'll just write it like this with
+[33:08.48] energy momentum four vectors pj mu
+[33:11.28] and here we've got n of them so j is
+[33:13.12] running from one to n
+[33:16.56] so what we're going to do is we've got
+[33:19.84] to each particle instead of just say the
+[33:22.16] charge
+[33:23.04] now we've got a distribution of four
+[33:24.88] momentum for each particle and i'm gonna
+[33:26.80] build
+[33:28.24] a bunch of numbers that capture the
+[33:31.36] distribution of the
+[33:32.80] zeroth component of their four momentum
+[33:35.12] the first component of their momentum
+[33:36.64] and so on
+[33:38.80] so but let's start start at the
+[33:40.24] beginning so the density
+[33:42.72] of the muth component
+[33:52.56] uh so the density of the muth component
+[33:56.48] of four momentum
+[33:58.96] uh is a is a
+[34:02.00] is we can give it a name
+[34:07.04] it's going to be this function here t
+[34:10.32] mu naught
+[34:17.92] x comma t
+[34:22.40] and we
+[34:25.76] you can ask simply ask how much
+[34:30.24] mu component momentum is there at a
+[34:31.92] given point in space time
+[34:33.52] well the answer is either zero because
+[34:35.52] there may be no particles there
+[34:38.00] or if there is a particle there then we
+[34:41.20] the distribution is highly concentrated
+[34:42.88] where the particle actually is
+[34:44.64] with a delta function
+[34:49.68] this quantity here t mu naught
+[34:52.88] is a distribution function it tells us
+[34:54.72] how much mu component of
+[34:57.20] four momentum there is in a given point
+[34:58.96] in space time so most of the time
+[35:00.40] zero but if you happen to land on a
+[35:01.76] particle it's highly concentrated
+[35:04.24] infinitesimally small space with a delta
+[35:06.24] direct delta function and that's where
+[35:07.52] all that
+[35:08.64] four momentum is
+[35:12.48] so this is a density right it just tells
+[35:14.72] you where stuff is
+[35:16.16] now we can also corresponding to any
+[35:18.00] density just as before we can introduce
+[35:19.84] the corresponding current
+[35:21.20] right that tells us where it's going
+[35:28.72] so the corresponding current or use this
+[35:30.40] notation to capture it
+[35:34.56] is just the velocity multiplied by the
+[35:37.60] density
+[35:38.56] multiplied by where it is
+[35:44.96] so we got pg pj mu t that's the muth
+[35:48.40] component
+[35:50.16] of four momentum now where is it going
+[35:58.80] well you've got to work out where is it
+[36:00.32] going is given by the velocity
+[36:03.28] so that's dx mu dx dt
+[36:12.08] and since we're looking at the
+[36:15.84] the kth element of this current we need
+[36:18.08] to have a second index
+[36:21.92] so we can combine this to a single
+[36:24.84] formula
+[36:31.52] so just before i do that though just
+[36:33.28] take a look at this thing here t
+[36:34.72] this cur this current here is just this
+[36:37.36] is the analog of j
+[36:38.56] the k component of this j in the
+[36:40.96] previous example
+[36:42.40] and this t naught mu is the analog
+[36:45.52] of j of epsilon right the density
+[36:49.36] now in the previous example we were just
+[36:51.68] looking at the distribution of charge
+[36:53.28] throughout space time and how
+[36:54.56] charge was moving around the current
+[36:57.76] in this next example we've got four
+[36:59.68] quantities that we want to assess
+[37:01.04] throughout space time we have the
+[37:02.48] the zeroth component of the for the
+[37:04.48] energy remember four effectively the
+[37:05.84] energy
+[37:06.32] so how is energy distributed throughout
+[37:07.92] space time and where is it going so for
+[37:09.76] that we need
+[37:10.72] it it gets its own current vector which
+[37:12.64] we call t naught naught
+[37:14.24] and t naught k
+[37:17.28] then we have the first component of
+[37:18.48] momentum where how is that distributed
+[37:20.32] throughout spacetime and where is it
+[37:21.60] going
+[37:22.00] for that we need t1
+[37:25.04] k and t1 naught and so on so we end up
+[37:27.68] with 16 numbers actually to assess where
+[37:29.68] all the four momentum in space time is
+[37:31.68] for these n particles and where it's
+[37:33.36] going
+[37:35.28] so we could and it turns out we can
+[37:36.72] combine this to a single formula
+[37:38.32] you know that's why i suggested we wrote
+[37:39.76] it as i did now
+[37:41.36] x here you know i've got this lowercase
+[37:44.32] x without the underline anymore that
+[37:46.24] this is going to happen a lot
+[37:48.48] uh that i'll do this x stands for x this
+[37:52.08] x is a four vector which stands for the
+[37:54.24] x
+[37:55.68] spatial components and the t component
+[37:59.68] so we can combine these two quantities
+[38:02.16] uh these quantities into a single
+[38:03.92] formula and and what do we get well
+[38:08.40] this thing here
+[38:19.12] so this is the distribution of the mute
+[38:22.00] component
+[38:25.12] of uh four momentum and
+[38:28.72] the newth component of the current where
+[38:31.52] it's going
+[38:35.52] so here like just a reminder right you
+[38:38.32] know x naught at t
+[38:39.68] is none other than t right because the
+[38:41.68] the zeroth component of a
+[38:43.44] space time location for vector is just
+[38:45.84] the time
+[38:47.84] and now since
+[38:51.36] if you look at the the energy momentum
+[38:53.52] for vector since you know
+[38:55.04] that that's equal to the energy of the
+[38:57.44] particle multiplied by
+[39:00.08] the derivative with respect to t of the
+[39:02.24] position
+[39:05.28] we have a nice representation
+[39:09.84] for this
+[39:13.12] field of 16 numbers
+[39:16.64] that makes it explicit that it's
+[39:18.48] symmetric
+[39:26.56] okay so now we have this this um
+[39:29.68] this way of representing this these 16
+[39:32.24] numbers that are defined at every point
+[39:33.52] in space-time manifold
+[39:34.80] we have a way of representing them so
+[39:36.32] it's absolutely clear it's symmetric
+[39:38.00] so t is symmetric
+[39:42.64] and what does that mean well i e the t
+[39:44.96] mu nu
+[39:45.68] equals t nu mu
+[39:51.12] so now we've got this this this
+[39:54.72] field of numbers so we ask is this a
+[39:57.92] tensor
+[39:59.20] field it's absolutely
+[40:02.64] i'd claim it's not not very obvious at
+[40:04.48] all that this thing here is a tensor
+[40:06.16] field right it's a collection i hope you
+[40:07.84] agree
+[40:08.56] that t mu nu x is
+[40:11.84] a collection of numbers that we can
+[40:14.32] associate to every point in minkowski
+[40:15.92] space time so here's
+[40:17.44] minkowski spacetime
+[40:20.72] here's the light cone
+[40:24.32] here are the n particles i'll just draw
+[40:26.32] two
+[40:27.36] oops
+[40:31.12] here's a particle here's a particle and
+[40:33.84] now at every point
+[40:35.68] in space-time x
+[40:39.44] we have t mu u x that's a collection of
+[40:42.64] 16 numbers now
+[40:43.76] at this point that i've just chosen
+[40:45.20] there that's equal to zero t mu x is
+[40:47.68] absolutely equal to zero at that point
+[40:49.20] it's based on there are no particles
+[40:51.04] at that event in space time however
+[40:54.16] just here if i had chosen x prime
+[40:57.44] t mu nu at x prime well that's now
+[41:00.64] equal to infinity right because there's
+[41:02.16] a delta function there and
+[41:04.56] so it's t menu isn't doesn't look very
+[41:08.40] much like a nice tensor here uh the
+[41:11.44] problem
+[41:12.08] is that we've got these idealized
+[41:15.28] point particles each particle is
+[41:16.88] considered to be a
+[41:18.48] infinitesimally small point
+[41:21.76] what we really should do is smear these
+[41:23.20] particles out and then t
+[41:24.80] would turn into a much nicer field uh
+[41:28.00] nonetheless i'm convinced you can work
+[41:30.00] with with delta functions you know how
+[41:31.76] to work with delta functions by now
+[41:34.64] so we've got this this collection of
+[41:36.32] numbers i claim that you you can draw
+[41:38.08] the trajectories of the four
+[41:39.20] trajectories of all these
+[41:40.80] particles in space time then you you can
+[41:43.52] to every point in space time you have
+[41:44.88] this list of 16 numbers t mu
+[41:46.96] x and most of the time it's zero and
+[41:48.96] where you hit a particle it's
+[41:50.72] it's a delta function and the question
+[41:53.44] is
+[41:53.76] is this a tensor like this i would say
+[41:55.68] it's absolutely non-obvious from this
+[41:57.20] expression here
+[41:58.08] that that's a tensor there's no way you
+[42:01.28] you should i don't believe by looking at
+[42:03.04] that expression you should instantly
+[42:04.32] know that that's a tensor
+[42:05.84] that's a that takes a little bit of
+[42:09.04] thinking
+[42:09.60] to to prove
+[42:14.84] so
+[42:16.00] give you a couple of hints on how to
+[42:17.36] convince yourself that this actually is
+[42:18.96] a tensor
+[42:20.72] so if you you write t mean u x
+[42:23.76] as as an integral
+[42:26.80] over the proper time so there's a big
+[42:30.16] hint
+[42:34.72] and a four so so far we have a
+[42:37.44] three-fold
+[42:39.36] uh delta d-rock delta function but now
+[42:42.00] i've introduced a fourth direct delta
+[42:43.92] function so now we've got four
+[42:45.04] dimensions
+[42:46.24] in the story then uh
+[42:49.60] now if you look at that that expression
+[42:51.44] on the right hand side here
+[42:52.80] for t mu and u everything starts to look
+[42:56.08] covariant now
+[42:57.04] or covariant enough so that you can
+[42:59.20] argue
+[43:05.04] that under diphymorphisms and the
+[43:07.44] diphymorphisms that we care about
+[43:09.44] in special relativity are lawrence
+[43:11.28] transformations
+[43:16.64] x prime nu is x new mu
+[43:19.84] x mu that's the coordinate
+[43:21.92] transformations that matter in special
+[43:23.44] relativity
+[43:24.72] that the components of this tensor
+[43:28.40] and it is a tensor right it wouldn't
+[43:30.00] have started this whole discussion if it
+[43:31.52] wasn't a tensor
+[43:32.88] so that the uh components tmu and the
+[43:35.36] new coordinate system
+[43:36.80] are given by the components in the old
+[43:38.64] coordinate system
+[43:41.20] according to this rule here
+[43:44.24] but this is none other than the tensor
+[43:46.00] transformation law
+[43:48.72] you know note that lambda
+[43:51.92] mu prime mu is just
+[43:55.20] dx prime mu prime dx
+[43:58.32] d mu
+[44:05.44] so it's a tensor of type 2 0.
+[44:18.08] this is a really important tensor it
+[44:20.16] plays an extraordinarily important role
+[44:22.08] in general relativity
+[44:23.68] this is how we assess the stress energy
+[44:26.80] content of space-time
+[44:28.40] we will assess it with this function
+[44:30.08] team you knew so do spend some time
+[44:32.88] to think about these exercises i've
+[44:34.64] given you and work on the exercises
+[44:37.12] to get some facility with this this
+[44:40.00] tensor
+[44:41.28] and then because we're going to use it a
+[44:44.32] lot
+[44:46.56] okay and now i'm going to introduce to
+[44:49.28] you
+[44:49.60] the other main player of general
+[44:51.36] relativity the one that assesses the
+[44:53.04] actual curvature of space-time
+[44:54.80] effectively implicitly
+[44:57.68] so our third most extraordinary
+[45:01.52] example of a tensor is one that
+[45:05.44] characterizes the geometry of a manifold
+[45:09.12] it's called the metric tensor
+[45:14.40] so what is a metric tensor so a metric
+[45:17.04] tensor
+[45:18.40] g is a tensor of type
+[45:25.60] zero comma two so what does that mean
+[45:27.84] well it eats two vectors and gives us a
+[45:30.84] number
+[45:35.20] and it's not just any
+[45:39.04] tensor of type zero two it's
+[45:42.24] symmetric and non-degenerate
+[45:52.40] so what does symmetric mean well
+[45:56.96] symmetric means that if you
+[46:01.20] you give it two vectors
+[46:06.08] then and you you substitute them into
+[46:09.52] the two arguments that you get the same
+[46:11.12] number as if you put the vectors in the
+[46:12.72] reverse order in the arguments of g
+[46:15.44] and non-degenerate
+[46:18.56] means that the only way that
+[46:21.68] gv comma v1 equals zero
+[46:24.72] for all the vp is
+[46:28.80] if uh v one itself is zero
+[46:34.96] so this set of numbers here this is a
+[46:37.68] tensor of type zero two
+[46:39.04] it's got some additional
+[46:42.32] on it namely that it's symmetric and
+[46:43.52] non-degenerate whenever you have such
+[46:46.00] a thing a field of tenses like that
+[46:49.20] then you call it a metric tensor
+[46:54.16] so i said tensor but i should say
+[46:56.00] tensorfield
+[47:01.92] there's a there's one of these at every
+[47:04.00] point on your manifold
+[47:06.48] and why do we bother with this funny
+[47:07.76] thing well it's exactly the data you
+[47:09.68] need
+[47:10.16] to supply us with the notion of length
+[47:11.76] on a manifold we don't actually have yet
+[47:13.36] a notion of length on a manifold
+[47:16.24] but that requires a little bit more
+[47:17.52] information than just the the
+[47:19.12] information of a manifold
+[47:40.96] actually first of all it just supplies
+[47:43.12] us with the notion of infinitesimal
+[47:47.44] length
+[47:51.36] actually later we get a notion of length
+[47:53.28] by in the introduction things called
+[47:55.12] geodesics but we're not going to do that
+[47:56.48] just yet
+[47:58.88] and uh the reasoning as follows
+[48:08.72] you can think of an infinitesimal
+[48:10.96] displacement
+[48:18.16] as being represented by a tangent vector
+[48:21.60] you know a tangent vector tells you how
+[48:24.88] to move along a curve just by a teeny
+[48:26.88] infinitesimal bit
+[48:28.32] so that's it like a displacement
+[48:33.44] and given a tangent vector then and
+[48:38.32] given this identification here a tangent
+[48:41.12] vector
+[48:42.40] is is like a little displacement along a
+[48:44.40] curve on a manifold then an
+[48:46.84] infinitesimal
+[48:48.08] squared distance should be somehow a
+[48:49.84] quadratic function
+[48:51.28] of a tangent vector
+[49:04.16] is a quadratic
+[49:08.96] function
+[49:15.84] of tangent vectors
+[49:24.32] and how do we get this quadratic
+[49:25.76] function from this this this tensor
+[49:28.00] this metric tensor well okay i'll show
+[49:29.92] you how
+[49:31.36] so choose a coordinate basis
+[49:42.84] expand g which is a
+[49:46.32] tensor of type zero two so when you
+[49:48.96] expand it
+[49:49.92] with respect to a coordinate basis we've
+[49:52.16] got to use the joule basis
+[49:56.72] dx mu d x nu this is sometimes also
+[50:00.72] called d
+[50:01.28] s squared g is also called d squared
+[50:04.56] now we often omit
+[50:08.00] the tensor sign
+[50:12.00] and this is highly confusing i think um
+[50:15.76] you know we go to all this trouble of
+[50:17.20] introducing all this notation and then
+[50:18.56] we start throwing it away
+[50:19.60] indiscriminately
+[50:21.20] um but that's it it's notation you can't
+[50:23.92] fight notation if people use it
+[50:28.16] you've got to be able to translate it
+[50:32.56] so people often horribly confusingly
+[50:35.60] drop that tensor
+[50:36.96] symbol and write ds squared equals the
+[50:40.16] sum of amino g
+[50:41.28] mu nu dx mu dx nu why does that work
+[50:43.84] well it works in this particular case
+[50:46.16] because the tensor is symmetric and so
+[50:49.60] there's no ambiguity in dropping that
+[50:51.36] tensor sign if the tensor were not
+[50:53.52] symmetric there would be an ambiguity
+[50:55.20] you wouldn't be allowed to drop that
+[50:56.40] tensor sign
+[50:57.68] so what you're going to see me do of
+[50:59.04] course is the worst of both worlds i'm
+[51:00.96] going to have
+[51:01.44] expressions with them without that
+[51:02.64] tensor sign and you'll just have to get
+[51:04.32] used to it
+[51:05.12] because you will anyway because every
+[51:06.80] textbook does this
+[51:08.40] and if you don't uh
+[51:11.52] get facility with changing some notation
+[51:13.76] then life will be very difficult for you
+[51:17.52] now we've got this
+[51:21.76] collection of numbers now associated at
+[51:23.76] every point and i'm going to
+[51:24.80] argue to you now that we get an infinite
+[51:26.48] decimal squared distance from it
+[51:28.56] as follows so a metric
+[51:32.56] what does it do well it actually gives
+[51:34.84] us
+[51:36.72] you know it does you could talk about
+[51:38.56] infinitesimal square distances and so on
+[51:40.56] but
+[51:40.88] let's just say what plainly what it does
+[51:43.12] give you
+[51:44.16] a metric actually supplies us
+[51:49.68] with the extra data exactly the extra
+[51:52.24] data
+[51:53.20] no more no less of an inner product
+[52:01.68] on vp for all p in the manifold
+[52:08.56] so if you want to compute the inner
+[52:10.64] product of two vectors in a real vector
+[52:12.24] space you need more data right
+[52:13.60] you that's that's not canonically given
+[52:15.52] in the definition of a vector space
+[52:17.44] so you need this extra data you've got
+[52:19.44] to get it from somewhere and that extra
+[52:20.88] data is a matrix a symmetric
+[52:22.32] non-degenerate matrix of numbers
+[52:24.40] i'm not say it's not necessarily
+[52:25.60] positive definite in this course
+[52:30.08] that's a warning and how do we actually
+[52:33.68] uh define this inner product well take
+[52:36.32] this coordinate form
+[52:39.60] in terms of these dx's dx's the dual
+[52:42.48] vectors
+[52:44.08] and then apply them to a vector
+[52:49.60] and in other words contract this tensor
+[52:58.96] so dx mu can eat the v
+[53:02.88] dx nu eats the w it doesn't matter
+[53:06.24] if the v and the w is in the opposite
+[53:07.84] order because g is symmetric
+[53:09.68] so this is unambiguous and
+[53:12.80] uh we get that this way
+[53:17.84] the following expression for the inner
+[53:20.00] product of v and w where of course
+[53:22.00] v mu uh where v
+[53:25.44] is the sum of the
+[53:30.08] mu d dx mu at p
+[53:33.28] in terms of the coordinate basis right
+[53:35.92] similarly
+[53:36.72] for w
+[53:42.40] so we haven't what we really what does a
+[53:44.24] metric uh tensor of type zero two that
+[53:46.00] symmetric and non-degenerate supplies
+[53:47.60] with it supplies us with an inner
+[53:48.96] product
+[53:49.60] at every point on the manifold every
+[53:51.36] point the manifold has an inner product
+[53:52.88] now that's exactly
+[53:54.32] this the data that it gives you
+[53:58.08] now the gram schmidt process can be
+[54:01.04] applied to any inner product
+[54:02.80] any real inner product vector space
+[54:06.48] at this moment we can now apply grab
+[54:08.84] schmidt
+[54:11.44] [Music]
+[54:14.56] to produce what does it produce it
+[54:16.08] produces an orthonormal basis this is a
+[54:24.24] very special there's a much more special
+[54:25.92] basis than
+[54:27.44] the ones i've been considering so far
+[54:35.92] and what does orthonormal mean
+[54:39.68] well it means when you evaluate the
+[54:41.60] matrix
+[54:43.84] uh when you insert these basis vectors
+[54:46.00] in to this tensor of type zero two
+[54:48.32] or evaluate the inner product right
+[54:53.20] you should get the the chronic delta
+[54:56.48] function
+[54:59.60] but not quite slow down right there's
+[55:02.24] something else that you get
+[55:04.00] you get uh you diagonalize g
+[55:08.48] now most of the time when you've done
+[55:09.92] gram schmidt before
+[55:11.92] uh you've been applying ground schmidt
+[55:13.44] to positive definite symmetric
+[55:15.36] non-degenerate matrices
+[55:17.12] and you've never had to worry about this
+[55:19.36] extra factor
+[55:20.64] that can appear but this extra factor
+[55:23.76] can appear
+[55:25.92] this s mu factor for
+[55:29.28] non-positive definite inner products
+[55:47.92] so the number it turns out the number of
+[55:49.52] positive and negative signs
+[55:51.92] of this of these numbers here
+[55:56.80] is actually an invariant
+[56:15.04] it's independent
+[56:21.76] of the orthogonal basis that you end up
+[56:24.56] with with the gram schmidt procedure
+[56:26.64] and it has a name it's called the
+[56:28.84] signature
+[56:31.28] of the metric g
+[56:35.44] so a metric
+[56:42.24] with a s mu
+[56:45.36] equals plus 1 for all mu such a metric
+[56:48.64] is positive definite
+[56:50.48] and is given a special name
+[56:54.80] in differential geometry it's called
+[56:56.84] romanian
+[57:06.32] g is positive definite it turns out that
+[57:09.52] in
+[57:09.92] the space time that we live in our the
+[57:12.24] metric that we
+[57:13.36] associate with our geometry in the space
+[57:16.48] time we live in does not have
+[57:18.16] a signature of all plus ones
+[57:21.28] in fact the metric of our space time or
+[57:26.24] space time
+[57:31.20] has signature
+[57:35.76] minus 1 plus 1 plus 1
+[57:38.96] plus 1. so the timeline component has a
+[57:42.48] minus 1 when you do the gram schmidt
+[57:44.32] procedure to the metric
+[57:46.00] and or the other one spatial components
+[57:47.60] have a plus 1.
+[57:53.44] okay there's one final uh comment i want
+[57:56.48] to make about metrics
+[57:57.68] extremely important comment that will
+[58:00.40] influence
+[58:01.36] our interpretation of joule vectors and
+[58:03.76] tangent vectors
+[58:06.16] so a metric g
+[58:09.76] is well we've learned in the previous
+[58:12.64] lecture of course that tenses of type
+[58:14.96] uh one one can be interpreted in three
+[58:17.52] ways well a metric is a tensor of type
+[58:19.28] zero to it it can also be interpreted
+[58:21.52] in a multitude of ways
+[58:26.00] so a metric
+[58:30.08] g is simultaneously can be
+[58:33.04] simultaneously
+[58:34.84] interpreted
+[58:41.92] as a zero two tensor
+[58:47.04] and also
+[58:50.32] as a vector in a tensor product vector
+[58:52.88] space
+[58:53.36] and also as a multi-linear map
+[59:02.84] from v p
+[59:06.64] cross v p to r
+[59:12.16] and it's also
+[59:15.76] as a linear map
+[59:24.64] from now in the previous lecture i gave
+[59:26.40] an example of how a tensor of type
+[59:28.24] 1 1 gives you a linear map from v to v
+[59:30.96] but now we've got a tensor type zero
+[59:32.80] two and this gives us something very
+[59:34.88] interesting indeed
+[59:36.56] it gives us an interpretation of g as a
+[59:39.04] linear map
+[59:40.00] from v p to v p star
+[59:47.76] and how do you get that that linear map
+[59:49.44] will you contract
+[59:51.20] v the outer product of v and g
+[59:54.48] according to this recipe here you stick
+[59:56.64] v in the second argument of the metric
+[59:58.88] and now you get handed a function that
+[60:02.08] goes from
+[60:03.92] um so stick v in the second argument of
+[60:07.04] g
+[60:07.36] what is this thing
+[60:12.88] well g naturally
+[60:16.96] eats vectors for breakfast and gives you
+[60:19.20] numbers
+[60:20.80] so uh where
+[60:28.80] so g you can put a vector into the first
+[60:30.96] argument of g
+[60:32.24] with a v in the second argument and that
+[60:34.48] that's a natural way for g
+[60:36.00] to eat vectors for breakfast and give
+[60:37.60] you a number
+[60:39.20] so um dot
+[60:42.56] v is going to be an element of the dual
+[60:45.68] space
+[60:46.16] vp star
+[60:52.24] now this map
+[60:57.04] is one to one and onto
+[61:02.16] and it gives it gives something very
+[61:08.84] special
+[61:10.24] it gives us a canonical a standard
+[61:14.08] basis independent way
+[61:23.12] correspondence or
+[61:26.72] identification between the tangent
+[61:29.84] vector space
+[61:30.64] and the cotangent vector space
+[61:37.20] or vectors and
+[61:40.32] dual vectors
+[61:44.72] right so
+[61:49.44] this this this this correspondence here
+[61:52.56] where we
+[61:53.28] we we we handed g so g is a
+[61:56.72] metric it's given to us let's assume
+[61:59.28] that someone's handed it to us
+[62:02.24] then given g we can
+[62:06.80] we can form we can take a tangent vector
+[62:10.00] v
+[62:10.80] stick it in the second argument of g and
+[62:12.96] then we get a linear functional
+[62:15.36] so we'll call that linear function omega
+[62:21.60] and that correspondence where you
+[62:23.44] associate to every vector a
+[62:25.28] corresponding linear functional omega
+[62:27.12] that's now a
+[62:28.08] cotangent vector that's bases
+[62:30.88] independent i never wrote a basis down
+[62:32.64] in that this this equation here in the
+[62:34.48] box
+[62:36.16] and so that's now a basis independent
+[62:38.00] correspondence between vectors and dual
+[62:39.52] vectors it's extremely
+[62:40.96] powerful uh tool and it
+[62:44.16] it's one that is uh
+[62:48.40] once you have this extra data of the
+[62:49.76] metric is absolutely uh
+[62:51.92] determined and it's so useful that
+[62:55.20] um many authors don't even introduce
+[62:57.76] cotangent vectors at all
+[62:59.76] they just immediately from the outset
+[63:01.36] assume that they have the metric
+[63:03.36] the extra data of a metric and they
+[63:05.04] identify from the outset all
+[63:06.96] cotangent vectors with vectors via this
+[63:09.36] this map in the box
+[63:13.60] so that's um
+[63:16.88] i find that a bit confusing and also um
+[63:21.60] it's much more it makes much more sense
+[63:24.56] in my opinion
+[63:25.60] to not rely on the extra data if it
+[63:27.84] might not be there for some reason
+[63:30.00] in your studies and so the extra data of
+[63:32.16] a metric may very well
+[63:34.16] not be present in all your
+[63:35.44] considerations of manifolds so
+[63:37.44] it's far more important to understand
+[63:41.68] how these things come about and not
+[63:43.44] think that these magical miracles are
+[63:45.44] actually general results
+[63:50.00] so the final topic for today's lecture
+[63:51.76] is a notation it's a very helpful
+[63:53.28] notation that we're going to use
+[63:55.12] throughout uh
+[63:58.72] our description of the rest of
+[64:00.80] differential geometry we need for
+[64:02.80] general relativity probably for just
+[64:04.72] about
+[64:05.92] everything in the rest of this course
+[64:08.08] and it's called abstract index notation
+[64:12.48] so suppose you have a tensor of type kl
+[64:19.12] there it is t we have a tensor of type
+[64:20.88] kl
+[64:24.24] so we can think of
+[64:27.68] t as a multi-linear map
+[64:37.60] from of course you know vp
+[64:42.40] many times tensor
+[64:56.72] i think i made a mistake there
+[65:07.52] you can think of a t a tensor of type kl
+[65:10.40] there's a multi-linear map that
+[65:11.76] eats k dual vectors and l
+[65:15.04] tangent vectors and produces a number
+[65:19.60] now you can specify
+[65:23.84] t via its components
+[65:27.44] in a basis i mean there's no way around
+[65:29.04] it at some point if you're going to do
+[65:30.40] some kind of calculation with physics
+[65:33.20] you're going to need to specify this
+[65:35.36] thing somehow and you're going to need a
+[65:36.96] basis
+[65:40.72] let no one tell you otherwise
+[65:44.00] there's no such thing as doing physics
+[65:45.44] without basis at all
+[65:48.40] but there is such a thing as doing as
+[65:51.12] much of physics as you can without a
+[65:52.64] basis
+[65:56.96] so we can specify t by its components in
+[65:59.60] a given basis
+[66:00.80] you choose a coordinate system measure
+[66:03.68] do some experiments and measure
+[66:05.28] your densities and so on with respect to
+[66:07.04] that basis then you can specify this
+[66:09.12] tensor
+[66:11.92] however for many manipulations
+[66:13.68] especially ones where you want to get a
+[66:15.36] basis independent answer
+[66:17.44] you don't really need the actual
+[66:20.80] components you can do many manipulations
+[66:22.72] without referring to components
+[66:24.72] in fact often
+[66:28.40] it is enough
+[66:33.20] just to know
+[66:34.84] [Music]
+[66:37.28] which arguments
+[66:42.32] of t take vectors
+[66:52.16] or or joule vectors
+[66:58.88] and we can capture just this information
+[67:05.84] by labeling each argument with a symbol
+[67:09.76] by naming
+[67:21.28] by labeling each argument with and we'll
+[67:23.20] try and be consistent throughout the
+[67:24.48] course
+[67:25.52] with a lowercase latin
+[67:29.60] letter
+[67:37.44] so what we're going to do is we're going
+[67:38.64] to
+[67:40.84] label
+[67:43.60] upper index
+[67:47.68] so superscript sorry
+[67:58.72] superscript indices
+[68:02.96] label code contravariant
+[68:13.36] entries
+[68:19.20] and lower index
+[68:27.36] uh subscribe sorry not lower
+[68:38.72] label covariant entries an example
+[68:42.32] is much more powerful than a general
+[68:44.40] discussion
+[68:45.68] so what we're going to do is for example
+[68:47.60] we use
+[68:49.52] lowercase letters to label which
+[68:52.56] arguments which
+[68:57.68] entries correspond to which types of
+[68:59.36] arguments
+[69:00.96] so this thing here labels a tensor
+[69:04.40] or denotes
+[69:07.52] a 2 2 tensor
+[69:13.36] so here the letters denote arguments or
+[69:15.36] label the arguments
+[69:16.48] and their type not the components of the
+[69:18.56] tensor itself
+[69:27.28] so lowercase latin
+[69:32.08] let us denote
+[69:36.16] or rather label
+[69:40.32] arguments
+[69:43.68] and their type
+[69:50.40] and not components with respect to a
+[70:00.84] basis
+[70:05.36] and
+[70:09.76] this notation can be very helpful as
+[70:11.92] we'll see in the future lecture
+[70:14.40] for doing computations without having to
+[70:16.80] explicitly introduce a basis
+[70:19.20] so we won't go into this notation and
+[70:22.64] any further today i'll just have the
+[70:24.32] notation uh
+[70:26.48] introduced in the following lecture
+[70:29.12] we'll
+[70:29.60] take a slightly more detailed look at
+[70:32.72] this abstract index notation
+[70:36.80] and we'll introduce some subspaces of
+[70:40.16] tensors that will be very helpful when
+[70:41.92] discussing
+[70:43.44] certain quantities in differential
+[70:44.88] geometry and then after that we can jump
+[70:47.20] into the topic of curvature of manifolds
+[70:50.24] but that's it for this week thank you
+[70:52.24] very much and goodbye

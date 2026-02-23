@@ -1,0 +1,2187 @@
+{
+  "title": "General Relativity, Lecture 17: solving Einstein's equations for FLRW",
+  "video_id": "KDYGOaHw1BU",
+  "url": "https://www.youtube.com/watch?v=KDYGOaHw1BU",
+  "transcript": [
+    {
+      "start": 0.0,
+      "duration": 3.12,
+      "text": "hello and welcome back to introduction"
+    },
+    {
+      "start": 1.52,
+      "duration": 3.68,
+      "text": "to general relativity"
+    },
+    {
+      "start": 3.12,
+      "duration": 4.08,
+      "text": "in today's lecture we're going to solve"
+    },
+    {
+      "start": 5.2,
+      "duration": 4.16,
+      "text": "einstein's field equations"
+    },
+    {
+      "start": 7.2,
+      "duration": 3.92,
+      "text": "for the case of a homogeneous and"
+    },
+    {
+      "start": 9.36,
+      "duration": 3.04,
+      "text": "isotropic space time"
+    },
+    {
+      "start": 11.12,
+      "duration": 2.88,
+      "text": "well more properly we're going to"
+    },
+    {
+      "start": 12.4,
+      "duration": 3.279,
+      "text": "commence the solution of einstein's"
+    },
+    {
+      "start": 14.0,
+      "duration": 2.16,
+      "text": "field equations for homogeneous and"
+    },
+    {
+      "start": 15.679,
+      "duration": 4.081,
+      "text": "isotropic"
+    },
+    {
+      "start": 16.16,
+      "duration": 6.72,
+      "text": "universe so that brings us to the topic"
+    },
+    {
+      "start": 19.76,
+      "duration": 3.12,
+      "text": "of the dynamics"
+    },
+    {
+      "start": 24.8,
+      "duration": 3.04,
+      "text": "of a homogeneous"
+    },
+    {
+      "start": 28.56,
+      "duration": 3.28,
+      "text": "and isotropic"
+    },
+    {
+      "start": 32.88,
+      "duration": 6.8,
+      "text": "universe how does"
+    },
+    {
+      "start": 36.16,
+      "duration": 6.8,
+      "text": "such a universe evolve from its"
+    },
+    {
+      "start": 39.68,
+      "duration": 7.12,
+      "text": "inception so to speak to its final"
+    },
+    {
+      "start": 42.96,
+      "duration": 3.84,
+      "text": "moments if there are any"
+    },
+    {
+      "start": 46.96,
+      "duration": 3.68,
+      "text": "so we're going to do is we we've only"
+    },
+    {
+      "start": 49.12,
+      "duration": 3.2,
+      "text": "described in the previous lecture half"
+    },
+    {
+      "start": 50.64,
+      "duration": 3.2,
+      "text": "the story right we've described the"
+    },
+    {
+      "start": 52.32,
+      "duration": 3.04,
+      "text": "the structure of the metric of a"
+    },
+    {
+      "start": 53.84,
+      "duration": 4.559,
+      "text": "homogeneous and isotropic universe and"
+    },
+    {
+      "start": 55.36,
+      "duration": 6.16,
+      "text": "we've reduced the task of of uh"
+    },
+    {
+      "start": 58.399,
+      "duration": 4.721,
+      "text": "solving this metric in einstein's field"
+    },
+    {
+      "start": 61.52,
+      "duration": 3.359,
+      "text": "equation to that of"
+    },
+    {
+      "start": 63.12,
+      "duration": 3.2,
+      "text": "solving for a single scalar function a"
+    },
+    {
+      "start": 64.879,
+      "duration": 3.121,
+      "text": "of tau"
+    },
+    {
+      "start": 66.32,
+      "duration": 3.28,
+      "text": "now we've got to describe the other half"
+    },
+    {
+      "start": 68.0,
+      "duration": 3.119,
+      "text": "of einstein field equations namely the"
+    },
+    {
+      "start": 69.6,
+      "duration": 2.879,
+      "text": "stress energy tensor what's the stress"
+    },
+    {
+      "start": 71.119,
+      "duration": 3.36,
+      "text": "energy tends that we can assume or"
+    },
+    {
+      "start": 72.479,
+      "duration": 3.521,
+      "text": "attach to a homogeneous and isotropic"
+    },
+    {
+      "start": 74.479,
+      "duration": 4.561,
+      "text": "universe"
+    },
+    {
+      "start": 76.0,
+      "duration": 5.04,
+      "text": "so it's a highly idealized model"
+    },
+    {
+      "start": 79.04,
+      "duration": 3.2,
+      "text": "so we're going to idealize galaxies in"
+    },
+    {
+      "start": 81.04,
+      "duration": 6.8,
+      "text": "this model"
+    },
+    {
+      "start": 82.24,
+      "duration": 5.6,
+      "text": "to grains of dust"
+    },
+    {
+      "start": 89.119,
+      "duration": 7.36,
+      "text": "and we're going to further assume that"
+    },
+    {
+      "start": 93.36,
+      "duration": 3.759,
+      "text": "these galaxies really move they don't"
+    },
+    {
+      "start": 96.479,
+      "duration": 2.96,
+      "text": "have much"
+    },
+    {
+      "start": 97.119,
+      "duration": 4.0,
+      "text": "initial velocity of their own in fact"
+    },
+    {
+      "start": 99.439,
+      "duration": 16.401,
+      "text": "they're going to move on"
+    },
+    {
+      "start": 101.119,
+      "duration": 14.721,
+      "text": "world lines of isotropic observers"
+    },
+    {
+      "start": 120.88,
+      "duration": 3.44,
+      "text": "now these gravit these galaxies will"
+    },
+    {
+      "start": 123.04,
+      "duration": 3.6,
+      "text": "have some fluctuations in their"
+    },
+    {
+      "start": 124.32,
+      "duration": 4.24,
+      "text": "velocities"
+    },
+    {
+      "start": 126.64,
+      "duration": 3.119,
+      "text": "you know the universe isn't completely"
+    },
+    {
+      "start": 128.56,
+      "duration": 4.399,
+      "text": "isotropic and"
+    },
+    {
+      "start": 129.759,
+      "duration": 5.12,
+      "text": "and homogeneous but in order to model"
+    },
+    {
+      "start": 132.959,
+      "duration": 3.92,
+      "text": "the stress energy distribution of the"
+    },
+    {
+      "start": 134.879,
+      "duration": 4.0,
+      "text": "universe we're going to assume"
+    },
+    {
+      "start": 136.879,
+      "duration": 3.681,
+      "text": "in this highly simplifies highly"
+    },
+    {
+      "start": 138.879,
+      "duration": 3.601,
+      "text": "simplified idealized model"
+    },
+    {
+      "start": 140.56,
+      "duration": 5.2,
+      "text": "that the fluctuations of these galaxy"
+    },
+    {
+      "start": 142.48,
+      "duration": 3.28,
+      "text": "velocities is very small"
+    },
+    {
+      "start": 151.84,
+      "duration": 6.96,
+      "text": "is much smaller than any other"
+    },
+    {
+      "start": 156.319,
+      "duration": 2.481,
+      "text": "quantity"
+    },
+    {
+      "start": 160.4,
+      "duration": 3.36,
+      "text": "in particular the speed of light and so"
+    },
+    {
+      "start": 162.08,
+      "duration": 3.76,
+      "text": "in this way we're going to neglect any"
+    },
+    {
+      "start": 163.76,
+      "duration": 7.04,
+      "text": "form of pressure"
+    },
+    {
+      "start": 165.84,
+      "duration": 8.96,
+      "text": "in in modeling the stress energy"
+    },
+    {
+      "start": 170.8,
+      "duration": 6.56,
+      "text": "tensor of the matter of our universe"
+    },
+    {
+      "start": 174.8,
+      "duration": 6.159,
+      "text": "and uh in that sense uh it's pretty easy"
+    },
+    {
+      "start": 177.36,
+      "duration": 3.599,
+      "text": "to write down the stress energy tensor"
+    },
+    {
+      "start": 181.12,
+      "duration": 3.92,
+      "text": "you know the stress energy tensor is"
+    },
+    {
+      "start": 182.56,
+      "duration": 4.24,
+      "text": "that of just a homogenic homogeneous"
+    },
+    {
+      "start": 185.04,
+      "duration": 5.36,
+      "text": "uniform gas of"
+    },
+    {
+      "start": 186.8,
+      "duration": 3.6,
+      "text": "particles with no pressure"
+    },
+    {
+      "start": 194.959,
+      "duration": 3.121,
+      "text": "so this is just the stress energy tensor"
+    },
+    {
+      "start": 196.4,
+      "duration": 5.04,
+      "text": "of the galaxy of the matter content"
+    },
+    {
+      "start": 198.08,
+      "duration": 3.36,
+      "text": "the visible matter content"
+    },
+    {
+      "start": 202.159,
+      "duration": 6.8,
+      "text": "and it's super simple we just take"
+    },
+    {
+      "start": 205.84,
+      "duration": 5.36,
+      "text": "the matter to move on the world lines of"
+    },
+    {
+      "start": 208.959,
+      "duration": 5.28,
+      "text": "isotropic observers"
+    },
+    {
+      "start": 211.2,
+      "duration": 5.52,
+      "text": "easy where rho of course is the"
+    },
+    {
+      "start": 214.239,
+      "duration": 2.481,
+      "text": "density"
+    },
+    {
+      "start": 217.519,
+      "duration": 10.321,
+      "text": "of the density average density"
+    },
+    {
+      "start": 229.2,
+      "duration": 3.84,
+      "text": "so you smear out the galaxies until"
+    },
+    {
+      "start": 231.28,
+      "duration": 6.0,
+      "text": "they're a homogenous"
+    },
+    {
+      "start": 233.04,
+      "duration": 4.559,
+      "text": "soup so that was easy uh we could throw"
+    },
+    {
+      "start": 237.28,
+      "duration": 1.84,
+      "text": "that"
+    },
+    {
+      "start": 237.599,
+      "duration": 3.761,
+      "text": "into einstein's field equations right"
+    },
+    {
+      "start": 239.12,
+      "duration": 2.8,
+      "text": "now and try and solve things but we"
+    },
+    {
+      "start": 241.36,
+      "duration": 2.159,
+      "text": "wouldn't be"
+    },
+    {
+      "start": 241.92,
+      "duration": 3.76,
+      "text": "modeling the physics of our universe"
+    },
+    {
+      "start": 243.519,
+      "duration": 5.36,
+      "text": "quite correctly yet because there is"
+    },
+    {
+      "start": 245.68,
+      "duration": 6.72,
+      "text": "more uh stress energy mass"
+    },
+    {
+      "start": 248.879,
+      "duration": 5.681,
+      "text": "energy content to our universe"
+    },
+    {
+      "start": 252.4,
+      "duration": 4.72,
+      "text": "in fact there's at least one other field"
+    },
+    {
+      "start": 254.56,
+      "duration": 4.399,
+      "text": "that will impact play a role in the the"
+    },
+    {
+      "start": 257.12,
+      "duration": 5.92,
+      "text": "evolution of our universe"
+    },
+    {
+      "start": 258.959,
+      "duration": 6.96,
+      "text": "and that is the electromagnetic field"
+    },
+    {
+      "start": 263.04,
+      "duration": 5.76,
+      "text": "so there is experimentally determined"
+    },
+    {
+      "start": 265.919,
+      "duration": 4.961,
+      "text": "background thermal radiation"
+    },
+    {
+      "start": 268.8,
+      "duration": 3.52,
+      "text": "throughout our universe it's at"
+    },
+    {
+      "start": 270.88,
+      "duration": 2.72,
+      "text": "approximately at a temperature of 3"
+    },
+    {
+      "start": 272.32,
+      "duration": 3.68,
+      "text": "kelvin"
+    },
+    {
+      "start": 273.6,
+      "duration": 2.4,
+      "text": "and"
+    },
+    {
+      "start": 276.8,
+      "duration": 3.36,
+      "text": "we're going to model this background"
+    },
+    {
+      "start": 278.479,
+      "duration": 5.361,
+      "text": "radiation also as a"
+    },
+    {
+      "start": 280.16,
+      "duration": 3.68,
+      "text": "as a perfect fluid"
+    },
+    {
+      "start": 292.24,
+      "duration": 5.36,
+      "text": "it's a somewhat advanced exercise"
+    },
+    {
+      "start": 296.08,
+      "duration": 2.96,
+      "text": "pretty advanced exercise involving a"
+    },
+    {
+      "start": 297.6,
+      "duration": 2.4,
+      "text": "little bit of statistical physics to"
+    },
+    {
+      "start": 299.04,
+      "duration": 3.599,
+      "text": "argue that"
+    },
+    {
+      "start": 300.0,
+      "duration": 3.12,
+      "text": "the thermal state of the electromagnetic"
+    },
+    {
+      "start": 302.639,
+      "duration": 2.56,
+      "text": "field"
+    },
+    {
+      "start": 303.12,
+      "duration": 8.72,
+      "text": "can be modeled with a with a perfect"
+    },
+    {
+      "start": 305.199,
+      "duration": 6.641,
+      "text": "fluid stress energy tensor"
+    },
+    {
+      "start": 312.8,
+      "duration": 3.36,
+      "text": "i mean there aren't so many options"
+    },
+    {
+      "start": 314.56,
+      "duration": 5.04,
+      "text": "right in this in this situation of"
+    },
+    {
+      "start": 316.16,
+      "duration": 7.12,
+      "text": "homogeneity and isotropy"
+    },
+    {
+      "start": 319.6,
+      "duration": 8.24,
+      "text": "so there aren't"
+    },
+    {
+      "start": 323.28,
+      "duration": 8.8,
+      "text": "so many symmetric homogenous isotropic"
+    },
+    {
+      "start": 327.84,
+      "duration": 6.16,
+      "text": "uh four tenses that you can write down"
+    },
+    {
+      "start": 332.08,
+      "duration": 3.6,
+      "text": "and so you're pretty much reduced to to"
+    },
+    {
+      "start": 334.0,
+      "duration": 3.36,
+      "text": "just describing things in terms of"
+    },
+    {
+      "start": 335.68,
+      "duration": 4.72,
+      "text": "diagonal"
+    },
+    {
+      "start": 337.36,
+      "duration": 4.72,
+      "text": "4x4 matrices where the three spatial"
+    },
+    {
+      "start": 340.4,
+      "duration": 2.56,
+      "text": "components are equal and the temporal"
+    },
+    {
+      "start": 342.08,
+      "duration": 4.72,
+      "text": "component is"
+    },
+    {
+      "start": 342.96,
+      "duration": 4.239,
+      "text": "potentially unequal so we use for the"
+    },
+    {
+      "start": 346.8,
+      "duration": 2.56,
+      "text": "stress"
+    },
+    {
+      "start": 347.199,
+      "duration": 3.641,
+      "text": "energy tensor of the the radiation field"
+    },
+    {
+      "start": 349.36,
+      "duration": 5.6,
+      "text": "the perfect"
+    },
+    {
+      "start": 350.84,
+      "duration": 7.4,
+      "text": "fluid stress energy tensor"
+    },
+    {
+      "start": 354.96,
+      "duration": 5.359,
+      "text": "where in this case uh the pressure of"
+    },
+    {
+      "start": 358.24,
+      "duration": 5.36,
+      "text": "the radiation field is exactly"
+    },
+    {
+      "start": 360.319,
+      "duration": 3.281,
+      "text": "one-third of the density"
+    },
+    {
+      "start": 364.88,
+      "duration": 5.2,
+      "text": "and thus the total stress energy tensor"
+    },
+    {
+      "start": 367.36,
+      "duration": 2.72,
+      "text": "of the universe"
+    },
+    {
+      "start": 372.16,
+      "duration": 4.96,
+      "text": "is as i just mentioned before is as"
+    },
+    {
+      "start": 374.16,
+      "duration": 2.96,
+      "text": "general as it can be"
+    },
+    {
+      "start": 377.919,
+      "duration": 3.921,
+      "text": "while respecting these additional"
+    },
+    {
+      "start": 379.44,
+      "duration": 2.4,
+      "text": "symmetries"
+    },
+    {
+      "start": 382.08,
+      "duration": 3.04,
+      "text": "and that is it has this perfect fluid"
+    },
+    {
+      "start": 384.72,
+      "duration": 3.039,
+      "text": "form"
+    },
+    {
+      "start": 385.12,
+      "duration": 3.519,
+      "text": "but where p and rho are appropriately"
+    },
+    {
+      "start": 387.759,
+      "duration": 4.401,
+      "text": "adjusted to"
+    },
+    {
+      "start": 388.639,
+      "duration": 6.321,
+      "text": "incorporate the galaxy matter content"
+    },
+    {
+      "start": 392.16,
+      "duration": 2.8,
+      "text": "and the radiation"
+    },
+    {
+      "start": 406.84,
+      "duration": 3.0,
+      "text": "metacontent"
+    },
+    {
+      "start": 411.28,
+      "duration": 4.56,
+      "text": "uh and so i'm gonna just say most"
+    },
+    {
+      "start": 413.44,
+      "duration": 2.4,
+      "text": "general"
+    },
+    {
+      "start": 418.0,
+      "duration": 4.16,
+      "text": "is and i think you i could safely eat"
+    },
+    {
+      "start": 420.0,
+      "duration": 3.68,
+      "text": "that as an exercise for you"
+    },
+    {
+      "start": 422.16,
+      "duration": 2.96,
+      "text": "what is the most general stress energy"
+    },
+    {
+      "start": 423.68,
+      "duration": 2.48,
+      "text": "tensor you can write down well it also"
+    },
+    {
+      "start": 425.12,
+      "duration": 4.0,
+      "text": "has"
+    },
+    {
+      "start": 426.16,
+      "duration": 3.439,
+      "text": "essentially this perfect fluid form but"
+    },
+    {
+      "start": 429.12,
+      "duration": 3.199,
+      "text": "rho"
+    },
+    {
+      "start": 429.599,
+      "duration": 3.121,
+      "text": "and p are no longer just p rad and rho"
+    },
+    {
+      "start": 432.319,
+      "duration": 2.961,
+      "text": "rad"
+    },
+    {
+      "start": 432.72,
+      "duration": 3.84,
+      "text": "and p galaxy and so on they they have to"
+    },
+    {
+      "start": 435.28,
+      "duration": 2.96,
+      "text": "be adjusted those constants to"
+    },
+    {
+      "start": 436.56,
+      "duration": 4.639,
+      "text": "incorporate"
+    },
+    {
+      "start": 438.24,
+      "duration": 2.959,
+      "text": "these contributions"
+    },
+    {
+      "start": 442.24,
+      "duration": 6.32,
+      "text": "so that's extraordinarily simple"
+    },
+    {
+      "start": 447.039,
+      "duration": 3.28,
+      "text": "stress energy tensor it's a diagonal"
+    },
+    {
+      "start": 448.56,
+      "duration": 2.72,
+      "text": "stress energy tensor if you look at it"
+    },
+    {
+      "start": 450.319,
+      "duration": 3.44,
+      "text": "in the"
+    },
+    {
+      "start": 451.28,
+      "duration": 6.08,
+      "text": "coordinate system we've been working in"
+    },
+    {
+      "start": 453.759,
+      "duration": 3.601,
+      "text": "and the spatial components are all equal"
+    },
+    {
+      "start": 457.759,
+      "duration": 3.601,
+      "text": "and now what we're going to do is we've"
+    },
+    {
+      "start": 460.08,
+      "duration": 2.399,
+      "text": "got the right hand side of einstein's"
+    },
+    {
+      "start": 461.36,
+      "duration": 3.279,
+      "text": "field equations"
+    },
+    {
+      "start": 462.479,
+      "duration": 3.28,
+      "text": "so now we're really in a situation where"
+    },
+    {
+      "start": 464.639,
+      "duration": 3.84,
+      "text": "we can"
+    },
+    {
+      "start": 465.759,
+      "duration": 3.521,
+      "text": "uh write out the full equations of"
+    },
+    {
+      "start": 468.479,
+      "duration": 4.4,
+      "text": "motion"
+    },
+    {
+      "start": 469.28,
+      "duration": 3.599,
+      "text": "for the our universe that we learn"
+    },
+    {
+      "start": 476.319,
+      "duration": 3.041,
+      "text": "so no perturbation theory here no"
+    },
+    {
+      "start": 478.08,
+      "duration": 3.2,
+      "text": "approximations here we're going to go"
+    },
+    {
+      "start": 479.36,
+      "duration": 5.36,
+      "text": "for a full solution today"
+    },
+    {
+      "start": 481.28,
+      "duration": 3.44,
+      "text": "and in the next lectures"
+    },
+    {
+      "start": 488.08,
+      "duration": 4.16,
+      "text": "and einstein's field equations well what"
+    },
+    {
+      "start": 490.08,
+      "duration": 5.04,
+      "text": "do we need well"
+    },
+    {
+      "start": 492.24,
+      "duration": 4.72,
+      "text": "we need the einstein tensor g big g we"
+    },
+    {
+      "start": 495.12,
+      "duration": 2.479,
+      "text": "need the stress energy intensity a b so"
+    },
+    {
+      "start": 496.96,
+      "duration": 2.88,
+      "text": "we have"
+    },
+    {
+      "start": 497.599,
+      "duration": 4.481,
+      "text": "the metric we have the stress energy"
+    },
+    {
+      "start": 499.84,
+      "duration": 3.44,
+      "text": "tensor and i've added on here an extra"
+    },
+    {
+      "start": 502.08,
+      "duration": 5.76,
+      "text": "term"
+    },
+    {
+      "start": 503.28,
+      "duration": 4.56,
+      "text": "called the cosmological constant term"
+    },
+    {
+      "start": 509.68,
+      "duration": 4.88,
+      "text": "that's a consistent one can add this"
+    },
+    {
+      "start": 513.36,
+      "duration": 2.96,
+      "text": "equation"
+    },
+    {
+      "start": 514.56,
+      "duration": 4.0,
+      "text": "add this this term to einstein's field"
+    },
+    {
+      "start": 516.32,
+      "duration": 4.959,
+      "text": "equation einstein himself also added"
+    },
+    {
+      "start": 518.56,
+      "duration": 7.12,
+      "text": "this equation uh this constant"
+    },
+    {
+      "start": 521.279,
+      "duration": 4.401,
+      "text": "term to the field equations"
+    },
+    {
+      "start": 525.92,
+      "duration": 3.2,
+      "text": "although he for very very different"
+    },
+    {
+      "start": 527.519,
+      "duration": 3.76,
+      "text": "reasons"
+    },
+    {
+      "start": 529.12,
+      "duration": 5.52,
+      "text": "which we if you're interested in the"
+    },
+    {
+      "start": 531.279,
+      "duration": 6.161,
+      "text": "history of general relativity"
+    },
+    {
+      "start": 534.64,
+      "duration": 2.8,
+      "text": "you can look up"
+    },
+    {
+      "start": 547.279,
+      "duration": 6.081,
+      "text": "so we've added an additional term lambda"
+    },
+    {
+      "start": 550.32,
+      "duration": 5.6,
+      "text": "the cosmological constant and it turns"
+    },
+    {
+      "start": 553.36,
+      "duration": 6.0,
+      "text": "out that although it was hoped that"
+    },
+    {
+      "start": 555.92,
+      "duration": 5.2,
+      "text": "lambda by einstein"
+    },
+    {
+      "start": 559.36,
+      "duration": 3.28,
+      "text": "who added it in order to model an"
+    },
+    {
+      "start": 561.12,
+      "duration": 4.8,
+      "text": "internal universe"
+    },
+    {
+      "start": 562.64,
+      "duration": 4.96,
+      "text": "uh it was later hoped that"
+    },
+    {
+      "start": 565.92,
+      "duration": 3.039,
+      "text": "lambda would be zero well that's not the"
+    },
+    {
+      "start": 567.6,
+      "duration": 5.76,
+      "text": "case we"
+    },
+    {
+      "start": 568.959,
+      "duration": 8.56,
+      "text": "the observations now favor"
+    },
+    {
+      "start": 573.36,
+      "duration": 6.0,
+      "text": "a non-zero value of lambda and it's"
+    },
+    {
+      "start": 577.519,
+      "duration": 3.76,
+      "text": "these observations have essentially been"
+    },
+    {
+      "start": 579.36,
+      "duration": 5.599,
+      "text": "independently uh"
+    },
+    {
+      "start": 581.279,
+      "duration": 3.68,
+      "text": "verified now um"
+    },
+    {
+      "start": 586.32,
+      "duration": 4.959,
+      "text": "and what do we need for well we need to"
+    },
+    {
+      "start": 588.399,
+      "duration": 6.401,
+      "text": "account for the observed"
+    },
+    {
+      "start": 591.279,
+      "duration": 3.521,
+      "text": "cosmic background radiation"
+    },
+    {
+      "start": 597.839,
+      "duration": 3.281,
+      "text": "but also very recently"
+    },
+    {
+      "start": 599.63,
+      "duration": 5.329,
+      "text": "[Music]"
+    },
+    {
+      "start": 601.12,
+      "duration": 7.44,
+      "text": "this term the non-vanishing of this term"
+    },
+    {
+      "start": 604.959,
+      "duration": 7.921,
+      "text": "was also uh independently"
+    },
+    {
+      "start": 608.56,
+      "duration": 6.56,
+      "text": "largely verified by"
+    },
+    {
+      "start": 612.88,
+      "duration": 3.12,
+      "text": "the dark energy surveys which have just"
+    },
+    {
+      "start": 615.12,
+      "duration": 2.64,
+      "text": "been"
+    },
+    {
+      "start": 616.0,
+      "duration": 3.36,
+      "text": "completed or just begun we're just"
+    },
+    {
+      "start": 617.76,
+      "duration": 2.88,
+      "text": "beginning to analyze the data from these"
+    },
+    {
+      "start": 619.36,
+      "duration": 3.44,
+      "text": "dark energy surveys"
+    },
+    {
+      "start": 620.64,
+      "duration": 3.92,
+      "text": "so the cosmological constant is here to"
+    },
+    {
+      "start": 622.8,
+      "duration": 5.279,
+      "text": "stay we have to have it"
+    },
+    {
+      "start": 624.56,
+      "duration": 5.839,
+      "text": "uh in order to match uh to model the"
+    },
+    {
+      "start": 628.079,
+      "duration": 5.44,
+      "text": "universe that we live in"
+    },
+    {
+      "start": 630.399,
+      "duration": 3.841,
+      "text": "so why not for this rest of these next"
+    },
+    {
+      "start": 633.519,
+      "duration": 2.401,
+      "text": "coming lectures"
+    },
+    {
+      "start": 634.24,
+      "duration": 3.039,
+      "text": "included in our solution of einstein's"
+    },
+    {
+      "start": 635.92,
+      "duration": 2.88,
+      "text": "field equation turns out to be rather"
+    },
+    {
+      "start": 637.279,
+      "duration": 4.481,
+      "text": "easy to do so it just"
+    },
+    {
+      "start": 638.8,
+      "duration": 7.599,
+      "text": "effectively adjusts uh it acts like a"
+    },
+    {
+      "start": 641.76,
+      "duration": 6.56,
+      "text": "negative pressure term"
+    },
+    {
+      "start": 646.399,
+      "duration": 3.761,
+      "text": "so in principle so how hard is it to"
+    },
+    {
+      "start": 648.32,
+      "duration": 3.759,
+      "text": "solve einstein's field equations well"
+    },
+    {
+      "start": 650.16,
+      "duration": 5.2,
+      "text": "you know in principle"
+    },
+    {
+      "start": 652.079,
+      "duration": 6.0,
+      "text": "we need to solve 10"
+    },
+    {
+      "start": 655.36,
+      "duration": 6.479,
+      "text": "simultaneous coupled nonlinear partial"
+    },
+    {
+      "start": 658.079,
+      "duration": 3.76,
+      "text": "differential equations"
+    },
+    {
+      "start": 669.519,
+      "duration": 3.921,
+      "text": "and you know and why 10 well the"
+    },
+    {
+      "start": 672.64,
+      "duration": 2.4,
+      "text": "variables"
+    },
+    {
+      "start": 673.44,
+      "duration": 4.48,
+      "text": "in einstein's field equation is the"
+    },
+    {
+      "start": 675.04,
+      "duration": 6.239,
+      "text": "metric the metric is a 4x4 matrix"
+    },
+    {
+      "start": 677.92,
+      "duration": 6.159,
+      "text": "a 4x4 matrix has 16 terms"
+    },
+    {
+      "start": 681.279,
+      "duration": 5.601,
+      "text": "but if it's a symmetric 4x4 matrix which"
+    },
+    {
+      "start": 684.079,
+      "duration": 2.801,
+      "text": "it is in the case of"
+    },
+    {
+      "start": 687.36,
+      "duration": 4.08,
+      "text": "our space time that we live in then only"
+    },
+    {
+      "start": 689.68,
+      "duration": 3.36,
+      "text": "10 10 components are actually"
+    },
+    {
+      "start": 691.44,
+      "duration": 2.56,
+      "text": "independent so you only need to solve"
+    },
+    {
+      "start": 693.04,
+      "duration": 4.479,
+      "text": "for 10"
+    },
+    {
+      "start": 694.0,
+      "duration": 7.279,
+      "text": "things 10 uh variables"
+    },
+    {
+      "start": 697.519,
+      "duration": 6.88,
+      "text": "now 10 10 nonlinear couple"
+    },
+    {
+      "start": 701.279,
+      "duration": 5.68,
+      "text": "pde uh is is ridiculous"
+    },
+    {
+      "start": 704.399,
+      "duration": 3.68,
+      "text": "uh ridiculously complicated most of your"
+    },
+    {
+      "start": 706.959,
+      "duration": 3.361,
+      "text": "career in physics"
+    },
+    {
+      "start": 708.079,
+      "duration": 4.481,
+      "text": "let's say you know unless you've been"
+    },
+    {
+      "start": 710.32,
+      "duration": 4.959,
+      "text": "heavily involved in"
+    },
+    {
+      "start": 712.56,
+      "duration": 4.16,
+      "text": "fluid mechanics or something has been"
+    },
+    {
+      "start": 715.279,
+      "duration": 3.201,
+      "text": "mostly occupied with linear"
+    },
+    {
+      "start": 716.72,
+      "duration": 4.239,
+      "text": "partial differential equations or"
+    },
+    {
+      "start": 718.48,
+      "duration": 4.4,
+      "text": "ordinary differential equations"
+    },
+    {
+      "start": 720.959,
+      "duration": 3.12,
+      "text": "uh you've probably in fluid mechanics"
+    },
+    {
+      "start": 722.88,
+      "duration": 3.28,
+      "text": "encountered"
+    },
+    {
+      "start": 724.079,
+      "duration": 3.041,
+      "text": "uh nonlinear partial differential"
+    },
+    {
+      "start": 726.16,
+      "duration": 4.16,
+      "text": "equations but"
+    },
+    {
+      "start": 727.12,
+      "duration": 6.159,
+      "text": "not like ten you have the worst case"
+    },
+    {
+      "start": 730.32,
+      "duration": 6.639,
+      "text": "scenarios like navier stokes equation"
+    },
+    {
+      "start": 733.279,
+      "duration": 7.041,
+      "text": "and so this is an a monstrous system"
+    },
+    {
+      "start": 736.959,
+      "duration": 5.281,
+      "text": "of complexity far far"
+    },
+    {
+      "start": 740.32,
+      "duration": 5.84,
+      "text": "exceeding anything that you're likely to"
+    },
+    {
+      "start": 742.24,
+      "duration": 6.399,
+      "text": "encounter in any other branch of physics"
+    },
+    {
+      "start": 746.16,
+      "duration": 4.0,
+      "text": "and so you can't hope to have a general"
+    },
+    {
+      "start": 748.639,
+      "duration": 2.88,
+      "text": "solution you know there's no greens"
+    },
+    {
+      "start": 750.16,
+      "duration": 3.28,
+      "text": "function nothing's going to save you in"
+    },
+    {
+      "start": 751.519,
+      "duration": 5.041,
+      "text": "general it's it's absolutely"
+    },
+    {
+      "start": 753.44,
+      "duration": 5.6,
+      "text": "an orders of magnitude more ambitious a"
+    },
+    {
+      "start": 756.56,
+      "duration": 5.44,
+      "text": "task to solve these equations of motion"
+    },
+    {
+      "start": 759.04,
+      "duration": 4.56,
+      "text": "however you can either use perturbation"
+    },
+    {
+      "start": 762.0,
+      "duration": 2.959,
+      "text": "theory as we have done"
+    },
+    {
+      "start": 763.6,
+      "duration": 3.2,
+      "text": "in the previous lecture or you can"
+    },
+    {
+      "start": 764.959,
+      "duration": 3.44,
+      "text": "exploit symmetry so to reduce the number"
+    },
+    {
+      "start": 766.8,
+      "duration": 3.12,
+      "text": "of equations you have to solve"
+    },
+    {
+      "start": 768.399,
+      "duration": 3.841,
+      "text": "and keep reducing until you hopefully"
+    },
+    {
+      "start": 769.92,
+      "duration": 4.56,
+      "text": "just get to some one non-linear or"
+    },
+    {
+      "start": 772.24,
+      "duration": 3.039,
+      "text": "ordinary differential equation and that"
+    },
+    {
+      "start": 774.48,
+      "duration": 2.32,
+      "text": "you can solve"
+    },
+    {
+      "start": 775.279,
+      "duration": 3.841,
+      "text": "you just integrate by quadratures or"
+    },
+    {
+      "start": 776.8,
+      "duration": 3.36,
+      "text": "whatever"
+    },
+    {
+      "start": 779.12,
+      "duration": 5.12,
+      "text": "and that's exactly what's going to"
+    },
+    {
+      "start": 780.16,
+      "duration": 5.6,
+      "text": "happen here today"
+    },
+    {
+      "start": 784.24,
+      "duration": 3.36,
+      "text": "we're not going to need to solve 10"
+    },
+    {
+      "start": 785.76,
+      "duration": 5.68,
+      "text": "thank goodness uh"
+    },
+    {
+      "start": 787.6,
+      "duration": 3.84,
+      "text": "because of homogeneity and isotropic"
+    },
+    {
+      "start": 791.519,
+      "duration": 2.721,
+      "text": "isotropy"
+    },
+    {
+      "start": 796.639,
+      "duration": 5.2,
+      "text": "we're going to get away with a lot less"
+    },
+    {
+      "start": 807.36,
+      "duration": 8.479,
+      "text": "it turns out only two equations are in"
+    },
+    {
+      "start": 809.68,
+      "duration": 6.159,
+      "text": "fact independent anyway"
+    },
+    {
+      "start": 822.24,
+      "duration": 10.159,
+      "text": "and the argument for this is"
+    },
+    {
+      "start": 828.079,
+      "duration": 4.32,
+      "text": "well note the following right"
+    },
+    {
+      "start": 832.88,
+      "duration": 3.28,
+      "text": "the the vectors which you get by"
+    },
+    {
+      "start": 834.56,
+      "duration": 4.399,
+      "text": "contracting the einstein"
+    },
+    {
+      "start": 836.16,
+      "duration": 4.88,
+      "text": "tensor against the ub the tangent vector"
+    },
+    {
+      "start": 838.959,
+      "duration": 5.921,
+      "text": "going in the of the isotropic observer"
+    },
+    {
+      "start": 841.04,
+      "duration": 8.239,
+      "text": "and the stress energy tensor with uv"
+    },
+    {
+      "start": 844.88,
+      "duration": 4.399,
+      "text": "these have no cannot have spatial"
+    },
+    {
+      "start": 854.839,
+      "duration": 5.481,
+      "text": "components"
+    },
+    {
+      "start": 857.04,
+      "duration": 3.28,
+      "text": "that's due to isotropy"
+    },
+    {
+      "start": 862.0,
+      "duration": 2.959,
+      "text": "and similarly"
+    },
+    {
+      "start": 867.12,
+      "duration": 3.279,
+      "text": "if you restrict your attention to sigma"
+    },
+    {
+      "start": 869.6,
+      "duration": 3.84,
+      "text": "t"
+    },
+    {
+      "start": 870.399,
+      "duration": 3.041,
+      "text": "one of these slices"
+    },
+    {
+      "start": 875.6,
+      "duration": 3.2,
+      "text": "then you can make a very similar"
+    },
+    {
+      "start": 882.839,
+      "duration": 5.401,
+      "text": "argument"
+    },
+    {
+      "start": 884.8,
+      "duration": 3.44,
+      "text": "uh that we made for"
+    },
+    {
+      "start": 888.88,
+      "duration": 4.48,
+      "text": "the riemann curvature tensor of h a b"
+    },
+    {
+      "start": 894.0,
+      "duration": 4.32,
+      "text": "you know that was the argument involving"
+    },
+    {
+      "start": 896.0,
+      "duration": 7.92,
+      "text": "diagonalizing matrices and symmetries"
+    },
+    {
+      "start": 898.32,
+      "duration": 7.04,
+      "text": "and and degenerate eigenvalues"
+    },
+    {
+      "start": 903.92,
+      "duration": 3.2,
+      "text": "it implies that the the"
+    },
+    {
+      "start": 905.36,
+      "duration": 8.08,
+      "text": "three-dimensional einstein"
+    },
+    {
+      "start": 907.12,
+      "duration": 8.0,
+      "text": "tensor is proportional to the identity"
+    },
+    {
+      "start": 913.44,
+      "duration": 4.88,
+      "text": "otherwise you could select out a"
+    },
+    {
+      "start": 915.12,
+      "duration": 3.2,
+      "text": "distinguished vector"
+    },
+    {
+      "start": 921.519,
+      "duration": 6.32,
+      "text": "so the off-diagonal terms"
+    },
+    {
+      "start": 930.32,
+      "duration": 6.879,
+      "text": "of star they vanish"
+    },
+    {
+      "start": 934.079,
+      "duration": 7.76,
+      "text": "so if you recall stars find transvert"
+    },
+    {
+      "start": 937.199,
+      "duration": 4.64,
+      "text": "equation with cosmological constant"
+    },
+    {
+      "start": 942.079,
+      "duration": 7.281,
+      "text": "and and the diagonal"
+    },
+    {
+      "start": 946.0,
+      "duration": 3.36,
+      "text": "space based components"
+    },
+    {
+      "start": 953.12,
+      "duration": 4.399,
+      "text": "are equal these are effectively induced"
+    },
+    {
+      "start": 956.079,
+      "duration": 3.841,
+      "text": "by the eigenvalues of ga"
+    },
+    {
+      "start": 957.519,
+      "duration": 3.921,
+      "text": "these effectively induce the eigenvalues"
+    },
+    {
+      "start": 959.92,
+      "duration": 9.919,
+      "text": "and of gab"
+    },
+    {
+      "start": 961.44,
+      "duration": 8.399,
+      "text": "on sigma t"
+    },
+    {
+      "start": 970.8,
+      "duration": 5.68,
+      "text": "and and of course homogeneity"
+    },
+    {
+      "start": 980.839,
+      "duration": 8.36,
+      "text": "implies"
+    },
+    {
+      "start": 983.279,
+      "duration": 5.92,
+      "text": "that the space time components vanish"
+    },
+    {
+      "start": 994.88,
+      "duration": 15.759,
+      "text": "and so we're left with just two"
+    },
+    {
+      "start": 996.0,
+      "duration": 16.72,
+      "text": "independent components from star"
+    },
+    {
+      "start": 1010.639,
+      "duration": 4.241,
+      "text": "i'm going to write them like this g tao"
+    },
+    {
+      "start": 1012.72,
+      "duration": 5.359,
+      "text": "tau plus lambda g"
+    },
+    {
+      "start": 1014.88,
+      "duration": 4.879,
+      "text": "tau tau equals eight pi"
+    },
+    {
+      "start": 1018.079,
+      "duration": 3.041,
+      "text": "rho let's look up the stress energy"
+    },
+    {
+      "start": 1019.759,
+      "duration": 3.52,
+      "text": "tensor and the"
+    },
+    {
+      "start": 1021.12,
+      "duration": 3.76,
+      "text": "the time time or telltale component and"
+    },
+    {
+      "start": 1023.279,
+      "duration": 5.121,
+      "text": "g star star"
+    },
+    {
+      "start": 1024.88,
+      "duration": 6.24,
+      "text": "plus lambda g star star equals eight"
+    },
+    {
+      "start": 1028.4,
+      "duration": 2.72,
+      "text": "pi p"
+    },
+    {
+      "start": 1031.6,
+      "duration": 4.479,
+      "text": "and uh i got to tell you what the star"
+    },
+    {
+      "start": 1034.72,
+      "duration": 3.28,
+      "text": "notation means"
+    },
+    {
+      "start": 1036.079,
+      "duration": 3.441,
+      "text": "and there's g tau tau well g telltale's"
+    },
+    {
+      "start": 1038.0,
+      "duration": 5.36,
+      "text": "easy to explain right it's just g"
+    },
+    {
+      "start": 1039.52,
+      "duration": 7.039,
+      "text": "a b where you put in the tangent vector"
+    },
+    {
+      "start": 1043.36,
+      "duration": 5.28,
+      "text": "of the isotropic observers and g star"
+    },
+    {
+      "start": 1046.559,
+      "duration": 2.961,
+      "text": "star is just any spatial component that"
+    },
+    {
+      "start": 1048.64,
+      "duration": 4.24,
+      "text": "you get"
+    },
+    {
+      "start": 1049.52,
+      "duration": 7.68,
+      "text": "by contracting with"
+    },
+    {
+      "start": 1052.88,
+      "duration": 4.32,
+      "text": "a unit space like vector"
+    },
+    {
+      "start": 1064.72,
+      "duration": 4.64,
+      "text": "and what we're going to do is uh well"
+    },
+    {
+      "start": 1067.76,
+      "duration": 4.4,
+      "text": "we've got to do the calculations still"
+    },
+    {
+      "start": 1069.36,
+      "duration": 2.8,
+      "text": "where i haven't yet"
+    },
+    {
+      "start": 1073.36,
+      "duration": 3.6,
+      "text": "completely trivialized this problem"
+    },
+    {
+      "start": 1077.039,
+      "duration": 3.76,
+      "text": "we've got a system of two two equations"
+    },
+    {
+      "start": 1079.52,
+      "duration": 3.6,
+      "text": "now"
+    },
+    {
+      "start": 1080.799,
+      "duration": 4.161,
+      "text": "but the metric is like highly highly"
+    },
+    {
+      "start": 1083.12,
+      "duration": 3.52,
+      "text": "non-trivially embedded in the einstein"
+    },
+    {
+      "start": 1084.96,
+      "duration": 3.839,
+      "text": "tensor"
+    },
+    {
+      "start": 1086.64,
+      "duration": 4.399,
+      "text": "i mean it's explicitly there in the the"
+    },
+    {
+      "start": 1088.799,
+      "duration": 3.681,
+      "text": "cosmological constant term but the"
+    },
+    {
+      "start": 1091.039,
+      "duration": 4.561,
+      "text": "in the einstein tensor it's sort of"
+    },
+    {
+      "start": 1092.48,
+      "duration": 6.24,
+      "text": "buried in a non-linear way"
+    },
+    {
+      "start": 1095.6,
+      "duration": 3.12,
+      "text": "so to carry out"
+    },
+    {
+      "start": 1098.88,
+      "duration": 4.08,
+      "text": "the subsequent calculations"
+    },
+    {
+      "start": 1105.36,
+      "duration": 4.16,
+      "text": "we're going to have to work out the"
+    },
+    {
+      "start": 1106.48,
+      "duration": 6.4,
+      "text": "dependence of the einstein tensor"
+    },
+    {
+      "start": 1109.52,
+      "duration": 5.2,
+      "text": "on the metric and to do any"
+    },
+    {
+      "start": 1112.88,
+      "duration": 3.52,
+      "text": "computation in physics you will need to"
+    },
+    {
+      "start": 1114.72,
+      "duration": 3.199,
+      "text": "choose a basis and you will need to do"
+    },
+    {
+      "start": 1116.4,
+      "duration": 4.399,
+      "text": "some hard work"
+    },
+    {
+      "start": 1117.919,
+      "duration": 4.64,
+      "text": "you can't you know basis free doing"
+    },
+    {
+      "start": 1120.799,
+      "duration": 6.0,
+      "text": "things basis free and coordinate free"
+    },
+    {
+      "start": 1122.559,
+      "duration": 6.641,
+      "text": "is wonderful for uh deducing"
+    },
+    {
+      "start": 1126.799,
+      "duration": 3.12,
+      "text": "logical consequences of statements but"
+    },
+    {
+      "start": 1129.2,
+      "duration": 2.96,
+      "text": "is hopeless"
+    },
+    {
+      "start": 1129.919,
+      "duration": 3.281,
+      "text": "for doing any real calculation we want"
+    },
+    {
+      "start": 1132.16,
+      "duration": 5.68,
+      "text": "to model some"
+    },
+    {
+      "start": 1133.2,
+      "duration": 4.64,
+      "text": "physical process"
+    },
+    {
+      "start": 1138.24,
+      "duration": 3.28,
+      "text": "so to actually carry out a calculation"
+    },
+    {
+      "start": 1140.0,
+      "duration": 4.48,
+      "text": "we're going to need to do some"
+    },
+    {
+      "start": 1141.52,
+      "duration": 6.0,
+      "text": "calculating so we're going to have to"
+    },
+    {
+      "start": 1144.48,
+      "duration": 5.68,
+      "text": "obtain the explicit form of our metric"
+    },
+    {
+      "start": 1147.52,
+      "duration": 4.72,
+      "text": "and it turns out to be rather convenient"
+    },
+    {
+      "start": 1150.16,
+      "duration": 4.96,
+      "text": "to write the fl"
+    },
+    {
+      "start": 1152.24,
+      "duration": 6.16,
+      "text": "rw metric in the following form it's"
+    },
+    {
+      "start": 1155.12,
+      "duration": 3.28,
+      "text": "just a little exercise for you"
+    },
+    {
+      "start": 1162.64,
+      "duration": 3.44,
+      "text": "and it's in in this way we can"
+    },
+    {
+      "start": 1164.32,
+      "duration": 3.04,
+      "text": "consistently cope with all three"
+    },
+    {
+      "start": 1166.08,
+      "duration": 12.0,
+      "text": "possibilities of"
+    },
+    {
+      "start": 1167.36,
+      "duration": 13.28,
+      "text": "the constant big k"
+    },
+    {
+      "start": 1178.08,
+      "duration": 3.44,
+      "text": "and uh how do we do that well where"
+    },
+    {
+      "start": 1180.64,
+      "duration": 3.44,
+      "text": "little k"
+    },
+    {
+      "start": 1181.52,
+      "duration": 4.96,
+      "text": "equals plus one is corresponding to the"
+    },
+    {
+      "start": 1184.08,
+      "duration": 5.52,
+      "text": "sphere"
+    },
+    {
+      "start": 1186.48,
+      "duration": 5.68,
+      "text": "spherical three spherical sections"
+    },
+    {
+      "start": 1189.6,
+      "duration": 4.72,
+      "text": "k equals naught equals the minkowski"
+    },
+    {
+      "start": 1192.16,
+      "duration": 6.32,
+      "text": "space"
+    },
+    {
+      "start": 1194.32,
+      "duration": 7.44,
+      "text": "or flat well not in kopsky but"
+    },
+    {
+      "start": 1198.48,
+      "duration": 6.36,
+      "text": "flat space sections"
+    },
+    {
+      "start": 1201.76,
+      "duration": 4.24,
+      "text": "and uh little k equals minus one is the"
+    },
+    {
+      "start": 1204.84,
+      "duration": 3.48,
+      "text": "hyperboloid"
+    },
+    {
+      "start": 1206.0,
+      "duration": 2.32,
+      "text": "case"
+    },
+    {
+      "start": 1212.88,
+      "duration": 2.96,
+      "text": "and we're going to take this this is the"
+    },
+    {
+      "start": 1214.64,
+      "duration": 2.96,
+      "text": "form of the metric that we're going to"
+    },
+    {
+      "start": 1215.84,
+      "duration": 3.36,
+      "text": "use in our subsequent calculations in"
+    },
+    {
+      "start": 1217.6,
+      "duration": 3.28,
+      "text": "the following lectures"
+    },
+    {
+      "start": 1219.2,
+      "duration": 3.28,
+      "text": "we're going to take this metric we're"
+    },
+    {
+      "start": 1220.88,
+      "duration": 4.4,
+      "text": "going to calculate the"
+    },
+    {
+      "start": 1222.48,
+      "duration": 3.439,
+      "text": "associated christopher symbols we're"
+    },
+    {
+      "start": 1225.28,
+      "duration": 2.96,
+      "text": "going to"
+    },
+    {
+      "start": 1225.919,
+      "duration": 3.041,
+      "text": "then from the christopher symbols build"
+    },
+    {
+      "start": 1228.24,
+      "duration": 3.04,
+      "text": "the"
+    },
+    {
+      "start": 1228.96,
+      "duration": 4.16,
+      "text": "riemann curvature tensor the richie"
+    },
+    {
+      "start": 1231.28,
+      "duration": 3.279,
+      "text": "tensor the richie scala"
+    },
+    {
+      "start": 1233.12,
+      "duration": 3.28,
+      "text": "we're going to substitute all these"
+    },
+    {
+      "start": 1234.559,
+      "duration": 4.401,
+      "text": "functions into"
+    },
+    {
+      "start": 1236.4,
+      "duration": 4.0,
+      "text": "the two remaining independent components"
+    },
+    {
+      "start": 1238.96,
+      "duration": 2.88,
+      "text": "of einstein's field equations and we're"
+    },
+    {
+      "start": 1240.4,
+      "duration": 2.72,
+      "text": "going to arrive at some non-linear"
+    },
+    {
+      "start": 1241.84,
+      "duration": 2.319,
+      "text": "differential equations which we will"
+    },
+    {
+      "start": 1243.12,
+      "duration": 2.559,
+      "text": "then solve"
+    },
+    {
+      "start": 1244.159,
+      "duration": 4.081,
+      "text": "and we will be able to solve them"
+    },
+    {
+      "start": 1245.679,
+      "duration": 5.521,
+      "text": "remarkably but that is a story"
+    },
+    {
+      "start": 1248.24,
+      "duration": 3.52,
+      "text": "for the next lecture that's it for today"
+    },
+    {
+      "start": 1251.2,
+      "duration": 3.599,
+      "text": "thank you"
+    },
+    {
+      "start": 1251.76,
+      "duration": 3.039,
+      "text": "and goodbye"
+    }
+  ]
+}

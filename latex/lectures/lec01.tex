@@ -7,16 +7,45 @@
 
 \subsection{Course overview}
 
-\noindent\textbf{Text.} Wald, \emph{General Relativity}~\cite{Wald84}.\\
+General relativity is, by wide consensus among physicists, one of the
+most beautiful and elegant physical theories we possess.  The connection
+it draws between the curvature of spacetime and the motion of freely
+falling bodies has an almost miraculous quality---there is something
+deeply compelling, perhaps even inevitable, about the way the theory
+holds together.
+
+That said, general relativity is also \emph{wrong}, or at least
+incomplete: as far as we know, it is not compatible with quantum
+mechanics in any fully satisfactory way.  A deeper, more fundamental
+theory must underlie both.  Nonetheless, the predictions of general
+relativity have been confirmed to extraordinary accuracy across an
+enormous range of cosmological and astrophysical phenomena, and it
+remains the indispensable framework for understanding gravity.
+
+\medskip
+\noindent\textbf{Text.} Wald, \emph{General Relativity}~\cite{Wald84}.
+We follow Wald closely, though we deviate where other sources offer
+clearer treatments.\\
 \textbf{Other sources:}
 \begin{itemize}
-  \item Misner, Thorne \& Wheeler~\cite{MTW73}
-  \item Weinberg~\cite{Weinberg72}
+  \item Misner, Thorne \& Wheeler~\cite{MTW73} --- the ``telephone
+    book,'' a comprehensive and physically rich discussion of general
+    relativity.
+  \item Weinberg~\cite{Weinberg72} --- an excellent resource for
+    explicit calculations.
 \end{itemize}
 
 \noindent\textbf{Structure.}
 The course proceeds from mathematical methods to the physics of
-gravitation:
+gravitation.  The emphasis falls deliberately on the mathematical
+side---in particular, on differential geometry.  While it is perfectly
+possible to do general relativity concretely, working in a single
+coordinate patch and never invoking coordinate-free notation, a
+command of the underlying differential geometry is indispensable for
+further studies in theoretical physics.  Anytime one wishes to do
+serious work in quantum gravity or string theory, fluency in
+differential geometry is a prerequisite; the investment made here will
+pay dividends well beyond this course.
 
 \begin{center}
 \begin{tikzpicture}[
@@ -36,7 +65,9 @@ gravitation:
 \end{tikzpicture}
 \end{center}
 
-\noindent\textbf{Videos.} Lenny Susskind's lecture series.
+\noindent\textbf{Videos.} Lenny Susskind's lecture series on general
+relativity offers an absolutely different---and completely
+complementary---perspective to the one presented here.
 
 \medskip\noindent\textbf{Prerequisites:}
 \begin{itemize}
@@ -50,7 +81,12 @@ gravitation:
 \subsection{Newtonian mechanics and inertial frames}
 
 \textbf{Assumption:} Newtonian physics presupposes the existence of a
-preferred reference system and clocks.
+preferred reference system and clocks.  This is the core assumption
+that will be broken in the transition from pre-relativity to
+relativity physics: a common thread in the development of physics is
+that one makes (often implicit) assumptions in a physical theory, and
+as one learns more about the universe one is forced to re-evaluate and
+potentially discard them.
 
 \begin{center}
 \begin{tikzpicture}
@@ -61,8 +97,12 @@ preferred reference system and clocks.
 \end{center}
 
 A free test mass (i.e.\ no force acts) moves along a straight trajectory
-at a constant rate, uniformly in time.
-This defines an \emph{inertial reference frame}.
+at a constant rate, uniformly in time---constant displacement per unit
+time.  This defines an \emph{inertial reference frame}.  There is one
+preferred reference frame, but one can obtain others by performing
+Galilean boosts: an observer moving at constant velocity with respect
+to the preferred frame will also see free test masses moving along
+straight trajectories at constant rates.
 
 Newton's second law is written with respect to an inertial reference system:
 \begin{equation}\label{eq:newton2}
@@ -138,7 +178,18 @@ Coriolis, Euler forces, etc.
     \end{equation}
 \end{enumerate}
 
-It is assumed that $m_I,\, m_g^{(a)},\, m_g^{(p)} \geq 0$.
+It is assumed that $m_I,\, m_g^{(a)},\, m_g^{(p)} \geq 0$.  This
+non-negativity is an assumption, not a theorem---one \emph{cannot}
+deduce it from the other laws of Newtonian physics.
+
+\begin{remark}
+  It is possible to build a consistent Newtonian physics with negative
+  masses.  The consequences are exotic---negative masses behave
+  somewhat like negative charges, and all manner of counterintuitive
+  phenomena arise---but the theory does not immediately break down.
+  The non-negativity of mass is supported by extensive experimental
+  evidence, not by logical necessity.
+\end{remark}
 
 \begin{exercise}
   Using Newton's third law, argue that $m_g^{(a)}/m_g^{(p)}$ is a
@@ -212,8 +263,18 @@ $m_g = m_I$.
 \begin{remark}
 \begin{enumerate}[(1)]
   \item The universality of free fall is \emph{not} a consequence of
-    Newtonian theory---it is a falsifiable hypothesis.
-  \item UFF applies specifically to \emph{test masses} (a subtle concept).
+    Newtonian theory---it is a falsifiable hypothesis.  That $m_g =
+    m_I$ cannot be proved from Newton's laws; it is an empirical
+    statement that could, in principle, be refuted by experiment.
+    Experiments testing this relationship continue to this day.
+  \item UFF applies specifically to \emph{test masses}.  A test mass
+    is an idealised notion: one should visualise it as a ``point''
+    particle.  The concept is already subtle in Newtonian physics---a
+    finite mass concentrated into an arbitrarily small volume would, in
+    general relativity, form a black hole---and it becomes more so when
+    test masses are numerous enough to generate their own gravitational
+    fields.  These subtleties will be resolved once we have the full
+    apparatus of general relativity.
 \end{enumerate}
 \end{remark}
 
@@ -264,7 +325,16 @@ $m_g = m_I$.
 \subsection{From Newtonian gravity to general relativity}
 
 We now reformulate Newton's gravity as a \emph{field theory}, drawing on
-the analogy between Newtonian gravity and electrostatics.
+the analogy between Newtonian gravity and electrostatics.  The
+motivation is direct: electrodynamics is compatible with special
+relativity---Lorentz transformations leave Maxwell's equations
+invariant and information propagates at the speed of light.  If
+Newtonian gravity looks structurally like electrostatics (and it
+does), then perhaps we can add dynamics in the same way and arrive at
+a relativistic theory of gravity.  As we shall see, this hope is
+partially fulfilled: the approach does lead somewhere, but the
+destination is more radical than a simple gravitational analog of
+Maxwell's equations.
 
 \subsubsection{Coulomb vs.\ Newton: a detailed comparison}
 
@@ -399,13 +469,20 @@ Then the unique solution to Poisson's equation is
     = -\grav\!\int_{\Rn{3}}\!\dd^3 x'\;
       \frac{\rho(t,\,\vb{x}')}{\norm{\vb{x} - \vb{x}'}}}\,.
 \end{equation}
-This gives the ``gravitostatic'' formulation of Newtonian gravity.
+This gives the ``gravitostatic'' formulation of Newtonian gravity:
+symbol for symbol, it mirrors electrostatics.  Just as in
+electrostatics, the field equation, potential, and integral solution
+form a self-contained package.  The key difference, as always, is
+that $\rho \geq 0$---gravity has only one sign of ``charge.''
 
 % ──────────────────────────────────────────────────────────────
 \subsection{Adding dynamics: routes to general relativity}
 
-How do we add dynamics to the gravitational field?
-Several approaches suggest themselves---with very different outcomes:
+How do we add dynamics to the gravitational field?  At present, the
+gravitational field in our formulation is static: the Poisson equation
+determines $\phi$ from the instantaneous mass distribution.  But what
+happens when the sources move?  Several approaches suggest
+themselves---with very different outcomes:
 
 \begin{center}
 \begin{tikzpicture}[
@@ -457,7 +534,28 @@ Several approaches suggest themselves---with very different outcomes:
 \end{tikzpicture}
 \end{center}
 
-See Misner, Thorne \& Wheeler~\cite{MTW73}, Chapter~7.
+See Misner, Thorne \& Wheeler~\cite{MTW73}, Chapter~7, for a
+detailed and beautiful discussion of all four routes.
+
+Route~(0) has obvious causality problems: by rearranging masses one
+could signal faster than light, violating special relativity.
+Route~(1)---promoting the Poisson equation to a scalar wave
+equation---is mathematically consistent but predicts no bending of
+light by gravity, which has been observed.  Route~(2)---completing
+$\phi$ to a 4-vector, as one does for the electromagnetic
+potential---suffers from negative-energy wave solutions and fails to
+reproduce the observed perihelion precession of Mercury.  Only
+route~(3), completing $\phi$ to a symmetric rank-2 tensor, survives
+all experimental tests.  Remarkably, the dynamics one is forced to
+write down turn out to be precisely the linearised form of Einstein's
+field equations, from which the full nonlinear theory of general
+relativity can be recovered.
+
+We will \emph{not} follow this route to discover general relativity;
+it is not the path Einstein took (at least not as far as the
+historical record reveals).  Instead, we will arrive at the theory
+from a completely different direction, starting from the equivalence
+principle in the next lecture.
 
 \begin{intuition}[Why a tensor?]
   A scalar field $\phi$ has one component---not enough to encode the

@@ -1,0 +1,8782 @@
+{
+  "title": "General Relativity, Lecture 3: Manifolds",
+  "video_id": "UyB6g6MOE50",
+  "url": "https://www.youtube.com/watch?v=UyB6g6MOE50",
+  "transcript": [
+    {
+      "start": 0.0,
+      "duration": 4.08,
+      "text": "hello and welcome back to introduction"
+    },
+    {
+      "start": 1.599,
+      "duration": 4.561,
+      "text": "to general relativity lecture three"
+    },
+    {
+      "start": 4.08,
+      "duration": 3.12,
+      "text": "today in this lecture we're going to"
+    },
+    {
+      "start": 6.16,
+      "duration": 4.16,
+      "text": "take a deep dive"
+    },
+    {
+      "start": 7.2,
+      "duration": 3.92,
+      "text": "into the mathematics of manifolds so it"
+    },
+    {
+      "start": 10.32,
+      "duration": 2.72,
+      "text": "is a core"
+    },
+    {
+      "start": 11.12,
+      "duration": 4.24,
+      "text": "underlying assumption of special"
+    },
+    {
+      "start": 13.04,
+      "duration": 4.159,
+      "text": "relativity and general relativity"
+    },
+    {
+      "start": 15.36,
+      "duration": 3.679,
+      "text": "indeed it's a core underlying assumption"
+    },
+    {
+      "start": 17.199,
+      "duration": 5.361,
+      "text": "of many parts of physics"
+    },
+    {
+      "start": 19.039,
+      "duration": 6.08,
+      "text": "that a space-time is somehow a continuum"
+    },
+    {
+      "start": 22.56,
+      "duration": 5.2,
+      "text": "a four-dimensional continuum"
+    },
+    {
+      "start": 25.119,
+      "duration": 5.041,
+      "text": "and that you need at least locally at"
+    },
+    {
+      "start": 27.76,
+      "duration": 5.12,
+      "text": "least locally so the idea is that"
+    },
+    {
+      "start": 30.16,
+      "duration": 3.76,
+      "text": "although within general relativity the"
+    },
+    {
+      "start": 32.88,
+      "duration": 4.4,
+      "text": "idea is that although"
+    },
+    {
+      "start": 33.92,
+      "duration": 5.92,
+      "text": "space-time is not globally a"
+    },
+    {
+      "start": 37.28,
+      "duration": 4.48,
+      "text": "flat four-dimensional continuum at least"
+    },
+    {
+      "start": 39.84,
+      "duration": 3.2,
+      "text": "locally it is and it's certainly an"
+    },
+    {
+      "start": 41.76,
+      "duration": 3.2,
+      "text": "underlying assumption of many other"
+    },
+    {
+      "start": 43.04,
+      "duration": 4.64,
+      "text": "parts of physics that these"
+    },
+    {
+      "start": 44.96,
+      "duration": 3.04,
+      "text": "that the the space or the space time in"
+    },
+    {
+      "start": 47.68,
+      "duration": 3.12,
+      "text": "which"
+    },
+    {
+      "start": 48.0,
+      "duration": 3.68,
+      "text": "physics takes place are continua of some"
+    },
+    {
+      "start": 50.8,
+      "duration": 2.32,
+      "text": "sort"
+    },
+    {
+      "start": 51.68,
+      "duration": 3.6,
+      "text": "so at this point i don't want to be very"
+    },
+    {
+      "start": 53.12,
+      "duration": 6.0,
+      "text": "specific about what you mean by the word"
+    },
+    {
+      "start": 55.28,
+      "duration": 6.24,
+      "text": "continua but roughly speaking we"
+    },
+    {
+      "start": 59.12,
+      "duration": 4.48,
+      "text": "we assume that it takes to characterize"
+    },
+    {
+      "start": 61.52,
+      "duration": 3.76,
+      "text": "events say in special relativity we need"
+    },
+    {
+      "start": 63.6,
+      "duration": 2.64,
+      "text": "four numbers right we need the time that"
+    },
+    {
+      "start": 65.28,
+      "duration": 5.44,
+      "text": "the event took place"
+    },
+    {
+      "start": 66.24,
+      "duration": 7.36,
+      "text": "and three spatial uh coordinates"
+    },
+    {
+      "start": 70.72,
+      "duration": 4.079,
+      "text": "now it's a the the fundamental uh"
+    },
+    {
+      "start": 73.6,
+      "duration": 2.879,
+      "text": "difference between general"
+    },
+    {
+      "start": 74.799,
+      "duration": 3.601,
+      "text": "and special relativity is that the"
+    },
+    {
+      "start": 76.479,
+      "duration": 3.921,
+      "text": "geometry of this continuum in general"
+    },
+    {
+      "start": 78.4,
+      "duration": 3.359,
+      "text": "relativity is something dynamical so it"
+    },
+    {
+      "start": 80.4,
+      "duration": 5.12,
+      "text": "can move or change"
+    },
+    {
+      "start": 81.759,
+      "duration": 5.761,
+      "text": "as as the space time evolves in response"
+    },
+    {
+      "start": 85.52,
+      "duration": 3.44,
+      "text": "to the positions and locations and"
+    },
+    {
+      "start": 87.52,
+      "duration": 4.88,
+      "text": "distribution of stress"
+    },
+    {
+      "start": 88.96,
+      "duration": 6.56,
+      "text": "matter and energy in the universe"
+    },
+    {
+      "start": 92.4,
+      "duration": 4.64,
+      "text": "now because we have the possibility with"
+    },
+    {
+      "start": 95.52,
+      "duration": 4.959,
+      "text": "the general relativity for"
+    },
+    {
+      "start": 97.04,
+      "duration": 5.28,
+      "text": "the geometry to change to be dynamical"
+    },
+    {
+      "start": 100.479,
+      "duration": 3.92,
+      "text": "we need a mathematical apparatus to"
+    },
+    {
+      "start": 102.32,
+      "duration": 3.04,
+      "text": "describe and quantify the situation this"
+    },
+    {
+      "start": 104.399,
+      "duration": 2.961,
+      "text": "is crucial"
+    },
+    {
+      "start": 105.36,
+      "duration": 4.079,
+      "text": "otherwise we would only ever be"
+    },
+    {
+      "start": 107.36,
+      "duration": 4.56,
+      "text": "restricted to qualitative remarks"
+    },
+    {
+      "start": 109.439,
+      "duration": 4.161,
+      "text": "and in course we want to do quantitative"
+    },
+    {
+      "start": 111.92,
+      "duration": 4.64,
+      "text": "physics where we make predictions"
+    },
+    {
+      "start": 113.6,
+      "duration": 4.24,
+      "text": "and precise predictions and confirm"
+    },
+    {
+      "start": 116.56,
+      "duration": 3.44,
+      "text": "these hypotheses"
+    },
+    {
+      "start": 117.84,
+      "duration": 3.919,
+      "text": "oh sorry reject hypotheses of course we"
+    },
+    {
+      "start": 120.0,
+      "duration": 5.84,
+      "text": "cannot confirm a hypothesis"
+    },
+    {
+      "start": 121.759,
+      "duration": 6.0,
+      "text": "in physics now there are"
+    },
+    {
+      "start": 125.84,
+      "duration": 3.279,
+      "text": "many ways you might think of building up"
+    },
+    {
+      "start": 127.759,
+      "duration": 4.721,
+      "text": "a mathematical theory"
+    },
+    {
+      "start": 129.119,
+      "duration": 5.361,
+      "text": "of curved continuum"
+    },
+    {
+      "start": 132.48,
+      "duration": 3.68,
+      "text": "and one of them and probably the"
+    },
+    {
+      "start": 134.48,
+      "duration": 4.399,
+      "text": "simplest is"
+    },
+    {
+      "start": 136.16,
+      "duration": 4.24,
+      "text": "to think of curved continua as somehow"
+    },
+    {
+      "start": 138.879,
+      "duration": 4.161,
+      "text": "living"
+    },
+    {
+      "start": 140.4,
+      "duration": 4.24,
+      "text": "inside a higher dimensional space as a"
+    },
+    {
+      "start": 143.04,
+      "duration": 4.72,
+      "text": "kind of embedded"
+    },
+    {
+      "start": 144.64,
+      "duration": 4.16,
+      "text": "surface so imagine we have some higher"
+    },
+    {
+      "start": 147.76,
+      "duration": 4.559,
+      "text": "dimensional"
+    },
+    {
+      "start": 148.8,
+      "duration": 6.719,
+      "text": "space time i don't know we'll call this"
+    },
+    {
+      "start": 152.319,
+      "duration": 6.241,
+      "text": "like r m some ambient"
+    },
+    {
+      "start": 155.519,
+      "duration": 5.841,
+      "text": "euclidean space time"
+    },
+    {
+      "start": 158.56,
+      "duration": 4.72,
+      "text": "structure and we want to describe and"
+    },
+    {
+      "start": 161.36,
+      "duration": 4.0,
+      "text": "what we need is because we think"
+    },
+    {
+      "start": 163.28,
+      "duration": 4.0,
+      "text": "at least within the general relativity"
+    },
+    {
+      "start": 165.36,
+      "duration": 2.879,
+      "text": "we presume most of the time we live in a"
+    },
+    {
+      "start": 167.28,
+      "duration": 3.52,
+      "text": "four dimensional"
+    },
+    {
+      "start": 168.239,
+      "duration": 3.441,
+      "text": "space time so we would need that somehow"
+    },
+    {
+      "start": 170.8,
+      "duration": 4.0,
+      "text": "m is bigger than"
+    },
+    {
+      "start": 171.68,
+      "duration": 6.559,
+      "text": "four to build up a theory"
+    },
+    {
+      "start": 174.8,
+      "duration": 5.28,
+      "text": "of curved continua and so"
+    },
+    {
+      "start": 178.239,
+      "duration": 4.241,
+      "text": "you could imagine building up a theory"
+    },
+    {
+      "start": 180.08,
+      "duration": 5.76,
+      "text": "of curve continue as embedded"
+    },
+    {
+      "start": 182.48,
+      "duration": 3.36,
+      "text": "volume surfaces inside"
+    },
+    {
+      "start": 185.92,
+      "duration": 4.72,
+      "text": "this ambient uh big higher dimensional"
+    },
+    {
+      "start": 189.599,
+      "duration": 5.92,
+      "text": "space"
+    },
+    {
+      "start": 190.64,
+      "duration": 4.879,
+      "text": "rm you could do this"
+    },
+    {
+      "start": 196.84,
+      "duration": 4.44,
+      "text": "uh"
+    },
+    {
+      "start": 198.56,
+      "duration": 4.64,
+      "text": "and i'll just label this so you have m"
+    },
+    {
+      "start": 201.28,
+      "duration": 6.08,
+      "text": "is"
+    },
+    {
+      "start": 203.2,
+      "duration": 4.16,
+      "text": "in this way of thinking our space time"
+    },
+    {
+      "start": 208.239,
+      "duration": 8.56,
+      "text": "and m lives in this bigger"
+    },
+    {
+      "start": 211.68,
+      "duration": 8.479,
+      "text": "ambient space rm now you could do this"
+    },
+    {
+      "start": 216.799,
+      "duration": 6.0,
+      "text": "and uh it works for the most part"
+    },
+    {
+      "start": 220.159,
+      "duration": 4.241,
+      "text": "however it does have some operational"
+    },
+    {
+      "start": 222.799,
+      "duration": 4.641,
+      "text": "problems or puzzles"
+    },
+    {
+      "start": 224.4,
+      "duration": 4.72,
+      "text": "and most i think pressing me is the"
+    },
+    {
+      "start": 227.44,
+      "duration": 3.519,
+      "text": "question do these higher dimensions"
+    },
+    {
+      "start": 229.12,
+      "duration": 4.16,
+      "text": "exist"
+    },
+    {
+      "start": 230.959,
+      "duration": 3.2,
+      "text": "in the end uh we sort of sidestep this"
+    },
+    {
+      "start": 233.28,
+      "duration": 3.92,
+      "text": "problem"
+    },
+    {
+      "start": 234.159,
+      "duration": 6.241,
+      "text": "and do things in a"
+    },
+    {
+      "start": 237.2,
+      "duration": 6.959,
+      "text": "different way arguably more natural way"
+    },
+    {
+      "start": 240.4,
+      "duration": 5.52,
+      "text": "namely we study curved continuum in an"
+    },
+    {
+      "start": 244.159,
+      "duration": 5.761,
+      "text": "intrinsic way"
+    },
+    {
+      "start": 245.92,
+      "duration": 4.0,
+      "text": "without reference to this"
+    },
+    {
+      "start": 250.64,
+      "duration": 8.879,
+      "text": "larger embedding space-time rm"
+    },
+    {
+      "start": 254.72,
+      "duration": 4.799,
+      "text": "so this is as rm is like in this"
+    },
+    {
+      "start": 259.68,
+      "duration": 3.36,
+      "text": "approach this irm is what we might call"
+    },
+    {
+      "start": 261.44,
+      "duration": 3.36,
+      "text": "the ambient space"
+    },
+    {
+      "start": 263.04,
+      "duration": 4.4,
+      "text": "and this is the embedding approach so"
+    },
+    {
+      "start": 264.8,
+      "duration": 4.08,
+      "text": "we're not going to do this this is not"
+    },
+    {
+      "start": 267.44,
+      "duration": 4.0,
+      "text": "the way we're going to do the things in"
+    },
+    {
+      "start": 268.88,
+      "duration": 2.56,
+      "text": "this course"
+    },
+    {
+      "start": 271.52,
+      "duration": 4.08,
+      "text": "because it's just it turns out even"
+    },
+    {
+      "start": 273.84,
+      "duration": 4.799,
+      "text": "though it's harder work to begin with"
+    },
+    {
+      "start": 275.6,
+      "duration": 4.96,
+      "text": "it turns out it is more natural and more"
+    },
+    {
+      "start": 278.639,
+      "duration": 3.681,
+      "text": "transferable a skill that's also"
+    },
+    {
+      "start": 280.56,
+      "duration": 5.44,
+      "text": "something that's very important"
+    },
+    {
+      "start": 282.32,
+      "duration": 7.599,
+      "text": "to discuss things intrinsically"
+    },
+    {
+      "start": 286.0,
+      "duration": 7.28,
+      "text": "so we discuss curved"
+    },
+    {
+      "start": 289.919,
+      "duration": 3.361,
+      "text": "continuum in this course"
+    },
+    {
+      "start": 294.36,
+      "duration": 7.72,
+      "text": "intrinsically without reference"
+    },
+    {
+      "start": 298.16,
+      "duration": 7.84,
+      "text": "to a uh ambient embedding"
+    },
+    {
+      "start": 302.08,
+      "duration": 6.16,
+      "text": "manifold as well or space-time"
+    },
+    {
+      "start": 306.0,
+      "duration": 3.68,
+      "text": "when you try and describe the"
+    },
+    {
+      "start": 308.24,
+      "duration": 5.76,
+      "text": "mathematics of curved"
+    },
+    {
+      "start": 309.68,
+      "duration": 8.959,
+      "text": "spaces and curved continua intrinsically"
+    },
+    {
+      "start": 314.0,
+      "duration": 4.639,
+      "text": "you are led to the topic of manifolds"
+    },
+    {
+      "start": 319.12,
+      "duration": 5.68,
+      "text": "the mathematical theory of"
+    },
+    {
+      "start": 322.16,
+      "duration": 4.479,
+      "text": "differential geometry and manifolds and"
+    },
+    {
+      "start": 324.8,
+      "duration": 3.6,
+      "text": "it's this mathematical theory that we"
+    },
+    {
+      "start": 326.639,
+      "duration": 2.321,
+      "text": "are going to occupy ourselves with for"
+    },
+    {
+      "start": 328.4,
+      "duration": 3.84,
+      "text": "the next"
+    },
+    {
+      "start": 328.96,
+      "duration": 6.72,
+      "text": "10 lectures or so there it is"
+    },
+    {
+      "start": 332.24,
+      "duration": 5.28,
+      "text": "a highly demanding part of mathematics"
+    },
+    {
+      "start": 335.68,
+      "duration": 5.359,
+      "text": "uh with respect to the maths that you've"
+    },
+    {
+      "start": 337.52,
+      "duration": 7.28,
+      "text": "already met in your physics degree"
+    },
+    {
+      "start": 341.039,
+      "duration": 5.761,
+      "text": "it requires a fair amount of formalism"
+    },
+    {
+      "start": 344.8,
+      "duration": 4.0,
+      "text": "to be built up to describe"
+    },
+    {
+      "start": 346.8,
+      "duration": 4.08,
+      "text": "which are described concepts that are"
+    },
+    {
+      "start": 348.8,
+      "duration": 4.0,
+      "text": "arguably fairly"
+    },
+    {
+      "start": 350.88,
+      "duration": 3.759,
+      "text": "intuitive but to do things"
+    },
+    {
+      "start": 352.8,
+      "duration": 3.44,
+      "text": "quantitatively and precisely"
+    },
+    {
+      "start": 354.639,
+      "duration": 2.961,
+      "text": "you do need a fair amount of"
+    },
+    {
+      "start": 356.24,
+      "duration": 4.399,
+      "text": "infrastructure that you have to build up"
+    },
+    {
+      "start": 357.6,
+      "duration": 5.12,
+      "text": "mathematical infrastructure"
+    },
+    {
+      "start": 360.639,
+      "duration": 4.0,
+      "text": "really you don't need much more"
+    },
+    {
+      "start": 362.72,
+      "duration": 3.68,
+      "text": "prerequisites than calculus and linear"
+    },
+    {
+      "start": 364.639,
+      "duration": 3.041,
+      "text": "algebra to discuss the theory of"
+    },
+    {
+      "start": 366.4,
+      "duration": 2.56,
+      "text": "different to discuss differential"
+    },
+    {
+      "start": 367.68,
+      "duration": 3.44,
+      "text": "geometry and manifolds"
+    },
+    {
+      "start": 368.96,
+      "duration": 3.44,
+      "text": "you can get away with it although we"
+    },
+    {
+      "start": 371.12,
+      "duration": 4.079,
+      "text": "will occasionally"
+    },
+    {
+      "start": 372.4,
+      "duration": 4.639,
+      "text": "um in this course have to encounter the"
+    },
+    {
+      "start": 375.199,
+      "duration": 3.84,
+      "text": "concepts coming from poinset topology"
+    },
+    {
+      "start": 377.039,
+      "duration": 5.361,
+      "text": "and general topology"
+    },
+    {
+      "start": 379.039,
+      "duration": 6.401,
+      "text": "i will for the large part mention"
+    },
+    {
+      "start": 382.4,
+      "duration": 4.72,
+      "text": "the words that are important uh in the"
+    },
+    {
+      "start": 385.44,
+      "duration": 2.879,
+      "text": "theory of manifolds are coming from"
+    },
+    {
+      "start": 387.12,
+      "duration": 3.359,
+      "text": "topology"
+    },
+    {
+      "start": 388.319,
+      "duration": 3.521,
+      "text": "and occasionally at the ends of videos i"
+    },
+    {
+      "start": 390.479,
+      "duration": 3.681,
+      "text": "might add a little bit of"
+    },
+    {
+      "start": 391.84,
+      "duration": 4.32,
+      "text": "extra material that's optional for those"
+    },
+    {
+      "start": 394.16,
+      "duration": 5.2,
+      "text": "who of you who are interested"
+    },
+    {
+      "start": 396.16,
+      "duration": 5.599,
+      "text": "in pursuing the mathematics of"
+    },
+    {
+      "start": 399.36,
+      "duration": 3.52,
+      "text": "differential geometry manifolds a little"
+    },
+    {
+      "start": 401.759,
+      "duration": 4.641,
+      "text": "bit more deeper"
+    },
+    {
+      "start": 402.88,
+      "duration": 4.96,
+      "text": "and more precisely you can take a look"
+    },
+    {
+      "start": 406.4,
+      "duration": 4.799,
+      "text": "at this additional material that i'll"
+    },
+    {
+      "start": 407.84,
+      "duration": 6.079,
+      "text": "add at the ends of the videos"
+    },
+    {
+      "start": 411.199,
+      "duration": 4.161,
+      "text": "all right before we get started on the"
+    },
+    {
+      "start": 413.919,
+      "duration": 4.641,
+      "text": "theory of"
+    },
+    {
+      "start": 415.36,
+      "duration": 3.839,
+      "text": "differential geometry and manifolds i"
+    },
+    {
+      "start": 418.56,
+      "duration": 2.32,
+      "text": "should"
+    },
+    {
+      "start": 419.199,
+      "duration": 3.361,
+      "text": "spend a little bit of time setting up"
+    },
+    {
+      "start": 420.88,
+      "duration": 5.039,
+      "text": "some notation this notation is going to"
+    },
+    {
+      "start": 422.56,
+      "duration": 3.359,
+      "text": "be with us for the rest of the course"
+    },
+    {
+      "start": 426.0,
+      "duration": 6.72,
+      "text": "it's vital that we spend a bit of time"
+    },
+    {
+      "start": 429.68,
+      "duration": 5.12,
+      "text": "settling the notation"
+    },
+    {
+      "start": 432.72,
+      "duration": 3.52,
+      "text": "otherwise things will come out of the"
+    },
+    {
+      "start": 434.8,
+      "duration": 2.959,
+      "text": "blue and you won't know what the symbols"
+    },
+    {
+      "start": 436.24,
+      "duration": 4.16,
+      "text": "mean"
+    },
+    {
+      "start": 437.759,
+      "duration": 3.28,
+      "text": "so the first piece of notation is that"
+    },
+    {
+      "start": 440.4,
+      "duration": 3.84,
+      "text": "of r"
+    },
+    {
+      "start": 441.039,
+      "duration": 6.401,
+      "text": "n euclidean space r n"
+    },
+    {
+      "start": 444.24,
+      "duration": 5.12,
+      "text": "which i'll denote as r to the n"
+    },
+    {
+      "start": 447.44,
+      "duration": 4.08,
+      "text": "it's just the set of n tuples of real"
+    },
+    {
+      "start": 449.36,
+      "duration": 5.04,
+      "text": "numbers"
+    },
+    {
+      "start": 451.52,
+      "duration": 3.84,
+      "text": "and i'll use this underline notation for"
+    },
+    {
+      "start": 454.4,
+      "duration": 4.56,
+      "text": "vectors"
+    },
+    {
+      "start": 455.36,
+      "duration": 5.679,
+      "text": "of numbers or tuples n tuples of numbers"
+    },
+    {
+      "start": 458.96,
+      "duration": 5.04,
+      "text": "we'll also have need to make reference"
+    },
+    {
+      "start": 461.039,
+      "duration": 5.6,
+      "text": "quite often actually to the distance"
+    },
+    {
+      "start": 464.0,
+      "duration": 3.599,
+      "text": "the euclidean distance function which is"
+    },
+    {
+      "start": 466.639,
+      "duration": 4.481,
+      "text": "defined on"
+    },
+    {
+      "start": 467.599,
+      "duration": 3.521,
+      "text": "our n as follows"
+    },
+    {
+      "start": 472.879,
+      "duration": 4.16,
+      "text": "just take the difference between the"
+    },
+    {
+      "start": 474.16,
+      "duration": 5.12,
+      "text": "coordinate square them sum them up"
+    },
+    {
+      "start": 477.039,
+      "duration": 3.521,
+      "text": "and take the square root so the standard"
+    },
+    {
+      "start": 479.28,
+      "duration": 2.88,
+      "text": "euclidean distance function you will"
+    },
+    {
+      "start": 480.56,
+      "duration": 2.96,
+      "text": "definitely need to know this"
+    },
+    {
+      "start": 482.16,
+      "duration": 3.36,
+      "text": "you'll need to know about the euclidean"
+    },
+    {
+      "start": 483.52,
+      "duration": 4.959,
+      "text": "ball br of radius"
+    },
+    {
+      "start": 485.52,
+      "duration": 5.28,
+      "text": "r around a point y it's the set of all"
+    },
+    {
+      "start": 488.479,
+      "duration": 4.241,
+      "text": "points in rn"
+    },
+    {
+      "start": 490.8,
+      "duration": 3.519,
+      "text": "such that the distance between that"
+    },
+    {
+      "start": 492.72,
+      "duration": 3.84,
+      "text": "point"
+    },
+    {
+      "start": 494.319,
+      "duration": 3.6,
+      "text": "x and this given point y is always less"
+    },
+    {
+      "start": 496.56,
+      "duration": 6.4,
+      "text": "than r strictly less than"
+    },
+    {
+      "start": 497.919,
+      "duration": 5.041,
+      "text": "r this is also called the open ball"
+    },
+    {
+      "start": 503.759,
+      "duration": 4.081,
+      "text": "around y"
+    },
+    {
+      "start": 507.919,
+      "duration": 4.56,
+      "text": "that's this is where we'll delicately"
+    },
+    {
+      "start": 511.68,
+      "duration": 4.88,
+      "text": "touch upon"
+    },
+    {
+      "start": 512.479,
+      "duration": 4.081,
+      "text": "the point set topology"
+    },
+    {
+      "start": 517.12,
+      "duration": 3.279,
+      "text": "then we need to have the notion of an"
+    },
+    {
+      "start": 519.919,
+      "duration": 4.161,
+      "text": "open"
+    },
+    {
+      "start": 520.399,
+      "duration": 6.401,
+      "text": "set you"
+    },
+    {
+      "start": 524.08,
+      "duration": 2.72,
+      "text": "this is going to"
+    },
+    {
+      "start": 527.12,
+      "duration": 6.719,
+      "text": "for our purposes it's sufficient to"
+    },
+    {
+      "start": 530.16,
+      "duration": 6.48,
+      "text": "think of an open set as a set"
+    },
+    {
+      "start": 533.839,
+      "duration": 2.801,
+      "text": "u where"
+    },
+    {
+      "start": 536.88,
+      "duration": 7.44,
+      "text": "for all points inside the set u"
+    },
+    {
+      "start": 541.12,
+      "duration": 6.08,
+      "text": "there exists a positive"
+    },
+    {
+      "start": 544.32,
+      "duration": 3.76,
+      "text": "potentially very small number epsilon"
+    },
+    {
+      "start": 547.2,
+      "duration": 3.92,
+      "text": "such that the"
+    },
+    {
+      "start": 548.08,
+      "duration": 4.72,
+      "text": "ball of radius epsilon around the point"
+    },
+    {
+      "start": 551.12,
+      "duration": 4.24,
+      "text": "x is always within you"
+    },
+    {
+      "start": 552.8,
+      "duration": 4.479,
+      "text": "so an open set is in rn at least is"
+    },
+    {
+      "start": 555.36,
+      "duration": 5.68,
+      "text": "defined by this"
+    },
+    {
+      "start": 557.279,
+      "duration": 4.24,
+      "text": "these properties we also want to talk"
+    },
+    {
+      "start": 561.04,
+      "duration": 3.6,
+      "text": "about"
+    },
+    {
+      "start": 561.519,
+      "duration": 4.481,
+      "text": "sets of functions so we're going to"
+    },
+    {
+      "start": 564.64,
+      "duration": 3.28,
+      "text": "introduce the set cn"
+    },
+    {
+      "start": 566.0,
+      "duration": 11.839,
+      "text": "which is the set of n times"
+    },
+    {
+      "start": 567.92,
+      "duration": 9.919,
+      "text": "differentiable functions"
+    },
+    {
+      "start": 578.16,
+      "duration": 6.72,
+      "text": "uh on rn to"
+    },
+    {
+      "start": 581.279,
+      "duration": 5.12,
+      "text": "r we can extend this notion of n times"
+    },
+    {
+      "start": 584.88,
+      "duration": 4.56,
+      "text": "differentiable to"
+    },
+    {
+      "start": 586.399,
+      "duration": 4.56,
+      "text": "vector valued functions although"
+    },
+    {
+      "start": 589.44,
+      "duration": 4.0,
+      "text": "i don't think i'll be doing that for"
+    },
+    {
+      "start": 590.959,
+      "duration": 4.801,
+      "text": "quite a while in this course"
+    },
+    {
+      "start": 593.44,
+      "duration": 3.92,
+      "text": "a couple of edge cases here c naught is"
+    },
+    {
+      "start": 595.76,
+      "duration": 5.36,
+      "text": "c is"
+    },
+    {
+      "start": 597.36,
+      "duration": 3.76,
+      "text": "referred to as the continuous functions"
+    },
+    {
+      "start": 601.76,
+      "duration": 3.6,
+      "text": "they don't have any continuous"
+    },
+    {
+      "start": 603.2,
+      "duration": 4.319,
+      "text": "derivatives that exist"
+    },
+    {
+      "start": 605.36,
+      "duration": 3.039,
+      "text": "necessarily but they are at least"
+    },
+    {
+      "start": 607.519,
+      "duration": 2.56,
+      "text": "continuous and c"
+    },
+    {
+      "start": 608.399,
+      "duration": 4.401,
+      "text": "infinity is the infinitely"
+    },
+    {
+      "start": 610.079,
+      "duration": 2.721,
+      "text": "differentiable"
+    },
+    {
+      "start": 613.2,
+      "duration": 10.079,
+      "text": "and finite differentiable"
+    },
+    {
+      "start": 620.079,
+      "duration": 5.44,
+      "text": "functions otherwise known as smooth"
+    },
+    {
+      "start": 623.279,
+      "duration": 3.68,
+      "text": "functions"
+    },
+    {
+      "start": 625.519,
+      "duration": 6.481,
+      "text": "so we'll certainly have occasion to"
+    },
+    {
+      "start": 626.959,
+      "duration": 7.201,
+      "text": "refer to these a lot in this course"
+    },
+    {
+      "start": 632.0,
+      "duration": 3.04,
+      "text": "now with this notation around we can"
+    },
+    {
+      "start": 634.16,
+      "duration": 3.44,
+      "text": "start"
+    },
+    {
+      "start": 635.04,
+      "duration": 4.32,
+      "text": "the the long process of defining what is"
+    },
+    {
+      "start": 637.6,
+      "duration": 4.96,
+      "text": "meant by a manifold"
+    },
+    {
+      "start": 639.36,
+      "duration": 5.44,
+      "text": "now i'm gonna it's it's"
+    },
+    {
+      "start": 642.56,
+      "duration": 5.68,
+      "text": "in this course i'm gonna do everything"
+    },
+    {
+      "start": 644.8,
+      "duration": 3.44,
+      "text": "it's pretty general um"
+    },
+    {
+      "start": 648.399,
+      "duration": 5.041,
+      "text": "we're gonna do things in in n dimensions"
+    },
+    {
+      "start": 658.959,
+      "duration": 3.44,
+      "text": "so you might wonder why are we doing"
+    },
+    {
+      "start": 660.56,
+      "duration": 4.48,
+      "text": "things in n dimensions when we"
+    },
+    {
+      "start": 662.399,
+      "duration": 4.801,
+      "text": "we pay we obviously live in a four"
+    },
+    {
+      "start": 665.04,
+      "duration": 5.919,
+      "text": "dimensional space time"
+    },
+    {
+      "start": 667.2,
+      "duration": 5.759,
+      "text": "well i would say there's three or four"
+    },
+    {
+      "start": 670.959,
+      "duration": 3.041,
+      "text": "two three four really good arguments why"
+    },
+    {
+      "start": 672.959,
+      "duration": 3.681,
+      "text": "you should think about"
+    },
+    {
+      "start": 674.0,
+      "duration": 3.6,
+      "text": "the dimension of your space time as"
+    },
+    {
+      "start": 676.64,
+      "duration": 4.4,
+      "text": "being"
+    },
+    {
+      "start": 677.6,
+      "duration": 6.08,
+      "text": "allowed to change very or"
+    },
+    {
+      "start": 681.04,
+      "duration": 4.56,
+      "text": "also where you might want to be able to"
+    },
+    {
+      "start": 683.68,
+      "duration": 4.0,
+      "text": "focus on some cases where"
+    },
+    {
+      "start": 685.6,
+      "duration": 4.0,
+      "text": "the dimension is say smaller than the"
+    },
+    {
+      "start": 687.68,
+      "duration": 5.44,
+      "text": "space time you're in"
+    },
+    {
+      "start": 689.6,
+      "duration": 4.88,
+      "text": "i'd say arguably"
+    },
+    {
+      "start": 693.12,
+      "duration": 3.12,
+      "text": "the first reason why you should do"
+    },
+    {
+      "start": 694.48,
+      "duration": 3.039,
+      "text": "things in n dimensions in this course is"
+    },
+    {
+      "start": 696.24,
+      "duration": 1.76,
+      "text": "that it doesn't really cost that much"
+    },
+    {
+      "start": 697.519,
+      "duration": 3.201,
+      "text": "more"
+    },
+    {
+      "start": 698.0,
+      "duration": 4.48,
+      "text": "effort to do it so why not you get a lot"
+    },
+    {
+      "start": 700.72,
+      "duration": 2.88,
+      "text": "of generality for free that's one good"
+    },
+    {
+      "start": 702.48,
+      "duration": 3.039,
+      "text": "reason why you might want to consider"
+    },
+    {
+      "start": 703.6,
+      "duration": 4.799,
+      "text": "things in arbitrary dimensions"
+    },
+    {
+      "start": 705.519,
+      "duration": 3.521,
+      "text": "second thing is we often want to"
+    },
+    {
+      "start": 708.399,
+      "duration": 3.761,
+      "text": "restrict"
+    },
+    {
+      "start": 709.04,
+      "duration": 4.0,
+      "text": "to a special example where the dynamics"
+    },
+    {
+      "start": 712.16,
+      "duration": 4.0,
+      "text": "are restricted to"
+    },
+    {
+      "start": 713.04,
+      "duration": 5.12,
+      "text": "a lower dimensional hyperplane or"
+    },
+    {
+      "start": 716.16,
+      "duration": 3.679,
+      "text": "hypersurface in space-time"
+    },
+    {
+      "start": 718.16,
+      "duration": 3.359,
+      "text": "you could think of the dynamics of a"
+    },
+    {
+      "start": 719.839,
+      "duration": 3.921,
+      "text": "particle restricted to move on the"
+    },
+    {
+      "start": 721.519,
+      "duration": 4.0,
+      "text": "surface of a sphere for example that's"
+    },
+    {
+      "start": 723.76,
+      "duration": 3.04,
+      "text": "that's a case where you might want to"
+    },
+    {
+      "start": 725.519,
+      "duration": 2.961,
+      "text": "consider a space time of"
+    },
+    {
+      "start": 726.8,
+      "duration": 4.32,
+      "text": "effectively lower dimension so there is"
+    },
+    {
+      "start": 728.48,
+      "duration": 5.039,
+      "text": "effectively level a third reason"
+    },
+    {
+      "start": 731.12,
+      "duration": 3.519,
+      "text": "is much much deeper and comes arguably"
+    },
+    {
+      "start": 733.519,
+      "duration": 2.801,
+      "text": "from quantum gravity"
+    },
+    {
+      "start": 734.639,
+      "duration": 4.0,
+      "text": "there are strong indications that the"
+    },
+    {
+      "start": 736.32,
+      "duration": 5.6,
+      "text": "dimension of the space time we're in"
+    },
+    {
+      "start": 738.639,
+      "duration": 6.241,
+      "text": "which it seemed to be for um"
+    },
+    {
+      "start": 741.92,
+      "duration": 5.68,
+      "text": "might be emergent from a different"
+    },
+    {
+      "start": 744.88,
+      "duration": 4.399,
+      "text": "space-time dimension"
+    },
+    {
+      "start": 747.6,
+      "duration": 4.88,
+      "text": "there there's hints from the so-called"
+    },
+    {
+      "start": 749.279,
+      "duration": 5.12,
+      "text": "holographic principle in quantum gravity"
+    },
+    {
+      "start": 752.48,
+      "duration": 4.08,
+      "text": "another reason why you might want to"
+    },
+    {
+      "start": 754.399,
+      "duration": 4.24,
+      "text": "consider higher dimensions"
+    },
+    {
+      "start": 756.56,
+      "duration": 4.32,
+      "text": "lower dimensions or arbitrary dimensions"
+    },
+    {
+      "start": 758.639,
+      "duration": 3.2,
+      "text": "is is that in quantum gravity we should"
+    },
+    {
+      "start": 760.88,
+      "duration": 2.88,
+      "text": "arguably"
+    },
+    {
+      "start": 761.839,
+      "duration": 3.041,
+      "text": "be allowed to take superpositions of"
+    },
+    {
+      "start": 763.76,
+      "duration": 2.96,
+      "text": "space time"
+    },
+    {
+      "start": 764.88,
+      "duration": 3.28,
+      "text": "and there's no principle that says that"
+    },
+    {
+      "start": 766.72,
+      "duration": 3.04,
+      "text": "we must be taking sp"
+    },
+    {
+      "start": 768.16,
+      "duration": 3.919,
+      "text": "superpositions over space times of the"
+    },
+    {
+      "start": 769.76,
+      "duration": 4.319,
+      "text": "same dimension so this is"
+    },
+    {
+      "start": 772.079,
+      "duration": 4.0,
+      "text": "a whole sort of grab bag of reasons why"
+    },
+    {
+      "start": 774.079,
+      "duration": 4.081,
+      "text": "you might want to consider"
+    },
+    {
+      "start": 776.079,
+      "duration": 3.041,
+      "text": "formulating your physics in arbitrary"
+    },
+    {
+      "start": 778.16,
+      "duration": 3.28,
+      "text": "dimensions"
+    },
+    {
+      "start": 779.12,
+      "duration": 3.12,
+      "text": "but you know for the most part it just"
+    },
+    {
+      "start": 781.44,
+      "duration": 3.76,
+      "text": "doesn't cost much"
+    },
+    {
+      "start": 782.24,
+      "duration": 4.32,
+      "text": "extra effort so we'll just do that okay"
+    },
+    {
+      "start": 785.2,
+      "duration": 4.079,
+      "text": "i think we're about ready"
+    },
+    {
+      "start": 786.56,
+      "duration": 6.32,
+      "text": "to make our first attempt at a"
+    },
+    {
+      "start": 789.279,
+      "duration": 3.601,
+      "text": "definition of what is a manifold"
+    },
+    {
+      "start": 795.92,
+      "duration": 6.08,
+      "text": "definition right so an"
+    },
+    {
+      "start": 799.12,
+      "duration": 2.88,
+      "text": "n-dimensional"
+    },
+    {
+      "start": 805.839,
+      "duration": 4.881,
+      "text": "c infinity so there's this notion of"
+    },
+    {
+      "start": 808.48,
+      "duration": 6.479,
+      "text": "smoothness there already"
+    },
+    {
+      "start": 810.72,
+      "duration": 8.64,
+      "text": "real manifold"
+    },
+    {
+      "start": 814.959,
+      "duration": 4.401,
+      "text": "and what is it it's a set"
+    },
+    {
+      "start": 819.68,
+      "duration": 3.519,
+      "text": "so i'm at least assuming you're familiar"
+    },
+    {
+      "start": 821.92,
+      "duration": 3.919,
+      "text": "with the notion of"
+    },
+    {
+      "start": 823.199,
+      "duration": 3.601,
+      "text": "set theory no basic questions from set"
+    },
+    {
+      "start": 825.839,
+      "duration": 5.36,
+      "text": "theory"
+    },
+    {
+      "start": 826.8,
+      "duration": 4.399,
+      "text": "together with a collection"
+    },
+    {
+      "start": 832.56,
+      "duration": 5.44,
+      "text": "we'll call them o alpha of subsets"
+    },
+    {
+      "start": 841.68,
+      "duration": 2.8,
+      "text": "satisfying"
+    },
+    {
+      "start": 845.839,
+      "duration": 4.161,
+      "text": "a couple of requirements there's a"
+    },
+    {
+      "start": 848.399,
+      "duration": 5.361,
+      "text": "zeroth requirement that i'll refer"
+    },
+    {
+      "start": 850.0,
+      "duration": 7.199,
+      "text": "come back to in a minute one"
+    },
+    {
+      "start": 853.76,
+      "duration": 7.84,
+      "text": "the set"
+    },
+    {
+      "start": 857.199,
+      "duration": 4.401,
+      "text": "z o alpha covers m"
+    },
+    {
+      "start": 862.24,
+      "duration": 6.48,
+      "text": "so m is there's all these subsets o"
+    },
+    {
+      "start": 865.6,
+      "duration": 4.799,
+      "text": "alpha lying around and m"
+    },
+    {
+      "start": 868.72,
+      "duration": 5.119,
+      "text": "is covered by them what does that mean"
+    },
+    {
+      "start": 870.399,
+      "duration": 3.44,
+      "text": "it means if you stick them all together"
+    },
+    {
+      "start": 874.639,
+      "duration": 7.44,
+      "text": "you get m another way of saying is it"
+    },
+    {
+      "start": 878.639,
+      "duration": 6.961,
+      "text": "it's saying this is for every point"
+    },
+    {
+      "start": 882.079,
+      "duration": 8.401,
+      "text": "p inside m"
+    },
+    {
+      "start": 885.6,
+      "duration": 4.88,
+      "text": "there exists at least one alpha"
+    },
+    {
+      "start": 892.48,
+      "duration": 8.159,
+      "text": "such that p lies in o alpha"
+    },
+    {
+      "start": 897.199,
+      "duration": 3.44,
+      "text": "so although i haven't uh"
+    },
+    {
+      "start": 902.639,
+      "duration": 4.0,
+      "text": "although i'm urging you not to think of"
+    },
+    {
+      "start": 904.639,
+      "duration": 2.961,
+      "text": "manifolds as embedded in some bigger"
+    },
+    {
+      "start": 906.639,
+      "duration": 2.64,
+      "text": "space of course"
+    },
+    {
+      "start": 907.6,
+      "duration": 3.2,
+      "text": "when i draw pictures that's exactly what"
+    },
+    {
+      "start": 909.279,
+      "duration": 4.081,
+      "text": "i'm going to do"
+    },
+    {
+      "start": 910.8,
+      "duration": 3.68,
+      "text": "you just have to try and forget that"
+    },
+    {
+      "start": 913.36,
+      "duration": 2.96,
+      "text": "there's this"
+    },
+    {
+      "start": 914.48,
+      "duration": 4.24,
+      "text": "implied embedding space in all my"
+    },
+    {
+      "start": 916.32,
+      "duration": 4.079,
+      "text": "pictures so i like you know this is the"
+    },
+    {
+      "start": 918.72,
+      "duration": 2.479,
+      "text": "picture i have mentally when i'm talking"
+    },
+    {
+      "start": 920.399,
+      "duration": 3.44,
+      "text": "about"
+    },
+    {
+      "start": 921.199,
+      "duration": 3.601,
+      "text": "uh this first condition so here m is"
+    },
+    {
+      "start": 923.839,
+      "duration": 4.481,
+      "text": "somehow this"
+    },
+    {
+      "start": 924.8,
+      "duration": 4.0,
+      "text": "curvy surface and it's covered by these"
+    },
+    {
+      "start": 928.32,
+      "duration": 4.079,
+      "text": "sets"
+    },
+    {
+      "start": 928.8,
+      "duration": 6.959,
+      "text": "o alpha and every point"
+    },
+    {
+      "start": 932.399,
+      "duration": 5.841,
+      "text": "lies in one o alpha or another"
+    },
+    {
+      "start": 935.759,
+      "duration": 3.121,
+      "text": "so i'm just you imagine partitioning up"
+    },
+    {
+      "start": 938.24,
+      "duration": 4.48,
+      "text": "your space"
+    },
+    {
+      "start": 938.88,
+      "duration": 6.16,
+      "text": "m you'll set m into little pieces and"
+    },
+    {
+      "start": 942.72,
+      "duration": 5.679,
+      "text": "there's at least one of these o alphas"
+    },
+    {
+      "start": 945.04,
+      "duration": 3.359,
+      "text": "over the top of any point"
+    },
+    {
+      "start": 950.88,
+      "duration": 7.6,
+      "text": "now that's not all"
+    },
+    {
+      "start": 955.36,
+      "duration": 3.12,
+      "text": "so for each alpha"
+    },
+    {
+      "start": 959.44,
+      "duration": 7.04,
+      "text": "there is a one to one"
+    },
+    {
+      "start": 963.04,
+      "duration": 3.44,
+      "text": "and onto map"
+    },
+    {
+      "start": 967.04,
+      "duration": 6.08,
+      "text": "psi alpha that goes from this"
+    },
+    {
+      "start": 970.399,
+      "duration": 4.401,
+      "text": "o alpha o alpha set to another set u"
+    },
+    {
+      "start": 973.12,
+      "duration": 4.399,
+      "text": "alpha"
+    },
+    {
+      "start": 974.8,
+      "duration": 3.12,
+      "text": "where this u alpha is now a subset of of"
+    },
+    {
+      "start": 977.519,
+      "duration": 3.281,
+      "text": "r"
+    },
+    {
+      "start": 977.92,
+      "duration": 4.08,
+      "text": "n right now here n makes an appearance"
+    },
+    {
+      "start": 980.8,
+      "duration": 2.959,
+      "text": "so notice that in the"
+    },
+    {
+      "start": 982.0,
+      "duration": 3.199,
+      "text": "first part of this definition the"
+    },
+    {
+      "start": 983.759,
+      "duration": 3.361,
+      "text": "dimension uh"
+    },
+    {
+      "start": 985.199,
+      "duration": 3.041,
+      "text": "doesn't even make an appearance so m is"
+    },
+    {
+      "start": 987.12,
+      "duration": 4.159,
+      "text": "just a set"
+    },
+    {
+      "start": 988.24,
+      "duration": 4.399,
+      "text": "covered by some subsets in the second"
+    },
+    {
+      "start": 991.279,
+      "duration": 2.721,
+      "text": "part the dimension now makes an"
+    },
+    {
+      "start": 992.639,
+      "duration": 4.481,
+      "text": "appearance"
+    },
+    {
+      "start": 994.0,
+      "duration": 4.399,
+      "text": "and uh and now the picture we we have in"
+    },
+    {
+      "start": 997.12,
+      "duration": 4.56,
+      "text": "mind is that you know here's"
+    },
+    {
+      "start": 998.399,
+      "duration": 6.8,
+      "text": "m is this curvy presumably curvy surface"
+    },
+    {
+      "start": 1001.68,
+      "duration": 6.48,
+      "text": "is here's these o alphas i'll just draw"
+    },
+    {
+      "start": 1005.199,
+      "duration": 2.961,
+      "text": "one o alpha"
+    },
+    {
+      "start": 1008.399,
+      "duration": 4.88,
+      "text": "this is m and now we're saying there"
+    },
+    {
+      "start": 1011.199,
+      "duration": 8.08,
+      "text": "exists"
+    },
+    {
+      "start": 1013.279,
+      "duration": 10.081,
+      "text": "a map which is one to one and onto"
+    },
+    {
+      "start": 1019.279,
+      "duration": 4.081,
+      "text": "from each of these o alphas"
+    },
+    {
+      "start": 1023.68,
+      "duration": 9.119,
+      "text": "onto sets u alpha of our"
+    },
+    {
+      "start": 1026.959,
+      "duration": 5.84,
+      "text": "more familiar rn euclidean space"
+    },
+    {
+      "start": 1035.919,
+      "duration": 3.28,
+      "text": "that's what the second part of the"
+    },
+    {
+      "start": 1036.959,
+      "duration": 3.6,
+      "text": "definition says so"
+    },
+    {
+      "start": 1039.199,
+      "duration": 5.201,
+      "text": "what you're really meant to think of is"
+    },
+    {
+      "start": 1040.559,
+      "duration": 6.24,
+      "text": "one to one and onto means kind of equal"
+    },
+    {
+      "start": 1044.4,
+      "duration": 3.6,
+      "text": "and we're really saying that each part"
+    },
+    {
+      "start": 1046.799,
+      "duration": 4.0,
+      "text": "of this"
+    },
+    {
+      "start": 1048.0,
+      "duration": 4.559,
+      "text": "curvy surface m this manifold m is"
+    },
+    {
+      "start": 1050.799,
+      "duration": 3.521,
+      "text": "identified with pieces"
+    },
+    {
+      "start": 1052.559,
+      "duration": 4.0,
+      "text": "of euclidean space so you're really"
+    },
+    {
+      "start": 1054.32,
+      "duration": 6.479,
+      "text": "meant to think of a manifold as"
+    },
+    {
+      "start": 1056.559,
+      "duration": 7.281,
+      "text": "as being uh built up or sewn to"
+    },
+    {
+      "start": 1060.799,
+      "duration": 7.041,
+      "text": "of pieces of rn that are sewn together"
+    },
+    {
+      "start": 1063.84,
+      "duration": 4.0,
+      "text": "stuck together"
+    },
+    {
+      "start": 1068.16,
+      "duration": 3.04,
+      "text": "now the third part of the definition"
+    },
+    {
+      "start": 1070.32,
+      "duration": 3.52,
+      "text": "concerns"
+    },
+    {
+      "start": 1071.2,
+      "duration": 5.04,
+      "text": "the sewing or the gluing of these these"
+    },
+    {
+      "start": 1073.84,
+      "duration": 2.4,
+      "text": "pieces"
+    },
+    {
+      "start": 1076.96,
+      "duration": 3.68,
+      "text": "so if any of these two if any of these"
+    },
+    {
+      "start": 1079.36,
+      "duration": 4.559,
+      "text": "pieces o alpha"
+    },
+    {
+      "start": 1080.64,
+      "duration": 6.64,
+      "text": "and a beta overlap right if they"
+    },
+    {
+      "start": 1083.919,
+      "duration": 3.361,
+      "text": "they have common points"
+    },
+    {
+      "start": 1090.88,
+      "duration": 5.919,
+      "text": "so if you take the intersection and you"
+    },
+    {
+      "start": 1093.52,
+      "duration": 6.64,
+      "text": "don't get the empty set"
+    },
+    {
+      "start": 1096.799,
+      "duration": 6.24,
+      "text": "then you can define"
+    },
+    {
+      "start": 1100.16,
+      "duration": 2.879,
+      "text": "a new map"
+    },
+    {
+      "start": 1104.24,
+      "duration": 3.2,
+      "text": "and this new map is composed of this psi"
+    },
+    {
+      "start": 1106.32,
+      "duration": 2.719,
+      "text": "beta"
+    },
+    {
+      "start": 1107.44,
+      "duration": 3.04,
+      "text": "and the psi alpha inverse so if the"
+    },
+    {
+      "start": 1109.039,
+      "duration": 4.0,
+      "text": "inverse exists because it's one to one"
+    },
+    {
+      "start": 1110.48,
+      "duration": 2.559,
+      "text": "and on two"
+    },
+    {
+      "start": 1113.6,
+      "duration": 6.56,
+      "text": "which acts via"
+    },
+    {
+      "start": 1117.6,
+      "duration": 4.4,
+      "text": "following so you can build this map c"
+    },
+    {
+      "start": 1120.16,
+      "duration": 5.04,
+      "text": "psi beta composed with psi"
+    },
+    {
+      "start": 1122.0,
+      "duration": 4.32,
+      "text": "alpha inverse and where does it go from"
+    },
+    {
+      "start": 1125.2,
+      "duration": 4.32,
+      "text": "into well it goes"
+    },
+    {
+      "start": 1126.32,
+      "duration": 6.64,
+      "text": "from the image of psi"
+    },
+    {
+      "start": 1129.52,
+      "duration": 7.6,
+      "text": "alpha intersect of psi"
+    },
+    {
+      "start": 1132.96,
+      "duration": 7.28,
+      "text": "alpha o o alpha o beta"
+    },
+    {
+      "start": 1137.12,
+      "duration": 6.32,
+      "text": "and it goes to psi beta o"
+    },
+    {
+      "start": 1140.24,
+      "duration": 5.2,
+      "text": "alpha intersect o beta i'll draw a"
+    },
+    {
+      "start": 1143.44,
+      "duration": 4.0,
+      "text": "picture in one moment to illustrate"
+    },
+    {
+      "start": 1145.44,
+      "duration": 3.04,
+      "text": "what is going on here and these are both"
+    },
+    {
+      "start": 1147.44,
+      "duration": 3.68,
+      "text": "subsets of"
+    },
+    {
+      "start": 1148.48,
+      "duration": 5.68,
+      "text": "u beta so i've just drawn the subset"
+    },
+    {
+      "start": 1151.12,
+      "duration": 3.04,
+      "text": "symbol vertically"
+    },
+    {
+      "start": 1155.2,
+      "duration": 6.24,
+      "text": "this is not an intersection this is a"
+    },
+    {
+      "start": 1158.559,
+      "duration": 2.881,
+      "text": "subset of"
+    },
+    {
+      "start": 1162.559,
+      "duration": 6.081,
+      "text": "and before i draw the picture so"
+    },
+    {
+      "start": 1165.6,
+      "duration": 6.8,
+      "text": "we've defined this this this map"
+    },
+    {
+      "start": 1168.64,
+      "duration": 7.2,
+      "text": "psi alpha inverse compose side beta"
+    },
+    {
+      "start": 1172.4,
+      "duration": 4.88,
+      "text": "and uh if any of these two patches of an"
+    },
+    {
+      "start": 1175.84,
+      "duration": 3.839,
+      "text": "o beta overlap"
+    },
+    {
+      "start": 1177.28,
+      "duration": 3.92,
+      "text": "then this map that we've just defined is"
+    },
+    {
+      "start": 1179.679,
+      "duration": 4.401,
+      "text": "not any old map"
+    },
+    {
+      "start": 1181.2,
+      "duration": 4.4,
+      "text": "it is a c infinity map so it's smooth"
+    },
+    {
+      "start": 1184.08,
+      "duration": 4.8,
+      "text": "infinitely number of"
+    },
+    {
+      "start": 1185.6,
+      "duration": 3.28,
+      "text": "infinitely differentiable"
+    },
+    {
+      "start": 1189.52,
+      "duration": 4.399,
+      "text": "so in short the definition says that"
+    },
+    {
+      "start": 1191.6,
+      "duration": 4.56,
+      "text": "that map is c infinity"
+    },
+    {
+      "start": 1193.919,
+      "duration": 4.241,
+      "text": "now here's a picture to illustrate this"
+    },
+    {
+      "start": 1196.16,
+      "duration": 9.92,
+      "text": "situation"
+    },
+    {
+      "start": 1198.16,
+      "duration": 11.12,
+      "text": "so here's our surface m"
+    },
+    {
+      "start": 1206.08,
+      "duration": 5.04,
+      "text": "here's now the case where we have two o"
+    },
+    {
+      "start": 1209.28,
+      "duration": 5.44,
+      "text": "betas"
+    },
+    {
+      "start": 1211.12,
+      "duration": 7.36,
+      "text": "o alphas and o betas the o alpha"
+    },
+    {
+      "start": 1214.72,
+      "duration": 7.12,
+      "text": "o beta they intersect somewhere"
+    },
+    {
+      "start": 1218.48,
+      "duration": 3.36,
+      "text": "all right this blue patch here"
+    },
+    {
+      "start": 1222.72,
+      "duration": 6.24,
+      "text": "and now thanks to part"
+    },
+    {
+      "start": 1226.08,
+      "duration": 5.44,
+      "text": "two of our definition we know there"
+    },
+    {
+      "start": 1228.96,
+      "duration": 2.56,
+      "text": "exists"
+    },
+    {
+      "start": 1231.919,
+      "duration": 7.841,
+      "text": "a uh maps"
+    },
+    {
+      "start": 1234.96,
+      "duration": 7.28,
+      "text": "psi alpha from o alpha to u alpha inside"
+    },
+    {
+      "start": 1239.76,
+      "duration": 2.48,
+      "text": "rn"
+    },
+    {
+      "start": 1243.12,
+      "duration": 6.32,
+      "text": "and under this map we can also identify"
+    },
+    {
+      "start": 1247.12,
+      "duration": 5.28,
+      "text": "the part"
+    },
+    {
+      "start": 1249.44,
+      "duration": 3.76,
+      "text": "of the intersection there so there it is"
+    },
+    {
+      "start": 1252.4,
+      "duration": 2.159,
+      "text": "there is that"
+    },
+    {
+      "start": 1253.2,
+      "duration": 3.68,
+      "text": "that's part from part two of the"
+    },
+    {
+      "start": 1254.559,
+      "duration": 5.921,
+      "text": "definition but there's also another map"
+    },
+    {
+      "start": 1256.88,
+      "duration": 7.44,
+      "text": "psi beta that takes"
+    },
+    {
+      "start": 1260.48,
+      "duration": 6.16,
+      "text": "o beta to some subset of rn"
+    },
+    {
+      "start": 1264.32,
+      "duration": 4.16,
+      "text": "it's not important that u alpha contains"
+    },
+    {
+      "start": 1266.64,
+      "duration": 2.96,
+      "text": "the origin or doesn't contain the origin"
+    },
+    {
+      "start": 1268.48,
+      "duration": 2.64,
+      "text": "we're not thinking"
+    },
+    {
+      "start": 1269.6,
+      "duration": 4.8,
+      "text": "the origin plays no role in the"
+    },
+    {
+      "start": 1271.12,
+      "duration": 3.28,
+      "text": "definition of manifold here"
+    },
+    {
+      "start": 1274.48,
+      "duration": 5.04,
+      "text": "and under that map the"
+    },
+    {
+      "start": 1278.08,
+      "duration": 4.56,
+      "text": "part of the intersection of oauth and"
+    },
+    {
+      "start": 1279.52,
+      "duration": 5.36,
+      "text": "obedience i colored in blue"
+    },
+    {
+      "start": 1282.64,
+      "duration": 3.76,
+      "text": "so part two of the definition already"
+    },
+    {
+      "start": 1284.88,
+      "duration": 2.48,
+      "text": "allows us to draw this part of the"
+    },
+    {
+      "start": 1286.4,
+      "duration": 2.56,
+      "text": "figure"
+    },
+    {
+      "start": 1287.36,
+      "duration": 3.28,
+      "text": "you have this curvy surface two sets"
+    },
+    {
+      "start": 1288.96,
+      "duration": 3.28,
+      "text": "they intersect you have these sciaticas"
+    },
+    {
+      "start": 1290.64,
+      "duration": 2.96,
+      "text": "and side betas you know they exist at"
+    },
+    {
+      "start": 1292.24,
+      "duration": 5.36,
+      "text": "one to one and onto"
+    },
+    {
+      "start": 1293.6,
+      "duration": 7.36,
+      "text": "but now you can also form a new map"
+    },
+    {
+      "start": 1297.6,
+      "duration": 3.84,
+      "text": "and this new map is psi beta composed"
+    },
+    {
+      "start": 1300.96,
+      "duration": 3.199,
+      "text": "with psi"
+    },
+    {
+      "start": 1301.44,
+      "duration": 3.52,
+      "text": "alpha inverse so imagine you have a"
+    },
+    {
+      "start": 1304.159,
+      "duration": 4.961,
+      "text": "point here"
+    },
+    {
+      "start": 1304.96,
+      "duration": 6.32,
+      "text": "in in this set u alpha sorry u beta"
+    },
+    {
+      "start": 1309.12,
+      "duration": 3.2,
+      "text": "so you have a point inside u beta you"
+    },
+    {
+      "start": 1311.28,
+      "duration": 2.879,
+      "text": "can always"
+    },
+    {
+      "start": 1312.32,
+      "duration": 3.359,
+      "text": "here it is let's call it i've drawn the"
+    },
+    {
+      "start": 1314.159,
+      "duration": 4.321,
+      "text": "point red"
+    },
+    {
+      "start": 1315.679,
+      "duration": 4.24,
+      "text": "you you can form the function psi beta"
+    },
+    {
+      "start": 1318.48,
+      "duration": 2.559,
+      "text": "inverse that just sort of goes the"
+    },
+    {
+      "start": 1319.919,
+      "duration": 4.0,
+      "text": "opposite direction"
+    },
+    {
+      "start": 1321.039,
+      "duration": 5.841,
+      "text": "to find out where that point oops of"
+    },
+    {
+      "start": 1323.919,
+      "duration": 4.081,
+      "text": "course i drew it wrong"
+    },
+    {
+      "start": 1326.88,
+      "duration": 2.56,
+      "text": "we want to have this point in the"
+    },
+    {
+      "start": 1328.0,
+      "duration": 2.96,
+      "text": "intersection of these two sets i mean"
+    },
+    {
+      "start": 1329.44,
+      "duration": 2.719,
+      "text": "what i said was right but whatever we"
+    },
+    {
+      "start": 1330.96,
+      "duration": 2.959,
+      "text": "want them in the intersection"
+    },
+    {
+      "start": 1332.159,
+      "duration": 4.321,
+      "text": "so suppose you have a point p in the"
+    },
+    {
+      "start": 1333.919,
+      "duration": 5.841,
+      "text": "intersection of"
+    },
+    {
+      "start": 1336.48,
+      "duration": 6.079,
+      "text": "o o alpha and o beta you can form the"
+    },
+    {
+      "start": 1339.76,
+      "duration": 5.12,
+      "text": "function psi beta inverse"
+    },
+    {
+      "start": 1342.559,
+      "duration": 4.401,
+      "text": "here it is because psi beta is one to"
+    },
+    {
+      "start": 1344.88,
+      "duration": 5.12,
+      "text": "one on two there is an inverse"
+    },
+    {
+      "start": 1346.96,
+      "duration": 5.199,
+      "text": "and now you look oh that point p that"
+    },
+    {
+      "start": 1350.0,
+      "duration": 2.159,
+      "text": "that"
+    },
+    {
+      "start": 1352.96,
+      "duration": 3.199,
+      "text": "that point p lying you know i don't know"
+    },
+    {
+      "start": 1354.88,
+      "duration": 2.72,
+      "text": "i'll do things a little differently i'll"
+    },
+    {
+      "start": 1356.159,
+      "duration": 5.601,
+      "text": "call this psi beta p"
+    },
+    {
+      "start": 1357.6,
+      "duration": 6.079,
+      "text": "down here just because later"
+    },
+    {
+      "start": 1361.76,
+      "duration": 3.2,
+      "text": "we'll want to do things that way so the"
+    },
+    {
+      "start": 1363.679,
+      "duration": 4.0,
+      "text": "red point side beta p"
+    },
+    {
+      "start": 1364.96,
+      "duration": 3.92,
+      "text": "has a pre image p inside the original"
+    },
+    {
+      "start": 1367.679,
+      "duration": 3.12,
+      "text": "manifold m"
+    },
+    {
+      "start": 1368.88,
+      "duration": 3.6,
+      "text": "ah but that belongs also to o alpha so"
+    },
+    {
+      "start": 1370.799,
+      "duration": 3.871,
+      "text": "we're perfectly within our rights"
+    },
+    {
+      "start": 1372.48,
+      "duration": 5.12,
+      "text": "to form"
+    },
+    {
+      "start": 1374.67,
+      "duration": 6.53,
+      "text": "[Music]"
+    },
+    {
+      "start": 1377.6,
+      "duration": 3.6,
+      "text": "the map psi alpha"
+    },
+    {
+      "start": 1382.0,
+      "duration": 6.48,
+      "text": "to apply the map site alpha to that"
+    },
+    {
+      "start": 1383.76,
+      "duration": 6.96,
+      "text": "point p"
+    },
+    {
+      "start": 1388.48,
+      "duration": 3.76,
+      "text": "and so we can draw maps going in both"
+    },
+    {
+      "start": 1390.72,
+      "duration": 2.079,
+      "text": "directions here i've done it in the"
+    },
+    {
+      "start": 1392.24,
+      "duration": 3.04,
+      "text": "reverse"
+    },
+    {
+      "start": 1392.799,
+      "duration": 4.0,
+      "text": "order but we could or equally will have"
+    },
+    {
+      "start": 1395.28,
+      "duration": 1.84,
+      "text": "told the story another way right there"
+    },
+    {
+      "start": 1396.799,
+      "duration": 4.561,
+      "text": "is"
+    },
+    {
+      "start": 1397.12,
+      "duration": 7.919,
+      "text": "suppose p is a point in the intersection"
+    },
+    {
+      "start": 1401.36,
+      "duration": 8.0,
+      "text": "of o l for an o beta"
+    },
+    {
+      "start": 1405.039,
+      "duration": 6.481,
+      "text": "then you can"
+    },
+    {
+      "start": 1409.36,
+      "duration": 3.28,
+      "text": "find its image in o alpha which we've"
+    },
+    {
+      "start": 1411.52,
+      "duration": 4.56,
+      "text": "called psi alpha p"
+    },
+    {
+      "start": 1412.64,
+      "duration": 6.8,
+      "text": "here that little that little"
+    },
+    {
+      "start": 1416.08,
+      "duration": 5.599,
+      "text": "cryptic symbol is psi alpha p that's a"
+    },
+    {
+      "start": 1419.44,
+      "duration": 3.839,
+      "text": "point inside rn"
+    },
+    {
+      "start": 1421.679,
+      "duration": 3.201,
+      "text": "and then you you could follow these"
+    },
+    {
+      "start": 1423.279,
+      "duration": 2.161,
+      "text": "arrows a different way you could apply"
+    },
+    {
+      "start": 1424.88,
+      "duration": 4.56,
+      "text": "to"
+    },
+    {
+      "start": 1425.44,
+      "duration": 5.52,
+      "text": "this point the map psi alpha inverse"
+    },
+    {
+      "start": 1429.44,
+      "duration": 4.239,
+      "text": "to get the point p and then you could"
+    },
+    {
+      "start": 1430.96,
+      "duration": 5.76,
+      "text": "apply the map psi beta"
+    },
+    {
+      "start": 1433.679,
+      "duration": 5.281,
+      "text": "to find the image in rn if you did that"
+    },
+    {
+      "start": 1436.72,
+      "duration": 5.52,
+      "text": "you will have just"
+    },
+    {
+      "start": 1438.96,
+      "duration": 3.839,
+      "text": "formed a map psi alpha inverse psi beta"
+    },
+    {
+      "start": 1442.24,
+      "duration": 4.24,
+      "text": "that goes"
+    },
+    {
+      "start": 1442.799,
+      "duration": 5.921,
+      "text": "between these sets u alpha and u beta"
+    },
+    {
+      "start": 1446.48,
+      "duration": 3.199,
+      "text": "now these maps go both ways right it's"
+    },
+    {
+      "start": 1448.72,
+      "duration": 5.12,
+      "text": "important to"
+    },
+    {
+      "start": 1449.679,
+      "duration": 4.161,
+      "text": "to to emphasize that"
+    },
+    {
+      "start": 1455.039,
+      "duration": 4.64,
+      "text": "now that you form that map you can't"
+    },
+    {
+      "start": 1457.919,
+      "duration": 2.24,
+      "text": "call it a manifold unless that map is"
+    },
+    {
+      "start": 1459.679,
+      "duration": 2.561,
+      "text": "smooth"
+    },
+    {
+      "start": 1460.159,
+      "duration": 13.681,
+      "text": "it means that all derivatives exist and"
+    },
+    {
+      "start": 1462.24,
+      "duration": 11.6,
+      "text": "are continuous"
+    },
+    {
+      "start": 1473.919,
+      "duration": 4.961,
+      "text": "there's a zeroth condition that i've"
+    },
+    {
+      "start": 1476.0,
+      "duration": 5.679,
+      "text": "made reference to already in this video"
+    },
+    {
+      "start": 1478.88,
+      "duration": 5.44,
+      "text": "the zeroth condition comes from general"
+    },
+    {
+      "start": 1481.679,
+      "duration": 2.641,
+      "text": "topology"
+    },
+    {
+      "start": 1484.84,
+      "duration": 5.24,
+      "text": "and is not really necessary"
+    },
+    {
+      "start": 1490.32,
+      "duration": 3.599,
+      "text": "to talk about general relativity"
+    },
+    {
+      "start": 1494.24,
+      "duration": 3.28,
+      "text": "it's quite sufficient to to use your"
+    },
+    {
+      "start": 1496.24,
+      "duration": 3.919,
+      "text": "physical intuition"
+    },
+    {
+      "start": 1497.52,
+      "duration": 4.0,
+      "text": "to say that m is sufficiently nice and"
+    },
+    {
+      "start": 1500.159,
+      "duration": 2.961,
+      "text": "since the number of examples that we"
+    },
+    {
+      "start": 1501.52,
+      "duration": 4.88,
+      "text": "really consider in this course is"
+    },
+    {
+      "start": 1503.12,
+      "duration": 5.2,
+      "text": "not completely um"
+    },
+    {
+      "start": 1506.4,
+      "duration": 4.399,
+      "text": "is not an uncountable list of horrible"
+    },
+    {
+      "start": 1508.32,
+      "duration": 6.16,
+      "text": "beasts but really a small"
+    },
+    {
+      "start": 1510.799,
+      "duration": 7.601,
+      "text": "list of of manifolds with"
+    },
+    {
+      "start": 1514.48,
+      "duration": 3.92,
+      "text": "quite a lot of good extra structure"
+    },
+    {
+      "start": 1519.039,
+      "duration": 3.441,
+      "text": "we don't really worry about the zeroth"
+    },
+    {
+      "start": 1520.64,
+      "duration": 3.76,
+      "text": "condition in this course but um"
+    },
+    {
+      "start": 1522.48,
+      "duration": 3.04,
+      "text": "in an addendum to this video i will"
+    },
+    {
+      "start": 1524.4,
+      "duration": 3.36,
+      "text": "certainly uh"
+    },
+    {
+      "start": 1525.52,
+      "duration": 3.12,
+      "text": "i'll spend a couple more words on the"
+    },
+    {
+      "start": 1527.76,
+      "duration": 4.08,
+      "text": "definition"
+    },
+    {
+      "start": 1528.64,
+      "duration": 4.0,
+      "text": "of of the of the mathematical definition"
+    },
+    {
+      "start": 1531.84,
+      "duration": 2.0,
+      "text": "of a manifold"
+    },
+    {
+      "start": 1532.64,
+      "duration": 3.36,
+      "text": "just if you're interested in those"
+    },
+    {
+      "start": 1533.84,
+      "duration": 6.959,
+      "text": "details so the zeroth condition"
+    },
+    {
+      "start": 1536.0,
+      "duration": 10.48,
+      "text": "is that m is a topological space"
+    },
+    {
+      "start": 1540.799,
+      "duration": 5.681,
+      "text": "which is um halsdorf and paracompact"
+    },
+    {
+      "start": 1552.48,
+      "duration": 6.88,
+      "text": "and that these maps"
+    },
+    {
+      "start": 1555.6,
+      "duration": 3.76,
+      "text": "site alpha homeomorphisms"
+    },
+    {
+      "start": 1561.12,
+      "duration": 3.84,
+      "text": "you know i'll do it in another way"
+    },
+    {
+      "start": 1563.679,
+      "duration": 8.161,
+      "text": "didn't leave enough space"
+    },
+    {
+      "start": 1564.96,
+      "duration": 6.88,
+      "text": "i'll put some space in here"
+    },
+    {
+      "start": 1577.6,
+      "duration": 3.6,
+      "text": "it worked it doesn't always work"
+    },
+    {
+      "start": 1582.96,
+      "duration": 5.199,
+      "text": "and psi alpha are homeomorphisms"
+    },
+    {
+      "start": 1590.159,
+      "duration": 3.52,
+      "text": "look if you know about poinsett topology"
+    },
+    {
+      "start": 1592.24,
+      "duration": 2.88,
+      "text": "in general topology then this will"
+    },
+    {
+      "start": 1593.679,
+      "duration": 3.041,
+      "text": "probably make you happy"
+    },
+    {
+      "start": 1595.12,
+      "duration": 5.12,
+      "text": "if you don't then don't worry about it"
+    },
+    {
+      "start": 1596.72,
+      "duration": 6.0,
+      "text": "in this course this is not going to be"
+    },
+    {
+      "start": 1600.24,
+      "duration": 2.48,
+      "text": "crucial"
+    },
+    {
+      "start": 1603.679,
+      "duration": 5.681,
+      "text": "for your understanding of general"
+    },
+    {
+      "start": 1606.799,
+      "duration": 6.0,
+      "text": "relativity in any way shape or form"
+    },
+    {
+      "start": 1609.36,
+      "duration": 6.559,
+      "text": "this is really stuff for the"
+    },
+    {
+      "start": 1612.799,
+      "duration": 3.12,
+      "text": "mathematically minded"
+    },
+    {
+      "start": 1618.4,
+      "duration": 3.12,
+      "text": "and as i said the actual examples that"
+    },
+    {
+      "start": 1621.039,
+      "duration": 3.12,
+      "text": "feature"
+    },
+    {
+      "start": 1621.52,
+      "duration": 3.44,
+      "text": "prominently in general relativity uh"
+    },
+    {
+      "start": 1624.159,
+      "duration": 2.0,
+      "text": "have some"
+    },
+    {
+      "start": 1624.96,
+      "duration": 3.199,
+      "text": "additional structure that we don't have"
+    },
+    {
+      "start": 1626.159,
+      "duration": 4.721,
+      "text": "to worry about this"
+    },
+    {
+      "start": 1628.159,
+      "duration": 2.721,
+      "text": "this axiom"
+    },
+    {
+      "start": 1631.76,
+      "duration": 3.68,
+      "text": "now these maps and sets and so on that"
+    },
+    {
+      "start": 1634.32,
+      "duration": 6.56,
+      "text": "we use to define"
+    },
+    {
+      "start": 1635.44,
+      "duration": 6.88,
+      "text": "a manifold they have names"
+    },
+    {
+      "start": 1640.88,
+      "duration": 4.799,
+      "text": "you've got to call them something and we"
+    },
+    {
+      "start": 1642.32,
+      "duration": 5.28,
+      "text": "give them the following names um"
+    },
+    {
+      "start": 1645.679,
+      "duration": 3.12,
+      "text": "are called what do we call them well if"
+    },
+    {
+      "start": 1647.6,
+      "duration": 5.04,
+      "text": "you're a mathematician you're"
+    },
+    {
+      "start": 1648.799,
+      "duration": 3.841,
+      "text": "most likely to call these maps say offer"
+    },
+    {
+      "start": 1652.84,
+      "duration": 3.0,
+      "text": "charts"
+    },
+    {
+      "start": 1656.399,
+      "duration": 3.201,
+      "text": "i tend to enjoy calling them charts as"
+    },
+    {
+      "start": 1658.64,
+      "duration": 5.2,
+      "text": "well"
+    },
+    {
+      "start": 1659.6,
+      "duration": 4.24,
+      "text": "or our coordinate systems"
+    },
+    {
+      "start": 1667.2,
+      "duration": 3.28,
+      "text": "that's probably the terminology that"
+    },
+    {
+      "start": 1669.44,
+      "duration": 5.599,
+      "text": "might feature more"
+    },
+    {
+      "start": 1670.48,
+      "duration": 4.559,
+      "text": "feet more prominently in physics"
+    },
+    {
+      "start": 1675.6,
+      "duration": 2.48,
+      "text": "and uh"
+    },
+    {
+      "start": 1679.44,
+      "duration": 4.8,
+      "text": "so i probably will call them"
+    },
+    {
+      "start": 1682.559,
+      "duration": 5.041,
+      "text": "interchangeably charts or coordinate"
+    },
+    {
+      "start": 1684.24,
+      "duration": 3.36,
+      "text": "systems throughout this course"
+    },
+    {
+      "start": 1688.24,
+      "duration": 3.52,
+      "text": "now the definition it's sort of"
+    },
+    {
+      "start": 1690.08,
+      "duration": 5.52,
+      "text": "important to say now"
+    },
+    {
+      "start": 1691.76,
+      "duration": 5.919,
+      "text": "that the definition so far"
+    },
+    {
+      "start": 1695.6,
+      "duration": 4.24,
+      "text": "like we're not quite done with calling"
+    },
+    {
+      "start": 1697.679,
+      "duration": 5.841,
+      "text": "this a manifold yet"
+    },
+    {
+      "start": 1699.84,
+      "duration": 10.559,
+      "text": "the definition so far depends on"
+    },
+    {
+      "start": 1703.52,
+      "duration": 10.08,
+      "text": "our choice of o alpha and beta"
+    },
+    {
+      "start": 1710.399,
+      "duration": 4.801,
+      "text": "oh alpha sorry it's psi alpha"
+    },
+    {
+      "start": 1713.6,
+      "duration": 3.28,
+      "text": "meaning and i mean is in the following"
+    },
+    {
+      "start": 1715.2,
+      "duration": 3.839,
+      "text": "sense"
+    },
+    {
+      "start": 1716.88,
+      "duration": 4.48,
+      "text": "so suppose you let's go back to our"
+    },
+    {
+      "start": 1719.039,
+      "duration": 5.12,
+      "text": "definition right the definition says"
+    },
+    {
+      "start": 1721.36,
+      "duration": 5.84,
+      "text": "that m is covered by a bunch of these"
+    },
+    {
+      "start": 1724.159,
+      "duration": 3.041,
+      "text": "things called o alpha"
+    },
+    {
+      "start": 1727.84,
+      "duration": 5.199,
+      "text": "and if we had chosen a different set of"
+    },
+    {
+      "start": 1730.72,
+      "duration": 5.92,
+      "text": "o alphas to cover m then we would have"
+    },
+    {
+      "start": 1733.039,
+      "duration": 6.481,
+      "text": "a different uh different manifold so"
+    },
+    {
+      "start": 1736.64,
+      "duration": 4.399,
+      "text": "you know an dimensional c infinity real"
+    },
+    {
+      "start": 1739.52,
+      "duration": 3.36,
+      "text": "manifold m is a set together with a"
+    },
+    {
+      "start": 1741.039,
+      "duration": 4.401,
+      "text": "collection of the subsets"
+    },
+    {
+      "start": 1742.88,
+      "duration": 4.399,
+      "text": "satisfying blah blah blah had we chosen"
+    },
+    {
+      "start": 1745.44,
+      "duration": 4.0,
+      "text": "a different bunch of subsets"
+    },
+    {
+      "start": 1747.279,
+      "duration": 3.12,
+      "text": "then we would formally have a different"
+    },
+    {
+      "start": 1749.44,
+      "duration": 3.839,
+      "text": "manifold"
+    },
+    {
+      "start": 1750.399,
+      "duration": 4.081,
+      "text": "however it's kind of obvious that um you"
+    },
+    {
+      "start": 1753.279,
+      "duration": 4.241,
+      "text": "know if we choose"
+    },
+    {
+      "start": 1754.48,
+      "duration": 4.4,
+      "text": "them in the the same way or as encoding"
+    },
+    {
+      "start": 1757.52,
+      "duration": 2.24,
+      "text": "the same information we have the same"
+    },
+    {
+      "start": 1758.88,
+      "duration": 2.24,
+      "text": "manifold"
+    },
+    {
+      "start": 1759.76,
+      "duration": 3.519,
+      "text": "so we've got to spend a little bit of"
+    },
+    {
+      "start": 1761.12,
+      "duration": 4.799,
+      "text": "time talking about this this"
+    },
+    {
+      "start": 1763.279,
+      "duration": 3.601,
+      "text": "this arbitrariness so the definition so"
+    },
+    {
+      "start": 1765.919,
+      "duration": 5.521,
+      "text": "far depends"
+    },
+    {
+      "start": 1766.88,
+      "duration": 8.0,
+      "text": "on the choice of o alpha and psi alphas"
+    },
+    {
+      "start": 1771.44,
+      "duration": 6.0,
+      "text": "and and what does that mean so if"
+    },
+    {
+      "start": 1774.88,
+      "duration": 3.84,
+      "text": "and to show you how absurd things are so"
+    },
+    {
+      "start": 1777.44,
+      "duration": 4.8,
+      "text": "if we add"
+    },
+    {
+      "start": 1778.72,
+      "duration": 9.36,
+      "text": "with the current definition as a new set"
+    },
+    {
+      "start": 1782.24,
+      "duration": 5.84,
+      "text": "just one extra new set p and a new chart"
+    },
+    {
+      "start": 1789.279,
+      "duration": 4.481,
+      "text": "psi prime let's call it then per"
+    },
+    {
+      "start": 1792.08,
+      "duration": 2.16,
+      "text": "definition we have a new manifold right"
+    },
+    {
+      "start": 1793.76,
+      "duration": 3.84,
+      "text": "it's"
+    },
+    {
+      "start": 1794.24,
+      "duration": 3.36,
+      "text": "even even um"
+    },
+    {
+      "start": 1799.279,
+      "duration": 3.361,
+      "text": "we have a new manifold well maybe we do"
+    },
+    {
+      "start": 1801.2,
+      "duration": 5.599,
+      "text": "right maybe we add a bit more on but we"
+    },
+    {
+      "start": 1802.64,
+      "duration": 4.159,
+      "text": "get a new it's a new manifold even if"
+    },
+    {
+      "start": 1806.88,
+      "duration": 5.279,
+      "text": "um p and psi contain no new information"
+    },
+    {
+      "start": 1819.12,
+      "duration": 4.08,
+      "text": "so that's a bit strange right you you"
+    },
+    {
+      "start": 1821.2,
+      "duration": 3.199,
+      "text": "therefore have it you know"
+    },
+    {
+      "start": 1823.2,
+      "duration": 3.76,
+      "text": "if you have a whole bunch of sets"
+    },
+    {
+      "start": 1824.399,
+      "duration": 4.961,
+      "text": "covering m and you add one that sort of"
+    },
+    {
+      "start": 1826.96,
+      "duration": 3.52,
+      "text": "says covers is covered by all the"
+    },
+    {
+      "start": 1829.36,
+      "duration": 3.199,
+      "text": "original sets"
+    },
+    {
+      "start": 1830.48,
+      "duration": 3.04,
+      "text": "and you don't actually change you add"
+    },
+    {
+      "start": 1832.559,
+      "duration": 2.561,
+      "text": "any information"
+    },
+    {
+      "start": 1833.52,
+      "duration": 3.279,
+      "text": "and it's a bit strange that you you have"
+    },
+    {
+      "start": 1835.12,
+      "duration": 2.72,
+      "text": "a totally new manifold different"
+    },
+    {
+      "start": 1836.799,
+      "duration": 3.6,
+      "text": "manifold"
+    },
+    {
+      "start": 1837.84,
+      "duration": 3.12,
+      "text": "so we don't like that it's a bit silly"
+    },
+    {
+      "start": 1840.399,
+      "duration": 3.201,
+      "text": "so"
+    },
+    {
+      "start": 1840.96,
+      "duration": 5.68,
+      "text": "uh to eliminate this right we don't like"
+    },
+    {
+      "start": 1843.6,
+      "duration": 3.04,
+      "text": "this arbitrariness"
+    },
+    {
+      "start": 1849.12,
+      "duration": 3.36,
+      "text": "because probably you're already"
+    },
+    {
+      "start": 1852.0,
+      "duration": 1.84,
+      "text": "wondering"
+    },
+    {
+      "start": 1852.48,
+      "duration": 3.12,
+      "text": "thinking of ways to eliminate this"
+    },
+    {
+      "start": 1853.84,
+      "duration": 5.439,
+      "text": "arbitrariness"
+    },
+    {
+      "start": 1855.6,
+      "duration": 3.679,
+      "text": "well here's here's one way to do it"
+    },
+    {
+      "start": 1861.039,
+      "duration": 3.041,
+      "text": "so we require"
+    },
+    {
+      "start": 1865.44,
+      "duration": 3.44,
+      "text": "that this covering"
+    },
+    {
+      "start": 1869.919,
+      "duration": 3.12,
+      "text": "in the definition of m"
+    },
+    {
+      "start": 1873.84,
+      "duration": 6.0,
+      "text": "and these charts all this family of"
+    },
+    {
+      "start": 1876.84,
+      "duration": 3.0,
+      "text": "charts"
+    },
+    {
+      "start": 1880.159,
+      "duration": 2.961,
+      "text": "is maximal"
+    },
+    {
+      "start": 1885.76,
+      "duration": 4.799,
+      "text": "so what does that mean it means all"
+    },
+    {
+      "start": 1888.24,
+      "duration": 5.12,
+      "text": "possible if it is possible to add a set"
+    },
+    {
+      "start": 1890.559,
+      "duration": 4.081,
+      "text": "o alpha in and the chart psi alpha in"
+    },
+    {
+      "start": 1893.36,
+      "duration": 2.88,
+      "text": "which is compatible with all the"
+    },
+    {
+      "start": 1894.64,
+      "duration": 3.919,
+      "text": "pre-existing ones then you have to add"
+    },
+    {
+      "start": 1896.24,
+      "duration": 2.319,
+      "text": "it in"
+    },
+    {
+      "start": 1904.24,
+      "duration": 3.439,
+      "text": "so all coordinate systems here i'm going"
+    },
+    {
+      "start": 1906.24,
+      "duration": 3.36,
+      "text": "to use this notation"
+    },
+    {
+      "start": 1907.679,
+      "duration": 3.201,
+      "text": "interchangeably coordinate systems"
+    },
+    {
+      "start": 1909.6,
+      "duration": 4.16,
+      "text": "charts whatever"
+    },
+    {
+      "start": 1910.88,
+      "duration": 2.88,
+      "text": "you'll get used to it"
+    },
+    {
+      "start": 1914.96,
+      "duration": 6.319,
+      "text": "compatible with"
+    },
+    {
+      "start": 1918.0,
+      "duration": 6.88,
+      "text": "two and 3 in our definition"
+    },
+    {
+      "start": 1921.279,
+      "duration": 3.601,
+      "text": "are required included"
+    },
+    {
+      "start": 1927.44,
+      "duration": 3.92,
+      "text": "so if you can add a chart you must add a"
+    },
+    {
+      "start": 1930.32,
+      "duration": 3.12,
+      "text": "chart"
+    },
+    {
+      "start": 1931.36,
+      "duration": 4.08,
+      "text": "and then only then do you have a"
+    },
+    {
+      "start": 1933.44,
+      "duration": 3.839,
+      "text": "manifold"
+    },
+    {
+      "start": 1935.44,
+      "duration": 4.56,
+      "text": "okay we we've got this big long"
+    },
+    {
+      "start": 1937.279,
+      "duration": 5.361,
+      "text": "mathematical definition"
+    },
+    {
+      "start": 1940.0,
+      "duration": 6.0,
+      "text": "can't do physics unless we have examples"
+    },
+    {
+      "start": 1942.64,
+      "duration": 5.279,
+      "text": "so let's get to some examples"
+    },
+    {
+      "start": 1946.0,
+      "duration": 3.279,
+      "text": "and of course you know definitions all"
+    },
+    {
+      "start": 1947.919,
+      "duration": 2.321,
+      "text": "very well but if you can't present a"
+    },
+    {
+      "start": 1949.279,
+      "duration": 3.76,
+      "text": "single"
+    },
+    {
+      "start": 1950.24,
+      "duration": 3.76,
+      "text": "example uh fulfilling the requirements"
+    },
+    {
+      "start": 1953.039,
+      "duration": 2.801,
+      "text": "of your definition there's a pretty"
+    },
+    {
+      "start": 1954.0,
+      "duration": 5.679,
+      "text": "stupid definition"
+    },
+    {
+      "start": 1955.84,
+      "duration": 4.719,
+      "text": "um here's a laundry list of our favorite"
+    },
+    {
+      "start": 1959.679,
+      "duration": 3.12,
+      "text": "examples"
+    },
+    {
+      "start": 1960.559,
+      "duration": 3.281,
+      "text": "in physics and pretty much in maths as"
+    },
+    {
+      "start": 1962.799,
+      "duration": 4.24,
+      "text": "well"
+    },
+    {
+      "start": 1963.84,
+      "duration": 4.079,
+      "text": "well the it better be right that our"
+    },
+    {
+      "start": 1967.039,
+      "duration": 4.161,
+      "text": "notion of a"
+    },
+    {
+      "start": 1967.919,
+      "duration": 5.841,
+      "text": "curved continuum contains the original"
+    },
+    {
+      "start": 1971.2,
+      "duration": 4.8,
+      "text": "uh notion from which we departed from"
+    },
+    {
+      "start": 1973.76,
+      "duration": 5.44,
+      "text": "namely space time itself"
+    },
+    {
+      "start": 1976.0,
+      "duration": 4.96,
+      "text": "rn is a trivial example right"
+    },
+    {
+      "start": 1979.2,
+      "duration": 3.52,
+      "text": "it better be an example otherwise we've"
+    },
+    {
+      "start": 1980.96,
+      "duration": 4.319,
+      "text": "messed up in coming up with our"
+    },
+    {
+      "start": 1982.72,
+      "duration": 2.559,
+      "text": "definition"
+    },
+    {
+      "start": 1985.519,
+      "duration": 6.321,
+      "text": "and it can be covered by one"
+    },
+    {
+      "start": 1988.72,
+      "duration": 3.12,
+      "text": "chart of course"
+    },
+    {
+      "start": 2000.159,
+      "duration": 4.4,
+      "text": "and what is that chart will just r in"
+    },
+    {
+      "start": 2002.84,
+      "duration": 3.8,
+      "text": "itself"
+    },
+    {
+      "start": 2004.559,
+      "duration": 4.881,
+      "text": "and then oh yeah with psi being the"
+    },
+    {
+      "start": 2006.64,
+      "duration": 2.8,
+      "text": "identity map"
+    },
+    {
+      "start": 2010.64,
+      "duration": 6.08,
+      "text": "now rn as a manifold"
+    },
+    {
+      "start": 2013.76,
+      "duration": 3.44,
+      "text": "is required to include all possible"
+    },
+    {
+      "start": 2016.72,
+      "duration": 3.12,
+      "text": "charts"
+    },
+    {
+      "start": 2017.2,
+      "duration": 2.64,
+      "text": "remember"
+    },
+    {
+      "start": 2021.44,
+      "duration": 4.64,
+      "text": "so as a euclidea as the thing that we"
+    },
+    {
+      "start": 2023.6,
+      "duration": 4.88,
+      "text": "call euclidean space"
+    },
+    {
+      "start": 2026.08,
+      "duration": 4.88,
+      "text": "it's okay to describe rn just as this"
+    },
+    {
+      "start": 2028.48,
+      "duration": 6.0,
+      "text": "set rn"
+    },
+    {
+      "start": 2030.96,
+      "duration": 5.839,
+      "text": "but if you want to call r in a manifold"
+    },
+    {
+      "start": 2034.48,
+      "duration": 3.039,
+      "text": "well you need to include per definition"
+    },
+    {
+      "start": 2036.799,
+      "duration": 2.641,
+      "text": "every cover"
+    },
+    {
+      "start": 2037.519,
+      "duration": 3.921,
+      "text": "every chart every coordinate system"
+    },
+    {
+      "start": 2039.44,
+      "duration": 3.2,
+      "text": "that's compatible with the pre-existing"
+    },
+    {
+      "start": 2041.44,
+      "duration": 6.4,
+      "text": "charts"
+    },
+    {
+      "start": 2042.64,
+      "duration": 5.2,
+      "text": "and therefore it has uncountably many"
+    },
+    {
+      "start": 2049.119,
+      "duration": 5.28,
+      "text": "many covers right because you know"
+    },
+    {
+      "start": 2052.72,
+      "duration": 2.399,
+      "text": "here's rn right i'm just drawing it as a"
+    },
+    {
+      "start": 2054.399,
+      "duration": 3.601,
+      "text": "square"
+    },
+    {
+      "start": 2055.119,
+      "duration": 3.76,
+      "text": "it's covered by the set o let's call the"
+    },
+    {
+      "start": 2058.0,
+      "duration": 4.96,
+      "text": "set o"
+    },
+    {
+      "start": 2058.879,
+      "duration": 7.841,
+      "text": "whatever one is just rn but it's also"
+    },
+    {
+      "start": 2062.96,
+      "duration": 5.679,
+      "text": "covered by these three sets suppose they"
+    },
+    {
+      "start": 2066.72,
+      "duration": 5.04,
+      "text": "go off to infinity so o2"
+    },
+    {
+      "start": 2068.639,
+      "duration": 7.2,
+      "text": "o3 and o4 so"
+    },
+    {
+      "start": 2071.76,
+      "duration": 4.079,
+      "text": "o2 is this yellow set here"
+    },
+    {
+      "start": 2076.0,
+      "duration": 3.839,
+      "text": "4 is this blue set here that goes off to"
+    },
+    {
+      "start": 2078.56,
+      "duration": 3.44,
+      "text": "infinity saying"
+    },
+    {
+      "start": 2079.839,
+      "duration": 3.601,
+      "text": "you know 3 is this green set here it's"
+    },
+    {
+      "start": 2082.0,
+      "duration": 4.96,
+      "text": "also covered by those"
+    },
+    {
+      "start": 2083.44,
+      "duration": 8.56,
+      "text": "and as long as we set up our"
+    },
+    {
+      "start": 2086.96,
+      "duration": 5.04,
+      "text": "and e and and the chart"
+    },
+    {
+      "start": 2093.599,
+      "duration": 4.081,
+      "text": "what chart should we use for o2 well the"
+    },
+    {
+      "start": 2095.76,
+      "duration": 5.839,
+      "text": "identity again right"
+    },
+    {
+      "start": 2097.68,
+      "duration": 7.04,
+      "text": "um and so on 0304 and then you can add"
+    },
+    {
+      "start": 2101.599,
+      "duration": 5.841,
+      "text": "any way of covering rn"
+    },
+    {
+      "start": 2104.72,
+      "duration": 3.119,
+      "text": "with the corresponding identity chart"
+    },
+    {
+      "start": 2107.44,
+      "duration": 3.84,
+      "text": "that"
+    },
+    {
+      "start": 2107.839,
+      "duration": 6.321,
+      "text": "is a compatible"
+    },
+    {
+      "start": 2111.28,
+      "duration": 3.44,
+      "text": "coordinate system compatible chart so it"
+    },
+    {
+      "start": 2114.16,
+      "duration": 2.72,
+      "text": "must go"
+    },
+    {
+      "start": 2114.72,
+      "duration": 4.48,
+      "text": "in when you're thinking of rn as a"
+    },
+    {
+      "start": 2116.88,
+      "duration": 4.8,
+      "text": "manifold rn is just euclidean"
+    },
+    {
+      "start": 2119.2,
+      "duration": 3.84,
+      "text": "space as a set you've constructed that"
+    },
+    {
+      "start": 2121.68,
+      "duration": 2.64,
+      "text": "presumably in some part of your"
+    },
+    {
+      "start": 2123.04,
+      "duration": 3.44,
+      "text": "undergraduate degree"
+    },
+    {
+      "start": 2124.32,
+      "duration": 3.84,
+      "text": "but rn is a manner and you didn't bother"
+    },
+    {
+      "start": 2126.48,
+      "duration": 3.599,
+      "text": "with all these charts and identities and"
+    },
+    {
+      "start": 2128.16,
+      "duration": 4.64,
+      "text": "so on but when you want to"
+    },
+    {
+      "start": 2130.079,
+      "duration": 5.76,
+      "text": "talk about manifolds you have to have"
+    },
+    {
+      "start": 2132.8,
+      "duration": 5.279,
+      "text": "this extra baggage of charts and"
+    },
+    {
+      "start": 2135.839,
+      "duration": 4.561,
+      "text": "and coordinate systems around so you"
+    },
+    {
+      "start": 2138.079,
+      "duration": 5.52,
+      "text": "really have to allow that to be in"
+    },
+    {
+      "start": 2140.4,
+      "duration": 3.679,
+      "text": "as part of the definition and is"
+    },
+    {
+      "start": 2143.599,
+      "duration": 1.841,
+      "text": "required"
+    },
+    {
+      "start": 2144.079,
+      "duration": 2.881,
+      "text": "part of the definition so when you think"
+    },
+    {
+      "start": 2145.44,
+      "duration": 2.88,
+      "text": "of rn you really got to think of it as"
+    },
+    {
+      "start": 2146.96,
+      "duration": 4.08,
+      "text": "yes your friendly"
+    },
+    {
+      "start": 2148.32,
+      "duration": 4.32,
+      "text": "euclidean space are in but with all"
+    },
+    {
+      "start": 2151.04,
+      "duration": 3.36,
+      "text": "these sort of infinite ways of drawing"
+    },
+    {
+      "start": 2152.64,
+      "duration": 6.4,
+      "text": "coordinate systems on it"
+    },
+    {
+      "start": 2154.4,
+      "duration": 8.719,
+      "text": "included okay what's another example"
+    },
+    {
+      "start": 2159.04,
+      "duration": 5.039,
+      "text": "well space time itself is an example of"
+    },
+    {
+      "start": 2163.119,
+      "duration": 3.681,
+      "text": "a manifold"
+    },
+    {
+      "start": 2164.079,
+      "duration": 6.081,
+      "text": "we'll prove that well we'll realize it"
+    },
+    {
+      "start": 2166.8,
+      "duration": 3.36,
+      "text": "as a manifold presently"
+    },
+    {
+      "start": 2170.96,
+      "duration": 5.2,
+      "text": "it's space-time itself you"
+    },
+    {
+      "start": 2174.4,
+      "duration": 4.32,
+      "text": "in special relativity has a temporal"
+    },
+    {
+      "start": 2176.16,
+      "duration": 5.84,
+      "text": "axis and three spatial axes"
+    },
+    {
+      "start": 2178.72,
+      "duration": 4.879,
+      "text": "uh and we often distinguish the temporal"
+    },
+    {
+      "start": 2182.0,
+      "duration": 3.839,
+      "text": "axis by writing"
+    },
+    {
+      "start": 2183.599,
+      "duration": 4.081,
+      "text": "space time as like r superscript one"
+    },
+    {
+      "start": 2185.839,
+      "duration": 3.601,
+      "text": "comma three just to emphasize that one"
+    },
+    {
+      "start": 2187.68,
+      "duration": 5.76,
+      "text": "of them is time one not"
+    },
+    {
+      "start": 2189.44,
+      "duration": 7.52,
+      "text": "but as as a set and even as a manifold"
+    },
+    {
+      "start": 2193.44,
+      "duration": 5.84,
+      "text": "manifold but not uh different"
+    },
+    {
+      "start": 2196.96,
+      "duration": 4.08,
+      "text": "without metric these sets are just"
+    },
+    {
+      "start": 2199.28,
+      "duration": 4.24,
+      "text": "equivalent to r4 which is already a"
+    },
+    {
+      "start": 2201.04,
+      "duration": 2.48,
+      "text": "manifold"
+    },
+    {
+      "start": 2205.04,
+      "duration": 4.559,
+      "text": "and all this lorenzian stuff and so on"
+    },
+    {
+      "start": 2212.4,
+      "duration": 4.719,
+      "text": "that comes later right that's as a"
+    },
+    {
+      "start": 2214.88,
+      "duration": 4.88,
+      "text": "manifold"
+    },
+    {
+      "start": 2217.119,
+      "duration": 3.281,
+      "text": "it it it is you can identify it as a"
+    },
+    {
+      "start": 2219.76,
+      "duration": 2.4,
+      "text": "subset"
+    },
+    {
+      "start": 2220.4,
+      "duration": 3.92,
+      "text": "uh that charts with subsets of our force"
+    },
+    {
+      "start": 2222.16,
+      "duration": 3.36,
+      "text": "it's a manifold of a four-dimensional"
+    },
+    {
+      "start": 2224.32,
+      "duration": 4.24,
+      "text": "manifold"
+    },
+    {
+      "start": 2225.52,
+      "duration": 4.559,
+      "text": "all this temporal stuff and lorenz"
+    },
+    {
+      "start": 2228.56,
+      "duration": 5.279,
+      "text": "structure and blah blah blah"
+    },
+    {
+      "start": 2230.079,
+      "duration": 3.76,
+      "text": "that comes later like you add that on"
+    },
+    {
+      "start": 2236.56,
+      "duration": 3.44,
+      "text": "so manifold's a pretty abstract concept"
+    },
+    {
+      "start": 2238.88,
+      "duration": 4.8,
+      "text": "they cover a lot of"
+    },
+    {
+      "start": 2240.0,
+      "duration": 5.76,
+      "text": "different examples okay"
+    },
+    {
+      "start": 2243.68,
+      "duration": 3.919,
+      "text": "the next most important example is the"
+    },
+    {
+      "start": 2245.76,
+      "duration": 6.079,
+      "text": "sphere"
+    },
+    {
+      "start": 2247.599,
+      "duration": 4.24,
+      "text": "sn which is you know"
+    },
+    {
+      "start": 2252.24,
+      "duration": 2.56,
+      "text": "embedded"
+    },
+    {
+      "start": 2255.52,
+      "duration": 3.44,
+      "text": "in n plus one dimensions yeah i know"
+    },
+    {
+      "start": 2257.92,
+      "duration": 2.56,
+      "text": "we're not going to do things with"
+    },
+    {
+      "start": 2258.96,
+      "duration": 4.72,
+      "text": "embedded manifolds"
+    },
+    {
+      "start": 2260.48,
+      "duration": 4.8,
+      "text": "um but we are of course"
+    },
+    {
+      "start": 2263.68,
+      "duration": 4.0,
+      "text": "embedded manifolds are one of the best"
+    },
+    {
+      "start": 2265.28,
+      "duration": 4.4,
+      "text": "examples of manifolds"
+    },
+    {
+      "start": 2267.68,
+      "duration": 3.76,
+      "text": "but we want to do we want to allow our"
+    },
+    {
+      "start": 2269.68,
+      "duration": 3.2,
+      "text": "structures to be intrinsically defined"
+    },
+    {
+      "start": 2271.44,
+      "duration": 2.56,
+      "text": "without reference to that embedding"
+    },
+    {
+      "start": 2272.88,
+      "duration": 3.44,
+      "text": "space but here we go we're going to"
+    },
+    {
+      "start": 2274.0,
+      "duration": 5.68,
+      "text": "define the sphere sn anyway"
+    },
+    {
+      "start": 2276.32,
+      "duration": 3.36,
+      "text": "as an embedded manifold"
+    },
+    {
+      "start": 2281.28,
+      "duration": 4.079,
+      "text": "how do you define the n sphere well it's"
+    },
+    {
+      "start": 2284.079,
+      "duration": 5.201,
+      "text": "a subset of n"
+    },
+    {
+      "start": 2285.359,
+      "duration": 5.521,
+      "text": "r n plus one and the subset is defined"
+    },
+    {
+      "start": 2289.28,
+      "duration": 2.72,
+      "text": "by all those points which have unit"
+    },
+    {
+      "start": 2290.88,
+      "duration": 4.32,
+      "text": "length"
+    },
+    {
+      "start": 2292.0,
+      "duration": 3.2,
+      "text": "whatever unit radius"
+    },
+    {
+      "start": 2295.52,
+      "duration": 4.319,
+      "text": "unit length inside rn plus one"
+    },
+    {
+      "start": 2301.599,
+      "duration": 3.841,
+      "text": "now that doesn't make it a manifold just"
+    },
+    {
+      "start": 2303.359,
+      "duration": 3.281,
+      "text": "writing it as a subset of rn plus one"
+    },
+    {
+      "start": 2305.44,
+      "duration": 2.0,
+      "text": "that certainly does not make it a"
+    },
+    {
+      "start": 2306.64,
+      "duration": 2.479,
+      "text": "manifold"
+    },
+    {
+      "start": 2307.44,
+      "duration": 3.04,
+      "text": "at the moment i haven't presented to you"
+    },
+    {
+      "start": 2309.119,
+      "duration": 2.801,
+      "text": "any way of covering this"
+    },
+    {
+      "start": 2310.48,
+      "duration": 3.599,
+      "text": "set i don't know what the coordinate"
+    },
+    {
+      "start": 2311.92,
+      "duration": 3.04,
+      "text": "systems are and so on so we have to"
+    },
+    {
+      "start": 2314.079,
+      "duration": 4.0,
+      "text": "introduce"
+    },
+    {
+      "start": 2314.96,
+      "duration": 3.119,
+      "text": "that structure right"
+    },
+    {
+      "start": 2319.28,
+      "duration": 3.28,
+      "text": "before we're allowed to call this a"
+    },
+    {
+      "start": 2320.72,
+      "duration": 4.96,
+      "text": "manifold and so"
+    },
+    {
+      "start": 2322.56,
+      "duration": 5.76,
+      "text": "we are going to introduce well a bunch"
+    },
+    {
+      "start": 2325.68,
+      "duration": 2.64,
+      "text": "of charts"
+    },
+    {
+      "start": 2328.8,
+      "duration": 3.2,
+      "text": "and then leave a lot of this to the"
+    },
+    {
+      "start": 2330.0,
+      "duration": 5.2,
+      "text": "exercise"
+    },
+    {
+      "start": 2332.0,
+      "duration": 5.599,
+      "text": "for you to confirm so let's define the"
+    },
+    {
+      "start": 2335.2,
+      "duration": 6.159,
+      "text": "following"
+    },
+    {
+      "start": 2337.599,
+      "duration": 6.961,
+      "text": "n plus one"
+    },
+    {
+      "start": 2341.359,
+      "duration": 3.201,
+      "text": "two n plus one sits"
+    },
+    {
+      "start": 2351.44,
+      "duration": 4.24,
+      "text": "so what you do is you take the nth or"
+    },
+    {
+      "start": 2353.44,
+      "duration": 3.679,
+      "text": "the alpha coordinate"
+    },
+    {
+      "start": 2355.68,
+      "duration": 2.88,
+      "text": "you take all the points inside the"
+    },
+    {
+      "start": 2357.119,
+      "duration": 2.081,
+      "text": "sphere where the alpha coordinate bigger"
+    },
+    {
+      "start": 2358.56,
+      "duration": 2.4,
+      "text": "than zero"
+    },
+    {
+      "start": 2359.2,
+      "duration": 5.68,
+      "text": "or less than zero and you call those two"
+    },
+    {
+      "start": 2360.96,
+      "duration": 3.92,
+      "text": "sets o alpha plus or no alpha minus"
+    },
+    {
+      "start": 2366.24,
+      "duration": 5.92,
+      "text": "okay that these sets cover"
+    },
+    {
+      "start": 2369.839,
+      "duration": 5.041,
+      "text": "so how many of these sets are there well"
+    },
+    {
+      "start": 2372.16,
+      "duration": 2.72,
+      "text": "there are"
+    },
+    {
+      "start": 2375.04,
+      "duration": 4.96,
+      "text": "two n plus one such sets"
+    },
+    {
+      "start": 2378.079,
+      "duration": 4.081,
+      "text": "all right you got the upper hemisphere"
+    },
+    {
+      "start": 2380.0,
+      "duration": 4.72,
+      "text": "upper alpha hemisphere the lower alpha"
+    },
+    {
+      "start": 2382.16,
+      "duration": 2.56,
+      "text": "hemisphere"
+    },
+    {
+      "start": 2384.96,
+      "duration": 3.36,
+      "text": "and how many hemispheres do you have"
+    },
+    {
+      "start": 2386.32,
+      "duration": 3.759,
+      "text": "well you have n plus one coordinate axes"
+    },
+    {
+      "start": 2388.32,
+      "duration": 2.56,
+      "text": "so you have two times n plus one such"
+    },
+    {
+      "start": 2390.079,
+      "duration": 4.0,
+      "text": "sets"
+    },
+    {
+      "start": 2390.88,
+      "duration": 3.199,
+      "text": "and they certainly cover"
+    },
+    {
+      "start": 2395.119,
+      "duration": 7.521,
+      "text": "sn like every point features and loads"
+    },
+    {
+      "start": 2398.96,
+      "duration": 3.68,
+      "text": "of these these hemispherical sets"
+    },
+    {
+      "start": 2403.44,
+      "duration": 4.96,
+      "text": "now uh great that's the first part"
+    },
+    {
+      "start": 2406.56,
+      "duration": 5.12,
+      "text": "of the definition of a manifold that you"
+    },
+    {
+      "start": 2408.4,
+      "duration": 5.12,
+      "text": "need a whole bunch of sets that cover it"
+    },
+    {
+      "start": 2411.68,
+      "duration": 3.76,
+      "text": "but that's not sufficient right we need"
+    },
+    {
+      "start": 2413.52,
+      "duration": 4.24,
+      "text": "more than the coordinate hemispheres"
+    },
+    {
+      "start": 2415.44,
+      "duration": 3.919,
+      "text": "to describe to give endow this set with"
+    },
+    {
+      "start": 2417.76,
+      "duration": 4.96,
+      "text": "the structure of a manifold"
+    },
+    {
+      "start": 2419.359,
+      "duration": 5.921,
+      "text": "we need also the"
+    },
+    {
+      "start": 2422.72,
+      "duration": 5.2,
+      "text": "the charts or coordinates systems"
+    },
+    {
+      "start": 2425.28,
+      "duration": 2.64,
+      "text": "themselves"
+    },
+    {
+      "start": 2428.72,
+      "duration": 5.119,
+      "text": "and these are specified by maps from"
+    },
+    {
+      "start": 2430.96,
+      "duration": 2.879,
+      "text": "these subsets"
+    },
+    {
+      "start": 2434.0,
+      "duration": 5.04,
+      "text": "to euclidean space so we define the"
+    },
+    {
+      "start": 2436.839,
+      "duration": 4.921,
+      "text": "corresponding"
+    },
+    {
+      "start": 2439.04,
+      "duration": 4.0,
+      "text": "charts psi alpha plus which goes from o"
+    },
+    {
+      "start": 2441.76,
+      "duration": 5.04,
+      "text": "alpha plus"
+    },
+    {
+      "start": 2443.04,
+      "duration": 4.16,
+      "text": "to rn and psi alpha minus that goes from"
+    },
+    {
+      "start": 2446.8,
+      "duration": 4.29,
+      "text": "of"
+    },
+    {
+      "start": 2447.2,
+      "duration": 7.39,
+      "text": "a minus to rn we define them"
+    },
+    {
+      "start": 2451.09,
+      "duration": 3.5,
+      "text": "[Music]"
+    },
+    {
+      "start": 2455.44,
+      "duration": 6.639,
+      "text": "via the following definition"
+    },
+    {
+      "start": 2458.8,
+      "duration": 3.279,
+      "text": "just take the coordinates"
+    },
+    {
+      "start": 2463.44,
+      "duration": 7.52,
+      "text": "the points in the set ul o alpha"
+    },
+    {
+      "start": 2467.599,
+      "duration": 14.24,
+      "text": "and delete delete"
+    },
+    {
+      "start": 2470.96,
+      "duration": 10.879,
+      "text": "the alpha coordinate"
+    },
+    {
+      "start": 2486.56,
+      "duration": 3.36,
+      "text": "and what you get at the end is an"
+    },
+    {
+      "start": 2487.839,
+      "duration": 3.441,
+      "text": "element of our n is really crucial right"
+    },
+    {
+      "start": 2489.92,
+      "duration": 3.04,
+      "text": "you start with points"
+    },
+    {
+      "start": 2491.28,
+      "duration": 3.52,
+      "text": "defined with respect to this weird"
+    },
+    {
+      "start": 2492.96,
+      "duration": 4.0,
+      "text": "embedding space rn plus one"
+    },
+    {
+      "start": 2494.8,
+      "duration": 3.76,
+      "text": "and then the coordinate charts delete"
+    },
+    {
+      "start": 2496.96,
+      "duration": 4.399,
+      "text": "the alpha coordinate"
+    },
+    {
+      "start": 2498.56,
+      "duration": 4.24,
+      "text": "they're vec they're away and then uh we"
+    },
+    {
+      "start": 2501.359,
+      "duration": 3.361,
+      "text": "end up with a vector of"
+    },
+    {
+      "start": 2502.8,
+      "duration": 3.6,
+      "text": "n numbers which is a naturally element"
+    },
+    {
+      "start": 2504.72,
+      "duration": 5.28,
+      "text": "of r n"
+    },
+    {
+      "start": 2506.4,
+      "duration": 4.88,
+      "text": "and that's how we define the charts or"
+    },
+    {
+      "start": 2510.0,
+      "duration": 3.52,
+      "text": "coordinate systems corresponding to"
+    },
+    {
+      "start": 2511.28,
+      "duration": 5.039,
+      "text": "these o alpha sets"
+    },
+    {
+      "start": 2513.52,
+      "duration": 3.92,
+      "text": "now we've done we've presented enough"
+    },
+    {
+      "start": 2516.319,
+      "duration": 4.0,
+      "text": "information"
+    },
+    {
+      "start": 2517.44,
+      "duration": 3.44,
+      "text": "to get the whole manifold so you'll have"
+    },
+    {
+      "start": 2520.319,
+      "duration": 2.241,
+      "text": "noticed"
+    },
+    {
+      "start": 2520.88,
+      "duration": 3.6,
+      "text": "in these previous examples we really"
+    },
+    {
+      "start": 2522.56,
+      "duration": 3.92,
+      "text": "define the manifold"
+    },
+    {
+      "start": 2524.48,
+      "duration": 3.119,
+      "text": "by specifying enough sets to cover the"
+    },
+    {
+      "start": 2526.48,
+      "duration": 2.72,
+      "text": "manifold"
+    },
+    {
+      "start": 2527.599,
+      "duration": 3.441,
+      "text": "and their corresponding charts and then"
+    },
+    {
+      "start": 2529.2,
+      "duration": 2.879,
+      "text": "we just say throw in all the rest that"
+    },
+    {
+      "start": 2531.04,
+      "duration": 2.48,
+      "text": "are compatible"
+    },
+    {
+      "start": 2532.079,
+      "duration": 3.361,
+      "text": "and that's generally speaking how we'll"
+    },
+    {
+      "start": 2533.52,
+      "duration": 5.52,
+      "text": "define manifolds"
+    },
+    {
+      "start": 2535.44,
+      "duration": 4.8,
+      "text": "in general for the rest of this course"
+    },
+    {
+      "start": 2539.04,
+      "duration": 3.2,
+      "text": "we'll just specify"
+    },
+    {
+      "start": 2540.24,
+      "duration": 3.599,
+      "text": "enough covering sets to cover the"
+    },
+    {
+      "start": 2542.24,
+      "duration": 4.0,
+      "text": "manifold we won't specify all the"
+    },
+    {
+      "start": 2543.839,
+      "duration": 5.361,
+      "text": "possible compatible ones those you"
+    },
+    {
+      "start": 2546.24,
+      "duration": 2.96,
+      "text": "just automatically"
+    },
+    {
+      "start": 2549.44,
+      "duration": 4.08,
+      "text": "add in by requiring that they are"
+    },
+    {
+      "start": 2553.92,
+      "duration": 3.12,
+      "text": "that that in the def in your example"
+    },
+    {
+      "start": 2556.4,
+      "duration": 2.24,
+      "text": "that all"
+    },
+    {
+      "start": 2557.04,
+      "duration": 3.279,
+      "text": "possible charts compatible the ones you"
+    },
+    {
+      "start": 2558.64,
+      "duration": 3.439,
+      "text": "already presented are already"
+    },
+    {
+      "start": 2560.319,
+      "duration": 4.481,
+      "text": "automatically included"
+    },
+    {
+      "start": 2562.079,
+      "duration": 3.28,
+      "text": "now there's a special case of sn it's"
+    },
+    {
+      "start": 2564.8,
+      "duration": 3.84,
+      "text": "called"
+    },
+    {
+      "start": 2565.359,
+      "duration": 4.72,
+      "text": "s2 this is familiar to you i hope right"
+    },
+    {
+      "start": 2568.64,
+      "duration": 3.679,
+      "text": "what is it this is the the three"
+    },
+    {
+      "start": 2570.079,
+      "duration": 5.841,
+      "text": "dimension the two-dimensional sphere"
+    },
+    {
+      "start": 2572.319,
+      "duration": 7.361,
+      "text": "embedded in three-dimensional space"
+    },
+    {
+      "start": 2575.92,
+      "duration": 5.6,
+      "text": "this is what it looks like"
+    },
+    {
+      "start": 2579.68,
+      "duration": 4.159,
+      "text": "so you've got three coordinate axes now"
+    },
+    {
+      "start": 2581.52,
+      "duration": 4.4,
+      "text": "in the case of n equals three"
+    },
+    {
+      "start": 2583.839,
+      "duration": 3.681,
+      "text": "and the three dimensional sphere is well"
+    },
+    {
+      "start": 2585.92,
+      "duration": 3.84,
+      "text": "you know what the"
+    },
+    {
+      "start": 2587.52,
+      "duration": 3.68,
+      "text": "sorry the two sphere is you know what it"
+    },
+    {
+      "start": 2589.76,
+      "duration": 6.16,
+      "text": "looks like right"
+    },
+    {
+      "start": 2591.2,
+      "duration": 6.72,
+      "text": "so it's the sphere embedded in r3"
+    },
+    {
+      "start": 2595.92,
+      "duration": 3.6,
+      "text": "and we can just look at some examples of"
+    },
+    {
+      "start": 2597.92,
+      "duration": 6.0,
+      "text": "these coordinate axes"
+    },
+    {
+      "start": 2599.52,
+      "duration": 7.36,
+      "text": "so that's these hemisphere"
+    },
+    {
+      "start": 2603.92,
+      "duration": 4.399,
+      "text": "sets hemispherical covering sets o alpha"
+    },
+    {
+      "start": 2606.88,
+      "duration": 5.199,
+      "text": "so let's take a look at ox"
+    },
+    {
+      "start": 2608.319,
+      "duration": 6.8,
+      "text": "plus minus so ox"
+    },
+    {
+      "start": 2612.079,
+      "duration": 3.441,
+      "text": "plus minus is the set of all points"
+    },
+    {
+      "start": 2615.119,
+      "duration": 6.72,
+      "text": "where"
+    },
+    {
+      "start": 2615.52,
+      "duration": 6.319,
+      "text": "x coordinate was to look at o ox plus"
+    },
+    {
+      "start": 2623.92,
+      "duration": 3.919,
+      "text": "i just want to illustrate ox plus to you"
+    },
+    {
+      "start": 2626.48,
+      "duration": 3.2,
+      "text": "so if you remember"
+    },
+    {
+      "start": 2627.839,
+      "duration": 3.041,
+      "text": "o alpha plus is all the set of all the"
+    },
+    {
+      "start": 2629.68,
+      "duration": 2.96,
+      "text": "points in the"
+    },
+    {
+      "start": 2630.88,
+      "duration": 3.76,
+      "text": "embedding space where the alpha"
+    },
+    {
+      "start": 2632.64,
+      "duration": 3.84,
+      "text": "coordinate is greater than zero"
+    },
+    {
+      "start": 2634.64,
+      "duration": 3.04,
+      "text": "here the x-axis sort of points out of"
+    },
+    {
+      "start": 2636.48,
+      "duration": 3.44,
+      "text": "the screen so to speak"
+    },
+    {
+      "start": 2637.68,
+      "duration": 3.6,
+      "text": "an ox plus is the set of all those"
+    },
+    {
+      "start": 2639.92,
+      "duration": 4.159,
+      "text": "points on the front half"
+    },
+    {
+      "start": 2641.28,
+      "duration": 3.76,
+      "text": "therefore of the sphere so it's this"
+    },
+    {
+      "start": 2644.079,
+      "duration": 4.401,
+      "text": "stuff here"
+    },
+    {
+      "start": 2645.04,
+      "duration": 6.319,
+      "text": "but not the back half"
+    },
+    {
+      "start": 2648.48,
+      "duration": 3.92,
+      "text": "and uh let's draw another one let's try"
+    },
+    {
+      "start": 2651.359,
+      "duration": 5.921,
+      "text": "uh"
+    },
+    {
+      "start": 2652.4,
+      "duration": 4.88,
+      "text": "a y minus so here's the"
+    },
+    {
+      "start": 2657.839,
+      "duration": 7.121,
+      "text": "a circle around the hem"
+    },
+    {
+      "start": 2662.24,
+      "duration": 3.599,
+      "text": "the y equals zero uh equator of the"
+    },
+    {
+      "start": 2664.96,
+      "duration": 3.44,
+      "text": "sphere"
+    },
+    {
+      "start": 2665.839,
+      "duration": 3.441,
+      "text": "and o y minus is the set of all those"
+    },
+    {
+      "start": 2668.4,
+      "duration": 3.84,
+      "text": "points"
+    },
+    {
+      "start": 2669.28,
+      "duration": 2.96,
+      "text": "underneath this"
+    },
+    {
+      "start": 2673.599,
+      "duration": 4.24,
+      "text": "coordinate axis there"
+    },
+    {
+      "start": 2680.24,
+      "duration": 4.4,
+      "text": "so the intersection of o x plus and o y"
+    },
+    {
+      "start": 2683.44,
+      "duration": 4.0,
+      "text": "minus is relevant"
+    },
+    {
+      "start": 2684.64,
+      "duration": 3.84,
+      "text": "in the second is at like a quarter of"
+    },
+    {
+      "start": 2687.44,
+      "duration": 3.52,
+      "text": "the surface"
+    },
+    {
+      "start": 2688.48,
+      "duration": 4.32,
+      "text": "of the sphere here and you can go"
+    },
+    {
+      "start": 2690.96,
+      "duration": 3.119,
+      "text": "through all the possibilities here there"
+    },
+    {
+      "start": 2692.8,
+      "duration": 5.2,
+      "text": "are"
+    },
+    {
+      "start": 2694.079,
+      "duration": 6.961,
+      "text": "there's six possible coordinate"
+    },
+    {
+      "start": 2698.0,
+      "duration": 7.839,
+      "text": "uh charts that we've we specified s2"
+    },
+    {
+      "start": 2701.04,
+      "duration": 4.799,
+      "text": "with respect to um"
+    },
+    {
+      "start": 2706.48,
+      "duration": 5.2,
+      "text": "so look at now let's take a look at the"
+    },
+    {
+      "start": 2710.319,
+      "duration": 3.361,
+      "text": "transition functions the circle"
+    },
+    {
+      "start": 2711.68,
+      "duration": 3.439,
+      "text": "transition functions because we don't"
+    },
+    {
+      "start": 2713.68,
+      "duration": 2.88,
+      "text": "yet have a sphere right"
+    },
+    {
+      "start": 2715.119,
+      "duration": 4.0,
+      "text": "we don't yet have a manifold i've"
+    },
+    {
+      "start": 2716.56,
+      "duration": 4.64,
+      "text": "specified the the sets o alpha the"
+    },
+    {
+      "start": 2719.119,
+      "duration": 3.681,
+      "text": "chart site alpha but you're not allowed"
+    },
+    {
+      "start": 2721.2,
+      "duration": 3.04,
+      "text": "to call it a smooth real manifold unless"
+    },
+    {
+      "start": 2722.8,
+      "duration": 3.6,
+      "text": "these transit circle transition"
+    },
+    {
+      "start": 2724.24,
+      "duration": 6.64,
+      "text": "functions"
+    },
+    {
+      "start": 2726.4,
+      "duration": 4.48,
+      "text": "are all c infinity or smooth functions"
+    },
+    {
+      "start": 2731.04,
+      "duration": 3.44,
+      "text": "so yep let's take a look at this one"
+    },
+    {
+      "start": 2734.96,
+      "duration": 3.2,
+      "text": "so for example you could look at the the"
+    },
+    {
+      "start": 2737.599,
+      "duration": 3.921,
+      "text": "map"
+    },
+    {
+      "start": 2738.16,
+      "duration": 8.0,
+      "text": "the chart that goes from uh"
+    },
+    {
+      "start": 2741.52,
+      "duration": 7.92,
+      "text": "o alpha plus to o y minus and"
+    },
+    {
+      "start": 2746.16,
+      "duration": 8.08,
+      "text": "it's an exercise to show that"
+    },
+    {
+      "start": 2749.44,
+      "duration": 4.8,
+      "text": "this function is given precisely"
+    },
+    {
+      "start": 2757.2,
+      "duration": 3.36,
+      "text": "by this formula sorry when i said o"
+    },
+    {
+      "start": 2759.359,
+      "duration": 7.121,
+      "text": "alpha i should have said"
+    },
+    {
+      "start": 2760.56,
+      "duration": 5.92,
+      "text": "u alpha so this transition function"
+    },
+    {
+      "start": 2772.48,
+      "duration": 6.879,
+      "text": "goes from a subset of u alpha to"
+    },
+    {
+      "start": 2775.599,
+      "duration": 7.681,
+      "text": "a subset of u beta if we go back"
+    },
+    {
+      "start": 2779.359,
+      "duration": 6.561,
+      "text": "to the definition here we see that"
+    },
+    {
+      "start": 2783.28,
+      "duration": 6.559,
+      "text": "u alpha is mapped by this transition"
+    },
+    {
+      "start": 2785.92,
+      "duration": 3.919,
+      "text": "function to u beta"
+    },
+    {
+      "start": 2790.24,
+      "duration": 5.359,
+      "text": "and it's given in r2 precisely by the"
+    },
+    {
+      "start": 2794.0,
+      "duration": 4.16,
+      "text": "formula i've described"
+    },
+    {
+      "start": 2795.599,
+      "duration": 5.441,
+      "text": "and that's an exercise and indeed it's"
+    },
+    {
+      "start": 2798.16,
+      "duration": 2.88,
+      "text": "an exercise"
+    },
+    {
+      "start": 2801.28,
+      "duration": 9.2,
+      "text": "to find the rest"
+    },
+    {
+      "start": 2804.4,
+      "duration": 6.08,
+      "text": "of these transition functions"
+    },
+    {
+      "start": 2813.2,
+      "duration": 9.6,
+      "text": "and show"
+    },
+    {
+      "start": 2817.359,
+      "duration": 5.441,
+      "text": "they are all c infinity smooth functions"
+    },
+    {
+      "start": 2824.079,
+      "duration": 5.52,
+      "text": "okay so before we go on with uh"
+    },
+    {
+      "start": 2827.359,
+      "duration": 3.041,
+      "text": "building up manifolds and the theory of"
+    },
+    {
+      "start": 2829.599,
+      "duration": 2.24,
+      "text": "manifolds"
+    },
+    {
+      "start": 2830.4,
+      "duration": 3.28,
+      "text": "i just want to comment do we need all"
+    },
+    {
+      "start": 2831.839,
+      "duration": 6.721,
+      "text": "this manifold stuff really"
+    },
+    {
+      "start": 2833.68,
+      "duration": 4.88,
+      "text": "um you know i've sort of touched on this"
+    },
+    {
+      "start": 2842.839,
+      "duration": 3.0,
+      "text": "earlier"
+    },
+    {
+      "start": 2849.04,
+      "duration": 3.6,
+      "text": "but i want to amplify this point"
+    },
+    {
+      "start": 2856.079,
+      "duration": 3.441,
+      "text": "the answer is sort of no if you want to"
+    },
+    {
+      "start": 2857.92,
+      "duration": 3.439,
+      "text": "do basic general relativity"
+    },
+    {
+      "start": 2859.52,
+      "duration": 3.44,
+      "text": "uh you probably don't really need all"
+    },
+    {
+      "start": 2861.359,
+      "duration": 3.601,
+      "text": "this manifold stuff it will be"
+    },
+    {
+      "start": 2862.96,
+      "duration": 2.96,
+      "text": "sufficient to cover many of the basic"
+    },
+    {
+      "start": 2864.96,
+      "duration": 2.48,
+      "text": "examples of"
+    },
+    {
+      "start": 2865.92,
+      "duration": 4.08,
+      "text": "the basic solutions of einstein's field"
+    },
+    {
+      "start": 2867.44,
+      "duration": 5.28,
+      "text": "equations just with r4"
+    },
+    {
+      "start": 2870.0,
+      "duration": 3.359,
+      "text": "as a manifold um of course the geometry"
+    },
+    {
+      "start": 2872.72,
+      "duration": 2.96,
+      "text": "changes"
+    },
+    {
+      "start": 2873.359,
+      "duration": 3.681,
+      "text": "but the manifold itself is just r4"
+    },
+    {
+      "start": 2875.68,
+      "duration": 3.04,
+      "text": "underlying it"
+    },
+    {
+      "start": 2877.04,
+      "duration": 3.84,
+      "text": "however really when you want to discuss"
+    },
+    {
+      "start": 2878.72,
+      "duration": 3.52,
+      "text": "more interesting solutions to einstein's"
+    },
+    {
+      "start": 2880.88,
+      "duration": 3.92,
+      "text": "field equations"
+    },
+    {
+      "start": 2882.24,
+      "duration": 3.76,
+      "text": "cosmology non-trivial cosmologies and"
+    },
+    {
+      "start": 2884.8,
+      "duration": 3.2,
+      "text": "black holes"
+    },
+    {
+      "start": 2886.0,
+      "duration": 3.28,
+      "text": "it becomes necessary to consider more"
+    },
+    {
+      "start": 2888.0,
+      "duration": 3.44,
+      "text": "general manifolds"
+    },
+    {
+      "start": 2889.28,
+      "duration": 3.2,
+      "text": "you know ones with holes in them ones"
+    },
+    {
+      "start": 2891.44,
+      "duration": 3.679,
+      "text": "which are"
+    },
+    {
+      "start": 2892.48,
+      "duration": 4.16,
+      "text": "looks like donuts and so on and so forth"
+    },
+    {
+      "start": 2895.119,
+      "duration": 3.041,
+      "text": "and of course in quantum gravity you"
+    },
+    {
+      "start": 2896.64,
+      "duration": 2.24,
+      "text": "want to allow yourself to be able to sum"
+    },
+    {
+      "start": 2898.16,
+      "duration": 4.48,
+      "text": "over"
+    },
+    {
+      "start": 2898.88,
+      "duration": 5.36,
+      "text": "manifolds with non-trivial shapes"
+    },
+    {
+      "start": 2902.64,
+      "duration": 3.04,
+      "text": "so even though the answer is kind of"
+    },
+    {
+      "start": 2904.24,
+      "duration": 3.839,
+      "text": "like for basic general relativity the"
+    },
+    {
+      "start": 2905.68,
+      "duration": 4.879,
+      "text": "answer is no i would argue"
+    },
+    {
+      "start": 2908.079,
+      "duration": 3.76,
+      "text": "and we'll continue to argue that yes the"
+    },
+    {
+      "start": 2910.559,
+      "duration": 4.161,
+      "text": "answer is actually yes"
+    },
+    {
+      "start": 2911.839,
+      "duration": 4.24,
+      "text": "and i'll just give i'll write down two"
+    },
+    {
+      "start": 2914.72,
+      "duration": 3.68,
+      "text": "key examples just"
+    },
+    {
+      "start": 2916.079,
+      "duration": 4.24,
+      "text": "just within general relativity where you"
+    },
+    {
+      "start": 2918.4,
+      "duration": 5.04,
+      "text": "might want to be able to"
+    },
+    {
+      "start": 2920.319,
+      "duration": 4.961,
+      "text": "flexibly uh considered very quite"
+    },
+    {
+      "start": 2923.44,
+      "duration": 3.04,
+      "text": "different manifolds and that's given by"
+    },
+    {
+      "start": 2925.28,
+      "duration": 5.12,
+      "text": "the examples of"
+    },
+    {
+      "start": 2926.48,
+      "duration": 3.92,
+      "text": "cosmological solutions and black holes"
+    },
+    {
+      "start": 2930.64,
+      "duration": 4.479,
+      "text": "now it's all very well if you've got"
+    },
+    {
+      "start": 2935.68,
+      "duration": 3.84,
+      "text": "a couple of examples but when you want"
+    },
+    {
+      "start": 2938.24,
+      "duration": 4.96,
+      "text": "to build up a catalog"
+    },
+    {
+      "start": 2939.52,
+      "duration": 6.079,
+      "text": "of of non-trivial examples"
+    },
+    {
+      "start": 2943.2,
+      "duration": 3.44,
+      "text": "from a definition you typically want to"
+    },
+    {
+      "start": 2945.599,
+      "duration": 3.76,
+      "text": "find a way"
+    },
+    {
+      "start": 2946.64,
+      "duration": 4.4,
+      "text": "to combine your previous examples in"
+    },
+    {
+      "start": 2949.359,
+      "duration": 4.161,
+      "text": "interesting ways"
+    },
+    {
+      "start": 2951.04,
+      "duration": 4.16,
+      "text": "so that you know whatever mathematical"
+    },
+    {
+      "start": 2953.52,
+      "duration": 2.799,
+      "text": "object you're considering"
+    },
+    {
+      "start": 2955.2,
+      "duration": 2.96,
+      "text": "whatever physical theory you're"
+    },
+    {
+      "start": 2956.319,
+      "duration": 3.121,
+      "text": "considering if you've got a couple if"
+    },
+    {
+      "start": 2958.16,
+      "duration": 2.48,
+      "text": "you've got a nice definition and a"
+    },
+    {
+      "start": 2959.44,
+      "duration": 2.72,
+      "text": "couple of examples"
+    },
+    {
+      "start": 2960.64,
+      "duration": 3.919,
+      "text": "it only starts to get rich when you can"
+    },
+    {
+      "start": 2962.16,
+      "duration": 4.64,
+      "text": "prese you can build or furnish"
+    },
+    {
+      "start": 2964.559,
+      "duration": 4.721,
+      "text": "far more examples and for that you want"
+    },
+    {
+      "start": 2966.8,
+      "duration": 5.36,
+      "text": "to be able to build new examples and"
+    },
+    {
+      "start": 2969.28,
+      "duration": 4.24,
+      "text": "manifolds are no exception here so here"
+    },
+    {
+      "start": 2972.16,
+      "duration": 4.48,
+      "text": "we want to suppose that"
+    },
+    {
+      "start": 2973.52,
+      "duration": 6.0,
+      "text": "you know m and m prime"
+    },
+    {
+      "start": 2976.64,
+      "duration": 2.88,
+      "text": "are manifolds"
+    },
+    {
+      "start": 2980.8,
+      "duration": 7.84,
+      "text": "smooth real manifolds of dimension"
+    },
+    {
+      "start": 2985.599,
+      "duration": 3.041,
+      "text": "n and n prime"
+    },
+    {
+      "start": 2988.96,
+      "duration": 2.8,
+      "text": "respectively"
+    },
+    {
+      "start": 2993.52,
+      "duration": 5.76,
+      "text": "then we want to use these to build new"
+    },
+    {
+      "start": 2996.48,
+      "duration": 6.56,
+      "text": "examples and the simplest way to do this"
+    },
+    {
+      "start": 2999.28,
+      "duration": 3.76,
+      "text": "is by the so-called product construction"
+    },
+    {
+      "start": 3007.04,
+      "duration": 6.799,
+      "text": "the product space manifold"
+    },
+    {
+      "start": 3015.44,
+      "duration": 3.04,
+      "text": "and how do you do that well you're just"
+    },
+    {
+      "start": 3017.04,
+      "duration": 3.44,
+      "text": "going to take all the data that you"
+    },
+    {
+      "start": 3018.48,
+      "duration": 3.839,
+      "text": "that defines m and m prime separately as"
+    },
+    {
+      "start": 3020.48,
+      "duration": 2.16,
+      "text": "manifolds and some stick it together to"
+    },
+    {
+      "start": 3022.319,
+      "duration": 3.601,
+      "text": "get"
+    },
+    {
+      "start": 3022.64,
+      "duration": 5.199,
+      "text": "enough data to define a manifold that"
+    },
+    {
+      "start": 3025.92,
+      "duration": 4.88,
+      "text": "somehow matches your intuition of what"
+    },
+    {
+      "start": 3027.839,
+      "duration": 2.961,
+      "text": "the product should be"
+    },
+    {
+      "start": 3031.52,
+      "duration": 9.28,
+      "text": "so we have to build up some charts right"
+    },
+    {
+      "start": 3035.839,
+      "duration": 7.921,
+      "text": "so suppose we have the following charts"
+    },
+    {
+      "start": 3040.8,
+      "duration": 4.0,
+      "text": "coordinate systems defining separately"
+    },
+    {
+      "start": 3043.76,
+      "duration": 10.4,
+      "text": "or"
+    },
+    {
+      "start": 3044.8,
+      "duration": 10.88,
+      "text": "defining separately m and m prime"
+    },
+    {
+      "start": 3054.16,
+      "duration": 3.439,
+      "text": "then we want to be able to present"
+    },
+    {
+      "start": 3055.68,
+      "duration": 14.159,
+      "text": "enough charts for this thing that we"
+    },
+    {
+      "start": 3057.599,
+      "duration": 12.24,
+      "text": "call m cross m prime"
+    },
+    {
+      "start": 3072.4,
+      "duration": 7.199,
+      "text": "then so given these two charts"
+    },
+    {
+      "start": 3076.16,
+      "duration": 7.679,
+      "text": "we're going to define our chart for m"
+    },
+    {
+      "start": 3079.599,
+      "duration": 4.24,
+      "text": "cross m prime via"
+    },
+    {
+      "start": 3089.2,
+      "duration": 6.8,
+      "text": "psi we'll call it say alpha beta now"
+    },
+    {
+      "start": 3092.319,
+      "duration": 4.321,
+      "text": "and how does it work well it goes from a"
+    },
+    {
+      "start": 3096.0,
+      "duration": 3.68,
+      "text": "set called"
+    },
+    {
+      "start": 3096.64,
+      "duration": 6.08,
+      "text": "o alpha beta to a subset u"
+    },
+    {
+      "start": 3099.68,
+      "duration": 7.04,
+      "text": "alpha beta of our"
+    },
+    {
+      "start": 3102.72,
+      "duration": 7.359,
+      "text": "n plus rn prime times rn prime"
+    },
+    {
+      "start": 3106.72,
+      "duration": 5.52,
+      "text": "with oh alpha beta"
+    },
+    {
+      "start": 3110.079,
+      "duration": 3.52,
+      "text": "this has got to be a subset that covers"
+    },
+    {
+      "start": 3112.24,
+      "duration": 4.4,
+      "text": "our putative new"
+    },
+    {
+      "start": 3113.599,
+      "duration": 3.76,
+      "text": "product manifold here it is you just"
+    },
+    {
+      "start": 3116.64,
+      "duration": 4.16,
+      "text": "take"
+    },
+    {
+      "start": 3117.359,
+      "duration": 5.681,
+      "text": "the corresponding uh cover covering sets"
+    },
+    {
+      "start": 3120.8,
+      "duration": 3.2,
+      "text": "from the respective manifolds and u"
+    },
+    {
+      "start": 3123.04,
+      "duration": 4.72,
+      "text": "alpha beta"
+    },
+    {
+      "start": 3124.0,
+      "duration": 5.28,
+      "text": "is of course u alpha cross u beta prime"
+    },
+    {
+      "start": 3127.76,
+      "duration": 4.079,
+      "text": "and i haven't told you what these psi"
+    },
+    {
+      "start": 3129.28,
+      "duration": 5.839,
+      "text": "alpha betas are yet well i will now"
+    },
+    {
+      "start": 3131.839,
+      "duration": 6.72,
+      "text": "psi alpha beta acting on a point p in"
+    },
+    {
+      "start": 3135.119,
+      "duration": 8.321,
+      "text": "m and a p p prime and m prime"
+    },
+    {
+      "start": 3138.559,
+      "duration": 4.881,
+      "text": "is defined to be well you know just take"
+    },
+    {
+      "start": 3143.68,
+      "duration": 13.439,
+      "text": "the corresponding points"
+    },
+    {
+      "start": 3152.88,
+      "duration": 4.239,
+      "text": "in uh n"
+    },
+    {
+      "start": 3157.359,
+      "duration": 2.801,
+      "text": "plus n prime"
+    },
+    {
+      "start": 3160.4,
+      "duration": 4.08,
+      "text": "and this has got to hold for all pairs p"
+    },
+    {
+      "start": 3162.96,
+      "duration": 5.28,
+      "text": "p prime which are in this"
+    },
+    {
+      "start": 3164.48,
+      "duration": 6.48,
+      "text": "cartesian products at mm prime"
+    },
+    {
+      "start": 3168.24,
+      "duration": 3.359,
+      "text": "okay that's that that then presents"
+    },
+    {
+      "start": 3170.96,
+      "duration": 3.119,
+      "text": "enough"
+    },
+    {
+      "start": 3171.599,
+      "duration": 4.561,
+      "text": "enough sets to cover this new product"
+    },
+    {
+      "start": 3174.079,
+      "duration": 4.24,
+      "text": "set m cross m prime and then there's"
+    },
+    {
+      "start": 3176.16,
+      "duration": 5.679,
+      "text": "enough charts and they're all smooth"
+    },
+    {
+      "start": 3178.319,
+      "duration": 3.52,
+      "text": "that's all an exercise"
+    },
+    {
+      "start": 3187.839,
+      "duration": 3.841,
+      "text": "so you've got to show that the"
+    },
+    {
+      "start": 3188.88,
+      "duration": 6.32,
+      "text": "transition functions are smooth"
+    },
+    {
+      "start": 3191.68,
+      "duration": 5.2,
+      "text": "and then another exercise is to just"
+    },
+    {
+      "start": 3195.2,
+      "duration": 3.44,
+      "text": "you know we've been speaking about rn"
+    },
+    {
+      "start": 3196.88,
+      "duration": 4.239,
+      "text": "fairly uh"
+    },
+    {
+      "start": 3198.64,
+      "duration": 4.4,
+      "text": "loosely the whole time as a manifold but"
+    },
+    {
+      "start": 3201.119,
+      "duration": 5.72,
+      "text": "really i want you to realize now"
+    },
+    {
+      "start": 3203.04,
+      "duration": 6.799,
+      "text": "rn as this cartesian this products based"
+    },
+    {
+      "start": 3206.839,
+      "duration": 3.0,
+      "text": "construction"
+    },
+    {
+      "start": 3214.24,
+      "duration": 3.76,
+      "text": "now it's kind of interesting that with"
+    },
+    {
+      "start": 3215.839,
+      "duration": 4.0,
+      "text": "just these two examples effectively two"
+    },
+    {
+      "start": 3218.0,
+      "duration": 4.8,
+      "text": "examples of the sphere and rn you can"
+    },
+    {
+      "start": 3219.839,
+      "duration": 6.24,
+      "text": "realize quite a lot of interesting"
+    },
+    {
+      "start": 3222.8,
+      "duration": 3.279,
+      "text": "examples now with the product"
+    },
+    {
+      "start": 3234.839,
+      "duration": 4.52,
+      "text": "construction"
+    },
+    {
+      "start": 3236.48,
+      "duration": 14.0,
+      "text": "so just with these two families and"
+    },
+    {
+      "start": 3239.359,
+      "duration": 14.24,
+      "text": "their products"
+    },
+    {
+      "start": 3250.48,
+      "duration": 3.119,
+      "text": "one can build many"
+    },
+    {
+      "start": 3255.68,
+      "duration": 6.32,
+      "text": "interesting examples or relevant"
+    },
+    {
+      "start": 3259.359,
+      "duration": 2.641,
+      "text": "manifolds"
+    },
+    {
+      "start": 3263.68,
+      "duration": 3.36,
+      "text": "for general relativity lots of"
+    },
+    {
+      "start": 3265.119,
+      "duration": 2.24,
+      "text": "cosmological solutions can be realized"
+    },
+    {
+      "start": 3267.04,
+      "duration": 3.519,
+      "text": "as"
+    },
+    {
+      "start": 3267.359,
+      "duration": 4.24,
+      "text": "products of say r and circle so on and"
+    },
+    {
+      "start": 3270.559,
+      "duration": 4.0,
+      "text": "so forth"
+    },
+    {
+      "start": 3271.599,
+      "duration": 4.24,
+      "text": "or like you know an example that should"
+    },
+    {
+      "start": 3274.559,
+      "duration": 4.081,
+      "text": "be familiar to with you"
+    },
+    {
+      "start": 3275.839,
+      "duration": 3.921,
+      "text": "um is the taurus for example you know"
+    },
+    {
+      "start": 3278.64,
+      "duration": 4.32,
+      "text": "that's just this"
+    },
+    {
+      "start": 3279.76,
+      "duration": 4.96,
+      "text": "the circle across the circle etc"
+    },
+    {
+      "start": 3282.96,
+      "duration": 6.24,
+      "text": "etc you know then you can take the"
+    },
+    {
+      "start": 3284.72,
+      "duration": 4.48,
+      "text": "taurus product with the real numbers and"
+    },
+    {
+      "start": 3291.2,
+      "duration": 3.84,
+      "text": "now so far i've just defined to you what"
+    },
+    {
+      "start": 3293.599,
+      "duration": 3.2,
+      "text": "is this real smooth manifold of"
+    },
+    {
+      "start": 3295.04,
+      "duration": 4.72,
+      "text": "dimension in"
+    },
+    {
+      "start": 3296.799,
+      "duration": 3.681,
+      "text": "now we want to build up or want to endow"
+    },
+    {
+      "start": 3299.76,
+      "duration": 2.799,
+      "text": "this"
+    },
+    {
+      "start": 3300.48,
+      "duration": 3.44,
+      "text": "the class of all manifolds with a"
+    },
+    {
+      "start": 3302.559,
+      "duration": 3.841,
+      "text": "category structure we want to be able to"
+    },
+    {
+      "start": 3303.92,
+      "duration": 4.639,
+      "text": "talk about"
+    },
+    {
+      "start": 3306.4,
+      "duration": 5.439,
+      "text": "manifolds different manifolds winner to"
+    },
+    {
+      "start": 3308.559,
+      "duration": 3.28,
+      "text": "the same one or two different"
+    },
+    {
+      "start": 3313.92,
+      "duration": 7.919,
+      "text": "so our next goal is to endow the class"
+    },
+    {
+      "start": 3317.119,
+      "duration": 4.72,
+      "text": "of manifolds"
+    },
+    {
+      "start": 3322.0,
+      "duration": 3.92,
+      "text": "with a so-called category structure"
+    },
+    {
+      "start": 3329.28,
+      "duration": 5.279,
+      "text": "that's just fancy talk for saying that"
+    },
+    {
+      "start": 3331.359,
+      "duration": 4.72,
+      "text": "um we're gonna just"
+    },
+    {
+      "start": 3334.559,
+      "duration": 4.56,
+      "text": "define what it means to have a map"
+    },
+    {
+      "start": 3336.079,
+      "duration": 3.04,
+      "text": "between manifolds"
+    },
+    {
+      "start": 3343.92,
+      "duration": 4.08,
+      "text": "by describing morphisms morphisms is the"
+    },
+    {
+      "start": 3346.319,
+      "duration": 5.28,
+      "text": "fancy word for what does it mean"
+    },
+    {
+      "start": 3348.0,
+      "duration": 3.599,
+      "text": "to have maps between"
+    },
+    {
+      "start": 3356.24,
+      "duration": 4.24,
+      "text": "two manifolds okay let's define what we"
+    },
+    {
+      "start": 3359.599,
+      "duration": 3.921,
+      "text": "now mean by"
+    },
+    {
+      "start": 3360.48,
+      "duration": 6.8,
+      "text": "a map between two manifolds"
+    },
+    {
+      "start": 3363.52,
+      "duration": 6.72,
+      "text": "so let m and m prime"
+    },
+    {
+      "start": 3367.28,
+      "duration": 2.96,
+      "text": "be manifolds"
+    },
+    {
+      "start": 3370.48,
+      "duration": 4.359,
+      "text": "we're going to want to define what it"
+    },
+    {
+      "start": 3371.839,
+      "duration": 6.0,
+      "text": "means to have a map from m to m prime"
+    },
+    {
+      "start": 3374.839,
+      "duration": 3.0,
+      "text": "now"
+    },
+    {
+      "start": 3377.92,
+      "duration": 4.399,
+      "text": "and let psi alpha and psi beta prime be"
+    },
+    {
+      "start": 3381.52,
+      "duration": 3.92,
+      "text": "the"
+    },
+    {
+      "start": 3382.319,
+      "duration": 3.121,
+      "text": "coordinate charts"
+    },
+    {
+      "start": 3386.96,
+      "duration": 6.24,
+      "text": "here the the the underlying cover"
+    },
+    {
+      "start": 3390.0,
+      "duration": 3.2,
+      "text": "is now left implied"
+    },
+    {
+      "start": 3394.16,
+      "duration": 3.84,
+      "text": "so now we have a map a map of sets f"
+    },
+    {
+      "start": 3397.359,
+      "duration": 2.801,
+      "text": "between"
+    },
+    {
+      "start": 3398.0,
+      "duration": 4.079,
+      "text": "m and m prime remember m and m prime"
+    },
+    {
+      "start": 3400.16,
+      "duration": 4.32,
+      "text": "sets underlying it all they always says"
+    },
+    {
+      "start": 3402.079,
+      "duration": 4.961,
+      "text": "so we can have a map between them"
+    },
+    {
+      "start": 3404.48,
+      "duration": 3.599,
+      "text": "we have us is this really a map of"
+    },
+    {
+      "start": 3407.04,
+      "duration": 4.16,
+      "text": "manifolds"
+    },
+    {
+      "start": 3408.079,
+      "duration": 8.401,
+      "text": "well it is it's said to be"
+    },
+    {
+      "start": 3411.2,
+      "duration": 5.28,
+      "text": "a c infinity map smooth map"
+    },
+    {
+      "start": 3417.52,
+      "duration": 3.599,
+      "text": "between these two manifolds"
+    },
+    {
+      "start": 3421.359,
+      "duration": 7.041,
+      "text": "if for all alpha beta"
+    },
+    {
+      "start": 3425.28,
+      "duration": 8.559,
+      "text": "the following map of s"
+    },
+    {
+      "start": 3428.4,
+      "duration": 5.439,
+      "text": "of r n is smooth or c infinity"
+    },
+    {
+      "start": 3444.64,
+      "duration": 5.04,
+      "text": "so c infinity is synonymous with the"
+    },
+    {
+      "start": 3446.88,
+      "duration": 2.8,
+      "text": "word smooth"
+    },
+    {
+      "start": 3452.16,
+      "duration": 3.52,
+      "text": "okay so let's draw a picture"
+    },
+    {
+      "start": 3453.76,
+      "duration": 6.96,
+      "text": "representing the situation here"
+    },
+    {
+      "start": 3455.68,
+      "duration": 6.11,
+      "text": "so here's m here's"
+    },
+    {
+      "start": 3460.72,
+      "duration": 4.169,
+      "text": "m prime"
+    },
+    {
+      "start": 3461.79,
+      "duration": 3.099,
+      "text": "[Music]"
+    },
+    {
+      "start": 3466.16,
+      "duration": 9.679,
+      "text": "here's o alpha"
+    },
+    {
+      "start": 3469.52,
+      "duration": 6.319,
+      "text": "is o alpha prime"
+    },
+    {
+      "start": 3478.16,
+      "duration": 5.76,
+      "text": "remember corresponding to any subset"
+    },
+    {
+      "start": 3481.839,
+      "duration": 3.28,
+      "text": "or an element of our chart there's now"
+    },
+    {
+      "start": 3483.92,
+      "duration": 4.399,
+      "text": "i'll maps psi"
+    },
+    {
+      "start": 3485.119,
+      "duration": 6.401,
+      "text": "alpha to a map u alpha uh to set"
+    },
+    {
+      "start": 3488.319,
+      "duration": 3.201,
+      "text": "u alpha in r n"
+    },
+    {
+      "start": 3492.48,
+      "duration": 5.44,
+      "text": "u alpha prime here r n"
+    },
+    {
+      "start": 3495.599,
+      "duration": 2.321,
+      "text": "prime"
+    },
+    {
+      "start": 3499.68,
+      "duration": 4.159,
+      "text": "the dimensions are gonna be assumed the"
+    },
+    {
+      "start": 3501.04,
+      "duration": 2.799,
+      "text": "same by the way"
+    },
+    {
+      "start": 3504.16,
+      "duration": 3.28,
+      "text": "and now we can build the map"
+    },
+    {
+      "start": 3507.76,
+      "duration": 10.079,
+      "text": "i believe there's an inverse missing in"
+    },
+    {
+      "start": 3509.359,
+      "duration": 8.48,
+      "text": "my definition here"
+    },
+    {
+      "start": 3524.799,
+      "duration": 7.04,
+      "text": "so f is a map between"
+    },
+    {
+      "start": 3527.92,
+      "duration": 3.919,
+      "text": "m and m prime"
+    },
+    {
+      "start": 3536.079,
+      "duration": 10.641,
+      "text": "i believe i have a missing minus here"
+    },
+    {
+      "start": 3544.16,
+      "duration": 3.439,
+      "text": "so we now have we can form a map that"
+    },
+    {
+      "start": 3546.72,
+      "duration": 4.48,
+      "text": "goes between"
+    },
+    {
+      "start": 3547.599,
+      "duration": 6.24,
+      "text": "u alpha and u alpha prime"
+    },
+    {
+      "start": 3551.2,
+      "duration": 2.639,
+      "text": "by first"
+    },
+    {
+      "start": 3554.64,
+      "duration": 7.28,
+      "text": "mapping from u alpha to m via"
+    },
+    {
+      "start": 3558.079,
+      "duration": 3.841,
+      "text": "psi alpha inverse"
+    },
+    {
+      "start": 3565.04,
+      "duration": 3.6,
+      "text": "applying f and then mapping down from m"
+    },
+    {
+      "start": 3567.92,
+      "duration": 5.04,
+      "text": "prime"
+    },
+    {
+      "start": 3568.64,
+      "duration": 7.52,
+      "text": "to rn via psi beta prime"
+    },
+    {
+      "start": 3572.96,
+      "duration": 4.159,
+      "text": "and that induces this map here so first"
+    },
+    {
+      "start": 3576.16,
+      "duration": 4.72,
+      "text": "we go from"
+    },
+    {
+      "start": 3577.119,
+      "duration": 5.281,
+      "text": "rn back into m via psi alpha minus"
+    },
+    {
+      "start": 3580.88,
+      "duration": 3.439,
+      "text": "then we do the map f which is going"
+    },
+    {
+      "start": 3582.4,
+      "duration": 5.36,
+      "text": "between m and m prime by assumption"
+    },
+    {
+      "start": 3584.319,
+      "duration": 6.721,
+      "text": "and then we go from m prime to"
+    },
+    {
+      "start": 3587.76,
+      "duration": 7.2,
+      "text": "r n via psi beta prime"
+    },
+    {
+      "start": 3591.04,
+      "duration": 3.92,
+      "text": "so we get this red induced function"
+    },
+    {
+      "start": 3595.04,
+      "duration": 7.12,
+      "text": "and this"
+    },
+    {
+      "start": 3598.96,
+      "duration": 4.8,
+      "text": "map between manifolds is is said to be c"
+    },
+    {
+      "start": 3602.16,
+      "duration": 4.08,
+      "text": "infinity or smooth"
+    },
+    {
+      "start": 3603.76,
+      "duration": 12.079,
+      "text": "if this corresponding red function here"
+    },
+    {
+      "start": 3606.24,
+      "duration": 9.599,
+      "text": "is c infinity"
+    },
+    {
+      "start": 3621.68,
+      "duration": 2.399,
+      "text": "indeed"
+    },
+    {
+      "start": 3627.44,
+      "duration": 2.879,
+      "text": "good now"
+    },
+    {
+      "start": 3630.88,
+      "duration": 3.28,
+      "text": "we have a notion of a map between"
+    },
+    {
+      "start": 3632.64,
+      "duration": 4.959,
+      "text": "manifolds and now we can"
+    },
+    {
+      "start": 3634.16,
+      "duration": 3.84,
+      "text": "say what it means for two manifolds to"
+    },
+    {
+      "start": 3637.599,
+      "duration": 6.24,
+      "text": "be"
+    },
+    {
+      "start": 3638.0,
+      "duration": 5.839,
+      "text": "the same manifold"
+    },
+    {
+      "start": 3652.799,
+      "duration": 4.721,
+      "text": "so a manifold m and m prime are the same"
+    },
+    {
+      "start": 3655.92,
+      "duration": 3.76,
+      "text": "if there's a map between them"
+    },
+    {
+      "start": 3657.52,
+      "duration": 3.039,
+      "text": "but not just any map we need a kind of"
+    },
+    {
+      "start": 3659.68,
+      "duration": 4.399,
+      "text": "equals sign"
+    },
+    {
+      "start": 3660.559,
+      "duration": 5.52,
+      "text": "for manifolds and the thing"
+    },
+    {
+      "start": 3664.079,
+      "duration": 3.681,
+      "text": "that takes the place or the role of the"
+    },
+    {
+      "start": 3666.079,
+      "duration": 4.561,
+      "text": "equal sign is"
+    },
+    {
+      "start": 3667.76,
+      "duration": 4.64,
+      "text": "a so-called diffumorphism so if f going"
+    },
+    {
+      "start": 3670.64,
+      "duration": 5.04,
+      "text": "between m and m prime"
+    },
+    {
+      "start": 3672.4,
+      "duration": 6.8,
+      "text": "is it a c infinity"
+    },
+    {
+      "start": 3675.68,
+      "duration": 6.72,
+      "text": "one to one"
+    },
+    {
+      "start": 3679.2,
+      "duration": 3.2,
+      "text": "and onto map"
+    },
+    {
+      "start": 3683.119,
+      "duration": 2.72,
+      "text": "and"
+    },
+    {
+      "start": 3686.799,
+      "duration": 4.0,
+      "text": "if this function has a c infinity"
+    },
+    {
+      "start": 3688.96,
+      "duration": 3.52,
+      "text": "inverse so"
+    },
+    {
+      "start": 3690.799,
+      "duration": 3.921,
+      "text": "you can invert it and it has all the"
+    },
+    {
+      "start": 3692.48,
+      "duration": 2.24,
+      "text": "same"
+    },
+    {
+      "start": 3694.799,
+      "duration": 6.241,
+      "text": "and it's also smooth then we give this"
+    },
+    {
+      "start": 3698.0,
+      "duration": 3.04,
+      "text": "special function a name"
+    },
+    {
+      "start": 3701.44,
+      "duration": 4.56,
+      "text": "we call it a diffumorphism"
+    },
+    {
+      "start": 3710.319,
+      "duration": 4.321,
+      "text": "now the existence of a differeomorphism"
+    },
+    {
+      "start": 3713.119,
+      "duration": 2.401,
+      "text": "between two manifolds is really what we"
+    },
+    {
+      "start": 3714.64,
+      "duration": 5.52,
+      "text": "mean by them being"
+    },
+    {
+      "start": 3715.52,
+      "duration": 12.319,
+      "text": "the same manifold so"
+    },
+    {
+      "start": 3720.16,
+      "duration": 7.679,
+      "text": "if there exists a diffumorphism"
+    },
+    {
+      "start": 3730.88,
+      "duration": 3.76,
+      "text": "then we call the two manifolds"
+    },
+    {
+      "start": 3738.839,
+      "duration": 3.0,
+      "text": "diphyomorphic"
+    },
+    {
+      "start": 3742.24,
+      "duration": 3.839,
+      "text": "physics translation they're equal"
+    },
+    {
+      "start": 3746.4,
+      "duration": 6.56,
+      "text": "they're equal because you can"
+    },
+    {
+      "start": 3749.839,
+      "duration": 6.641,
+      "text": "show that the manifolds m"
+    },
+    {
+      "start": 3752.96,
+      "duration": 5.92,
+      "text": "and m prime have identical manifold"
+    },
+    {
+      "start": 3756.48,
+      "duration": 2.4,
+      "text": "structure"
+    },
+    {
+      "start": 3764.799,
+      "duration": 6.24,
+      "text": "right they have the same you can"
+    },
+    {
+      "start": 3769.119,
+      "duration": 3.68,
+      "text": "when you define them via charts they"
+    },
+    {
+      "start": 3771.039,
+      "duration": 3.28,
+      "text": "have the same you can identify all the"
+    },
+    {
+      "start": 3772.799,
+      "duration": 3.361,
+      "text": "charts you can identify all the"
+    },
+    {
+      "start": 3774.319,
+      "duration": 3.52,
+      "text": "the transition functions everything can"
+    },
+    {
+      "start": 3776.16,
+      "duration": 4.639,
+      "text": "be identified"
+    },
+    {
+      "start": 3777.839,
+      "duration": 4.561,
+      "text": "and set and therefore they're equal"
+    },
+    {
+      "start": 3780.799,
+      "duration": 2.641,
+      "text": "they're not only equals underlying sets"
+    },
+    {
+      "start": 3782.4,
+      "duration": 2.8,
+      "text": "to equal"
+    },
+    {
+      "start": 3783.44,
+      "duration": 3.76,
+      "text": "all this baggage on top of charts is"
+    },
+    {
+      "start": 3785.2,
+      "duration": 4.96,
+      "text": "equal as well"
+    },
+    {
+      "start": 3787.2,
+      "duration": 4.8,
+      "text": "now so far we've been talking about"
+    },
+    {
+      "start": 3790.16,
+      "duration": 4.0,
+      "text": "manifolds and manifolds are meant to"
+    },
+    {
+      "start": 3792.0,
+      "duration": 5.28,
+      "text": "supply us with a more general notion of"
+    },
+    {
+      "start": 3794.16,
+      "duration": 6.639,
+      "text": "what it means to be a continuer"
+    },
+    {
+      "start": 3797.28,
+      "duration": 5.839,
+      "text": "or an n-dimensional continuum"
+    },
+    {
+      "start": 3800.799,
+      "duration": 4.721,
+      "text": "now that's all very well and good but it"
+    },
+    {
+      "start": 3803.119,
+      "duration": 4.081,
+      "text": "turns out to do local physics we want"
+    },
+    {
+      "start": 3805.52,
+      "duration": 3.279,
+      "text": "more structure we want to we want to"
+    },
+    {
+      "start": 3807.2,
+      "duration": 2.159,
+      "text": "take we're quite greedy we want to take"
+    },
+    {
+      "start": 3808.799,
+      "duration": 3.201,
+      "text": "as much"
+    },
+    {
+      "start": 3809.359,
+      "duration": 3.361,
+      "text": "of the structure from familiar euclidean"
+    },
+    {
+      "start": 3812.0,
+      "duration": 5.28,
+      "text": "space and"
+    },
+    {
+      "start": 3812.72,
+      "duration": 6.319,
+      "text": "import it into our notion of a manifold"
+    },
+    {
+      "start": 3817.28,
+      "duration": 3.759,
+      "text": "and here it's important to comment that"
+    },
+    {
+      "start": 3819.039,
+      "duration": 4.161,
+      "text": "when you come up with a definition"
+    },
+    {
+      "start": 3821.039,
+      "duration": 4.32,
+      "text": "that's meant to generalize something it"
+    },
+    {
+      "start": 3823.2,
+      "duration": 3.599,
+      "text": "has to apply to more examples and so if"
+    },
+    {
+      "start": 3825.359,
+      "duration": 2.72,
+      "text": "something if a definition applies to"
+    },
+    {
+      "start": 3826.799,
+      "duration": 4.8,
+      "text": "more examples"
+    },
+    {
+      "start": 3828.079,
+      "duration": 6.0,
+      "text": "then you're going to lose uh resolution"
+    },
+    {
+      "start": 3831.599,
+      "duration": 4.081,
+      "text": "in the concepts so if there's a concept"
+    },
+    {
+      "start": 3834.079,
+      "duration": 3.04,
+      "text": "if there's a specific example you're"
+    },
+    {
+      "start": 3835.68,
+      "duration": 2.96,
+      "text": "trying to generalize to a more general"
+    },
+    {
+      "start": 3837.119,
+      "duration": 3.361,
+      "text": "class of things"
+    },
+    {
+      "start": 3838.64,
+      "duration": 4.32,
+      "text": "and that example has lots of structure"
+    },
+    {
+      "start": 3840.48,
+      "duration": 2.48,
+      "text": "then if you"
+    },
+    {
+      "start": 3843.359,
+      "duration": 3.041,
+      "text": "come up with a general definition that"
+    },
+    {
+      "start": 3845.039,
+      "duration": 2.481,
+      "text": "captures this example but a whole bunch"
+    },
+    {
+      "start": 3846.4,
+      "duration": 4.719,
+      "text": "of other examples"
+    },
+    {
+      "start": 3847.52,
+      "duration": 5.36,
+      "text": "then you will necessarily lose"
+    },
+    {
+      "start": 3851.119,
+      "duration": 3.521,
+      "text": "some of the structure that you're trying"
+    },
+    {
+      "start": 3852.88,
+      "duration": 4.32,
+      "text": "to generalize"
+    },
+    {
+      "start": 3854.64,
+      "duration": 3.28,
+      "text": "so you think about euclidean space for a"
+    },
+    {
+      "start": 3857.2,
+      "duration": 3.04,
+      "text": "moment you know"
+    },
+    {
+      "start": 3857.92,
+      "duration": 4.0,
+      "text": "you it's it's familiar to you euclidean"
+    },
+    {
+      "start": 3860.24,
+      "duration": 4.4,
+      "text": "space it's this flat"
+    },
+    {
+      "start": 3861.92,
+      "duration": 3.679,
+      "text": "collection of n-tuples so you could in"
+    },
+    {
+      "start": 3864.64,
+      "duration": 4.399,
+      "text": "space"
+    },
+    {
+      "start": 3865.599,
+      "duration": 5.121,
+      "text": "uh is a is a continuum but euclidean"
+    },
+    {
+      "start": 3869.039,
+      "duration": 3.121,
+      "text": "space is also is another thing it's a"
+    },
+    {
+      "start": 3870.72,
+      "duration": 2.96,
+      "text": "vector space"
+    },
+    {
+      "start": 3872.16,
+      "duration": 4.0,
+      "text": "euclidean space is a lot of things it's"
+    },
+    {
+      "start": 3873.68,
+      "duration": 5.119,
+      "text": "a group a mathematical group"
+    },
+    {
+      "start": 3876.16,
+      "duration": 4.08,
+      "text": "and all these these features that you"
+    },
+    {
+      "start": 3878.799,
+      "duration": 4.56,
+      "text": "euclidean space have"
+    },
+    {
+      "start": 3880.24,
+      "duration": 4.799,
+      "text": "may or may not survive uh in the"
+    },
+    {
+      "start": 3883.359,
+      "duration": 3.361,
+      "text": "manifold world when you try and"
+    },
+    {
+      "start": 3885.039,
+      "duration": 3.921,
+      "text": "generalize the notion of what a"
+    },
+    {
+      "start": 3886.72,
+      "duration": 4.399,
+      "text": "continuum is you may not be able to"
+    },
+    {
+      "start": 3888.96,
+      "duration": 2.48,
+      "text": "preserve the the structure of rn as a"
+    },
+    {
+      "start": 3891.119,
+      "duration": 2.081,
+      "text": "group"
+    },
+    {
+      "start": 3891.44,
+      "duration": 3.2,
+      "text": "indeed that turns out to be the case and"
+    },
+    {
+      "start": 3893.2,
+      "duration": 4.72,
+      "text": "you won't be able to preserve"
+    },
+    {
+      "start": 3894.64,
+      "duration": 5.199,
+      "text": "uh the vector space structure of of rn"
+    },
+    {
+      "start": 3897.92,
+      "duration": 4.0,
+      "text": "when you consider more general examples"
+    },
+    {
+      "start": 3899.839,
+      "duration": 3.52,
+      "text": "a more general manifold will not be a"
+    },
+    {
+      "start": 3901.92,
+      "duration": 3.199,
+      "text": "vector space"
+    },
+    {
+      "start": 3903.359,
+      "duration": 3.68,
+      "text": "but we want to preserve as much as we"
+    },
+    {
+      "start": 3905.119,
+      "duration": 3.2,
+      "text": "can particularly of this vector space"
+    },
+    {
+      "start": 3907.039,
+      "duration": 3.201,
+      "text": "structure because this helps us to do"
+    },
+    {
+      "start": 3908.319,
+      "duration": 5.28,
+      "text": "local physics without vectors"
+    },
+    {
+      "start": 3910.24,
+      "duration": 5.04,
+      "text": "we aren't able to do to define equations"
+    },
+    {
+      "start": 3913.599,
+      "duration": 3.2,
+      "text": "of motion for test particles in our"
+    },
+    {
+      "start": 3915.28,
+      "duration": 2.72,
+      "text": "space time so we want to preserve as"
+    },
+    {
+      "start": 3916.799,
+      "duration": 7.04,
+      "text": "much of the notion of say"
+    },
+    {
+      "start": 3918.0,
+      "duration": 5.839,
+      "text": "vector as possible"
+    },
+    {
+      "start": 3924.079,
+      "duration": 12.081,
+      "text": "so first comment is that euclidean"
+    },
+    {
+      "start": 3927.28,
+      "duration": 12.96,
+      "text": "and minkowski space"
+    },
+    {
+      "start": 3936.16,
+      "duration": 4.08,
+      "text": "has a natural vector space structure"
+    },
+    {
+      "start": 3949.52,
+      "duration": 2.559,
+      "text": "ie"
+    },
+    {
+      "start": 3953.2,
+      "duration": 7.04,
+      "text": "v which is rn"
+    },
+    {
+      "start": 3956.24,
+      "duration": 4.0,
+      "text": "is both a manifold and a vector space"
+    },
+    {
+      "start": 3960.319,
+      "duration": 4.72,
+      "text": "it certainly can be endowed with a"
+    },
+    {
+      "start": 3962.079,
+      "duration": 8.161,
+      "text": "manipulate structure"
+    },
+    {
+      "start": 3965.039,
+      "duration": 5.201,
+      "text": "but it also happens to be a vector space"
+    },
+    {
+      "start": 3975.839,
+      "duration": 4.161,
+      "text": "and it's it's a vector space globally"
+    },
+    {
+      "start": 3978.64,
+      "duration": 3.199,
+      "text": "right"
+    },
+    {
+      "start": 3980.0,
+      "duration": 4.16,
+      "text": "the whole space itself is the vector"
+    },
+    {
+      "start": 3981.839,
+      "duration": 2.321,
+      "text": "space"
+    },
+    {
+      "start": 3985.119,
+      "duration": 3.68,
+      "text": "now the next really important comment"
+    },
+    {
+      "start": 3987.76,
+      "duration": 3.52,
+      "text": "you know we've introduced the"
+    },
+    {
+      "start": 3988.799,
+      "duration": 4.481,
+      "text": "generalized notion of a continuum"
+    },
+    {
+      "start": 3991.28,
+      "duration": 3.279,
+      "text": "we don't get to keep vector space"
+    },
+    {
+      "start": 3993.28,
+      "duration": 4.559,
+      "text": "structure when we"
+    },
+    {
+      "start": 3994.559,
+      "duration": 5.921,
+      "text": "generalize our notions so for general"
+    },
+    {
+      "start": 3997.839,
+      "duration": 2.641,
+      "text": "manifolds"
+    },
+    {
+      "start": 4001.44,
+      "duration": 6.159,
+      "text": "it's not always the case that the"
+    },
+    {
+      "start": 4002.96,
+      "duration": 7.2,
+      "text": "manifold is a vector space"
+    },
+    {
+      "start": 4007.599,
+      "duration": 3.361,
+      "text": "so one loses and even if you look at the"
+    },
+    {
+      "start": 4010.16,
+      "duration": 3.28,
+      "text": "sphere"
+    },
+    {
+      "start": 4010.96,
+      "duration": 3.44,
+      "text": "you can see that this is the case one"
+    },
+    {
+      "start": 4013.44,
+      "duration": 4.56,
+      "text": "loses"
+    },
+    {
+      "start": 4014.4,
+      "duration": 7.439,
+      "text": "as an example of a manifold one loses"
+    },
+    {
+      "start": 4018.0,
+      "duration": 3.839,
+      "text": "the vector space structure"
+    },
+    {
+      "start": 4022.4,
+      "duration": 2.88,
+      "text": "it's too bad hey"
+    },
+    {
+      "start": 4028.88,
+      "duration": 4.4,
+      "text": "because there's no additive structure"
+    },
+    {
+      "start": 4030.88,
+      "duration": 2.4,
+      "text": "anymore"
+    },
+    {
+      "start": 4033.839,
+      "duration": 4.321,
+      "text": "yeah there's probably you can think of a"
+    },
+    {
+      "start": 4036.0,
+      "duration": 5.119,
+      "text": "perverse way to add items"
+    },
+    {
+      "start": 4038.16,
+      "duration": 3.679,
+      "text": "and add elements of the vector space but"
+    },
+    {
+      "start": 4041.119,
+      "duration": 2.321,
+      "text": "uh"
+    },
+    {
+      "start": 4041.839,
+      "duration": 3.681,
+      "text": "so maybe i should just say there's no"
+    },
+    {
+      "start": 4043.44,
+      "duration": 5.2,
+      "text": "natural"
+    },
+    {
+      "start": 4045.52,
+      "duration": 6.559,
+      "text": "additive structure that"
+    },
+    {
+      "start": 4048.64,
+      "duration": 4.959,
+      "text": "inherits or smoothly deforms the vector"
+    },
+    {
+      "start": 4052.079,
+      "duration": 4.24,
+      "text": "space structure of rn"
+    },
+    {
+      "start": 4053.599,
+      "duration": 3.2,
+      "text": "and so the example you know one example"
+    },
+    {
+      "start": 4056.319,
+      "duration": 3.04,
+      "text": "is"
+    },
+    {
+      "start": 4056.799,
+      "duration": 2.56,
+      "text": "is sn"
+    },
+    {
+      "start": 4061.039,
+      "duration": 5.681,
+      "text": "or even s2 right s2 is not a vector"
+    },
+    {
+      "start": 4063.839,
+      "duration": 2.881,
+      "text": "space as i said"
+    },
+    {
+      "start": 4073.76,
+      "duration": 3.599,
+      "text": "it is however possible to associate"
+    },
+    {
+      "start": 4075.839,
+      "duration": 14.801,
+      "text": "vector spaces"
+    },
+    {
+      "start": 4077.359,
+      "duration": 15.121,
+      "text": "to manifolds"
+    },
+    {
+      "start": 4090.64,
+      "duration": 15.199,
+      "text": "and that's something that's rather"
+    },
+    {
+      "start": 4092.48,
+      "duration": 13.359,
+      "text": "interesting about euclidean space"
+    },
+    {
+      "start": 4108.159,
+      "duration": 4.801,
+      "text": "so euclidean space is globally a vector"
+    },
+    {
+      "start": 4110.88,
+      "duration": 4.08,
+      "text": "space you can"
+    },
+    {
+      "start": 4112.96,
+      "duration": 3.68,
+      "text": "add two elements multiply them by"
+    },
+    {
+      "start": 4114.96,
+      "duration": 5.12,
+      "text": "scalars and so on"
+    },
+    {
+      "start": 4116.64,
+      "duration": 5.519,
+      "text": "but rn euclidean space is also if you"
+    },
+    {
+      "start": 4120.08,
+      "duration": 3.759,
+      "text": "if you like an infinite number of vector"
+    },
+    {
+      "start": 4122.159,
+      "duration": 3.761,
+      "text": "spaces with"
+    },
+    {
+      "start": 4123.839,
+      "duration": 3.201,
+      "text": "associated to each point in rn you can"
+    },
+    {
+      "start": 4125.92,
+      "duration": 4.319,
+      "text": "associate well"
+    },
+    {
+      "start": 4127.04,
+      "duration": 3.6,
+      "text": "rn right that sounds a bit strange but"
+    },
+    {
+      "start": 4130.239,
+      "duration": 2.641,
+      "text": "this"
+    },
+    {
+      "start": 4130.64,
+      "duration": 3.36,
+      "text": "example of sn i think better highlights"
+    },
+    {
+      "start": 4132.88,
+      "duration": 4.24,
+      "text": "what i mean"
+    },
+    {
+      "start": 4134.0,
+      "duration": 5.44,
+      "text": "or s2 so in s2"
+    },
+    {
+      "start": 4137.12,
+      "duration": 5.039,
+      "text": "the sphere the surface of the sphere or"
+    },
+    {
+      "start": 4139.44,
+      "duration": 2.719,
+      "text": "the two sphere"
+    },
+    {
+      "start": 4142.719,
+      "duration": 3.281,
+      "text": "we don't have a natural vector space"
+    },
+    {
+      "start": 4145.279,
+      "duration": 3.52,
+      "text": "structure left"
+    },
+    {
+      "start": 4146.0,
+      "duration": 5.759,
+      "text": "on s2 there's no way no natural way to"
+    },
+    {
+      "start": 4148.799,
+      "duration": 5.52,
+      "text": "add elements of s2"
+    },
+    {
+      "start": 4151.759,
+      "duration": 4.241,
+      "text": "and get a vector space structure but"
+    },
+    {
+      "start": 4154.319,
+      "duration": 4.4,
+      "text": "there is actually associated"
+    },
+    {
+      "start": 4156.0,
+      "duration": 5.44,
+      "text": "s2 or to every point in s2 a natural"
+    },
+    {
+      "start": 4158.719,
+      "duration": 5.52,
+      "text": "vector space"
+    },
+    {
+      "start": 4161.44,
+      "duration": 3.759,
+      "text": "and that's the tangent space so if you"
+    },
+    {
+      "start": 4164.239,
+      "duration": 4.0,
+      "text": "have a point p"
+    },
+    {
+      "start": 4165.199,
+      "duration": 6.08,
+      "text": "on s2 then we can associate"
+    },
+    {
+      "start": 4168.239,
+      "duration": 4.96,
+      "text": "to that point p the tangent space this"
+    },
+    {
+      "start": 4171.279,
+      "duration": 3.52,
+      "text": "is the"
+    },
+    {
+      "start": 4173.199,
+      "duration": 5.12,
+      "text": "two two-dimensional hyperplane that"
+    },
+    {
+      "start": 4174.799,
+      "duration": 3.52,
+      "text": "kisses the sphere at that point"
+    },
+    {
+      "start": 4182.56,
+      "duration": 4.48,
+      "text": "so this two-dimensional hyperplane also"
+    },
+    {
+      "start": 4185.44,
+      "duration": 3.759,
+      "text": "called tangent space at p"
+    },
+    {
+      "start": 4187.04,
+      "duration": 3.6,
+      "text": "is a vector space right even though s2"
+    },
+    {
+      "start": 4189.199,
+      "duration": 2.16,
+      "text": "is not a vector space we lost that"
+    },
+    {
+      "start": 4190.64,
+      "duration": 4.24,
+      "text": "structure"
+    },
+    {
+      "start": 4191.359,
+      "duration": 5.201,
+      "text": "we still locally if you zoom in s2 looks"
+    },
+    {
+      "start": 4194.88,
+      "duration": 4.72,
+      "text": "like r2 and therefore"
+    },
+    {
+      "start": 4196.56,
+      "duration": 4.48,
+      "text": "um and you can associate this this plane"
+    },
+    {
+      "start": 4199.6,
+      "duration": 2.88,
+      "text": "to it this tangent plane"
+    },
+    {
+      "start": 4201.04,
+      "duration": 3.199,
+      "text": "and this tangent plane most certainly is"
+    },
+    {
+      "start": 4202.48,
+      "duration": 4.16,
+      "text": "a vector space or a vector subspace of"
+    },
+    {
+      "start": 4204.239,
+      "duration": 2.401,
+      "text": "r3"
+    },
+    {
+      "start": 4207.76,
+      "duration": 3.84,
+      "text": "so that works when you have this okay"
+    },
+    {
+      "start": 4209.6,
+      "duration": 3.2,
+      "text": "this is a bit clumsy because i told you"
+    },
+    {
+      "start": 4211.6,
+      "duration": 2.32,
+      "text": "we don't want to do things with embedded"
+    },
+    {
+      "start": 4212.8,
+      "duration": 2.399,
+      "text": "manifolds we're going to do everything"
+    },
+    {
+      "start": 4213.92,
+      "duration": 3.279,
+      "text": "intrinsically we don't want to make"
+    },
+    {
+      "start": 4215.199,
+      "duration": 3.281,
+      "text": "reference to this embedding space"
+    },
+    {
+      "start": 4217.199,
+      "duration": 3.601,
+      "text": "so it's a bit clumsy it looks like it"
+    },
+    {
+      "start": 4218.48,
+      "duration": 5.759,
+      "text": "may even in fact depend on how you embed"
+    },
+    {
+      "start": 4220.8,
+      "duration": 3.439,
+      "text": "your manifold into r3"
+    },
+    {
+      "start": 4224.88,
+      "duration": 4.319,
+      "text": "so we so we have a problem right with"
+    },
+    {
+      "start": 4227.199,
+      "duration": 2.721,
+      "text": "this idea of associating to each point"
+    },
+    {
+      "start": 4229.199,
+      "duration": 5.201,
+      "text": "in a manifold"
+    },
+    {
+      "start": 4229.92,
+      "duration": 7.68,
+      "text": "vector space so what if"
+    },
+    {
+      "start": 4234.4,
+      "duration": 11.44,
+      "text": "we define things"
+    },
+    {
+      "start": 4237.6,
+      "duration": 8.24,
+      "text": "or how to define things intrinsically"
+    },
+    {
+      "start": 4249.679,
+      "duration": 5.201,
+      "text": "we don't want to make reference to this"
+    },
+    {
+      "start": 4250.96,
+      "duration": 3.92,
+      "text": "embedding space can we even do this"
+    },
+    {
+      "start": 4255.04,
+      "duration": 3.44,
+      "text": "exclamation mark question mark is it"
+    },
+    {
+      "start": 4257.199,
+      "duration": 2.721,
+      "text": "possible well of course the answer is"
+    },
+    {
+      "start": 4258.48,
+      "duration": 4.239,
+      "text": "yes i wouldn't ask the question if it"
+    },
+    {
+      "start": 4259.92,
+      "duration": 2.799,
+      "text": "wasn't possible"
+    },
+    {
+      "start": 4262.96,
+      "duration": 3.36,
+      "text": "and it's kind of an interesting round"
+    },
+    {
+      "start": 4264.32,
+      "duration": 5.12,
+      "text": "about way of doing things"
+    },
+    {
+      "start": 4266.32,
+      "duration": 6.08,
+      "text": "so what we do is we we first"
+    },
+    {
+      "start": 4269.44,
+      "duration": 4.4,
+      "text": "identify this tangents-based structure"
+    },
+    {
+      "start": 4272.4,
+      "duration": 3.44,
+      "text": "with some other vector space that you"
+    },
+    {
+      "start": 4273.84,
+      "duration": 4.399,
+      "text": "can define intrinsically and then"
+    },
+    {
+      "start": 4275.84,
+      "duration": 5.2,
+      "text": "we define the tangent space to be that"
+    },
+    {
+      "start": 4278.239,
+      "duration": 2.801,
+      "text": "that other space"
+    },
+    {
+      "start": 4283.199,
+      "duration": 6.161,
+      "text": "so we first identify the vector space of"
+    },
+    {
+      "start": 4286.48,
+      "duration": 2.88,
+      "text": "tangent vectors"
+    },
+    {
+      "start": 4298.56,
+      "duration": 3.28,
+      "text": "with another vector space"
+    },
+    {
+      "start": 4302.719,
+      "duration": 13.121,
+      "text": "namely the vector space"
+    },
+    {
+      "start": 4305.92,
+      "duration": 9.92,
+      "text": "of directional derivatives"
+    },
+    {
+      "start": 4320.0,
+      "duration": 6.239,
+      "text": "and then we don't define tangent space"
+    },
+    {
+      "start": 4324.32,
+      "duration": 5.52,
+      "text": "intrinsically we define directional"
+    },
+    {
+      "start": 4326.239,
+      "duration": 3.601,
+      "text": "derivatives intrinsically"
+    },
+    {
+      "start": 4341.04,
+      "duration": 4.0,
+      "text": "a lovely little puzzle when you're"
+    },
+    {
+      "start": 4342.48,
+      "duration": 5.84,
+      "text": "trying to build more general definitions"
+    },
+    {
+      "start": 4345.04,
+      "duration": 7.199,
+      "text": "you try and isolate aspects"
+    },
+    {
+      "start": 4348.32,
+      "duration": 6.399,
+      "text": "of your definition that capture notions"
+    },
+    {
+      "start": 4352.239,
+      "duration": 4.401,
+      "text": "and then you search around equivalent"
+    },
+    {
+      "start": 4354.719,
+      "duration": 3.44,
+      "text": "realizations of these notions until you"
+    },
+    {
+      "start": 4356.64,
+      "duration": 2.72,
+      "text": "find something that's transferable to"
+    },
+    {
+      "start": 4358.159,
+      "duration": 2.721,
+      "text": "your more general scenario and that's"
+    },
+    {
+      "start": 4359.36,
+      "duration": 3.359,
+      "text": "the case here"
+    },
+    {
+      "start": 4360.88,
+      "duration": 3.359,
+      "text": "we we you know when you think of a"
+    },
+    {
+      "start": 4362.719,
+      "duration": 3.121,
+      "text": "tangent vector probably you're thinking"
+    },
+    {
+      "start": 4364.239,
+      "duration": 4.081,
+      "text": "of it geometrically you think of the"
+    },
+    {
+      "start": 4365.84,
+      "duration": 3.68,
+      "text": "the the surface embedded in r n you"
+    },
+    {
+      "start": 4368.32,
+      "duration": 3.2,
+      "text": "think of the tangent vector is a little"
+    },
+    {
+      "start": 4369.52,
+      "duration": 4.719,
+      "text": "arrow that's stuck with its base on the"
+    },
+    {
+      "start": 4371.52,
+      "duration": 4.24,
+      "text": "surface the tangent to the surface"
+    },
+    {
+      "start": 4374.239,
+      "duration": 3.121,
+      "text": "and then the tangent space of such"
+    },
+    {
+      "start": 4375.76,
+      "duration": 2.959,
+      "text": "vectors is kind of easy to realize in"
+    },
+    {
+      "start": 4377.36,
+      "duration": 2.879,
+      "text": "your mind"
+    },
+    {
+      "start": 4378.719,
+      "duration": 2.641,
+      "text": "but that picture you can't draw when you"
+    },
+    {
+      "start": 4380.239,
+      "duration": 2.881,
+      "text": "don't we're not allowed to make"
+    },
+    {
+      "start": 4381.36,
+      "duration": 4.96,
+      "text": "reference to this embedding space so"
+    },
+    {
+      "start": 4383.12,
+      "duration": 6.8,
+      "text": "we we now limit our"
+    },
+    {
+      "start": 4386.32,
+      "duration": 5.04,
+      "text": "uh our thinking and we say okay we're"
+    },
+    {
+      "start": 4389.92,
+      "duration": 2.64,
+      "text": "not allowed to make reference to the"
+    },
+    {
+      "start": 4391.36,
+      "duration": 2.64,
+      "text": "embedding space anymore"
+    },
+    {
+      "start": 4392.56,
+      "duration": 3.2,
+      "text": "could we come up with an equivalent"
+    },
+    {
+      "start": 4394.0,
+      "duration": 3.28,
+      "text": "notion of a tangential vector and the"
+    },
+    {
+      "start": 4395.76,
+      "duration": 2.88,
+      "text": "idea is right to every tangent vector"
+    },
+    {
+      "start": 4397.28,
+      "duration": 3.12,
+      "text": "there's a one to one and onto map"
+    },
+    {
+      "start": 4398.64,
+      "duration": 3.519,
+      "text": "between tangent vectors and directional"
+    },
+    {
+      "start": 4400.4,
+      "duration": 4.48,
+      "text": "derivatives"
+    },
+    {
+      "start": 4402.159,
+      "duration": 4.401,
+      "text": "and amazingly directional derivative is"
+    },
+    {
+      "start": 4404.88,
+      "duration": 5.359,
+      "text": "a notion that you can define"
+    },
+    {
+      "start": 4406.56,
+      "duration": 4.32,
+      "text": "intrinsically so that's where we're"
+    },
+    {
+      "start": 4410.239,
+      "duration": 3.841,
+      "text": "going to end"
+    },
+    {
+      "start": 4410.88,
+      "duration": 5.04,
+      "text": "the video for today's lecture"
+    },
+    {
+      "start": 4414.08,
+      "duration": 3.68,
+      "text": "in today's lecture we introduced the"
+    },
+    {
+      "start": 4415.92,
+      "duration": 5.04,
+      "text": "notion of a smooth manifold"
+    },
+    {
+      "start": 4417.76,
+      "duration": 6.16,
+      "text": "as a way of generalizing the idea of a"
+    },
+    {
+      "start": 4420.96,
+      "duration": 3.759,
+      "text": "continuous or a four-dimensional"
+    },
+    {
+      "start": 4423.92,
+      "duration": 4.239,
+      "text": "continuous"
+    },
+    {
+      "start": 4424.719,
+      "duration": 5.601,
+      "text": "to a more from the euclidean space to a"
+    },
+    {
+      "start": 4428.159,
+      "duration": 5.52,
+      "text": "more general setting"
+    },
+    {
+      "start": 4430.32,
+      "duration": 7.2,
+      "text": "we also commence the discussion of"
+    },
+    {
+      "start": 4433.679,
+      "duration": 5.841,
+      "text": "tangent space of a smooth manifold"
+    },
+    {
+      "start": 4437.52,
+      "duration": 5.52,
+      "text": "thank you very much and i look forward"
+    },
+    {
+      "start": 4439.52,
+      "duration": 3.52,
+      "text": "to seeing you in the next video"
+    },
+    {
+      "start": 4445.04,
+      "duration": 4.159,
+      "text": "for those of you are sticking around i'm"
+    },
+    {
+      "start": 4447.12,
+      "duration": 4.32,
+      "text": "just going to spend a couple of minutes"
+    },
+    {
+      "start": 4449.199,
+      "duration": 3.04,
+      "text": "going diving a little deeper into the"
+    },
+    {
+      "start": 4451.44,
+      "duration": 4.0,
+      "text": "definition"
+    },
+    {
+      "start": 4452.239,
+      "duration": 5.281,
+      "text": "of a smooth manifold this material is"
+    },
+    {
+      "start": 4455.44,
+      "duration": 3.279,
+      "text": "not required for the course however you"
+    },
+    {
+      "start": 4457.52,
+      "duration": 4.88,
+      "text": "might be curious"
+    },
+    {
+      "start": 4458.719,
+      "duration": 5.121,
+      "text": "how the how to derive how to define a"
+    },
+    {
+      "start": 4462.4,
+      "duration": 3.6,
+      "text": "smooth manifold"
+    },
+    {
+      "start": 4463.84,
+      "duration": 3.359,
+      "text": "in a mathematically rigorous way with"
+    },
+    {
+      "start": 4466.0,
+      "duration": 3.12,
+      "text": "reference to some"
+    },
+    {
+      "start": 4467.199,
+      "duration": 4.321,
+      "text": "aspects from point set and general"
+    },
+    {
+      "start": 4469.12,
+      "duration": 3.2,
+      "text": "topology so that's the purpose of this"
+    },
+    {
+      "start": 4471.52,
+      "duration": 11.44,
+      "text": "additional"
+    },
+    {
+      "start": 4472.32,
+      "duration": 12.72,
+      "text": "hazardous terrain track of this video"
+    },
+    {
+      "start": 4482.96,
+      "duration": 4.08,
+      "text": "so now i'm going to present to you uh"
+    },
+    {
+      "start": 4485.04,
+      "duration": 4.4,
+      "text": "the formal mathematical definition"
+    },
+    {
+      "start": 4487.04,
+      "duration": 4.88,
+      "text": "of a smooth smooth manifold in its full"
+    },
+    {
+      "start": 4489.44,
+      "duration": 5.4,
+      "text": "completeness"
+    },
+    {
+      "start": 4491.92,
+      "duration": 5.44,
+      "text": "so really to do things properly you have"
+    },
+    {
+      "start": 4494.84,
+      "duration": 5.64,
+      "text": "to"
+    },
+    {
+      "start": 4497.36,
+      "duration": 7.2,
+      "text": "first introduce the notion of"
+    },
+    {
+      "start": 4500.48,
+      "duration": 4.08,
+      "text": "something called a locally euclidean"
+    },
+    {
+      "start": 4505.12,
+      "duration": 4.8,
+      "text": "space m"
+    },
+    {
+      "start": 4508.719,
+      "duration": 2.881,
+      "text": "so if you want to define a smooth"
+    },
+    {
+      "start": 4509.92,
+      "duration": 2.48,
+      "text": "manifold or a more general class of"
+    },
+    {
+      "start": 4511.6,
+      "duration": 2.32,
+      "text": "manifold"
+    },
+    {
+      "start": 4512.4,
+      "duration": 2.799,
+      "text": "we want to at least come up with a"
+    },
+    {
+      "start": 4513.92,
+      "duration": 10.72,
+      "text": "notion of something that you might call"
+    },
+    {
+      "start": 4515.199,
+      "duration": 10.401,
+      "text": "a local euclidean space now a local"
+    },
+    {
+      "start": 4524.64,
+      "duration": 5.28,
+      "text": "euclidean space"
+    },
+    {
+      "start": 4525.6,
+      "duration": 14.24,
+      "text": "m of dimension d what is it well it's a"
+    },
+    {
+      "start": 4529.92,
+      "duration": 9.92,
+      "text": "halsdorf topological space"
+    },
+    {
+      "start": 4542.8,
+      "duration": 3.439,
+      "text": "so you have to remember what that is you"
+    },
+    {
+      "start": 4544.56,
+      "duration": 2.48,
+      "text": "know to every point you can put an open"
+    },
+    {
+      "start": 4546.239,
+      "duration": 3.601,
+      "text": "set around to"
+    },
+    {
+      "start": 4547.04,
+      "duration": 4.32,
+      "text": "any pair of points that separates them"
+    },
+    {
+      "start": 4549.84,
+      "duration": 4.0,
+      "text": "health topological space"
+    },
+    {
+      "start": 4551.36,
+      "duration": 2.48,
+      "text": "m"
+    },
+    {
+      "start": 4555.199,
+      "duration": 5.281,
+      "text": "for which each point"
+    },
+    {
+      "start": 4562.4,
+      "duration": 5.44,
+      "text": "has a neighborhood"
+    },
+    {
+      "start": 4572.4,
+      "duration": 2.88,
+      "text": "homeomorphic"
+    },
+    {
+      "start": 4577.199,
+      "duration": 5.121,
+      "text": "continuous function continuous inverse"
+    },
+    {
+      "start": 4579.52,
+      "duration": 6.88,
+      "text": "to an open"
+    },
+    {
+      "start": 4582.32,
+      "duration": 6.08,
+      "text": "subset of rd okay so in building up the"
+    },
+    {
+      "start": 4586.4,
+      "duration": 3.92,
+      "text": "rigorous the fully rigorous mathematical"
+    },
+    {
+      "start": 4588.4,
+      "duration": 2.56,
+      "text": "definition of a smooth manifold or a"
+    },
+    {
+      "start": 4590.32,
+      "duration": 3.6,
+      "text": "manifold"
+    },
+    {
+      "start": 4590.96,
+      "duration": 3.84,
+      "text": "of class ck we need to have this"
+    },
+    {
+      "start": 4593.92,
+      "duration": 3.12,
+      "text": "underlying"
+    },
+    {
+      "start": 4594.8,
+      "duration": 4.64,
+      "text": "structure of of the local euclidean"
+    },
+    {
+      "start": 4597.04,
+      "duration": 8.32,
+      "text": "space first"
+    },
+    {
+      "start": 4599.44,
+      "duration": 8.719,
+      "text": "so following this route we are now able"
+    },
+    {
+      "start": 4605.36,
+      "duration": 4.16,
+      "text": "to commence the full definition of a"
+    },
+    {
+      "start": 4608.159,
+      "duration": 5.281,
+      "text": "differentiable"
+    },
+    {
+      "start": 4609.52,
+      "duration": 6.08,
+      "text": "smooth manifold by"
+    },
+    {
+      "start": 4613.44,
+      "duration": 4.719,
+      "text": "layering on additional structure on this"
+    },
+    {
+      "start": 4615.6,
+      "duration": 2.559,
+      "text": "definition"
+    },
+    {
+      "start": 4619.679,
+      "duration": 3.281,
+      "text": "so the next layer of structure that we"
+    },
+    {
+      "start": 4621.04,
+      "duration": 4.4,
+      "text": "add on is the notion of a differentiable"
+    },
+    {
+      "start": 4622.96,
+      "duration": 2.48,
+      "text": "structure"
+    },
+    {
+      "start": 4628.32,
+      "duration": 4.56,
+      "text": "calligraphic f so a differential"
+    },
+    {
+      "start": 4630.4,
+      "duration": 6.96,
+      "text": "structure differentiable structure f"
+    },
+    {
+      "start": 4632.88,
+      "duration": 4.48,
+      "text": "of class c ck"
+    },
+    {
+      "start": 4639.199,
+      "duration": 3.201,
+      "text": "where one is less than k is less than"
+    },
+    {
+      "start": 4641.679,
+      "duration": 4.241,
+      "text": "infinity"
+    },
+    {
+      "start": 4642.4,
+      "duration": 3.52,
+      "text": "less than equal to infinity"
+    },
+    {
+      "start": 4649.44,
+      "duration": 4.56,
+      "text": "on a locally euclidean space"
+    },
+    {
+      "start": 4660.0,
+      "duration": 4.56,
+      "text": "m what is it well this is this is the"
+    },
+    {
+      "start": 4663.679,
+      "duration": 4.161,
+      "text": "part"
+    },
+    {
+      "start": 4664.56,
+      "duration": 5.119,
+      "text": "of the definition which captures parts"
+    },
+    {
+      "start": 4667.84,
+      "duration": 4.96,
+      "text": "one and two of the definition i"
+    },
+    {
+      "start": 4669.679,
+      "duration": 3.121,
+      "text": "presented in the main lecture"
+    },
+    {
+      "start": 4673.36,
+      "duration": 5.28,
+      "text": "luckily clean space m is a collection of"
+    },
+    {
+      "start": 4676.0,
+      "duration": 5.36,
+      "text": "coordinate systems"
+    },
+    {
+      "start": 4678.64,
+      "duration": 2.72,
+      "text": "or charts"
+    },
+    {
+      "start": 4683.76,
+      "duration": 6.399,
+      "text": "o alpha psi alpha such that alpha is in"
+    },
+    {
+      "start": 4687.84,
+      "duration": 5.359,
+      "text": "some indexing set a"
+    },
+    {
+      "start": 4690.159,
+      "duration": 6.401,
+      "text": "such that"
+    },
+    {
+      "start": 4693.199,
+      "duration": 6.081,
+      "text": "well a these sets cover"
+    },
+    {
+      "start": 4696.56,
+      "duration": 3.36,
+      "text": "when you union over all these oa or"
+    },
+    {
+      "start": 4699.28,
+      "duration": 5.56,
+      "text": "alphas"
+    },
+    {
+      "start": 4699.92,
+      "duration": 7.279,
+      "text": "they cover m b these transition"
+    },
+    {
+      "start": 4704.84,
+      "duration": 6.2,
+      "text": "functions"
+    },
+    {
+      "start": 4707.199,
+      "duration": 3.841,
+      "text": "are ck"
+    },
+    {
+      "start": 4714.239,
+      "duration": 3.841,
+      "text": "or at least ck for all"
+    },
+    {
+      "start": 4718.159,
+      "duration": 16.161,
+      "text": "alpha beta in these indexing sets and c"
+    },
+    {
+      "start": 4722.0,
+      "duration": 16.239,
+      "text": "the collection f is maximum"
+    },
+    {
+      "start": 4734.32,
+      "duration": 7.359,
+      "text": "with respect to b"
+    },
+    {
+      "start": 4738.239,
+      "duration": 6.801,
+      "text": "and this is the structure that captures"
+    },
+    {
+      "start": 4741.679,
+      "duration": 4.56,
+      "text": "parts one and two of our definition"
+    },
+    {
+      "start": 4745.04,
+      "duration": 4.44,
+      "text": "presented in the main lecture and"
+    },
+    {
+      "start": 4746.239,
+      "duration": 6.241,
+      "text": "finally now we come to a d"
+    },
+    {
+      "start": 4749.48,
+      "duration": 3.0,
+      "text": "dimensional"
+    },
+    {
+      "start": 4752.8,
+      "duration": 11.04,
+      "text": "differentiable manifold"
+    },
+    {
+      "start": 4765.52,
+      "duration": 6.96,
+      "text": "of class c k"
+    },
+    {
+      "start": 4769.44,
+      "duration": 8.32,
+      "text": "and uh this notion can actually be"
+    },
+    {
+      "start": 4772.48,
+      "duration": 8.48,
+      "text": "beautifully generalized to quote a big"
+    },
+    {
+      "start": 4777.76,
+      "duration": 6.479,
+      "text": "a much larger class of structures so ck"
+    },
+    {
+      "start": 4780.96,
+      "duration": 3.279,
+      "text": "can be generalized"
+    },
+    {
+      "start": 4784.88,
+      "duration": 3.76,
+      "text": "to c infinity well that's essentially"
+    },
+    {
+      "start": 4787.92,
+      "duration": 2.4,
+      "text": "included"
+    },
+    {
+      "start": 4788.64,
+      "duration": 3.76,
+      "text": "in the definition already but complex"
+    },
+    {
+      "start": 4790.32,
+      "duration": 4.399,
+      "text": "structures"
+    },
+    {
+      "start": 4792.4,
+      "duration": 3.279,
+      "text": "etc there's lots of ways to generalize"
+    },
+    {
+      "start": 4794.719,
+      "duration": 2.321,
+      "text": "this notion of a different"
+    },
+    {
+      "start": 4795.679,
+      "duration": 2.961,
+      "text": "differentiable structure and therefore"
+    },
+    {
+      "start": 4797.04,
+      "duration": 6.08,
+      "text": "you get different things"
+    },
+    {
+      "start": 4798.64,
+      "duration": 6.16,
+      "text": "such as complex manifolds is a pair"
+    },
+    {
+      "start": 4803.12,
+      "duration": 3.28,
+      "text": "what is it it's a pair of a local"
+    },
+    {
+      "start": 4804.8,
+      "duration": 4.08,
+      "text": "euclidean space and a differentiable"
+    },
+    {
+      "start": 4806.4,
+      "duration": 2.48,
+      "text": "structure"
+    },
+    {
+      "start": 4815.44,
+      "duration": 4.4,
+      "text": "d dimensional second countable"
+    },
+    {
+      "start": 4822.639,
+      "duration": 3.121,
+      "text": "local euclidean"
+    },
+    {
+      "start": 4830.84,
+      "duration": 5.64,
+      "text": "space m together with a differentiable"
+    },
+    {
+      "start": 4844.84,
+      "duration": 3.0,
+      "text": "structure"
+    },
+    {
+      "start": 4849.6,
+      "duration": 3.119,
+      "text": "of class ck"
+    },
+    {
+      "start": 4856.159,
+      "duration": 3.441,
+      "text": "okay so that's the end of this"
+    },
+    {
+      "start": 4858.639,
+      "duration": 3.441,
+      "text": "additional"
+    },
+    {
+      "start": 4859.6,
+      "duration": 3.039,
+      "text": "hazardous terrain track of this video as"
+    },
+    {
+      "start": 4862.08,
+      "duration": 3.04,
+      "text": "i said"
+    },
+    {
+      "start": 4862.639,
+      "duration": 4.801,
+      "text": "at the commencement of this additional"
+    },
+    {
+      "start": 4865.12,
+      "duration": 4.4,
+      "text": "section this material is not required"
+    },
+    {
+      "start": 4867.44,
+      "duration": 3.759,
+      "text": "for this course it is only presented for"
+    },
+    {
+      "start": 4869.52,
+      "duration": 3.84,
+      "text": "those of you who are"
+    },
+    {
+      "start": 4871.199,
+      "duration": 3.681,
+      "text": "curious to see where these definitions"
+    },
+    {
+      "start": 4873.36,
+      "duration": 3.6,
+      "text": "lie in the context of rigorous"
+    },
+    {
+      "start": 4874.88,
+      "duration": 6.08,
+      "text": "mathematical definitions"
+    },
+    {
+      "start": 4876.96,
+      "duration": 4.0,
+      "text": "that's it for now thank you and goodbye"
+    }
+  ]
+}

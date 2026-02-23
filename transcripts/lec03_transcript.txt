@@ -1,0 +1,1759 @@
+# General Relativity, Lecture 3: Manifolds
+# YouTube: https://www.youtube.com/watch?v=UyB6g6MOE50
+# Auto-generated transcript
+
+[00:00.00] hello and welcome back to introduction
+[00:01.60] to general relativity lecture three
+[00:04.08] today in this lecture we're going to
+[00:06.16] take a deep dive
+[00:07.20] into the mathematics of manifolds so it
+[00:10.32] is a core
+[00:11.12] underlying assumption of special
+[00:13.04] relativity and general relativity
+[00:15.36] indeed it's a core underlying assumption
+[00:17.20] of many parts of physics
+[00:19.04] that a space-time is somehow a continuum
+[00:22.56] a four-dimensional continuum
+[00:25.12] and that you need at least locally at
+[00:27.76] least locally so the idea is that
+[00:30.16] although within general relativity the
+[00:32.88] idea is that although
+[00:33.92] space-time is not globally a
+[00:37.28] flat four-dimensional continuum at least
+[00:39.84] locally it is and it's certainly an
+[00:41.76] underlying assumption of many other
+[00:43.04] parts of physics that these
+[00:44.96] that the the space or the space time in
+[00:47.68] which
+[00:48.00] physics takes place are continua of some
+[00:50.80] sort
+[00:51.68] so at this point i don't want to be very
+[00:53.12] specific about what you mean by the word
+[00:55.28] continua but roughly speaking we
+[00:59.12] we assume that it takes to characterize
+[01:01.52] events say in special relativity we need
+[01:03.60] four numbers right we need the time that
+[01:05.28] the event took place
+[01:06.24] and three spatial uh coordinates
+[01:10.72] now it's a the the fundamental uh
+[01:13.60] difference between general
+[01:14.80] and special relativity is that the
+[01:16.48] geometry of this continuum in general
+[01:18.40] relativity is something dynamical so it
+[01:20.40] can move or change
+[01:21.76] as as the space time evolves in response
+[01:25.52] to the positions and locations and
+[01:27.52] distribution of stress
+[01:28.96] matter and energy in the universe
+[01:32.40] now because we have the possibility with
+[01:35.52] the general relativity for
+[01:37.04] the geometry to change to be dynamical
+[01:40.48] we need a mathematical apparatus to
+[01:42.32] describe and quantify the situation this
+[01:44.40] is crucial
+[01:45.36] otherwise we would only ever be
+[01:47.36] restricted to qualitative remarks
+[01:49.44] and in course we want to do quantitative
+[01:51.92] physics where we make predictions
+[01:53.60] and precise predictions and confirm
+[01:56.56] these hypotheses
+[01:57.84] oh sorry reject hypotheses of course we
+[02:00.00] cannot confirm a hypothesis
+[02:01.76] in physics now there are
+[02:05.84] many ways you might think of building up
+[02:07.76] a mathematical theory
+[02:09.12] of curved continuum
+[02:12.48] and one of them and probably the
+[02:14.48] simplest is
+[02:16.16] to think of curved continua as somehow
+[02:18.88] living
+[02:20.40] inside a higher dimensional space as a
+[02:23.04] kind of embedded
+[02:24.64] surface so imagine we have some higher
+[02:27.76] dimensional
+[02:28.80] space time i don't know we'll call this
+[02:32.32] like r m some ambient
+[02:35.52] euclidean space time
+[02:38.56] structure and we want to describe and
+[02:41.36] what we need is because we think
+[02:43.28] at least within the general relativity
+[02:45.36] we presume most of the time we live in a
+[02:47.28] four dimensional
+[02:48.24] space time so we would need that somehow
+[02:50.80] m is bigger than
+[02:51.68] four to build up a theory
+[02:54.80] of curved continua and so
+[02:58.24] you could imagine building up a theory
+[03:00.08] of curve continue as embedded
+[03:02.48] volume surfaces inside
+[03:05.92] this ambient uh big higher dimensional
+[03:09.60] space
+[03:10.64] rm you could do this
+[03:16.84] uh
+[03:18.56] and i'll just label this so you have m
+[03:21.28] is
+[03:23.20] in this way of thinking our space time
+[03:28.24] and m lives in this bigger
+[03:31.68] ambient space rm now you could do this
+[03:36.80] and uh it works for the most part
+[03:40.16] however it does have some operational
+[03:42.80] problems or puzzles
+[03:44.40] and most i think pressing me is the
+[03:47.44] question do these higher dimensions
+[03:49.12] exist
+[03:50.96] in the end uh we sort of sidestep this
+[03:53.28] problem
+[03:54.16] and do things in a
+[03:57.20] different way arguably more natural way
+[04:00.40] namely we study curved continuum in an
+[04:04.16] intrinsic way
+[04:05.92] without reference to this
+[04:10.64] larger embedding space-time rm
+[04:14.72] so this is as rm is like in this
+[04:19.68] approach this irm is what we might call
+[04:21.44] the ambient space
+[04:23.04] and this is the embedding approach so
+[04:24.80] we're not going to do this this is not
+[04:27.44] the way we're going to do the things in
+[04:28.88] this course
+[04:31.52] because it's just it turns out even
+[04:33.84] though it's harder work to begin with
+[04:35.60] it turns out it is more natural and more
+[04:38.64] transferable a skill that's also
+[04:40.56] something that's very important
+[04:42.32] to discuss things intrinsically
+[04:46.00] so we discuss curved
+[04:49.92] continuum in this course
+[04:54.36] intrinsically without reference
+[04:58.16] to a uh ambient embedding
+[05:02.08] manifold as well or space-time
+[05:06.00] when you try and describe the
+[05:08.24] mathematics of curved
+[05:09.68] spaces and curved continua intrinsically
+[05:14.00] you are led to the topic of manifolds
+[05:19.12] the mathematical theory of
+[05:22.16] differential geometry and manifolds and
+[05:24.80] it's this mathematical theory that we
+[05:26.64] are going to occupy ourselves with for
+[05:28.40] the next
+[05:28.96] 10 lectures or so there it is
+[05:32.24] a highly demanding part of mathematics
+[05:35.68] uh with respect to the maths that you've
+[05:37.52] already met in your physics degree
+[05:41.04] it requires a fair amount of formalism
+[05:44.80] to be built up to describe
+[05:46.80] which are described concepts that are
+[05:48.80] arguably fairly
+[05:50.88] intuitive but to do things
+[05:52.80] quantitatively and precisely
+[05:54.64] you do need a fair amount of
+[05:56.24] infrastructure that you have to build up
+[05:57.60] mathematical infrastructure
+[06:00.64] really you don't need much more
+[06:02.72] prerequisites than calculus and linear
+[06:04.64] algebra to discuss the theory of
+[06:06.40] different to discuss differential
+[06:07.68] geometry and manifolds
+[06:08.96] you can get away with it although we
+[06:11.12] will occasionally
+[06:12.40] um in this course have to encounter the
+[06:15.20] concepts coming from poinset topology
+[06:17.04] and general topology
+[06:19.04] i will for the large part mention
+[06:22.40] the words that are important uh in the
+[06:25.44] theory of manifolds are coming from
+[06:27.12] topology
+[06:28.32] and occasionally at the ends of videos i
+[06:30.48] might add a little bit of
+[06:31.84] extra material that's optional for those
+[06:34.16] who of you who are interested
+[06:36.16] in pursuing the mathematics of
+[06:39.36] differential geometry manifolds a little
+[06:41.76] bit more deeper
+[06:42.88] and more precisely you can take a look
+[06:46.40] at this additional material that i'll
+[06:47.84] add at the ends of the videos
+[06:51.20] all right before we get started on the
+[06:53.92] theory of
+[06:55.36] differential geometry and manifolds i
+[06:58.56] should
+[06:59.20] spend a little bit of time setting up
+[07:00.88] some notation this notation is going to
+[07:02.56] be with us for the rest of the course
+[07:06.00] it's vital that we spend a bit of time
+[07:09.68] settling the notation
+[07:12.72] otherwise things will come out of the
+[07:14.80] blue and you won't know what the symbols
+[07:16.24] mean
+[07:17.76] so the first piece of notation is that
+[07:20.40] of r
+[07:21.04] n euclidean space r n
+[07:24.24] which i'll denote as r to the n
+[07:27.44] it's just the set of n tuples of real
+[07:29.36] numbers
+[07:31.52] and i'll use this underline notation for
+[07:34.40] vectors
+[07:35.36] of numbers or tuples n tuples of numbers
+[07:38.96] we'll also have need to make reference
+[07:41.04] quite often actually to the distance
+[07:44.00] the euclidean distance function which is
+[07:46.64] defined on
+[07:47.60] our n as follows
+[07:52.88] just take the difference between the
+[07:54.16] coordinate square them sum them up
+[07:57.04] and take the square root so the standard
+[07:59.28] euclidean distance function you will
+[08:00.56] definitely need to know this
+[08:02.16] you'll need to know about the euclidean
+[08:03.52] ball br of radius
+[08:05.52] r around a point y it's the set of all
+[08:08.48] points in rn
+[08:10.80] such that the distance between that
+[08:12.72] point
+[08:14.32] x and this given point y is always less
+[08:16.56] than r strictly less than
+[08:17.92] r this is also called the open ball
+[08:23.76] around y
+[08:27.92] that's this is where we'll delicately
+[08:31.68] touch upon
+[08:32.48] the point set topology
+[08:37.12] then we need to have the notion of an
+[08:39.92] open
+[08:40.40] set you
+[08:44.08] this is going to
+[08:47.12] for our purposes it's sufficient to
+[08:50.16] think of an open set as a set
+[08:53.84] u where
+[08:56.88] for all points inside the set u
+[09:01.12] there exists a positive
+[09:04.32] potentially very small number epsilon
+[09:07.20] such that the
+[09:08.08] ball of radius epsilon around the point
+[09:11.12] x is always within you
+[09:12.80] so an open set is in rn at least is
+[09:15.36] defined by this
+[09:17.28] these properties we also want to talk
+[09:21.04] about
+[09:21.52] sets of functions so we're going to
+[09:24.64] introduce the set cn
+[09:26.00] which is the set of n times
+[09:27.92] differentiable functions
+[09:38.16] uh on rn to
+[09:41.28] r we can extend this notion of n times
+[09:44.88] differentiable to
+[09:46.40] vector valued functions although
+[09:49.44] i don't think i'll be doing that for
+[09:50.96] quite a while in this course
+[09:53.44] a couple of edge cases here c naught is
+[09:55.76] c is
+[09:57.36] referred to as the continuous functions
+[10:01.76] they don't have any continuous
+[10:03.20] derivatives that exist
+[10:05.36] necessarily but they are at least
+[10:07.52] continuous and c
+[10:08.40] infinity is the infinitely
+[10:10.08] differentiable
+[10:13.20] and finite differentiable
+[10:20.08] functions otherwise known as smooth
+[10:23.28] functions
+[10:25.52] so we'll certainly have occasion to
+[10:26.96] refer to these a lot in this course
+[10:32.00] now with this notation around we can
+[10:34.16] start
+[10:35.04] the the long process of defining what is
+[10:37.60] meant by a manifold
+[10:39.36] now i'm gonna it's it's
+[10:42.56] in this course i'm gonna do everything
+[10:44.80] it's pretty general um
+[10:48.40] we're gonna do things in in n dimensions
+[10:58.96] so you might wonder why are we doing
+[11:00.56] things in n dimensions when we
+[11:02.40] we pay we obviously live in a four
+[11:05.04] dimensional space time
+[11:07.20] well i would say there's three or four
+[11:10.96] two three four really good arguments why
+[11:12.96] you should think about
+[11:14.00] the dimension of your space time as
+[11:16.64] being
+[11:17.60] allowed to change very or
+[11:21.04] also where you might want to be able to
+[11:23.68] focus on some cases where
+[11:25.60] the dimension is say smaller than the
+[11:27.68] space time you're in
+[11:29.60] i'd say arguably
+[11:33.12] the first reason why you should do
+[11:34.48] things in n dimensions in this course is
+[11:36.24] that it doesn't really cost that much
+[11:37.52] more
+[11:38.00] effort to do it so why not you get a lot
+[11:40.72] of generality for free that's one good
+[11:42.48] reason why you might want to consider
+[11:43.60] things in arbitrary dimensions
+[11:45.52] second thing is we often want to
+[11:48.40] restrict
+[11:49.04] to a special example where the dynamics
+[11:52.16] are restricted to
+[11:53.04] a lower dimensional hyperplane or
+[11:56.16] hypersurface in space-time
+[11:58.16] you could think of the dynamics of a
+[11:59.84] particle restricted to move on the
+[12:01.52] surface of a sphere for example that's
+[12:03.76] that's a case where you might want to
+[12:05.52] consider a space time of
+[12:06.80] effectively lower dimension so there is
+[12:08.48] effectively level a third reason
+[12:11.12] is much much deeper and comes arguably
+[12:13.52] from quantum gravity
+[12:14.64] there are strong indications that the
+[12:16.32] dimension of the space time we're in
+[12:18.64] which it seemed to be for um
+[12:21.92] might be emergent from a different
+[12:24.88] space-time dimension
+[12:27.60] there there's hints from the so-called
+[12:29.28] holographic principle in quantum gravity
+[12:32.48] another reason why you might want to
+[12:34.40] consider higher dimensions
+[12:36.56] lower dimensions or arbitrary dimensions
+[12:38.64] is is that in quantum gravity we should
+[12:40.88] arguably
+[12:41.84] be allowed to take superpositions of
+[12:43.76] space time
+[12:44.88] and there's no principle that says that
+[12:46.72] we must be taking sp
+[12:48.16] superpositions over space times of the
+[12:49.76] same dimension so this is
+[12:52.08] a whole sort of grab bag of reasons why
+[12:54.08] you might want to consider
+[12:56.08] formulating your physics in arbitrary
+[12:58.16] dimensions
+[12:59.12] but you know for the most part it just
+[13:01.44] doesn't cost much
+[13:02.24] extra effort so we'll just do that okay
+[13:05.20] i think we're about ready
+[13:06.56] to make our first attempt at a
+[13:09.28] definition of what is a manifold
+[13:15.92] definition right so an
+[13:19.12] n-dimensional
+[13:25.84] c infinity so there's this notion of
+[13:28.48] smoothness there already
+[13:30.72] real manifold
+[13:34.96] and what is it it's a set
+[13:39.68] so i'm at least assuming you're familiar
+[13:41.92] with the notion of
+[13:43.20] set theory no basic questions from set
+[13:45.84] theory
+[13:46.80] together with a collection
+[13:52.56] we'll call them o alpha of subsets
+[14:01.68] satisfying
+[14:05.84] a couple of requirements there's a
+[14:08.40] zeroth requirement that i'll refer
+[14:10.00] come back to in a minute one
+[14:13.76] the set
+[14:17.20] z o alpha covers m
+[14:22.24] so m is there's all these subsets o
+[14:25.60] alpha lying around and m
+[14:28.72] is covered by them what does that mean
+[14:30.40] it means if you stick them all together
+[14:34.64] you get m another way of saying is it
+[14:38.64] it's saying this is for every point
+[14:42.08] p inside m
+[14:45.60] there exists at least one alpha
+[14:52.48] such that p lies in o alpha
+[14:57.20] so although i haven't uh
+[15:02.64] although i'm urging you not to think of
+[15:04.64] manifolds as embedded in some bigger
+[15:06.64] space of course
+[15:07.60] when i draw pictures that's exactly what
+[15:09.28] i'm going to do
+[15:10.80] you just have to try and forget that
+[15:13.36] there's this
+[15:14.48] implied embedding space in all my
+[15:16.32] pictures so i like you know this is the
+[15:18.72] picture i have mentally when i'm talking
+[15:20.40] about
+[15:21.20] uh this first condition so here m is
+[15:23.84] somehow this
+[15:24.80] curvy surface and it's covered by these
+[15:28.32] sets
+[15:28.80] o alpha and every point
+[15:32.40] lies in one o alpha or another
+[15:35.76] so i'm just you imagine partitioning up
+[15:38.24] your space
+[15:38.88] m you'll set m into little pieces and
+[15:42.72] there's at least one of these o alphas
+[15:45.04] over the top of any point
+[15:50.88] now that's not all
+[15:55.36] so for each alpha
+[15:59.44] there is a one to one
+[16:03.04] and onto map
+[16:07.04] psi alpha that goes from this
+[16:10.40] o alpha o alpha set to another set u
+[16:13.12] alpha
+[16:14.80] where this u alpha is now a subset of of
+[16:17.52] r
+[16:17.92] n right now here n makes an appearance
+[16:20.80] so notice that in the
+[16:22.00] first part of this definition the
+[16:23.76] dimension uh
+[16:25.20] doesn't even make an appearance so m is
+[16:27.12] just a set
+[16:28.24] covered by some subsets in the second
+[16:31.28] part the dimension now makes an
+[16:32.64] appearance
+[16:34.00] and uh and now the picture we we have in
+[16:37.12] mind is that you know here's
+[16:38.40] m is this curvy presumably curvy surface
+[16:41.68] is here's these o alphas i'll just draw
+[16:45.20] one o alpha
+[16:48.40] this is m and now we're saying there
+[16:51.20] exists
+[16:53.28] a map which is one to one and onto
+[16:59.28] from each of these o alphas
+[17:03.68] onto sets u alpha of our
+[17:06.96] more familiar rn euclidean space
+[17:15.92] that's what the second part of the
+[17:16.96] definition says so
+[17:19.20] what you're really meant to think of is
+[17:20.56] one to one and onto means kind of equal
+[17:24.40] and we're really saying that each part
+[17:26.80] of this
+[17:28.00] curvy surface m this manifold m is
+[17:30.80] identified with pieces
+[17:32.56] of euclidean space so you're really
+[17:34.32] meant to think of a manifold as
+[17:36.56] as being uh built up or sewn to
+[17:40.80] of pieces of rn that are sewn together
+[17:43.84] stuck together
+[17:48.16] now the third part of the definition
+[17:50.32] concerns
+[17:51.20] the sewing or the gluing of these these
+[17:53.84] pieces
+[17:56.96] so if any of these two if any of these
+[17:59.36] pieces o alpha
+[18:00.64] and a beta overlap right if they
+[18:03.92] they have common points
+[18:10.88] so if you take the intersection and you
+[18:13.52] don't get the empty set
+[18:16.80] then you can define
+[18:20.16] a new map
+[18:24.24] and this new map is composed of this psi
+[18:26.32] beta
+[18:27.44] and the psi alpha inverse so if the
+[18:29.04] inverse exists because it's one to one
+[18:30.48] and on two
+[18:33.60] which acts via
+[18:37.60] following so you can build this map c
+[18:40.16] psi beta composed with psi
+[18:42.00] alpha inverse and where does it go from
+[18:45.20] into well it goes
+[18:46.32] from the image of psi
+[18:49.52] alpha intersect of psi
+[18:52.96] alpha o o alpha o beta
+[18:57.12] and it goes to psi beta o
+[19:00.24] alpha intersect o beta i'll draw a
+[19:03.44] picture in one moment to illustrate
+[19:05.44] what is going on here and these are both
+[19:07.44] subsets of
+[19:08.48] u beta so i've just drawn the subset
+[19:11.12] symbol vertically
+[19:15.20] this is not an intersection this is a
+[19:18.56] subset of
+[19:22.56] and before i draw the picture so
+[19:25.60] we've defined this this this map
+[19:28.64] psi alpha inverse compose side beta
+[19:32.40] and uh if any of these two patches of an
+[19:35.84] o beta overlap
+[19:37.28] then this map that we've just defined is
+[19:39.68] not any old map
+[19:41.20] it is a c infinity map so it's smooth
+[19:44.08] infinitely number of
+[19:45.60] infinitely differentiable
+[19:49.52] so in short the definition says that
+[19:51.60] that map is c infinity
+[19:53.92] now here's a picture to illustrate this
+[19:56.16] situation
+[19:58.16] so here's our surface m
+[20:06.08] here's now the case where we have two o
+[20:09.28] betas
+[20:11.12] o alphas and o betas the o alpha
+[20:14.72] o beta they intersect somewhere
+[20:18.48] all right this blue patch here
+[20:22.72] and now thanks to part
+[20:26.08] two of our definition we know there
+[20:28.96] exists
+[20:31.92] a uh maps
+[20:34.96] psi alpha from o alpha to u alpha inside
+[20:39.76] rn
+[20:43.12] and under this map we can also identify
+[20:47.12] the part
+[20:49.44] of the intersection there so there it is
+[20:52.40] there is that
+[20:53.20] that's part from part two of the
+[20:54.56] definition but there's also another map
+[20:56.88] psi beta that takes
+[21:00.48] o beta to some subset of rn
+[21:04.32] it's not important that u alpha contains
+[21:06.64] the origin or doesn't contain the origin
+[21:08.48] we're not thinking
+[21:09.60] the origin plays no role in the
+[21:11.12] definition of manifold here
+[21:14.48] and under that map the
+[21:18.08] part of the intersection of oauth and
+[21:19.52] obedience i colored in blue
+[21:22.64] so part two of the definition already
+[21:24.88] allows us to draw this part of the
+[21:26.40] figure
+[21:27.36] you have this curvy surface two sets
+[21:28.96] they intersect you have these sciaticas
+[21:30.64] and side betas you know they exist at
+[21:32.24] one to one and onto
+[21:33.60] but now you can also form a new map
+[21:37.60] and this new map is psi beta composed
+[21:40.96] with psi
+[21:41.44] alpha inverse so imagine you have a
+[21:44.16] point here
+[21:44.96] in in this set u alpha sorry u beta
+[21:49.12] so you have a point inside u beta you
+[21:51.28] can always
+[21:52.32] here it is let's call it i've drawn the
+[21:54.16] point red
+[21:55.68] you you can form the function psi beta
+[21:58.48] inverse that just sort of goes the
+[21:59.92] opposite direction
+[22:01.04] to find out where that point oops of
+[22:03.92] course i drew it wrong
+[22:06.88] we want to have this point in the
+[22:08.00] intersection of these two sets i mean
+[22:09.44] what i said was right but whatever we
+[22:10.96] want them in the intersection
+[22:12.16] so suppose you have a point p in the
+[22:13.92] intersection of
+[22:16.48] o o alpha and o beta you can form the
+[22:19.76] function psi beta inverse
+[22:22.56] here it is because psi beta is one to
+[22:24.88] one on two there is an inverse
+[22:26.96] and now you look oh that point p that
+[22:30.00] that
+[22:32.96] that point p lying you know i don't know
+[22:34.88] i'll do things a little differently i'll
+[22:36.16] call this psi beta p
+[22:37.60] down here just because later
+[22:41.76] we'll want to do things that way so the
+[22:43.68] red point side beta p
+[22:44.96] has a pre image p inside the original
+[22:47.68] manifold m
+[22:48.88] ah but that belongs also to o alpha so
+[22:50.80] we're perfectly within our rights
+[22:52.48] to form
+[22:54.67] [Music]
+[22:57.60] the map psi alpha
+[23:02.00] to apply the map site alpha to that
+[23:03.76] point p
+[23:08.48] and so we can draw maps going in both
+[23:10.72] directions here i've done it in the
+[23:12.24] reverse
+[23:12.80] order but we could or equally will have
+[23:15.28] told the story another way right there
+[23:16.80] is
+[23:17.12] suppose p is a point in the intersection
+[23:21.36] of o l for an o beta
+[23:25.04] then you can
+[23:29.36] find its image in o alpha which we've
+[23:31.52] called psi alpha p
+[23:32.64] here that little that little
+[23:36.08] cryptic symbol is psi alpha p that's a
+[23:39.44] point inside rn
+[23:41.68] and then you you could follow these
+[23:43.28] arrows a different way you could apply
+[23:44.88] to
+[23:45.44] this point the map psi alpha inverse
+[23:49.44] to get the point p and then you could
+[23:50.96] apply the map psi beta
+[23:53.68] to find the image in rn if you did that
+[23:56.72] you will have just
+[23:58.96] formed a map psi alpha inverse psi beta
+[24:02.24] that goes
+[24:02.80] between these sets u alpha and u beta
+[24:06.48] now these maps go both ways right it's
+[24:08.72] important to
+[24:09.68] to to emphasize that
+[24:15.04] now that you form that map you can't
+[24:17.92] call it a manifold unless that map is
+[24:19.68] smooth
+[24:20.16] it means that all derivatives exist and
+[24:22.24] are continuous
+[24:33.92] there's a zeroth condition that i've
+[24:36.00] made reference to already in this video
+[24:38.88] the zeroth condition comes from general
+[24:41.68] topology
+[24:44.84] and is not really necessary
+[24:50.32] to talk about general relativity
+[24:54.24] it's quite sufficient to to use your
+[24:56.24] physical intuition
+[24:57.52] to say that m is sufficiently nice and
+[25:00.16] since the number of examples that we
+[25:01.52] really consider in this course is
+[25:03.12] not completely um
+[25:06.40] is not an uncountable list of horrible
+[25:08.32] beasts but really a small
+[25:10.80] list of of manifolds with
+[25:14.48] quite a lot of good extra structure
+[25:19.04] we don't really worry about the zeroth
+[25:20.64] condition in this course but um
+[25:22.48] in an addendum to this video i will
+[25:24.40] certainly uh
+[25:25.52] i'll spend a couple more words on the
+[25:27.76] definition
+[25:28.64] of of the of the mathematical definition
+[25:31.84] of a manifold
+[25:32.64] just if you're interested in those
+[25:33.84] details so the zeroth condition
+[25:36.00] is that m is a topological space
+[25:40.80] which is um halsdorf and paracompact
+[25:52.48] and that these maps
+[25:55.60] site alpha homeomorphisms
+[26:01.12] you know i'll do it in another way
+[26:03.68] didn't leave enough space
+[26:04.96] i'll put some space in here
+[26:17.60] it worked it doesn't always work
+[26:22.96] and psi alpha are homeomorphisms
+[26:30.16] look if you know about poinsett topology
+[26:32.24] in general topology then this will
+[26:33.68] probably make you happy
+[26:35.12] if you don't then don't worry about it
+[26:36.72] in this course this is not going to be
+[26:40.24] crucial
+[26:43.68] for your understanding of general
+[26:46.80] relativity in any way shape or form
+[26:49.36] this is really stuff for the
+[26:52.80] mathematically minded
+[26:58.40] and as i said the actual examples that
+[27:01.04] feature
+[27:01.52] prominently in general relativity uh
+[27:04.16] have some
+[27:04.96] additional structure that we don't have
+[27:06.16] to worry about this
+[27:08.16] this axiom
+[27:11.76] now these maps and sets and so on that
+[27:14.32] we use to define
+[27:15.44] a manifold they have names
+[27:20.88] you've got to call them something and we
+[27:22.32] give them the following names um
+[27:25.68] are called what do we call them well if
+[27:27.60] you're a mathematician you're
+[27:28.80] most likely to call these maps say offer
+[27:32.84] charts
+[27:36.40] i tend to enjoy calling them charts as
+[27:38.64] well
+[27:39.60] or our coordinate systems
+[27:47.20] that's probably the terminology that
+[27:49.44] might feature more
+[27:50.48] feet more prominently in physics
+[27:55.60] and uh
+[27:59.44] so i probably will call them
+[28:02.56] interchangeably charts or coordinate
+[28:04.24] systems throughout this course
+[28:08.24] now the definition it's sort of
+[28:10.08] important to say now
+[28:11.76] that the definition so far
+[28:15.60] like we're not quite done with calling
+[28:17.68] this a manifold yet
+[28:19.84] the definition so far depends on
+[28:23.52] our choice of o alpha and beta
+[28:30.40] oh alpha sorry it's psi alpha
+[28:33.60] meaning and i mean is in the following
+[28:35.20] sense
+[28:36.88] so suppose you let's go back to our
+[28:39.04] definition right the definition says
+[28:41.36] that m is covered by a bunch of these
+[28:44.16] things called o alpha
+[28:47.84] and if we had chosen a different set of
+[28:50.72] o alphas to cover m then we would have
+[28:53.04] a different uh different manifold so
+[28:56.64] you know an dimensional c infinity real
+[28:59.52] manifold m is a set together with a
+[29:01.04] collection of the subsets
+[29:02.88] satisfying blah blah blah had we chosen
+[29:05.44] a different bunch of subsets
+[29:07.28] then we would formally have a different
+[29:09.44] manifold
+[29:10.40] however it's kind of obvious that um you
+[29:13.28] know if we choose
+[29:14.48] them in the the same way or as encoding
+[29:17.52] the same information we have the same
+[29:18.88] manifold
+[29:19.76] so we've got to spend a little bit of
+[29:21.12] time talking about this this
+[29:23.28] this arbitrariness so the definition so
+[29:25.92] far depends
+[29:26.88] on the choice of o alpha and psi alphas
+[29:31.44] and and what does that mean so if
+[29:34.88] and to show you how absurd things are so
+[29:37.44] if we add
+[29:38.72] with the current definition as a new set
+[29:42.24] just one extra new set p and a new chart
+[29:49.28] psi prime let's call it then per
+[29:52.08] definition we have a new manifold right
+[29:53.76] it's
+[29:54.24] even even um
+[29:59.28] we have a new manifold well maybe we do
+[30:01.20] right maybe we add a bit more on but we
+[30:02.64] get a new it's a new manifold even if
+[30:06.88] um p and psi contain no new information
+[30:19.12] so that's a bit strange right you you
+[30:21.20] therefore have it you know
+[30:23.20] if you have a whole bunch of sets
+[30:24.40] covering m and you add one that sort of
+[30:26.96] says covers is covered by all the
+[30:29.36] original sets
+[30:30.48] and you don't actually change you add
+[30:32.56] any information
+[30:33.52] and it's a bit strange that you you have
+[30:35.12] a totally new manifold different
+[30:36.80] manifold
+[30:37.84] so we don't like that it's a bit silly
+[30:40.40] so
+[30:40.96] uh to eliminate this right we don't like
+[30:43.60] this arbitrariness
+[30:49.12] because probably you're already
+[30:52.00] wondering
+[30:52.48] thinking of ways to eliminate this
+[30:53.84] arbitrariness
+[30:55.60] well here's here's one way to do it
+[31:01.04] so we require
+[31:05.44] that this covering
+[31:09.92] in the definition of m
+[31:13.84] and these charts all this family of
+[31:16.84] charts
+[31:20.16] is maximal
+[31:25.76] so what does that mean it means all
+[31:28.24] possible if it is possible to add a set
+[31:30.56] o alpha in and the chart psi alpha in
+[31:33.36] which is compatible with all the
+[31:34.64] pre-existing ones then you have to add
+[31:36.24] it in
+[31:44.24] so all coordinate systems here i'm going
+[31:46.24] to use this notation
+[31:47.68] interchangeably coordinate systems
+[31:49.60] charts whatever
+[31:50.88] you'll get used to it
+[31:54.96] compatible with
+[31:58.00] two and 3 in our definition
+[32:01.28] are required included
+[32:07.44] so if you can add a chart you must add a
+[32:10.32] chart
+[32:11.36] and then only then do you have a
+[32:13.44] manifold
+[32:15.44] okay we we've got this big long
+[32:17.28] mathematical definition
+[32:20.00] can't do physics unless we have examples
+[32:22.64] so let's get to some examples
+[32:26.00] and of course you know definitions all
+[32:27.92] very well but if you can't present a
+[32:29.28] single
+[32:30.24] example uh fulfilling the requirements
+[32:33.04] of your definition there's a pretty
+[32:34.00] stupid definition
+[32:35.84] um here's a laundry list of our favorite
+[32:39.68] examples
+[32:40.56] in physics and pretty much in maths as
+[32:42.80] well
+[32:43.84] well the it better be right that our
+[32:47.04] notion of a
+[32:47.92] curved continuum contains the original
+[32:51.20] uh notion from which we departed from
+[32:53.76] namely space time itself
+[32:56.00] rn is a trivial example right
+[32:59.20] it better be an example otherwise we've
+[33:00.96] messed up in coming up with our
+[33:02.72] definition
+[33:05.52] and it can be covered by one
+[33:08.72] chart of course
+[33:20.16] and what is that chart will just r in
+[33:22.84] itself
+[33:24.56] and then oh yeah with psi being the
+[33:26.64] identity map
+[33:30.64] now rn as a manifold
+[33:33.76] is required to include all possible
+[33:36.72] charts
+[33:37.20] remember
+[33:41.44] so as a euclidea as the thing that we
+[33:43.60] call euclidean space
+[33:46.08] it's okay to describe rn just as this
+[33:48.48] set rn
+[33:50.96] but if you want to call r in a manifold
+[33:54.48] well you need to include per definition
+[33:56.80] every cover
+[33:57.52] every chart every coordinate system
+[33:59.44] that's compatible with the pre-existing
+[34:01.44] charts
+[34:02.64] and therefore it has uncountably many
+[34:09.12] many covers right because you know
+[34:12.72] here's rn right i'm just drawing it as a
+[34:14.40] square
+[34:15.12] it's covered by the set o let's call the
+[34:18.00] set o
+[34:18.88] whatever one is just rn but it's also
+[34:22.96] covered by these three sets suppose they
+[34:26.72] go off to infinity so o2
+[34:28.64] o3 and o4 so
+[34:31.76] o2 is this yellow set here
+[34:36.00] 4 is this blue set here that goes off to
+[34:38.56] infinity saying
+[34:39.84] you know 3 is this green set here it's
+[34:42.00] also covered by those
+[34:43.44] and as long as we set up our
+[34:46.96] and e and and the chart
+[34:53.60] what chart should we use for o2 well the
+[34:55.76] identity again right
+[34:57.68] um and so on 0304 and then you can add
+[35:01.60] any way of covering rn
+[35:04.72] with the corresponding identity chart
+[35:07.44] that
+[35:07.84] is a compatible
+[35:11.28] coordinate system compatible chart so it
+[35:14.16] must go
+[35:14.72] in when you're thinking of rn as a
+[35:16.88] manifold rn is just euclidean
+[35:19.20] space as a set you've constructed that
+[35:21.68] presumably in some part of your
+[35:23.04] undergraduate degree
+[35:24.32] but rn is a manner and you didn't bother
+[35:26.48] with all these charts and identities and
+[35:28.16] so on but when you want to
+[35:30.08] talk about manifolds you have to have
+[35:32.80] this extra baggage of charts and
+[35:35.84] and coordinate systems around so you
+[35:38.08] really have to allow that to be in
+[35:40.40] as part of the definition and is
+[35:43.60] required
+[35:44.08] part of the definition so when you think
+[35:45.44] of rn you really got to think of it as
+[35:46.96] yes your friendly
+[35:48.32] euclidean space are in but with all
+[35:51.04] these sort of infinite ways of drawing
+[35:52.64] coordinate systems on it
+[35:54.40] included okay what's another example
+[35:59.04] well space time itself is an example of
+[36:03.12] a manifold
+[36:04.08] we'll prove that well we'll realize it
+[36:06.80] as a manifold presently
+[36:10.96] it's space-time itself you
+[36:14.40] in special relativity has a temporal
+[36:16.16] axis and three spatial axes
+[36:18.72] uh and we often distinguish the temporal
+[36:22.00] axis by writing
+[36:23.60] space time as like r superscript one
+[36:25.84] comma three just to emphasize that one
+[36:27.68] of them is time one not
+[36:29.44] but as as a set and even as a manifold
+[36:33.44] manifold but not uh different
+[36:36.96] without metric these sets are just
+[36:39.28] equivalent to r4 which is already a
+[36:41.04] manifold
+[36:45.04] and all this lorenzian stuff and so on
+[36:52.40] that comes later right that's as a
+[36:54.88] manifold
+[36:57.12] it it it is you can identify it as a
+[36:59.76] subset
+[37:00.40] uh that charts with subsets of our force
+[37:02.16] it's a manifold of a four-dimensional
+[37:04.32] manifold
+[37:05.52] all this temporal stuff and lorenz
+[37:08.56] structure and blah blah blah
+[37:10.08] that comes later like you add that on
+[37:16.56] so manifold's a pretty abstract concept
+[37:18.88] they cover a lot of
+[37:20.00] different examples okay
+[37:23.68] the next most important example is the
+[37:25.76] sphere
+[37:27.60] sn which is you know
+[37:32.24] embedded
+[37:35.52] in n plus one dimensions yeah i know
+[37:37.92] we're not going to do things with
+[37:38.96] embedded manifolds
+[37:40.48] um but we are of course
+[37:43.68] embedded manifolds are one of the best
+[37:45.28] examples of manifolds
+[37:47.68] but we want to do we want to allow our
+[37:49.68] structures to be intrinsically defined
+[37:51.44] without reference to that embedding
+[37:52.88] space but here we go we're going to
+[37:54.00] define the sphere sn anyway
+[37:56.32] as an embedded manifold
+[38:01.28] how do you define the n sphere well it's
+[38:04.08] a subset of n
+[38:05.36] r n plus one and the subset is defined
+[38:09.28] by all those points which have unit
+[38:10.88] length
+[38:12.00] whatever unit radius
+[38:15.52] unit length inside rn plus one
+[38:21.60] now that doesn't make it a manifold just
+[38:23.36] writing it as a subset of rn plus one
+[38:25.44] that certainly does not make it a
+[38:26.64] manifold
+[38:27.44] at the moment i haven't presented to you
+[38:29.12] any way of covering this
+[38:30.48] set i don't know what the coordinate
+[38:31.92] systems are and so on so we have to
+[38:34.08] introduce
+[38:34.96] that structure right
+[38:39.28] before we're allowed to call this a
+[38:40.72] manifold and so
+[38:42.56] we are going to introduce well a bunch
+[38:45.68] of charts
+[38:48.80] and then leave a lot of this to the
+[38:50.00] exercise
+[38:52.00] for you to confirm so let's define the
+[38:55.20] following
+[38:57.60] n plus one
+[39:01.36] two n plus one sits
+[39:11.44] so what you do is you take the nth or
+[39:13.44] the alpha coordinate
+[39:15.68] you take all the points inside the
+[39:17.12] sphere where the alpha coordinate bigger
+[39:18.56] than zero
+[39:19.20] or less than zero and you call those two
+[39:20.96] sets o alpha plus or no alpha minus
+[39:26.24] okay that these sets cover
+[39:29.84] so how many of these sets are there well
+[39:32.16] there are
+[39:35.04] two n plus one such sets
+[39:38.08] all right you got the upper hemisphere
+[39:40.00] upper alpha hemisphere the lower alpha
+[39:42.16] hemisphere
+[39:44.96] and how many hemispheres do you have
+[39:46.32] well you have n plus one coordinate axes
+[39:48.32] so you have two times n plus one such
+[39:50.08] sets
+[39:50.88] and they certainly cover
+[39:55.12] sn like every point features and loads
+[39:58.96] of these these hemispherical sets
+[40:03.44] now uh great that's the first part
+[40:06.56] of the definition of a manifold that you
+[40:08.40] need a whole bunch of sets that cover it
+[40:11.68] but that's not sufficient right we need
+[40:13.52] more than the coordinate hemispheres
+[40:15.44] to describe to give endow this set with
+[40:17.76] the structure of a manifold
+[40:19.36] we need also the
+[40:22.72] the charts or coordinates systems
+[40:25.28] themselves
+[40:28.72] and these are specified by maps from
+[40:30.96] these subsets
+[40:34.00] to euclidean space so we define the
+[40:36.84] corresponding
+[40:39.04] charts psi alpha plus which goes from o
+[40:41.76] alpha plus
+[40:43.04] to rn and psi alpha minus that goes from
+[40:46.80] of
+[40:47.20] a minus to rn we define them
+[40:51.09] [Music]
+[40:55.44] via the following definition
+[40:58.80] just take the coordinates
+[41:03.44] the points in the set ul o alpha
+[41:07.60] and delete delete
+[41:10.96] the alpha coordinate
+[41:26.56] and what you get at the end is an
+[41:27.84] element of our n is really crucial right
+[41:29.92] you start with points
+[41:31.28] defined with respect to this weird
+[41:32.96] embedding space rn plus one
+[41:34.80] and then the coordinate charts delete
+[41:36.96] the alpha coordinate
+[41:38.56] they're vec they're away and then uh we
+[41:41.36] end up with a vector of
+[41:42.80] n numbers which is a naturally element
+[41:44.72] of r n
+[41:46.40] and that's how we define the charts or
+[41:50.00] coordinate systems corresponding to
+[41:51.28] these o alpha sets
+[41:53.52] now we've done we've presented enough
+[41:56.32] information
+[41:57.44] to get the whole manifold so you'll have
+[42:00.32] noticed
+[42:00.88] in these previous examples we really
+[42:02.56] define the manifold
+[42:04.48] by specifying enough sets to cover the
+[42:06.48] manifold
+[42:07.60] and their corresponding charts and then
+[42:09.20] we just say throw in all the rest that
+[42:11.04] are compatible
+[42:12.08] and that's generally speaking how we'll
+[42:13.52] define manifolds
+[42:15.44] in general for the rest of this course
+[42:19.04] we'll just specify
+[42:20.24] enough covering sets to cover the
+[42:22.24] manifold we won't specify all the
+[42:23.84] possible compatible ones those you
+[42:26.24] just automatically
+[42:29.44] add in by requiring that they are
+[42:33.92] that that in the def in your example
+[42:36.40] that all
+[42:37.04] possible charts compatible the ones you
+[42:38.64] already presented are already
+[42:40.32] automatically included
+[42:42.08] now there's a special case of sn it's
+[42:44.80] called
+[42:45.36] s2 this is familiar to you i hope right
+[42:48.64] what is it this is the the three
+[42:50.08] dimension the two-dimensional sphere
+[42:52.32] embedded in three-dimensional space
+[42:55.92] this is what it looks like
+[42:59.68] so you've got three coordinate axes now
+[43:01.52] in the case of n equals three
+[43:03.84] and the three dimensional sphere is well
+[43:05.92] you know what the
+[43:07.52] sorry the two sphere is you know what it
+[43:09.76] looks like right
+[43:11.20] so it's the sphere embedded in r3
+[43:15.92] and we can just look at some examples of
+[43:17.92] these coordinate axes
+[43:19.52] so that's these hemisphere
+[43:23.92] sets hemispherical covering sets o alpha
+[43:26.88] so let's take a look at ox
+[43:28.32] plus minus so ox
+[43:32.08] plus minus is the set of all points
+[43:35.12] where
+[43:35.52] x coordinate was to look at o ox plus
+[43:43.92] i just want to illustrate ox plus to you
+[43:46.48] so if you remember
+[43:47.84] o alpha plus is all the set of all the
+[43:49.68] points in the
+[43:50.88] embedding space where the alpha
+[43:52.64] coordinate is greater than zero
+[43:54.64] here the x-axis sort of points out of
+[43:56.48] the screen so to speak
+[43:57.68] an ox plus is the set of all those
+[43:59.92] points on the front half
+[44:01.28] therefore of the sphere so it's this
+[44:04.08] stuff here
+[44:05.04] but not the back half
+[44:08.48] and uh let's draw another one let's try
+[44:11.36] uh
+[44:12.40] a y minus so here's the
+[44:17.84] a circle around the hem
+[44:22.24] the y equals zero uh equator of the
+[44:24.96] sphere
+[44:25.84] and o y minus is the set of all those
+[44:28.40] points
+[44:29.28] underneath this
+[44:33.60] coordinate axis there
+[44:40.24] so the intersection of o x plus and o y
+[44:43.44] minus is relevant
+[44:44.64] in the second is at like a quarter of
+[44:47.44] the surface
+[44:48.48] of the sphere here and you can go
+[44:50.96] through all the possibilities here there
+[44:52.80] are
+[44:54.08] there's six possible coordinate
+[44:58.00] uh charts that we've we specified s2
+[45:01.04] with respect to um
+[45:06.48] so look at now let's take a look at the
+[45:10.32] transition functions the circle
+[45:11.68] transition functions because we don't
+[45:13.68] yet have a sphere right
+[45:15.12] we don't yet have a manifold i've
+[45:16.56] specified the the sets o alpha the
+[45:19.12] chart site alpha but you're not allowed
+[45:21.20] to call it a smooth real manifold unless
+[45:22.80] these transit circle transition
+[45:24.24] functions
+[45:26.40] are all c infinity or smooth functions
+[45:31.04] so yep let's take a look at this one
+[45:34.96] so for example you could look at the the
+[45:37.60] map
+[45:38.16] the chart that goes from uh
+[45:41.52] o alpha plus to o y minus and
+[45:46.16] it's an exercise to show that
+[45:49.44] this function is given precisely
+[45:57.20] by this formula sorry when i said o
+[45:59.36] alpha i should have said
+[46:00.56] u alpha so this transition function
+[46:12.48] goes from a subset of u alpha to
+[46:15.60] a subset of u beta if we go back
+[46:19.36] to the definition here we see that
+[46:23.28] u alpha is mapped by this transition
+[46:25.92] function to u beta
+[46:30.24] and it's given in r2 precisely by the
+[46:34.00] formula i've described
+[46:35.60] and that's an exercise and indeed it's
+[46:38.16] an exercise
+[46:41.28] to find the rest
+[46:44.40] of these transition functions
+[46:53.20] and show
+[46:57.36] they are all c infinity smooth functions
+[47:04.08] okay so before we go on with uh
+[47:07.36] building up manifolds and the theory of
+[47:09.60] manifolds
+[47:10.40] i just want to comment do we need all
+[47:11.84] this manifold stuff really
+[47:13.68] um you know i've sort of touched on this
+[47:22.84] earlier
+[47:29.04] but i want to amplify this point
+[47:36.08] the answer is sort of no if you want to
+[47:37.92] do basic general relativity
+[47:39.52] uh you probably don't really need all
+[47:41.36] this manifold stuff it will be
+[47:42.96] sufficient to cover many of the basic
+[47:44.96] examples of
+[47:45.92] the basic solutions of einstein's field
+[47:47.44] equations just with r4
+[47:50.00] as a manifold um of course the geometry
+[47:52.72] changes
+[47:53.36] but the manifold itself is just r4
+[47:55.68] underlying it
+[47:57.04] however really when you want to discuss
+[47:58.72] more interesting solutions to einstein's
+[48:00.88] field equations
+[48:02.24] cosmology non-trivial cosmologies and
+[48:04.80] black holes
+[48:06.00] it becomes necessary to consider more
+[48:08.00] general manifolds
+[48:09.28] you know ones with holes in them ones
+[48:11.44] which are
+[48:12.48] looks like donuts and so on and so forth
+[48:15.12] and of course in quantum gravity you
+[48:16.64] want to allow yourself to be able to sum
+[48:18.16] over
+[48:18.88] manifolds with non-trivial shapes
+[48:22.64] so even though the answer is kind of
+[48:24.24] like for basic general relativity the
+[48:25.68] answer is no i would argue
+[48:28.08] and we'll continue to argue that yes the
+[48:30.56] answer is actually yes
+[48:31.84] and i'll just give i'll write down two
+[48:34.72] key examples just
+[48:36.08] just within general relativity where you
+[48:38.40] might want to be able to
+[48:40.32] flexibly uh considered very quite
+[48:43.44] different manifolds and that's given by
+[48:45.28] the examples of
+[48:46.48] cosmological solutions and black holes
+[48:50.64] now it's all very well if you've got
+[48:55.68] a couple of examples but when you want
+[48:58.24] to build up a catalog
+[48:59.52] of of non-trivial examples
+[49:03.20] from a definition you typically want to
+[49:05.60] find a way
+[49:06.64] to combine your previous examples in
+[49:09.36] interesting ways
+[49:11.04] so that you know whatever mathematical
+[49:13.52] object you're considering
+[49:15.20] whatever physical theory you're
+[49:16.32] considering if you've got a couple if
+[49:18.16] you've got a nice definition and a
+[49:19.44] couple of examples
+[49:20.64] it only starts to get rich when you can
+[49:22.16] prese you can build or furnish
+[49:24.56] far more examples and for that you want
+[49:26.80] to be able to build new examples and
+[49:29.28] manifolds are no exception here so here
+[49:32.16] we want to suppose that
+[49:33.52] you know m and m prime
+[49:36.64] are manifolds
+[49:40.80] smooth real manifolds of dimension
+[49:45.60] n and n prime
+[49:48.96] respectively
+[49:53.52] then we want to use these to build new
+[49:56.48] examples and the simplest way to do this
+[49:59.28] is by the so-called product construction
+[50:07.04] the product space manifold
+[50:15.44] and how do you do that well you're just
+[50:17.04] going to take all the data that you
+[50:18.48] that defines m and m prime separately as
+[50:20.48] manifolds and some stick it together to
+[50:22.32] get
+[50:22.64] enough data to define a manifold that
+[50:25.92] somehow matches your intuition of what
+[50:27.84] the product should be
+[50:31.52] so we have to build up some charts right
+[50:35.84] so suppose we have the following charts
+[50:40.80] coordinate systems defining separately
+[50:43.76] or
+[50:44.80] defining separately m and m prime
+[50:54.16] then we want to be able to present
+[50:55.68] enough charts for this thing that we
+[50:57.60] call m cross m prime
+[51:12.40] then so given these two charts
+[51:16.16] we're going to define our chart for m
+[51:19.60] cross m prime via
+[51:29.20] psi we'll call it say alpha beta now
+[51:32.32] and how does it work well it goes from a
+[51:36.00] set called
+[51:36.64] o alpha beta to a subset u
+[51:39.68] alpha beta of our
+[51:42.72] n plus rn prime times rn prime
+[51:46.72] with oh alpha beta
+[51:50.08] this has got to be a subset that covers
+[51:52.24] our putative new
+[51:53.60] product manifold here it is you just
+[51:56.64] take
+[51:57.36] the corresponding uh cover covering sets
+[52:00.80] from the respective manifolds and u
+[52:03.04] alpha beta
+[52:04.00] is of course u alpha cross u beta prime
+[52:07.76] and i haven't told you what these psi
+[52:09.28] alpha betas are yet well i will now
+[52:11.84] psi alpha beta acting on a point p in
+[52:15.12] m and a p p prime and m prime
+[52:18.56] is defined to be well you know just take
+[52:23.68] the corresponding points
+[52:32.88] in uh n
+[52:37.36] plus n prime
+[52:40.40] and this has got to hold for all pairs p
+[52:42.96] p prime which are in this
+[52:44.48] cartesian products at mm prime
+[52:48.24] okay that's that that then presents
+[52:50.96] enough
+[52:51.60] enough sets to cover this new product
+[52:54.08] set m cross m prime and then there's
+[52:56.16] enough charts and they're all smooth
+[52:58.32] that's all an exercise
+[53:07.84] so you've got to show that the
+[53:08.88] transition functions are smooth
+[53:11.68] and then another exercise is to just
+[53:15.20] you know we've been speaking about rn
+[53:16.88] fairly uh
+[53:18.64] loosely the whole time as a manifold but
+[53:21.12] really i want you to realize now
+[53:23.04] rn as this cartesian this products based
+[53:26.84] construction
+[53:34.24] now it's kind of interesting that with
+[53:35.84] just these two examples effectively two
+[53:38.00] examples of the sphere and rn you can
+[53:39.84] realize quite a lot of interesting
+[53:42.80] examples now with the product
+[53:54.84] construction
+[53:56.48] so just with these two families and
+[53:59.36] their products
+[54:10.48] one can build many
+[54:15.68] interesting examples or relevant
+[54:19.36] manifolds
+[54:23.68] for general relativity lots of
+[54:25.12] cosmological solutions can be realized
+[54:27.04] as
+[54:27.36] products of say r and circle so on and
+[54:30.56] so forth
+[54:31.60] or like you know an example that should
+[54:34.56] be familiar to with you
+[54:35.84] um is the taurus for example you know
+[54:38.64] that's just this
+[54:39.76] the circle across the circle etc
+[54:42.96] etc you know then you can take the
+[54:44.72] taurus product with the real numbers and
+[54:51.20] now so far i've just defined to you what
+[54:53.60] is this real smooth manifold of
+[54:55.04] dimension in
+[54:56.80] now we want to build up or want to endow
+[54:59.76] this
+[55:00.48] the class of all manifolds with a
+[55:02.56] category structure we want to be able to
+[55:03.92] talk about
+[55:06.40] manifolds different manifolds winner to
+[55:08.56] the same one or two different
+[55:13.92] so our next goal is to endow the class
+[55:17.12] of manifolds
+[55:22.00] with a so-called category structure
+[55:29.28] that's just fancy talk for saying that
+[55:31.36] um we're gonna just
+[55:34.56] define what it means to have a map
+[55:36.08] between manifolds
+[55:43.92] by describing morphisms morphisms is the
+[55:46.32] fancy word for what does it mean
+[55:48.00] to have maps between
+[55:56.24] two manifolds okay let's define what we
+[55:59.60] now mean by
+[56:00.48] a map between two manifolds
+[56:03.52] so let m and m prime
+[56:07.28] be manifolds
+[56:10.48] we're going to want to define what it
+[56:11.84] means to have a map from m to m prime
+[56:14.84] now
+[56:17.92] and let psi alpha and psi beta prime be
+[56:21.52] the
+[56:22.32] coordinate charts
+[56:26.96] here the the the underlying cover
+[56:30.00] is now left implied
+[56:34.16] so now we have a map a map of sets f
+[56:37.36] between
+[56:38.00] m and m prime remember m and m prime
+[56:40.16] sets underlying it all they always says
+[56:42.08] so we can have a map between them
+[56:44.48] we have us is this really a map of
+[56:47.04] manifolds
+[56:48.08] well it is it's said to be
+[56:51.20] a c infinity map smooth map
+[56:57.52] between these two manifolds
+[57:01.36] if for all alpha beta
+[57:05.28] the following map of s
+[57:08.40] of r n is smooth or c infinity
+[57:24.64] so c infinity is synonymous with the
+[57:26.88] word smooth
+[57:32.16] okay so let's draw a picture
+[57:33.76] representing the situation here
+[57:35.68] so here's m here's
+[57:40.72] m prime
+[57:41.79] [Music]
+[57:46.16] here's o alpha
+[57:49.52] is o alpha prime
+[57:58.16] remember corresponding to any subset
+[58:01.84] or an element of our chart there's now
+[58:03.92] i'll maps psi
+[58:05.12] alpha to a map u alpha uh to set
+[58:08.32] u alpha in r n
+[58:12.48] u alpha prime here r n
+[58:15.60] prime
+[58:19.68] the dimensions are gonna be assumed the
+[58:21.04] same by the way
+[58:24.16] and now we can build the map
+[58:27.76] i believe there's an inverse missing in
+[58:29.36] my definition here
+[58:44.80] so f is a map between
+[58:47.92] m and m prime
+[58:56.08] i believe i have a missing minus here
+[59:04.16] so we now have we can form a map that
+[59:06.72] goes between
+[59:07.60] u alpha and u alpha prime
+[59:11.20] by first
+[59:14.64] mapping from u alpha to m via
+[59:18.08] psi alpha inverse
+[59:25.04] applying f and then mapping down from m
+[59:27.92] prime
+[59:28.64] to rn via psi beta prime
+[59:32.96] and that induces this map here so first
+[59:36.16] we go from
+[59:37.12] rn back into m via psi alpha minus
+[59:40.88] then we do the map f which is going
+[59:42.40] between m and m prime by assumption
+[59:44.32] and then we go from m prime to
+[59:47.76] r n via psi beta prime
+[59:51.04] so we get this red induced function
+[59:55.04] and this
+[59:58.96] map between manifolds is is said to be c
+[60:02.16] infinity or smooth
+[60:03.76] if this corresponding red function here
+[60:06.24] is c infinity
+[60:21.68] indeed
+[60:27.44] good now
+[60:30.88] we have a notion of a map between
+[60:32.64] manifolds and now we can
+[60:34.16] say what it means for two manifolds to
+[60:37.60] be
+[60:38.00] the same manifold
+[60:52.80] so a manifold m and m prime are the same
+[60:55.92] if there's a map between them
+[60:57.52] but not just any map we need a kind of
+[60:59.68] equals sign
+[61:00.56] for manifolds and the thing
+[61:04.08] that takes the place or the role of the
+[61:06.08] equal sign is
+[61:07.76] a so-called diffumorphism so if f going
+[61:10.64] between m and m prime
+[61:12.40] is it a c infinity
+[61:15.68] one to one
+[61:19.20] and onto map
+[61:23.12] and
+[61:26.80] if this function has a c infinity
+[61:28.96] inverse so
+[61:30.80] you can invert it and it has all the
+[61:32.48] same
+[61:34.80] and it's also smooth then we give this
+[61:38.00] special function a name
+[61:41.44] we call it a diffumorphism
+[61:50.32] now the existence of a differeomorphism
+[61:53.12] between two manifolds is really what we
+[61:54.64] mean by them being
+[61:55.52] the same manifold so
+[62:00.16] if there exists a diffumorphism
+[62:10.88] then we call the two manifolds
+[62:18.84] diphyomorphic
+[62:22.24] physics translation they're equal
+[62:26.40] they're equal because you can
+[62:29.84] show that the manifolds m
+[62:32.96] and m prime have identical manifold
+[62:36.48] structure
+[62:44.80] right they have the same you can
+[62:49.12] when you define them via charts they
+[62:51.04] have the same you can identify all the
+[62:52.80] charts you can identify all the
+[62:54.32] the transition functions everything can
+[62:56.16] be identified
+[62:57.84] and set and therefore they're equal
+[63:00.80] they're not only equals underlying sets
+[63:02.40] to equal
+[63:03.44] all this baggage on top of charts is
+[63:05.20] equal as well
+[63:07.20] now so far we've been talking about
+[63:10.16] manifolds and manifolds are meant to
+[63:12.00] supply us with a more general notion of
+[63:14.16] what it means to be a continuer
+[63:17.28] or an n-dimensional continuum
+[63:20.80] now that's all very well and good but it
+[63:23.12] turns out to do local physics we want
+[63:25.52] more structure we want to we want to
+[63:27.20] take we're quite greedy we want to take
+[63:28.80] as much
+[63:29.36] of the structure from familiar euclidean
+[63:32.00] space and
+[63:32.72] import it into our notion of a manifold
+[63:37.28] and here it's important to comment that
+[63:39.04] when you come up with a definition
+[63:41.04] that's meant to generalize something it
+[63:43.20] has to apply to more examples and so if
+[63:45.36] something if a definition applies to
+[63:46.80] more examples
+[63:48.08] then you're going to lose uh resolution
+[63:51.60] in the concepts so if there's a concept
+[63:54.08] if there's a specific example you're
+[63:55.68] trying to generalize to a more general
+[63:57.12] class of things
+[63:58.64] and that example has lots of structure
+[64:00.48] then if you
+[64:03.36] come up with a general definition that
+[64:05.04] captures this example but a whole bunch
+[64:06.40] of other examples
+[64:07.52] then you will necessarily lose
+[64:11.12] some of the structure that you're trying
+[64:12.88] to generalize
+[64:14.64] so you think about euclidean space for a
+[64:17.20] moment you know
+[64:17.92] you it's it's familiar to you euclidean
+[64:20.24] space it's this flat
+[64:21.92] collection of n-tuples so you could in
+[64:24.64] space
+[64:25.60] uh is a is a continuum but euclidean
+[64:29.04] space is also is another thing it's a
+[64:30.72] vector space
+[64:32.16] euclidean space is a lot of things it's
+[64:33.68] a group a mathematical group
+[64:36.16] and all these these features that you
+[64:38.80] euclidean space have
+[64:40.24] may or may not survive uh in the
+[64:43.36] manifold world when you try and
+[64:45.04] generalize the notion of what a
+[64:46.72] continuum is you may not be able to
+[64:48.96] preserve the the structure of rn as a
+[64:51.12] group
+[64:51.44] indeed that turns out to be the case and
+[64:53.20] you won't be able to preserve
+[64:54.64] uh the vector space structure of of rn
+[64:57.92] when you consider more general examples
+[64:59.84] a more general manifold will not be a
+[65:01.92] vector space
+[65:03.36] but we want to preserve as much as we
+[65:05.12] can particularly of this vector space
+[65:07.04] structure because this helps us to do
+[65:08.32] local physics without vectors
+[65:10.24] we aren't able to do to define equations
+[65:13.60] of motion for test particles in our
+[65:15.28] space time so we want to preserve as
+[65:16.80] much of the notion of say
+[65:18.00] vector as possible
+[65:24.08] so first comment is that euclidean
+[65:27.28] and minkowski space
+[65:36.16] has a natural vector space structure
+[65:49.52] ie
+[65:53.20] v which is rn
+[65:56.24] is both a manifold and a vector space
+[66:00.32] it certainly can be endowed with a
+[66:02.08] manipulate structure
+[66:05.04] but it also happens to be a vector space
+[66:15.84] and it's it's a vector space globally
+[66:18.64] right
+[66:20.00] the whole space itself is the vector
+[66:21.84] space
+[66:25.12] now the next really important comment
+[66:27.76] you know we've introduced the
+[66:28.80] generalized notion of a continuum
+[66:31.28] we don't get to keep vector space
+[66:33.28] structure when we
+[66:34.56] generalize our notions so for general
+[66:37.84] manifolds
+[66:41.44] it's not always the case that the
+[66:42.96] manifold is a vector space
+[66:47.60] so one loses and even if you look at the
+[66:50.16] sphere
+[66:50.96] you can see that this is the case one
+[66:53.44] loses
+[66:54.40] as an example of a manifold one loses
+[66:58.00] the vector space structure
+[67:02.40] it's too bad hey
+[67:08.88] because there's no additive structure
+[67:10.88] anymore
+[67:13.84] yeah there's probably you can think of a
+[67:16.00] perverse way to add items
+[67:18.16] and add elements of the vector space but
+[67:21.12] uh
+[67:21.84] so maybe i should just say there's no
+[67:23.44] natural
+[67:25.52] additive structure that
+[67:28.64] inherits or smoothly deforms the vector
+[67:32.08] space structure of rn
+[67:33.60] and so the example you know one example
+[67:36.32] is
+[67:36.80] is sn
+[67:41.04] or even s2 right s2 is not a vector
+[67:43.84] space as i said
+[67:53.76] it is however possible to associate
+[67:55.84] vector spaces
+[67:57.36] to manifolds
+[68:10.64] and that's something that's rather
+[68:12.48] interesting about euclidean space
+[68:28.16] so euclidean space is globally a vector
+[68:30.88] space you can
+[68:32.96] add two elements multiply them by
+[68:34.96] scalars and so on
+[68:36.64] but rn euclidean space is also if you
+[68:40.08] if you like an infinite number of vector
+[68:42.16] spaces with
+[68:43.84] associated to each point in rn you can
+[68:45.92] associate well
+[68:47.04] rn right that sounds a bit strange but
+[68:50.24] this
+[68:50.64] example of sn i think better highlights
+[68:52.88] what i mean
+[68:54.00] or s2 so in s2
+[68:57.12] the sphere the surface of the sphere or
+[68:59.44] the two sphere
+[69:02.72] we don't have a natural vector space
+[69:05.28] structure left
+[69:06.00] on s2 there's no way no natural way to
+[69:08.80] add elements of s2
+[69:11.76] and get a vector space structure but
+[69:14.32] there is actually associated
+[69:16.00] s2 or to every point in s2 a natural
+[69:18.72] vector space
+[69:21.44] and that's the tangent space so if you
+[69:24.24] have a point p
+[69:25.20] on s2 then we can associate
+[69:28.24] to that point p the tangent space this
+[69:31.28] is the
+[69:33.20] two two-dimensional hyperplane that
+[69:34.80] kisses the sphere at that point
+[69:42.56] so this two-dimensional hyperplane also
+[69:45.44] called tangent space at p
+[69:47.04] is a vector space right even though s2
+[69:49.20] is not a vector space we lost that
+[69:50.64] structure
+[69:51.36] we still locally if you zoom in s2 looks
+[69:54.88] like r2 and therefore
+[69:56.56] um and you can associate this this plane
+[69:59.60] to it this tangent plane
+[70:01.04] and this tangent plane most certainly is
+[70:02.48] a vector space or a vector subspace of
+[70:04.24] r3
+[70:07.76] so that works when you have this okay
+[70:09.60] this is a bit clumsy because i told you
+[70:11.60] we don't want to do things with embedded
+[70:12.80] manifolds we're going to do everything
+[70:13.92] intrinsically we don't want to make
+[70:15.20] reference to this embedding space
+[70:17.20] so it's a bit clumsy it looks like it
+[70:18.48] may even in fact depend on how you embed
+[70:20.80] your manifold into r3
+[70:24.88] so we so we have a problem right with
+[70:27.20] this idea of associating to each point
+[70:29.20] in a manifold
+[70:29.92] vector space so what if
+[70:34.40] we define things
+[70:37.60] or how to define things intrinsically
+[70:49.68] we don't want to make reference to this
+[70:50.96] embedding space can we even do this
+[70:55.04] exclamation mark question mark is it
+[70:57.20] possible well of course the answer is
+[70:58.48] yes i wouldn't ask the question if it
+[70:59.92] wasn't possible
+[71:02.96] and it's kind of an interesting round
+[71:04.32] about way of doing things
+[71:06.32] so what we do is we we first
+[71:09.44] identify this tangents-based structure
+[71:12.40] with some other vector space that you
+[71:13.84] can define intrinsically and then
+[71:15.84] we define the tangent space to be that
+[71:18.24] that other space
+[71:23.20] so we first identify the vector space of
+[71:26.48] tangent vectors
+[71:38.56] with another vector space
+[71:42.72] namely the vector space
+[71:45.92] of directional derivatives
+[72:00.00] and then we don't define tangent space
+[72:04.32] intrinsically we define directional
+[72:06.24] derivatives intrinsically
+[72:21.04] a lovely little puzzle when you're
+[72:22.48] trying to build more general definitions
+[72:25.04] you try and isolate aspects
+[72:28.32] of your definition that capture notions
+[72:32.24] and then you search around equivalent
+[72:34.72] realizations of these notions until you
+[72:36.64] find something that's transferable to
+[72:38.16] your more general scenario and that's
+[72:39.36] the case here
+[72:40.88] we we you know when you think of a
+[72:42.72] tangent vector probably you're thinking
+[72:44.24] of it geometrically you think of the
+[72:45.84] the the surface embedded in r n you
+[72:48.32] think of the tangent vector is a little
+[72:49.52] arrow that's stuck with its base on the
+[72:51.52] surface the tangent to the surface
+[72:54.24] and then the tangent space of such
+[72:55.76] vectors is kind of easy to realize in
+[72:57.36] your mind
+[72:58.72] but that picture you can't draw when you
+[73:00.24] don't we're not allowed to make
+[73:01.36] reference to this embedding space so
+[73:03.12] we we now limit our
+[73:06.32] uh our thinking and we say okay we're
+[73:09.92] not allowed to make reference to the
+[73:11.36] embedding space anymore
+[73:12.56] could we come up with an equivalent
+[73:14.00] notion of a tangential vector and the
+[73:15.76] idea is right to every tangent vector
+[73:17.28] there's a one to one and onto map
+[73:18.64] between tangent vectors and directional
+[73:20.40] derivatives
+[73:22.16] and amazingly directional derivative is
+[73:24.88] a notion that you can define
+[73:26.56] intrinsically so that's where we're
+[73:30.24] going to end
+[73:30.88] the video for today's lecture
+[73:34.08] in today's lecture we introduced the
+[73:35.92] notion of a smooth manifold
+[73:37.76] as a way of generalizing the idea of a
+[73:40.96] continuous or a four-dimensional
+[73:43.92] continuous
+[73:44.72] to a more from the euclidean space to a
+[73:48.16] more general setting
+[73:50.32] we also commence the discussion of
+[73:53.68] tangent space of a smooth manifold
+[73:57.52] thank you very much and i look forward
+[73:59.52] to seeing you in the next video
+[74:05.04] for those of you are sticking around i'm
+[74:07.12] just going to spend a couple of minutes
+[74:09.20] going diving a little deeper into the
+[74:11.44] definition
+[74:12.24] of a smooth manifold this material is
+[74:15.44] not required for the course however you
+[74:17.52] might be curious
+[74:18.72] how the how to derive how to define a
+[74:22.40] smooth manifold
+[74:23.84] in a mathematically rigorous way with
+[74:26.00] reference to some
+[74:27.20] aspects from point set and general
+[74:29.12] topology so that's the purpose of this
+[74:31.52] additional
+[74:32.32] hazardous terrain track of this video
+[74:42.96] so now i'm going to present to you uh
+[74:45.04] the formal mathematical definition
+[74:47.04] of a smooth smooth manifold in its full
+[74:49.44] completeness
+[74:51.92] so really to do things properly you have
+[74:54.84] to
+[74:57.36] first introduce the notion of
+[75:00.48] something called a locally euclidean
+[75:05.12] space m
+[75:08.72] so if you want to define a smooth
+[75:09.92] manifold or a more general class of
+[75:11.60] manifold
+[75:12.40] we want to at least come up with a
+[75:13.92] notion of something that you might call
+[75:15.20] a local euclidean space now a local
+[75:24.64] euclidean space
+[75:25.60] m of dimension d what is it well it's a
+[75:29.92] halsdorf topological space
+[75:42.80] so you have to remember what that is you
+[75:44.56] know to every point you can put an open
+[75:46.24] set around to
+[75:47.04] any pair of points that separates them
+[75:49.84] health topological space
+[75:51.36] m
+[75:55.20] for which each point
+[76:02.40] has a neighborhood
+[76:12.40] homeomorphic
+[76:17.20] continuous function continuous inverse
+[76:19.52] to an open
+[76:22.32] subset of rd okay so in building up the
+[76:26.40] rigorous the fully rigorous mathematical
+[76:28.40] definition of a smooth manifold or a
+[76:30.32] manifold
+[76:30.96] of class ck we need to have this
+[76:33.92] underlying
+[76:34.80] structure of of the local euclidean
+[76:37.04] space first
+[76:39.44] so following this route we are now able
+[76:45.36] to commence the full definition of a
+[76:48.16] differentiable
+[76:49.52] smooth manifold by
+[76:53.44] layering on additional structure on this
+[76:55.60] definition
+[76:59.68] so the next layer of structure that we
+[77:01.04] add on is the notion of a differentiable
+[77:02.96] structure
+[77:08.32] calligraphic f so a differential
+[77:10.40] structure differentiable structure f
+[77:12.88] of class c ck
+[77:19.20] where one is less than k is less than
+[77:21.68] infinity
+[77:22.40] less than equal to infinity
+[77:29.44] on a locally euclidean space
+[77:40.00] m what is it well this is this is the
+[77:43.68] part
+[77:44.56] of the definition which captures parts
+[77:47.84] one and two of the definition i
+[77:49.68] presented in the main lecture
+[77:53.36] luckily clean space m is a collection of
+[77:56.00] coordinate systems
+[77:58.64] or charts
+[78:03.76] o alpha psi alpha such that alpha is in
+[78:07.84] some indexing set a
+[78:10.16] such that
+[78:13.20] well a these sets cover
+[78:16.56] when you union over all these oa or
+[78:19.28] alphas
+[78:19.92] they cover m b these transition
+[78:24.84] functions
+[78:27.20] are ck
+[78:34.24] or at least ck for all
+[78:38.16] alpha beta in these indexing sets and c
+[78:42.00] the collection f is maximum
+[78:54.32] with respect to b
+[78:58.24] and this is the structure that captures
+[79:01.68] parts one and two of our definition
+[79:05.04] presented in the main lecture and
+[79:06.24] finally now we come to a d
+[79:09.48] dimensional
+[79:12.80] differentiable manifold
+[79:25.52] of class c k
+[79:29.44] and uh this notion can actually be
+[79:32.48] beautifully generalized to quote a big
+[79:37.76] a much larger class of structures so ck
+[79:40.96] can be generalized
+[79:44.88] to c infinity well that's essentially
+[79:47.92] included
+[79:48.64] in the definition already but complex
+[79:50.32] structures
+[79:52.40] etc there's lots of ways to generalize
+[79:54.72] this notion of a different
+[79:55.68] differentiable structure and therefore
+[79:57.04] you get different things
+[79:58.64] such as complex manifolds is a pair
+[80:03.12] what is it it's a pair of a local
+[80:04.80] euclidean space and a differentiable
+[80:06.40] structure
+[80:15.44] d dimensional second countable
+[80:22.64] local euclidean
+[80:30.84] space m together with a differentiable
+[80:44.84] structure
+[80:49.60] of class ck
+[80:56.16] okay so that's the end of this
+[80:58.64] additional
+[80:59.60] hazardous terrain track of this video as
+[81:02.08] i said
+[81:02.64] at the commencement of this additional
+[81:05.12] section this material is not required
+[81:07.44] for this course it is only presented for
+[81:09.52] those of you who are
+[81:11.20] curious to see where these definitions
+[81:13.36] lie in the context of rigorous
+[81:14.88] mathematical definitions
+[81:16.96] that's it for now thank you and goodbye

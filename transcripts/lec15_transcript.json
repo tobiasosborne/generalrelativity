@@ -1,0 +1,4042 @@
+{
+  "title": "General Relativity, Lecture 15: gravitational waves and cosmology",
+  "video_id": "ArIlqav7X6s",
+  "url": "https://www.youtube.com/watch?v=ArIlqav7X6s",
+  "transcript": [
+    {
+      "start": 0.48,
+      "duration": 2.959,
+      "text": "hello and welcome back to introduction"
+    },
+    {
+      "start": 2.0,
+      "duration": 2.64,
+      "text": "to general relativity"
+    },
+    {
+      "start": 3.439,
+      "duration": 2.801,
+      "text": "in today's lecture we're going to"
+    },
+    {
+      "start": 4.64,
+      "duration": 3.84,
+      "text": "continue our discussion of the"
+    },
+    {
+      "start": 6.24,
+      "duration": 4.24,
+      "text": "linearized einstein field equations"
+    },
+    {
+      "start": 8.48,
+      "duration": 8.4,
+      "text": "and study one of their most striking"
+    },
+    {
+      "start": 10.48,
+      "duration": 7.92,
+      "text": "solutions namely gravitational radiation"
+    },
+    {
+      "start": 16.88,
+      "duration": 3.04,
+      "text": "in the previous lecture we looked at the"
+    },
+    {
+      "start": 18.4,
+      "duration": 4.4,
+      "text": "newtonian limit of"
+    },
+    {
+      "start": 19.92,
+      "duration": 4.88,
+      "text": "the linearized einstein field equations"
+    },
+    {
+      "start": 22.8,
+      "duration": 2.559,
+      "text": "however in that limit the gravitational"
+    },
+    {
+      "start": 24.8,
+      "duration": 2.88,
+      "text": "field"
+    },
+    {
+      "start": 25.359,
+      "duration": 3.441,
+      "text": "doesn't really change with time but in"
+    },
+    {
+      "start": 27.68,
+      "duration": 3.28,
+      "text": "general relativity"
+    },
+    {
+      "start": 28.8,
+      "duration": 4.8,
+      "text": "the gravitational field is a dynamic"
+    },
+    {
+      "start": 30.96,
+      "duration": 14.88,
+      "text": "entity and this leads to the possibility"
+    },
+    {
+      "start": 33.6,
+      "duration": 12.24,
+      "text": "of gravitational radiation"
+    },
+    {
+      "start": 57.12,
+      "duration": 6.4,
+      "text": "just like there is in electrodynamics"
+    },
+    {
+      "start": 60.879,
+      "duration": 4.64,
+      "text": "that the field has uh dynamic the field"
+    },
+    {
+      "start": 63.52,
+      "duration": 3.52,
+      "text": "is dynamically electromagnetic field and"
+    },
+    {
+      "start": 65.519,
+      "duration": 5.321,
+      "text": "has supports"
+    },
+    {
+      "start": 67.04,
+      "duration": 6.8,
+      "text": "wave-like solutions so can uh general"
+    },
+    {
+      "start": 70.84,
+      "duration": 3.0,
+      "text": "relativity"
+    },
+    {
+      "start": 83.84,
+      "duration": 4.8,
+      "text": "and we can already study this at the"
+    },
+    {
+      "start": 85.84,
+      "duration": 6.48,
+      "text": "linearized level of approximation"
+    },
+    {
+      "start": 88.64,
+      "duration": 6.64,
+      "text": "of and determine such gravitational"
+    },
+    {
+      "start": 92.32,
+      "duration": 2.96,
+      "text": "wave solutions"
+    },
+    {
+      "start": 95.36,
+      "duration": 4.399,
+      "text": "so we need to some kind of equations to"
+    },
+    {
+      "start": 97.119,
+      "duration": 6.0,
+      "text": "get started and we're going to use"
+    },
+    {
+      "start": 99.759,
+      "duration": 7.441,
+      "text": "the source free"
+    },
+    {
+      "start": 103.119,
+      "duration": 12.721,
+      "text": "equations sorcery linearized equations"
+    },
+    {
+      "start": 107.2,
+      "duration": 8.64,
+      "text": "that we introduced two lectures ago"
+    },
+    {
+      "start": 116.079,
+      "duration": 2.561,
+      "text": "however"
+    },
+    {
+      "start": 119.52,
+      "duration": 3.199,
+      "text": "we're going to work in this particular"
+    },
+    {
+      "start": 121.119,
+      "duration": 2.481,
+      "text": "gauge that we also introduced in the"
+    },
+    {
+      "start": 122.719,
+      "duration": 3.36,
+      "text": "previous lecture"
+    },
+    {
+      "start": 123.6,
+      "duration": 2.479,
+      "text": "whereby"
+    },
+    {
+      "start": 127.2,
+      "duration": 6.64,
+      "text": "the divergence of the"
+    },
+    {
+      "start": 130.64,
+      "duration": 5.84,
+      "text": "gamma a b line over line metric"
+    },
+    {
+      "start": 133.84,
+      "duration": 2.64,
+      "text": "is zero"
+    },
+    {
+      "start": 139.76,
+      "duration": 3.28,
+      "text": "and in this according to this gauge"
+    },
+    {
+      "start": 141.92,
+      "duration": 3.36,
+      "text": "choice"
+    },
+    {
+      "start": 143.04,
+      "duration": 3.919,
+      "text": "then the linearized einstein field"
+    },
+    {
+      "start": 145.28,
+      "duration": 3.92,
+      "text": "equations become this extraordinarily"
+    },
+    {
+      "start": 146.959,
+      "duration": 4.401,
+      "text": "simple"
+    },
+    {
+      "start": 149.2,
+      "duration": 4.88,
+      "text": "set of partial differential equations of"
+    },
+    {
+      "start": 151.36,
+      "duration": 2.72,
+      "text": "second order"
+    },
+    {
+      "start": 154.319,
+      "duration": 5.041,
+      "text": "so as i just emphasized what i just said"
+    },
+    {
+      "start": 157.12,
+      "duration": 2.24,
+      "text": "uh"
+    },
+    {
+      "start": 159.599,
+      "duration": 3.151,
+      "text": "this first equation here is the gauge"
+    },
+    {
+      "start": 162.319,
+      "duration": 1.761,
+      "text": "fixing"
+    },
+    {
+      "start": 162.75,
+      "duration": 3.73,
+      "text": "[Music]"
+    },
+    {
+      "start": 164.08,
+      "duration": 4.76,
+      "text": "choice let's say each choice as we'll"
+    },
+    {
+      "start": 166.48,
+      "duration": 5.36,
+      "text": "see it doesn't completely determine the"
+    },
+    {
+      "start": 168.84,
+      "duration": 3.0,
+      "text": "gauge"
+    },
+    {
+      "start": 186.64,
+      "duration": 4.72,
+      "text": "so this condition one doesn't completely"
+    },
+    {
+      "start": 194.08,
+      "duration": 4.72,
+      "text": "fix the gauge there's a little bit of"
+    },
+    {
+      "start": 195.519,
+      "duration": 8.241,
+      "text": "freedom left just like um"
+    },
+    {
+      "start": 198.8,
+      "duration": 4.96,
+      "text": "in the lawrence gauge in electrodynamics"
+    },
+    {
+      "start": 205.68,
+      "duration": 8.559,
+      "text": "so we are still free"
+    },
+    {
+      "start": 212.799,
+      "duration": 4.241,
+      "text": "to make the following gauge"
+    },
+    {
+      "start": 214.239,
+      "duration": 2.801,
+      "text": "transformation"
+    },
+    {
+      "start": 218.56,
+      "duration": 8.319,
+      "text": "namely we're allowed to take the this"
+    },
+    {
+      "start": 222.239,
+      "duration": 6.961,
+      "text": "perturbed metric and"
+    },
+    {
+      "start": 226.879,
+      "duration": 4.0,
+      "text": "make an infinitesimal diviomorphism"
+    },
+    {
+      "start": 229.2,
+      "duration": 3.84,
+      "text": "generated by the vector field psi"
+    },
+    {
+      "start": 230.879,
+      "duration": 2.161,
+      "text": "a"
+    },
+    {
+      "start": 234.0,
+      "duration": 7.519,
+      "text": "as long as condition three for today"
+    },
+    {
+      "start": 238.239,
+      "duration": 5.521,
+      "text": "this vector field"
+    },
+    {
+      "start": 241.519,
+      "duration": 3.601,
+      "text": "obeys this equation here so as long as"
+    },
+    {
+      "start": 243.76,
+      "duration": 4.8,
+      "text": "the vector field obeys"
+    },
+    {
+      "start": 245.12,
+      "duration": 6.479,
+      "text": "this uh delimition equation here"
+    },
+    {
+      "start": 248.56,
+      "duration": 4.64,
+      "text": "then uh equation three then there's a t"
+    },
+    {
+      "start": 251.599,
+      "duration": 2.991,
+      "text": "we could still able to make a little bit"
+    },
+    {
+      "start": 253.2,
+      "duration": 2.72,
+      "text": "more gauge um"
+    },
+    {
+      "start": 254.59,
+      "duration": 2.769,
+      "text": "[Music]"
+    },
+    {
+      "start": 255.92,
+      "duration": 3.039,
+      "text": "we still have a little bit more gauge"
+    },
+    {
+      "start": 257.359,
+      "duration": 4.4,
+      "text": "freedom left and we can"
+    },
+    {
+      "start": 258.959,
+      "duration": 3.761,
+      "text": "exploit that actually to simplify things"
+    },
+    {
+      "start": 261.759,
+      "duration": 3.281,
+      "text": "in a moment"
+    },
+    {
+      "start": 262.72,
+      "duration": 3.199,
+      "text": "and you'll see that equation three or"
+    },
+    {
+      "start": 265.04,
+      "duration": 2.24,
+      "text": "the the gauge"
+    },
+    {
+      "start": 265.919,
+      "duration": 3.84,
+      "text": "transformation determined by equation"
+    },
+    {
+      "start": 267.28,
+      "duration": 5.84,
+      "text": "three doesn't affect the gauge choice"
+    },
+    {
+      "start": 269.759,
+      "duration": 3.361,
+      "text": "specified by equation one"
+    },
+    {
+      "start": 274.639,
+      "duration": 3.28,
+      "text": "so we're going to use this this freedom"
+    },
+    {
+      "start": 276.0,
+      "duration": 3.44,
+      "text": "now to make our life a little bit easier"
+    },
+    {
+      "start": 277.919,
+      "duration": 4.72,
+      "text": "in looking for gravitational"
+    },
+    {
+      "start": 279.44,
+      "duration": 5.12,
+      "text": "wave solutions"
+    },
+    {
+      "start": 282.639,
+      "duration": 5.12,
+      "text": "we're going to introduce the so-called"
+    },
+    {
+      "start": 284.56,
+      "duration": 3.199,
+      "text": "radiation gauge"
+    },
+    {
+      "start": 288.08,
+      "duration": 5.92,
+      "text": "which will be quite handy in a minute so"
+    },
+    {
+      "start": 291.52,
+      "duration": 4.72,
+      "text": "the radiation gauge is determined by"
+    },
+    {
+      "start": 294.0,
+      "duration": 4.56,
+      "text": "the following conditions then the gamma"
+    },
+    {
+      "start": 296.24,
+      "duration": 5.28,
+      "text": "is zero"
+    },
+    {
+      "start": 298.56,
+      "duration": 3.919,
+      "text": "and gamma naught j component is also"
+    },
+    {
+      "start": 301.52,
+      "duration": 4.0,
+      "text": "zero for j"
+    },
+    {
+      "start": 302.479,
+      "duration": 5.44,
+      "text": "equals one two three and"
+    },
+    {
+      "start": 305.52,
+      "duration": 6.32,
+      "text": "uh gamma itself is just the trace of"
+    },
+    {
+      "start": 307.919,
+      "duration": 3.921,
+      "text": "gamma right"
+    },
+    {
+      "start": 317.28,
+      "duration": 6.08,
+      "text": "now it turns out that"
+    },
+    {
+      "start": 321.52,
+      "duration": 3.6,
+      "text": "if the stress energy tensor isn't just"
+    },
+    {
+      "start": 323.36,
+      "duration": 4.399,
+      "text": "zero in a region but actually zero"
+    },
+    {
+      "start": 325.12,
+      "duration": 2.639,
+      "text": "everywhere"
+    },
+    {
+      "start": 329.44,
+      "duration": 4.88,
+      "text": "and we can achieve a slightly stronger"
+    },
+    {
+      "start": 331.52,
+      "duration": 2.8,
+      "text": "gauge fixing"
+    },
+    {
+      "start": 335.28,
+      "duration": 3.68,
+      "text": "so if the stress energy tends to zero"
+    },
+    {
+      "start": 337.36,
+      "duration": 2.72,
+      "text": "throughout the entire universe there's"
+    },
+    {
+      "start": 338.96,
+      "duration": 5.04,
+      "text": "no stress energy"
+    },
+    {
+      "start": 340.08,
+      "duration": 3.92,
+      "text": "at what whatsoever"
+    },
+    {
+      "start": 347.6,
+      "duration": 6.24,
+      "text": "then we can further achieve"
+    },
+    {
+      "start": 351.28,
+      "duration": 2.56,
+      "text": "the condition"
+    },
+    {
+      "start": 354.72,
+      "duration": 4.319,
+      "text": "that gamma naught naught is separately"
+    },
+    {
+      "start": 356.72,
+      "duration": 2.319,
+      "text": "zero"
+    },
+    {
+      "start": 359.759,
+      "duration": 3.681,
+      "text": "so to we haven't got to the radiation"
+    },
+    {
+      "start": 361.759,
+      "duration": 2.72,
+      "text": "gauge yet we have to actually find a"
+    },
+    {
+      "start": 363.44,
+      "duration": 3.28,
+      "text": "vector field psi"
+    },
+    {
+      "start": 364.479,
+      "duration": 4.56,
+      "text": "a that can bring us into this radiation"
+    },
+    {
+      "start": 366.72,
+      "duration": 2.319,
+      "text": "gauge"
+    },
+    {
+      "start": 378.319,
+      "duration": 4.0,
+      "text": "and the way we find our size we simply"
+    },
+    {
+      "start": 380.56,
+      "duration": 4.24,
+      "text": "substituting"
+    },
+    {
+      "start": 382.319,
+      "duration": 4.88,
+      "text": "in this gauge fixing condition here we"
+    },
+    {
+      "start": 384.8,
+      "duration": 4.959,
+      "text": "simply substitute that in"
+    },
+    {
+      "start": 387.199,
+      "duration": 3.84,
+      "text": "to these equations down here for the"
+    },
+    {
+      "start": 389.759,
+      "duration": 6.081,
+      "text": "radiation gauge"
+    },
+    {
+      "start": 391.039,
+      "duration": 4.801,
+      "text": "and then we solve"
+    },
+    {
+      "start": 404.319,
+      "duration": 5.521,
+      "text": "and we have to solve the following"
+    },
+    {
+      "start": 405.84,
+      "duration": 4.0,
+      "text": "equations somewhere"
+    },
+    {
+      "start": 420.08,
+      "duration": 3.76,
+      "text": "on a fixed initial"
+    },
+    {
+      "start": 424.319,
+      "duration": 3.841,
+      "text": "surface t is t naught so you pick some t"
+    },
+    {
+      "start": 427.28,
+      "duration": 3.199,
+      "text": "sometime"
+    },
+    {
+      "start": 428.16,
+      "duration": 3.2,
+      "text": "in the global initial coordinate system"
+    },
+    {
+      "start": 430.479,
+      "duration": 4.401,
+      "text": "and you solve"
+    },
+    {
+      "start": 431.36,
+      "duration": 7.119,
+      "text": "these following equations for x i"
+    },
+    {
+      "start": 434.88,
+      "duration": 6.08,
+      "text": "so here they are they're just"
+    },
+    {
+      "start": 438.479,
+      "duration": 5.041,
+      "text": "it's hardly worth calling this an"
+    },
+    {
+      "start": 440.96,
+      "duration": 2.56,
+      "text": "exercise"
+    },
+    {
+      "start": 445.199,
+      "duration": 5.761,
+      "text": "it really is just the equations"
+    },
+    {
+      "start": 448.479,
+      "duration": 5.681,
+      "text": "fix i determined by substituting the"
+    },
+    {
+      "start": 450.96,
+      "duration": 7.04,
+      "text": "gauge transformation equation"
+    },
+    {
+      "start": 454.16,
+      "duration": 3.84,
+      "text": "into the gauge can fixing conditions"
+    },
+    {
+      "start": 459.44,
+      "duration": 2.8,
+      "text": "it may look a little complicated but"
+    },
+    {
+      "start": 461.039,
+      "duration": 2.321,
+      "text": "it's nothing more than what i've just"
+    },
+    {
+      "start": 462.24,
+      "duration": 5.92,
+      "text": "said and also"
+    },
+    {
+      "start": 463.36,
+      "duration": 14.8,
+      "text": "we are further this is the"
+    },
+    {
+      "start": 468.16,
+      "duration": 11.68,
+      "text": "we take the time derivative of the"
+    },
+    {
+      "start": 478.16,
+      "duration": 2.8,
+      "text": "previous equation so this equation that"
+    },
+    {
+      "start": 479.84,
+      "duration": 3.12,
+      "text": "i'm just writing out here is just the"
+    },
+    {
+      "start": 480.96,
+      "duration": 4.0,
+      "text": "time derivative of the previous equation"
+    },
+    {
+      "start": 482.96,
+      "duration": 3.84,
+      "text": "however this becomes extremely uh"
+    },
+    {
+      "start": 484.96,
+      "duration": 3.519,
+      "text": "important for fixing gauge"
+    },
+    {
+      "start": 486.8,
+      "duration": 3.04,
+      "text": "the radiation gauge throughout time"
+    },
+    {
+      "start": 488.479,
+      "duration": 5.361,
+      "text": "because if you demand this equation is"
+    },
+    {
+      "start": 489.84,
+      "duration": 4.0,
+      "text": "solved then the gauge doesn't change"
+    },
+    {
+      "start": 505.44,
+      "duration": 7.52,
+      "text": "and this final equation"
+    },
+    {
+      "start": 508.8,
+      "duration": 4.16,
+      "text": "is nothing but this third equation"
+    },
+    {
+      "start": 513.519,
+      "duration": 8.32,
+      "text": "where we've taken the time derivative an"
+    },
+    {
+      "start": 515.919,
+      "duration": 5.92,
+      "text": "additional time derivative"
+    },
+    {
+      "start": 530.56,
+      "duration": 5.12,
+      "text": "so this is an initial value problem we"
+    },
+    {
+      "start": 532.839,
+      "duration": 6.12,
+      "text": "have"
+    },
+    {
+      "start": 535.68,
+      "duration": 3.279,
+      "text": "it gives some initial values"
+    },
+    {
+      "start": 539.44,
+      "duration": 5.12,
+      "text": "for uh x i mu and their time derivatives"
+    },
+    {
+      "start": 543.279,
+      "duration": 6.56,
+      "text": "and then we solve them"
+    },
+    {
+      "start": 544.56,
+      "duration": 5.279,
+      "text": "so it's an initial value problem"
+    },
+    {
+      "start": 554.08,
+      "duration": 7.28,
+      "text": "so given psi mu on"
+    },
+    {
+      "start": 558.0,
+      "duration": 3.36,
+      "text": "and its time derivatives"
+    },
+    {
+      "start": 561.44,
+      "duration": 5.68,
+      "text": "on the time initial time surface"
+    },
+    {
+      "start": 564.56,
+      "duration": 2.56,
+      "text": "we solve"
+    },
+    {
+      "start": 569.92,
+      "duration": 10.4,
+      "text": "for psi mu throughout space time"
+    },
+    {
+      "start": 576.08,
+      "duration": 7.439,
+      "text": "um and one then has"
+    },
+    {
+      "start": 580.32,
+      "duration": 3.199,
+      "text": "which is an exercise"
+    },
+    {
+      "start": 584.0,
+      "duration": 6.48,
+      "text": "that uh not only is gamma equal naught"
+    },
+    {
+      "start": 587.839,
+      "duration": 3.841,
+      "text": "and gamma naught j equal naught but we"
+    },
+    {
+      "start": 590.48,
+      "duration": 4.72,
+      "text": "on the initial time"
+    },
+    {
+      "start": 591.68,
+      "duration": 3.52,
+      "text": "surface but throughout space time"
+    },
+    {
+      "start": 597.04,
+      "duration": 4.0,
+      "text": "or to be more precise in the source free"
+    },
+    {
+      "start": 599.44,
+      "duration": 2.959,
+      "text": "region"
+    },
+    {
+      "start": 601.04,
+      "duration": 3.28,
+      "text": "the minute you get to a region where"
+    },
+    {
+      "start": 602.399,
+      "duration": 4.56,
+      "text": "there are sources then this is going to"
+    },
+    {
+      "start": 604.32,
+      "duration": 2.639,
+      "text": "look valid"
+    },
+    {
+      "start": 610.399,
+      "duration": 6.801,
+      "text": "so if tab equals zero everywhere"
+    },
+    {
+      "start": 615.2,
+      "duration": 3.759,
+      "text": "we can ensure this additional gauge"
+    },
+    {
+      "start": 617.2,
+      "duration": 4.96,
+      "text": "condition 3 that i mentioned"
+    },
+    {
+      "start": 618.959,
+      "duration": 6.081,
+      "text": "earlier namely the gamma naught naught"
+    },
+    {
+      "start": 622.16,
+      "duration": 2.88,
+      "text": "sorry not 3 but"
+    },
+    {
+      "start": 625.2,
+      "duration": 4.319,
+      "text": "i haven't named it actually so we can"
+    },
+    {
+      "start": 630.839,
+      "duration": 5.56,
+      "text": "achieve"
+    },
+    {
+      "start": 633.279,
+      "duration": 5.761,
+      "text": "gamma naught naught equals 0 everywhere"
+    },
+    {
+      "start": 636.399,
+      "duration": 2.641,
+      "text": "as follows"
+    },
+    {
+      "start": 644.839,
+      "duration": 3.0,
+      "text": "namely"
+    },
+    {
+      "start": 648.56,
+      "duration": 4.88,
+      "text": "we note that um gamma equals naught"
+    },
+    {
+      "start": 651.44,
+      "duration": 5.04,
+      "text": "implies that gamma naught"
+    },
+    {
+      "start": 653.44,
+      "duration": 8.399,
+      "text": "b bar equals gamma naught b that's the"
+    },
+    {
+      "start": 656.48,
+      "duration": 5.359,
+      "text": "first step"
+    },
+    {
+      "start": 663.6,
+      "duration": 6.08,
+      "text": "and then equation one then"
+    },
+    {
+      "start": 667.04,
+      "duration": 4.479,
+      "text": "tells us that the time derivative of"
+    },
+    {
+      "start": 669.68,
+      "duration": 6.48,
+      "text": "gamma naught naught"
+    },
+    {
+      "start": 671.519,
+      "duration": 4.641,
+      "text": "is automatically zero and then"
+    },
+    {
+      "start": 676.32,
+      "duration": 4.959,
+      "text": "well we solve"
+    },
+    {
+      "start": 682.56,
+      "duration": 7.279,
+      "text": "the linearized einstein's equations"
+    },
+    {
+      "start": 698.16,
+      "duration": 3.6,
+      "text": "and they tell us that gamma the"
+    },
+    {
+      "start": 699.92,
+      "duration": 3.68,
+      "text": "laplacian squared of gamma naught naught"
+    },
+    {
+      "start": 701.76,
+      "duration": 4.56,
+      "text": "is minus 16 pi"
+    },
+    {
+      "start": 703.6,
+      "duration": 3.84,
+      "text": "t naught naught naught which is zero but"
+    },
+    {
+      "start": 706.32,
+      "duration": 2.959,
+      "text": "that tells us"
+    },
+    {
+      "start": 707.44,
+      "duration": 3.519,
+      "text": "we there's only one globally valid"
+    },
+    {
+      "start": 709.279,
+      "duration": 2.0,
+      "text": "solution to that equation and that is"
+    },
+    {
+      "start": 710.959,
+      "duration": 4.401,
+      "text": "that"
+    },
+    {
+      "start": 711.279,
+      "duration": 4.081,
+      "text": "uh gamma naught naught is a constant"
+    },
+    {
+      "start": 715.6,
+      "duration": 3.679,
+      "text": "and we can shift"
+    },
+    {
+      "start": 721.68,
+      "duration": 4.959,
+      "text": "shift uh gamma naught naught by that"
+    },
+    {
+      "start": 724.079,
+      "duration": 2.56,
+      "text": "constant"
+    },
+    {
+      "start": 728.16,
+      "duration": 5.04,
+      "text": "and that that doesn't end contradict any"
+    },
+    {
+      "start": 730.32,
+      "duration": 2.88,
+      "text": "previous equations"
+    },
+    {
+      "start": 736.399,
+      "duration": 3.361,
+      "text": "so we can assume further the gamma"
+    },
+    {
+      "start": 738.24,
+      "duration": 3.599,
+      "text": "naught naught is constant only in the"
+    },
+    {
+      "start": 739.76,
+      "duration": 4.24,
+      "text": "case where the entire universe is devoid"
+    },
+    {
+      "start": 741.839,
+      "duration": 4.161,
+      "text": "of matter"
+    },
+    {
+      "start": 744.0,
+      "duration": 3.839,
+      "text": "okay well now we've got we've i've"
+    },
+    {
+      "start": 746.0,
+      "duration": 4.72,
+      "text": "managed to convince you i hope that"
+    },
+    {
+      "start": 747.839,
+      "duration": 4.721,
+      "text": "the radiation gauge where gamma zero and"
+    },
+    {
+      "start": 750.72,
+      "duration": 4.559,
+      "text": "gamma r j equals zero"
+    },
+    {
+      "start": 752.56,
+      "duration": 5.12,
+      "text": "uh can be achieved by a very specific"
+    },
+    {
+      "start": 755.279,
+      "duration": 3.841,
+      "text": "judicious choice of"
+    },
+    {
+      "start": 757.68,
+      "duration": 3.52,
+      "text": "the theomorphism generated by vector"
+    },
+    {
+      "start": 759.12,
+      "duration": 14.719,
+      "text": "field psi now"
+    },
+    {
+      "start": 761.2,
+      "duration": 12.639,
+      "text": "let's try and find some waves"
+    },
+    {
+      "start": 774.16,
+      "duration": 3.84,
+      "text": "and the way we find waves is the way we"
+    },
+    {
+      "start": 776.0,
+      "duration": 4.079,
+      "text": "always find waves so we assume"
+    },
+    {
+      "start": 778.0,
+      "duration": 3.92,
+      "text": "that the dynamical object that we"
+    },
+    {
+      "start": 780.079,
+      "duration": 4.081,
+      "text": "currently have namely the perturbation"
+    },
+    {
+      "start": 781.92,
+      "duration": 5.12,
+      "text": "to the metric gamma a b"
+    },
+    {
+      "start": 784.16,
+      "duration": 5.6,
+      "text": "has the form of some constants"
+    },
+    {
+      "start": 787.04,
+      "duration": 6.16,
+      "text": "multiplied by e to the i"
+    },
+    {
+      "start": 789.76,
+      "duration": 3.44,
+      "text": "uh times by some"
+    },
+    {
+      "start": 794.0,
+      "duration": 7.839,
+      "text": "wave vector dot product with the"
+    },
+    {
+      "start": 797.04,
+      "duration": 4.799,
+      "text": "position so we just make a wave unzips"
+    },
+    {
+      "start": 812.079,
+      "duration": 6.401,
+      "text": "and we substitute it into the linear iso"
+    },
+    {
+      "start": 816.16,
+      "duration": 3.28,
+      "text": "linearized einstein equations so that's"
+    },
+    {
+      "start": 818.48,
+      "duration": 2.799,
+      "text": "our assumption"
+    },
+    {
+      "start": 819.44,
+      "duration": 3.199,
+      "text": "that we have a wave and then we're going"
+    },
+    {
+      "start": 821.279,
+      "duration": 3.521,
+      "text": "to substitute that into linearized"
+    },
+    {
+      "start": 822.639,
+      "duration": 7.2,
+      "text": "einstein's equations and hope that we"
+    },
+    {
+      "start": 824.8,
+      "duration": 5.039,
+      "text": "well find a wave"
+    },
+    {
+      "start": 838.959,
+      "duration": 3.201,
+      "text": "so substituting into linearized einstein"
+    },
+    {
+      "start": 840.88,
+      "duration": 4.16,
+      "text": "equations which i"
+    },
+    {
+      "start": 842.16,
+      "duration": 4.799,
+      "text": "believe are labeled one today well okay"
+    },
+    {
+      "start": 845.04,
+      "duration": 12.799,
+      "text": "firstly the gauge condition"
+    },
+    {
+      "start": 846.959,
+      "duration": 13.921,
+      "text": "so one and also four"
+    },
+    {
+      "start": 857.839,
+      "duration": 4.8,
+      "text": "oops sorry let's not"
+    },
+    {
+      "start": 860.88,
+      "duration": 3.28,
+      "text": "get ahead of ourselves let's first"
+    },
+    {
+      "start": 862.639,
+      "duration": 3.361,
+      "text": "substitute into two which is the"
+    },
+    {
+      "start": 864.16,
+      "duration": 3.6,
+      "text": "linearization equations"
+    },
+    {
+      "start": 866.0,
+      "duration": 4.24,
+      "text": "uh what does that tell us all that tells"
+    },
+    {
+      "start": 867.76,
+      "duration": 2.48,
+      "text": "us that"
+    },
+    {
+      "start": 872.72,
+      "duration": 11.919,
+      "text": "k mu k mu is zero okay so"
+    },
+    {
+      "start": 876.24,
+      "duration": 11.839,
+      "text": "null another vector"
+    },
+    {
+      "start": 884.639,
+      "duration": 5.601,
+      "text": "and equations one and four require the"
+    },
+    {
+      "start": 888.079,
+      "duration": 5.361,
+      "text": "following conditions to be solved"
+    },
+    {
+      "start": 890.24,
+      "duration": 3.76,
+      "text": "so we've got that equations one brings"
+    },
+    {
+      "start": 893.44,
+      "duration": 6.16,
+      "text": "down"
+    },
+    {
+      "start": 894.0,
+      "duration": 9.12,
+      "text": "one factor of k"
+    },
+    {
+      "start": 899.6,
+      "duration": 3.52,
+      "text": "our equation four"
+    },
+    {
+      "start": 903.36,
+      "duration": 6.24,
+      "text": "forces h naught nu to be zero"
+    },
+    {
+      "start": 906.56,
+      "duration": 5.76,
+      "text": "and also"
+    },
+    {
+      "start": 909.6,
+      "duration": 3.52,
+      "text": "the trace condition being vanishing"
+    },
+    {
+      "start": 912.32,
+      "duration": 4.0,
+      "text": "requires that h"
+    },
+    {
+      "start": 913.12,
+      "duration": 4.32,
+      "text": "mu mu is zero now we've got a whole"
+    },
+    {
+      "start": 916.32,
+      "duration": 5.04,
+      "text": "bunch of equations here"
+    },
+    {
+      "start": 917.44,
+      "duration": 6.079,
+      "text": "right we've got uh one"
+    },
+    {
+      "start": 921.36,
+      "duration": 3.52,
+      "text": "plus four so that's five equations plus"
+    },
+    {
+      "start": 923.519,
+      "duration": 5.041,
+      "text": "four is nine"
+    },
+    {
+      "start": 924.88,
+      "duration": 5.6,
+      "text": "plus another one is 10 equations see"
+    },
+    {
+      "start": 928.56,
+      "duration": 3.839,
+      "text": "so we have 10 equations that need to be"
+    },
+    {
+      "start": 930.48,
+      "duration": 5.12,
+      "text": "solved in order for this wavelike"
+    },
+    {
+      "start": 932.399,
+      "duration": 8.401,
+      "text": "solution to be a solution"
+    },
+    {
+      "start": 935.6,
+      "duration": 7.84,
+      "text": "but only eight equations are actually"
+    },
+    {
+      "start": 940.8,
+      "duration": 2.64,
+      "text": "independent"
+    },
+    {
+      "start": 947.92,
+      "duration": 7.919,
+      "text": "because a and b imply"
+    },
+    {
+      "start": 952.839,
+      "duration": 3.0,
+      "text": "um"
+    },
+    {
+      "start": 959.839,
+      "duration": 2.321,
+      "text": "that"
+    },
+    {
+      "start": 967.04,
+      "duration": 3.28,
+      "text": "well a and b together imply that h"
+    },
+    {
+      "start": 969.44,
+      "duration": 4.0,
+      "text": "naught nu"
+    },
+    {
+      "start": 970.32,
+      "duration": 3.12,
+      "text": "k nu is zero"
+    },
+    {
+      "start": 976.959,
+      "duration": 3.201,
+      "text": "and that should tell us"
+    },
+    {
+      "start": 980.32,
+      "duration": 5.12,
+      "text": "ah yeah together they imply the same"
+    },
+    {
+      "start": 982.32,
+      "duration": 3.12,
+      "text": "equation so that's why"
+    },
+    {
+      "start": 988.0,
+      "duration": 8.72,
+      "text": "that's why they're not independent"
+    },
+    {
+      "start": 991.44,
+      "duration": 9.519,
+      "text": "so nb both imply"
+    },
+    {
+      "start": 996.72,
+      "duration": 5.679,
+      "text": "h naught nu k new equals zero"
+    },
+    {
+      "start": 1000.959,
+      "duration": 4.081,
+      "text": "so only eight equations are actually"
+    },
+    {
+      "start": 1002.399,
+      "duration": 5.281,
+      "text": "independent of these ten equations"
+    },
+    {
+      "start": 1005.04,
+      "duration": 3.12,
+      "text": "and now uh what's well what have we got"
+    },
+    {
+      "start": 1007.68,
+      "duration": 2.719,
+      "text": "to"
+    },
+    {
+      "start": 1008.16,
+      "duration": 3.28,
+      "text": "to to solve for how many degrees of"
+    },
+    {
+      "start": 1010.399,
+      "duration": 5.041,
+      "text": "freedom do we have left"
+    },
+    {
+      "start": 1011.44,
+      "duration": 6.639,
+      "text": "well a symmetric uh tensor of type two"
+    },
+    {
+      "start": 1015.44,
+      "duration": 2.639,
+      "text": "zero two"
+    },
+    {
+      "start": 1018.959,
+      "duration": 6.0,
+      "text": "has how many degrees of freedom well"
+    },
+    {
+      "start": 1021.839,
+      "duration": 6.881,
+      "text": "it's it's a matrix right with four"
+    },
+    {
+      "start": 1024.959,
+      "duration": 6.96,
+      "text": "rows and columns and"
+    },
+    {
+      "start": 1028.72,
+      "duration": 4.959,
+      "text": "it's symmetric so you only have to worry"
+    },
+    {
+      "start": 1031.919,
+      "duration": 2.081,
+      "text": "about the diagonals they're independent"
+    },
+    {
+      "start": 1033.679,
+      "duration": 4.081,
+      "text": "four"
+    },
+    {
+      "start": 1034.0,
+      "duration": 5.039,
+      "text": "plus three upper diagonal seven nine ten"
+    },
+    {
+      "start": 1037.76,
+      "duration": 4.079,
+      "text": "the other all the other entries are"
+    },
+    {
+      "start": 1039.039,
+      "duration": 6.0,
+      "text": "completely determined"
+    },
+    {
+      "start": 1041.839,
+      "duration": 6.401,
+      "text": "so this has only 10 uh"
+    },
+    {
+      "start": 1045.039,
+      "duration": 3.201,
+      "text": "independent components"
+    },
+    {
+      "start": 1050.32,
+      "duration": 3.44,
+      "text": "so just this naive variable equation"
+    },
+    {
+      "start": 1052.88,
+      "duration": 4.32,
+      "text": "count"
+    },
+    {
+      "start": 1053.76,
+      "duration": 6.48,
+      "text": "leads us to conclude that"
+    },
+    {
+      "start": 1057.2,
+      "duration": 10.64,
+      "text": "only there are only two"
+    },
+    {
+      "start": 1060.24,
+      "duration": 7.6,
+      "text": "linearly independent solutions"
+    },
+    {
+      "start": 1070.48,
+      "duration": 4.72,
+      "text": "for this hiv so there's only two"
+    },
+    {
+      "start": 1072.799,
+      "duration": 6.961,
+      "text": "linearly independent"
+    },
+    {
+      "start": 1075.2,
+      "duration": 8.719,
+      "text": "uh wave-like solutions to einstein's"
+    },
+    {
+      "start": 1079.76,
+      "duration": 4.159,
+      "text": "transferred equations of wave-like form"
+    },
+    {
+      "start": 1084.4,
+      "duration": 3.6,
+      "text": "but that's that's sort of two is bigger"
+    },
+    {
+      "start": 1087.039,
+      "duration": 5.441,
+      "text": "than zero"
+    },
+    {
+      "start": 1088.0,
+      "duration": 6.4,
+      "text": "and uh that's a pretty"
+    },
+    {
+      "start": 1092.48,
+      "duration": 3.439,
+      "text": "striking prediction of einstein's theory"
+    },
+    {
+      "start": 1094.4,
+      "duration": 3.6,
+      "text": "that grab the gravitational"
+    },
+    {
+      "start": 1095.919,
+      "duration": 3.361,
+      "text": "field itself has dynamic wave like"
+    },
+    {
+      "start": 1098.0,
+      "duration": 2.72,
+      "text": "solutions"
+    },
+    {
+      "start": 1099.28,
+      "duration": 3.2,
+      "text": "and that's something that's a feature"
+    },
+    {
+      "start": 1100.72,
+      "duration": 4.079,
+      "text": "that one does not find in the newtonian"
+    },
+    {
+      "start": 1102.48,
+      "duration": 2.319,
+      "text": "theory"
+    },
+    {
+      "start": 1105.52,
+      "duration": 7.2,
+      "text": "uh it's worth digressing"
+    },
+    {
+      "start": 1108.559,
+      "duration": 4.161,
+      "text": "to just talk about lower dimensions"
+    },
+    {
+      "start": 1113.2,
+      "duration": 3.599,
+      "text": "i think this is particularly interesting"
+    },
+    {
+      "start": 1114.72,
+      "duration": 5.839,
+      "text": "and highly relevant for investigations"
+    },
+    {
+      "start": 1116.799,
+      "duration": 3.76,
+      "text": "into quantum gravity at the current time"
+    },
+    {
+      "start": 1121.039,
+      "duration": 6.88,
+      "text": "does one have uh gravitational"
+    },
+    {
+      "start": 1124.4,
+      "duration": 5.44,
+      "text": "wave solutions in lower dimensions um"
+    },
+    {
+      "start": 1127.919,
+      "duration": 4.561,
+      "text": "well we can take a look at two plus one"
+    },
+    {
+      "start": 1129.84,
+      "duration": 2.64,
+      "text": "dimensions"
+    },
+    {
+      "start": 1132.96,
+      "duration": 4.16,
+      "text": "here the gauge equation here the if you"
+    },
+    {
+      "start": 1135.679,
+      "duration": 5.441,
+      "text": "do the count"
+    },
+    {
+      "start": 1137.12,
+      "duration": 4.0,
+      "text": "the gauge conditions"
+    },
+    {
+      "start": 1141.919,
+      "duration": 6.401,
+      "text": "uh imply six independent equations"
+    },
+    {
+      "start": 1145.84,
+      "duration": 3.6,
+      "text": "so if you go through and do exactly the"
+    },
+    {
+      "start": 1148.32,
+      "duration": 4.479,
+      "text": "same argument"
+    },
+    {
+      "start": 1149.44,
+      "duration": 6.8,
+      "text": "what i gave as what i gave above"
+    },
+    {
+      "start": 1152.799,
+      "duration": 5.601,
+      "text": "you only get six independent you get six"
+    },
+    {
+      "start": 1156.24,
+      "duration": 4.88,
+      "text": "independent equations"
+    },
+    {
+      "start": 1158.4,
+      "duration": 2.72,
+      "text": "um however"
+    },
+    {
+      "start": 1161.52,
+      "duration": 6.56,
+      "text": "a uh a type"
+    },
+    {
+      "start": 1165.44,
+      "duration": 4.0,
+      "text": "zero two tensor in two plus one"
+    },
+    {
+      "start": 1168.08,
+      "duration": 5.599,
+      "text": "dimensions"
+    },
+    {
+      "start": 1169.44,
+      "duration": 4.239,
+      "text": "has uh uh six components"
+    },
+    {
+      "start": 1174.72,
+      "duration": 6.88,
+      "text": "so actually there's no"
+    },
+    {
+      "start": 1178.4,
+      "duration": 4.8,
+      "text": "degrees of freedom count uh would tell"
+    },
+    {
+      "start": 1181.6,
+      "duration": 5.76,
+      "text": "us"
+    },
+    {
+      "start": 1183.2,
+      "duration": 5.68,
+      "text": "that the equations uh"
+    },
+    {
+      "start": 1187.36,
+      "duration": 3.6,
+      "text": "can't be or can be solved but there are"
+    },
+    {
+      "start": 1188.88,
+      "duration": 5.039,
+      "text": "no degrees of freedom left over"
+    },
+    {
+      "start": 1190.96,
+      "duration": 3.92,
+      "text": "and uh therefore one concludes that"
+    },
+    {
+      "start": 1193.919,
+      "duration": 2.961,
+      "text": "there's actually"
+    },
+    {
+      "start": 1194.88,
+      "duration": 4.159,
+      "text": "no uh gravitational wave solutions in"
+    },
+    {
+      "start": 1196.88,
+      "duration": 3.52,
+      "text": "two plus one dimensions"
+    },
+    {
+      "start": 1199.039,
+      "duration": 8.801,
+      "text": "now it's worth pointing out that we"
+    },
+    {
+      "start": 1200.4,
+      "duration": 7.44,
+      "text": "could have guessed this already"
+    },
+    {
+      "start": 1213.039,
+      "duration": 6.161,
+      "text": "uh and the reason is is that the"
+    },
+    {
+      "start": 1217.52,
+      "duration": 3.44,
+      "text": "the um there's a very interesting little"
+    },
+    {
+      "start": 1219.2,
+      "duration": 3.76,
+      "text": "argument you can make that tells you"
+    },
+    {
+      "start": 1220.96,
+      "duration": 2.719,
+      "text": "that the curvature tensor is completely"
+    },
+    {
+      "start": 1222.96,
+      "duration": 2.4,
+      "text": "determined"
+    },
+    {
+      "start": 1223.679,
+      "duration": 4.88,
+      "text": "by the curvature scalar and the rigid"
+    },
+    {
+      "start": 1225.36,
+      "duration": 3.199,
+      "text": "tensor in lower dimensions"
+    },
+    {
+      "start": 1232.96,
+      "duration": 6.719,
+      "text": "so the the curvature tensor rabcd"
+    },
+    {
+      "start": 1236.24,
+      "duration": 4.72,
+      "text": "in two plus one dimensions is"
+    },
+    {
+      "start": 1239.679,
+      "duration": 4.161,
+      "text": "is completely determined by the"
+    },
+    {
+      "start": 1240.96,
+      "duration": 2.88,
+      "text": "following equation"
+    },
+    {
+      "start": 1244.88,
+      "duration": 7.919,
+      "text": "involving the metric the ritchie tensor"
+    },
+    {
+      "start": 1249.76,
+      "duration": 3.039,
+      "text": "and the richie scala"
+    },
+    {
+      "start": 1261.28,
+      "duration": 5.519,
+      "text": "and so the minute you know the richie"
+    },
+    {
+      "start": 1264.0,
+      "duration": 5.12,
+      "text": "tensa and the richie scala"
+    },
+    {
+      "start": 1266.799,
+      "duration": 5.601,
+      "text": "well you know the riemann curvature"
+    },
+    {
+      "start": 1269.12,
+      "duration": 3.28,
+      "text": "tensor and therefore you know all the"
+    },
+    {
+      "start": 1272.88,
+      "duration": 4.72,
+      "text": "all the curvature information"
+    },
+    {
+      "start": 1276.159,
+      "duration": 2.961,
+      "text": "or the local second order coverage"
+    },
+    {
+      "start": 1277.6,
+      "duration": 3.28,
+      "text": "information about your manifold so in"
+    },
+    {
+      "start": 1279.12,
+      "duration": 4.799,
+      "text": "two plus one dimensions"
+    },
+    {
+      "start": 1280.88,
+      "duration": 4.64,
+      "text": "there's actually uh"
+    },
+    {
+      "start": 1283.919,
+      "duration": 3.201,
+      "text": "no more information that the riemann"
+    },
+    {
+      "start": 1285.52,
+      "duration": 3.32,
+      "text": "tensor gives you"
+    },
+    {
+      "start": 1287.12,
+      "duration": 4.24,
+      "text": "that you didn't have before with the"
+    },
+    {
+      "start": 1288.84,
+      "duration": 5.4,
+      "text": "riemann with the richie tensor"
+    },
+    {
+      "start": 1291.36,
+      "duration": 2.88,
+      "text": "and the scala"
+    },
+    {
+      "start": 1295.2,
+      "duration": 4.4,
+      "text": "and uh why why is this well this takes"
+    },
+    {
+      "start": 1298.24,
+      "duration": 2.48,
+      "text": "us a little bit further"
+    },
+    {
+      "start": 1299.6,
+      "duration": 3.76,
+      "text": "away from where we're going in this"
+    },
+    {
+      "start": 1300.72,
+      "duration": 4.24,
+      "text": "lecture but um it's worth explaining why"
+    },
+    {
+      "start": 1303.36,
+      "duration": 4.0,
+      "text": "it's a good homework problem to go"
+    },
+    {
+      "start": 1304.96,
+      "duration": 4.16,
+      "text": "through this so this is because you can"
+    },
+    {
+      "start": 1307.36,
+      "duration": 4.799,
+      "text": "decompose the riemann"
+    },
+    {
+      "start": 1309.12,
+      "duration": 3.039,
+      "text": "curvature tensor"
+    },
+    {
+      "start": 1314.72,
+      "duration": 5.12,
+      "text": "you can decompose it in terms of"
+    },
+    {
+      "start": 1323.76,
+      "duration": 6.72,
+      "text": "of rab r and"
+    },
+    {
+      "start": 1327.44,
+      "duration": 6.4,
+      "text": "uh a completely trace-free"
+    },
+    {
+      "start": 1330.48,
+      "duration": 3.36,
+      "text": "tensor called the vial tensor"
+    },
+    {
+      "start": 1350.08,
+      "duration": 3.599,
+      "text": "and then you note that that"
+    },
+    {
+      "start": 1351.84,
+      "duration": 3.76,
+      "text": "decomposition the condition for the"
+    },
+    {
+      "start": 1353.679,
+      "duration": 4.561,
+      "text": "vanish"
+    },
+    {
+      "start": 1355.6,
+      "duration": 4.8,
+      "text": "this decomposition in two plus one"
+    },
+    {
+      "start": 1358.24,
+      "duration": 4.24,
+      "text": "dimensions"
+    },
+    {
+      "start": 1360.4,
+      "duration": 4.08,
+      "text": "you note then that the curve of this"
+    },
+    {
+      "start": 1362.48,
+      "duration": 3.52,
+      "text": "vial tensor vanishes"
+    },
+    {
+      "start": 1364.48,
+      "duration": 3.76,
+      "text": "and that leads to that equation that i"
+    },
+    {
+      "start": 1366.0,
+      "duration": 4.159,
+      "text": "wrote above"
+    },
+    {
+      "start": 1368.24,
+      "duration": 3.6,
+      "text": "now how much you could convince yourself"
+    },
+    {
+      "start": 1370.159,
+      "duration": 2.88,
+      "text": "of that would just look at the number of"
+    },
+    {
+      "start": 1371.84,
+      "duration": 2.88,
+      "text": "independent degrees of freedom at the"
+    },
+    {
+      "start": 1373.039,
+      "duration": 3.281,
+      "text": "riemann tension just do a count of the"
+    },
+    {
+      "start": 1374.72,
+      "duration": 2.48,
+      "text": "number of independent degrees of freedom"
+    },
+    {
+      "start": 1376.32,
+      "duration": 2.239,
+      "text": "and then you will"
+    },
+    {
+      "start": 1377.2,
+      "duration": 3.359,
+      "text": "quickly convince yourself that there's"
+    },
+    {
+      "start": 1378.559,
+      "duration": 5.201,
+      "text": "no more information that could be"
+    },
+    {
+      "start": 1380.559,
+      "duration": 4.161,
+      "text": "added all right that's that's cider"
+    },
+    {
+      "start": 1383.76,
+      "duration": 3.08,
+      "text": "markers if you're interested in"
+    },
+    {
+      "start": 1384.72,
+      "duration": 4.0,
+      "text": "following this up"
+    },
+    {
+      "start": 1386.84,
+      "duration": 5.16,
+      "text": "um so"
+    },
+    {
+      "start": 1388.72,
+      "duration": 4.0,
+      "text": "uh now why is it that we could have"
+    },
+    {
+      "start": 1392.0,
+      "duration": 3.2,
+      "text": "guessed"
+    },
+    {
+      "start": 1392.72,
+      "duration": 5.04,
+      "text": "that there's no gravitational waves in"
+    },
+    {
+      "start": 1395.2,
+      "duration": 5.76,
+      "text": "uh two plus one dimensions well"
+    },
+    {
+      "start": 1397.76,
+      "duration": 4.88,
+      "text": "uh take a look at uh"
+    },
+    {
+      "start": 1400.96,
+      "duration": 5.76,
+      "text": "einstein's field equations or look at"
+    },
+    {
+      "start": 1402.64,
+      "duration": 4.08,
+      "text": "the vacuum einstein's field equations"
+    },
+    {
+      "start": 1407.6,
+      "duration": 3.6,
+      "text": "what do they read well they read r a b c"
+    },
+    {
+      "start": 1409.679,
+      "duration": 5.36,
+      "text": "d minus a half"
+    },
+    {
+      "start": 1411.2,
+      "duration": 6.719,
+      "text": "g a b times their cheat constant is zero"
+    },
+    {
+      "start": 1415.039,
+      "duration": 4.88,
+      "text": "well that equation if you contract that"
+    },
+    {
+      "start": 1417.919,
+      "duration": 6.321,
+      "text": "blah blah blah you quickly conclude that"
+    },
+    {
+      "start": 1419.919,
+      "duration": 6.321,
+      "text": "r is zero and r a b is zero"
+    },
+    {
+      "start": 1424.24,
+      "duration": 4.08,
+      "text": "but take a look at this equation this"
+    },
+    {
+      "start": 1426.24,
+      "duration": 4.4,
+      "text": "condition here we have for the the"
+    },
+    {
+      "start": 1428.32,
+      "duration": 5.04,
+      "text": "riemann curvature tensor that tells us"
+    },
+    {
+      "start": 1430.64,
+      "duration": 2.72,
+      "text": "that uh"
+    },
+    {
+      "start": 1434.559,
+      "duration": 4.321,
+      "text": "r is zero and uh so it was originally"
+    },
+    {
+      "start": 1437.12,
+      "duration": 4.08,
+      "text": "scalar so the whole riemann curvature"
+    },
+    {
+      "start": 1438.88,
+      "duration": 3.6,
+      "text": "tends to vanishes so the banishing"
+    },
+    {
+      "start": 1441.2,
+      "duration": 3.04,
+      "text": "the the vacuum monster transfer"
+    },
+    {
+      "start": 1442.48,
+      "duration": 3.36,
+      "text": "equations in two plus one dimensions"
+    },
+    {
+      "start": 1444.24,
+      "duration": 3.52,
+      "text": "already imply the vanishing of the"
+    },
+    {
+      "start": 1445.84,
+      "duration": 4.56,
+      "text": "riemann curvature tensor"
+    },
+    {
+      "start": 1447.76,
+      "duration": 3.84,
+      "text": "there are no possible waves like"
+    },
+    {
+      "start": 1450.4,
+      "duration": 3.36,
+      "text": "solutions to the"
+    },
+    {
+      "start": 1451.6,
+      "duration": 4.72,
+      "text": "trans-field equations in two plus one"
+    },
+    {
+      "start": 1453.76,
+      "duration": 2.56,
+      "text": "dimensions"
+    },
+    {
+      "start": 1456.799,
+      "duration": 6.161,
+      "text": "um well before we move on"
+    },
+    {
+      "start": 1460.0,
+      "duration": 4.64,
+      "text": "uh i should of course emphasize"
+    },
+    {
+      "start": 1462.96,
+      "duration": 4.88,
+      "text": "something that you've probably"
+    },
+    {
+      "start": 1464.64,
+      "duration": 6.639,
+      "text": "no doubt already heard um"
+    },
+    {
+      "start": 1467.84,
+      "duration": 7.52,
+      "text": "and that is that gravitational waves"
+    },
+    {
+      "start": 1471.279,
+      "duration": 7.121,
+      "text": "far from being a theoretical possibility"
+    },
+    {
+      "start": 1475.36,
+      "duration": 4.48,
+      "text": "they are in fact now established observe"
+    },
+    {
+      "start": 1478.4,
+      "duration": 4.879,
+      "text": "physical phenomena one of the most"
+    },
+    {
+      "start": 1479.84,
+      "duration": 3.439,
+      "text": "dramatic discoveries"
+    },
+    {
+      "start": 1483.919,
+      "duration": 5.281,
+      "text": "of modern times was the impact of"
+    },
+    {
+      "start": 1486.96,
+      "duration": 5.28,
+      "text": "detection of gravitational"
+    },
+    {
+      "start": 1489.2,
+      "duration": 4.479,
+      "text": "wave or radiation emitted from a binary"
+    },
+    {
+      "start": 1492.24,
+      "duration": 6.16,
+      "text": "and spiral"
+    },
+    {
+      "start": 1493.679,
+      "duration": 8.081,
+      "text": "black hole merger and they were detected"
+    },
+    {
+      "start": 1498.4,
+      "duration": 6.48,
+      "text": "actually in hanover well"
+    },
+    {
+      "start": 1501.76,
+      "duration": 7.039,
+      "text": "the data was analyzed in hanover"
+    },
+    {
+      "start": 1504.88,
+      "duration": 10.799,
+      "text": "in germany via in 2015"
+    },
+    {
+      "start": 1508.799,
+      "duration": 10.641,
+      "text": "by a laser interferometer"
+    },
+    {
+      "start": 1515.679,
+      "duration": 5.441,
+      "text": "so it's it's impossible to uh"
+    },
+    {
+      "start": 1519.44,
+      "duration": 4.0,
+      "text": "to talk about gravitational radiation"
+    },
+    {
+      "start": 1521.12,
+      "duration": 4.96,
+      "text": "without without mentioning"
+    },
+    {
+      "start": 1523.44,
+      "duration": 3.44,
+      "text": "this most striking and celebrated"
+    },
+    {
+      "start": 1526.08,
+      "duration": 4.32,
+      "text": "experimental"
+    },
+    {
+      "start": 1526.88,
+      "duration": 3.52,
+      "text": "discovery in 2015."
+    },
+    {
+      "start": 1531.12,
+      "duration": 4.159,
+      "text": "so in the last part of today's lecture i"
+    },
+    {
+      "start": 1534.0,
+      "duration": 2.96,
+      "text": "want to move on from"
+    },
+    {
+      "start": 1535.279,
+      "duration": 3.52,
+      "text": "the topic of solving einstein's field"
+    },
+    {
+      "start": 1536.96,
+      "duration": 5.68,
+      "text": "equations in perturbation theory"
+    },
+    {
+      "start": 1538.799,
+      "duration": 4.721,
+      "text": "in linear order and i want to move on to"
+    },
+    {
+      "start": 1542.64,
+      "duration": 3.919,
+      "text": "discussing"
+    },
+    {
+      "start": 1543.52,
+      "duration": 4.639,
+      "text": "uh full or complete solutions to"
+    },
+    {
+      "start": 1546.559,
+      "duration": 5.041,
+      "text": "einstein's field equations"
+    },
+    {
+      "start": 1548.159,
+      "duration": 7.041,
+      "text": "applicable to the entire universe"
+    },
+    {
+      "start": 1551.6,
+      "duration": 9.52,
+      "text": "so we're going to move now to the topic"
+    },
+    {
+      "start": 1555.2,
+      "duration": 5.92,
+      "text": "of homogeneous isotropic cosmology"
+    },
+    {
+      "start": 1564.64,
+      "duration": 3.6,
+      "text": "so our goal in the next couple of"
+    },
+    {
+      "start": 1566.32,
+      "duration": 4.0,
+      "text": "lectures is to"
+    },
+    {
+      "start": 1568.24,
+      "duration": 4.24,
+      "text": "real to be as bold as possible we're"
+    },
+    {
+      "start": 1570.32,
+      "duration": 4.56,
+      "text": "going to try and extend"
+    },
+    {
+      "start": 1572.48,
+      "duration": 4.0,
+      "text": "uh the domain of applicability of"
+    },
+    {
+      "start": 1574.88,
+      "duration": 2.88,
+      "text": "einstein's field equations to the entire"
+    },
+    {
+      "start": 1576.48,
+      "duration": 1.76,
+      "text": "universe we're going to try and make a"
+    },
+    {
+      "start": 1577.76,
+      "duration": 2.56,
+      "text": "model"
+    },
+    {
+      "start": 1578.24,
+      "duration": 3.439,
+      "text": "of how we think matter is distributed in"
+    },
+    {
+      "start": 1580.32,
+      "duration": 2.64,
+      "text": "the universe of stress energy is"
+    },
+    {
+      "start": 1581.679,
+      "duration": 2.88,
+      "text": "distributed in the universe"
+    },
+    {
+      "start": 1582.96,
+      "duration": 3.52,
+      "text": "we're going to make a model of this and"
+    },
+    {
+      "start": 1584.559,
+      "duration": 4.72,
+      "text": "then we're going to try and"
+    },
+    {
+      "start": 1586.48,
+      "duration": 4.16,
+      "text": "uh solve einstein's field equations now"
+    },
+    {
+      "start": 1589.279,
+      "duration": 3.361,
+      "text": "obviously we can't do it in the complete"
+    },
+    {
+      "start": 1590.64,
+      "duration": 4.24,
+      "text": "generality that we uh"
+    },
+    {
+      "start": 1592.64,
+      "duration": 3.76,
+      "text": "that would describe the entire universe"
+    },
+    {
+      "start": 1594.88,
+      "duration": 2.799,
+      "text": "um instead we're going to make a couple"
+    },
+    {
+      "start": 1596.4,
+      "duration": 3.6,
+      "text": "of extraordinarily massive"
+    },
+    {
+      "start": 1597.679,
+      "duration": 4.161,
+      "text": "simplifications"
+    },
+    {
+      "start": 1600.0,
+      "duration": 3.52,
+      "text": "and in particular impose lots of"
+    },
+    {
+      "start": 1601.84,
+      "duration": 3.839,
+      "text": "additional symmetries"
+    },
+    {
+      "start": 1603.52,
+      "duration": 3.759,
+      "text": "and in the end we'll end up with a"
+    },
+    {
+      "start": 1605.679,
+      "duration": 3.761,
+      "text": "pretty small set of equations that we"
+    },
+    {
+      "start": 1607.279,
+      "duration": 4.561,
+      "text": "will be able to solve"
+    },
+    {
+      "start": 1609.44,
+      "duration": 6.239,
+      "text": "and it's those solutions that that will"
+    },
+    {
+      "start": 1611.84,
+      "duration": 6.56,
+      "text": "occupy us for a large number of lectures"
+    },
+    {
+      "start": 1615.679,
+      "duration": 4.321,
+      "text": "so yeah as stated our goal now is to"
+    },
+    {
+      "start": 1618.4,
+      "duration": 2.879,
+      "text": "solve einstein's equations"
+    },
+    {
+      "start": 1620.0,
+      "duration": 2.88,
+      "text": "in a case of relevance for the"
+    },
+    {
+      "start": 1621.279,
+      "duration": 3.52,
+      "text": "description of our universe and this is"
+    },
+    {
+      "start": 1622.88,
+      "duration": 4.64,
+      "text": "impossible to do"
+    },
+    {
+      "start": 1624.799,
+      "duration": 3.521,
+      "text": "for an arbitrary matter distribution"
+    },
+    {
+      "start": 1627.52,
+      "duration": 3.36,
+      "text": "however"
+    },
+    {
+      "start": 1628.32,
+      "duration": 3.839,
+      "text": "what we can do to make progress is to"
+    },
+    {
+      "start": 1630.88,
+      "duration": 3.44,
+      "text": "assume a sufficiently"
+    },
+    {
+      "start": 1632.159,
+      "duration": 3.841,
+      "text": "homogeneous and isotropic distribution"
+    },
+    {
+      "start": 1634.32,
+      "duration": 5.76,
+      "text": "of matter"
+    },
+    {
+      "start": 1636.0,
+      "duration": 6.159,
+      "text": "and so that's"
+    },
+    {
+      "start": 1640.08,
+      "duration": 4.0,
+      "text": "the goal now is so to solve einstein's"
+    },
+    {
+      "start": 1642.159,
+      "duration": 6.081,
+      "text": "field equations that the gab"
+    },
+    {
+      "start": 1644.08,
+      "duration": 7.04,
+      "text": "is eight pi tab"
+    },
+    {
+      "start": 1648.24,
+      "duration": 2.88,
+      "text": "we assume"
+    },
+    {
+      "start": 1651.6,
+      "duration": 5.52,
+      "text": "a uh sufficiently you know"
+    },
+    {
+      "start": 1655.2,
+      "duration": 3.44,
+      "text": "you only assume what you need"
+    },
+    {
+      "start": 1657.12,
+      "duration": 4.24,
+      "text": "sufficiently uh"
+    },
+    {
+      "start": 1658.64,
+      "duration": 2.72,
+      "text": "homogeneous"
+    },
+    {
+      "start": 1662.08,
+      "duration": 2.959,
+      "text": "and isotropic"
+    },
+    {
+      "start": 1665.36,
+      "duration": 4.48,
+      "text": "distribution of matter"
+    },
+    {
+      "start": 1677.52,
+      "duration": 4.48,
+      "text": "so and then we we will try and find a"
+    },
+    {
+      "start": 1680.96,
+      "duration": 2.719,
+      "text": "solution so"
+    },
+    {
+      "start": 1682.0,
+      "duration": 2.96,
+      "text": "this will be highly idealized right you"
+    },
+    {
+      "start": 1683.679,
+      "duration": 3.201,
+      "text": "know we don't live in the universe with"
+    },
+    {
+      "start": 1684.96,
+      "duration": 2.56,
+      "text": "an isotropic and modular distribution of"
+    },
+    {
+      "start": 1686.88,
+      "duration": 2.48,
+      "text": "matter"
+    },
+    {
+      "start": 1687.52,
+      "duration": 3.519,
+      "text": "but if you kind of zoom out enough right"
+    },
+    {
+      "start": 1689.36,
+      "duration": 3.439,
+      "text": "and coarse green enough then"
+    },
+    {
+      "start": 1691.039,
+      "duration": 3.36,
+      "text": "yeah whether a star's there or over"
+    },
+    {
+      "start": 1692.799,
+      "duration": 3.12,
+      "text": "there it doesn't really matter if you"
+    },
+    {
+      "start": 1694.399,
+      "duration": 4.0,
+      "text": "average out on"
+    },
+    {
+      "start": 1695.919,
+      "duration": 4.321,
+      "text": "galactic length scales uh then the"
+    },
+    {
+      "start": 1698.399,
+      "duration": 2.961,
+      "text": "matters should hopefully start to look"
+    },
+    {
+      "start": 1700.24,
+      "duration": 5.12,
+      "text": "fairly isotropic"
+    },
+    {
+      "start": 1701.36,
+      "duration": 7.199,
+      "text": "and homogeneous so what we have to do"
+    },
+    {
+      "start": 1705.36,
+      "duration": 4.72,
+      "text": "is well to move forward we have to give"
+    },
+    {
+      "start": 1708.559,
+      "duration": 3.6,
+      "text": "a definition of what we could mean by"
+    },
+    {
+      "start": 1710.08,
+      "duration": 5.52,
+      "text": "homogeneity and isotropy"
+    },
+    {
+      "start": 1712.159,
+      "duration": 6.88,
+      "text": "for a manifold a space-time manifold"
+    },
+    {
+      "start": 1715.6,
+      "duration": 5.439,
+      "text": "so that's our first step"
+    },
+    {
+      "start": 1719.039,
+      "duration": 4.64,
+      "text": "and where we commence the discussion"
+    },
+    {
+      "start": 1721.039,
+      "duration": 5.36,
+      "text": "today is in just"
+    },
+    {
+      "start": 1723.679,
+      "duration": 3.441,
+      "text": "introducing a sufficiently rigorous and"
+    },
+    {
+      "start": 1726.399,
+      "duration": 2.321,
+      "text": "tractable"
+    },
+    {
+      "start": 1727.12,
+      "duration": 12.72,
+      "text": "definition of what might be meant by"
+    },
+    {
+      "start": 1728.72,
+      "duration": 11.12,
+      "text": "homogeneous isotropy"
+    },
+    {
+      "start": 1741.76,
+      "duration": 5.519,
+      "text": "so let's commence with the condition of"
+    },
+    {
+      "start": 1744.32,
+      "duration": 2.959,
+      "text": "homogeneity"
+    },
+    {
+      "start": 1747.44,
+      "duration": 2.959,
+      "text": "what is meant by this"
+    },
+    {
+      "start": 1751.12,
+      "duration": 5.2,
+      "text": "uh well physically we don't occupy"
+    },
+    {
+      "start": 1754.559,
+      "duration": 3.681,
+      "text": "a privileged position in the universe"
+    },
+    {
+      "start": 1756.32,
+      "duration": 11.52,
+      "text": "that's the assumption of homogeneity"
+    },
+    {
+      "start": 1758.24,
+      "duration": 9.6,
+      "text": "what it"
+    },
+    {
+      "start": 1776.88,
+      "duration": 18.96,
+      "text": "so that the universe should look the"
+    },
+    {
+      "start": 1780.64,
+      "duration": 15.2,
+      "text": "same no matter where we are"
+    },
+    {
+      "start": 1810.399,
+      "duration": 5.201,
+      "text": "that's the assumption of homogeneity"
+    },
+    {
+      "start": 1814.08,
+      "duration": 5.839,
+      "text": "and then the assumption that's"
+    },
+    {
+      "start": 1815.6,
+      "duration": 4.319,
+      "text": "assumption one assumption two of"
+    },
+    {
+      "start": 1820.84,
+      "duration": 3.0,
+      "text": "isotropy"
+    },
+    {
+      "start": 1824.96,
+      "duration": 4.0,
+      "text": "uh is that there's no preferred"
+    },
+    {
+      "start": 1826.399,
+      "duration": 6.081,
+      "text": "direction in space"
+    },
+    {
+      "start": 1828.96,
+      "duration": 5.199,
+      "text": "time space"
+    },
+    {
+      "start": 1832.48,
+      "duration": 5.36,
+      "text": "there is a pretty preferred direction in"
+    },
+    {
+      "start": 1834.159,
+      "duration": 3.681,
+      "text": "the time direction right"
+    },
+    {
+      "start": 1841.919,
+      "duration": 6.24,
+      "text": "there's actually been numerous uh"
+    },
+    {
+      "start": 1845.679,
+      "duration": 3.36,
+      "text": "observations support assumptions one and"
+    },
+    {
+      "start": 1848.159,
+      "duration": 4.081,
+      "text": "two"
+    },
+    {
+      "start": 1849.039,
+      "duration": 5.201,
+      "text": "a they're uh"
+    },
+    {
+      "start": 1852.24,
+      "duration": 3.6,
+      "text": "obviously not true at the atomic level"
+    },
+    {
+      "start": 1854.24,
+      "duration": 2.319,
+      "text": "um but they're true at the galactic"
+    },
+    {
+      "start": 1855.84,
+      "duration": 4.48,
+      "text": "level to a"
+    },
+    {
+      "start": 1856.559,
+      "duration": 8.161,
+      "text": "fair degree of um approximation"
+    },
+    {
+      "start": 1860.32,
+      "duration": 7.199,
+      "text": "uh a one of the most compelling"
+    },
+    {
+      "start": 1864.72,
+      "duration": 2.799,
+      "text": "observations"
+    },
+    {
+      "start": 1868.399,
+      "duration": 8.441,
+      "text": "concerning isotropy is that of"
+    },
+    {
+      "start": 1871.6,
+      "duration": 8.24,
+      "text": "the uh isotropy of the cosmic background"
+    },
+    {
+      "start": 1876.84,
+      "duration": 3.0,
+      "text": "radiation"
+    },
+    {
+      "start": 1883.6,
+      "duration": 3.439,
+      "text": "and recently there's been some new dark"
+    },
+    {
+      "start": 1885.279,
+      "duration": 5.921,
+      "text": "matter distribution"
+    },
+    {
+      "start": 1887.039,
+      "duration": 20.801,
+      "text": "results that certainly go along"
+    },
+    {
+      "start": 1891.2,
+      "duration": 16.64,
+      "text": "with supporting the notion of isotropy"
+    },
+    {
+      "start": 1908.64,
+      "duration": 3.759,
+      "text": "oh there's a drop of cosmic"
+    },
+    {
+      "start": 1914.159,
+      "duration": 2.561,
+      "text": "background"
+    },
+    {
+      "start": 1918.84,
+      "duration": 6.12,
+      "text": "radiation"
+    },
+    {
+      "start": 1921.84,
+      "duration": 4.4,
+      "text": "so there's you know some pretty"
+    },
+    {
+      "start": 1924.96,
+      "duration": 3.599,
+      "text": "compelling evidence that the"
+    },
+    {
+      "start": 1926.24,
+      "duration": 4.159,
+      "text": "universe should be pretty homogeneous"
+    },
+    {
+      "start": 1928.559,
+      "duration": 3.521,
+      "text": "and pretty isotropic"
+    },
+    {
+      "start": 1930.399,
+      "duration": 3.681,
+      "text": "and what we want to do now is make a"
+    },
+    {
+      "start": 1932.08,
+      "duration": 3.439,
+      "text": "concrete mathematical definition that"
+    },
+    {
+      "start": 1934.08,
+      "duration": 3.36,
+      "text": "captures these notions and then we're"
+    },
+    {
+      "start": 1935.519,
+      "duration": 4.0,
+      "text": "going to exploit this definition"
+    },
+    {
+      "start": 1937.44,
+      "duration": 3.599,
+      "text": "and this to simplify our transfer"
+    },
+    {
+      "start": 1939.519,
+      "duration": 4.88,
+      "text": "equations to the point where we can find"
+    },
+    {
+      "start": 1941.039,
+      "duration": 3.36,
+      "text": "an analytic solution to them"
+    },
+    {
+      "start": 1945.84,
+      "duration": 3.36,
+      "text": "so here we go now with the"
+    },
+    {
+      "start": 1947.44,
+      "duration": 4.32,
+      "text": "mathematically rigorous or precise"
+    },
+    {
+      "start": 1949.2,
+      "duration": 2.56,
+      "text": "definition"
+    },
+    {
+      "start": 1952.24,
+      "duration": 3.36,
+      "text": "that we're going to occupy ourselves"
+    },
+    {
+      "start": 1953.919,
+      "duration": 5.681,
+      "text": "with the next lectures"
+    },
+    {
+      "start": 1955.6,
+      "duration": 4.0,
+      "text": "so a space-time manifold m"
+    },
+    {
+      "start": 1960.88,
+      "duration": 2.96,
+      "text": "is homogeneous"
+    },
+    {
+      "start": 1968.32,
+      "duration": 3.92,
+      "text": "if there exists"
+    },
+    {
+      "start": 1974.72,
+      "duration": 4.24,
+      "text": "a one parameter foliation"
+    },
+    {
+      "start": 1983.6,
+      "duration": 9.199,
+      "text": "of m via hypersurfaces"
+    },
+    {
+      "start": 1990.159,
+      "duration": 2.64,
+      "text": "sigma t"
+    },
+    {
+      "start": 1994.799,
+      "duration": 2.561,
+      "text": "such that"
+    },
+    {
+      "start": 2000.08,
+      "duration": 2.64,
+      "text": "for each t"
+    },
+    {
+      "start": 2003.12,
+      "duration": 2.72,
+      "text": "and any"
+    },
+    {
+      "start": 2006.72,
+      "duration": 4.799,
+      "text": "points p and q in this leaf of this"
+    },
+    {
+      "start": 2010.64,
+      "duration": 8.24,
+      "text": "foliation"
+    },
+    {
+      "start": 2011.519,
+      "duration": 11.921,
+      "text": "so sigma t"
+    },
+    {
+      "start": 2018.88,
+      "duration": 4.56,
+      "text": "there exists an isometry of g"
+    },
+    {
+      "start": 2024.159,
+      "duration": 9.681,
+      "text": "of our metric which takes p to q"
+    },
+    {
+      "start": 2039.6,
+      "duration": 4.959,
+      "text": "and so you've got to imagine like the"
+    },
+    {
+      "start": 2041.2,
+      "duration": 6.959,
+      "text": "universe is foliated in these"
+    },
+    {
+      "start": 2044.559,
+      "duration": 7.04,
+      "text": "the infinite number of these sheets"
+    },
+    {
+      "start": 2048.159,
+      "duration": 3.44,
+      "text": "that depend on a parameter t"
+    },
+    {
+      "start": 2056.159,
+      "duration": 4.401,
+      "text": "and if you happen to find yourself on"
+    },
+    {
+      "start": 2057.839,
+      "duration": 4.08,
+      "text": "one of these sheets down here and the"
+    },
+    {
+      "start": 2060.56,
+      "duration": 4.48,
+      "text": "point p"
+    },
+    {
+      "start": 2061.919,
+      "duration": 3.76,
+      "text": "then they always exist in isometry which"
+    },
+    {
+      "start": 2065.04,
+      "duration": 2.48,
+      "text": "takes"
+    },
+    {
+      "start": 2065.679,
+      "duration": 3.761,
+      "text": "and and that you have another point that"
+    },
+    {
+      "start": 2067.52,
+      "duration": 2.399,
+      "text": "you're interested in on this sheet sigma"
+    },
+    {
+      "start": 2069.44,
+      "duration": 2.959,
+      "text": "t"
+    },
+    {
+      "start": 2069.919,
+      "duration": 3.281,
+      "text": "then there always exists an isometry"
+    },
+    {
+      "start": 2072.399,
+      "duration": 4.081,
+      "text": "that takes"
+    },
+    {
+      "start": 2073.2,
+      "duration": 5.919,
+      "text": "p to q it has to be an isometry not a"
+    },
+    {
+      "start": 2076.48,
+      "duration": 2.639,
+      "text": "dippy morphs"
+    },
+    {
+      "start": 2080.639,
+      "duration": 3.52,
+      "text": "now there's a there's one remark worth"
+    },
+    {
+      "start": 2082.96,
+      "duration": 6.879,
+      "text": "making here"
+    },
+    {
+      "start": 2084.159,
+      "duration": 5.68,
+      "text": "uh for it"
+    },
+    {
+      "start": 2091.359,
+      "duration": 4.48,
+      "text": "this is for homogeneity you know yeah"
+    },
+    {
+      "start": 2097.28,
+      "duration": 4.4,
+      "text": "now that's that's homogeneity now for"
+    },
+    {
+      "start": 2099.2,
+      "duration": 4.56,
+      "text": "isotropy"
+    },
+    {
+      "start": 2101.68,
+      "duration": 3.2,
+      "text": "before we even start we got to make a"
+    },
+    {
+      "start": 2103.76,
+      "duration": 3.44,
+      "text": "comment on"
+    },
+    {
+      "start": 2104.88,
+      "duration": 4.64,
+      "text": "how many observers will perceive the"
+    },
+    {
+      "start": 2107.2,
+      "duration": 4.48,
+      "text": "universe as being isotropic"
+    },
+    {
+      "start": 2109.52,
+      "duration": 3.68,
+      "text": "well imagine the universe is sort of"
+    },
+    {
+      "start": 2111.68,
+      "duration": 3.6,
+      "text": "filled with"
+    },
+    {
+      "start": 2113.2,
+      "duration": 4.56,
+      "text": "an isotropic distribution of stress"
+    },
+    {
+      "start": 2115.28,
+      "duration": 6.24,
+      "text": "energy or matter and mass"
+    },
+    {
+      "start": 2117.76,
+      "duration": 5.44,
+      "text": "mass energy density then"
+    },
+    {
+      "start": 2121.52,
+      "duration": 3.92,
+      "text": "imagine there's at least one observer"
+    },
+    {
+      "start": 2123.2,
+      "duration": 4.24,
+      "text": "who can see the universe as isotropic"
+    },
+    {
+      "start": 2125.44,
+      "duration": 5.12,
+      "text": "well the claim is there is"
+    },
+    {
+      "start": 2127.44,
+      "duration": 5.84,
+      "text": "actually no other observer that would"
+    },
+    {
+      "start": 2130.56,
+      "duration": 4.16,
+      "text": "perceive at that point"
+    },
+    {
+      "start": 2133.28,
+      "duration": 3.839,
+      "text": "you fix a point and you take a look"
+    },
+    {
+      "start": 2134.72,
+      "duration": 4.639,
+      "text": "around and there's one observer it's"
+    },
+    {
+      "start": 2137.119,
+      "duration": 4.0,
+      "text": "supposed to exist at least one observer"
+    },
+    {
+      "start": 2139.359,
+      "duration": 3.76,
+      "text": "that sees the universe as isotropic well"
+    },
+    {
+      "start": 2141.119,
+      "duration": 3.441,
+      "text": "the claim is it can exist no other"
+    },
+    {
+      "start": 2143.119,
+      "duration": 3.041,
+      "text": "observer who sees the universe is"
+    },
+    {
+      "start": 2144.56,
+      "duration": 4.08,
+      "text": "isotropic at that point"
+    },
+    {
+      "start": 2146.16,
+      "duration": 3.6,
+      "text": "because any boosted observer will see"
+    },
+    {
+      "start": 2148.64,
+      "duration": 4.24,
+      "text": "the"
+    },
+    {
+      "start": 2149.76,
+      "duration": 5.44,
+      "text": "well thanks to length contraction uh"
+    },
+    {
+      "start": 2152.88,
+      "duration": 4.4,
+      "text": "perceive the background distribution of"
+    },
+    {
+      "start": 2155.2,
+      "duration": 5.36,
+      "text": "stress energy as being"
+    },
+    {
+      "start": 2157.28,
+      "duration": 5.04,
+      "text": "concentrated in the directions that are"
+    },
+    {
+      "start": 2160.56,
+      "duration": 3.36,
+      "text": "perpendicular to the motion of the"
+    },
+    {
+      "start": 2162.32,
+      "duration": 4.24,
+      "text": "observer and so that is no longer"
+    },
+    {
+      "start": 2163.92,
+      "duration": 2.64,
+      "text": "isotropic"
+    },
+    {
+      "start": 2169.119,
+      "duration": 4.72,
+      "text": "so there's only one observer at each"
+    },
+    {
+      "start": 2170.839,
+      "duration": 3.0,
+      "text": "point"
+    },
+    {
+      "start": 2195.44,
+      "duration": 6.399,
+      "text": "some boosted observers"
+    },
+    {
+      "start": 2203.2,
+      "duration": 2.96,
+      "text": "see the background"
+    },
+    {
+      "start": 2207.359,
+      "duration": 2.72,
+      "text": "distorted"
+    },
+    {
+      "start": 2212.079,
+      "duration": 3.04,
+      "text": "okay so this is the comment before we"
+    },
+    {
+      "start": 2213.599,
+      "duration": 3.041,
+      "text": "get into the definition of isotropy"
+    },
+    {
+      "start": 2215.119,
+      "duration": 2.081,
+      "text": "whatever it is whatever our definition"
+    },
+    {
+      "start": 2216.64,
+      "duration": 2.4,
+      "text": "will be"
+    },
+    {
+      "start": 2217.2,
+      "duration": 3.52,
+      "text": "we have to admit that it won't apply to"
+    },
+    {
+      "start": 2219.04,
+      "duration": 5.039,
+      "text": "all observers only"
+    },
+    {
+      "start": 2220.72,
+      "duration": 6.119,
+      "text": "one observer at any given point"
+    },
+    {
+      "start": 2224.079,
+      "duration": 5.76,
+      "text": "so now we come to the definition of"
+    },
+    {
+      "start": 2226.839,
+      "duration": 3.0,
+      "text": "isotropy"
+    },
+    {
+      "start": 2232.96,
+      "duration": 4.24,
+      "text": "so we say that a space time m"
+    },
+    {
+      "start": 2238.48,
+      "duration": 5.359,
+      "text": "is spatially isotropic"
+    },
+    {
+      "start": 2250.56,
+      "duration": 8.64,
+      "text": "at each point"
+    },
+    {
+      "start": 2256.32,
+      "duration": 2.88,
+      "text": "if there exists"
+    },
+    {
+      "start": 2260.16,
+      "duration": 3.12,
+      "text": "a congruence"
+    },
+    {
+      "start": 2265.119,
+      "duration": 6.72,
+      "text": "of time-like curves"
+    },
+    {
+      "start": 2274.32,
+      "duration": 3.519,
+      "text": "and each of these timeline curves has a"
+    },
+    {
+      "start": 2276.079,
+      "duration": 4.721,
+      "text": "tangent"
+    },
+    {
+      "start": 2277.839,
+      "duration": 2.961,
+      "text": "vector ua"
+    },
+    {
+      "start": 2282.8,
+      "duration": 4.96,
+      "text": "and these time-like curves must fill m"
+    },
+    {
+      "start": 2290.96,
+      "duration": 3.36,
+      "text": "and they must have a further property"
+    },
+    {
+      "start": 2295.119,
+      "duration": 6.48,
+      "text": "that for all p in in space-time manifold"
+    },
+    {
+      "start": 2298.8,
+      "duration": 2.799,
+      "text": "and any two"
+    },
+    {
+      "start": 2305.76,
+      "duration": 4.88,
+      "text": "unit spatial tangent vectors so these"
+    },
+    {
+      "start": 2308.16,
+      "duration": 2.48,
+      "text": "ones are"
+    },
+    {
+      "start": 2310.839,
+      "duration": 3.0,
+      "text": "space-like"
+    },
+    {
+      "start": 2316.72,
+      "duration": 5.68,
+      "text": "we'll give them a name s1a and it's 2a"
+    },
+    {
+      "start": 2320.079,
+      "duration": 4.561,
+      "text": "at the tangent space of the point p and"
+    },
+    {
+      "start": 2322.4,
+      "duration": 4.0,
+      "text": "space that manifold"
+    },
+    {
+      "start": 2324.64,
+      "duration": 3.36,
+      "text": "so you know what we're thinking of here"
+    },
+    {
+      "start": 2326.4,
+      "duration": 5.12,
+      "text": "is we have an observer at a point p"
+    },
+    {
+      "start": 2328.0,
+      "duration": 7.44,
+      "text": "and you pick two directions"
+    },
+    {
+      "start": 2331.52,
+      "duration": 7.319,
+      "text": "pointing often to yonder"
+    },
+    {
+      "start": 2335.44,
+      "duration": 4.8,
+      "text": "and you look at space along those"
+    },
+    {
+      "start": 2338.839,
+      "duration": 4.76,
+      "text": "directions and"
+    },
+    {
+      "start": 2340.24,
+      "duration": 7.76,
+      "text": "you would say that space is isotropic"
+    },
+    {
+      "start": 2343.599,
+      "duration": 4.401,
+      "text": "um if there exists"
+    },
+    {
+      "start": 2350.4,
+      "duration": 5.439,
+      "text": "a isometry"
+    },
+    {
+      "start": 2359.2,
+      "duration": 5.12,
+      "text": "of our metric which leaves"
+    },
+    {
+      "start": 2365.44,
+      "duration": 7.28,
+      "text": "our observation point invariant"
+    },
+    {
+      "start": 2368.72,
+      "duration": 8.48,
+      "text": "and also the time like"
+    },
+    {
+      "start": 2372.72,
+      "duration": 4.48,
+      "text": "vector unit vector invariant"
+    },
+    {
+      "start": 2381.68,
+      "duration": 2.96,
+      "text": "but it takes"
+    },
+    {
+      "start": 2386.0,
+      "duration": 4.72,
+      "text": "s1a to s2a"
+    },
+    {
+      "start": 2390.88,
+      "duration": 6.959,
+      "text": "these two vectors are orthogonal to you"
+    },
+    {
+      "start": 2401.2,
+      "duration": 4.24,
+      "text": "okay and so hopefully this is"
+    },
+    {
+      "start": 2404.4,
+      "duration": 3.6,
+      "text": "intuitively clear"
+    },
+    {
+      "start": 2405.44,
+      "duration": 4.08,
+      "text": "if if space-time is isotropic with"
+    },
+    {
+      "start": 2408.0,
+      "duration": 2.319,
+      "text": "respect to the correct observer at the"
+    },
+    {
+      "start": 2409.52,
+      "duration": 2.16,
+      "text": "point p"
+    },
+    {
+      "start": 2410.319,
+      "duration": 3.361,
+      "text": "then no matter where you look it's going"
+    },
+    {
+      "start": 2411.68,
+      "duration": 3.04,
+      "text": "to look exactly the same and so if you"
+    },
+    {
+      "start": 2413.68,
+      "duration": 4.8,
+      "text": "pick any two"
+    },
+    {
+      "start": 2414.72,
+      "duration": 5.84,
+      "text": "vectors that point off in a space like"
+    },
+    {
+      "start": 2418.48,
+      "duration": 3.839,
+      "text": "direction"
+    },
+    {
+      "start": 2420.56,
+      "duration": 3.92,
+      "text": "then because it doesn't matter which way"
+    },
+    {
+      "start": 2422.319,
+      "duration": 2.8,
+      "text": "you look you can rotate one to the other"
+    },
+    {
+      "start": 2424.48,
+      "duration": 3.68,
+      "text": "and"
+    },
+    {
+      "start": 2425.119,
+      "duration": 6.24,
+      "text": "that would environ isometry so you don't"
+    },
+    {
+      "start": 2428.16,
+      "duration": 3.199,
+      "text": "change the metric when you do that"
+    },
+    {
+      "start": 2434.319,
+      "duration": 4.161,
+      "text": "so there's a further a mark that one can"
+    },
+    {
+      "start": 2438.079,
+      "duration": 3.441,
+      "text": "make"
+    },
+    {
+      "start": 2438.48,
+      "duration": 4.0,
+      "text": "when you combine the conditions of"
+    },
+    {
+      "start": 2441.52,
+      "duration": 12.319,
+      "text": "homogeneity"
+    },
+    {
+      "start": 2442.48,
+      "duration": 11.359,
+      "text": "and isotropy"
+    },
+    {
+      "start": 2456.319,
+      "duration": 4.8,
+      "text": "so for a homogeneous and isotropic spec"
+    },
+    {
+      "start": 2458.4,
+      "duration": 2.719,
+      "text": "space time"
+    },
+    {
+      "start": 2461.76,
+      "duration": 6.48,
+      "text": "these surfaces foliating"
+    },
+    {
+      "start": 2465.52,
+      "duration": 2.72,
+      "text": "space time"
+    },
+    {
+      "start": 2473.68,
+      "duration": 2.8,
+      "text": "they must be"
+    },
+    {
+      "start": 2477.359,
+      "duration": 4.48,
+      "text": "everywhere orthogonal"
+    },
+    {
+      "start": 2482.0,
+      "duration": 4.079,
+      "text": "to these tangent vectors of the time"
+    },
+    {
+      "start": 2484.319,
+      "duration": 4.0,
+      "text": "like vectors"
+    },
+    {
+      "start": 2486.079,
+      "duration": 3.361,
+      "text": "that are this congruence of time like"
+    },
+    {
+      "start": 2488.319,
+      "duration": 7.52,
+      "text": "curves going through"
+    },
+    {
+      "start": 2489.44,
+      "duration": 8.24,
+      "text": "the the uh the manifold"
+    },
+    {
+      "start": 2495.839,
+      "duration": 3.52,
+      "text": "and uh you can convince yourself why why"
+    },
+    {
+      "start": 2497.68,
+      "duration": 3.12,
+      "text": "that must be the case because if there"
+    },
+    {
+      "start": 2499.359,
+      "duration": 2.641,
+      "text": "wasn't for example then there would"
+    },
+    {
+      "start": 2500.8,
+      "duration": 4.319,
+      "text": "exist a point p"
+    },
+    {
+      "start": 2502.0,
+      "duration": 3.119,
+      "text": "where uh"
+    },
+    {
+      "start": 2505.839,
+      "duration": 3.76,
+      "text": "you could pick a geometrically preferred"
+    },
+    {
+      "start": 2508.319,
+      "duration": 4.321,
+      "text": "spatial vector"
+    },
+    {
+      "start": 2509.599,
+      "duration": 4.401,
+      "text": "and that would violate isotropy"
+    },
+    {
+      "start": 2512.64,
+      "duration": 3.28,
+      "text": "so i just want to draw a picture before"
+    },
+    {
+      "start": 2514.0,
+      "duration": 6.24,
+      "text": "we finish for today that"
+    },
+    {
+      "start": 2515.92,
+      "duration": 4.32,
+      "text": "summarizes both isotropy"
+    },
+    {
+      "start": 2520.839,
+      "duration": 7.801,
+      "text": "and homogeneity into one picture"
+    },
+    {
+      "start": 2525.119,
+      "duration": 6.401,
+      "text": "so here i've drawn the surfaces sigma t"
+    },
+    {
+      "start": 2528.64,
+      "duration": 4.56,
+      "text": "exfoliating space time and then there's"
+    },
+    {
+      "start": 2531.52,
+      "duration": 5.92,
+      "text": "this congruence"
+    },
+    {
+      "start": 2533.2,
+      "duration": 6.8,
+      "text": "of time-like curves"
+    },
+    {
+      "start": 2537.44,
+      "duration": 5.52,
+      "text": "going through space-time going through"
+    },
+    {
+      "start": 2540.0,
+      "duration": 2.96,
+      "text": "each of these leaves"
+    },
+    {
+      "start": 2545.119,
+      "duration": 5.041,
+      "text": "and homogeneity is that result that says"
+    },
+    {
+      "start": 2548.56,
+      "duration": 2.559,
+      "text": "if you've got two points on the same"
+    },
+    {
+      "start": 2550.16,
+      "duration": 4.64,
+      "text": "leaf"
+    },
+    {
+      "start": 2551.119,
+      "duration": 7.281,
+      "text": "the same site t there exists an isometry"
+    },
+    {
+      "start": 2554.8,
+      "duration": 6.96,
+      "text": "of the metric which takes p to q and"
+    },
+    {
+      "start": 2558.4,
+      "duration": 3.36,
+      "text": "if you're"
+    },
+    {
+      "start": 2562.64,
+      "duration": 5.84,
+      "text": "in one of these leaves and you have"
+    },
+    {
+      "start": 2566.72,
+      "duration": 3.119,
+      "text": "one space like vector and another space"
+    },
+    {
+      "start": 2568.48,
+      "duration": 4.96,
+      "text": "like vector that"
+    },
+    {
+      "start": 2569.839,
+      "duration": 3.601,
+      "text": "are both orthogonal to ua"
+    },
+    {
+      "start": 2576.48,
+      "duration": 3.359,
+      "text": "then there exists an isometry which"
+    },
+    {
+      "start": 2578.96,
+      "duration": 5.84,
+      "text": "rotates"
+    },
+    {
+      "start": 2579.839,
+      "duration": 4.961,
+      "text": "uh s1 a into s2a"
+    },
+    {
+      "start": 2585.52,
+      "duration": 3.04,
+      "text": "so that's the notions of isotropy and"
+    },
+    {
+      "start": 2587.44,
+      "duration": 3.76,
+      "text": "homogeneity"
+    },
+    {
+      "start": 2588.56,
+      "duration": 3.92,
+      "text": "for a spacetime manifold we're going to"
+    },
+    {
+      "start": 2591.2,
+      "duration": 3.6,
+      "text": "use these notions"
+    },
+    {
+      "start": 2592.48,
+      "duration": 3.28,
+      "text": "to highly simplify einstein's field"
+    },
+    {
+      "start": 2594.8,
+      "duration": 3.039,
+      "text": "equations"
+    },
+    {
+      "start": 2595.76,
+      "duration": 3.44,
+      "text": "and then eventually solve einstein's"
+    },
+    {
+      "start": 2597.839,
+      "duration": 4.161,
+      "text": "field equations"
+    },
+    {
+      "start": 2599.2,
+      "duration": 3.76,
+      "text": "uh you know in a highly restricted"
+    },
+    {
+      "start": 2602.0,
+      "duration": 3.119,
+      "text": "setting"
+    },
+    {
+      "start": 2602.96,
+      "duration": 4.24,
+      "text": "where these symmetries are present but"
+    },
+    {
+      "start": 2605.119,
+      "duration": 4.081,
+      "text": "that's the goal for the next lecture"
+    },
+    {
+      "start": 2607.2,
+      "duration": 3.76,
+      "text": "for today we're now finished thank you"
+    },
+    {
+      "start": 2609.2,
+      "duration": 4.639,
+      "text": "very much and see you next time"
+    },
+    {
+      "start": 2610.96,
+      "duration": 2.879,
+      "text": "goodbye"
+    }
+  ]
+}
