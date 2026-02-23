@@ -14,6 +14,19 @@ tensor at nearby points; on a general manifold this comparison
 requires extra structure.  That structure is a \textbf{derivative
 operator} (or \textbf{affine connection}).
 
+Recall our earlier discussion of parallel transport: given a curve
+on~$\M$, we want a rule that ``carries'' a tensor from one point
+to a nearby point along the curve.  One should expect a close
+correspondence between such parallel-transport operations and
+derivative-type operators.  Indeed, an infinitesimal parallel
+transporter is precisely a covariant derivative: the derivative
+$\covd_X Y$ measures how a vector field~$Y$ fails to be
+``parallel'' as one moves in the direction~$X$.  Our strategy in
+this lecture is to abstractly and intrinsically characterise those
+properties that any reasonable covariant derivative operator
+should possess, and then to explore what freedom remains in
+choosing such an operator.
+
 \begin{notation}
   We write $\mathscr{X}(\M)$ for the space of smooth vector
   fields on~$\M$, and $\mathscr{F}(\M)$ for the space of smooth
@@ -136,6 +149,19 @@ $f\in\mathscr{F}(\M)$,
   \covd_a\covd_b f = \covd_b\covd_a f\,.
 \end{equation}
 
+\begin{remark}
+  We have now assembled a ``wish list'' of seven properties
+  (axioms~(0)--(5)) that we would like any covariant derivative
+  operator to satisfy.  There is some redundancy among
+  these axioms---we have not aimed for the most economical
+  characterisation, but rather for a complete catalogue of
+  the properties we will need.  Of course, it is all very well to
+  write down such a list; the question is whether anything
+  \emph{exists} that satisfies it, and if so, how much freedom
+  remains.  We address existence and non-uniqueness in
+  \S\ref{sec:existence-nonuniqueness} below.
+\end{remark}
+
 % ──────────────────────────────────────────────────────────────
 \subsection{Simple consequences}\label{sec:connection-consequences}
 
@@ -183,9 +209,11 @@ Two useful identities follow directly from the axioms.
 \subsection{Existence and non-uniqueness}%
 \label{sec:existence-nonuniqueness}
 
-There are \emph{many} derivative operators satisfying
-axioms~(0)--(5).  We first exhibit the simplest one, then
-characterise the freedom in choosing~$\covd$.
+Having written down our list of axioms, we must verify that
+something actually satisfies them---otherwise the theory would
+be vacuous.  It turns out that there are \emph{many} derivative
+operators satisfying axioms~(0)--(5).  We first exhibit the
+simplest one, then characterise the freedom in choosing~$\covd$.
 
 \subsubsection{The ordinary derivative}\label{sec:ordinary-deriv}
 
@@ -265,6 +293,20 @@ rule~\eqref{eq:axiom2} and~\eqref{eq:diff-on-scalars}:
   \]
   since $f_\alpha|_p = 0$.
 \end{proof}
+
+\begin{remark}
+  This result is rather striking.  A single derivative operator
+  $\covd_a$ applied to a covector field~$\omega_b$ certainly
+  depends on the behaviour of~$\omega_b$ in a neighbourhood
+  of~$p$ (it involves first-order information, just as an
+  ordinary derivative does).  Yet the \emph{difference} of two
+  derivative operators applied to~$\omega_b$ depends only on
+  $\omega_b|_p$ itself---all the ``derivative-like'' information
+  cancels.  In other words, the difference
+  $\tilde\covd_a - \covd_a$ is not really a differential operator
+  at all: it is a purely algebraic, pointwise linear map on
+  tensors.
+\end{remark}
 
 % ──────────────────────────────────────────────────────────────
 \subsection{The $C$ tensor}\label{sec:C-tensor}
@@ -462,3 +504,15 @@ For a general tensor $T\in\ttype{k}{l}$:
   $\chris{\nu}{\mu\lambda}$ under the coordinate change and
   verify that it contains an inhomogeneous (non-tensorial) term.
 \end{exercise}
+
+\medskip
+We have seen that the set of torsion-free derivative operators on
+a manifold forms an affine space, parameterised by a symmetric
+tensor field~$C^c{}_{ab}$.  Without additional structure, there
+is no preferred choice of connection.  In the next lecture we
+will see that the data of a \emph{metric}~$g_{ab}$ on~$\M$ is
+enough to uniquely single out one particular derivative
+operator---the \textbf{Levi-Civita connection}---by imposing
+the additional requirement $\covd_a g_{bc} = 0$ (metric
+compatibility).  That connection will play a central role in the
+formulation of general relativity.

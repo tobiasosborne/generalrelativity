@@ -9,8 +9,14 @@
 In this lecture we consolidate the abstract index notation (AIN)
 introduced earlier and develop its computational machinery
 (contraction, outer products, raising and lowering indices,
-symmetrisation).  We then turn to the central geometric question
-of general relativity: \emph{what is curvature?}
+symmetrisation).  AIN is a very helpful and compact tool for
+discussing tensors: it will save us from repeatedly writing out
+expressions in coordinate-basis components, while still
+permitting explicit calculations when needed.  We then turn to
+the central geometric question of general relativity: \emph{what
+is curvature?}  Our ultimate goal is to formulate a precise,
+intrinsic notion of curvature that can be equated to the density
+of stress-energy---the heart of Einstein's field equations.
 
 % ──────────────────────────────────────────────────────────────
 \subsection{Review of abstract index notation}\label{sec:ain-review}
@@ -267,8 +273,18 @@ relativity: \emph{curvature}.  The key question is:
 \end{center}
 
 \noindent
-In general relativity, spacetime is \textbf{not} embedded in any
-ambient space---we need a purely intrinsic notion of curvature.
+If a manifold were embedded in a higher-dimensional flat space,
+curvature would be easy to see---one can simply ``look'' at how
+the manifold bends inside the ambient space.  But in general
+relativity, spacetime is \textbf{not} embedded in any ambient
+space: we are ``stuck inside'' the manifold.  We therefore need a
+purely intrinsic criterion---one that makes no reference to any
+embedding---to detect and quantify curvature.
+
+The key observation, which will serve as the foundation for the
+Riemann curvature tensor, is that \emph{in flat manifolds
+parallel transport is path-independent, whereas in curved
+manifolds it is not}.
 
 % ──────────────────────────────────────────────────────────────
 \subsubsection{Parallel transport and path dependence}%

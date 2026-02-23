@@ -8,12 +8,18 @@
 In the previous lecture we introduced derivative operators
 (covariant derivatives) on a manifold~$\M$.  We now use them to
 define \emph{parallel transport}---the notion of moving a vector
-(or tensor) along a curve ``without rotating it.''  When a metric
-is present, requiring that parallel transport preserves inner
-products singles out a unique derivative operator: the
-\emph{Levi-Civita connection}.  We derive its explicit form in
-coordinates (the Christoffel symbols) and conclude with the
-geodesic equation.
+(or tensor) along a curve ``without rotating it.''
+
+The central goal is to \emph{engineer} a device: given a
+derivative operator~$\covd_a$, a curve~$C$ from~$p$ to~$q$, and
+a vector $v^a \in V_p$, we want to produce a corresponding
+vector in~$V_q$.  That is, we want to build a linear map
+$U_C\colon V_p \to V_q$ --- a \textbf{parallel transporter} ---
+from the data of the connection alone.  When a metric is present,
+requiring that this transporter preserves inner products singles
+out a unique derivative operator: the \emph{Levi-Civita
+connection}.  We derive its explicit form in coordinates (the
+Christoffel symbols) and conclude with the geodesic equation.
 
 % ──────────────────────────────────────────────────────────────
 \subsection{Parallel transport}\label{sec:parallel-transport-def}
@@ -141,10 +147,15 @@ $\dd v^\nu/\dd t$ along the curve.  Hence:
 \subsection{The Levi-Civita connection}%
 \label{sec:levi-civita}
 
-If the manifold $\M$ is equipped with a metric $g_{ab}$, we can
-make a \emph{canonical} choice of derivative operator $\covd_a$.
-The guiding physical requirement is that parallel transport should
-preserve lengths and angles.
+So far, there is no preferred derivative operator on a bare
+manifold---we have an infinite-dimensional family to choose from.
+If the manifold $\M$ is additionally equipped with a
+metric~$g_{ab}$, however, we can make a \emph{canonical} choice
+of derivative operator~$\covd_a$.  The guiding physical
+requirement is that parallel transport should preserve lengths
+and angles: what kind of ``parallel'' transport would it be if
+vectors changed their length or the angle between them varied as
+we slid them along a curve?
 
 \subsubsection{Metric compatibility}\label{sec:metric-compat}
 
@@ -272,9 +283,13 @@ curves, and all tangent vectors~$t^a$, we conclude:
 \end{proof}
 
 \begin{remark}
-  From now on, whenever a metric $g_{ab}$ is given, we choose
-  $\covd_a$ to be the unique Levi-Civita connection determined
-  by~$g_{ab}$.
+  The result is remarkable: the single condition
+  $\covd_a g_{bc} = 0$ is neither too strong (it does not
+  eliminate all derivative operators) nor too weak (it does not
+  leave any freedom).  It is ``just right''---the metric uniquely
+  determines the connection.  From now on, whenever a metric
+  $g_{ab}$ is given, we choose $\covd_a$ to be the unique
+  Levi-Civita connection determined by~$g_{ab}$.
 \end{remark}
 
 % ──────────────────────────────────────────────────────────────
@@ -373,6 +388,11 @@ $(x^1,\dots,x^n)$, this reads:
     g^{\mu'\nu'}
       = \begin{pmatrix} 1 & 0 \\ 0 & 1/r^2 \end{pmatrix}.
   \]
+  The factor $r^2$ in front of $\dd\varphi\tp\dd\varphi$ has a
+  simple geometric meaning: a small angular displacement
+  $\dd\varphi$ produces a larger arc-length displacement the
+  further one is from the origin, so the metric must weight the
+  angular direction by~$r$.
 
   \noindent\textbf{Christoffel symbols.}\;
   From~\eqref{eq:christoffel-coord}, the only nonvanishing
