@@ -1,0 +1,640 @@
+%!TEX root = ../GeneralRelativity.tex
+% ──────────────────────────────────────────────────────────────
+%  Lecture 13 — Properties of Einstein's equations and maps
+%              between manifolds
+% ──────────────────────────────────────────────────────────────
+
+\section{Properties of Einstein's equations and maps between
+  manifolds}%
+\label{sec:einstein-properties}
+
+With Einstein's field equations~\eqref{eq:einstein-field} in hand,
+we now investigate their structure and consequences in greater
+detail.  We begin by deriving useful algebraic identities---the
+trace of the field equations and the specialisation to pressureless
+matter---and then discuss three structural properties that
+distinguish general relativity from other field theories: the
+extreme nonlinearity of the equations, the fact that the
+stress-energy tensor cannot be regarded as an independent source,
+and the remarkable self-consistency by which the field equations
+contain the geodesic hypothesis.  We then provide the detailed
+derivation of the linearised quantities used in the previous
+lecture, and develop the mathematical formalism of \textbf{maps
+between manifolds}---pushforward and pullback---which provides the
+rigorous foundation for the diffeomorphism invariance that underlies
+the gauge freedom of general relativity.
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Algebraic consequences of the field equations}%
+\label{sec:algebraic-consequences}
+
+A natural first step when presented with a new equation of motion is
+to explore what further equations can be derived from it by
+elementary operations.  For a rank-two tensor equation, the most
+immediate operation is contraction with the metric.
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{The trace and the alternate form}%
+\label{sec:einstein-trace}
+
+Contracting Einstein's equation~\eqref{eq:einstein-field} with
+$g^{ab}$:
+\[
+  g^{ab}\Ein_{ab}
+    = g^{ab}\Bigl(\Ric_{ab} - \tfrac{1}{2}\,\Ric\, g_{ab}\Bigr)
+    = \Ric - 2\,\Ric = -\Ric
+    = 8\pi\, g^{ab} T_{ab}
+    = 8\pi\, T\,,
+\]
+where $T = T^a{}_a = g^{ab}\,T_{ab}$ is the trace of the
+stress-energy tensor.  We obtain
+\begin{equation}\label{eq:ricci-scalar-trace}
+  \eqbox{\Ric = -8\pi\, T}
+\end{equation}
+
+\noindent
+Substituting~\eqref{eq:ricci-scalar-trace} back
+into~\eqref{eq:einstein-field} eliminates the Ricci scalar in
+favour of the stress-energy trace:
+\begin{equation}\label{eq:einstein-alternate}
+  \eqbox{\Ric_{ab} = 8\pi\Bigl(T_{ab}
+    - \tfrac{1}{2}\, g_{ab}\, T\Bigr)}
+\end{equation}
+
+\begin{remark}
+  Equation~\eqref{eq:einstein-alternate} is sometimes more
+  convenient than the original form~\eqref{eq:einstein-field},
+  since the left-hand side involves only the Ricci tensor.  It is
+  particularly useful in settings of high symmetry where the trace
+  $T$ takes a simple form.
+\end{remark}
+
+\begin{intuition}[Geometry versus matter]
+  Equation~\eqref{eq:einstein-alternate} appears to state that the
+  geometry (encoded in $\Ric_{ab}$) is determined by the matter
+  content (encoded in $T_{ab}$).  While suggestive, this
+  interpretation must be treated with great care: the
+  metric~$g_{ab}$ enters both sides of the equation, since it is
+  needed to define the stress-energy tensor itself, to raise and
+  lower indices, and to compute the Ricci tensor.  The information
+  flows in both directions simultaneously---geometry constrains
+  matter and matter constrains geometry---and one must solve the
+  entire system self-consistently.  We return to this point in
+  \S\ref{sec:tab-not-source} below.
+\end{intuition}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{The dust limit}%
+\label{sec:dust-limit}
+
+Consider the physically important special case where an observer at
+rest with respect to the matter measures an energy density~$\rho$
+that dominates all stresses.  For a pressureless perfect fluid
+(\textbf{dust}) with four-velocity~$v^a$:
+\begin{equation}\label{eq:dust-stress-energy}
+  T_{ab} = \rho\, v_a v_b\,,
+\end{equation}
+so that $T = g^{ab}\, T_{ab} = \rho\, v^a v_a = -\rho$ (using
+the normalisation $v^a v_a = -1$).
+Substituting into~\eqref{eq:einstein-alternate} and contracting
+both sides with $v^a v^b$:
+\begin{equation}\label{eq:ricci-dust}
+  \Ric_{ab}\, v^a v^b
+    = 8\pi\bigl(T_{ab}\, v^a v^b
+      - \tfrac{1}{2}\,T\, g_{ab}\, v^a v^b\bigr)
+    = 8\pi\bigl(\rho - \tfrac{1}{2}\,\rho\bigr)
+    = 4\pi\rho\,,
+\end{equation}
+where we used $T_{ab}\, v^a v^b = \rho\,(v_a v^a)^2 = \rho$,
+$g_{ab}\, v^a v^b = -1$, and $T = -\rho$.
+
+\medskip\noindent
+The result $\Ric_{ab}\, v^a v^b = 4\pi\rho$ is the
+curved-spacetime analogue of the Newtonian relation
+$\nabla^2 \phi = 4\pi\rho$: it expresses how the convergence of
+geodesics (quantified by the Ricci tensor contracted along the
+time direction) is driven by the local energy density.
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Three structural properties of Einstein's equations}%
+\label{sec:structural-properties}
+
+Before we continue solving Einstein's equations, three features of
+the field equations deserve careful discussion.  These features
+distinguish general relativity from other classical field theories
+and are essential for developing the correct physical intuition.
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Extreme nonlinearity}%
+\label{sec:nonlinearity}
+
+Einstein's field equation~\eqref{eq:einstein-field} is a system
+of ten coupled, second-order, \emph{highly nonlinear} partial
+differential equations for the ten independent components of the
+metric~$g_{\mu\nu}$ (in any coordinate chart).  The nonlinearity
+arises because the Christoffel symbols involve first derivatives
+of~$g_{\mu\nu}$, the Riemann tensor involves products of
+Christoffel symbols (hence products of first derivatives), and the
+Ricci tensor involves derivatives of these products (hence second
+derivatives multiplied by the metric inverse, which is itself a
+nonlinear function of~$g_{\mu\nu}$).
+
+\begin{intuition}[Comparison with other theories]
+  The Schr\"odinger equation is linear; its difficulty lies in the
+  enormous dimension of the Hilbert space.  Maxwell's equations are
+  also linear: given the sources, the electromagnetic field is
+  uniquely determined by superposition.  Einstein's equations enjoy
+  neither of these simplifications.  They are nonlinear in a way
+  that makes even existence and uniqueness of solutions a delicate
+  mathematical question.  It must be said that any nonlinear
+  equation can in principle be recast as an infinite system of
+  linear equations---so one might argue that the difficulties of
+  general relativity and quantum mechanics are not entirely
+  incomparable---but in practice the nonlinearity of Einstein's
+  equations makes them among the most challenging in all of physics.
+\end{intuition}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{The stress-energy tensor is not a simple source}%
+\label{sec:tab-not-source}
+
+In electrodynamics, the four-current~$J^a$ acts as a source for
+Maxwell's equations: one specifies~$J^a$ independently and then
+solves for the electromagnetic field.  It is tempting to draw an
+analogy with general relativity and treat $T_{ab}$ as a
+``source'' that independently determines the metric.  This analogy
+is \emph{misleading}.
+
+The stress-energy tensor of most physical systems---perfect fluids,
+electromagnetic fields, scalar fields---is itself defined in terms
+of the metric~$g_{ab}$.  For the perfect
+fluid~\eqref{eq:perfect-fluid}, for instance, $T_{ab}$ depends on
+$g_{ab}$ through the lowered four-velocity $u_a = g_{ab}\, u^b$
+and through the metric appearing explicitly in $p\, g_{ab}$.
+
+\begin{keyresult}[Self-consistent system]
+  One cannot interpret $T_{ab}$ before solving Einstein's equation.
+  The metric and the matter fields must be determined simultaneously
+  as a self-consistent solution of the coupled system.  This
+  stands in sharp contrast to electrodynamics, where the source
+  can be specified independently of the field.
+\end{keyresult}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Self-consistency: the geodesic hypothesis}%
+\label{sec:geodesic-self-consistency}
+
+Recall that the fundamental hypotheses of general relativity
+(\S\ref{sec:fundamental-hypotheses}) include the statement that
+freely falling test bodies move on geodesics.  Einstein's field
+equations imply the conservation
+law~\eqref{eq:stress-energy-conservation},
+$\covd^a T_{ab} = 0$, as an automatic consequence of the Bianchi
+identity.  Remarkably, this conservation law in turn implies the
+geodesic hypothesis for pressureless matter.
+
+Consider a dust of non-interacting test particles with
+$T_{ab} = \rho\, u_a u_b$.  Expanding the divergence:
+\begin{align}
+  0 &= \covd^a T_{ab}
+     = \covd^a(\rho\, u_a u_b) \notag\\
+    &= u_b\, \covd^a(\rho\, u_a)
+      + \rho\, u_a\, \covd^a u_b\,.
+      \label{eq:dust-conservation}
+\end{align}
+Contract~\eqref{eq:dust-conservation} with $u^b$.  Since
+$u^b u_b = -1$, differentiating gives
+$u^b\,\covd_c u_b = 0$ for any direction~$c$, and
+hence $u^b\, \rho\, u_a\, \covd^a u_b = 0$.  The contraction
+therefore yields
+\[
+  -\covd^a(\rho\, u_a) = 0\,.
+\]
+This is the \textbf{continuity equation}: the mass
+current~$\rho\, u^a$ is conserved.  Substituting back
+into~\eqref{eq:dust-conservation}:
+\begin{equation}\label{eq:geodesic-from-efe}
+  \rho\, u^a\, \covd_a u_b = 0\,.
+\end{equation}
+Wherever $\rho \neq 0$, this gives
+$u^a \covd_a u^b = 0$: \emph{the dust particles follow geodesics}.
+
+\begin{keyresult}[Einstein's equations contain the geodesic
+  hypothesis]
+  For a pressureless dust, the conservation law
+  $\covd^a T_{ab} = 0$---which is an automatic consequence of
+  Einstein's field equations via the Bianchi identity---implies
+  that the dust grains move on geodesics of the spacetime metric.
+  The geodesic hypothesis is not an independent assumption: it is
+  contained within the field equations themselves.
+\end{keyresult}
+
+\begin{intuition}[Self-consistency as evidence for correctness]
+  This kind of self-consistency is extraordinarily rare in physics.
+  We \emph{began} by postulating that freely falling test bodies
+  move on geodesics, and used this together with physical reasoning
+  to arrive at Einstein's field equations.  The field equations
+  then turn around and \emph{imply} the geodesic hypothesis,
+  without it having been explicitly built in.  This
+  ``bootstrapping'' property is one of the strongest pieces of
+  internal evidence that general relativity is on the right track:
+  usually when one writes down equations of motion for a complex
+  system, checking them for self-consistency with auxiliary
+  assumptions reveals contradictions.  That Einstein's equations
+  pass this test is, as one might say, breathtakingly impressive.
+\end{intuition}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Detailed derivation of the linearised field equations}%
+\label{sec:linearised-derivation}
+
+Solving Einstein's field equations is extraordinarily difficult, and
+the task will occupy us for the remainder of this course.  We will
+approach solutions through three limiting regimes: \emph{weak
+gravitational fields} (linearised gravity and gravitational
+radiation), \emph{high symmetry} (the Schwarzschild solution), and
+\emph{cosmological uniformity} (Friedmann--Lema\^itre--Robertson--Walker
+models).
+
+In the previous lecture (\S\ref{sec:linearised}) we stated the
+linearised Einstein equation and used it to recover the Newtonian
+limit.  We now provide the step-by-step derivation, filling in the
+computational details.
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Setup and index conventions}%
+\label{sec:linearised-setup}
+
+Recall the weak-field
+ansatz~\eqref{eq:metric-perturbation}:
+$g_{ab} = \eta_{ab} + \gamma_{ab}$ with
+$|\gamma_{ab}| \ll 1$.
+
+\begin{remark}[The meaning of ``small'']
+  In a coordinate-free formulation, the statement
+  ``$\gamma_{ab}$ is small'' has no intrinsic meaning: one must
+  specify a standard of comparison.  For linearised gravity, we
+  define smallness relative to a \emph{global inertial coordinate
+  system}---the coordinates in which the background metric takes
+  the form $\eta_{\mu\nu} = \diag(-1,+1,+1,+1)$---and require
+  that all components $\gamma_{\mu\nu}$ be much less than~$1$ in
+  this system.  The very existence of such a global coordinate
+  system is a non-trivial assumption: it restricts both the
+  topology of~$\M$ and the strength of the gravitational field.
+\end{remark}
+
+\noindent
+Throughout this section, all indices are raised and lowered with the
+flat metric~$\eta_{ab}$, with one important exception:
+$g^{ab}$ always denotes the \emph{true inverse} of the full
+metric.  To linear order, the inverse metric is
+\begin{equation}\label{eq:inverse-metric-linear}
+  g^{ab} = \eta^{ab} - \gamma^{ab} + O(\gamma^2)\,.
+\end{equation}
+
+\begin{exercise}\label{ex:inverse-metric}
+  Verify~\eqref{eq:inverse-metric-linear} by showing that
+  $g^{ab}\, g_{bc} = \delta^a{}_c$ to linear order:
+  \[
+    (\eta^{ab} - \gamma^{ab})(\eta_{bc} + \gamma_{bc})
+      = \delta^a{}_c - \gamma^a{}_c + \gamma^a{}_c
+        - \gamma^{ab}\gamma_{bc}
+      = \delta^a{}_c + O(\gamma^2)\,.
+  \]
+\end{exercise}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Christoffel symbols to linear order}%
+\label{sec:christoffel-linear}
+
+The Christoffel symbols of the Levi-Civita connection are
+\[
+  \chris{c}{ab}
+    = \tfrac{1}{2}\, g^{cd}
+      \bigl(\partial_a g_{bd} + \partial_b g_{ad}
+            - \partial_d g_{ab}\bigr)\,.
+\]
+Substituting $g_{ab} = \eta_{ab} + \gamma_{ab}$ and
+$g^{cd} = \eta^{cd} - \gamma^{cd}$, and noting that
+$\partial_a \eta_{bc} = 0$:
+\begin{equation}\label{eq:christoffel-linear}
+  \chris{c}{ab}
+    = \tfrac{1}{2}\, \eta^{cd}
+      \bigl(\partial_a \gamma_{bd}
+            + \partial_b \gamma_{ad}
+            - \partial_d \gamma_{ab}\bigr)
+    + O(\gamma^2)\,.
+\end{equation}
+The $\gamma^{cd}$ contribution to $g^{cd}$ would multiply terms
+already of order~$\gamma$, producing $O(\gamma^2)$ corrections
+that we discard.
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{The Ricci and Einstein tensors to linear order}%
+\label{sec:ricci-einstein-linear}
+
+The Riemann tensor in
+coordinates~\eqref{eq:riemann-coord} involves terms linear in
+derivatives of~$\chris{}{ab}$ and terms quadratic
+in~$\chris{}{ab}$.  Since the Christoffel symbols are already
+$O(\gamma)$, the quadratic terms are $O(\gamma^2)$ and may be
+dropped.  The Ricci tensor to linear order is therefore
+\begin{equation}\label{eq:ricci-linear}
+  \Ric_{ab}^{(1)}
+    = \partial_c\, \chris{c}{ab}
+    - \partial_a\, \chris{c}{cb}\,.
+\end{equation}
+Substituting~\eqref{eq:christoffel-linear} and simplifying (where
+$\gamma = \gamma^c{}_c = \eta^{cd}\,\gamma_{cd}$ denotes the
+trace):
+\begin{equation}\label{eq:ricci-linear-explicit}
+  \Ric_{ab}^{(1)}
+    = \partial^c \partial_{(a}\, \gamma_{b)c}
+    - \tfrac{1}{2}\, \partial^c \partial_c\, \gamma_{ab}
+    - \tfrac{1}{2}\, \partial_a \partial_b\, \gamma\,.
+\end{equation}
+
+\begin{exercise}\label{ex:ricci-linear}
+  Derive~\eqref{eq:ricci-linear-explicit}
+  from~\eqref{eq:christoffel-linear}
+  and~\eqref{eq:ricci-linear}.
+\end{exercise}
+
+\noindent
+To linear order, $\Ein_{ab}^{(1)} = \Ric_{ab}^{(1)} -
+\frac{1}{2}\, \eta_{ab}\, \Ric^{(1)}$ (the metric multiplying the
+Ricci scalar may be replaced by~$\eta_{ab}$, since
+$\gamma_{ab}\,\Ric^{(1)}$ is $O(\gamma^2)$).  Computing
+$\Ric^{(1)} = \eta^{ab}\,\Ric^{(1)}_{ab}$ and combining terms:
+\begin{equation}\label{eq:einstein-tensor-linear}
+  \Ein_{ab}^{(1)}
+    = \partial^c \partial_{(a}\, \gamma_{b)c}
+    - \tfrac{1}{2}\, \partial^c \partial_c\, \gamma_{ab}
+    - \tfrac{1}{2}\, \partial_a \partial_b\, \gamma
+    - \tfrac{1}{2}\, \eta_{ab}
+      \bigl(\partial^c \partial^d\, \gamma_{cd}
+            - \partial^c \partial_c\, \gamma\bigr)\,.
+\end{equation}
+This expression simplifies considerably when written in terms of
+the trace-reversed perturbation~\eqref{eq:trace-reversed},
+$\bar\gamma_{ab} = \gamma_{ab} - \frac{1}{2}\,\eta_{ab}\,\gamma$:
+\begin{equation}\label{eq:linearised-einstein-detail}
+  \Ein_{ab}^{(1)}
+    = -\tfrac{1}{2}\, \partial^c \partial_c\, \bar\gamma_{ab}
+    + \partial^c \partial_{(a}\, \bar\gamma_{b)c}
+    - \tfrac{1}{2}\, \eta_{ab}\,
+      \partial^c \partial^d\, \bar\gamma_{cd}\,.
+\end{equation}
+Setting $\Ein_{ab}^{(1)} = 8\pi\, T_{ab}$ recovers the linearised
+Einstein equation~\eqref{eq:linearised-einstein} stated in the
+previous lecture.
+
+\begin{exercise}\label{ex:trace-reversed-simplification}
+  Verify that substituting $\gamma_{ab} = \bar\gamma_{ab} +
+  \frac{1}{2}\, \eta_{ab}\, \bar\gamma$ (where
+  $\bar\gamma = \eta^{ab}\, \bar\gamma_{ab} = -\gamma$)
+  into~\eqref{eq:einstein-tensor-linear}
+  yields~\eqref{eq:linearised-einstein-detail}.
+\end{exercise}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Maps between manifolds}%
+\label{sec:maps-manifolds}
+
+The gauge freedom of linearised
+gravity~(\S\ref{sec:gauge-lorenz}) arose from infinitesimal
+diffeomorphisms.  To place this on firm mathematical footing, we
+now develop the theory of maps between manifolds and their action
+on geometric objects.  This formalism also underpins the Lie
+derivative introduced in \S\ref{sec:lie-derivative}, where we
+specialised to the case of a diffeomorphism from~$\M$ to itself
+generated by a vector field.
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Pullback of functions}%
+\label{sec:pullback-functions}
+
+Let $\M$ and $\mathcal{N}$ be smooth manifolds and
+$\phi\colon \M \to \mathcal{N}$ a smooth map.  Given any smooth
+function $f\colon \mathcal{N} \to \R$, the composition
+\begin{equation}\label{eq:pullback-function}
+  \phi^* f = f \circ \phi \colon \M \to \R
+\end{equation}
+defines a smooth function on~$\M$, called the \textbf{pullback}
+of~$f$ by~$\phi$.
+
+\begin{center}
+\begin{tikzpicture}[>=Stealth, thick, font=\small]
+  % Manifold blobs
+  \draw[rounded corners=12pt, spacecadet, thick]
+    (0,0) ellipse (1.2 and 0.8);
+  \node[font=\sf, text=cgblue] at (0,1.1) {$\M$};
+  \node[circle, fill=banana, inner sep=1.5pt,
+    label=below:{\scriptsize $p$}]
+    (p) at (-0.2,0) {};
+
+  \draw[rounded corners=12pt, spacecadet, thick]
+    (4,0) ellipse (1.2 and 0.8);
+  \node[font=\sf, text=cgblue] at (4,1.1) {$\mathcal{N}$};
+  \node[circle, fill=banana, inner sep=1.5pt,
+    label=below:{\scriptsize $\phi(p)$}]
+    (phip) at (3.8,0) {};
+
+  \node (R) at (7.5,0) {$\R$};
+
+  % Arrows
+  \draw[->, cgblue] (1.4,0.3) -- node[above]{\small $\phi$}
+    (2.6,0.3);
+  \draw[->, cgblue] (5.4,0.3) -- node[above]{\small $f$}
+    (7.0,0.3);
+  \draw[->, munsell, dashed] (1.0,-0.7)
+    to[out=-20,in=200] node[below]{\small $f\circ\phi$} (7.0,-0.7);
+\end{tikzpicture}
+\end{center}
+
+\noindent
+The pullback operates in the direction \emph{opposite} to~$\phi$:
+while $\phi$ maps $\M \to \mathcal{N}$, the pullback~$\phi^*$
+maps functions on~$\mathcal{N}$ to functions on~$\M$.
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Pushforward of tangent vectors}%
+\label{sec:pushforward-vectors}
+
+For any tangent vector $v \in T_p\M$, we define the
+\textbf{pushforward} $\phi_* v \in T_{\phi(p)}\mathcal{N}$ by its
+action on smooth functions $f$ on~$\mathcal{N}$:
+\begin{equation}\label{eq:pushforward-def}
+  (\phi_* v)(f) = v(f \circ \phi)\,.
+\end{equation}
+
+\begin{exercise}\label{ex:pushforward-tangent}
+  Verify that $\phi_* v$ so defined is a tangent vector at
+  $\phi(p)$: check that it is $\R$-linear and satisfies the
+  Leibniz rule with respect to pointwise multiplication of
+  functions on~$\mathcal{N}$.
+\end{exercise}
+
+\noindent
+The pushforward defines a linear map
+\begin{equation}\label{eq:pushforward-map}
+  \phi_*\colon T_p\M \;\longrightarrow\;
+    T_{\phi(p)}\mathcal{N}\,.
+\end{equation}
+
+\medskip\noindent
+\textbf{Relation to the Jacobian.}\;
+Let $\{x^\mu\}$ be coordinates on~$\M$ and $\{y^\nu\}$ coordinates
+on~$\mathcal{N}$.  The matrix of $\phi_*$ in the corresponding
+coordinate bases is
+\begin{equation}\label{eq:pushforward-jacobian}
+  [\phi_*]^\nu{}_\mu = \pd{y^\nu}{x^\mu}\,,
+\end{equation}
+which is the \textbf{Jacobian matrix} of the map~$\phi$.
+
+\begin{exercise}\label{ex:pushforward-jacobian}
+  Derive~\eqref{eq:pushforward-jacobian}
+  from~\eqref{eq:pushforward-def} by evaluating
+  $\bigl(\phi_*\, \partial/\partial x^\mu\bigr)(y^\nu)$.
+\end{exercise}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Pullback of covectors}%
+\label{sec:pullback-covectors}
+
+Given a covector $\mu \in T^*_{\phi(p)}\mathcal{N}$, the
+\textbf{pullback covector} $\phi^* \mu \in T^*_p\M$ is defined by
+demanding consistency with the natural pairing:
+\begin{equation}\label{eq:pullback-covector}
+  (\phi^* \mu)(v) = \mu(\phi_* v)
+  \qquad \text{for all } v \in T_p\M\,.
+\end{equation}
+This defines a linear map
+$\phi^*\colon T^*_{\phi(p)}\mathcal{N} \to T^*_p\M$,
+going in the direction \emph{opposite} to~$\phi_*$.
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Extension to pure tensors}%
+\label{sec:pullback-push-tensors}
+
+The pullback extends naturally to covariant tensors of
+type~$(0,l)$.  For $T_{a_1 \cdots a_l}$ a tensor on~$\mathcal{N}$:
+\begin{equation}\label{eq:pullback-tensor}
+  (\phi^* T)_{a_1 \cdots a_l}\, v_1^{a_1} \cdots v_l^{a_l}
+    = T_{a_1 \cdots a_l}\,
+      (\phi_* v_1)^{a_1} \cdots (\phi_* v_l)^{a_l}
+\end{equation}
+for all $v_1, \ldots, v_l \in T_p\M$.
+Similarly, the pushforward extends to contravariant tensors of
+type~$(k,0)$.  For $T^{a_1 \cdots a_k}$ a tensor on~$\M$:
+\begin{equation}\label{eq:pushforward-tensor}
+  (\phi_* T)^{a_1 \cdots a_k}\,
+    (\mu_1)_{a_1} \cdots (\mu_k)_{a_k}
+    = T^{a_1 \cdots a_k}\,
+      (\phi^* \mu_1)_{a_1} \cdots (\phi^* \mu_k)_{a_k}
+\end{equation}
+for all
+$\mu_1, \ldots, \mu_k \in T^*_{\phi(p)}\mathcal{N}$.
+
+\begin{remark}
+  Note the directions of these maps: $\phi_*$ pushes tangent
+  vectors and contravariant tensors
+  \emph{forward} ($\M \to \mathcal{N}$), while $\phi^*$ pulls
+  covectors and covariant tensors \emph{back}
+  ($\mathcal{N} \to \M$).  For a general smooth map, there is
+  no natural action on \emph{mixed} tensors of type~$(k,l)$
+  with $k, l \geq 1$, because the pushforward and pullback point
+  in opposite directions.
+\end{remark}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Mixed tensors and diffeomorphisms}%
+\label{sec:mixed-tensors-diffeo}
+
+If $\phi\colon \M \to \M$ is a \textbf{diffeomorphism} (a smooth
+bijection with smooth inverse), we can overcome the
+arrow-direction obstruction.  Since $\phi^{-1}$ exists and is
+smooth, we have an additional pushforward
+\[
+  (\phi^{-1})_*\colon T_{\phi(p)}\M
+    \;\longrightarrow\; T_p\M
+\]
+that takes tangent vectors at~$\phi(p)$ \emph{back} to~$p$.  This
+allows us to define the pullback of a mixed tensor
+$T^{a_1 \cdots a_k}{}_{b_1 \cdots b_l}$ by:
+\begin{equation}\label{eq:pullback-mixed}
+  \begin{split}
+  &(\phi^* T)^{a_1 \cdots a_k}{}_{b_1 \cdots b_l}\,
+    (\mu_1)_{a_1} \cdots (\mu_k)_{a_k}\,
+    v_1^{b_1} \cdots v_l^{b_l}\\
+  &\qquad= T^{a_1 \cdots a_k}{}_{b_1 \cdots b_l}\,
+    \bigl((\phi^{-1})^* \mu_1\bigr)_{a_1} \cdots
+    \bigl((\phi^{-1})^* \mu_k\bigr)_{a_k}\,
+    (\phi_* v_1)^{b_1} \cdots (\phi_* v_l)^{b_l}\,,
+  \end{split}
+\end{equation}
+for all $v_1, \ldots, v_l \in T_p\M$ and
+$\mu_1, \ldots, \mu_k \in T^*_p\M$.
+
+\begin{exercise}\label{ex:pullback-consistency}
+  Show that $\phi_* = (\phi^{-1})^*$ when both are defined on
+  tangent vectors.
+  \emph{Hint}: for $v \in T_p\M$ and any smooth function $f$,
+  evaluate $\bigl((\phi^{-1})^* v\bigr)(f)$ using the pullback
+  definition.
+\end{exercise}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Isometries}%
+\label{sec:isometries-def}
+
+Among all diffeomorphisms, those that preserve the metric occupy
+a special role.
+
+\begin{definition}[Isometry]\label{def:isometry}
+  A diffeomorphism $\phi\colon \M \to \M$ is an \textbf{isometry}
+  if the pullback of the metric equals the metric:
+  \begin{equation}\label{eq:isometry-def}
+    \phi^* g_{ab} = g_{ab}\,.
+  \end{equation}
+\end{definition}
+
+\noindent
+An isometry preserves all distances and angles: the spacetimes
+$(\M, g_{ab})$ and $(\M, \phi^* g_{ab})$ are geometrically
+identical.  In Minkowski space, the isometries form the
+Poincar\'e group (translations and Lorentz transformations).
+
+\begin{keyresult}[Symmetries versus gauge freedom]
+  The isometries of a spacetime are its \emph{symmetries}: they
+  generate conserved quantities via the Killing vector fields
+  of~\S\ref{sec:killing}.  However, the \emph{gauge freedom} of
+  general relativity is much larger: \emph{all} diffeomorphisms
+  (not just isometries) map solutions of Einstein's equations to
+  physically equivalent solutions.  The spacetimes
+  $(\M, g_{ab})$ and $(\M, \phi^* g_{ab})$ describe the same
+  physics for \emph{any} diffeomorphism~$\phi$, regardless of
+  whether~$\phi$ is an isometry.
+\end{keyresult}
+
+\begin{intuition}[Isometries versus diffeomorphisms]
+  Think of an isometry as a rigid motion of the manifold---it
+  moves points around but preserves the ``shape'' of spacetime.
+  A general diffeomorphism may distort the metric, but because
+  general relativity is formulated in terms of coordinate-free
+  geometric quantities, the distorted and undistorted spacetimes
+  make identical physical predictions.  The distinction is
+  analogous to that between a rotation (which preserves a
+  vector's length) and a general coordinate transformation
+  (which changes the components but not the vector itself).
+\end{intuition}
+
+\medskip
+With the formalism of maps between manifolds in hand, we have
+placed the gauge freedom of general relativity---and in particular
+the gauge transformations of linearised
+gravity~\eqref{eq:gauge-transformation}---on a rigorous
+mathematical footing.  In the next lecture, we will apply the
+linearised theory developed in Lectures~12 and~13 to study
+\textbf{gravitational radiation}: wave-like solutions of the vacuum
+linearised Einstein equations that propagate at the speed of light.
