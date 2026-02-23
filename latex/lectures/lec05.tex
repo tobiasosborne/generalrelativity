@@ -74,7 +74,8 @@ field $v$ on $\M$ as follows.  For a fixed $p\in\M$, the map
 \[
   C_p\colon \R\to\M\,,\qquad t\mapsto \Phi_t(p)\,,
 \]
-is a smooth curve through $p$ (with $C_p(0)=p$).  Define $v|_p$ to
+is a smooth curve through $p$ (with $C_p(0)=p$), called the
+\textbf{orbit} of $p$ under $\Phi_t$.  Define $v|_p$ to
 be the tangent vector to $C_p$ at $t=0$:
 \begin{equation}\label{eq:flow-to-field}
   v|_p(f) = \td{}{t}(f\circ\Phi_t(p))\bigg|_{t=0}\,,
@@ -108,7 +109,9 @@ we must solve the system of coupled ordinary differential equations
   \qquad \mu = 1,\dots,n\,.
 \end{equation}
 
-By the standard existence and uniqueness theorem for ODEs, there
+By the standard existence and uniqueness theorem for ODEs
+(proved via fixed-point arguments; see, e.g.,
+Coddington and Levinson~\cite{CL55}), there
 exists $\varepsilon > 0$ such that a unique solution exists for all
 $t\in(-\varepsilon,\varepsilon)$.
 
@@ -124,6 +127,16 @@ $t\in(-\varepsilon,\varepsilon)$.
   particle follows the integral curve through its initial position.
   The map $\Phi_t$ advances every particle by time~$t$.
 \end{intuition}
+
+With flows and integral curves in hand, we have assembled the
+basic toolkit for describing ``mechanics on manifolds''---how
+points move under smooth evolution.  Notice, however, that nothing
+in our discussion so far has involved special or general
+relativity: we are still working with bare manifolds, without any
+notion of distance, angle, or causal structure.  The machinery we
+develop next---the commutator of vector fields, and especially the
+algebraic theory of tensors---will supply precisely the additional
+structure needed to formulate physics on curved spacetimes.
 
 % ──────────────────────────────────────────────────────────────
 \subsection{New vector fields from old: the commutator}%
@@ -150,15 +163,29 @@ $t\in(-\varepsilon,\varepsilon)$.
   Although $v$ and $w$ each involve first-order derivatives, the
   second-order terms cancel in the combination $v(w(f))-w(v(f))$,
   leaving $[v,w]$ a first-order operator---hence a genuine vector
-  field.
+  field.  The commutator plays a central role in the theory of Lie
+  groups and will reappear when we study Lie derivatives and the
+  curvature of connections.
 \end{remark}
 
 % ──────────────────────────────────────────────────────────────
 \subsection{New vector spaces from old}\label{sec:new-spaces}
 
 Before defining tensors on manifolds, we review the key algebraic
-constructions that build new vector spaces from given ones.  Let
-$V$ and $W$ be finite-dimensional real vector spaces.
+constructions that build new vector spaces from given ones.  The
+guiding observation is this: our manifold $\M$ canonically provides
+a single ``atomic'' vector space at each point---the tangent space
+$V_p$.  Every other geometric object we need (the metric, the
+curvature tensor, differential forms, \ldots) lives not in $V_p$
+itself but in some vector space \emph{built from} $V_p$ via
+elementary algebraic operations.
+
+One should assess the value of each construction by whether it
+produces quantities with a clear physical interpretation.  Just
+because an operation is available does not mean physics requires it.
+
+Let $V$ and $W$ be finite-dimensional real vector spaces.  The
+principal operations are:
 
 \begin{enumerate}[(i)]
   \item \textbf{Taking duals:} $V \mapsto V^*$.
@@ -170,7 +197,14 @@ $V$ and $W$ be finite-dimensional real vector spaces.
   \item \textbf{Taking joins:} $V,\, W \mapsto V\vee W$.
 \end{enumerate}
 
-We now develop the first three in detail.
+\noindent
+In general relativity, \emph{duals} and \emph{tensor products} are
+by far the most important: the metric, for instance, naturally
+lives in a tensor product of two copies of $V_p^*$.  Direct sums
+play a role in fiber-bundle theory but rarely appear in our
+treatment; wedge products feature in the theory of differential
+forms; joins and intersections are more prominent in quantum
+information theory.  We develop the first three in detail below.
 
 % ──────────────────────────────────────────────────────────────
 \subsection{The dual space $V^*$}\label{sec:dual-space}
@@ -197,9 +231,16 @@ We now develop the first three in detail.
   where $\delta^\mu{}_\nu$ is the Kronecker delta.
 \end{remark}
 
+\noindent
+Notice the placement of indices: elements of $V$ carry a subscript
+(lower index), while elements of $V^*$ carry a superscript (upper
+index) in their labelling.  This convention will become essential
+when we work with tensor components on manifolds.
+
 \begin{exercise}\label{ex:double-dual}
   Show that $(V^*)^* \cong V$ (the double dual is canonically
-  isomorphic to $V$).
+  isomorphic to $V$).  This result will be used frequently and
+  without further comment throughout the course.
 \end{exercise}
 
 \begin{exercise}\label{ex:dim-dual}
@@ -209,12 +250,30 @@ We now develop the first three in detail.
 \begin{remark}
   The map $v_\mu \mapsto (v^\mu)^*$ gives an isomorphism between
   $V$ and $V^*$, but this isomorphism \textbf{depends on the choice
-  of basis}---it is \emph{non-canonical}.  In general relativity,
-  a canonical isomorphism $V\to V^*$ arises from the metric.
+  of basis}---it is \emph{non-canonical}.  Had we chosen a
+  different basis for $V$, we would obtain a different
+  identification between $V$ and $V^*$.  In physics we seek
+  statements that are independent of any particular coordinate
+  system chosen by the observer.  A \emph{canonical} (basis-free)
+  isomorphism $V_p \to V_p^*$ arises only once we equip the
+  manifold with a metric; this is the operation of ``lowering an
+  index'' that we shall meet shortly.
 \end{remark}
 
 % ──────────────────────────────────────────────────────────────
 \subsection{The tensor product}\label{sec:tensor-product}
+
+The tensor product is one of the most versatile constructions in
+all of mathematical physics.  Beyond its central role in general
+relativity, it appears whenever one deals with multi-particle
+systems: the state space of $N$~quantum-mechanical particles is
+the tensor product of the individual Hilbert spaces, and tensor
+products of qubit spaces underpin quantum information theory and
+quantum computing.  We give three perspectives on the
+construction---an informal definition, a formal quotient-space
+definition, and the dual (multilinear-map) characterisation used in
+most relativity texts---so that you can make reference to whichever
+viewpoint is most convenient in your future studies.
 
 \subsubsection{Informal definition}
 
@@ -239,13 +298,19 @@ We now develop the first three in detail.
 
 \subsubsection{Formal construction}
 
+\emph{(This subsection may be skipped on a first reading without
+loss of continuity.)}
+
 More precisely, one defines
 \begin{equation}\label{eq:tp-formal}
   V\tp W \;\equiv\; F(V\times W)\big/{\sim}\,,
 \end{equation}
 where $F(V\times W)$ is the free vector space on the set
-$V\times W$ (formal linear combinations of ordered pairs $(v,w)$),
-and $\sim$ is the equivalence relation generated by:
+$V\times W$ (formal linear combinations of ordered pairs $(v,w)$).
+Since $V\times W$ is an infinite set, $F(V\times W)$ is
+infinite-dimensional and far too large; the equivalence relation
+$\sim$ collapses it to the correct finite-dimensional space.  The
+relation $\sim$ is generated by:
 \begin{enumerate}
   \item identity, symmetry, and transitivity (equivalence relation
     axioms),
@@ -295,8 +360,9 @@ so we may write $U\tp V\tp W$ without ambiguity.
 \end{definition}
 
 \noindent
-This is the ``classical'' approach to tensor products.  It is
-related to the informal definition by
+This is the ``classical'' approach to tensor products, and the one
+most commonly seen in general relativity textbooks (including
+Wald~\cite{Wald84}).  It is related to the informal definition by
 \begin{equation}\label{eq:tp-dual-relation}
   (V\tp W)^* \;\cong\;
   \{T\colon V\times W \to \R \mid T \text{ multilinear}\}\,.
@@ -326,6 +392,17 @@ From $V_p$ we build:
 \noindent
 Since $(V_p^*)^* \cong V_p$, an element $t\in V_p$ can be viewed
 as a linear function on $V_p^*$ as well.
+
+One could also form ``mixed'' tensor products such as
+$V_p\tp V_p^*\tp V_p$, where the factors are interleaved.  In
+general relativity, however, the order of the individual
+$V_p$ and~$V_p^*$ factors rarely matters (many of the tensors we
+encounter have symmetry properties that make the ordering
+irrelevant), so it is conventional to cluster all $V_p$ factors to
+the left and all $V_p^*$ factors to the right.  In quantum
+information theory, by contrast, the ordering of tensor-product
+factors carries physical significance (each factor corresponds to a
+distinct subsystem), and one must keep careful track of it.
 
 \subsubsection{Tensors of type $(k,l)$}
 

@@ -8,18 +8,18 @@ Public: https://github.com/tobiasosborne/generalrelativity (Apache 2.0)
 ## Status
 
 11 of 23 lectures converted (+ 1 supplementary note). 56 pages total.
-Lectures 1–4 enriched with transcript material. Lectures 5–11 still need transcript enrichment.
+Lectures 1–6 enriched with transcript material. Lectures 7–11 still need transcript enrichment.
 Julia simulation pipeline operational: 3 scripts generating data-driven pgfplots figures.
 Build tool: `./build.sh` with `--cmfonts`, `--draft`, `--simdata`, `--full`, `--clean`, `--watch` options.
 
 | Done | Transcript-enriched | Next |
 |------|---------------------|------|
-| Lec 1: Prerelativity gravitation + Lagrange point figure | ✓ | Lec 5: enrich with transcript |
-| Lec 2: Equivalence principle & Mach + geodesic bump figure | ✓ | Lec 6: enrich with transcript |
-| Lec 3: Manifolds + ellipsoid geodesics figure | ✓ | Lec 7–11: enrich with transcripts |
-| Lec 4: Tangent space | ✓ | Lec 12: Lie derivatives & Newtonian limit (full workflow) |
-| Lec 5: Flows and tensors | | Lec 13: Einstein's field equations, linearised solutions |
-| Lec 6: Tensors continued (cotangent, transformation laws, metric, AIN) | | Lec 14: Gravitational radiation |
+| Lec 1: Prerelativity gravitation + Lagrange point figure | ✓ | Lec 6: enrich with transcript |
+| Lec 2: Equivalence principle & Mach + geodesic bump figure | ✓ | Lec 7–11: enrich with transcripts |
+| Lec 3: Manifolds + ellipsoid geodesics figure | ✓ | Lec 12: Lie derivatives & Newtonian limit (full workflow) |
+| Lec 4: Tangent space | ✓ | Lec 13: Einstein's field equations, linearised solutions |
+| Lec 5: Flows and tensors | ✓ | Lec 14: Gravitational radiation |
+| Lec 6: Tensors continued (cotangent, transformation laws, metric, AIN) | ✓ | Lec 15–18: Schwarzschild solution & geodesics |
 | Lec 7: Derivative operators (affine connections, C tensor, Christoffel) | | Lec 15–18: Schwarzschild solution & geodesics |
 | Lec 8: Parallel transport (Levi-Civita, metric compatibility, geodesics) | | Lec 19–23: Cosmology (homogeneity, isotropy, FLRW) |
 | Lec 9: Abstract index notation review, curvature intro | | |

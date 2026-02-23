@@ -6,9 +6,14 @@
 \section{Tensors continued}\label{sec:tensors-continued}
 
 Let $p\in\M$ be a point in a manifold~$\M$.  We write $V_p$ for
-the tangent space at~$p$.  Our goal in this lecture is to study
-how vectors $v\in V_p$, covectors $\omega\in V_p^*$, and more
-general tensors transform under a change of coordinates on~$\M$.
+the tangent space at~$p$.  In the previous lecture we constructed
+tensor products of~$V_p$ purely algebraically, ignoring the
+manifold structure entirely.  But a manifold provides \emph{extra
+data}: not just one vector space but a whole field of vector
+spaces, one at each point, linked by coordinate charts.  Our goal
+in this lecture is to study how vectors $v\in V_p$, covectors
+$\omega\in V_p^*$, and more general tensors transform under a
+change of coordinates on~$\M$.
 
 % ──────────────────────────────────────────────────────────────
 \subsection{The cotangent space (dual of $V_p$)}\label{sec:cotangent}
@@ -36,6 +41,17 @@ In coordinate notation this reads
 \end{equation}
 Thus $\dd x^\mu$ is a \emph{linear function of tangent vectors},
 fully determined by~\eqref{eq:dual-basis-coord}.
+
+\begin{remark}
+  At this stage, $\dd x^\mu$ is \textbf{just a symbol} for a
+  particular covector---a linear function on tangent vectors
+  defined by the Kronecker-delta
+  condition~\eqref{eq:dual-basis-coord}.  It has nothing (yet) to
+  do with derivatives or integration measures.  Later, $\dd x^\mu$
+  will acquire an interpretation as a differential form and
+  integration measure, but for now resist the temptation to read
+  more into the notation than is given by the definition.
+\end{remark}
 
 \begin{intuition}[Covectors as measuring devices]
   A tangent vector~$v$ specifies a direction and magnitude
@@ -139,6 +155,17 @@ This is the \textbf{tensor transformation law}.
   via~\eqref{eq:tensor-transform}.
 \end{keyresult}
 
+\begin{remark}
+  Not every collection of numbers indexed by coordinate labels is a
+  tensor.  One can associate $n^{k+l}$ numbers to each point
+  $p\in\M$ that do \emph{not} obey~\eqref{eq:tensor-transform}
+  under coordinate changes (the Christoffel
+  symbols, which we shall meet in Lecture~7, are a prominent
+  example).  Tensor fields are therefore quite special: they are
+  the coordinate-indexed quantities whose transformation law is
+  purely algebraic and involves only Jacobian factors.
+\end{remark}
+
 % ──────────────────────────────────────────────────────────────
 \subsection{Smooth tensor fields}\label{sec:smooth-tensor-field}
 
@@ -166,8 +193,11 @@ This is the \textbf{tensor transformation law}.
 % ──────────────────────────────────────────────────────────────
 \subsection{Examples from special relativity}\label{sec:SR-examples}
 
-We now illustrate the tensor concept with three physically
-important examples, all set in Minkowski
+The preceding lectures have built up an abstract formalism for
+multilinear objects on manifolds.  We now put it to work by
+re-examining several familiar physical quantities---the
+four-current, the energy-momentum tensor, and the metric---through
+the lens of tensor analysis, all set in Minkowski
 spacetime~$\M = \Rn{1,3}$.
 
 % ──────────────────────────────────────────────────────────────
@@ -263,7 +293,17 @@ In covariant (proper-time) form:
         T^{\mu\nu}\,.
   \end{equation}
   Conclude that $T^{\mu\nu}$ is a tensor of type~$(2,0)$.
+  \emph{Hint:} the covariant
+  form~\eqref{eq:Tmunu-covariant} makes the argument more
+  transparent, since the four-dimensional delta function and
+  proper-time integral are manifestly Lorentz-invariant.
 \end{exercise}
+
+The energy-momentum tensor plays an extraordinarily important role
+in general relativity: it is the object that encodes the complete
+stress-energy content of matter and radiation, and will appear as
+the source term on the right-hand side of Einstein's field
+equations.
 
 % ──────────────────────────────────────────────────────────────
 \subsubsection{The metric tensor}\label{sec:metric-tensor}
@@ -390,6 +430,17 @@ $\metric(\cdot\,,v)\in V_p^*$.
   where $g^{\mu\nu}$ is the matrix inverse of $g_{\mu\nu}$.
 \end{keyresult}
 
+\begin{remark}
+  This canonical isomorphism is so convenient that many authors
+  identify vectors with covectors from the outset, never
+  introducing the cotangent space as a separate object.  We prefer
+  to keep the distinction explicit: the metric is extra data that
+  may not always be present (e.g.\ in symplectic geometry or
+  contact geometry), and understanding the difference between $V_p$
+  and~$V_p^*$ clarifies which structures depend on that extra data
+  and which do not.
+\end{remark}
+
 % ──────────────────────────────────────────────────────────────
 \subsection{Abstract index notation}\label{sec:abstract-index}
 
@@ -436,5 +487,10 @@ without committing to a particular basis.
   component-based approaches.  It carries the structural
   information of index placement (contravariant vs.\ covariant)
   without fixing a basis, yet retains the computational
-  convenience of the index calculus.
+  convenience of the index calculus.  In practice, any physical
+  calculation eventually requires choosing a basis---there is no
+  such thing as doing physics entirely without coordinates.  But
+  one can, and should, carry out as many manipulations as possible
+  in a basis-free manner; the abstract index notation is designed
+  to facilitate exactly this.
 \end{remark}
