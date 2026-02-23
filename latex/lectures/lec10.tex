@@ -6,11 +6,23 @@
 \section{Geodesics continued; curvature}\label{sec:geodesics-curvature}
 
 In the previous lectures we defined geodesics as curves whose
-tangent vector is parallelly transported along itself.  In this
-lecture we study the \emph{arc length} and \emph{proper time}
-functionals, show that geodesics are \emph{extremal curves} of
-these functionals, and then introduce the central object of
-Riemannian geometry: the \textbf{Riemann curvature tensor}.
+tangent vector is parallelly transported along itself.  This
+definition, while mathematically precise, may seem somewhat
+abstract: it characterises geodesics in terms of the derivative
+operator.  In this lecture we provide a \emph{second},
+potentially more intuitive characterisation of geodesics---namely,
+that they are the curves which \textbf{extremise the arc length}
+(or proper time) functional between two fixed points.  This
+variational point of view connects the abstract machinery of
+parallel transport to the familiar principle of least action.
+
+After establishing this variational characterisation, we turn to
+the central object of Riemannian geometry: the \textbf{Riemann
+curvature tensor}.  Our discussion of parallel transport has
+given us the tools to define curvature intrinsically---without
+reference to any embedding space---and this intrinsic notion of
+curvature is precisely the ingredient that Einstein's field
+equations will equate to the distribution of matter and energy.
 
 % ──────────────────────────────────────────────────────────────
 \subsection{Arc length and proper time}\label{sec:arc-length}
@@ -61,6 +73,15 @@ with tangent vector~$T^a$.
   parameter, with $C(a)=p$ and $C(b)=q$.
 \end{definition}
 
+Intuitively, one should think of this formula as follows:
+divide the curve~$C$ into many small segments, approximate
+each segment by a straight line whose direction is the tangent
+vector~$T^a$ at that point, compute the length of each tangent
+vector using the metric (this is the ``infinitesimal length''
+$\sqrt{g_{ab}\,T^a T^b}\;\dd t$), then add up all the
+infinitesimal lengths and take the limit as the subdivision
+becomes infinitely fine.
+
 For a Lorentzian metric with signature $(-,+,+,\dots,+)$, the
 quantity $g_{ab}\,T^a T^b$ need not be positive.  We
 distinguish three cases:
@@ -86,6 +107,18 @@ distinguish three cases:
     \eqbox{\tau = \int_a^b \sqrt{-g_{ab}\,T^a T^b}\;\dd t}\,.
   \end{equation}
 \end{definition}
+
+It is worth emphasising that not every curve on a Lorentzian
+manifold falls neatly into one of these three classes.  One can
+certainly write down curves that are null for a while, then
+become spacelike, and later turn timelike.  Such curves are
+mathematically legitimate, but they are \emph{unphysical}: no
+particle, no solution to any physical equation of motion, can
+follow a worldline that changes causal character.  Moreover,
+as we now show, geodesics are never of this mixed type.  If a
+curve changes from, say, timelike to spacelike, then we declare
+its ``length'' to be simply \emph{undefined}---there is no
+consistent way to assign a single real number to such a curve.
 
 A key observation is that the causal character of a geodesic
 cannot change.
@@ -130,8 +163,14 @@ cannot change.
 \subsection{Reparametrisation invariance}%
 \label{sec:reparam-invariance}
 
-The arc length and proper time are \textbf{reparametrisation
-invariant}: they do not depend on the choice of curve parameter.
+One might worry that the arc length or proper time depend on the
+particular parameter chosen to specify where we are along the
+curve.  If they did, the ``length'' of a curve would reflect our
+arbitrary choice of parametrisation rather than a geometric
+property of the curve itself---not a desirable feature.
+Fortunately, the arc length and proper time are
+\textbf{reparametrisation invariant}: they do not depend on the
+choice of curve parameter.
 
 \begin{theorem}[Reparametrisation invariance of arc length]%
 \label{thm:reparam-invariance}
@@ -164,7 +203,14 @@ invariant}: they do not depend on the choice of curve parameter.
 \label{sec:geodesics-extremal}
 
 We now prove the fundamental result connecting geodesics to the
-calculus of variations.
+calculus of variations.  The key idea is to think of the arc
+length~$\ell$ as a \textbf{functional}: a machine that accepts
+a curve as input and returns a real number.  The domain of this
+functional is the (infinite-dimensional) space of all
+sufficiently smooth curves from~$p$ to~$q$, and we ask:
+\emph{for which curves is $\ell$ stationary under small
+variations?}  The answer turns out to be precisely the
+geodesics.
 
 \begin{theorem}[Geodesics extremise arc length]%
 \label{thm:geodesics-extremise}
@@ -262,6 +308,21 @@ The endpoints are held fixed.  We assume a parametrisation with
   curve extremises arc length if and only if it is a geodesic.
 \end{proof}
 
+\begin{remark}[Local equation, global information]
+  There is something rather striking about this result.  The
+  geodesic equation~\eqref{eq:geodesic-from-variation} is a
+  \emph{local} differential equation: given the initial point~$p$
+  and an initial tangent vector, one can solve it step by step,
+  determining the curve in a small neighbourhood of each point.
+  Yet this purely local equation somehow ``knows'' which curve
+  extremises the length between two potentially distant
+  points~$p$ and~$q$.  Of course, the initial tangent direction
+  encodes some global information about which direction to exit
+  from~$p$ so as to arrive at~$q$, but it is still remarkable
+  that a second-order ODE in the curve parameter captures a
+  global variational principle.
+\end{remark}
+
 \begin{keyresult}[Geodesics from the Lagrangian]
   The geodesic equation can also be obtained by applying
   the Euler--Lagrange equations to the \textbf{Lagrangian}
@@ -288,16 +349,37 @@ The endpoints are held fixed.  We assume a parametrisation with
 % ──────────────────────────────────────────────────────────────
 \subsection{Extrema versus minima}\label{sec:extrema-vs-minima}
 
-\begin{remark}
-  For a Riemannian metric (positive-definite signature), a
-  geodesic locally \emph{minimises} arc length.  The situation
-  is more subtle for Lorentzian signature: a timelike curve
-  joining two points may have \textbf{arbitrarily small} proper
-  time (consider a ``zigzag'' path close to null segments).  If
-  a curve of \emph{greatest} proper time between two events
-  exists, it must be a timelike geodesic---but a timelike
-  geodesic need not maximise proper time globally (it is only a
-  local extremum).
+\begin{remark}[Extremising $\neq$ minimising]
+  It is essential to distinguish \emph{extremising} from
+  \emph{minimising}.  Even for an ordinary function of one
+  variable, the condition $\dd f = 0$ is satisfied at maxima,
+  minima, and saddle points alike; moreover, a function may have
+  many local minima, only one of which is the global minimum.
+  The same subtleties arise in the calculus of variations.
+  The geodesic equation tells us that $\delta\ell = 0$, but
+  this alone does not guarantee that we have found a minimum (or
+  a maximum)---only a stationary point of the length functional.
+
+  For a \textbf{Riemannian} metric (positive-definite signature),
+  a geodesic does locally \emph{minimise} arc length: among all
+  nearby curves, the geodesic is the shortest.  The situation is
+  considerably more subtle for \textbf{Lorentzian} signature.
+  Consider two timelike-separated events~$p$ and~$q$.  One might
+  guess that the timelike geodesic from~$p$ to~$q$ has the
+  smallest proper time, but in fact the opposite is closer to the
+  truth: timelike curves with \textbf{arbitrarily small} proper
+  time always exist.  To see this, imagine a ``zigzag'' worldline
+  that repeatedly accelerates to nearly the speed of light, turns
+  around, accelerates back, and so on.  Along each nearly-null
+  segment the proper time is almost zero, so the total proper
+  time can be made as small as desired.
+
+  Consequently, if a curve of \emph{greatest} proper time
+  between~$p$ and~$q$ exists, it must be a timelike
+  geodesic---because any variation can only decrease the proper
+  time.  However, a timelike geodesic need not maximise proper
+  time \emph{globally}; it is only a local extremum, much as a
+  function can have many local maxima.
 \end{remark}
 
 \begin{intuition}[The twin paradox revisited]
@@ -318,7 +400,15 @@ The endpoints are held fixed.  We assume a parametrisation with
 \label{sec:riemann-tensor}
 
 We now turn to the second major topic of this lecture:
-\textbf{curvature}.
+\textbf{curvature}.  With the machinery of manifolds, tensors,
+derivative operators, and parallel transport in hand, we have
+finally assembled enough mathematical foundations to discuss the
+curvature of a manifold in a fully intrinsic fashion---without
+reference to any ambient space in which the manifold might be
+embedded.  This intrinsic notion of curvature is a key
+ingredient in Einstein's general theory of relativity; by the
+end of the next lecture we will have all the geometric tools
+needed to formulate the field equations.
 
 The curvature of a manifold~$\M$ equipped with a connection
 $\covd_a$ measures the \textbf{path-dependence of parallel
@@ -333,6 +423,14 @@ intrinsic measure of this failure.
   successive covariant derivatives to commute.  In flat space,
   $\covd_a\covd_b = \covd_b\covd_a$ when acting on any tensor;
   curvature is the obstruction to this commutativity.
+  The way to connect this mathematical definition to the
+  physical picture of path-dependent parallel transport is to
+  recall that an infinitesimal parallel transport operation
+  is in one-to-one correspondence with a covariant derivative.
+  The commutator $\covd_a\covd_b - \covd_b\covd_a$ therefore
+  captures the difference between two infinitesimal parallel
+  transports performed in opposite orders---precisely the
+  path-dependence around an infinitesimal loop.
 \end{intuition}
 
 % ──────────────────────────────────────────────────────────────
@@ -557,6 +655,19 @@ tensor~\eqref{eq:riemann-def}:
 Since this holds for \emph{all} dual vectors~$\omega_a$, we
 conclude:
 
+\begin{remark}[Path independence to first order]
+  An important subtlety in the derivation above is that parallel
+  transport around the loop is path-independent \emph{to first
+  order}: the contributions $\delta_1+\delta_3$ vanish as
+  $\Delta s\to 0$, and $\delta_2+\delta_4$ vanish as
+  $\Delta t\to 0$.  It is only at \emph{second} order---in the
+  product $\Delta s\,\Delta t$---that the path-dependence
+  appears.  This is why the Riemann tensor, which encodes
+  curvature, is a \emph{second-order} quantity: curvature is
+  invisible at the scale of a single infinitesimal displacement
+  and manifests only when two independent directions are probed.
+\end{remark}
+
 \begin{keyresult}[Parallel transport around an infinitesimal
   loop]\label{res:loop-transport}
   The change in a vector $v^a$ after parallel transport around
@@ -600,3 +711,12 @@ conclude:
   expressed in the coordinate basis and use the formula for
   $\covd_\mu\omega_\nu$ in terms of Christoffel symbols.
 \end{exercise}
+
+\medskip
+In the next lecture we continue our study of curvature: we
+establish the symmetry properties and the Bianchi identity of the
+Riemann tensor, introduce derived quantities (the Ricci tensor,
+scalar curvature, and Einstein tensor), and relate curvature to
+the \emph{geodesic deviation equation}---the precise statement
+that nearby geodesics diverge or converge in the presence of
+curvature.

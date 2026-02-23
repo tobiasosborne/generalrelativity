@@ -7,11 +7,19 @@
 
 In the previous lecture we introduced the Riemann curvature tensor
 $\Riem_{abc}{}^d$ via the commutator of covariant derivatives
-acting on a covector field.  We now extend this to vectors and
-general tensors, establish the fundamental symmetry and Bianchi
-identities, define the Ricci tensor and scalar curvature, derive
-the geodesic deviation equation, and give the explicit coordinate
-formula for the Riemann tensor.
+acting on a covector field, and gave it a geometric interpretation
+as the path-dependence of parallel transport around an
+infinitesimal loop.  In this lecture we extend the action of the
+Riemann tensor to vectors and general tensors, establish its
+fundamental symmetry and Bianchi identities, and define three
+derived quantities---the Ricci tensor, scalar curvature, and
+Einstein tensor---that will be central to Einstein's field
+equations.  We then derive the \textbf{geodesic deviation
+equation}, which relates the Riemann tensor to the relative
+acceleration of nearby geodesics: this is the physical
+manifestation of curvature that Einstein's theory identifies with
+gravity.  Finally, we give explicit coordinate formulas for
+computing curvature from the metric.
 
 % ──────────────────────────────────────────────────────────────
 \subsection{Action of the Riemann tensor on vectors and tensors}%
@@ -248,12 +256,23 @@ the curvature of~$\M$ in the corresponding two-dimensional
 plane.
 
 \begin{intuition}[Riemann as sectional curvature probe]
-  Each pair of tangent vectors at~$p$ specifies a 2-plane
-  in~$V_p$.  The Riemann tensor, when fed these two directions,
-  returns a linear map that encodes how vectors are rotated
-  when parallel-transported around an infinitesimal loop in
-  that 2-plane.  This is the essence of \emph{sectional
-  curvature}.
+  Think of the Riemann tensor as a ``box'' or machine with four
+  slots.  You feed it two vectors $v^a$ and~$w^a$; these define
+  a two-dimensional plane in the tangent space at~$p$---the
+  plane of the infinitesimal loop around which you will parallel
+  transport.  What remains is a linear transformation
+  $M_a{}^b = \Riem(v,w,\cdot,\cdot)$ that tells you precisely
+  how a vector gets rotated when parallel-transported around
+  that loop (to second order in the loop's area).  The Riemann
+  tensor thus encodes \emph{all} second-order curvature
+  information of the manifold: every possible loop direction,
+  every possible vector to transport.
+
+  In many applications one does not need all this information.
+  The Ricci tensor and scalar curvature, defined below, are
+  successive contractions that capture progressively coarser
+  summaries of the curvature---averaged over some or all
+  loop directions.
 \end{intuition}
 
 % ──────────────────────────────────────────────────────────────
@@ -341,10 +360,16 @@ This can be rewritten as $\covd^a \Ein_{ab} = 0$, where:
 % ──────────────────────────────────────────────────────────────
 \subsection{Geodesic deviation}\label{sec:geodesic-deviation}
 
-The Riemann tensor has a direct physical interpretation: it
-controls how nearby geodesics accelerate toward or away from
-each other.  This is captured by the \textbf{geodesic deviation
-equation}.
+We now come to what is arguably the most physically important
+interpretation of the Riemann curvature tensor: it controls how
+nearby geodesics accelerate toward or away from each other.
+Imagine two geodesics that start out infinitesimally close and
+pointing in the same direction.  On a flat manifold they remain
+parallel forever; on a curved manifold they may diverge or
+converge.  The rate of this relative acceleration is captured by
+the \textbf{geodesic deviation equation}, and it is this equation
+that will play a central role in motivating Einstein's field
+equations.
 
 % ──────────────────────────────────────────────────────────────
 \subsubsection{Setup: a one-parameter family of geodesics}%
@@ -505,6 +530,17 @@ the \textbf{Jacobi equation}).
   manifold is curved.
 \end{keyresult}
 
+\begin{remark}
+  A word of caution: the condition requires \emph{smooth families}
+  of geodesics, not just two arbitrary geodesics that happen to
+  diverge.  Even in flat space one can pick two geodesics pointing
+  in wildly different directions that move apart; this says nothing
+  about curvature.  What matters is that geodesics which start
+  infinitesimally close \emph{and} initially parallel still
+  accelerate away from each other---that is the signature of
+  genuine curvature.
+\end{remark}
+
 % ──────────────────────────────────────────────────────────────
 \subsection{Computing curvature in coordinates}%
 \label{sec:curvature-coordinates}
@@ -561,6 +597,22 @@ components:
   Christoffel symbols involve first derivatives of the metric,
   and the Riemann tensor involves first derivatives of the
   Christoffel symbols.
+\end{remark}
+
+\begin{remark}[Practical complexity]
+  In a four-dimensional spacetime, $\Riem^\sigma{}_{\mu\nu\rho}$
+  has $4^4 = 256$ components.  Each involves Christoffel symbols
+  (themselves computed from the metric), plus a summation over an
+  internal index~$\alpha$.  A brute-force computation thus
+  requires on the order of a thousand individual
+  evaluations---and if a human has even a one-percent error rate
+  per evaluation, one should expect roughly ten mistakes in the
+  final answer.  The symmetry properties (antisymmetry in the
+  first and last pairs of indices, the Bianchi identity) reduce
+  the number of independent components to~$20$ in four dimensions,
+  but the intermediate algebra remains formidable.  In practice,
+  one should exploit every available symmetry and, whenever
+  possible, verify results with a computer algebra system.
 \end{remark}
 
 \subsubsection{Ricci tensor in coordinates}%
@@ -692,3 +744,14 @@ gives:
   standard expression for the divergence in spherical
   coordinates.
 \end{exercise}
+
+\medskip
+With the Riemann tensor, its symmetries, the derived
+curvature quantities (Ricci tensor, scalar curvature, Einstein
+tensor), and the geodesic deviation equation in hand, we have
+completed the mathematical foundations of differential geometry
+needed for general relativity.  After roughly ten lectures of
+building up this machinery, we are finally ready to turn---in
+the next lecture---to Einstein's general theory of relativity
+itself: the Lie derivative, the Newtonian limit, and the
+formulation of the field equations.

@@ -7,24 +7,24 @@ Public: https://github.com/tobiasosborne/generalrelativity (Apache 2.0)
 
 ## Status
 
-11 of 23 lectures converted (+ 1 supplementary note). 58 pages total.
-Lectures 1–9 enriched with transcript material. Lectures 10–11 still need transcript enrichment.
+11 of 23 lectures converted (+ 1 supplementary note). 60 pages total.
+Lectures 1–11 enriched with transcript material.
 Julia simulation pipeline operational: 3 scripts generating data-driven pgfplots figures.
 Build tool: `./build.sh` with `--cmfonts`, `--draft`, `--simdata`, `--full`, `--clean`, `--watch` options.
 
 | Done | Transcript-enriched | Next |
 |------|---------------------|------|
-| Lec 1: Prerelativity gravitation + Lagrange point figure | ✓ | Lec 10–11: enrich with transcripts |
-| Lec 2: Equivalence principle & Mach + geodesic bump figure | ✓ | Lec 12: Lie derivatives & Newtonian limit (full workflow) |
-| Lec 3: Manifolds + ellipsoid geodesics figure | ✓ | Lec 12: Lie derivatives & Newtonian limit (full workflow) |
-| Lec 4: Tangent space | ✓ | Lec 13: Einstein's field equations, linearised solutions |
-| Lec 5: Flows and tensors | ✓ | Lec 14: Gravitational radiation |
-| Lec 6: Tensors continued (cotangent, transformation laws, metric, AIN) | ✓ | Lec 15–18: Schwarzschild solution & geodesics |
-| Lec 7: Derivative operators (affine connections, C tensor, Christoffel) | ✓ | Lec 10–11: enrich with transcripts |
-| Lec 8: Parallel transport (Levi-Civita, metric compatibility, geodesics) | ✓ | Lec 12: Lie derivatives & Newtonian limit (full workflow) |
-| Lec 9: Abstract index notation review, curvature intro | ✓ | Lec 13: Einstein's field equations, linearised solutions |
-| Lec 10: Geodesics as extremal curves, Riemann tensor, loops | | Lec 14: Gravitational radiation |
-| Lec 11: Riemann symmetries, Bianchi, Ricci, Einstein tensor, geodesic deviation | | Lec 15–18: Schwarzschild solution & geodesics |
+| Lec 1: Prerelativity gravitation + Lagrange point figure | ✓ | Lec 12: Lie derivatives & Newtonian limit (full workflow) |
+| Lec 2: Equivalence principle & Mach + geodesic bump figure | ✓ | Lec 13: Einstein's field equations, linearised solutions |
+| Lec 3: Manifolds + ellipsoid geodesics figure | ✓ | Lec 14: Gravitational radiation |
+| Lec 4: Tangent space | ✓ | Lec 15–18: Schwarzschild solution & geodesics |
+| Lec 5: Flows and tensors | ✓ | |
+| Lec 6: Tensors continued (cotangent, transformation laws, metric, AIN) | ✓ | |
+| Lec 7: Derivative operators (affine connections, C tensor, Christoffel) | ✓ | |
+| Lec 8: Parallel transport (Levi-Civita, metric compatibility, geodesics) | ✓ | |
+| Lec 9: Abstract index notation review, curvature intro | ✓ | |
+| Lec 10: Geodesics as extremal curves, Riemann tensor, loops | ✓ | |
+| Lec 11: Riemann symmetries, Bianchi, Ricci, Einstein tensor, geodesic deviation | ✓ | |
 | Note: ∂_a as covariant derivative | | |
 
 ## Lecture-to-PDF mapping
