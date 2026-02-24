@@ -662,14 +662,186 @@ tangent vectors as directional derivatives. This is developed in the
 next lecture.</p>
 </div>
 </details>
-<p><em>[Figure: Top: geodesics on a triaxial ellipsoid (<span
-class="math inline">\(a=1.5\)</span>, <span
-class="math inline">\(b=1.0\)</span>, <span
-class="math inline">\(c=0.7\)</span>). The curves are shortest paths
-intrinsic to the surface. Bottom: tangent vectors (gold) and a
-parallel-transported vector (teal) along a geodesic, illustrating how
-parallel transport preserves inner products but the transported vector
-rotates relative to the tangent direction.]</em></p>
+<!-- ═══ Interactive Gaussian bump geodesic figure ═══ -->
+<div class="interactive-figure" id="geodesic-widget">
+<div class="fig-header">Interactive: Geodesics on a Gaussian bump — parallel paths deflected by curvature</div>
+<canvas id="geo-canvas" style="width:100%;aspect-ratio:1/1;display:block;cursor:crosshair;background:white"></canvas>
+<div class="fig-controls" style="padding:0.8em 1em;background:#fafafa;border-top:1px solid #eee;font-size:0.82em;display:flex;flex-wrap:wrap;gap:0.6em 1.5em;align-items:center">
+  <label>Amplitude <em>A</em> <input type="range" id="g-amp" min="0" max="3" step="0.05" value="1.0" style="width:100px;vertical-align:middle"> <span id="g-amp-v" style="font-variant-numeric:tabular-nums">1.00</span></label>
+  <label>Width &sigma; <input type="range" id="g-sig" min="0.3" max="2.5" step="0.05" value="1.0" style="width:100px;vertical-align:middle"> <span id="g-sig-v" style="font-variant-numeric:tabular-nums">1.00</span></label>
+  <label>Rays <input type="range" id="g-n" min="1" max="21" step="2" value="9" style="width:80px;vertical-align:middle"> <span id="g-n-v">9</span></label>
+  <label>Spread <input type="range" id="g-sp" min="0.2" max="2.5" step="0.05" value="1.2" style="width:80px;vertical-align:middle"> <span id="g-sp-v" style="font-variant-numeric:tabular-nums">1.20</span></label>
+  <label style="font-size:0.9em"><input type="checkbox" id="g-str" checked style="vertical-align:middle"> Undeflected</label>
+</div>
+<div style="padding:0.4em 1em 0.6em;font-size:0.75em;color:#888;font-variant-numeric:tabular-nums" id="g-stats"></div>
+</div>
+<p style="font-size:0.9em;text-align:center;margin-top:0.3em;color:#666">
+  <em>Geodesics on a Gaussian-bump surface — a toy model of gravitational lensing.
+  <a href="geodesic-bump.html">Open full interactive version</a> with more controls.</em>
+</p>
+
+<script>
+// ─── Embedded geodesic solver ───────────────────────────────
+(function(){
+const cv = document.getElementById('geo-canvas');
+const cx = cv.getContext('2d');
+const DOM = 3.2;
+
+function setup(){
+  const dpr = window.devicePixelRatio||1;
+  const r = cv.getBoundingClientRect();
+  cv.width = r.width*dpr; cv.height = r.height*dpr;
+  cx.setTransform(dpr,0,0,dpr,0,0);
+  return {w:r.width, h:r.height};
+}
+
+function hf(x,y,A,s2){return A*Math.exp(-(x*x+y*y)/(2*s2));}
+function hfx(x,y,A,s2){return -x/s2*hf(x,y,A,s2);}
+function hfy(x,y,A,s2){return -y/s2*hf(x,y,A,s2);}
+function hfxx(x,y,A,s2){return(-1/s2+x*x/(s2*s2))*hf(x,y,A,s2);}
+function hfxy(x,y,A,s2){return x*y/(s2*s2)*hf(x,y,A,s2);}
+function hfyy(x,y,A,s2){return(-1/s2+y*y/(s2*s2))*hf(x,y,A,s2);}
+
+function chrst(x,y,A,s2){
+  const fx=hfx(x,y,A,s2),fy=hfy(x,y,A,s2);
+  const fxx=hfxx(x,y,A,s2),fxy=hfxy(x,y,A,s2),fyy=hfyy(x,y,A,s2);
+  const g11=1+fx*fx,g12=fx*fy,g22=1+fy*fy;
+  const det=g11*g22-g12*g12;
+  const gi11=g22/det,gi12=-g12/det,gi22=g11/det;
+  const dg=[[2*fx*fxx,fxx*fy+fx*fxy,fxx*fy+fx*fxy,2*fy*fxy],
+            [2*fx*fxy,fxy*fy+fx*fyy,fxy*fy+fx*fyy,2*fy*fyy]];
+  function dv(k,i,j){return dg[k][i*2+j];}
+  function gi(i,j){return i===0?(j===0?gi11:gi12):(j===0?gi12:gi22);}
+  const G=new Float64Array(8);
+  for(let l=0;l<2;l++)for(let m=0;m<2;m++)for(let n=0;n<2;n++){
+    let s=0;for(let sg=0;sg<2;sg++)s+=gi(l,sg)*(dv(n,sg,m)+dv(m,sg,n)-dv(sg,m,n));
+    G[l*4+m*2+n]=0.5*s;}
+  return G;
+}
+
+function rhs(st,A,s2){
+  const[x,y,vx,vy]=st;const G=chrst(x,y,A,s2);
+  return[vx,vy,-(G[0]*vx*vx+2*G[1]*vx*vy+G[3]*vy*vy),-(G[4]*vx*vx+2*G[5]*vx*vy+G[7]*vy*vy)];
+}
+
+function rk4(st,ds,A,s2){
+  const k1=rhs(st,A,s2);
+  const s2_=[0,0,0,0];for(let i=0;i<4;i++)s2_[i]=st[i]+.5*ds*k1[i];
+  const k2=rhs(s2_,A,s2);
+  const s3=[0,0,0,0];for(let i=0;i<4;i++)s3[i]=st[i]+.5*ds*k2[i];
+  const k3=rhs(s3,A,s2);
+  const s4=[0,0,0,0];for(let i=0;i<4;i++)s4[i]=st[i]+ds*k3[i];
+  const k4=rhs(s4,A,s2);
+  const out=[0,0,0,0];for(let i=0;i<4;i++)out[i]=st[i]+ds/6*(k1[i]+2*k2[i]+2*k3[i]+k4[i]);
+  return out;
+}
+
+function integrate(x0,y0,vx0,vy0,A,sigma){
+  const s2=sigma*sigma,ds=0.008,sMax=8;
+  const fx=hfx(x0,y0,A,s2),fy=hfy(x0,y0,A,s2);
+  const sp=Math.sqrt((1+fx*fx)*vx0*vx0+2*fx*fy*vx0*vy0+(1+fy*fy)*vy0*vy0);
+  vx0/=sp;vy0/=sp;
+  const path=[[x0,y0]];let st=[x0,y0,vx0,vy0];
+  for(let i=0;i<Math.floor(sMax/ds);i++){
+    st=rk4(st,ds,A,s2);
+    if(Math.abs(st[0])>3.5||Math.abs(st[1])>3.5)break;
+    path.push([st[0],st[1]]);
+  }
+  return path;
+}
+
+function c2c(x,y,w,h){return[(x+DOM)/(2*DOM)*w,(DOM-y)/(2*DOM)*h];}
+
+function drawPath(path,w,h,color,lw,dash){
+  if(path.length<2)return;cx.strokeStyle=color;cx.lineWidth=lw;cx.setLineDash(dash||[]);
+  cx.beginPath();const[sx,sy]=c2c(path[0][0],path[0][1],w,h);cx.moveTo(sx,sy);
+  for(let i=1;i<path.length;i++){const[px,py]=c2c(path[i][0],path[i][1],w,h);cx.lineTo(px,py);}
+  cx.stroke();cx.setLineDash([]);
+}
+
+function pcolor(i,n){
+  const t=n>1?Math.abs(2*i/(n-1)-1):0;
+  return`rgb(${Math.round(t*13)},${Math.round(143-t*103)},${Math.round(168-t*92)})`;
+}
+
+function render(){
+  const{w,h}=setup();
+  const A=parseFloat(document.getElementById('g-amp').value);
+  const sigma=parseFloat(document.getElementById('g-sig').value);
+  const ngeo=parseInt(document.getElementById('g-n').value);
+  const spread=parseFloat(document.getElementById('g-sp').value);
+  const showStr=document.getElementById('g-str').checked;
+  const s2=sigma*sigma, xs=-2.5;
+
+  document.getElementById('g-amp-v').textContent=A.toFixed(2);
+  document.getElementById('g-sig-v').textContent=sigma.toFixed(2);
+  document.getElementById('g-n-v').textContent=ngeo;
+  document.getElementById('g-sp-v').textContent=spread.toFixed(2);
+
+  cx.fillStyle='white';cx.fillRect(0,0,w,h);
+
+  // Heatmap
+  const step=3;
+  const imgD=cx.createImageData(Math.ceil(w),Math.ceil(h));
+  for(let px=0;px<w;px+=step)for(let py=0;py<h;py+=step){
+    const x=(px/w)*2*DOM-DOM,y=DOM-(py/h)*2*DOM;
+    const t=Math.min(hf(x,y,A,s2)/Math.max(A,.01),1);
+    const a=Math.round(t*45);
+    for(let dx=0;dx<step&&px+dx<w;dx++)for(let dy=0;dy<step&&py+dy<h;dy++){
+      const idx=((py+dy)*Math.ceil(w)+(px+dx))*4;
+      imgD.data[idx]=0;imgD.data[idx+1]=Math.round(143-t*40);imgD.data[idx+2]=Math.round(168-t*60);imgD.data[idx+3]=a;
+    }
+  }
+  cx.putImageData(imgD,0,0);
+
+  // Grid
+  cx.strokeStyle='rgba(0,0,0,0.06)';cx.lineWidth=0.5;
+  for(let v=-3;v<=3;v++){
+    let[x1,y1]=c2c(v,-DOM,w,h),[x2,y2]=c2c(v,DOM,w,h);
+    cx.beginPath();cx.moveTo(x1,y1);cx.lineTo(x2,y2);cx.stroke();
+    [x1,y1]=c2c(-DOM,v,w,h);[x2,y2]=c2c(DOM,v,w,h);
+    cx.beginPath();cx.moveTo(x1,y1);cx.lineTo(x2,y2);cx.stroke();
+  }
+
+  // Contours
+  cx.lineWidth=0.5;
+  for(const lev of[.1,.2,.4,.6,.8]){
+    const zt=lev*A;if(zt<=0)continue;
+    const ratio=zt/A;if(ratio<=0||ratio>=1)continue;
+    const r=sigma*Math.sqrt(-2*Math.log(ratio));if(r>DOM)continue;
+    const[ccx,ccy]=c2c(0,0,w,h);const rPx=r/(2*DOM)*w;
+    cx.strokeStyle=`rgba(13,40,76,${0.06+lev*0.08})`;
+    cx.beginPath();cx.arc(ccx,ccy,rPx,0,2*Math.PI);cx.stroke();
+  }
+
+  // Center marker
+  const[ccx,ccy]=c2c(0,0,w,h);
+  cx.strokeStyle='rgba(13,40,76,0.2)';cx.lineWidth=1.5;
+  cx.beginPath();cx.moveTo(ccx-6,ccy);cx.lineTo(ccx+6,ccy);cx.moveTo(ccx,ccy-6);cx.lineTo(ccx,ccy+6);cx.stroke();
+
+  // Geodesics
+  const t0=performance.now();let maxD=0;
+  for(let i=0;i<ngeo;i++){
+    const y0=ngeo===1?0:-spread+2*spread*i/(ngeo-1);
+    if(showStr) drawPath([[xs,y0],[3.2,y0]],w,h,'rgba(13,40,76,0.12)',0.8,[4,4]);
+    const path=integrate(xs,y0,1,0,A,sigma);
+    const lw=(ngeo===1||i===Math.floor(ngeo/2))?2.2:1.5;
+    drawPath(path,w,h,pcolor(i,ngeo),lw);
+    const[sx,sy]=c2c(path[0][0],path[0][1],w,h);
+    cx.fillStyle=pcolor(i,ngeo);cx.beginPath();cx.arc(sx,sy,3,0,2*Math.PI);cx.fill();
+    const d=Math.abs(path[path.length-1][1]-y0);if(d>maxD)maxD=d;
+  }
+  const ms=(performance.now()-t0).toFixed(1);
+  document.getElementById('g-stats').innerHTML=`${ms} ms · max deflection: ${maxD.toFixed(3)}`;
+}
+
+for(const id of['g-amp','g-sig','g-n','g-sp'])document.getElementById(id).addEventListener('input',render);
+document.getElementById('g-str').addEventListener('change',render);
+window.addEventListener('resize',render);
+render();
+})();
+</script>
+<!-- ═══ End interactive figure ═══ -->
 <h2 id="formal-definitions-summary">Formal definitions (summary)</h2>
 <p>We collect the precise versions of the definitions introduced above
 for reference.</p>
