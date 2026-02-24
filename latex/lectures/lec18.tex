@@ -1,0 +1,276 @@
+%!TEX root = ../GeneralRelativity.tex
+% ──────────────────────────────────────────────────────────────
+%  Lecture 18 — FLRW solutions and the Schwarzschild ansatz
+% ──────────────────────────────────────────────────────────────
+
+\subsection{Exact FLRW solutions}%
+\label{sec:flrw-solutions}
+
+We now solve the Friedmann equations analytically for various matter
+contents and spatial curvatures.
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Conservation laws from the fluid equation}%
+\label{sec:flrw-conservation}
+
+The fluid equation~\eqref{eq:fluid-equation},
+$\dot\rho = -3(\dot a/a)(\rho + p)$, admits immediate first
+integrals for the two most important equations of state.
+
+\medskip\noindent
+\textbf{Dust} ($p = 0$).\;
+The fluid equation becomes $\dot\rho + 3\rho\,\dot a/a = 0$, which
+is a total derivative in disguise:
+\begin{equation}\label{eq:dust-conservation}
+  \frac{d}{d\tau}\bigl(\rho\, a^3\bigr) = 0
+  \qquad\Longrightarrow\qquad
+  \eqbox{\rho\, a^3 = \text{const.}}
+\end{equation}
+This is simply the conservation of rest mass: the energy density
+scales inversely with the volume $\propto a^3$, which is exactly
+what one expects for non-relativistic matter that is neither created
+nor destroyed.
+
+\medskip\noindent
+\textbf{Radiation} ($p = \rho/3$).\;
+The fluid equation gives $\dot\rho + 4\rho\,\dot a/a = 0$, hence:
+\begin{equation}\label{eq:radiation-conservation}
+  \eqbox{\rho\, a^4 = \text{const.}}
+\end{equation}
+
+\begin{intuition}[Why $a^4$ for radiation?]
+  The photon number density scales as $a^{-3}$ (dilution by volume
+  expansion), just as for dust.  But each photon also loses energy
+  as the universe expands: its wavelength is stretched by the scale
+  factor, contributing an additional factor of $a^{-1}$
+  (\textbf{cosmological redshift}).  Together:
+  $\rho_{\text{rad}} \propto a^{-3} \cdot a^{-1} = a^{-4}$.
+  Consequently, \emph{radiation dominated the energy budget of the
+  early universe} (when $a$ was small), even though dust dominates
+  today.
+\end{intuition}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Late-time behaviour}%
+\label{sec:flrw-late-time}
+
+The qualitative late-time behaviour depends on the spatial
+curvature~$k$.  Assuming $\rho > 0$ and $p \geq 0$ throughout:
+
+\begin{itemize}
+  \item \textbf{$k = 0$ or $k = -1$} (flat or hyperbolic):
+    Equation~\eqref{eq:friedmann-I} with $\Lambda = 0$ gives
+    $\dot a^2 = 8\pi\rho\, a^2/3 - k$.  Since $\rho$ decreases
+    with $a$ and the right-hand side never reaches zero (for $k = 0$
+    the right-hand side is positive whenever $\rho > 0$; for
+    $k = -1$ the $-k = +1$ term keeps it positive), the expansion
+    continues forever: \textbf{eternal expansion}.  For $k = 0$,
+    $\dot a \to 0$ as $\tau \to \infty$; for $k = -1$,
+    $\dot a \to 1$.
+  \item \textbf{$k = +1$} (spherical): the curvature term
+    $-k/a^2 = -1/a^2$ eventually dominates, driving $\dot a$ to
+    zero.  The universe reaches a maximum size and then
+    \emph{recollapses}, ending in a \textbf{Big Crunch}---the
+    time-reverse of the Big Bang.
+\end{itemize}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Exact solutions}%
+\label{sec:flrw-exact}
+
+Using the conservation laws, Friedmann equation~\eqref{eq:friedmann-I}
+(with $\Lambda = 0$) reduces to a single ODE for~$a(\tau)$.
+For \textbf{dust} ($p = 0$), define
+$C = 8\pi\rho\, a^3/3 = \text{const}$:
+\begin{equation}\label{eq:friedmann-dust-ode}
+  \dot a^2 = \frac{C}{a} - k\,.
+\end{equation}
+For \textbf{radiation} ($p = \rho/3$), define
+$C' = 8\pi\rho\, a^4/3 = \text{const}$:
+\begin{equation}\label{eq:friedmann-rad-ode}
+  \dot a^2 = \frac{C'}{a^2} - k\,.
+\end{equation}
+These are solved by separation of variables (the integrals are
+mildly irritating but standard).  The results are collected in the
+following table.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{c|cc}
+  \toprule
+  & \textbf{Dust} ($p = 0$) & \textbf{Radiation} ($p = \rho/3$)\\
+  \midrule
+  $k = +1$
+    & $\begin{aligned}
+        a &= \tfrac{1}{2}C(1 - \cos\eta)\\
+        \tau &= \tfrac{1}{2}C(\eta - \sin\eta)
+      \end{aligned}$
+    & $a = \sqrt{C'}\bigl(1 - (1 - \tau/\sqrt{C'})^2\bigr)^{1/2}$
+    \\[6pt]
+  $k = 0$
+    & $a = \bigl(\tfrac{9C}{4}\bigr)^{1/3}\, \tau^{2/3}$
+    & $a = (4C')^{1/4}\, \tau^{1/2}$
+    \\[6pt]
+  $k = -1$
+    & $\begin{aligned}
+        a &= \tfrac{1}{2}C(\cosh\eta - 1)\\
+        \tau &= \tfrac{1}{2}C(\sinh\eta - \eta)
+      \end{aligned}$
+    & $a = \sqrt{C'}\bigl((1 + \tau/\sqrt{C'})^2 - 1\bigr)^{1/2}$
+    \\
+  \bottomrule
+\end{tabular}
+\end{center}
+
+\noindent
+Here $\eta$ is a parameter (conformal time for the dust solutions).
+The $k = +1$ dust solution is given in parametric form---the
+cycloid---and describes a universe that expands from a Big Bang,
+reaches maximum size at $\eta = \pi$, and recollapses to a Big
+Crunch at $\eta = 2\pi$.
+
+\begin{exercise}\label{ex:k0-dust}
+  Derive the $k = 0$ dust solution $a \propto \tau^{2/3}$ directly
+  from~\eqref{eq:friedmann-dust-ode} with $k = 0$.
+\end{exercise}
+
+\begin{intuition}[The Friedmann--Lema\^itre--Robertson--Walker cosmologies]
+  All solutions in the table above share the same qualitative
+  feature: they begin with $a = 0$ (the Big Bang).  For $k = 0$ and
+  $k = -1$, they expand forever; for $k = +1$, the expansion halts
+  and reverses.  Despite the extreme simplicity of the model---a
+  homogeneous isotropic universe filled with a single type of
+  matter---these solutions capture the essential large-scale dynamics
+  of our universe remarkably well.  The FLRW cosmologies serve as
+  the starting point for all of modern observational cosmology;
+  perturbations around them describe the formation of galaxies and
+  the temperature fluctuations of the CMB.  This concludes our
+  discussion of cosmology; we now turn to the other celebrated exact
+  solution of Einstein's equations.
+\end{intuition}
+
+% ══════════════════════════════════════════════════════════════
+%  Part 2: Schwarzschild — setting up the ansatz
+% ══════════════════════════════════════════════════════════════
+
+\section{The Schwarzschild solution}%
+\label{sec:schwarzschild}
+
+Roughly speaking, there are two major families of well-known exact
+solutions to Einstein's field equations: the FLRW cosmologies
+(describing the large-scale evolution of the universe) and the
+\textbf{Schwarzschild solution} (describing the gravitational
+field outside a spherically symmetric, non-rotating body).  We now
+turn to the latter.
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Static and stationary spacetimes}%
+\label{sec:static-stationary}
+
+We seek solutions that ``don't change in time.''  There are two
+levels of precision for this intuition.
+
+\begin{definition}[Stationary spacetime]\label{def:stationary}
+  A spacetime $(\M, g_{ab})$ is \textbf{stationary} if there exists
+  a one-parameter group $\phi_t$ of isometries whose orbits are
+  timelike curves (``time translations'').
+
+  Equivalently: there exists a timelike Killing vector field~$\xi^a$
+  (i.e.\ $\covd_{(a}\xi_{b)} = 0$ with $\xi^a \xi_a < 0$).
+\end{definition}
+
+\begin{definition}[Static spacetime]\label{def:static}
+  A spacetime is \textbf{static} if it is stationary \emph{and}
+  there exists a spacelike hypersurface~$\Sigma$ that is orthogonal
+  to the orbits of the isometry group.
+
+  By Frobenius' theorem, this is equivalent to requiring that the
+  timelike Killing vector field additionally satisfies
+  \begin{equation}\label{eq:frobenius}
+    \xi_{[a}\, \covd_b\, \xi_{c]} = 0\,.
+  \end{equation}
+\end{definition}
+
+\begin{remark}
+  A rotating body (e.g.\ a Kerr black hole) generates a
+  \emph{stationary but not static} spacetime: it has a timelike
+  Killing vector (time-translation symmetry), but the rotation
+  introduces off-diagonal $dt\,d\phi$ terms in the metric that
+  prevent the existence of a hypersurface orthogonal to the time
+  direction everywhere.
+\end{remark}
+
+In adapted coordinates, a static metric takes the form
+\begin{equation}\label{eq:static-metric}
+  ds^2 = -V^2(x^1, x^2, x^3)\, dt^2
+    + h_{\mu\nu}(x^1, x^2, x^3)\, dx^\mu\, dx^\nu\,,
+\end{equation}
+where $V^2 = -\xi^a \xi_a$ is the squared norm of the Killing
+vector.  Crucially, there are \emph{no} cross-terms $dt\, dx^\mu$
+(this is the consequence of staticity, not merely stationarity), and
+the components depend only on the spatial coordinates, not on~$t$.
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Spherical symmetry}%
+\label{sec:spherical-symmetry}
+
+\begin{definition}[Spherically symmetric spacetime]%
+  \label{def:spherical-symmetry}
+  A spacetime is \textbf{spherically symmetric} if its isometry
+  group contains a subgroup isomorphic to $SO(3)$ whose orbits are
+  two-spheres~$S^2$.
+\end{definition}
+
+The full spacetime metric~$g_{ab}$ induces a metric $\hat h_{ab}$
+on each orbit sphere.  By $SO(3)$ invariance, the induced metric
+must be a multiple of the standard round metric on~$S^2$---there is
+simply no other $SO(3)$-invariant metric on~$S^2$.
+The proportionality constant is characterised by the area~$A$ of
+the orbit sphere; we define the \textbf{areal radius}
+\begin{equation}\label{eq:areal-radius}
+  r = \sqrt{A/4\pi}\,,
+\end{equation}
+so that the induced metric on each orbit sphere is
+$r^2(d\theta^2 + \sin^2\!\theta\, d\phi^2)$.
+
+For a spacetime that is both \textbf{static} and
+\textbf{spherically symmetric}, the timelike Killing
+field~$\xi^a$ is unique (up to normalisation).  One can show that
+$\xi^a$ must be orthogonal to the orbit spheres (project $\xi^a$
+onto $S^2$; the projection must be $SO(3)$-invariant, but the only
+invariant vector field on $S^2$ is the zero field).  The orbit
+spheres therefore lie within the spatial hypersurfaces~$\Sigma_t$.
+
+% ──────────────────────────────────────────────────────────────
+\subsection{The Schwarzschild ansatz}%
+\label{sec:schwarzschild-ansatz}
+
+Combining staticity and spherical symmetry, we choose coordinates
+as follows: pick a fiducial orbit sphere in~$\Sigma$, introduce
+spherical coordinates $(\theta, \phi)$ on it, and propagate them to
+neighbouring spheres along geodesics orthogonal to the fiducial
+sphere (parameterised by the areal radius~$r$).  Using $t$ for the
+Killing parameter, the full coordinate system is $(t, r, \theta,
+\phi)$.
+
+In these coordinates, the most general static spherically symmetric
+metric takes the form:
+\begin{equation}\label{eq:schwarzschild-ansatz}
+  \eqbox{ds^2 = -f(r)\, dt^2 + h(r)\, dr^2
+    + r^2\bigl(d\theta^2 + \sin^2\!\theta\, d\phi^2\bigr)}
+\end{equation}
+where $f(r)$ and $h(r)$ are two unknown functions of the radial
+coordinate alone.  All the symmetry content---staticity and
+spherical symmetry---has been used to arrive at this ansatz.
+
+\begin{intuition}[From ten unknowns to two]
+  The general metric in four dimensions has ten independent
+  components.  Staticity eliminated the four space--time cross-terms
+  and the dependence on~$t$, leaving seven spatial functions.
+  Spherical symmetry then fixed the angular part to be the standard
+  round metric on~$S^2$ (multiplied by~$r^2$), reducing the
+  unknowns to just \emph{two functions of a single variable}:
+  $f(r)$ and $h(r)$.  In the next lecture, we will substitute this
+  ansatz into the vacuum Einstein equations and solve for~$f$
+  and~$h$, obtaining the celebrated \textbf{Schwarzschild metric}.
+\end{intuition}
