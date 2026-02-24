@@ -1,0 +1,216 @@
+%!TEX root = ../GeneralRelativity.tex
+% ──────────────────────────────────────────────────────────────
+%  Lecture 20 — Interior solutions and geodesics of the
+%              Schwarzschild metric
+% ──────────────────────────────────────────────────────────────
+
+\subsection{Interior solution: a static spherically symmetric star}%
+\label{sec:interior-solution}
+
+The Schwarzschild metric~\eqref{eq:schwarzschild} describes the
+gravitational field in the \emph{vacuum region} outside a
+spherically symmetric body.  We now find the solution
+\emph{inside} the body, where the stress-energy tensor is non-zero.
+
+We model the star as a static, spherically symmetric perfect
+fluid---a ``big hot boiling liquid''---with stress-energy tensor
+\begin{equation}\label{eq:star-tab}
+  T_{ab} = \rho\, u_a\, u_b + p\,(g_{ab} + u_a\, u_b)\,,
+\end{equation}
+where $\rho(r)$ is the energy density, $p(r)$ the pressure, and
+$u^a = -\sqrt{f}\,(dt)^a$ points in the time direction (compatible
+with staticity).  The metric retains the general static spherically
+symmetric form~\eqref{eq:schwarzschild-ansatz}.
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Einstein's equations for the interior}%
+\label{sec:interior-einstein}
+
+Applying $\Ein_{ab} = 8\pi\, T_{ab}$ in an orthonormal
+basis $(e_0, e_1, e_2, e_3)$ adapted to the metric (where
+$(e_0)_a = \sqrt{f}\,(dt)_a$, $(e_1)_a = \sqrt{h}\,(dr)_a$,
+$(e_2)_a = r\,(d\theta)_a$,
+$(e_3)_a = r\sin\theta\,(d\phi)_a$), one obtains three independent
+equations (exercise):
+\begin{align}
+  8\pi\,\rho &= (r\,h^2)^{-1}\, h'
+    + r^{-2}(1 - h^{-1})\,,
+    \label{eq:interior-1}
+    \tag{1}\\[4pt]
+  8\pi\, p &= (r\,h)^{-1}\, f'/f
+    - r^{-2}(1 - h^{-1})\,,
+    \label{eq:interior-2}
+    \tag{2}\\[4pt]
+  8\pi\, p &= \tfrac{1}{2}(fh)^{-1/2}\,
+    \frac{d}{dr}\bigl[(fh)^{-1/2}\, f'\bigr]
+    + \tfrac{1}{2}(r\,f\,h)^{-1}\, f'
+    - \tfrac{1}{2}(r\,h^2)^{-1}\, h'\,.
+    \label{eq:interior-3}
+    \tag{3}
+\end{align}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Solving for $h$: the mass function}%
+\label{sec:mass-function}
+
+Equation~\eqref{eq:interior-1} involves $h$ alone and can be
+rewritten as
+\[
+  \frac{1}{r^2}\,\frac{d}{dr}\bigl[r\,(1 - h^{-1})\bigr]
+    = 8\pi\,\rho\,.
+\]
+Integrating with the boundary condition $h(0) = 1$ (smoothness at
+the centre):
+\begin{equation}\label{eq:h-interior}
+  h(r) = \biggl(1 - \frac{2\,m(r)}{r}\biggr)^{-1}\,,
+\end{equation}
+where the \textbf{mass function}
+\begin{equation}\label{eq:mass-function}
+  m(r) = 4\pi \int_0^r \rho(r')\, r'^2\, dr'
+\end{equation}
+represents the total mass-energy enclosed within radius~$r$.
+Since the spatial hypersurfaces $\Sigma_t$ must be spacelike, we
+require $h > 0$, i.e.\ $r > 2\,m(r)$ throughout the interior.
+
+At the surface $r = R$ of the star (where $\rho = 0$ for
+$r > R$), the interior solution must match the exterior
+Schwarzschild solution.  This requires $M = m(R)$: the
+Schwarzschild mass parameter equals the integrated mass function
+evaluated at the stellar radius.
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Solving for $f$: the gravitational potential}%
+\label{sec:interior-f}
+
+Writing $f = e^{2\phi}$ (so that $\phi$ will reduce to the
+Newtonian gravitational potential in the weak-field limit),
+equation~\eqref{eq:interior-2} with~\eqref{eq:h-interior}
+becomes
+\begin{equation}\label{eq:phi-equation}
+  \frac{d\phi}{dr}
+    = \frac{m(r) + 4\pi\, r^3\, p}{r\bigl(r - 2\,m(r)\bigr)}\,.
+\end{equation}
+In the Newtonian limit ($r^3\, p \ll m(r)$ and $m(r) \ll r$), this
+reduces to $d\phi/dr \approx m(r)/r^2$---Poisson's equation for the
+gravitational potential, confirming the identification of $\phi$
+with the Newtonian potential.
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{The Tolman--Oppenheimer--Volkoff equation}%
+\label{sec:tov}
+
+Substituting~\eqref{eq:h-interior} and~\eqref{eq:phi-equation}
+into the remaining equation~\eqref{eq:interior-3} yields, after
+considerable algebra, the \textbf{Tolman--Oppenheimer--Volkoff (TOV)
+equation} of hydrostatic equilibrium:
+\begin{equation}\label{eq:tov}
+  \eqbox{\frac{dp}{dr}
+    = -(\rho + p)\,\frac{m(r) + 4\pi\, r^3\, p}
+      {r\bigl(r - 2\,m(r)\bigr)}}
+\end{equation}
+This is the relativistic generalisation of the Newtonian equation of
+hydrostatic equilibrium $dp/dr = -\rho\, m(r)/r^2$.  Every factor
+in~\eqref{eq:tov} has a clear physical interpretation:
+\begin{itemize}
+  \item $\rho + p$ replaces $\rho$: in relativity, pressure
+    contributes to the gravitational mass.
+  \item $m(r) + 4\pi\, r^3\, p$ replaces $m(r)$: the pressure
+    itself gravitates.
+  \item $r - 2\,m(r)$ replaces $r$: a relativistic correction from
+    the spatial curvature.
+\end{itemize}
+All three corrections \emph{strengthen} gravity compared to the
+Newtonian prediction, making relativistic stars more prone to
+gravitational collapse.
+
+\begin{keyresult}[Interior Schwarzschild metric]
+  The spacetime geometry inside a static, spherically symmetric,
+  perfect-fluid star is
+  \begin{equation}\label{eq:interior-metric}
+    ds^2 = -e^{2\phi(r)}\, dt^2
+      + \biggl(1 - \frac{2\,m(r)}{r}\biggr)^{-1}\, dr^2
+      + r^2\, d\Omega^2\,,
+  \end{equation}
+  where $m(r)$ is given by~\eqref{eq:mass-function} and
+  $\phi(r)$ by~\eqref{eq:phi-equation}, subject to the TOV
+  equation~\eqref{eq:tov} and an equation of state $p = p(\rho)$.
+\end{keyresult}
+
+% ══════════════════════════════════════════════════════════════
+%  Part 2: Geodesics of the Schwarzschild solution
+% ══════════════════════════════════════════════════════════════
+
+\subsection{Geodesics of the Schwarzschild solution}%
+\label{sec:schwarzschild-geodesics}
+
+We now turn to the motion of test bodies and light rays in the
+exterior Schwarzschild spacetime ($r > 2M$).  These are the
+geodesics of the metric~\eqref{eq:schwarzschild}, and their study
+leads to some of the most celebrated predictions of general
+relativity.
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Killing vectors and constants of motion}%
+\label{sec:killing-constants}
+
+Before computing geodesics explicitly, we derive a powerful
+general result that will simplify the analysis considerably.
+
+\begin{proposition}\label{prop:killing-constant}
+  Let $\xi^a$ be a Killing vector field and $\gamma$ a geodesic
+  with tangent $u^a$.  Then $\xi_a\, u^a$ is constant along
+  $\gamma$.
+\end{proposition}
+
+\begin{proof}
+  Differentiate along the geodesic:
+  \[
+    u^b\, \covd_b(\xi_a\, u^a)
+      = u^a\, u^b\, \covd_b \xi_a
+        + \xi_a\, u^b\, \covd_b u^a\,.
+  \]
+  The first term vanishes because
+  $\covd_{(a}\xi_{b)} = 0$ (Killing's equation) and $u^a u^b$ is
+  symmetric.  The second term vanishes by the geodesic equation
+  $u^b\, \covd_b u^a = 0$.
+\end{proof}
+
+The Schwarzschild metric has two manifest Killing vectors:
+\begin{itemize}
+  \item $\xi^a = (\partial/\partial t)^a$ (time-translation
+    invariance, stationarity),
+  \item $\psi^a = (\partial/\partial \phi)^a$ (axial rotational
+    invariance).
+\end{itemize}
+By Proposition~\ref{prop:killing-constant}, each yields a conserved
+quantity along any geodesic.  We will exploit these in the next
+lecture to reduce the geodesic equation to a single ODE.
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Restriction to the equatorial plane}%
+\label{sec:equatorial-plane}
+
+The Schwarzschild metric is also invariant under the parity
+reflection $\theta \mapsto \pi - \theta$.  This symmetry has an
+important consequence:
+
+\begin{keyresult}[Geodesics are planar]
+  If the initial position and initial tangent vector of a geodesic
+  both lie in the equatorial plane $\theta = \pi/2$, then the
+  entire geodesic lies in that plane.
+
+  Since any initial conditions can be rotated into the equatorial
+  plane by an $SO(3)$ rotation (which is an isometry of the
+  Schwarzschild metric), it follows that \emph{every} geodesic in
+  the Schwarzschild spacetime is planar.  We may therefore set
+  $\theta = \pi/2$ without loss of generality when analysing
+  geodesic motion.
+\end{keyresult}
+
+This reduces the effective dimension of the problem: instead of
+four coordinates $(t, r, \theta, \phi)$, we work with
+$(t, r, \phi)$ at $\theta = \pi/2$.  Combined with the two
+conserved quantities from the Killing vectors, the geodesic
+equation will reduce to a single first-order ODE for~$r$---an
+``effective one-dimensional problem'' that we will solve in the
+next lecture.
