@@ -3,7 +3,12 @@
 #
 # Surface:  z = h(x,y) = A·exp(-(x²+y²)/(2σ²))  embedded in ℝ³
 # Computes: induced metric, Christoffel symbols, geodesic ODE
-# Outputs:  surface mesh + 4 geodesics + 4 straight-line comparisons
+# Outputs:  surface mesh + 9 initially parallel geodesics
+#
+# The geodesics all start from x=-2.5 moving purely in the +x direction
+# at different y offsets.  The bump deflects them, demonstrating how
+# curvature causes initially parallel paths to converge and diverge
+# (a precursor to geodesic deviation and gravitational lensing).
 #
 # Run:  julia --project=. scripts/sim_lec02.jl
 # Output: latex/data/lec02_*.dat
@@ -129,7 +134,7 @@ function geodesic!(du, u, p, s)
 end
 
 # ── Surface mesh ────────────────────────────────────────────
-const Nm = 80
+const Nm = 50
 const mesh_xs = range(-3.0, 3.0, length=Nm)
 const mesh_ys = range(-3.0, 3.0, length=Nm)
 
@@ -146,34 +151,32 @@ end
 println("  Wrote lec02_surface.dat")
 
 # ── Geodesics ───────────────────────────────────────────────
-# 4 geodesics starting from left side, aiming through the bump
-initial_conditions = [
-    [-2.5, -0.8, 1.0,  0.35],
-    [-2.5, -0.3, 1.0,  0.12],
-    [-2.5,  0.3, 1.0, -0.12],
-    [-2.5,  0.8, 1.0, -0.35],
-]
+# 9 initially parallel geodesics: all start at x=-2.5, velocity purely +x,
+# at y offsets from -1.2 to +1.2.  The bump deflects them symmetrically.
+const NGEO = 9
+const y_offsets = range(-1.2, 1.2, length=NGEO)
+const x_start = -2.5
 
-for (i, ic) in enumerate(initial_conditions)
+for (i, y0) in enumerate(y_offsets)
+    x0 = x_start
+    vx0, vy0 = 1.0, 0.0
+
     # Normalize initial velocity to unit speed w.r.t. the metric
-    x0, y0, vx0, vy0 = ic
     g = metric(x0, y0)
     speed² = g[1,1]*vx0^2 + 2g[1,2]*vx0*vy0 + g[2,2]*vy0^2
     vx0 /= sqrt(speed²)
     vy0 /= sqrt(speed²)
 
     u0 = [x0, y0, vx0, vy0]
-    sspan = (0.0, 5.5)
+    sspan = (0.0, 7.0)
 
     # Stop if we leave the domain
-    function domain_check(u, t, integrator)
-        return abs(u[1]) > 3.0 || abs(u[2]) > 3.0
-    end
+    domain_check(u, t, integrator) = abs(u[1]) > 3.0 || abs(u[2]) > 3.0
     cb = DiscreteCallback(domain_check, terminate!)
 
     prob = ODEProblem(geodesic!, u0, sspan)
     sol = solve(prob, Tsit5(); abstol=1e-10, reltol=1e-10,
-                saveat=0.01, callback=cb)
+                saveat=0.04, callback=cb)
 
     # Write geodesic (x, y, z)
     open(joinpath(DATADIR, "lec02_geodesic_$i.dat"), "w") do io
@@ -183,19 +186,16 @@ for (i, ic) in enumerate(initial_conditions)
         end
     end
 
-    # Straight line from start to end for comparison
-    x_end, y_end = sol.u[end][1], sol.u[end][2]
+    # Straight line (undeflected path) for comparison
     open(joinpath(DATADIR, "lec02_straight_$i.dat"), "w") do io
         @printf(io, "# x  y  z\n")
-        for t in range(0, 1, length=200)
-            xl = x0 + t * (x_end - x0)
-            yl = y0 + t * (y_end - y0)
-            @printf(io, "%.6f  %.6f  %.6f\n", xl, yl, h(xl, yl))
+        for xl in range(x0, 3.0, length=200)
+            @printf(io, "%.6f  %.6f  %.6f\n", xl, y0, h(xl, y0))
         end
     end
 
-    @printf("  Geodesic %d: %d points, final=(%.2f, %.2f)\n",
-            i, length(sol.t), sol.u[end][1], sol.u[end][2])
+    @printf("  Geodesic %d: y0=%+5.2f → y_end=%+6.3f  deflection=%+6.3f  (%d pts)\n",
+            i, y0, sol.u[end][2], sol.u[end][2] - y0, length(sol.t))
 
     # Verify unit speed is conserved
     let u = sol.u[end]

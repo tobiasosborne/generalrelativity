@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lecture 3: Manifolds — Introduction to General Relativity</title>
+
+<!-- MathJax 3 with custom macros -->
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    displayMath: [['\\[','\\]']],
+    macros: {
+      // Derivatives
+      pd: ['{\\frac{\\partial^{#1} #2}{\\partial {#3}^{#1}}}', 3, ''],
+      td: ['{\\frac{d #1}{d #2}}', 2],
+      dd: '{\\mathrm{d}}',
+      covd: '{\\nabla}',
+      Lie: '{\\mathcal{L}}',
+      dalem: '{\\Box}',
+      lap: '{\\Delta}',
+      // Vectors
+      vb: ['{\\boldsymbol{#1}}', 1],
+      uv: ['{\\hat{\\boldsymbol{#1}}}', 1],
+      dt: ['{\\dot{#1}}', 1],
+      ddt: ['{\\ddot{#1}}', 1],
+      norm: ['{\\lVert #1 \\rVert}', 1],
+      // Tensor calculus
+      chris: ['{\\Gamma^{#1}{}_{#2}}', 2],
+      Riem: '{R}',
+      Ric: '{R}',
+      Ein: '{G}',
+      Weyl: '{C}',
+      metric: '{g}',
+      ttype: ['{\\mathcal{T}(#1,#2)}', 2],
+      tp: '{\\otimes}',
+      // Spaces
+      M: '{\\mathcal{M}}',
+      Tp: '{T_p\\mathcal{M}}',
+      Tps: '{T_p^*\\mathcal{M}}',
+      R: '{\\mathbb{R}}',
+      Rn: ['{\\mathbb{R}^{#1}}', 1],
+      // Operators
+      supp: '{\\operatorname{supp}}',
+      tr: '{\\operatorname{tr}}',
+      id: '{\\operatorname{id}}',
+      diag: '{\\operatorname{diag}}',
+      sgn: '{\\operatorname{sgn}}',
+      grad: '{\\operatorname{grad}}',
+      Div: '{\\operatorname{div}}',
+      curl: '{\\operatorname{curl}}',
+      grav: '{G}',
+      textbf: ['{\\mathbf{#1}}', 1],
+    },
+    tags: 'ams',
+    tagSide: 'right',
+  },
+  options: {
+    renderActions: {
+      // Ensure equations render before details are opened
+      addMenu: [0, '', '']
+    }
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+
+<style>
+/* ── Base ─────────────────────────────────────── */
+:root {
+  --spacecadet: #0D284C;
+  --munsell: #008FA8;
+  --banana: #FFD932;
+  --cgblue: #007CA5;
+  --isabelline: #EAEDEA;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  max-width: 48em;
+  margin: 2em auto;
+  padding: 0 1.5em;
+  font-family: 'Times New Roman', 'Georgia', serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--spacecadet);
+  background: #fcfcfc;
+}
+
+h1, h2, h3, h4 {
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color: var(--cgblue);
+}
+
+h1 { font-size: 1.8em; text-align: center; border-bottom: 2px solid var(--cgblue); padding-bottom: 0.3em; }
+h2 { font-size: 1.35em; margin-top: 2em; }
+h3 { font-size: 1.15em; margin-top: 1.5em; }
+
+a { color: var(--munsell); }
+
+/* ── Nav ──────────────────────────────────────── */
+nav.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 0;
+  border-bottom: 1px solid var(--isabelline);
+  margin-bottom: 1.5em;
+  font-family: system-ui, sans-serif;
+  font-size: 0.85em;
+}
+nav.top-nav a { text-decoration: none; color: var(--cgblue); }
+nav.top-nav a:hover { text-decoration: underline; }
+
+/* ── Fold/unfold controls ─────────────────────── */
+.fold-controls {
+  text-align: right;
+  margin-bottom: 1em;
+  font-family: system-ui, sans-serif;
+  font-size: 0.8em;
+}
+.fold-controls button {
+  background: var(--isabelline);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 3px 10px;
+  cursor: pointer;
+  font-size: 0.85em;
+  margin-left: 4px;
+}
+.fold-controls button:hover { background: var(--banana); }
+
+/* ── Foldable boxes (details/summary) ─────────── */
+details {
+  margin: 1em 0;
+  border-radius: 6px;
+  padding: 0;
+  overflow: hidden;
+}
+
+details > summary {
+  cursor: pointer;
+  padding: 0.5em 0.8em;
+  font-family: system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.95em;
+  list-style: none;
+  user-select: none;
+}
+details > summary::-webkit-details-marker { display: none; }
+details > summary::before {
+  content: '▸ ';
+  display: inline-block;
+  transition: transform 0.15s;
+}
+details[open] > summary::before {
+  content: '▾ ';
+}
+
+details > :not(summary) { padding: 0 0.8em; }
+
+/* Box variants */
+.box-intuition { background: rgba(0,143,168,0.06); border-left: 4px solid var(--munsell); }
+.box-intuition > summary { color: var(--munsell); }
+
+.box-historical { background: var(--isabelline); border-left: 4px solid #888; }
+.box-historical > summary { color: #555; }
+
+.box-keyresult { background: rgba(255,217,50,0.12); border-left: 4px solid var(--banana); }
+.box-keyresult > summary { color: #8a7000; }
+
+.box-solution { background: #f5f5f5; border-left: 4px solid #aaa; }
+.box-solution > summary { color: #666; }
+
+/* Non-foldable boxes */
+.box-exercise {
+  margin: 1em 0;
+  padding: 0.5em 0.8em;
+  background: rgba(0,124,165,0.04);
+  border-left: 4px solid var(--cgblue);
+  border-radius: 6px;
+}
+.box-exercise strong { color: var(--cgblue); font-family: system-ui, sans-serif; }
+
+.box-example {
+  margin: 1em 0;
+  padding: 0.5em 0.8em;
+  background: rgba(0,124,165,0.03);
+  border-left: 4px solid var(--cgblue);
+  border-radius: 6px;
+}
+.box-example strong { color: var(--cgblue); font-family: system-ui, sans-serif; }
+
+.box-remark {
+  margin: 1em 0;
+  padding: 0.5em 0.8em;
+  background: #f9f9f9;
+  border-left: 3px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95em;
+}
+
+.box-notation {
+  margin: 1em 0;
+  padding: 0.5em 0.8em;
+  background: #f9f9f9;
+  border-left: 3px solid var(--cgblue);
+  border-radius: 4px;
+}
+
+/* ── Highlighted equation box ─────────────────── */
+.eqbox-display {
+  background: rgba(255,217,50,0.15);
+  padding: 0.3em 0.5em;
+  border-radius: 4px;
+  margin: 0.8em 0;
+}
+
+span.eqbox {
+  background: rgba(255,217,50,0.2);
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+/* ── TikZ placeholder ─────────────────────────── */
+.tikz-placeholder {
+  margin: 1.5em auto;
+  padding: 2em;
+  background: var(--isabelline);
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  text-align: center;
+  color: #888;
+  font-family: system-ui, sans-serif;
+  font-style: italic;
+  max-width: 24em;
+}
+
+/* ── Interactive figure container ──────────────── */
+.interactive-figure {
+  margin: 2em 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+}
+.interactive-figure .fig-header {
+  background: var(--isabelline);
+  padding: 0.5em 1em;
+  font-family: system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.9em;
+  color: var(--cgblue);
+}
+.interactive-figure canvas {
+  display: block;
+  width: 100%;
+  cursor: grab;
+}
+.interactive-figure .fig-controls {
+  padding: 0.8em 1em;
+  background: #fafafa;
+  border-top: 1px solid #eee;
+  font-family: system-ui, sans-serif;
+  font-size: 0.85em;
+}
+.interactive-figure .fig-controls label {
+  margin-right: 1em;
+  color: var(--spacecadet);
+}
+.interactive-figure .fig-controls input[type=range] {
+  vertical-align: middle;
+  width: 180px;
+}
+
+/* ── Responsive ───────────────────────────────── */
+@media (max-width: 600px) {
+  body { font-size: 16px; padding: 0 0.8em; }
+  h1 { font-size: 1.4em; }
+}
+
+/* ── Definition lists (for footnotes) ─────────── */
+.footnotes { font-size: 0.85em; border-top: 1px solid #ddd; margin-top: 3em; padding-top: 1em; }
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <a href="index.html">← All Lectures</a>
+  <span><strong>Introduction to General Relativity</strong></span>
+  <span></span>
+</nav>
+
+<div class="fold-controls">
+  <button onclick="document.querySelectorAll('details').forEach(d=>d.open=true)">Unfold all</button>
+  <button onclick="document.querySelectorAll('details').forEach(d=>d.open=false)">Fold all</button>
+</div>
+
+<h1 id="sec:manifolds">Manifolds</h1>
+<p>It is a core underlying assumption of both special and general
+relativity—indeed of much of physics—that spacetime is a continuum: to
+characterise an event we need four numbers (one temporal, three
+spatial). In special relativity this continuum is the familiar flat
+<span class="math inline">\(\mathbb{R}^{4}\)</span>, but in general
+relativity the geometry itself is dynamical—it changes in response to
+the distribution of matter, energy, and stress throughout the
+universe.</p>
+<p>Because we now allow the geometry to be curved and dynamical, we need
+a mathematical apparatus to describe and quantify the situation
+precisely; without it we would be limited to qualitative remarks,
+whereas in physics we want to make sharp, falsifiable predictions. One
+approach would be to model curved continua as surfaces embedded in a
+higher-dimensional ambient space <span
+class="math inline">\(\mathbb{R}^{m}\)</span>. This works, but it raises
+an uncomfortable question: do these extra dimensions exist? We sidestep
+the issue entirely by studying curved continua <em>intrinsically</em>,
+without reference to any ambient space—and this leads us to the theory
+of <em>manifolds</em>.</p>
+<details class="box-intuition" open>
+<summary>Physical intuition</summary>
+<div class="box-body">
+<p>In general relativity, spacetime is a manifold <span
+class="math inline">ℳ</span>. Although we may picture <span
+class="math inline">ℳ</span> as sitting inside some higher-dimensional
+<span class="math inline">ℝ<sup><em>m</em></sup></span>, all physically
+meaningful statements should be intrinsic: they must not depend on the
+embedding. The intrinsic approach requires more formalism upfront, but
+it is ultimately more natural and more transferable to other areas of
+theoretical physics.</p>
+</div>
+</details>
+<h2 id="notation-and-prerequisites">Notation and prerequisites</h2>
+<p>We work in <span class="math inline">\(n\)</span> dimensions
+throughout. One might ask: why bother with arbitrary <span
+class="math inline">\(n\)</span> when spacetime is four-dimensional?
+There are several good reasons. First, it costs almost no extra effort
+and yields considerable generality for free. Second, we often wish to
+restrict attention to dynamics on a lower-dimensional hypersurface (a
+particle constrained to the surface of a sphere, for instance).
+Third—and more speculatively—there are indications from quantum gravity
+(the holographic principle, for example) that the effective dimension of
+spacetime may itself be emergent. Finally, in a quantum theory of
+gravity one might need to superpose spacetimes of different dimensions,
+so it is wise not to hard-code <span
+class="math inline">\(n=4\)</span>.</p>
+<ul>
+<li><p><span class="math inline">\(\mathbb{R}^{n} = \{(x^1,\dots,x^n)
+\mid x^j \in \mathbb{R}\}\)</span>.</p></li>
+<li><p>For <span class="math inline">\(\boldsymbol{x} =
+(x^1,\dots,x^n)\)</span>, the Euclidean norm is <span
+class="math display">\[\lVert \boldsymbol{x}-\boldsymbol{y} \rVert
+        = \Bigl(\sum_{j=1}^{n}(x^j -
+y^j)^2\Bigr)^{1/2}.\]</span></p></li>
+<li><p>The <em>open ball</em> of radius <span
+class="math inline">\(r\)</span> about <span
+class="math inline">\(\boldsymbol{y}\)</span> is <span
+class="math display">\[B_r(\boldsymbol{y})
+        = \{\boldsymbol{x}\in\mathbb{R}^{n} \mid \lVert
+\boldsymbol{x}-\boldsymbol{y} \rVert &lt; r\}.\]</span></p></li>
+<li><p>A subset <span
+class="math inline">\(U\subseteq\mathbb{R}^{n}\)</span> is <em>open</em>
+if for every <span class="math inline">\(\boldsymbol{x}\in U\)</span>
+there exists <span class="math inline">\(\varepsilon &gt; 0\)</span>
+such that <span
+class="math inline">\(B_\varepsilon(\boldsymbol{x})\subset
+U\)</span>.</p></li>
+<li><p><span class="math inline">\(C^n\)</span> denotes the set of <span
+class="math inline">\(n\)</span>-times differentiable functions (from
+<span class="math inline">\(\mathbb{R}^{n}\)</span> to <span
+class="math inline">\(\mathbb{R}\)</span>, or between open subsets
+thereof).</p></li>
+<li><p><span class="math inline">\(C^0 = {}\)</span>continuous
+functions, <span class="math inline">\(C^\infty = {}\)</span>smooth
+(infinitely differentiable) functions.</p></li>
+</ul>
+<h2 id="sec:manifold-def">Definition of a manifold</h2>
+<div class="box-definition">
+<div class="box-title">Definition</div>
+<p><span id="def:manifold" label="def:manifold"></span> An <span
+class="math inline"><em>n</em></span>-dimensional, <span
+class="math inline"><em>C</em><sup>∞</sup></span>, real
+<strong>manifold</strong> <span class="math inline">ℳ</span> is a set
+together with a collection <span
+class="math inline">{<em>O</em><sub><em>α</em></sub>}</span> of subsets
+satisfying:</p>
+<ol>
+<li><p><span class="math inline">ℳ</span> is a topological space
+(Hausdorff and paracompact).<a href="#fn1" class="footnote-ref"
+id="fnref1" role="doc-noteref"><sup>1</sup></a></p></li>
+<li><p>The subsets <span
+class="math inline">{<em>O</em><sub><em>α</em></sub>}</span>
+<strong>cover</strong> <span class="math inline">ℳ</span>, i.e. <span
+class="math inline">⋃<sub><em>α</em></sub><em>O</em><sub><em>α</em></sub> = ℳ</span>.
+Equivalently: for every <span class="math inline"><em>p</em> ∈ ℳ</span>
+there exists at least one <span class="math inline"><em>α</em></span>
+with <span
+class="math inline"><em>p</em> ∈ <em>O</em><sub><em>α</em></sub></span>.</p></li>
+<li><p>For each <span class="math inline"><em>α</em></span> there is a
+<strong>one-to-one and onto</strong> map <span
+class="math display"><em>ψ</em><sub><em>α</em></sub>: <em>O</em><sub><em>α</em></sub> → <em>U</em><sub><em>α</em></sub> ,   <em>U</em><sub><em>α</em></sub> ⊂ ℝ<sup><em>n</em></sup> (open) ,</span></p>
+<div class="center">
+<p><em>[TikZ diagram — see PDF]</em></p>
+</div>
+<p>One should think of each pair <span
+class="math inline">(<em>O</em><sub><em>α</em></sub>,<em>ψ</em><sub><em>α</em></sub>)</span>
+as identifying a piece of the manifold with a piece of Euclidean space.
+A manifold is thus <em>built up—sewn together—from patches of <span
+class="math inline">ℝ<sup><em>n</em></sup></span></em>.</p></li>
+<li><p>If any two sets <span
+class="math inline"><em>O</em><sub><em>α</em></sub></span> and <span
+class="math inline"><em>O</em><sub><em>β</em></sub></span>
+<strong>overlap</strong>, i.e. <span
+class="math inline"><em>O</em><sub><em>α</em></sub> ∩ <em>O</em><sub><em>β</em></sub> ≠ ⌀</span>,
+then the <em>transition map</em> <span
+class="math display"><em>ψ</em><sub><em>β</em></sub> ∘ <em>ψ</em><sub><em>α</em></sub><sup>−1</sup>: <em>ψ</em><sub><em>α</em></sub>[<em>O</em><sub><em>α</em></sub>∩<em>O</em><sub><em>β</em></sub>] → <em>ψ</em><sub><em>β</em></sub>[<em>O</em><sub><em>α</em></sub>∩<em>O</em><sub><em>β</em></sub>]</span>
+(which is a map between open subsets of <span
+class="math inline">ℝ<sup><em>n</em></sup></span>) is <span
+class="math inline"><em>C</em><sup>∞</sup></span>. This condition
+governs the <em>gluing</em>: wherever two patches overlap, the two
+coordinate descriptions must be smoothly related.</p></li>
+</ol>
+<aside id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>The Hausdorff and paracompact conditions exclude
+pathological examples; they ensure, e.g., the existence of partitions of
+unity.<a href="#fnref1" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+</ol>
+</aside>
+</div>
+<div class="center">
+<p><em>[TikZ diagram — see PDF]</em></p>
+</div>
+<h2 id="charts-and-atlases">Charts and atlases</h2>
+<p>The maps <span class="math inline">\(\psi_\alpha\)</span> are called
+<strong>charts</strong> (in mathematics) or <strong>coordinate
+systems</strong> (in physics).</p>
+<p>The definition as stated depends on the choice of cover <span
+class="math inline">\(\{O_\alpha\}\)</span> and charts <span
+class="math inline">\(\{\psi_\alpha\}\)</span>. Adding a new chart <span
+class="math inline">\(\psi&#39;\)</span> compatible with the existing
+ones would formally give a “new” manifold, even though it carries no new
+information. To eliminate this ambiguity we require the atlas <span
+class="math inline">\(\{\psi_\alpha\}\)</span> to be
+<strong>maximal</strong>: <em>all</em> coordinate systems compatible
+with conditions (2) and (3) are included.</p>
+<details class="box-intuition" open>
+<summary>Physical intuition</summary>
+<div class="box-body">
+<p>Requiring maximality is a bookkeeping device. In practice one
+specifies a convenient atlas and declares that every compatible chart is
+implicitly included.</p>
+</div>
+</details>
+<h2 id="sec:manifold-examples">Examples</h2>
+<h3 id="mathbbrn-as-a-manifold"><span
+class="math inline">\(\mathbb{R}^{n}\)</span> as a manifold</h3>
+<p><span class="math inline">\(\mathbb{R}^{n}\)</span> is the trivial
+example: it can be covered by a <em>single</em> chart <span
+class="math inline">\(O_1 = \mathbb{R}^{n}\)</span>, <span
+class="math inline">\(\psi_1 = \id\)</span>. As a manifold, <span
+class="math inline">\(\mathbb{R}^{n}\)</span> has uncountably many
+compatible covers (any collection of open sets that covers <span
+class="math inline">\(\mathbb{R}^{n}\)</span>, together with the
+identity or other smooth maps, will do).</p>
+<h3 id="spacetime">Spacetime</h3>
+<p>Minkowski spacetime is <span
+class="math inline">\(\mathbb{R}^1\times\mathbb{R}^3 \cong
+\mathbb{R}^{1,3} \cong \mathbb{R}^{4}\)</span> as a manifold. (The
+Lorentzian structure—the metric signature—comes later.)</p>
+<h3 id="sec:sphere">The sphere <span
+class="math inline">\(S^n\)</span></h3>
+<p>The <span class="math inline">\(n\)</span>-sphere is <span
+class="math display">\[\label{eq:Sn-def}
+  S^n = \bigl\{(x^1,\dots,x^{n+1})\in\mathbb{R}^{n+1}
+    \;\big|\; \textstyle\sum_{j=1}^{n+1}(x^j)^2 = 1\bigr\}.\]</span>
+<span class="math inline">\(S^n\)</span> cannot be covered by a single
+chart (it is compact, while any chart image is an open subset of <span
+class="math inline">\(\mathbb{R}^{n}\)</span>). Define the <span
+class="math inline">\(2(n{+}1)\)</span> open sets <span
+class="math display">\[\label{eq:Sn-open-sets}
+  O_k^+ = \{(x^1,\dots,x^{n+1})\in S^n \mid x^k &gt; 0\}\,,
+  \qquad
+  O_k^- = \{(x^1,\dots,x^{n+1})\in S^n \mid x^k &lt; 0\}\,,\]</span> for
+<span class="math inline">\(k = 1,\dots,n{+}1\)</span>. These cover
+<span class="math inline">\(S^n\)</span>. The corresponding charts are
+<span class="math display">\[\label{eq:Sn-charts}
+  \psi_k^\pm \colon O_k^\pm \to \mathbb{R}^{n}\,,
+  \qquad
+  \psi_k^\pm(x^1,\dots,x^{n+1})
+    = (x^1,\dots,x^{k-1},x^{k+1},\dots,x^{n+1})\,,\]</span> i.e. one
+simply drops the <span class="math inline">\(k\)</span>-th coordinate
+(whose sign is determined by the choice of <span
+class="math inline">\(O_k^\pm\)</span>).</p>
+<p><strong>Special case: <span
+class="math inline">\(S^2\)</span>.</strong> Consider the charts <span
+class="math inline">\(\psi_x^+\)</span> (drop <span
+class="math inline">\(x\)</span>, restricted to <span
+class="math inline">\(x&gt;0\)</span>) and <span
+class="math inline">\(\psi_y^-\)</span> (drop <span
+class="math inline">\(y\)</span>, restricted to <span
+class="math inline">\(y&lt;0\)</span>). On the overlap, the transition
+function is <span
+class="math display">\[(\psi_y^-\circ(\psi_x^+)^{-1})(y,z)
+    = \bigl(\sqrt{1-y^2-z^2},\; z\bigr).\]</span></p>
+<div class="center">
+<p><em>[TikZ diagram — see PDF]</em></p>
+</div>
+<div class="box-exercise">
+<div class="box-title">Exercise</div>
+<p><span id="ex:Sn-transitions" label="ex:Sn-transitions"></span> Find
+the remaining transition functions for the atlas <span
+class="math inline">{<em>ψ</em><sub><em>k</em></sub><sup>±</sup>}</span>
+of <span class="math inline"><em>S</em><sup><em>n</em></sup></span> and
+show that they are all <span
+class="math inline"><em>C</em><sup>∞</sup></span>.</p>
+</div>
+<details class="box-intuition" open>
+<summary>Physical intuition</summary>
+<div class="box-body">
+<p>For many basic solutions of Einstein’s field equations the underlying
+manifold is simply <span class="math inline">ℝ<sup>4</sup></span>—only
+the geometry (the metric) varies. So one might wonder whether the full
+manifold machinery is really necessary. The answer is <em>yes</em>: as
+soon as one considers cosmological spacetimes (which may be compact,
+like <span class="math inline"><em>S</em><sup>3</sup> × ℝ</span>) or
+black hole spacetimes (which have non-trivial causal structure and
+topology), more general manifolds become unavoidable. In quantum gravity
+one may even wish to sum over manifolds of different topologies, making
+this generality essential.</p>
+</div>
+</details>
+<h2 id="new-manifolds-from-old-product-manifolds">New manifolds from
+old: product manifolds</h2>
+<p>Suppose <span class="math inline">\(\mathcal{M}\)</span> and <span
+class="math inline">\(\mathcal{M}&#39;\)</span> are manifolds of
+dimension <span class="math inline">\(n\)</span> and <span
+class="math inline">\(n&#39;\)</span>, respectively. We can form the
+<strong>product manifold</strong> <span
+class="math inline">\(\mathcal{M}\times\mathcal{M}&#39;\)</span>.</p>
+<p>Let <span class="math inline">\(\psi_\alpha\colon O_\alpha\to
+U_\alpha\)</span> and <span class="math inline">\(\psi&#39;_\beta\colon
+O&#39;_\beta\to U&#39;_\beta\)</span> be charts for <span
+class="math inline">\(\mathcal{M}\)</span> and <span
+class="math inline">\(\mathcal{M}&#39;\)</span>. Define charts for <span
+class="math inline">\(\mathcal{M}\times\mathcal{M}&#39;\)</span> via
+<span class="math display">\[\psi_{\alpha\beta}\colon O_\alpha\times
+O&#39;_\beta
+    \;\to\; U_\alpha\times U&#39;_\beta
+    \;\subset\; \mathbb{R}^{n+n&#39;}\,,\]</span> with <span
+class="math display">\[\label{eq:product-chart}
+  \psi_{\alpha\beta}(p,p&#39;)
+    = \bigl(\psi_\alpha(p),\;\psi&#39;_\beta(p&#39;)\bigr)
+    \;\in\; \mathbb{R}^{n+n&#39;}\,.\]</span></p>
+<div class="box-exercise">
+<div class="box-title">Exercise</div>
+<p><span id="ex:product-manifold" label="ex:product-manifold"></span>
+Verify that <span class="math inline">ℳ × ℳ′</span> with the charts
+<span
+class="math inline">{<em>ψ</em><sub><em>α</em><em>β</em></sub>}</span>
+satisfies the manifold axioms.</p>
+</div>
+<div class="box-example">
+<div class="box-title">Example</div>
+<ul>
+<li><p><span class="math inline">$\mathbb{R}^{n} =
+\underbrace{\mathbb{R}\times\mathbb{R}\times\cdots\times\mathbb{R}}_{n}$</span>.</p></li>
+<li><p>The <em>torus</em>: <span
+class="math inline"><em>T</em><sup>2</sup> = <em>S</em><sup>1</sup> × <em>S</em><sup>1</sup></span>.</p></li>
+<li><p>With just <span class="math inline">ℝ</span> and <span
+class="math inline"><em>S</em><sup><em>n</em></sup></span> and their
+products, one can construct many of the manifolds relevant to general
+relativity.</p></li>
+</ul>
+</div>
+<h2 id="smooth-maps-and-diffeomorphisms">Smooth maps and
+diffeomorphisms</h2>
+<p>Let <span class="math inline">\(\mathcal{M}\)</span> and <span
+class="math inline">\(\mathcal{M}&#39;\)</span> be manifolds with charts
+<span class="math inline">\(\{\psi_\alpha\}\)</span> and <span
+class="math inline">\(\{\psi&#39;_\beta\}\)</span>.</p>
+<div class="box-definition">
+<div class="box-title">Definition</div>
+<p><span id="def:smooth-map" label="def:smooth-map"></span> A map <span
+class="math inline"><em>f</em>: ℳ → ℳ′</span> is said to be <span
+class="math inline"><em>C</em><sup>∞</sup></span> (<em>smooth</em>) if
+for all <span class="math inline"><em>α</em>, <em>β</em></span> the
+composite <span
+class="math display"><em>ψ</em>′<sub><em>β</em></sub> ∘ <em>f</em> ∘ <em>ψ</em><sub><em>α</em></sub><sup>−1</sup>: <em>U</em><sub><em>α</em></sub> → <em>U</em>′<sub><em>β</em></sub></span>
+is <span class="math inline"><em>C</em><sup>∞</sup></span> (as a map
+between open subsets of Euclidean spaces).</p>
+</div>
+<div class="center">
+<p><em>[TikZ diagram — see PDF]</em></p>
+</div>
+<div class="box-definition">
+<div class="box-title">Definition</div>
+<p><span id="def:diffeomorphism" label="def:diffeomorphism"></span> A
+map <span class="math inline"><em>f</em>: ℳ → ℳ′</span> is a
+<strong>diffeomorphism</strong> if it is <span
+class="math inline"><em>C</em><sup>∞</sup></span>, one-to-one, onto, and
+its inverse <span class="math inline"><em>f</em><sup>−1</sup></span> is
+also <span class="math inline"><em>C</em><sup>∞</sup></span>. If such a
+map exists, <span class="math inline">ℳ</span> and <span
+class="math inline">ℳ′</span> are said to be
+<strong>diffeomorphic</strong>: they have identical manifold
+structure.</p>
+</div>
+<h2 id="sec:vectors-manifolds">Vectors on manifolds</h2>
+<p>Euclidean space <span class="math inline">\(\mathbb{R}^{n}\)</span>
+(and Minkowski space) carries a natural <em>global</em> vector space
+structure: <span class="math inline">\(V = \mathbb{R}^{n}\)</span> is
+simultaneously a manifold and a vector space.</p>
+<p>For a general manifold this is <strong>no longer true</strong>—there
+is no natural additive structure. This is an instance of a general
+phenomenon: when one generalises a definition so that it applies to more
+examples, some of the structure enjoyed by the original example is
+inevitably lost. Euclidean space is simultaneously a manifold, a vector
+space, and a group; a generic manifold is none of the latter two.</p>
+<div class="box-example">
+<div class="box-title">Example</div>
+<p>The 2-sphere <span class="math inline"><em>S</em><sup>2</sup></span>
+is a manifold, but it is <em>not</em> a vector space: there is no
+natural way to “add” two points on <span
+class="math inline"><em>S</em><sup>2</sup></span> and obtain another
+point on <span class="math inline"><em>S</em><sup>2</sup></span>.</p>
+</div>
+<p>We want to preserve as much of this vector-space structure as
+possible, because without vectors we cannot write down equations of
+motion for test particles. The key observation is that even though <span
+class="math inline">\(S^2\)</span> is not globally a vector space, at
+each point <span class="math inline">\(p\)</span> there is still a
+natural <em>local</em> vector space—the tangent plane—and this idea
+generalises to arbitrary manifolds.</p>
+<p>It is, however, still possible to associate a vector space to each
+point of a manifold. For a manifold <span
+class="math inline">\(\mathcal{M}\)</span> embedded in <span
+class="math inline">\(\mathbb{R}^{m}\)</span> (such as <span
+class="math inline">\(S^2\subset\mathbb{R}^{3}\)</span>), one can
+visualise the <strong>tangent plane</strong> at a point <span
+class="math inline">\(p\)</span>:</p>
+<div class="center">
+<p><em>[TikZ diagram — see PDF]</em></p>
+</div>
+<p>But we want an <em>intrinsic</em> definition, independent of any
+embedding.</p>
+<details class="box-keyresult" open>
+<summary>Key result</summary>
+<div class="box-body">
+<p>The picture above relies on the embedding <span
+class="math inline"><em>S</em><sup>2</sup> ⊂ ℝ<sup>3</sup></span>, which
+we have declared off-limits. The solution is a pleasant roundabout: one
+first observes that there is a one-to-one correspondence between tangent
+vectors and <em>directional derivatives</em> of smooth functions, and
+then notes that directional derivatives can be defined using only the
+manifold structure—no embedding required. We therefore <em>define</em>
+tangent vectors as directional derivatives. This is developed in the
+next lecture.</p>
+</div>
+</details>
+<p><em>[Figure: Top: geodesics on a triaxial ellipsoid (<span
+class="math inline">\(a=1.5\)</span>, <span
+class="math inline">\(b=1.0\)</span>, <span
+class="math inline">\(c=0.7\)</span>). The curves are shortest paths
+intrinsic to the surface. Bottom: tangent vectors (gold) and a
+parallel-transported vector (teal) along a geodesic, illustrating how
+parallel transport preserves inner products but the transported vector
+rotates relative to the tangent direction.]</em></p>
+<h2 id="formal-definitions-summary">Formal definitions (summary)</h2>
+<p>We collect the precise versions of the definitions introduced above
+for reference.</p>
+<div class="box-definition">
+<div class="box-title">Definition</div>
+<p><span id="def:loc-eucl" label="def:loc-eucl"></span> A
+<strong>locally Euclidean space</strong> of dimension <span
+class="math inline"><em>d</em></span> is a Hausdorff topological
+space <span class="math inline">ℳ</span> such that every point has a
+neighbourhood homeomorphic to an open subset of <span
+class="math inline">ℝ<sup><em>d</em></sup></span>.</p>
+</div>
+<div class="box-definition">
+<div class="box-title">Definition</div>
+<p><span id="def:diff-struct" label="def:diff-struct"></span> A
+<strong>differentiable structure</strong> <span
+class="math inline">ℱ</span> of class <span
+class="math inline"><em>C</em><sup><em>k</em></sup></span> (<span
+class="math inline">1 ≤ <em>k</em> ≤ ∞</span>) on a locally Euclidean
+space <span class="math inline">ℳ</span> is a collection of coordinate
+systems <span
+class="math inline">{(<em>O</em><sub><em>α</em></sub>,<em>ψ</em><sub><em>α</em></sub>) ∣ <em>α</em> ∈ <em>A</em>}</span>
+such that:</p>
+<ol>
+<li><p><span
+class="math inline">⋃<sub><em>α</em> ∈ <em>A</em></sub><em>O</em><sub><em>α</em></sub> = ℳ</span>.</p></li>
+<li><p><span
+class="math inline"><em>ψ</em><sub><em>α</em></sub> ∘ <em>ψ</em><sub><em>β</em></sub><sup>−1</sup></span>
+is <span class="math inline"><em>C</em><sup><em>k</em></sup></span> for
+all <span
+class="math inline"><em>α</em>, <em>β</em> ∈ <em>A</em></span>.</p></li>
+<li><p>The collection <span class="math inline">ℱ</span> is maximal with
+respect to (b).</p></li>
+</ol>
+</div>
+<p>A <span class="math inline">\(d\)</span>-dimensional
+<strong>differentiable manifold of class <span
+class="math inline">\(C^k\)</span></strong> is a pair <span
+class="math inline">\((\mathcal{M},\mathcal{F})\)</span> consisting of a
+second-countable, locally Euclidean space <span
+class="math inline">\(\mathcal{M}\)</span> together with a
+differentiable structure <span
+class="math inline">\(\mathcal{F}\)</span> of class <span
+class="math inline">\(C^k\)</span>. (The <span
+class="math inline">\(C^k\)</span> condition can be generalised to <span
+class="math inline">\(C^\infty\)</span>, complex analytic, etc.)</p>
+
+<script>
+// Re-typeset MathJax when a details element is opened
+document.querySelectorAll('details').forEach(d => {
+  d.addEventListener('toggle', () => {
+    if (d.open && window.MathJax) MathJax.typeset([d]);
+  });
+});
+</script>
+
+</body>
+</html>

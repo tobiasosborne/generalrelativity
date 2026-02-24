@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>$title$ — Introduction to General Relativity</title>
+
+<!-- MathJax 3 with custom macros -->
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    displayMath: [['\\[','\\]']],
+    macros: {
+      // Derivatives
+      pd: ['{\\frac{\\partial^{#1} #2}{\\partial {#3}^{#1}}}', 3, ''],
+      td: ['{\\frac{d #1}{d #2}}', 2],
+      dd: '{\\mathrm{d}}',
+      covd: '{\\nabla}',
+      Lie: '{\\mathcal{L}}',
+      dalem: '{\\Box}',
+      lap: '{\\Delta}',
+      // Vectors
+      vb: ['{\\boldsymbol{#1}}', 1],
+      uv: ['{\\hat{\\boldsymbol{#1}}}', 1],
+      dt: ['{\\dot{#1}}', 1],
+      ddt: ['{\\ddot{#1}}', 1],
+      norm: ['{\\lVert #1 \\rVert}', 1],
+      // Tensor calculus
+      chris: ['{\\Gamma^{#1}{}_{#2}}', 2],
+      Riem: '{R}',
+      Ric: '{R}',
+      Ein: '{G}',
+      Weyl: '{C}',
+      metric: '{g}',
+      ttype: ['{\\mathcal{T}(#1,#2)}', 2],
+      tp: '{\\otimes}',
+      // Spaces
+      M: '{\\mathcal{M}}',
+      Tp: '{T_p\\mathcal{M}}',
+      Tps: '{T_p^*\\mathcal{M}}',
+      R: '{\\mathbb{R}}',
+      Rn: ['{\\mathbb{R}^{#1}}', 1],
+      // Operators
+      supp: '{\\operatorname{supp}}',
+      tr: '{\\operatorname{tr}}',
+      id: '{\\operatorname{id}}',
+      diag: '{\\operatorname{diag}}',
+      sgn: '{\\operatorname{sgn}}',
+      grad: '{\\operatorname{grad}}',
+      Div: '{\\operatorname{div}}',
+      curl: '{\\operatorname{curl}}',
+      grav: '{G}',
+      textbf: ['{\\mathbf{#1}}', 1],
+    },
+    tags: 'ams',
+    tagSide: 'right',
+  },
+  options: {
+    renderActions: {
+      // Ensure equations render before details are opened
+      addMenu: [0, '', '']
+    }
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+
+<style>
+/* ── Base ─────────────────────────────────────── */
+:root {
+  --spacecadet: #0D284C;
+  --munsell: #008FA8;
+  --banana: #FFD932;
+  --cgblue: #007CA5;
+  --isabelline: #EAEDEA;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  max-width: 48em;
+  margin: 2em auto;
+  padding: 0 1.5em;
+  font-family: 'Times New Roman', 'Georgia', serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--spacecadet);
+  background: #fcfcfc;
+}
+
+h1, h2, h3, h4 {
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color: var(--cgblue);
+}
+
+h1 { font-size: 1.8em; text-align: center; border-bottom: 2px solid var(--cgblue); padding-bottom: 0.3em; }
+h2 { font-size: 1.35em; margin-top: 2em; }
+h3 { font-size: 1.15em; margin-top: 1.5em; }
+
+a { color: var(--munsell); }
+
+/* ── Nav ──────────────────────────────────────── */
+nav.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 0;
+  border-bottom: 1px solid var(--isabelline);
+  margin-bottom: 1.5em;
+  font-family: system-ui, sans-serif;
+  font-size: 0.85em;
+}
+nav.top-nav a { text-decoration: none; color: var(--cgblue); }
+nav.top-nav a:hover { text-decoration: underline; }
+
+/* ── Fold/unfold controls ─────────────────────── */
+.fold-controls {
+  text-align: right;
+  margin-bottom: 1em;
+  font-family: system-ui, sans-serif;
+  font-size: 0.8em;
+}
+.fold-controls button {
+  background: var(--isabelline);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 3px 10px;
+  cursor: pointer;
+  font-size: 0.85em;
+  margin-left: 4px;
+}
+.fold-controls button:hover { background: var(--banana); }
+
+/* ── Foldable boxes (details/summary) ─────────── */
+details {
+  margin: 1em 0;
+  border-radius: 6px;
+  padding: 0;
+  overflow: hidden;
+}
+
+details > summary {
+  cursor: pointer;
+  padding: 0.5em 0.8em;
+  font-family: system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.95em;
+  list-style: none;
+  user-select: none;
+}
+details > summary::-webkit-details-marker { display: none; }
+details > summary::before {
+  content: '▸ ';
+  display: inline-block;
+  transition: transform 0.15s;
+}
+details[open] > summary::before {
+  content: '▾ ';
+}
+
+details > :not(summary) { padding: 0 0.8em; }
+
+/* Box variants */
+.box-intuition { background: rgba(0,143,168,0.06); border-left: 4px solid var(--munsell); }
+.box-intuition > summary { color: var(--munsell); }
+
+.box-historical { background: var(--isabelline); border-left: 4px solid #888; }
+.box-historical > summary { color: #555; }
+
+.box-keyresult { background: rgba(255,217,50,0.12); border-left: 4px solid var(--banana); }
+.box-keyresult > summary { color: #8a7000; }
+
+.box-solution { background: #f5f5f5; border-left: 4px solid #aaa; }
+.box-solution > summary { color: #666; }
+
+/* Non-foldable boxes */
+.box-exercise {
+  margin: 1em 0;
+  padding: 0.5em 0.8em;
+  background: rgba(0,124,165,0.04);
+  border-left: 4px solid var(--cgblue);
+  border-radius: 6px;
+}
+.box-exercise strong { color: var(--cgblue); font-family: system-ui, sans-serif; }
+
+.box-example {
+  margin: 1em 0;
+  padding: 0.5em 0.8em;
+  background: rgba(0,124,165,0.03);
+  border-left: 4px solid var(--cgblue);
+  border-radius: 6px;
+}
+.box-example strong { color: var(--cgblue); font-family: system-ui, sans-serif; }
+
+.box-remark {
+  margin: 1em 0;
+  padding: 0.5em 0.8em;
+  background: #f9f9f9;
+  border-left: 3px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95em;
+}
+
+.box-notation {
+  margin: 1em 0;
+  padding: 0.5em 0.8em;
+  background: #f9f9f9;
+  border-left: 3px solid var(--cgblue);
+  border-radius: 4px;
+}
+
+/* ── Highlighted equation box ─────────────────── */
+.eqbox-display {
+  background: rgba(255,217,50,0.15);
+  padding: 0.3em 0.5em;
+  border-radius: 4px;
+  margin: 0.8em 0;
+}
+
+span.eqbox {
+  background: rgba(255,217,50,0.2);
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+/* ── TikZ placeholder ─────────────────────────── */
+.tikz-placeholder {
+  margin: 1.5em auto;
+  padding: 2em;
+  background: var(--isabelline);
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  text-align: center;
+  color: #888;
+  font-family: system-ui, sans-serif;
+  font-style: italic;
+  max-width: 24em;
+}
+
+/* ── Interactive figure container ──────────────── */
+.interactive-figure {
+  margin: 2em 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+}
+.interactive-figure .fig-header {
+  background: var(--isabelline);
+  padding: 0.5em 1em;
+  font-family: system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.9em;
+  color: var(--cgblue);
+}
+.interactive-figure canvas {
+  display: block;
+  width: 100%;
+  cursor: grab;
+}
+.interactive-figure .fig-controls {
+  padding: 0.8em 1em;
+  background: #fafafa;
+  border-top: 1px solid #eee;
+  font-family: system-ui, sans-serif;
+  font-size: 0.85em;
+}
+.interactive-figure .fig-controls label {
+  margin-right: 1em;
+  color: var(--spacecadet);
+}
+.interactive-figure .fig-controls input[type=range] {
+  vertical-align: middle;
+  width: 180px;
+}
+
+/* ── Responsive ───────────────────────────────── */
+@media (max-width: 600px) {
+  body { font-size: 16px; padding: 0 0.8em; }
+  h1 { font-size: 1.4em; }
+}
+
+/* ── Definition lists (for footnotes) ─────────── */
+.footnotes { font-size: 0.85em; border-top: 1px solid #ddd; margin-top: 3em; padding-top: 1em; }
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <a href="index.html">← All Lectures</a>
+  <span><strong>Introduction to General Relativity</strong></span>
+  <span></span>
+</nav>
+
+<div class="fold-controls">
+  <button onclick="document.querySelectorAll('details').forEach(d=>d.open=true)">Unfold all</button>
+  <button onclick="document.querySelectorAll('details').forEach(d=>d.open=false)">Fold all</button>
+</div>
+
+$body$
+
+<script>
+// Re-typeset MathJax when a details element is opened
+document.querySelectorAll('details').forEach(d => {
+  d.addEventListener('toggle', () => {
+    if (d.open && window.MathJax) MathJax.typeset([d]);
+  });
+});
+</script>
+
+</body>
+</html>

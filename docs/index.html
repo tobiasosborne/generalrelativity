@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Introduction to General Relativity</title>
+<style>
+:root {
+  --spacecadet: #0D284C;
+  --munsell: #008FA8;
+  --banana: #FFD932;
+  --cgblue: #007CA5;
+  --isabelline: #EAEDEA;
+}
+* { box-sizing: border-box; }
+body {
+  max-width: 42em; margin: 3em auto; padding: 0 1.5em;
+  font-family: 'Georgia', serif; font-size: 18px; line-height: 1.6;
+  color: var(--spacecadet); background: #fcfcfc;
+}
+h1 {
+  font-family: system-ui, sans-serif; color: var(--cgblue);
+  font-size: 1.8em; text-align: center; border-bottom: 2px solid var(--cgblue);
+  padding-bottom: 0.3em;
+}
+h2 { font-family: system-ui, sans-serif; color: var(--cgblue); font-size: 1.2em; margin-top: 2em; }
+.author { text-align: center; color: #666; font-size: 1em; margin-bottom: 2em; }
+a { color: var(--munsell); }
+ul.lecture-list { list-style: none; padding: 0; }
+ul.lecture-list li {
+  margin: 0.5em 0; padding: 0.6em 0.8em;
+  border-left: 4px solid var(--isabelline);
+  border-radius: 4px;
+  transition: border-color 0.15s;
+}
+ul.lecture-list li:hover { border-left-color: var(--cgblue); background: rgba(0,124,165,0.03); }
+ul.lecture-list li a { text-decoration: none; font-weight: 500; }
+ul.lecture-list li a:hover { text-decoration: underline; }
+.lecture-num { color: var(--cgblue); font-family: system-ui, sans-serif; font-weight: 700; margin-right: 0.5em; }
+.coming-soon { color: #aaa; font-style: italic; }
+.badge {
+  display: inline-block; font-size: 0.7em; padding: 1px 6px; border-radius: 3px;
+  font-family: system-ui, sans-serif; vertical-align: middle; margin-left: 0.5em;
+}
+.badge-live { background: var(--munsell); color: white; }
+.badge-soon { background: var(--isabelline); color: #888; }
+footer { margin-top: 3em; padding-top: 1em; border-top: 1px solid #ddd; font-size: 0.8em; color: #888; text-align: center; }
+</style>
+</head>
+<body>
+
+<h1>Introduction to General Relativity</h1>
+<div class="author">Tobias J. Osborne</div>
+
+<p>Interactive lecture notes based on a 23-lecture course.
+Equations are rendered with MathJax; proofs and intuition boxes are foldable.
+The <a href="https://github.com/tobiasosborne/generalrelativity">full PDF</a>
+contains all figures and is the authoritative version.</p>
+
+<h2>Lectures</h2>
+<ul class="lecture-list">
+  <li><span class="lecture-num">3</span>
+    <a href="lec03.html">Manifolds</a>
+    <span class="badge badge-live">live</span></li>
+  <li class="coming-soon"><span class="lecture-num">1</span>
+    Pre-relativity gravitation <span class="badge badge-soon">soon</span></li>
+  <li class="coming-soon"><span class="lecture-num">2</span>
+    The equivalence principle <span class="badge badge-soon">soon</span></li>
+  <li class="coming-soon"><span class="lecture-num">4</span>
+    Tangent space <span class="badge badge-soon">soon</span></li>
+  <li class="coming-soon"><span class="lecture-num">5–13</span>
+    Tensors through Einstein's equations <span class="badge badge-soon">soon</span></li>
+</ul>
+
+<footer>
+  Source: <a href="https://github.com/tobiasosborne/generalrelativity">github.com/tobiasosborne/generalrelativity</a>
+  · Licensed under Apache 2.0
+</footer>
+
+</body>
+</html>
