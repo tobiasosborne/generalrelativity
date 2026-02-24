@@ -7,72 +7,66 @@ Public: https://github.com/tobiasosborne/generalrelativity (Apache 2.0)
 
 ## Status
 
-All 23 lectures converted (+ 1 supplementary note). 102 pages total. Course complete.
-Lectures 1–11 enriched with transcript material.
-Lectures 12–23 created via full workflow (PDF + transcript).
-Julia simulation pipeline operational: 3 scripts generating data-driven pgfplots figures.
-Interactive web version: trial deployed at https://tobiasosborne.github.io/generalrelativity/ (Lecture 3 + interactive geodesic figure).
-Build tool: `./build.sh` with `--cmfonts`, `--draft`, `--simdata`, `--full`, `--clean`, `--watch` options.
+**Course complete.** All 23 lectures converted (+ 1 supplementary note). 102 pages total, zero errors.
 
-| Done | Transcript-enriched | Next |
-|------|---------------------|------|
-| Lec 1: Prerelativity gravitation + Lagrange point figure | ✓ | Lec 15–18: Schwarzschild solution & geodesics |
-| Lec 2: Equivalence principle & Mach + parallel geodesic bump figure | ✓ | Lec 19–22: FLRW cosmology |
-| Lec 3: Manifolds + ellipsoid geodesics figure | ✓ | |
-| Lec 4: Tangent space | ✓ | |
-| Lec 5: Flows and tensors | ✓ | |
-| Lec 6: Tensors continued (cotangent, transformation laws, metric, AIN) | ✓ | |
-| Lec 7: Derivative operators (affine connections, C tensor, Christoffel) | ✓ | |
-| Lec 8: Parallel transport (Levi-Civita, metric compatibility, geodesics) | ✓ | |
-| Lec 9: Abstract index notation review, curvature intro | ✓ | |
-| Lec 10: Geodesics as extremal curves, Riemann tensor, loops | ✓ | |
-| Lec 11: Riemann symmetries, Bianchi, Ricci, Einstein tensor, geodesic deviation | ✓ | |
-| Lec 12: Lie derivatives, Killing vectors, Einstein's eqs, linearised gravity, Newtonian limit | ✓ | |
-| Lec 13: Properties of EFE, linearised derivation details, maps between manifolds | ✓ | |
-| Lec 14: Gravitational radiation (TT gauge, plane waves, polarizations, 2+1d, LIGO), homogeneity & isotropy | ✓ | |
-| Lec 15: Spaces of constant curvature (eigenvalue argument), S³/R³/H³, FLRW metric | ✓ | |
-| Lec 16: Dynamics of FLRW: dust + radiation stress-energy, cosmological constant, reduction to 2 eqs, unified metric | ✓ | |
-| Lec 17: Friedmann equations derived, Λ as dark energy, universe not static, Hubble's law, Big Bang singularity | ✓ | |
-| Lec 18: FLRW exact solutions (dust/radiation × k), conservation laws, Big Crunch; Schwarzschild ansatz (static + spherical symmetry → f(r), h(r)) | ✓ | |
-| Lec 19: Deriving Schwarzschild: Christoffels, Ricci, vacuum R_μν=0, fh=1 trick, f=1+C/r, Newtonian limit C=−2M, singularities (coordinate vs curvature) | ✓ | |
-| Lec 20: Interior solution (perfect fluid star, mass function m(r), TOV equation), geodesic setup (Killing constants, equatorial plane reduction) | ✓ | |
-| Lec 21: Timelike geodesics: effective potential V(r), −ML²/r³ correction, circular orbits (ISCO at 6M), perihelion precession (Mercury 43″/century) | ✓ | |
-| Lec 22: Null geodesics: photon sphere r=3M, impact parameter b=L/E, capture cross section σ=27πM², light deflection δφ=4M/b (Sun: 1.75″), 1919 eclipse | ✓ | |
-| Lec 23: Retrospective — logical structure (4 axioms), three solution strategies, experimental pillars table, advanced topics outlook, closing meditation | ✓ | |
-| Note: ∂_a as covariant derivative | | |
+- Lectures 1–11: enriched with transcript material from earlier conversion pass.
+- Lectures 12–23: created via full workflow (handwritten PDF + auto-generated transcript).
+- Lecture 23: original closing chapter (retrospective, experimental pillars, outlook) — not a transcription of the summary PDF.
+- Julia simulation pipeline: 3 scripts generating data-driven pgfplots figures.
+- Interactive web version: deployed at https://tobiasosborne.github.io/generalrelativity/ (Lecture 3 + interactive Gaussian bump geodesic figure).
 
-## Lecture-to-PDF mapping
+## Lecture contents
 
-The 23 lecture PDFs in `Lecture Notes/` map as follows:
-| Lec | PDF filename (after "Introduction to general relativity") |
-|-----|----------------------------------------------------------|
-| 1 | prerelativity gravitation |
-| 2 | The equivalence principle and Mach's principle |
-| 3 | manifolds |
-| 4 | tangent space |
-| 5 | flows and tensors |
-| 6 | tensors continued |
-| 7 | abstract index notation curvature (pages 1–8, AIN + curvature motivation) |
-| 8 | derivative operators and parallel transport |
-| 9 | parallel transport continued |
-| 10 | Geodesics cont. curvature |
-| 11 | curvature cont. |
-| 12 | lie derivatives & Newtonian limit |
-| 13 | Einstein's field equations, linearised solutions |
-| 14 | gravitational radiation |
-| 15 | the Schwarzschild solution |
-| 16 | the Schwarzschild solution cont |
-| 17 | geodesics in Schwarzschild |
-| 18 | trajectories of null geodesics in Schwarzschild |
-| 19 | homogeneity and isotropy cont |
-| 20 | homogeneity and isotropy cont 2 |
-| 21 | FLRW cont |
-| 22 | FLRW cont 2 |
-| 23 | General relativity.pdf |
+| Lec | Topic | Enriched |
+|-----|-------|----------|
+| 1 | Prerelativity gravitation + Lagrange point figure | ✓ |
+| 2 | Equivalence principle & Mach + parallel geodesic bump figure (9 rays) | ✓ |
+| 3 | Manifolds (definition, charts, atlases, examples, smooth maps, diffeomorphisms) | ✓ |
+| 4 | Tangent space | ✓ |
+| 5 | Flows and tensors | ✓ |
+| 6 | Tensors continued (cotangent, transformation laws, metric, AIN) | ✓ |
+| 7 | Derivative operators (affine connections, C tensor, Christoffel symbols) | ✓ |
+| 8 | Parallel transport (Levi-Civita, metric compatibility, geodesics) | ✓ |
+| 9 | Abstract index notation review, curvature intro | ✓ |
+| 10 | Geodesics as extremal curves, Riemann tensor, loops | ✓ |
+| 11 | Riemann symmetries, Bianchi, Ricci, Einstein tensor, geodesic deviation | ✓ |
+| 12 | Lie derivatives, Killing vectors, Einstein's equations, linearised gravity, Newtonian limit | ✓ |
+| 13 | Properties of EFE (trace, dust, nonlinearity, self-consistency), linearised derivation, maps between manifolds | ✓ |
+| 14 | Gravitational radiation (TT gauge, plane waves, 2 polarizations, no waves in 2+1d, LIGO), homogeneity & isotropy | ✓ |
+| 15 | Spaces of constant curvature (Riemann as linear map, eigenvalue argument), S³/R³/H³, FLRW metric | ✓ |
+| 16 | FLRW dynamics: dust + radiation stress-energy, cosmological constant Λ, reduction to 2 equations, unified metric | ✓ |
+| 17 | Friedmann equations, fluid equation, Λ as dark energy (p = −ρ), universe not static, Hubble's law, Big Bang | ✓ |
+| 18 | FLRW exact solutions (dust/radiation × k=+1,0,−1), conservation laws, Big Crunch; Schwarzschild ansatz | ✓ |
+| 19 | Deriving Schwarzschild metric: Christoffels, Ricci, fh = 1 trick, f = 1+C/r, C = −2M, singularities | ✓ |
+| 20 | Interior solution (perfect fluid star, mass function m(r), TOV equation), geodesic setup (Killing constants) | ✓ |
+| 21 | Timelike geodesics: effective potential, −ML²/r³ correction, ISCO at 6M, perihelion precession (Mercury 43″/century) | ✓ |
+| 22 | Null geodesics: photon sphere r=3M, capture cross section σ=27πM², light deflection δφ=4M/b (Sun 1.75″), 1919 eclipse | ✓ |
+| 23 | Retrospective: 4 axioms, 3 solution strategies, experimental pillars table, advanced topics, closing meditation | ✓ |
+| Note | ∂_a as covariant derivative (supplementary) | |
 
-**NOTE**: The lecture numbering in the .tex files does NOT correspond 1:1 with the PDF numbering above. The content was reorganized for pedagogical flow. For example, AIN content from PDF "abstract index notation curvature" was split across lec06 (AIN basics), lec07 (derivative operators from the "derivative operators" PDF), and lec09 (AIN review + curvature motivation). Always read the PDF content carefully before converting.
+## PDF-to-tex mapping
 
-Transcripts are available in `transcripts/lec##_transcript.txt` for all 23 lectures.
+The lecture numbering in the .tex files was reorganized for pedagogical flow and does NOT correspond 1:1 with the PDF numbering. Key reorderings:
+
+- **Cosmology before Schwarzschild**: the course follows the transcript order (gravitational waves → FLRW → Schwarzschild), not the PDF order (gravitational waves → Schwarzschild → FLRW).
+- **AIN split**: PDF "abstract index notation curvature" was split across lec06, lec07, lec09.
+- **Lec 23**: original closing chapter, not a transcription of "General relativity.pdf" (which was an overview/summary lecture).
+
+Transcript-to-tex mapping for lectures 12–22:
+
+| tex | transcript | PDF |
+|-----|-----------|-----|
+| lec12 | lec12, lec13 | lie derivatives, Einstein's field equations |
+| lec13 | lec13, lec14 | Einstein's field equations, linearised solutions |
+| lec14 | lec15 | gravitational radiation |
+| lec15 | lec16 | homogeneity and isotropy cont |
+| lec16 | lec17 | homogeneity and isotropy cont 2 |
+| lec17 | lec18 | FLRW cont |
+| lec18 | lec19 | FLRW cont 2 |
+| lec19 | lec20 | the Schwarzschild solution |
+| lec20 | lec21 | the Schwarzschild solution cont |
+| lec21 | lec22 | geodesics in Schwarzschild |
+| lec22 | lec23 | trajectories of null geodesics in Schwarzschild |
 
 ## Canonical references
 
@@ -90,20 +84,28 @@ latex/
   gr-tikz-templates.sty       # pgfplots styles, colormaps, standard dims, \pic defs
   references.bib              # Bibliography (Wald, MTW, Weinberg, TLL73)
   lectures/
-    lec01.tex – lec13.tex     # Converted lectures
+    lec01.tex – lec23.tex     # All 23 lectures
   notes/
     note_da_covariant_derivative.tex
   figures/
     fig_lec01_lagrange.tex    # Effective potential + L4 tadpole orbit
-    fig_lec02_geodesic_bump.tex  # Geodesics on Gaussian bump (3D + top-down)
+    fig_lec02_geodesic_bump.tex  # 9 parallel geodesics on Gaussian bump (3D + top-down)
     fig_lec03_ellipsoid.tex   # Ellipsoid geodesics + parallel transport
   data/                       # Julia-generated .dat files (gitignored, regenerable)
 scripts/
   sim_lec01.jl                # CR3BP: effective potential, Lagrange points, trajectory
-  sim_lec02.jl                # Geodesics on Gaussian bump: metric, Christoffels, ODE
+  sim_lec02.jl                # Parallel geodesics on Gaussian bump: metric, Christoffels, ODE
   sim_lec03.jl                # Ellipsoid geodesics + parallel transport
   tikz-preview.sh             # Standalone TikZ snippet → PNG preview
   Project.toml                # Julia env (DifferentialEquations, StaticArrays)
+web/
+  preprocess.py               # LaTeX macro expansion for pandoc
+  gr-filter.lua               # Pandoc Lua filter: custom envs → foldable HTML
+  template.html               # HTML template with MathJax + CSS
+docs/                         # GitHub Pages (served from master:/docs)
+  index.html                  # Lecture index
+  lec03.html                  # Lecture 3: Manifolds (with embedded interactive figure)
+  geodesic-bump.html          # Standalone interactive geodesic figure
 build.sh                      # Build tool (--cmfonts, --draft, --simdata, --full, --clean, --watch)
 Literature/                   # Copyrighted books (gitignored)
 Lecture Notes/                # 23 source PDFs (handwritten, gitignored)
@@ -122,49 +124,14 @@ transcripts/                  # Auto-generated lecture transcripts (lec01–lec2
 ./build.sh --watch      # Continuous build on file change
 ```
 
-Requires: xelatex, Times LT Std, Whitney, mtpro2 (all installed locally).
-Whitney fonts symlinked to `~/texmf/fonts/opentype/whitney/`.
+Requires: xelatex, Times LT Std, Whitney, mtpro2, lucimatx.
+Fonts installed to `~/texmf/` (MTPro2 + LucimaTX texmf trees, Times LT Std + Whitney OTF via fontconfig).
+Font maps registered with `updmap-user` (mtpro2.map, lucida.map).
 
-## Infrastructure fixes applied
+## Possible future work
 
-- **gr-macros.sty**: `\pd` macro braces `{#3}` to prevent double-superscript errors
-- **gr-style.sty**: Package load order fixed (amsmath/mathtools/tcolorbox loaded before mathspec to avoid conflicts). Added `mathrsfs` for `\mathscr`. Added `notation` theorem environment.
-
-## Workflow per lecture
-
-### For new lectures (lec12 onward): full workflow
-1. **Draft**: read handwritten PDF + transcript (`transcripts/lec##_transcript.txt`) → create `lectures/lec##.tex`
-2. **Build test**: `./build.sh --draft` — verify zero errors from new lecture
-3. **Review**: check content, notation consistency against Wald/Warner
-4. **Enhance**: intuition boxes, historical boxes, TikZ diagrams
-5. **Simulate** (optional): write `scripts/sim_lec##.jl` → `latex/data/` → `latex/figures/fig_lec##_*.tex`
-
-### For existing lectures (lec03–lec11): transcript enrichment pass
-1. **Read** existing `lectures/lec##.tex` + corresponding `transcripts/lec##_transcript.txt`
-2. **Identify** motivational discussion, physical intuition, explanatory asides, and pedagogical framing in transcript that are missing from the notes
-3. **Edit** the .tex file to weave in transcript material as prose paragraphs, expanded remarks, exercise hints, intuition boxes, or transitional text. Do NOT transcribe verbatim — rewrite in lecture-note style.
-4. **Build test**: `./build.sh --draft` — verify zero errors
-5. **Guidelines**: keep additions proportionate; add the lecturer's voice and explanatory depth without overwhelming the existing mathematical content. Good candidates: opening/closing motivational paragraphs, "why we care" framing, physical interpretation of formalism, historical/experimental context, forward/backward references between lectures.
-
-## TikZ figure generation from PNG references
-
-**Potrace-based pipeline** (prototyped 2026-02-23 in `temp/`):
-
-1. Convert PNG → PGM: `python3 -c "from PIL import Image; Image.open('input.png').convert('L').save('input.pgm')"`
-2. Trace bitmap → SVG: `potrace input.pgm -s -o traced.svg --turdsize 5 --alphamax 1.0`
-3. Convert SVG → TikZ: `python3 temp/svg2tikz.py traced.svg 8.0 > output.tex`
-4. Compile preview: `scripts/tikz-preview.sh output.tex`
-
-The converter (`temp/svg2tikz.py`) parses potrace SVG path `d` attributes (M, c, C, l, L, h, v, z commands) and emits TikZ `\fill` commands with exact bezier coordinates. Produces geometrically faithful reproductions.
-
-**Next steps for a production figure**:
-- Separate the main geometry path (Path 4, ~563 pts) from text glyph paths (small paths)
-- Replace `\fill` glyph paths with proper `\node` labels using LaTeX math (`$x^3$`, `$\vb{a}_1$`, etc.)
-- Convert filled line paths to `\draw` strokes where appropriate
-- Apply project styles (spacecadet, cgblue, axisstyle, vecstyle)
-
-**Lesson learned**: Hand-crafting bezier curves by eye is slow and imprecise. Potrace gives geometrically accurate bezier skeletons that can be post-processed into clean TikZ. The pipeline requires `potrace` (apt package) and Python 3 with PIL.
-
-## Future integration
-
-**Lyr.jl** (`~/Projects/Lyr.jl`): Julia volumetric renderer with planned LyrGR module for Schwarzschild/Kerr geodesic raytracing. Will generate bitmaps for gravitational lensing, redshift, black hole shadows to embed in later lectures.
+- **Web version**: convert remaining 22 lectures to HTML (pipeline exists in `web/`), add more interactive figures
+- **Interactive figures**: Schwarzschild effective potential, FLRW scale factor evolution, perihelion precession visualization
+- **TikZ figures**: add diagrams for lectures 14–23 (currently text-only)
+- **Lyr.jl integration** (`~/Projects/Lyr.jl`): Schwarzschild/Kerr geodesic raytracing for gravitational lensing visualizations
+- **Exercises**: add solutions appendix
