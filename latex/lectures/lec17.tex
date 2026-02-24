@@ -1,0 +1,317 @@
+%!TEX root = ../GeneralRelativity.tex
+% ──────────────────────────────────────────────────────────────
+%  Lecture 17 — The Friedmann equations
+% ──────────────────────────────────────────────────────────────
+
+\subsection{Solving Einstein's equations for FLRW}%
+\label{sec:friedmann-derivation}
+
+We now carry out the explicit calculation: starting from the FLRW
+metric~\eqref{eq:flrw-unified}, we compute the Christoffel symbols,
+the Ricci tensor, the Ricci scalar, and the Einstein tensor, then
+substitute into the field
+equations~\eqref{eq:friedmann-tt}--\eqref{eq:friedmann-ss} to obtain
+the \textbf{Friedmann equations}---ordinary differential equations
+governing the scale factor~$a(\tau)$.
+
+Basis-free reasoning was invaluable for deducing the \emph{form} of
+the metric, but it is hopeless for doing any real calculation.  To
+model a physical process, we must choose coordinates and compute.
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Christoffel symbols}%
+\label{sec:flrw-christoffel}
+
+For the FLRW metric~\eqref{eq:flrw-unified} in coordinates
+$(\tau, r, \theta, \phi)$, a straightforward (if lengthy) exercise
+yields the following non-vanishing Christoffel symbols.  We write
+$\dot a = da/d\tau$.
+
+\medskip\noindent\textbf{Temporal--spatial:}
+\begin{equation}\label{eq:flrw-chris-1}
+  \chris{\tau}{rr} = \frac{a\,\dot a}{1 - k\,r^2}\,,\qquad
+  \chris{\tau}{\theta\theta} = a\,\dot a\, r^2\,,\qquad
+  \chris{\tau}{\phi\phi} = a\,\dot a\, r^2 \sin^2\!\theta\,.
+\end{equation}
+
+\noindent\textbf{Spatial--temporal:}
+\begin{equation}\label{eq:flrw-chris-2}
+  \chris{r}{\tau r} = \chris{\theta}{\tau\theta}
+    = \chris{\phi}{\tau\phi} = \frac{\dot a}{a}\,.
+\end{equation}
+
+\noindent\textbf{Purely spatial:}
+\begin{equation}\label{eq:flrw-chris-3}
+  \chris{r}{rr} = \frac{k\,r}{1 - k\,r^2}\,,\qquad
+  \chris{r}{\theta\theta} = -r\,(1 - k\,r^2)\,,\qquad
+  \chris{r}{\phi\phi} = -r\,(1 - k\,r^2)\sin^2\!\theta\,,
+\end{equation}
+\begin{equation}\label{eq:flrw-chris-4}
+  \chris{\theta}{r\theta} = \chris{\phi}{r\phi}
+    = \frac{1}{r}\,,\qquad
+  \chris{\theta}{\phi\phi} = -\sin\theta\cos\theta\,,\qquad
+  \chris{\phi}{\theta\phi} = \cot\theta\,.
+\end{equation}
+All other components either vanish or are determined by the symmetry
+$\chris{\lambda}{\mu\nu} = \chris{\lambda}{\nu\mu}$.
+
+\begin{remark}
+  The individual Christoffel symbols are not difficult to compute;
+  the main challenge is bookkeeping---detecting the inevitable sign
+  errors and missed factors before they propagate.  Computer algebra
+  (Mathematica, SageMath, etc.) is an invaluable tool for verifying
+  these results.
+\end{remark}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Ricci tensor and scalar}%
+\label{sec:flrw-ricci}
+
+From the Christoffel symbols one computes the Ricci tensor.  The
+non-vanishing components are (exercise):
+\begin{align}
+  R_{\tau\tau} &= -3\,\frac{\ddot a}{a}\,,
+    \label{eq:ricci-tt}\\[4pt]
+  R_{rr} &= \frac{\ddot a\, a + 2\dot a^2 + 2k}{1 - k\,r^2}\,,
+    \label{eq:ricci-rr}\\[4pt]
+  R_{\theta\theta} &= (\ddot a\, a + 2\dot a^2 + 2k)\, r^2\,,
+    \label{eq:ricci-thth}\\[4pt]
+  R_{\phi\phi} &= (\ddot a\, a + 2\dot a^2 + 2k)\, r^2
+    \sin^2\!\theta\,.
+    \label{eq:ricci-phph}
+\end{align}
+Note that the Ricci tensor is diagonal, and the spatial components
+all share the common factor $(\ddot a\, a + 2\dot a^2 + 2k)$
+---confirming by direct calculation the isotropy that we
+built in by assumption.
+
+The Ricci scalar is obtained by tracing with the inverse metric:
+\begin{equation}\label{eq:ricci-scalar-flrw}
+  R = 6\biggl(\frac{\ddot a}{a}
+    + \frac{\dot a^2}{a^2}
+    + \frac{k}{a^2}\biggr)\,.
+\end{equation}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Einstein tensor}%
+\label{sec:flrw-einstein}
+
+The Einstein tensor $\Ein_{\mu\nu} = R_{\mu\nu} - \frac{1}{2}\,
+g_{\mu\nu}\, R$ has the following non-vanishing components
+(exercise):
+\begin{align}
+  \Ein_{\tau\tau} &= 3\,\frac{\dot a^2}{a^2}
+    + 3\,\frac{k}{a^2}\,,
+    \label{eq:einstein-tt-flrw}\\[4pt]
+  \Ein_{rr} &= \frac{-2\ddot a\, a - \dot a^2 - k}
+    {1 - k\,r^2}\,,
+    \label{eq:einstein-rr-flrw}\\[4pt]
+  \Ein_{\theta\theta} &= r^2\bigl(-2\ddot a\, a
+    - \dot a^2 - k\bigr)\,,
+    \label{eq:einstein-thth-flrw}\\[4pt]
+  \Ein_{\phi\phi} &= r^2 \sin^2\!\theta
+    \bigl(-2\ddot a\, a - \dot a^2 - k\bigr)\,.
+    \label{eq:einstein-phph-flrw}
+\end{align}
+
+\begin{exercise}\label{ex:flrw-einstein}
+  Derive~\eqref{eq:einstein-tt-flrw}--\eqref{eq:einstein-phph-flrw}
+  from~\eqref{eq:ricci-tt}--\eqref{eq:ricci-phph}
+  and~\eqref{eq:ricci-scalar-flrw}.
+\end{exercise}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{The Friedmann equations}%
+\label{sec:friedmann-equations}
+
+Substituting the Einstein tensor and the perfect-fluid
+stress-energy tensor~\eqref{eq:perfect-fluid-cosmo} into the field
+equations~$\Ein_{ab} + \Lambda\, g_{ab} = 8\pi\, T_{ab}$:
+
+\medskip\noindent
+\textbf{$\tau$--$\tau$ component:}
+\begin{equation}\label{eq:friedmann-1-prime}
+  3\,\frac{\dot a^2}{a^2}
+    + 3\,\frac{k}{a^2} - \Lambda = 8\pi\, \rho\,.
+    \tag{i$'$}
+\end{equation}
+
+\noindent
+\textbf{$r$--$r$ component} (after dividing out common factors):
+\begin{equation}\label{eq:friedmann-2-prime}
+  -2\,\frac{\ddot a}{a}
+    - \frac{\dot a^2}{a^2}
+    - \frac{k}{a^2} + \Lambda = 8\pi\, p\,.
+    \tag{ii$'$}
+\end{equation}
+The $\theta$--$\theta$ and $\phi$--$\phi$ components yield the same
+equation as~\eqref{eq:friedmann-2-prime}, confirming that only two
+equations are independent.
+
+By differentiating~\eqref{eq:friedmann-1-prime} and combining
+with~\eqref{eq:friedmann-2-prime} to eliminate common terms, one
+arrives at the equivalent---and more commonly cited---pair:
+
+\begin{keyresult}[Friedmann equations]
+  \begin{align}
+    3\,\frac{\dot a^2}{a^2}
+      &= 8\pi\,\rho - \frac{3k}{a^2} + \Lambda\,,
+      \label{eq:friedmann-I}
+      \tag{I}\\[6pt]
+    3\,\frac{\ddot a}{a}
+      &= -4\pi\,(\rho + 3p) + \Lambda\,.
+      \label{eq:friedmann-II}
+      \tag{II}
+  \end{align}
+\end{keyresult}
+
+\noindent
+Together with the \textbf{fluid equation} (which follows from
+$\covd^a T_{ab} = 0$, or equivalently from differentiating~(I) and
+substituting~(II)):
+\begin{equation}\label{eq:fluid-equation}
+  \dot\rho = -3\,\frac{\dot a}{a}\,(\rho + p)\,,
+\end{equation}
+these govern the evolution of the scale factor~$a(\tau)$ and the
+energy density~$\rho(\tau)$ for any equation of state $p = p(\rho)$.
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Absorbing the cosmological constant as dark energy}%
+\label{sec:dark-energy}
+
+Observe that the cosmological constant~$\Lambda$ can be
+\emph{eliminated} from~\eqref{eq:friedmann-I}--\eqref{eq:friedmann-II}
+by redefining the energy density and pressure:
+\begin{equation}\label{eq:lambda-absorption}
+  \rho \;\longmapsto\; \rho + \frac{\Lambda}{8\pi}\,,
+  \qquad
+  p \;\longmapsto\; p - \frac{\Lambda}{8\pi}\,.
+\end{equation}
+After this substitution, the Friedmann equations take the same form
+but with $\Lambda = 0$.  In this way, the cosmological constant is
+interpreted as a form of energy with \textbf{negative pressure}
+equal in magnitude to its energy density:
+\begin{equation}\label{eq:dark-energy-eos}
+  p_\Lambda = -\rho_\Lambda\,.
+\end{equation}
+This exotic equation of state defines what is known as
+\textbf{dark energy}.
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Qualitative consequences of the Friedmann equations}%
+\label{sec:friedmann-qualitative}
+
+Before solving the Friedmann equations quantitatively, we can extract
+striking qualitative predictions by simple inspection.
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{The universe cannot be static}%
+\label{sec:not-static}
+
+Suppose that $\rho > 0$ and $p \geq 0$ (i.e.\ we temporarily ignore
+the cosmological constant / dark energy contribution).  Then
+equation~\eqref{eq:friedmann-II} gives
+\[
+  \ddot a = -\frac{4\pi}{3}\,(\rho + 3p)\, a < 0\,.
+\]
+Since $a > 0$, the scale factor has strictly negative second
+derivative: $a(\tau)$ is \emph{concave}.  In particular,
+$\dot a \neq 0$---the universe must always be either expanding
+($\dot a > 0$) or contracting ($\dot a < 0$).  A static universe
+($\dot a = 0$, $\ddot a = 0$) is impossible for ordinary matter.
+
+\begin{intuition}[Why Einstein introduced $\Lambda$]
+  This was precisely the result that Einstein found unacceptable in
+  1917: the prevailing belief was that the universe is eternal and
+  static.  The cosmological constant term was introduced to balance
+  the gravitational attraction and permit a static solution.  Of
+  course, Hubble's observations later confirmed that the universe
+  is indeed expanding.  One should note, however, that the principle
+  of including all terms permitted by the symmetries of the theory
+  is sound---the motivation may have been questionable, but the
+  cosmological constant itself is a perfectly legitimate (and, as it
+  turns out, physically realised) contribution to the field
+  equations.
+\end{intuition}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Hubble's law}%
+\label{sec:hubble}
+
+Let $\mathcal{R}$ denote the proper distance between two isotropic
+observers at cosmological time~$\tau$.  Since the FLRW metric
+rescales all spatial distances by the common factor~$a(\tau)$, we
+have $\mathcal{R}(\tau) = a(\tau)\, d$, where $d$ is the
+\emph{comoving distance} (constant in time).  Differentiating:
+\begin{equation}\label{eq:hubble-law}
+  \eqbox{v \equiv \dot{\mathcal{R}}
+    = \frac{\dot a}{a}\,\mathcal{R}
+    = H(\tau)\,\mathcal{R}}
+\end{equation}
+where
+\begin{equation}\label{eq:hubble-parameter}
+  H(\tau) = \frac{\dot a}{a}
+\end{equation}
+is the \textbf{Hubble parameter} (often called ``Hubble's constant,''
+although it is \emph{not} constant in time---it is better described
+as Hubble's \emph{function}).
+
+Equation~\eqref{eq:hubble-law} is \textbf{Hubble's law}: the
+recession velocity of a distant galaxy is proportional to its
+distance, with proportionality constant~$H$.  For sufficiently large
+separations, $v$ can exceed the speed of light.  This entails no
+violation of relativity: in general relativity, only \emph{locally}
+measured relative velocities (at a single event, between
+infinitesimally close observers) are required not to exceed~$c$.
+Global recession velocities, determined by the geodesic distance
+between widely separated observers, are not so constrained.
+
+\begin{intuition}[The balloon analogy]
+  One should not picture the expansion as originating from a
+  distinguished centre.  Rather, think of galaxies as dots painted
+  on the surface of a balloon that is being inflated: all distances
+  between dots increase uniformly, with no dot occupying a preferred
+  position.  The expansion is an expansion \emph{of space itself},
+  not an expansion of matter into pre-existing space.
+\end{intuition}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{The Big Bang singularity}%
+\label{sec:big-bang}
+
+Given that the universe is expanding ($\dot a > 0$) and that
+$\ddot a < 0$ (for ordinary matter with $\rho + 3p > 0$), the
+concavity of $a(\tau)$ has a dramatic consequence.  Even at
+\emph{constant} expansion rate (which underestimates the past rate,
+since the expansion was faster in the past), the scale factor would
+reach zero at a finite time
+\[
+  T = \frac{a}{\dot a} = \frac{1}{H}\,.
+\]
+Since the actual expansion was faster in the past ($\ddot a < 0$
+means $\dot a$ was larger), the time to $a = 0$ is even shorter
+than $1/H$.
+
+At $a = 0$, all spatial distances vanish, the energy density
+diverges (assuming any matter is present), and the spacetime metric
+becomes singular.  This is the \textbf{Big Bang}: the initial
+singularity from which the universe began.
+
+\begin{keyresult}[The Big Bang]
+  In an expanding FLRW universe with $\rho + 3p > 0$, the scale
+  factor $a(\tau)$ must have been zero at a finite time in the past.
+  At this instant, all distances between events vanish and the
+  energy density is infinite.  This is a genuine singularity of the
+  spacetime: it is impossible to extend the manifold in a
+  non-singular, connected way to ``before'' the Big Bang.
+  The Big Bang is \emph{not} an explosion of pre-existing matter
+  into pre-existing space---it is the origin of space and time
+  themselves.
+\end{keyresult}
+
+\medskip
+In the next lecture, we will solve the Friedmann equations
+explicitly for various equations of state and then turn to the
+final major topic of this course: the \textbf{Schwarzschild
+solution}---an exact solution of Einstein's equations describing
+the geometry outside a spherically symmetric, non-rotating mass.
