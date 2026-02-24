@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Interactive Geodesics on a Gaussian Bump</title>
+<style>
+:root {
+  --spacecadet: #0D284C;
+  --munsell: #008FA8;
+  --banana: #FFD932;
+  --cgblue: #007CA5;
+  --isabelline: #EAEDEA;
+}
+* { box-sizing: border-box; }
+body {
+  max-width: 56em; margin: 0 auto; padding: 1em 1.5em;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: var(--spacecadet); background: #fcfcfc;
+}
+h1 { color: var(--cgblue); font-size: 1.5em; text-align: center; margin-bottom: 0.2em; }
+.subtitle { text-align: center; color: #666; font-size: 0.95em; margin-bottom: 1.5em; }
+nav.top-nav {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 0.5em 0; border-bottom: 1px solid var(--isabelline);
+  margin-bottom: 1em; font-size: 0.85em;
+}
+nav.top-nav a { text-decoration: none; color: var(--cgblue); }
+
+/* Layout */
+.app { display: flex; gap: 1.5em; flex-wrap: wrap; justify-content: center; }
+.canvas-panel { flex: 1 1 500px; max-width: 600px; }
+.controls-panel { flex: 0 0 260px; }
+
+/* Canvas */
+canvas {
+  display: block; width: 100%; border: 1px solid #ddd;
+  border-radius: 8px; background: white; cursor: crosshair;
+}
+
+/* Controls */
+.control-group {
+  margin-bottom: 1.2em; padding: 0.8em;
+  background: var(--isabelline); border-radius: 8px;
+}
+.control-group h3 {
+  margin: 0 0 0.5em 0; font-size: 0.85em;
+  color: var(--cgblue); text-transform: uppercase; letter-spacing: 0.05em;
+}
+.control-row {
+  display: flex; align-items: center; gap: 0.5em; margin: 0.4em 0;
+  font-size: 0.85em;
+}
+.control-row label { flex: 0 0 100px; color: #444; }
+.control-row input[type=range] { flex: 1; min-width: 80px; }
+.control-row .val { flex: 0 0 40px; text-align: right; font-variant-numeric: tabular-nums; color: var(--spacecadet); font-weight: 600; }
+
+button.preset {
+  display: inline-block; margin: 2px; padding: 4px 10px;
+  border: 1px solid #ccc; border-radius: 4px;
+  background: white; cursor: pointer; font-size: 0.8em;
+}
+button.preset:hover { background: var(--banana); border-color: var(--banana); }
+button.preset.active { background: var(--cgblue); color: white; border-color: var(--cgblue); }
+
+.toggle-row { display: flex; align-items: center; gap: 0.5em; margin: 0.3em 0; font-size: 0.85em; }
+.toggle-row input { margin: 0; }
+
+/* Info box */
+.info-box {
+  margin-top: 1.5em; padding: 1em;
+  background: rgba(0,143,168,0.06); border-left: 4px solid var(--munsell);
+  border-radius: 6px; font-size: 0.9em; line-height: 1.5;
+  font-family: Georgia, serif;
+}
+.info-box strong { color: var(--munsell); }
+
+/* Stats */
+.stats {
+  margin-top: 0.8em; padding: 0.6em 0.8em;
+  background: #f5f5f5; border-radius: 6px;
+  font-size: 0.78em; font-variant-numeric: tabular-nums;
+  color: #555; line-height: 1.6;
+}
+.stats .label { color: #888; }
+
+@media (max-width: 700px) {
+  .app { flex-direction: column; }
+  .controls-panel { flex: 1 1 auto; }
+}
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <a href="index.html">&larr; All Lectures</a>
+  <span><strong>Interactive Figure</strong></span>
+  <a href="lec03.html">Lecture 3 &rarr;</a>
+</nav>
+
+<h1>Geodesics on a Gaussian Bump</h1>
+<p class="subtitle">Initially parallel paths deflected by curvature &mdash; a toy model of gravitational lensing</p>
+
+<div class="app">
+  <div class="canvas-panel">
+    <canvas id="canvas" width="600" height="600"></canvas>
+  </div>
+
+  <div class="controls-panel">
+    <div class="control-group">
+      <h3>Surface</h3>
+      <div class="control-row">
+        <label>Amplitude <em>A</em></label>
+        <input type="range" id="amp" min="0" max="3" step="0.05" value="1.0">
+        <span class="val" id="amp-val">1.00</span>
+      </div>
+      <div class="control-row">
+        <label>Width &sigma;</label>
+        <input type="range" id="sigma" min="0.3" max="2.5" step="0.05" value="1.0">
+        <span class="val" id="sigma-val">1.00</span>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <h3>Geodesics</h3>
+      <div class="control-row">
+        <label>Count</label>
+        <input type="range" id="ngeo" min="1" max="21" step="2" value="9">
+        <span class="val" id="ngeo-val">9</span>
+      </div>
+      <div class="control-row">
+        <label>Spread</label>
+        <input type="range" id="spread" min="0.2" max="2.5" step="0.05" value="1.2">
+        <span class="val" id="spread-val">1.20</span>
+      </div>
+      <div class="control-row">
+        <label>Start <em>x</em></label>
+        <input type="range" id="xstart" min="-3" max="-1" step="0.1" value="-2.5">
+        <span class="val" id="xstart-val">-2.5</span>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <h3>Display</h3>
+      <div class="toggle-row">
+        <input type="checkbox" id="show-straight" checked>
+        <label for="show-straight">Undeflected paths</label>
+      </div>
+      <div class="toggle-row">
+        <input type="checkbox" id="show-contours" checked>
+        <label for="show-contours">Height contours</label>
+      </div>
+      <div class="toggle-row">
+        <input type="checkbox" id="show-heatmap" checked>
+        <label for="show-heatmap">Surface shading</label>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <h3>Presets</h3>
+      <button class="preset active" onclick="preset('default')">Default</button>
+      <button class="preset" onclick="preset('lens')">Strong lens</button>
+      <button class="preset" onclick="preset('wide')">Wide bump</button>
+      <button class="preset" onclick="preset('single')">Single ray</button>
+      <button class="preset" onclick="preset('many')">Many rays</button>
+    </div>
+
+    <div class="stats" id="stats"></div>
+  </div>
+</div>
+
+<div class="info-box">
+  <strong>What you're seeing:</strong> Geodesics (shortest paths) on a 2D surface
+  with a Gaussian bump <em>z</em> = <em>A</em>&middot;exp(&minus;(<em>x</em>&sup2;+<em>y</em>&sup2;)/(2&sigma;&sup2;))
+  embedded in &Ropf;&sup3;.  All geodesics start from the left edge moving in the +<em>x</em>
+  direction.  The induced metric <em>g<sub>ij</sub></em> = &delta;<sub><em>ij</em></sub> + &part;<sub><em>i</em></sub><em>h</em>&middot;&part;<sub><em>j</em></sub><em>h</em>
+  governs distances on the surface; the Christoffel symbols &Gamma;<sup>&lambda;</sup><sub>&mu;&nu;</sub>
+  are computed analytically from this metric, and the geodesic equation
+  is integrated with a 4th-order Runge&ndash;Kutta scheme.
+  <br><br>
+  The curvature causes initially parallel paths to <em>converge</em>, <em>cross</em>,
+  and then <em>diverge</em> &mdash; exactly the behaviour of geodesic deviation
+  in general relativity, and a direct analogy to gravitational lensing.
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════════════════
+//  Geodesic solver on Gaussian bump
+// ═══════════════════════════════════════════════════════════════
+
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+// Hi-DPI support
+function setupCanvas() {
+  const dpr = window.devicePixelRatio || 1;
+  const rect = canvas.getBoundingClientRect();
+  canvas.width = rect.width * dpr;
+  canvas.height = rect.height * dpr;
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  return { w: rect.width, h: rect.height };
+}
+
+// ── Surface ──────────────────────────────────────────────────
+function h(x, y, A, s2) {
+  return A * Math.exp(-(x*x + y*y) / (2*s2));
+}
+
+function hx(x, y, A, s2) { return -x / s2 * h(x, y, A, s2); }
+function hy(x, y, A, s2) { return -y / s2 * h(x, y, A, s2); }
+
+function hxx(x, y, A, s2) { return (-1/s2 + x*x/(s2*s2)) * h(x, y, A, s2); }
+function hxy(x, y, A, s2) { return x * y / (s2*s2) * h(x, y, A, s2); }
+function hyy(x, y, A, s2) { return (-1/s2 + y*y/(s2*s2)) * h(x, y, A, s2); }
+
+// ── Metric & Christoffel ────────────────────────────────────
+function christoffel(x, y, A, s2) {
+  const fx = hx(x, y, A, s2), fy = hy(x, y, A, s2);
+  const fxx = hxx(x, y, A, s2), fxy_ = hxy(x, y, A, s2), fyy = hyy(x, y, A, s2);
+
+  // Metric
+  const g11 = 1 + fx*fx, g12 = fx*fy, g22 = 1 + fy*fy;
+  const det = g11*g22 - g12*g12;
+  const gi11 = g22/det, gi12 = -g12/det, gi22 = g11/det;
+
+  // Metric derivatives: dg[k][i][j] = ∂g_ij/∂x^k
+  const dg = [
+    [2*fx*fxx, fxx*fy + fx*fxy_, fxx*fy + fx*fxy_, 2*fy*fxy_],  // dg/dx: [11,12,21,22]
+    [2*fx*fxy_, fxy_*fy + fx*fyy, fxy_*fy + fx*fyy, 2*fy*fyy]   // dg/dy
+  ];
+
+  // Γ^λ_{μν} = ½ g^{λσ}(∂_ν g_{σμ} + ∂_μ g_{σν} - ∂_σ g_{μν})
+  // Index: dg[k][0]=11, dg[k][1]=12, dg[k][2]=21, dg[k][3]=22
+  function dg_val(k, i, j) { return dg[k][i*2+j]; }
+  function ginv(i, j) {
+    if (i===0 && j===0) return gi11;
+    if ((i===0 && j===1)||(i===1 && j===0)) return gi12;
+    return gi22;
+  }
+
+  const G = new Float64Array(8); // G[λ*4 + μ*2 + ν]
+  for (let lam = 0; lam < 2; lam++) {
+    for (let mu = 0; mu < 2; mu++) {
+      for (let nu = 0; nu < 2; nu++) {
+        let s = 0;
+        for (let sig = 0; sig < 2; sig++) {
+          s += ginv(lam, sig) * (
+            dg_val(nu, sig, mu) + dg_val(mu, sig, nu) - dg_val(sig, mu, nu)
+          );
+        }
+        G[lam*4 + mu*2 + nu] = 0.5 * s;
+      }
+    }
+  }
+  return G;
+}
+
+// ── RK4 integrator ──────────────────────────────────────────
+function geodesicRHS(state, A, s2) {
+  const [x, y, vx, vy] = state;
+  const G = christoffel(x, y, A, s2);
+  return [
+    vx, vy,
+    -(G[0]*vx*vx + 2*G[1]*vx*vy + G[3]*vy*vy),
+    -(G[4]*vx*vx + 2*G[5]*vx*vy + G[7]*vy*vy)
+  ];
+}
+
+function rk4Step(state, ds, A, s2) {
+  const k1 = geodesicRHS(state, A, s2);
+  const s2_ = [0,0,0,0];
+  for (let i = 0; i < 4; i++) s2_[i] = state[i] + 0.5*ds*k1[i];
+  const k2 = geodesicRHS(s2_, A, s2);
+  const s3 = [0,0,0,0];
+  for (let i = 0; i < 4; i++) s3[i] = state[i] + 0.5*ds*k2[i];
+  const k3 = geodesicRHS(s3, A, s2);
+  const s4 = [0,0,0,0];
+  for (let i = 0; i < 4; i++) s4[i] = state[i] + ds*k3[i];
+  const k4 = geodesicRHS(s4, A, s2);
+  const out = [0,0,0,0];
+  for (let i = 0; i < 4; i++) out[i] = state[i] + ds/6*(k1[i] + 2*k2[i] + 2*k3[i] + k4[i]);
+  return out;
+}
+
+function integrateGeodesic(x0, y0, vx0, vy0, A, sigma, ds, sMax) {
+  const s2 = sigma * sigma;
+  // Normalise velocity
+  const fx = hx(x0, y0, A, s2), fy = hy(x0, y0, A, s2);
+  const g11 = 1+fx*fx, g12 = fx*fy, g22 = 1+fy*fy;
+  const speed2 = g11*vx0*vx0 + 2*g12*vx0*vy0 + g22*vy0*vy0;
+  const norm = Math.sqrt(speed2);
+  vx0 /= norm; vy0 /= norm;
+
+  const path = [[x0, y0]];
+  let state = [x0, y0, vx0, vy0];
+  const nSteps = Math.floor(sMax / ds);
+
+  for (let i = 0; i < nSteps; i++) {
+    state = rk4Step(state, ds, A, s2);
+    if (Math.abs(state[0]) > 3.5 || Math.abs(state[1]) > 3.5) break;
+    path.push([state[0], state[1]]);
+  }
+  return path;
+}
+
+// ── Drawing ─────────────────────────────────────────────────
+const DOMAIN = 3.2;  // coordinate range [-DOMAIN, DOMAIN]
+
+function coordToCanvas(x, y, w, hh) {
+  const cx = (x + DOMAIN) / (2*DOMAIN) * w;
+  const cy = (DOMAIN - y) / (2*DOMAIN) * hh;  // flip y
+  return [cx, cy];
+}
+
+function drawHeatmap(w, hh, A, sigma) {
+  const s2 = sigma * sigma;
+  const imgData = ctx.createImageData(Math.ceil(w), Math.ceil(hh));
+  const step = 2;  // pixel step for speed
+  for (let px = 0; px < w; px += step) {
+    for (let py = 0; py < hh; py += step) {
+      const x = (px / w) * 2*DOMAIN - DOMAIN;
+      const y = DOMAIN - (py / hh) * 2*DOMAIN;
+      const z = h(x, y, A, s2);
+      // Map height to colour: transparent at 0, light blue at peak
+      const t = Math.min(z / Math.max(A, 0.01), 1);
+      const r = Math.round(0 + t * 80);
+      const g = Math.round(143 + t * (-43));
+      const b = Math.round(168 + t * (-68));
+      const a = Math.round(t * 50);
+      for (let dx = 0; dx < step && px+dx < w; dx++) {
+        for (let dy = 0; dy < step && py+dy < hh; dy++) {
+          const idx = ((py+dy) * Math.ceil(w) + (px+dx)) * 4;
+          imgData.data[idx] = r;
+          imgData.data[idx+1] = g;
+          imgData.data[idx+2] = b;
+          imgData.data[idx+3] = a;
+        }
+      }
+    }
+  }
+  ctx.putImageData(imgData, 0, 0);
+}
+
+function drawContours(w, hh, A, sigma) {
+  const s2 = sigma * sigma;
+  const levels = [0.1, 0.2, 0.4, 0.6, 0.8];
+  ctx.lineWidth = 0.5;
+  for (const level of levels) {
+    const zTarget = level * A;
+    if (zTarget <= 0) continue;
+    // h = A*exp(-r²/(2σ²)) = zTarget => r = σ*sqrt(-2*ln(zTarget/A))
+    const ratio = zTarget / A;
+    if (ratio <= 0 || ratio >= 1) continue;
+    const r = sigma * Math.sqrt(-2 * Math.log(ratio));
+    if (r > DOMAIN) continue;
+    const [cx, cy] = coordToCanvas(0, 0, w, hh);
+    const rPx = r / (2*DOMAIN) * w;
+    ctx.strokeStyle = `rgba(13,40,76,${0.06 + level*0.08})`;
+    ctx.beginPath();
+    ctx.arc(cx, cy, rPx, 0, 2*Math.PI);
+    ctx.stroke();
+  }
+}
+
+function drawGrid(w, hh) {
+  ctx.strokeStyle = 'rgba(0,0,0,0.06)';
+  ctx.lineWidth = 0.5;
+  for (let v = -3; v <= 3; v++) {
+    const [x1, y1] = coordToCanvas(v, -DOMAIN, w, hh);
+    const [x2, y2] = coordToCanvas(v, DOMAIN, w, hh);
+    ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); ctx.stroke();
+    const [x3, y3] = coordToCanvas(-DOMAIN, v, w, hh);
+    const [x4, y4] = coordToCanvas(DOMAIN, v, w, hh);
+    ctx.beginPath(); ctx.moveTo(x3, y3); ctx.lineTo(x4, y4); ctx.stroke();
+  }
+  // Axes labels
+  ctx.fillStyle = 'rgba(0,0,0,0.3)';
+  ctx.font = '12px system-ui';
+  ctx.textAlign = 'center';
+  const [lx, ly] = coordToCanvas(3.0, -0.15, w, hh);
+  ctx.fillText('x', lx, ly);
+  const [lx2, ly2] = coordToCanvas(0.15, 3.0, w, hh);
+  ctx.fillText('y', lx2, ly2);
+}
+
+function pathColor(i, n) {
+  // Gradient: outer = spacecadet-ish, middle = munsell
+  const t = n > 1 ? Math.abs(2*i/(n-1) - 1) : 0;  // 0 at center, 1 at edges
+  const r = Math.round(0 + t * 13);
+  const g = Math.round(143 - t * 103);
+  const b = Math.round(168 - t * 92);
+  return `rgb(${r},${g},${b})`;
+}
+
+function drawPath(path, w, hh, color, lineWidth, dash) {
+  if (path.length < 2) return;
+  ctx.strokeStyle = color;
+  ctx.lineWidth = lineWidth;
+  ctx.setLineDash(dash || []);
+  ctx.beginPath();
+  const [sx, sy] = coordToCanvas(path[0][0], path[0][1], w, hh);
+  ctx.moveTo(sx, sy);
+  for (let i = 1; i < path.length; i++) {
+    const [px, py] = coordToCanvas(path[i][0], path[i][1], w, hh);
+    ctx.lineTo(px, py);
+  }
+  ctx.stroke();
+  ctx.setLineDash([]);
+}
+
+// ── Main render ─────────────────────────────────────────────
+function render() {
+  const {w, h: hh} = setupCanvas();
+
+  const A = parseFloat(document.getElementById('amp').value);
+  const sigma = parseFloat(document.getElementById('sigma').value);
+  const ngeo = parseInt(document.getElementById('ngeo').value);
+  const spread = parseFloat(document.getElementById('spread').value);
+  const xstart = parseFloat(document.getElementById('xstart').value);
+  const showStraight = document.getElementById('show-straight').checked;
+  const showContours = document.getElementById('show-contours').checked;
+  const showHeatmap = document.getElementById('show-heatmap').checked;
+
+  // Update value displays
+  document.getElementById('amp-val').textContent = A.toFixed(2);
+  document.getElementById('sigma-val').textContent = sigma.toFixed(2);
+  document.getElementById('ngeo-val').textContent = ngeo;
+  document.getElementById('spread-val').textContent = spread.toFixed(2);
+  document.getElementById('xstart-val').textContent = xstart.toFixed(1);
+
+  // Clear
+  ctx.fillStyle = 'white';
+  ctx.fillRect(0, 0, w, hh);
+
+  // Background layers
+  if (showHeatmap) drawHeatmap(w, hh, A, sigma);
+  drawGrid(w, hh);
+  if (showContours) drawContours(w, hh, A, sigma);
+
+  // Bump center marker
+  const [cx, cy] = coordToCanvas(0, 0, w, hh);
+  ctx.strokeStyle = 'rgba(13,40,76,0.2)';
+  ctx.lineWidth = 1.5;
+  ctx.beginPath();
+  ctx.moveTo(cx-6, cy); ctx.lineTo(cx+6, cy);
+  ctx.moveTo(cx, cy-6); ctx.lineTo(cx, cy+6);
+  ctx.stroke();
+
+  // Compute and draw geodesics
+  const ds = 0.008;
+  const sMax = 8.0;
+  const yOffsets = [];
+  for (let i = 0; i < ngeo; i++) {
+    yOffsets.push(ngeo === 1 ? 0 : -spread + 2*spread*i/(ngeo-1));
+  }
+
+  let maxDeflection = 0;
+  const deflections = [];
+  const t0 = performance.now();
+
+  for (let i = 0; i < ngeo; i++) {
+    const y0 = yOffsets[i];
+
+    // Undeflected straight line
+    if (showStraight) {
+      const straight = [[xstart, y0], [3.2, y0]];
+      drawPath(straight, w, hh, 'rgba(13,40,76,0.12)', 0.8, [4, 4]);
+    }
+
+    // Geodesic
+    const path = integrateGeodesic(xstart, y0, 1.0, 0.0, A, sigma, ds, sMax);
+    const color = pathColor(i, ngeo);
+    const lw = (ngeo === 1 || (ngeo > 1 && i === Math.floor(ngeo/2))) ? 2.2 : 1.5;
+    drawPath(path, w, hh, color, lw);
+
+    // Start dot
+    const [sx, sy] = coordToCanvas(path[0][0], path[0][1], w, hh);
+    ctx.fillStyle = color;
+    ctx.beginPath(); ctx.arc(sx, sy, 3, 0, 2*Math.PI); ctx.fill();
+
+    // Deflection
+    const yEnd = path[path.length-1][1];
+    const defl = yEnd - y0;
+    deflections.push({ y0, yEnd, defl });
+    maxDeflection = Math.max(maxDeflection, Math.abs(defl));
+  }
+
+  const elapsed = (performance.now() - t0).toFixed(1);
+
+  // Stats
+  const statsEl = document.getElementById('stats');
+  let statsHTML = `<span class="label">Compute:</span> ${elapsed} ms &middot; `;
+  statsHTML += `<span class="label">Step:</span> ${ds} &middot; `;
+  statsHTML += `<span class="label">Max deflection:</span> ${maxDeflection.toFixed(3)}`;
+  if (ngeo <= 11) {
+    statsHTML += '<br>';
+    for (const d of deflections) {
+      const sign = d.defl >= 0 ? '+' : '';
+      statsHTML += `<span style="color:#888">y₀=${d.y0.toFixed(2)}</span> → ${sign}${d.defl.toFixed(3)} &nbsp;`;
+    }
+  }
+  statsEl.innerHTML = statsHTML;
+}
+
+// ── Controls ────────────────────────────────────────────────
+for (const id of ['amp','sigma','ngeo','spread','xstart']) {
+  document.getElementById(id).addEventListener('input', render);
+}
+for (const id of ['show-straight','show-contours','show-heatmap']) {
+  document.getElementById(id).addEventListener('change', render);
+}
+
+function preset(name) {
+  document.querySelectorAll('.preset').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  const s = {
+    default: { amp: 1.0, sigma: 1.0, ngeo: 9, spread: 1.2, xstart: -2.5 },
+    lens:    { amp: 2.5, sigma: 0.8, ngeo: 11, spread: 1.0, xstart: -2.5 },
+    wide:    { amp: 0.6, sigma: 2.0, ngeo: 9, spread: 2.0, xstart: -3.0 },
+    single:  { amp: 1.5, sigma: 1.0, ngeo: 1, spread: 0, xstart: -2.5 },
+    many:    { amp: 1.0, sigma: 1.0, ngeo: 21, spread: 2.0, xstart: -3.0 },
+  }[name];
+  document.getElementById('amp').value = s.amp;
+  document.getElementById('sigma').value = s.sigma;
+  document.getElementById('ngeo').value = s.ngeo;
+  document.getElementById('spread').value = s.spread;
+  document.getElementById('xstart').value = s.xstart;
+  render();
+}
+
+// ── Resize handling ─────────────────────────────────────────
+window.addEventListener('resize', render);
+
+// ── Initial render ──────────────────────────────────────────
+render();
+</script>
+
+</body>
+</html>
