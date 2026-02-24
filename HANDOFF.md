@@ -7,10 +7,9 @@ Public: https://github.com/tobiasosborne/generalrelativity (Apache 2.0)
 
 ## Status
 
-22 of 23 lectures converted (+ 1 supplementary note). 100 pages total.
-All physics content complete. Only the final PDF lecture (#23, "General relativity.pdf") remains — it is a summary/review lecture.
+All 23 lectures converted (+ 1 supplementary note). 102 pages total. Course complete.
 Lectures 1–11 enriched with transcript material.
-Lectures 12–22 created via full workflow (PDF + transcript).
+Lectures 12–23 created via full workflow (PDF + transcript).
 Julia simulation pipeline operational: 3 scripts generating data-driven pgfplots figures.
 Interactive web version: trial deployed at https://tobiasosborne.github.io/generalrelativity/ (Lecture 3 + interactive geodesic figure).
 Build tool: `./build.sh` with `--cmfonts`, `--draft`, `--simdata`, `--full`, `--clean`, `--watch` options.
@@ -39,6 +38,7 @@ Build tool: `./build.sh` with `--cmfonts`, `--draft`, `--simdata`, `--full`, `--
 | Lec 20: Interior solution (perfect fluid star, mass function m(r), TOV equation), geodesic setup (Killing constants, equatorial plane reduction) | ✓ | |
 | Lec 21: Timelike geodesics: effective potential V(r), −ML²/r³ correction, circular orbits (ISCO at 6M), perihelion precession (Mercury 43″/century) | ✓ | |
 | Lec 22: Null geodesics: photon sphere r=3M, impact parameter b=L/E, capture cross section σ=27πM², light deflection δφ=4M/b (Sun: 1.75″), 1919 eclipse | ✓ | |
+| Lec 23: Retrospective — logical structure (4 axioms), three solution strategies, experimental pillars table, advanced topics outlook, closing meditation | ✓ | |
 | Note: ∂_a as covariant derivative | | |
 
 ## Lecture-to-PDF mapping

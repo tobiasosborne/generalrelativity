@@ -1,0 +1,223 @@
+%!TEX root = ../GeneralRelativity.tex
+% ──────────────────────────────────────────────────────────────
+%  Lecture 23 — Retrospective and outlook
+% ──────────────────────────────────────────────────────────────
+
+\section{Retrospective and outlook}%
+\label{sec:retrospective}
+
+We close these lecture notes by stepping back from the details to
+survey the logical architecture of general relativity, to appreciate
+what we have built, and to glimpse what lies beyond.
+
+% ──────────────────────────────────────────────────────────────
+\subsection{The logical structure of the theory}%
+\label{sec:logical-structure}
+
+General relativity rests on a remarkably small number of physical
+principles.  The entire theory can be summarised in four lines:
+
+\begin{keyresult}[The axioms of general relativity]
+  \begin{enumerate}
+    \item[\textup{(i)}] Spacetime is a four-dimensional Lorentzian
+      manifold $(\M, g_{ab})$.
+    \item[\textup{(ii)}] Freely falling test bodies move on
+      geodesics of $g_{ab}$.
+    \item[\textup{(iii)}] The laws of physics, expressed as tensor
+      equations, take the same form in all coordinate systems
+      (\emph{general covariance}).
+    \item[\textup{(iv)}] The metric is determined by the matter
+      content via Einstein's field equation:
+      $\Ein_{ab} + \Lambda\, g_{ab} = 8\pi\, T_{ab}$.
+  \end{enumerate}
+\end{keyresult}
+
+\noindent
+From these four statements, the entire course follows.
+Axiom~(i) required us to develop the theory of manifolds, tangent
+spaces, and tensor fields (Lectures~3--6).  Axiom~(ii) led us to
+connections, parallel transport, and the geodesic equation
+(Lectures~7--10).  The requirement that the connection be metric-compatible
+and torsion-free singled out the Levi-Civita connection and its
+curvature, the Riemann tensor (Lectures~10--11).  Axiom~(iii) was
+our guiding principle throughout, ensuring that every equation we
+wrote was intrinsic.  And axiom~(iv)---arrived at by demanding
+consistency with the Bianchi identity and the Newtonian
+limit---gave us the field equations whose solutions occupied the
+second half of the course (Lectures~12--22).
+
+\begin{intuition}[The miracle of self-consistency]
+  The most striking feature of this logical structure is its
+  \emph{self-consistency}.  The geodesic hypothesis~(ii) was an
+  \emph{input} to the theory---we assumed it as a physical postulate
+  to motivate the field equations.  But Einstein's field
+  equations~(iv), via the Bianchi identity
+  $\covd^a \Ein_{ab} = 0$, automatically imply stress-energy
+  conservation $\covd^a T_{ab} = 0$, which in turn implies the
+  geodesic motion of pressureless matter
+  (\S\ref{sec:geodesic-self-consistency}).  The postulate is
+  recovered as a \emph{theorem}.  This kind of bootstrapping is
+  extraordinarily rare in physics and is one of the strongest pieces
+  of internal evidence that the theory is on the right track.
+\end{intuition}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{What we solved}%
+\label{sec:what-we-solved}
+
+The general Einstein equations are ten coupled, nonlinear, second-order
+partial differential equations---a system of formidable complexity.
+We attacked them through three strategies:
+
+\begin{enumerate}
+  \item \textbf{Perturbation theory} (Lectures~12--14).
+    Linearising around flat spacetime reduced the field equations to
+    a wave equation, yielding the Newtonian limit ($\phi = -M/r$),
+    gravitational radiation (two polarizations propagating at~$c$),
+    and the gauge structure of the theory.
+
+  \item \textbf{Maximal symmetry} (Lectures~14--18).
+    Imposing homogeneity and isotropy reduced the ten PDEs to two
+    ODEs---the Friedmann equations---for a single function $a(\tau)$.
+    The solutions describe the Big Bang, the expansion of the
+    universe, and (for $k = +1$) the Big Crunch.
+
+  \item \textbf{Spherical symmetry} (Lectures~18--22).
+    Imposing staticity and spherical symmetry reduced the equations
+    to two functions of one variable, $f(r)$ and $h(r)$, which we
+    solved \emph{exactly}: the Schwarzschild metric.  Its geodesics
+    gave us the precession of Mercury's perihelion ($43''$/century)
+    and the deflection of starlight by the Sun ($1.75''$).
+\end{enumerate}
+
+\noindent
+In each case, symmetry was the key that unlocked the equations.
+Without it, we would have been helpless.
+
+% ──────────────────────────────────────────────────────────────
+\subsection{The experimental pillars}%
+\label{sec:experimental-pillars}
+
+General relativity is not merely a mathematical edifice; it is a
+physical theory, and its predictions have been confirmed with
+extraordinary precision:
+
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{lll}
+  \toprule
+  \textbf{Prediction} & \textbf{Confirmation} &
+    \textbf{Precision}\\
+  \midrule
+  Perihelion precession of Mercury &
+    Le Verrier (1859), Einstein (1915) &
+    $\sim 0.1\%$ \\
+  Deflection of starlight &
+    Eddington (1919), radio VLBI &
+    $\sim 0.01\%$ \\
+  Gravitational redshift &
+    Pound--Rebka (1960), GPS &
+    $\sim 10^{-4}$ \\
+  Shapiro time delay &
+    Cassini spacecraft (2003) &
+    $\sim 10^{-5}$ \\
+  Gravitational waves &
+    LIGO/Virgo (2015--) &
+    waveform match \\
+  Expansion of the universe &
+    Hubble (1929), Planck (2018) &
+    $\sim 1\%$ \\
+  Black hole shadow &
+    Event Horizon Telescope (2019) &
+    image \\
+  \bottomrule
+\end{tabular}
+\end{center}
+
+\noindent
+Every prediction of general relativity that has been tested has been
+confirmed.  No other classical theory of gravity comes close to this
+record.
+
+% ──────────────────────────────────────────────────────────────
+\subsection{What we did not cover}%
+\label{sec:what-we-missed}
+
+A one-semester course can only scratch the surface.  Major topics
+that await the reader in more advanced treatments include:
+
+\begin{itemize}
+  \item \textbf{Black holes.}
+    The Schwarzschild coordinate singularity at $r = 2M$ conceals
+    the rich causal structure of black holes: the event horizon,
+    the Penrose diagram, the Kerr solution for rotating black holes,
+    the laws of black hole mechanics, and Hawking radiation.
+  \item \textbf{Gravitational wave physics.}
+    Beyond the linearised theory: post-Newtonian approximations,
+    numerical relativity, the two-body problem, and the extraction
+    of astrophysical parameters from LIGO/Virgo signals.
+  \item \textbf{Singularity theorems.}
+    The Penrose--Hawking theorems show that singularities are
+    \emph{generic} in general relativity, not artefacts of high
+    symmetry.  Their proof requires the theory of causal structure
+    and the Raychaudhuri equation.
+  \item \textbf{Initial value formulation.}
+    General relativity admits a well-posed initial value problem
+    (the ADM formalism), which is the foundation for numerical
+    relativity and the mathematical study of existence and uniqueness
+    of solutions.
+  \item \textbf{Cosmological perturbation theory.}
+    The seeds of structure in the universe---galaxies, clusters,
+    the CMB anisotropies---arise from perturbations of the FLRW
+    background.  Their study connects general relativity to
+    inflationary cosmology and observational astrophysics.
+  \item \textbf{Quantum gravity.}
+    General relativity and quantum mechanics are individually
+    successful but mutually incompatible.  Approaches to their
+    unification---string theory, loop quantum gravity, causal
+    set theory, and others---remain among the deepest open problems
+    in physics.
+\end{itemize}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{The enduring mystery}%
+\label{sec:enduring-mystery}
+
+We began this course (\S\ref{sec:prerelativity}) by noting that
+general relativity is, by wide consensus, one of the most beautiful
+theories in physics---and also that it is \emph{wrong}, or at least
+incomplete.  It describes the large-scale structure of the universe
+with breathtaking accuracy, yet it breaks down at singularities and
+cannot be reconciled with quantum mechanics.
+
+The deepest questions remain open.  What is the quantum structure of
+spacetime?  What happens at the singularity inside a black hole, or
+at the Big Bang?  What is the nature of dark energy, which drives
+the accelerating expansion of the universe?  Is spacetime
+fundamental, or does it emerge from something deeper?
+
+These are questions for the next generation of physicists.  The
+tools developed in this course---manifolds, tensors, curvature,
+geodesics, Einstein's equations---are the language in which these
+questions are posed and in which their answers will be expressed.
+
+\begin{intuition}[A final thought]
+  Einstein's general relativity is a theory of unparalleled beauty
+  and scope.  From a handful of physical principles---the
+  equivalence of gravitational and inertial mass, the requirement
+  that physics be independent of coordinates---it constructs a
+  framework that describes the expansion of the universe, the
+  dynamics of black holes, and the propagation of gravitational
+  waves, all as consequences of the curvature of spacetime.  That
+  the same equation, $\Ein_{ab} = 8\pi\, T_{ab}$, predicts both
+  the $43''$-per-century precession of Mercury and the existence of
+  gravitational waves from merging black holes detected a century
+  later is, by any measure, extraordinary.
+
+  We have only scratched the surface.  There has been active research
+  in general relativity for over a century, and the largest mysteries
+  that remain open in physics---the nature of dark energy, the
+  quantum structure of spacetime, the origin of the universe---are
+  those that arise at the intersection of gravity and quantum theory.
+  The journey continues.
+\end{intuition}
