@@ -1,0 +1,256 @@
+%!TEX root = ../GeneralRelativity.tex
+% ──────────────────────────────────────────────────────────────
+%  Lecture 19 — Deriving the Schwarzschild metric
+% ──────────────────────────────────────────────────────────────
+
+\subsection{Solving the vacuum Einstein equations}%
+\label{sec:schwarzschild-derivation}
+
+We now carry out the purely mechanical---but highly
+rewarding---procedure of substituting the
+ansatz~\eqref{eq:schwarzschild-ansatz} into the vacuum Einstein
+equations and solving for the unknown functions $f(r)$ and~$h(r)$.
+The remarkable thing about the Schwarzschild solution is how easy
+the equations are to solve, despite the formidable appearance of the
+intermediate expressions.  One should think of the Schwarzschild
+solution as the \emph{hydrogen atom of general relativity}: both
+pertain to spherically symmetric systems, and both yield an
+extraordinary amount of physics from an extraordinarily small amount
+of work.
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Metric components and their inverses}%
+\label{sec:schw-metric-components}
+
+The ansatz~\eqref{eq:schwarzschild-ansatz} gives the diagonal metric
+components
+\[
+  g_{tt} = -f(r)\,,\quad
+  g_{rr} = h(r)\,,\quad
+  g_{\theta\theta} = r^2\,,\quad
+  g_{\phi\phi} = r^2 \sin^2\!\theta\,,
+\]
+with inverse
+\[
+  g^{tt} = -f^{-1}\,,\quad
+  g^{rr} = h^{-1}\,,\quad
+  g^{\theta\theta} = r^{-2}\,,\quad
+  g^{\phi\phi} = r^{-2}\sin^{-2}\!\theta\,.
+\]
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Christoffel symbols}%
+\label{sec:schw-christoffel}
+
+The non-vanishing Christoffel symbols are (exercise---the
+main challenge is bookkeeping, not conceptual difficulty):
+\begin{align}
+  &\chris{r}{rr} = \frac{h'}{2h}\,,\qquad
+  \chris{r}{\theta\theta} = -\frac{r}{h}\,,\qquad
+  \chris{r}{\phi\phi} = -\frac{r\sin^2\!\theta}{h}\,,
+    \label{eq:schw-chris-1}\\[4pt]
+  &\chris{r}{tt} = \frac{f'}{2h}\,,\qquad
+  \chris{t}{tr} = \frac{f'}{2f}\,,
+    \label{eq:schw-chris-2}\\[4pt]
+  &\chris{\theta}{r\theta} = \chris{\phi}{r\phi}
+    = \frac{1}{r}\,,\qquad
+  \chris{\theta}{\phi\phi} = -\sin\theta\cos\theta\,,\qquad
+  \chris{\phi}{\theta\phi} = \cot\theta\,,
+    \label{eq:schw-chris-3}
+\end{align}
+where $f' = df/dr$ and $h' = dh/dr$.
+
+\begin{remark}
+  No individual Christoffel symbol is difficult to compute---one
+  could assign any one of them as a first-year calculus exercise.
+  The real challenge is ensuring that the inevitable sign errors and
+  missed factors are caught before they propagate.  Computer algebra
+  systems are an invaluable complement to hand calculation for this
+  purpose.
+\end{remark}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Ricci tensor}%
+\label{sec:schw-ricci}
+
+The Ricci tensor is computed from
+$R_{\mu\nu} = \partial_\kappa\, \chris{\kappa}{\mu\nu}
+  - \partial_\nu\, \chris{\kappa}{\mu\kappa}
+  + \chris{\kappa}{\kappa\lambda}\,\chris{\lambda}{\mu\nu}
+  - \chris{\kappa}{\nu\lambda}\,\chris{\lambda}{\mu\kappa}$.
+One first verifies that $R_{\mu\nu} = 0$ for $\mu \neq \nu$
+(exercise---this considerably reduces the work).  The diagonal
+components are:
+\begin{align}
+  R_{rr} &= -\frac{f''}{2f}
+    - \frac{1}{4}\,\frac{f'}{f}\Bigl(\frac{h'}{h}
+      + \frac{f'}{f}\Bigr)
+    - \frac{1}{r}\,\frac{h'}{h}\,,
+    \label{eq:schw-Rrr}\\[6pt]
+  R_{\theta\theta} &= -\Bigl(-1
+    + \frac{r}{2h}\Bigl(-\frac{h'}{h}
+      + \frac{f'}{f}\Bigr) + \frac{1}{h}\Bigr)\,,
+    \label{eq:schw-Rthth}\\[6pt]
+  R_{\phi\phi} &= \sin^2\!\theta\; R_{\theta\theta}\,,
+    \label{eq:schw-Rphph}\\[6pt]
+  R_{tt} &= -\Bigl(\frac{f''}{2h}
+    - \frac{1}{4}\,\frac{f'}{f}\Bigl(\frac{h'}{h}
+      + \frac{f'}{f}\Bigr)
+    - \frac{1}{r}\,\frac{f'}{h}\Bigr)\,.
+    \label{eq:schw-Rtt}
+\end{align}
+
+\begin{exercise}\label{ex:schw-ricci}
+  Derive the Ricci tensor
+  components~\eqref{eq:schw-Rrr}--\eqref{eq:schw-Rtt} from
+  the Christoffel
+  symbols~\eqref{eq:schw-chris-1}--\eqref{eq:schw-chris-3}.
+  Start by confirming that $R_{\mu\nu} = 0$ for $\mu \neq \nu$.
+\end{exercise}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Vacuum equations and the solution}%
+\label{sec:schw-vacuum-solution}
+
+We model the gravitational field \emph{outside} a spherically
+symmetric body (a star, say).  In this exterior region the
+stress-energy tensor vanishes, and using the trace-reversed form of
+Einstein's equations~\eqref{eq:einstein-alternate} (recalled from
+\S\ref{sec:einstein-trace}), the vacuum field equations reduce to
+\begin{equation}\label{eq:vacuum-ricci}
+  R_{\mu\nu} = 0\,.
+\end{equation}
+Since $R_{\phi\phi} = \sin^2\!\theta\, R_{\theta\theta}$, it
+suffices to solve the three equations
+$R_{tt} = R_{rr} = R_{\theta\theta} = 0$.
+
+\medskip\noindent
+\textbf{Step 1: Relate $f$ and $h$.}\;
+A key observation is that the combination
+\begin{equation}\label{eq:fh-relation}
+  \frac{R_{tt}}{f} + \frac{R_{rr}}{h}
+    = -\frac{1}{r\,h}\Bigl(\frac{h'}{h} + \frac{f'}{f}\Bigr)
+    = 0
+\end{equation}
+yields the remarkably simple equation
+\[
+  \frac{f'}{f} + \frac{h'}{h} = 0\,,
+  \qquad\text{i.e.}\quad
+  \frac{d}{dr}\bigl(\ln(f\, h)\bigr) = 0\,,
+\]
+so that $f\, h = K$ for some constant~$K$.  By rescaling the time
+coordinate $t \to \sqrt{K}\, t$, we may set $K = 1$:
+\begin{equation}\label{eq:f-h-inverse}
+  \eqbox{f = h^{-1}}
+\end{equation}
+This immediately eliminates one of the two unknown functions.
+
+\medskip\noindent
+\textbf{Step 2: Solve for $f$.}\;
+Substituting $h = f^{-1}$ into $R_{\theta\theta} = 0$ gives
+(exercise):
+\begin{equation}\label{eq:schw-ode}
+  -f' + \frac{1 - f}{r} = 0\,,
+  \qquad\text{i.e.}\quad
+  \frac{d}{dr}(r\, f) = 1\,.
+\end{equation}
+Integrating:
+\begin{equation}\label{eq:f-solved}
+  f(r) = 1 + \frac{C}{r}\,,
+\end{equation}
+where $C$ is a constant of integration.
+
+\medskip\noindent
+\textbf{Step 3: Interpret the constant.}\;
+As $r \to \infty$, the metric~\eqref{eq:schwarzschild-ansatz} with
+$f = 1 + C/r$ approaches the Minkowski metric: the $C/r$ terms are
+small perturbations.  Comparing with the Newtonian limit derived in
+\S\ref{sec:newtonian-limit}---specifically the metric perturbation
+$\gamma_{00} = -2\phi$ where $\phi = -M/r$ is the Newtonian
+potential---we identify
+\begin{equation}\label{eq:C-identification}
+  C = -2M\,,
+\end{equation}
+where $M$ is the mass of the central body (in geometrised units
+$G = c = 1$).
+
+\begin{exercise}\label{ex:newtonian-comparison}
+  Carry out the comparison explicitly: write the Schwarzschild
+  metric to leading order in $M/r$ and compare with the
+  linearised metric~\eqref{eq:newtonian-metric} from the Newtonian
+  limit.
+\end{exercise}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{The Schwarzschild metric}%
+\label{sec:schwarzschild-metric}
+
+Substituting $C = -2M$ and defining the \textbf{Schwarzschild
+radius} $r_s = 2M$:
+
+\begin{keyresult}[Schwarzschild metric]
+  \begin{equation}\label{eq:schwarzschild}
+    \eqbox{ds^2 = -\Bigl(1 - \frac{2M}{r}\Bigr)\, dt^2
+      + \Bigl(1 - \frac{2M}{r}\Bigr)^{-1}\, dr^2
+      + r^2\, d\Omega^2}
+  \end{equation}
+  where $d\Omega^2 = d\theta^2 + \sin^2\!\theta\, d\phi^2$ is the
+  standard metric on~$S^2$.  This is the unique vacuum, static,
+  spherically symmetric solution of Einstein's field equations,
+  obtained by Karl Schwarzschild in 1916.
+\end{keyresult}
+
+\begin{intuition}[The hydrogen atom of general relativity]
+  We selected, in this course, the two very best exact solutions of
+  Einstein's equations: the FLRW cosmologies and the Schwarzschild
+  metric.  Both exploit symmetry to reduce the full complexity of
+  the field equations to tractable problems, and both yield an
+  extraordinary amount of physics.  The Schwarzschild solution
+  describes the spacetime outside any spherically symmetric,
+  non-rotating mass---stars, planets, non-rotating black holes---and
+  is the foundation for the classical tests of general relativity
+  (perihelion precession, light deflection, gravitational redshift)
+  that we will study in the coming lectures.  It went rather
+  painlessly; unfortunately, this is not the general nature of
+  things---solving Einstein's equations without high symmetry is an
+  extraordinarily intricate task.
+\end{intuition}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Singularities of the Schwarzschild metric}%
+\label{sec:schw-singularities}
+
+The metric~\eqref{eq:schwarzschild} has apparent singularities at
+two values of~$r$:
+\begin{enumerate}
+  \item $r = 0$: both $g_{tt}$ and $g_{rr}$ diverge.
+  \item $r = r_s = 2M$: $g_{tt} = 0$ and
+    $g_{rr} \to \infty$.
+\end{enumerate}
+
+The singularity at $r = 2M$ is a \textbf{coordinate singularity}:
+the spacetime manifold is perfectly smooth there, and the apparent
+divergence is an artefact of the Schwarzschild coordinates (much as
+the apparent singularity of polar coordinates at the origin of
+$\Rn{2}$).  Alternative coordinate systems (Eddington--Finkelstein,
+Kruskal--Szekeres) are regular at $r = 2M$.  We will not prove this
+here.
+
+The singularity at $r = 0$, by contrast, is a genuine
+\textbf{curvature singularity}: the Kretschner scalar
+$R_{abcd}\, R^{abcd}$ diverges as $r \to 0$, indicating that
+the tidal forces become infinite.
+
+\begin{remark}
+  For ``usual'' objects (stars, planets)---as opposed to black
+  holes---the Schwarzschild radius $r_s = 2M$ lies deep within the
+  interior of the body, where the vacuum solution does not apply.
+  For the Sun, $r_s \approx 2.95\,\text{km}$, compared to the
+  solar radius of $\approx 7\times 10^5\,\text{km}$.  In such
+  cases, the vacuum Schwarzschild solution is joined to an
+  \emph{interior solution} (with non-zero stress-energy) at the
+  surface of the body, and neither singularity is physically
+  relevant.  The singularities become significant only for
+  sufficiently compact objects---\textbf{black holes}---which are
+  the subject of more advanced courses.
+\end{remark}

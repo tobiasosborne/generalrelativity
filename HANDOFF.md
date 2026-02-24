@@ -7,9 +7,9 @@ Public: https://github.com/tobiasosborne/generalrelativity (Apache 2.0)
 
 ## Status
 
-18 of 23 lectures converted (+ 1 supplementary note). 91 pages total.
+19 of 23 lectures converted (+ 1 supplementary note). 93 pages total.
 Lectures 1–11 enriched with transcript material.
-Lectures 12–18 created via full workflow (PDF + transcript).
+Lectures 12–19 created via full workflow (PDF + transcript).
 Julia simulation pipeline operational: 3 scripts generating data-driven pgfplots figures.
 Interactive web version: trial deployed at https://tobiasosborne.github.io/generalrelativity/ (Lecture 3 + interactive geodesic figure).
 Build tool: `./build.sh` with `--cmfonts`, `--draft`, `--simdata`, `--full`, `--clean`, `--watch` options.
@@ -34,6 +34,7 @@ Build tool: `./build.sh` with `--cmfonts`, `--draft`, `--simdata`, `--full`, `--
 | Lec 16: Dynamics of FLRW: dust + radiation stress-energy, cosmological constant, reduction to 2 eqs, unified metric | ✓ | |
 | Lec 17: Friedmann equations derived, Λ as dark energy, universe not static, Hubble's law, Big Bang singularity | ✓ | |
 | Lec 18: FLRW exact solutions (dust/radiation × k), conservation laws, Big Crunch; Schwarzschild ansatz (static + spherical symmetry → f(r), h(r)) | ✓ | |
+| Lec 19: Deriving Schwarzschild: Christoffels, Ricci, vacuum R_μν=0, fh=1 trick, f=1+C/r, Newtonian limit C=−2M, singularities (coordinate vs curvature) | ✓ | |
 | Note: ∂_a as covariant derivative | | |
 
 ## Lecture-to-PDF mapping
