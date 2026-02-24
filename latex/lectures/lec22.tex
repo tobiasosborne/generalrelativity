@@ -1,0 +1,182 @@
+%!TEX root = ../GeneralRelativity.tex
+% ──────────────────────────────────────────────────────────────
+%  Lecture 22 — Null geodesics in Schwarzschild: light deflection
+% ──────────────────────────────────────────────────────────────
+
+\subsection{Null geodesics and the deflection of light}%
+\label{sec:null-geodesics}
+
+For the final lecture of this course we study the trajectories of
+light rays---null geodesics ($\kappa = 0$)---in the Schwarzschild
+spacetime.  For me, this is one of the most spectacular predictions
+of general relativity: that light itself is curved by the
+gravitational field, and that this curvature can be detected with
+terrestrial observations.
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{The null effective potential}%
+\label{sec:null-potential}
+
+Setting $\kappa = 0$ in the effective
+potential~\eqref{eq:effective-potential}:
+\begin{equation}\label{eq:null-potential}
+  V_{\text{null}}(r) = \frac{L^2}{2r^2}\Bigl(1
+    - \frac{2M}{r}\Bigr)
+  = \frac{L^2}{2r^3}\,(r - 2M)\,.
+\end{equation}
+The energy equation~\eqref{eq:radial-energy} becomes
+\begin{equation}\label{eq:null-energy}
+  \tfrac{1}{2}\,\dot r^2 + V_{\text{null}}(r)
+    = \tfrac{1}{2}\, E^2\,.
+\end{equation}
+The potential has a single maximum at $r = 3M$ (exercise: set
+$dV_{\text{null}}/dr = 0$) with height
+$V_{\text{max}} = L^2 M / (2(3M)^3) = L^2/(54M^2)$.
+
+\begin{intuition}[Scattering vs.\ capture]
+  A photon approaching from infinity either has enough energy to
+  crest the potential barrier and plunge to $r = 0$
+  (\textbf{capture}), or it reflects off the barrier and escapes
+  back to infinity (\textbf{scattering}).  The critical case is
+  the unstable circular photon orbit at $r = 3M$---the
+  \textbf{photon sphere}.
+\end{intuition}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{The impact parameter and capture cross section}%
+\label{sec:impact-parameter}
+
+The ratio $b = L/E$ has a natural interpretation.  In flat
+spacetime ($M = 0$), a null geodesic travelling along a straight
+line at distance~$r_0$ from the origin satisfies $b = r_0$:
+the impact parameter equals the distance of closest approach.  For
+the Schwarzschild geometry, which is \textbf{asymptotically flat},
+$b = L/E$ represents the \textbf{apparent impact parameter} as
+seen by a distant observer.
+
+A photon is captured if its energy exceeds the potential maximum:
+$\frac{1}{2}E^2 > V_{\text{max}}$, i.e.\
+$L^2/E^2 < 27M^2$.  The \textbf{capture radius} is therefore
+\begin{equation}\label{eq:capture-radius}
+  b_c = 3\sqrt{3}\; M\,,
+\end{equation}
+and the \textbf{capture cross section} is
+\begin{equation}\label{eq:capture-cross-section}
+  \sigma = \pi\, b_c^2 = 27\pi\, M^2\,.
+\end{equation}
+Any photon with impact parameter $b < b_c$ is captured; those with
+$b > b_c$ are deflected and escape.
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Total angular deflection}%
+\label{sec:angular-deflection}
+
+For a scattering trajectory ($b > b_c$), the photon approaches from
+$r = \infty$, reaches a turning point at $r = R_0$ (where
+$\dot r = 0$, i.e.\ $E^2 = L^2(R_0 - 2M)/R_0^3$), and recedes
+to $r = \infty$.  The total change in the angular coordinate is
+\begin{equation}\label{eq:delta-phi-integral}
+  \Delta\phi = 2 \int_{R_0}^{\infty}
+    \frac{L\, dr}{r^2\sqrt{E^2 - \frac{L^2}{r^3}(r - 2M)}}
+\end{equation}
+(the factor of~$2$ accounts for the symmetry of the trajectory
+about the turning point).
+
+Substituting $u = 1/r$ and eliminating $b$ via the turning-point
+condition $R_0^3 = b^2(R_0 - 2M)$:
+\begin{equation}\label{eq:delta-phi-u}
+  \Delta\phi = 2 \int_0^{1/R_0}
+    \frac{du}{\sqrt{R_0^{-2} - 2M R_0^{-3} - u^2 + 2M u^3}}\,.
+\end{equation}
+
+\medskip\noindent
+\textbf{Sanity check.}\;
+For $M = 0$ (flat spacetime), $\Delta\phi = \pi$ (exercise)---the
+photon travels in a straight line and the total angular change from
+$\phi(-\infty)$ to $\phi(+\infty)$ is exactly~$\pi$, as expected.
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Perturbative expansion for small $M$}%
+\label{sec:light-deflection-expansion}
+
+For realistic celestial bodies ($M/R_0 \ll 1$), we expand
+$\Delta\phi$ to first order in~$M$.  The expansion is subtle
+because the turning point $R_0$ itself depends on~$M$; one
+promotes $M$ and~$R_0$ to independent variables and Taylor-expands.
+Using the turning-point condition to relate $R_0$ and $b$
+to zeroth order ($R_0 = b + O(M)$), one finds after a careful
+calculation:
+\begin{equation}\label{eq:light-deflection}
+  \eqbox{\Delta\phi \approx \pi + \frac{4M}{b}}
+\end{equation}
+The \textbf{deflection angle} (the deviation from the flat-spacetime
+value of~$\pi$) is therefore
+\begin{equation}\label{eq:deflection-angle}
+  \delta\phi = \Delta\phi - \pi = \frac{4M}{b}\,.
+\end{equation}
+Restoring factors of $G$ and $c$:
+$\delta\phi = 4GM/(c^2 b)$.
+
+\begin{keyresult}[Deflection of light by a massive body]
+  A light ray passing a spherically symmetric body of mass~$M$ at
+  impact parameter~$b$ is deflected by an angle
+  \[
+    \delta\phi = \frac{4M}{b}
+  \]
+  (in geometrised units).  For a ray grazing the surface of the
+  Sun ($M_\odot \approx 1.5\,\text{km}$,
+  $R_\odot \approx 7 \times 10^5\,\text{km}$):
+  \[
+    \delta\phi \approx \frac{4 \times 1.5}{7 \times 10^5}
+      \approx 8.5 \times 10^{-6}\;\text{rad}
+      \approx 1.75''\,.
+  \]
+\end{keyresult}
+
+\begin{historical}[The 1919 eclipse expedition]
+  The deflection of light by the Sun was confirmed by the
+  Dyson--Eddington--Davidson expedition during the total solar
+  eclipse of 29~May 1919.  Photographs of stars near the eclipsed
+  Sun showed apparent displacements consistent with Einstein's
+  prediction of~$1.75''$, rather than the $0.87''$ predicted by a
+  naive Newtonian calculation (which treats light as a particle
+  subject to Newtonian gravity).  The result was announced on
+  6~November 1919 and made Einstein an international celebrity
+  overnight.  Modern measurements using radio waves from quasars
+  bent by the Sun achieve far better precision and have confirmed
+  the prediction to within $0.01\%$.
+\end{historical}
+
+% ══════════════════════════════════════════════════════════════
+%  Conclusion
+% ══════════════════════════════════════════════════════════════
+
+\bigskip
+\begin{center}
+  \rule{0.5\textwidth}{0.4pt}
+\end{center}
+\bigskip
+
+This concludes our introduction to general relativity.  We have
+travelled from the equivalence principle and the mathematics of
+manifolds, through the differential geometry of connections,
+curvature, and geodesics, to Einstein's field equations and their
+consequences: gravitational waves, the expanding universe, and the
+geometry of spacetime around stars and black holes.  We have only
+scratched the surface of an extraordinary theory---one that has
+been the subject of active research for over a century and whose
+deepest mysteries, from the nature of dark energy to the quantum
+structure of spacetime, remain open.
+
+\begin{intuition}[An extraordinary theory]
+  General relativity is a theory of unparalleled beauty in physics.
+  From a handful of physical principles---the equivalence of
+  gravitational and inertial mass, the requirement that the laws of
+  physics be independent of the coordinate system---Einstein
+  constructed a framework that describes the large-scale structure
+  of the universe, the dynamics of black holes, and the propagation
+  of gravitational waves, all as consequences of the curvature of
+  spacetime.  That the same theory which explains the perihelion of
+  Mercury also predicts the Big Bang and gravitational waves from
+  merging black holes is, by any measure, breathtaking.
+\end{intuition}
