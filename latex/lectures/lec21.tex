@@ -1,0 +1,192 @@
+%!TEX root = ../GeneralRelativity.tex
+% ──────────────────────────────────────────────────────────────
+%  Lecture 21 — Timelike geodesics in Schwarzschild: effective
+%              potential and perihelion precession
+% ──────────────────────────────────────────────────────────────
+
+\subsection{Constants of motion and the effective potential}%
+\label{sec:schw-effective-potential}
+
+We study timelike geodesics ($\kappa = 1$) in the exterior
+Schwarzschild spacetime ($r > 2M$), parameterised by proper
+time~$\tau$.  Setting $\theta = \pi/2$ (no loss of generality by
+\S\ref{sec:equatorial-plane}), the metric
+norm~$g_{ab}\, u^a u^b = -1$ gives
+\begin{equation}\label{eq:norm-constraint}
+  -\Bigl(1 - \frac{2M}{r}\Bigr)\dot t^2
+  + \Bigl(1 - \frac{2M}{r}\Bigr)^{-1}\dot r^2
+  + r^2\, \dot\phi^2 = -\kappa\,,
+\end{equation}
+where $\kappa = 1$ for timelike and $\kappa = 0$ for null
+geodesics, and dots denote $d/d\tau$.
+
+The two Killing vectors $\xi^a = (\partial/\partial t)^a$ and
+$\psi^a = (\partial/\partial\phi)^a$ yield, via
+Proposition~\ref{prop:killing-constant}, the conserved quantities:
+\begin{align}
+  E &= \Bigl(1 - \frac{2M}{r}\Bigr)\,\dot t\,,
+    \label{eq:energy-constant}
+    \tag{i}\\[4pt]
+  L &= r^2\, \dot\phi\,.
+    \label{eq:angular-momentum-constant}
+    \tag{ii}
+\end{align}
+For a timelike particle far from the source, $E$ reduces to the
+special-relativistic energy per unit rest mass as measured by a
+static observer; $L$ is the angular momentum per unit rest mass.
+The constancy of~$L$ is the relativistic analogue of Kepler's
+second law: equal areas are swept out in equal proper times.
+
+Substituting~\eqref{eq:energy-constant}
+and~\eqref{eq:angular-momentum-constant}
+into~\eqref{eq:norm-constraint}:
+\begin{equation}\label{eq:radial-energy}
+  \eqbox{\tfrac{1}{2}\,\dot r^2 + V(r) = \tfrac{1}{2}\, E^2}
+\end{equation}
+where the \textbf{effective potential} is
+\begin{equation}\label{eq:effective-potential}
+  \eqbox{V(r) = \tfrac{1}{2}\,\kappa
+    - \frac{\kappa\, M}{r}
+    + \frac{L^2}{2r^2}
+    - \frac{M L^2}{r^3}}
+\end{equation}
+
+\begin{intuition}[One-dimensional mechanics]
+  Equation~\eqref{eq:radial-energy} has the structure of a
+  unit-mass particle with ``kinetic energy'' $\frac{1}{2}\dot r^2$
+  moving in the potential~$V(r)$ with ``total energy''
+  $\frac{1}{2}E^2$.  We can therefore import the full machinery of
+  one-dimensional classical mechanics---turning points, potential
+  wells, stability analysis---to understand the radial motion.
+  The angular motion is then recovered
+  from~\eqref{eq:angular-momentum-constant}.
+\end{intuition}
+
+The first three terms of~\eqref{eq:effective-potential} are familiar
+from Newtonian orbital mechanics ($\frac{1}{2}\kappa$ is a constant,
+$-\kappa M/r$ is the gravitational potential, $L^2/2r^2$ is the
+centrifugal barrier).  The \emph{new} term is
+\begin{equation}\label{eq:gr-correction}
+  -\frac{ML^2}{r^3}\,,
+\end{equation}
+which is the relativistic correction.  It is negligible for large
+$r$, but \emph{dominates over the centrifugal barrier for small~$r$},
+dragging the potential to $-\infty$ and qualitatively changing the
+orbital dynamics.
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Circular orbits and their stability}%
+\label{sec:circular-orbits}
+
+Circular orbits correspond to extrema of~$V(r)$ (where
+$\dot r = 0$).  Setting $dV/dr = 0$ for $\kappa = 1$:
+\begin{equation}\label{eq:dVdr}
+  0 = \frac{dV}{dr}
+    = \frac{1}{r^4}\bigl(Mr^2 - L^2 r + 3ML^2\bigr)\,.
+\end{equation}
+The roots are
+\begin{equation}\label{eq:circular-radii}
+  r_\pm = \frac{L^2 \pm \sqrt{L^4 - 12\, L^2 M^2}}{2M}\,.
+\end{equation}
+
+\subsubsection{Small angular momentum: $L^2 < 12M^2$}
+
+The discriminant is negative: \textbf{no extrema exist}.  The
+potential decreases monotonically for small~$r$ (due to the
+$-ML^2/r^3$ term), so any particle spirals inexorably inward.
+There are no stable orbits.
+
+\subsubsection{Large angular momentum: $L^2 > 12M^2$}
+
+Two extrema exist: $r_+$ is a \textbf{minimum}
+(stable circular orbit) and $r_-$ is a \textbf{maximum}
+(unstable circular orbit).
+
+\begin{keyresult}[Innermost stable circular orbit]
+  Since $r_+ > 6M$ always, there are \textbf{no stable circular
+  orbits} at radii $r \leq 6M$.  The \textbf{innermost stable
+  circular orbit} (ISCO) is at $r = 6M$ (achieved in the limit
+  $L^2 \to 12M^2$).  The unstable circular orbits lie in the range
+  $3M < r_- < 6M$.
+\end{keyresult}
+
+In the Newtonian limit $L \gg M$, the stable radius $r_+ \approx
+L^2/M$ reproduces the Newtonian formula for the circular orbital
+radius.
+
+\begin{exercise}\label{ex:circular-energy}
+  Show that the energy of a particle in a circular orbit at
+  radius~$R$ is
+  \[
+    E(R) = \frac{R - 2M}{\sqrt{R}\,\sqrt{R - 3M}}\,.
+  \]
+  Verify that $E > 1$ for $R < 4M$ (particles in unstable circular
+  orbits between $3M$ and $4M$ can escape to infinity if
+  perturbed outward).
+\end{exercise}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Perihelion precession}%
+\label{sec:perihelion-precession}
+
+Consider a particle in a slightly perturbed stable circular orbit
+at radius~$r_+$.  For sufficiently small displacements, the
+potential is effectively quadratic and the particle executes simple
+harmonic motion in~$r$ with radial frequency (exercise):
+\begin{equation}\label{eq:omega-r}
+  \omega_r^2 = \frac{d^2V}{dr^2}\bigg|_{r_+}
+    = \frac{M(r_+ - 6M)}{r_+^3\,(r_+ - 3M)}\,.
+\end{equation}
+(Note: the ``time'' here is the proper time~$\tau$ of the
+orbiting particle.)
+
+The angular frequency of the circular orbit is found from
+$\omega_\phi = \dot\phi = L/r_+^2$; eliminating~$L$ using the
+circular orbit condition:
+\begin{equation}\label{eq:omega-phi}
+  \omega_\phi^2 = \frac{M}{r_+^2\,(r_+ - 3M)}\,.
+\end{equation}
+
+In the Newtonian limit ($r_+ \gg M$), both frequencies approach
+$\omega_r^2 \approx \omega_\phi^2 \approx M/r_+^3$: the
+oscillations are \textbf{commensurate} and the orbit \emph{closes}
+(as it must for a $1/r$ potential, by Bertrand's theorem).
+
+In general relativity, however, $\omega_r \neq \omega_\phi$.  The
+orbit does \emph{not} close: the perihelion (point of closest
+approach) shifts from one orbit to the next.
+
+\begin{keyresult}[Precession of the perihelion]
+  The precession rate per orbit is
+  \begin{equation}\label{eq:precession-rate}
+    \omega_p = \omega_\phi - \omega_r
+      = -\Bigl(\sqrt{1 - \frac{6M}{r_+}} - 1\Bigr)\,\omega_\phi\,.
+  \end{equation}
+  For $r_+ \gg M$:
+  \begin{equation}\label{eq:precession-approx}
+    \eqbox{\omega_p \approx \frac{3\, M^{3/2}}{r_+^{5/2}}}
+  \end{equation}
+  (radians per orbit in proper time).
+\end{keyresult}
+
+\begin{historical}[Mercury's perihelion: a triumph of general
+  relativity]
+  The precession of Mercury's perihelion had been a long-standing
+  puzzle in celestial mechanics.  After accounting for the
+  gravitational perturbations of the other planets, an anomalous
+  precession of approximately $43''$ (seconds of arc) per century
+  remained unexplained by Newtonian gravity.  When Einstein
+  completed his general theory of relativity in November~1915, one
+  of his first calculations was the perihelion precession of
+  Mercury.  The result---$43''$ per century---matched the observed
+  anomaly precisely, without any adjustable parameters.  Einstein
+  later wrote that this calculation gave him ``palpitations of the
+  heart.''  It remains one of the most celebrated confirmations of
+  general relativity.
+\end{historical}
+
+\medskip
+In the final lecture, we will study \textbf{null geodesics} in
+the Schwarzschild spacetime---the trajectories of light rays---and
+derive the deflection of light by a massive body, another
+celebrated prediction of Einstein's theory.
