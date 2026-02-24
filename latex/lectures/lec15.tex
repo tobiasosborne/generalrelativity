@@ -1,0 +1,281 @@
+%!TEX root = ../GeneralRelativity.tex
+% ──────────────────────────────────────────────────────────────
+%  Lecture 15 — Consequences of homogeneity and isotropy:
+%              spaces of constant curvature and the FLRW metric
+% ──────────────────────────────────────────────────────────────
+
+\subsection{Consequences of homogeneity and isotropy for the metric}%
+\label{sec:consequences-hom-iso}
+
+In the previous section we defined what it means for a spacetime to
+be homogeneous and isotropic.  Our goal now is to determine the
+consequences of these symmetry assumptions for the fundamental
+dynamical variable of general relativity: the metric~$g_{ab}$.  The
+hope---which will be amply justified---is that by assuming the
+symmetries of homogeneity and isotropy the metric is simplified to
+the point where Einstein's field equations become tractable.
+Indeed, we will reduce the problem of finding the metric of a highly
+symmetric model universe to that of finding \emph{a single scalar
+function}~$a(\tau)$.
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{The induced metric on the spatial slices}%
+\label{sec:induced-metric}
+
+The full spacetime metric~$g_{ab}$ induces, via restriction, a
+three-dimensional Riemannian metric~$h_{ab}(t)$ on each spatial
+hypersurface~$\Sigma_t$ of the homogeneity foliation.  Rather than
+attacking the full four-dimensional problem at once, we first study
+the consequences of homogeneity and isotropy for this induced
+metric~$h_{ab}$.  Later we will embed $h_{ab}$ back into the
+full metric~$g_{ab}$ and argue that very little additional freedom
+remains.
+
+For the induced metric, the symmetry conditions take the following
+concrete forms:
+\begin{itemize}
+  \item \textbf{Homogeneity}: there exists an isometry of $h_{ab}(t)$
+    taking any point $p \in \Sigma_t$ to any other
+    point $q \in \Sigma_t$.
+  \item \textbf{Isotropy}: it is impossible to construct a
+    geometrically preferred vector in~$\Sigma_t$.
+\end{itemize}
+
+\noindent
+We will attack the second constraint (isotropy) first and use
+homogeneity later to fix a remaining constant.
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{The Riemann tensor as a linear map on two-forms}%
+\label{sec:riemann-linear-map}
+
+The beauty of having developed differential geometry in arbitrary
+dimension in the earlier lectures is that we can immediately apply it
+to three-dimensional manifolds.  From the induced metric~$h_{ab}$ on
+$\Sigma_t$ we construct the three-dimensional Riemann curvature
+tensor $\Riem^{(3)}_{abc}{}^d$ using the standard
+rules~(\S\ref{sec:riemann-tensor}).  Raising an index with the
+induced metric gives
+\begin{equation}\label{eq:riemann-3-raised}
+  \Riem^{(3)}_{ab}{}^{cd}
+    = \Riem^{(3)}_{ab}{}^d{}_{c'}\, h^{c'c}\,,
+\end{equation}
+which we may interpret as a \textbf{linear map}
+\[
+  L\colon \mathcal{T}(0,2)\big|_p
+    \;\longrightarrow\; \mathcal{T}(0,2)\big|_p
+\]
+at each point $p \in \Sigma_t$.
+
+\begin{exercise}\label{ex:annihilates-symmetric}
+  Show that $\Riem^{(3)}_{ab}{}^{cd}$ annihilates symmetric tensors
+  in $\mathcal{T}(0,2)$.  Conclude that $L$ restricts to a linear
+  map
+  \[
+    L\colon W \to W\,,
+  \]
+  where $W$ is the space of \textbf{two-forms} (antisymmetric
+  $(0,2)$~tensors) at~$p$.
+\end{exercise}
+
+The pair-interchange symmetry of the Riemann tensor,
+$\Riem_{abcd} = \Riem_{cdab}$, implies that $L$ is a
+\textbf{symmetric} linear map with respect to the inner product
+on~$W$ furnished by~$h_{ab}$.  On an inner product space, a
+symmetric linear map can be diagonalised and has real eigenvalues.
+
+\medskip
+\noindent\textbf{Dimension count.}\;
+On a three-dimensional manifold, the space of two-forms has dimension
+$\binom{3}{2} = 3$, so $L$ is a $3\times 3$ symmetric matrix with
+three real eigenvalues.
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Isotropy forces equal eigenvalues}%
+\label{sec:eigenvalue-argument}
+
+\begin{keyresult}[All eigenvalues of $L$ are equal]
+  Isotropy requires that all three eigenvalues of $L$ are
+  \emph{equal}.
+
+  If any eigenvalue were distinct, its eigenvector---a two-form
+  selected by a basis-independent prescription---would define a
+  geometrically preferred two-form at~$p$.  But on a
+  three-dimensional manifold, any two-form can be completed to a
+  unique three-form (up to sign), and a three-form together with the
+  metric determines a preferred vector via the Hodge dual.  This
+  would produce a geometrically preferred vector in~$\Sigma_t$,
+  contradicting isotropy.
+\end{keyresult}
+
+Since all eigenvalues are equal, $L$ is proportional to the identity:
+$L \propto \mathbb{I}$.  Translating back to the Riemann tensor
+with raised indices:
+\begin{equation}\label{eq:riemann-isotropic}
+  \Riem^{(3)}_{ab}{}^{cd}
+    = K\, \delta^c{}_{[a}\, \delta^d{}_{b]}\,,
+\end{equation}
+for some scalar~$K$.  Lowering the indices $c$ and~$d$:
+\begin{equation}\label{eq:riemann-constant-k}
+  \eqbox{\Riem^{(3)}_{abcd}
+    = K\bigl(h_{ca}\, h_{db} - h_{cb}\, h_{da}\bigr)}
+\end{equation}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{$K$ is constant: the Bianchi identity argument}%
+\label{sec:k-constant}
+
+Is the scalar~$K$ in~\eqref{eq:riemann-constant-k} a function of
+position on~$\Sigma_t$, or is it constant?  Homogeneity immediately
+tells us it must be constant (an isometry mapping $p$ to $q$
+preserves the Riemann tensor, hence $K(p) = K(q)$).  But we can also
+prove this from isotropy alone, using the Bianchi identity.
+
+Apply the three-dimensional covariant derivative $D_e$ (associated
+to~$h_{ab}$) to~\eqref{eq:riemann-constant-k} and antisymmetrise:
+\[
+  0 = D_{[e}\, \Riem^{(3)}_{ab]cd}
+    = (D_{[e}\, K)\, h_{|c|a}\, h_{d|b]}
+\]
+where we used $D_e\, h_{ab} = 0$ (metric compatibility).  For
+$\dim(\Sigma_t) \geq 3$, the antisymmetrised product of metric
+factors on the right is non-degenerate, so the vanishing of the
+left-hand side requires
+\begin{equation}\label{eq:k-constant-proof}
+  D_e\, K = 0\,.
+\end{equation}
+Therefore $K$ is \emph{constant} on each $\Sigma_t$.
+
+\begin{intuition}[Spaces of constant curvature]
+  A Riemannian manifold whose Riemann tensor takes the
+  form~\eqref{eq:riemann-constant-k} with $K$ constant is called a
+  \textbf{space of constant curvature}.  The physical content of
+  this result is transparent: recall that the Riemann tensor measures
+  the failure of parallel transport operations to commute.  On a
+  space of constant curvature, no matter which way you perform the
+  little parallelogram of parallel transport, you get the same
+  failure to commute---the curvature is the same in every direction
+  and at every point.  This is exactly what one would expect from
+  homogeneity and isotropy.
+\end{intuition}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{The three cases: representative spatial geometries}%
+\label{sec:three-cases}
+
+We have established that the spatial slices $\Sigma_t$ are spaces of
+constant curvature~$K$.  There are three qualitatively distinct
+cases, classified by the sign of~$K$.  In each case one can write
+down an explicit representative manifold and metric.
+
+\subsubsection{$K > 0$: the three-sphere (closed universe)}
+
+The spatial slices are three-spheres $S^3$ of radius~$R$
+(with $K = 1/R^2$), defined as embedded submanifolds of
+$\Rn{4}$:
+\[
+  x^2 + y^2 + z^2 + w^2 = R^2\,.
+\]
+(The ambient $\Rn{4}$ is a mathematical convenience; the
+three-spheres are intrinsically defined three-dimensional
+manifolds.)  In spherical coordinates $(\psi, \theta, \phi)$ the
+induced metric reads:
+\begin{equation}\label{eq:metric-S3}
+  ds^2_{\Sigma}
+    = d\psi^2
+      + \sin^2\!\psi\,\bigl(d\theta^2
+      + \sin^2\!\theta\, d\phi^2\bigr)\,.
+\end{equation}
+This describes a \textbf{closed} universe: the spatial sections are
+compact (finite volume, no boundary), so everything is connected to
+everything else---there is no ``going off to infinity.''
+
+\subsubsection{$K = 0$: flat space (open universe)}
+
+The spatial slices are copies of flat $\Rn{3}$:
+\begin{equation}\label{eq:metric-flat}
+  ds^2_{\Sigma}
+    = dx^2 + dy^2 + dz^2\,.
+\end{equation}
+This is called an \textbf{open} universe (or \textbf{flat}
+universe): the spatial sections are non-compact.
+
+\begin{exercise}\label{ex:flat-spherical}
+  Rewrite the flat
+  metric~\eqref{eq:metric-flat} in spherical coordinates
+  $(r, \theta, \phi)$ and verify that it takes the form
+  $dr^2 + r^2\,(d\theta^2 + \sin^2\!\theta\, d\phi^2)$.
+\end{exercise}
+
+\subsubsection{$K < 0$: the hyperboloid (open universe)}
+
+The spatial slices are three-dimensional hyperboloids of
+radius~$R$ (with $K = -1/R^2$), which may be described as
+embedded submanifolds of $\Rn{4}$ with Lorentzian signature:
+\[
+  t^2 - x^2 - y^2 - z^2 = R^2\,.
+\]
+In hyperbolic coordinates $(\psi, \theta, \phi)$ the metric reads:
+\begin{equation}\label{eq:metric-H3}
+  ds^2_{\Sigma}
+    = d\psi^2
+      + \sinh^2\!\psi\,\bigl(d\theta^2
+      + \sin^2\!\theta\, d\phi^2\bigr)\,.
+\end{equation}
+This is also an \textbf{open} universe (non-compact, negatively
+curved).
+
+% ──────────────────────────────────────────────────────────────
+\subsection{The Friedmann--Lema\^itre--Robertson--Walker metric}%
+\label{sec:flrw-metric}
+
+We now embed the spatial slices back into the full four-dimensional
+spacetime.  Since the isotropic observers move on worldlines
+orthogonal to~$\Sigma_t$ (\S\ref{sec:hom-iso-combined}), we can
+express the full 4D metric as:
+\begin{equation}\label{eq:4d-metric-hab}
+  g_{ab} = -u_a\, u_b + h_{ab}(t)\,,
+\end{equation}
+where $u^a$ is the unit tangent vector of the isotropic observers and
+$h_{ab}(t)$ is one of the three spatial metrics above.
+
+All isotropic observers assign the same proper time~$\tau$ to the
+surface~$\Sigma_t$ (by homogeneity, no observer is distinguished).
+In coordinates adapted to this proper time, the full metric becomes:
+
+\begin{keyresult}[FLRW metric]
+  \begin{equation}\label{eq:flrw}
+    \eqbox{ds^2 = -d\tau^2 + a^2(\tau)\, ds^2_{\Sigma}}
+  \end{equation}
+  where $a(\tau)$ is the \textbf{scale factor} and $ds^2_\Sigma$ is
+  one of the three spatial metrics
+  \eqref{eq:metric-S3}/\eqref{eq:metric-flat}/\eqref{eq:metric-H3}:
+  \[
+    ds^2 = -d\tau^2 + a^2(\tau)
+    \begin{cases}
+      d\psi^2 + \sin^2\!\psi\,
+        (d\theta^2 + \sin^2\!\theta\, d\phi^2)
+        & (K > 0,\;\text{closed})\\[4pt]
+      dx^2 + dy^2 + dz^2
+        & (K = 0,\;\text{flat})\\[4pt]
+      d\psi^2 + \sinh^2\!\psi\,
+        (d\theta^2 + \sin^2\!\theta\, d\phi^2)
+        & (K < 0,\;\text{open})
+    \end{cases}
+  \]
+  This is the
+  \textbf{Friedmann--Lema\^itre--Robertson--Walker (FLRW) metric}.
+\end{keyresult}
+
+\begin{intuition}[An extraordinary simplification]
+  By assuming homogeneity and isotropy we have reduced the task of
+  finding the metric of our model universe to solving for just one
+  single scalar function~$a(\tau)$---the scale factor.  This is a
+  huge simplification: instead of ten coupled nonlinear PDEs for the
+  ten components of~$g_{\mu\nu}$, we hope (and it is indeed the
+  case) that substituting the FLRW metric into Einstein's field
+  equations with an appropriate stress-energy tensor on the
+  right-hand side will reduce everything to a single ordinary
+  differential equation for~$a(\tau)$.  That equation---the
+  \textbf{Friedmann equation}---is the subject of the next lecture.
+\end{intuition}
