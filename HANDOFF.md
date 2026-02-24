@@ -7,9 +7,9 @@ Public: https://github.com/tobiasosborne/generalrelativity (Apache 2.0)
 
 ## Status
 
-15 of 23 lectures converted (+ 1 supplementary note). 82 pages total.
+16 of 23 lectures converted (+ 1 supplementary note). 84 pages total.
 Lectures 1–11 enriched with transcript material.
-Lectures 12–15 created via full workflow (PDF + transcript).
+Lectures 12–16 created via full workflow (PDF + transcript).
 Julia simulation pipeline operational: 3 scripts generating data-driven pgfplots figures.
 Interactive web version: trial deployed at https://tobiasosborne.github.io/generalrelativity/ (Lecture 3 + interactive geodesic figure).
 Build tool: `./build.sh` with `--cmfonts`, `--draft`, `--simdata`, `--full`, `--clean`, `--watch` options.
@@ -31,6 +31,7 @@ Build tool: `./build.sh` with `--cmfonts`, `--draft`, `--simdata`, `--full`, `--
 | Lec 13: Properties of EFE, linearised derivation details, maps between manifolds | ✓ | |
 | Lec 14: Gravitational radiation (TT gauge, plane waves, polarizations, 2+1d, LIGO), homogeneity & isotropy | ✓ | |
 | Lec 15: Spaces of constant curvature (eigenvalue argument), S³/R³/H³, FLRW metric | ✓ | |
+| Lec 16: Dynamics of FLRW: dust + radiation stress-energy, cosmological constant, reduction to 2 eqs, unified metric | ✓ | |
 | Note: ∂_a as covariant derivative | | |
 
 ## Lecture-to-PDF mapping

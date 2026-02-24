@@ -1,0 +1,218 @@
+%!TEX root = ../GeneralRelativity.tex
+% ──────────────────────────────────────────────────────────────
+%  Lecture 16 — Dynamics of a homogeneous and isotropic universe
+% ──────────────────────────────────────────────────────────────
+
+\subsection{Dynamics of a homogeneous and isotropic universe}%
+\label{sec:flrw-dynamics}
+
+In the previous section we described the \emph{kinematics} of a
+homogeneous and isotropic universe: we derived the FLRW
+metric~\eqref{eq:flrw} and reduced the geometric degrees of freedom
+to a single unknown function, the scale factor~$a(\tau)$.  Now we
+turn to the \emph{dynamics}: how does such a universe evolve from
+its inception to its final moments---if there are any?
+
+To answer this question we need two ingredients: the left-hand side
+of Einstein's field equations (the Einstein tensor, which we can
+compute from the FLRW metric) and the right-hand side (the
+stress-energy tensor, which models the matter content of the
+universe).  We begin with the latter.
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Stress-energy tensor for a homogeneous isotropic
+  universe}%
+\label{sec:flrw-stress-energy}
+
+In our highly idealised model, we treat galaxies as grains of dust:
+point particles with negligible random velocities, moving on the
+worldlines of the isotropic observers.  Since the fluctuations
+in galaxy velocities are small compared to the speed of light,
+pressure is neglected, and the stress-energy tensor of the matter
+content is simply that of pressureless dust:
+\begin{equation}\label{eq:dust-tab}
+  T_{ab}^{(\text{dust})} = \rho\, u_a\, u_b\,,
+\end{equation}
+where $\rho$ is the average mass-energy density (one ``smears out''
+the galaxies into a homogeneous soup) and $u^a$ is the
+four-velocity of the isotropic observers.
+
+\begin{intuition}[Modelling the universe as dust]
+  This model treats the entire visible matter content of the
+  universe---hundreds of billions of galaxies, each containing
+  hundreds of billions of stars---as a uniform pressureless gas.
+  The approximation is justified on cosmological scales: the
+  peculiar velocities of galaxies (a few hundred km/s) are tiny
+  compared to the speed of light, and the gravitational interaction
+  between galaxies is negligible compared to the overall expansion
+  dynamics.
+\end{intuition}
+
+However, the visible matter is not the only contribution to the
+energy content of the universe.  There is an experimentally
+determined background of thermal radiation pervading the cosmos at a
+temperature of approximately $3\,\text{K}$: the \textbf{cosmic
+microwave background} (CMB).  We model this radiation as a perfect
+fluid with the equation of state
+\begin{equation}\label{eq:radiation-eos}
+  p_{\text{rad}} = \tfrac{1}{3}\,\rho_{\text{rad}}\,.
+\end{equation}
+(Deriving this from statistical mechanics is a somewhat advanced
+exercise; the factor of $\frac{1}{3}$ reflects the fact that
+radiation exerts equal pressure in all three spatial directions.)
+
+The total stress-energy tensor, incorporating both the galaxy
+(dust) content and the radiation, takes the form of a
+\textbf{perfect fluid}:
+\begin{equation}\label{eq:perfect-fluid-cosmo}
+  \eqbox{T_{ab} = \rho\, u_a\, u_b
+    + p\,(g_{ab} + u_a\, u_b)}
+\end{equation}
+where $\rho$ and $p$ are adjusted to include all contributions
+(visible matter, radiation, and any other fields).
+
+\begin{exercise}\label{ex:most-general-tab}
+  Show that~\eqref{eq:perfect-fluid-cosmo} is the most general
+  stress-energy tensor consistent with homogeneity and isotropy.
+  \emph{Hint}: in the rest frame of the isotropic observers,
+  $T_{ab}$ must be invariant under spatial rotations.  What form
+  can a symmetric $(0,2)$ tensor take if all spatial directions
+  are equivalent?
+\end{exercise}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{The cosmological constant}%
+\label{sec:cosmological-constant}
+
+We add one further term to Einstein's field equations: the
+\textbf{cosmological constant}~$\Lambda$.  The modified field
+equations read
+\begin{equation}\label{eq:einstein-lambda}
+  \eqbox{\Ein_{ab} + \Lambda\, g_{ab} = 8\pi\, T_{ab}}
+\end{equation}
+This term was introduced by Einstein himself (for very different
+reasons---he sought a static universe), and for decades it was hoped
+that $\Lambda = 0$.
+
+\begin{historical}[The cosmological constant]
+  Einstein introduced $\Lambda$ in 1917 to obtain a static
+  cosmological solution, which he believed was necessary on
+  philosophical grounds.  After Hubble's discovery of the expansion
+  of the universe in 1929, Einstein reportedly called the
+  cosmological constant his ``greatest blunder.''  However,
+  observations since the late 1990s---first from Type~Ia supernovae,
+  then from the CMB and large-scale structure surveys---have
+  established that $\Lambda > 0$.  A non-zero cosmological constant
+  (or, more generally, ``dark energy'') is now an essential
+  ingredient of the standard cosmological model.  The cosmological
+  constant acts effectively as a \emph{negative pressure} term,
+  driving the accelerated expansion of the universe observed today.
+\end{historical}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Reduction to two independent equations}%
+\label{sec:two-equations}
+
+In principle, Einstein's field equations~\eqref{eq:einstein-lambda}
+constitute ten simultaneous coupled nonlinear partial differential
+equations for the ten independent components of the metric---a
+system of monstrous complexity, far exceeding anything one typically
+encounters in other branches of physics.  There is no Green's
+function, no superposition principle; nothing is going to save us in
+general.
+
+However, one can either use perturbation theory (as we did for
+linearised gravity) or exploit symmetry to reduce the number of
+equations.  In the present case, homogeneity and isotropy achieve a
+dramatic simplification.
+
+\begin{keyresult}[Only two independent equations]
+  Of the ten components of Einstein's field
+  equations~\eqref{eq:einstein-lambda}, only \textbf{two} are
+  independent for a homogeneous and isotropic spacetime.
+\end{keyresult}
+
+The argument proceeds as follows.  First, note that the vectors
+$\Ein^{ab}\, u_b$ and $T^{ab}\, u_b$ can have no spatial
+components (by isotropy---a non-vanishing spatial component would
+define a preferred direction).  Similarly, when restricted to a
+spatial slice~$\Sigma_t$, the same eigenvalue argument used
+for~$\Riem^{(3)}_{ab}{}^{cd}$ in \S\ref{sec:eigenvalue-argument}
+implies that the spatial part of the Einstein tensor~$\Ein^{(3)}_{ab}$
+is proportional to the identity (otherwise one could construct a
+preferred spatial vector).  Consequently:
+\begin{itemize}
+  \item The off-diagonal (space--time) components
+    of~\eqref{eq:einstein-lambda} vanish identically.
+  \item The diagonal spatial components are all \emph{equal}
+    (by the eigenvalue/isotropy argument).
+  \item By homogeneity, the space--time components also vanish.
+\end{itemize}
+
+We are left with exactly two independent equations, which we write
+as:
+\begin{align}
+  \Ein_{\tau\tau} + \Lambda\, g_{\tau\tau} &= 8\pi\, \rho\,,
+    \label{eq:friedmann-tt}\\[4pt]
+  \Ein_{**} + \Lambda\, g_{**} &= 8\pi\, p\,,
+    \label{eq:friedmann-ss}
+\end{align}
+where $\Ein_{\tau\tau} = \Ein_{ab}\, u^a u^b$ is the time--time
+component and $\Ein_{**} = \Ein_{ab}\, s^a s^b$ denotes \emph{any}
+spatial diagonal component (contracted with a unit spacelike
+vector~$s^a$ orthogonal to~$u^a$, with $s^a s_a = 1$); all spatial
+components give the same equation.
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{The FLRW metric in unified form}%
+\label{sec:flrw-unified}
+
+To carry out the explicit calculation of the Christoffel symbols,
+Riemann tensor, and Einstein tensor from the FLRW metric, we need a
+coordinate representation.  Basis-free reasoning is wonderful for
+deducing logical consequences of geometric statements, but it is
+hopeless for doing any real calculation---for that, we must choose
+coordinates and compute.
+
+It is convenient to write the three spatial
+metrics~\eqref{eq:metric-S3}/\eqref{eq:metric-flat}/\eqref{eq:metric-H3}
+in a single unified form using spherical coordinates $(r, \theta,
+\phi)$.  The FLRW metric becomes:
+\begin{equation}\label{eq:flrw-unified}
+  \eqbox{ds^2 = -d\tau^2
+    + a^2(\tau)\biggl[
+      \frac{dr^2}{1 - k\,r^2}
+      + r^2\bigl(d\theta^2
+      + \sin^2\!\theta\, d\phi^2\bigr)
+    \biggr]}
+\end{equation}
+where the \textbf{curvature parameter}
+\begin{equation}\label{eq:k-values}
+  k =
+  \begin{cases}
+    +1 & \text{(three-sphere, closed universe)}\,,\\
+    \phantom{+}0 & \text{(flat space, open universe)}\,,\\
+    -1 & \text{(hyperboloid, open universe)}\,.
+  \end{cases}
+\end{equation}
+
+\begin{exercise}\label{ex:flrw-unified}
+  Verify that~\eqref{eq:flrw-unified} with $k = +1$ reduces to the
+  $S^3$ metric~\eqref{eq:metric-S3} under the substitution
+  $r = \sin\psi$, and that $k = -1$ gives the $H^3$
+  metric~\eqref{eq:metric-H3} under $r = \sinh\psi$.
+\end{exercise}
+
+\begin{intuition}[The road ahead]
+  We now have the metric~\eqref{eq:flrw-unified} and the
+  stress-energy tensor~\eqref{eq:perfect-fluid-cosmo}, and we know
+  that Einstein's equations reduce to just two independent
+  equations~\eqref{eq:friedmann-tt}--\eqref{eq:friedmann-ss}.  What
+  remains is an explicit but mechanical calculation: compute the
+  Christoffel symbols from~\eqref{eq:flrw-unified}, build the
+  Riemann and Ricci tensors, form the Einstein tensor, substitute
+  into~\eqref{eq:friedmann-tt}--\eqref{eq:friedmann-ss}, and arrive
+  at ordinary differential equations for~$a(\tau)$.  These are the
+  \textbf{Friedmann equations}, and---remarkably---they can be
+  solved.  That calculation is the subject of the next lecture.
+\end{intuition}
