@@ -17,10 +17,14 @@ derivatives are negligible, and recovered Newton's law of gravitation.
 
 In general relativity, however, the gravitational field is a
 \emph{dynamical} entity: unlike in Newtonian theory, the geometry
-itself can change with time.  This opens the possibility of
+itself can change with time.  Just as the electromagnetic field in
+Maxwell's theory supports wave-like solutions, the dynamical nature
+of the gravitational field opens the possibility of
 \textbf{gravitational radiation}---wave-like solutions of the
 linearised vacuum Einstein equations that propagate at the speed
-of light, analogous to electromagnetic radiation in Maxwell's theory.
+of light.  We can already study gravitational radiation at the
+linearised level of approximation; the full nonlinear theory adds
+corrections but the essential physics is captured here.
 
 \begin{intuition}[Gravitational waves as ripples in spacetime]
   In electrodynamics, accelerating charges produce electromagnetic
@@ -135,7 +139,9 @@ not just on the initial surface, but at all times.
 
 We now seek wave-like solutions of the vacuum equation
 $\dalem\,\gamma_{ab} = 0$ (recall $\bar\gamma = \gamma$ in the
-radiation gauge).  We make the standard plane-wave ansatz:
+radiation gauge).  The way we find waves is the way we \emph{always}
+find waves: we make a plane-wave ansatz and substitute it into the
+field equations to see what conditions emerge.  Specifically:
 \begin{equation}\label{eq:plane-wave-ansatz}
   \gamma_{ab} = H_{ab}\, e^{i\, k_\mu x^\mu}\,,
 \end{equation}
@@ -187,6 +193,10 @@ conditions?
   \end{equation}
   linearly independent polarization states.  These are the
   $+$ (``plus'') and $\times$ (``cross'') polarizations.
+  Two is bigger than zero!  It is a striking prediction of
+  Einstein's theory that the gravitational field has dynamical,
+  wave-like solutions---a feature entirely absent from Newtonian
+  gravity.
 \end{keyresult}
 
 \begin{exercise}\label{ex:verify-dep}
@@ -198,8 +208,11 @@ conditions?
 \subsection{No gravitational waves in $(2{+}1)$ dimensions}%
 \label{sec:no-waves-2+1}
 
-The degree-of-freedom count is dimension-dependent.  In
-$(2{+}1)$-dimensional spacetime:
+The degree-of-freedom count is dimension-dependent, and it is
+particularly interesting---and highly relevant for current
+investigations into quantum gravity---to ask whether gravitational
+waves exist in lower dimensions.  In $(2{+}1)$-dimensional
+spacetime:
 \begin{itemize}
   \item A symmetric $(0,2)$ tensor has $6$ independent components.
   \item The gauge conditions impose $6$ independent constraints.
@@ -207,9 +220,9 @@ $(2{+}1)$-dimensional spacetime:
     gravitational waves} in $(2{+}1)$~dimensions.
 \end{itemize}
 
-This can also be understood from the structure of the curvature
-tensor.  In $(2{+}1)$ dimensions, the Riemann tensor is completely
-determined by the Ricci tensor and scalar:
+We could, in fact, have guessed this result without any
+calculation.  In $(2{+}1)$ dimensions, the Riemann tensor is
+completely determined by the Ricci tensor and scalar:
 \begin{equation}\label{eq:riemann-2+1}
   R_{abcd} = g_{ac}\, R_{bd} + g_{bd}\, R_{ac}
     - g_{bc}\, R_{ad} - g_{ad}\, R_{bc}
@@ -217,7 +230,18 @@ determined by the Ricci tensor and scalar:
 \end{equation}
 This identity holds because the \textbf{Weyl tensor}~$C_{abcd}$
 (the completely trace-free part of the Riemann tensor) vanishes
-identically in three dimensions.
+identically in three dimensions.  To see why, recall that the
+Riemann tensor may be decomposed into a part determined by~$R_{ab}$
+and~$R$, plus a completely trace-free remainder---the Weyl tensor.
+In $(2{+}1)$ dimensions a component count shows that the Weyl tensor
+has zero independent components, so it must vanish.
+
+\begin{exercise}\label{ex:weyl-2+1}
+  Verify the vanishing of the Weyl tensor in $(2{+}1)$ dimensions by
+  counting the independent components of the Riemann tensor (using
+  its symmetries) and comparing with the number of independent
+  components of the Ricci tensor.
+\end{exercise}
 
 \begin{intuition}[Why the Weyl tensor matters]
   The Riemann tensor can be decomposed into a part determined by the
@@ -240,6 +264,9 @@ identically in three dimensions.
 \subsection{Experimental detection}%
 \label{sec:gw-detection}
 
+It is impossible to discuss gravitational radiation without
+mentioning one of the most dramatic discoveries of modern physics.
+
 \begin{historical}[LIGO and the first direct detection]
   Gravitational waves were predicted by Einstein in 1916 and
   indirectly confirmed by the Hulse--Taylor binary pulsar
@@ -255,9 +282,11 @@ identically in three dimensions.
   $29$ solar masses.  The detection was made possible by a laser
   interferometer with arm lengths of $4\,\text{km}$, capable of
   measuring displacements of order $10^{-18}\,\text{m}$---roughly
-  one-thousandth the diameter of a proton.  The 2017 Nobel Prize in
-  Physics was awarded to Rainer Weiss, Barry Barish, and Kip Thorne
-  for this discovery.
+  one-thousandth the diameter of a proton.  A significant portion
+  of the data analysis was carried out in Hannover, Germany, at the
+  Albert Einstein Institute.  The 2017 Nobel Prize in Physics was
+  awarded to Rainer Weiss, Barry Barish, and Kip Thorne for this
+  discovery.
 \end{historical}
 
 % ══════════════════════════════════════════════════════════════
@@ -267,17 +296,24 @@ identically in three dimensions.
 \section{Homogeneous isotropic cosmology}%
 \label{sec:cosmology}
 
-We now turn from perturbative solutions to the ambitious programme
-of finding \emph{exact} solutions of Einstein's field equations that
-describe the large-scale structure of the entire universe.
+We now turn from perturbative solutions to a far more ambitious
+programme: finding \emph{exact} solutions of Einstein's field
+equations that describe the large-scale structure of the entire
+universe.  Our goal is to be as bold as possible---to extend the
+domain of applicability of Einstein's equations to the cosmos as a
+whole, to make a model of how matter is distributed throughout the
+universe, and then to solve the field equations.
 
-An arbitrary matter distribution makes Einstein's equations
-hopelessly complicated.  Progress requires symmetry assumptions.
+Obviously we cannot do this for an arbitrary matter distribution:
+Einstein's equations are far too complicated.  Instead we impose
+massive simplifications in the form of symmetry assumptions.
 The key observational fact is that, on sufficiently large scales
 (hundreds of megaparsecs), the distribution of matter in the
-universe appears remarkably uniform: there is no preferred location
-and no preferred direction.  We formalise these observations as the
-assumptions of \textbf{homogeneity} and \textbf{isotropy}.
+universe appears remarkably uniform: whether a star is here or
+there does not matter if one averages on galactic length scales.
+There is no preferred location and no preferred direction.  We
+formalise these observations as the assumptions of
+\textbf{homogeneity} and \textbf{isotropy}.
 
 \begin{intuition}[Why we can model the universe]
   Obviously the universe is \emph{not} homogeneous and isotropic on
@@ -337,14 +373,17 @@ point.
 \subsection{Isotropy}%
 \label{sec:isotropy}
 
-Before defining isotropy, we note an important subtlety: if one
-observer at a point~$p$ sees an isotropic universe, a
-\emph{boosted} observer at the same point generally does not.  The
-boost introduces a preferred direction (the velocity of the boosted
-observer relative to the matter), and length contraction distorts
-the matter distribution along the direction of motion.  Therefore,
-isotropy is a condition tied to a \emph{specific family of
-observers}.
+Before defining isotropy, we note an important subtlety.  Imagine
+the universe is filled with an isotropic distribution of matter and
+there is at least one observer at a point~$p$ who sees the universe
+as isotropic.  Can there be another observer at the same point who
+also sees isotropy?  The answer is \emph{no}: any boosted observer
+perceives the background matter distribution as distorted---thanks
+to length contraction, the stress-energy appears concentrated in the
+directions perpendicular to the boost, destroying isotropy.
+Therefore, at each point there is \emph{at most one} observer who
+perceives the universe as isotropic, and our definition must refer
+to this preferred family of observers.
 
 \begin{definition}[Spatially isotropic spacetime]%
   \label{def:isotropic}
