@@ -7,16 +7,17 @@ Public: https://github.com/tobiasosborne/generalrelativity (Apache 2.0)
 
 ## Status
 
-13 of 23 lectures converted (+ 1 supplementary note). 74 pages total.
+14 of 23 lectures converted (+ 1 supplementary note). 78 pages total.
 Lectures 1–11 enriched with transcript material.
-Lectures 12–13 created via full workflow (PDF + transcript).
+Lectures 12–14 created via full workflow (PDF + transcript).
 Julia simulation pipeline operational: 3 scripts generating data-driven pgfplots figures.
+Interactive web version: trial deployed at https://tobiasosborne.github.io/generalrelativity/ (Lecture 3 + interactive geodesic figure).
 Build tool: `./build.sh` with `--cmfonts`, `--draft`, `--simdata`, `--full`, `--clean`, `--watch` options.
 
 | Done | Transcript-enriched | Next |
 |------|---------------------|------|
-| Lec 1: Prerelativity gravitation + Lagrange point figure | ✓ | Lec 14: Gravitational radiation |
-| Lec 2: Equivalence principle & Mach + geodesic bump figure | ✓ | Lec 15–18: Schwarzschild solution & geodesics |
+| Lec 1: Prerelativity gravitation + Lagrange point figure | ✓ | Lec 15–18: Schwarzschild solution & geodesics |
+| Lec 2: Equivalence principle & Mach + parallel geodesic bump figure | ✓ | Lec 19–22: FLRW cosmology |
 | Lec 3: Manifolds + ellipsoid geodesics figure | ✓ | |
 | Lec 4: Tangent space | ✓ | |
 | Lec 5: Flows and tensors | ✓ | |
@@ -28,6 +29,7 @@ Build tool: `./build.sh` with `--cmfonts`, `--draft`, `--simdata`, `--full`, `--
 | Lec 11: Riemann symmetries, Bianchi, Ricci, Einstein tensor, geodesic deviation | ✓ | |
 | Lec 12: Lie derivatives, Killing vectors, Einstein's eqs, linearised gravity, Newtonian limit | ✓ | |
 | Lec 13: Properties of EFE, linearised derivation details, maps between manifolds | ✓ | |
+| Lec 14: Gravitational radiation (TT gauge, plane waves, polarizations, 2+1d, LIGO), homogeneity & isotropy | ✓ | |
 | Note: ∂_a as covariant derivative | | |
 
 ## Lecture-to-PDF mapping

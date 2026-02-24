@@ -1,0 +1,419 @@
+%!TEX root = ../GeneralRelativity.tex
+% ──────────────────────────────────────────────────────────────
+%  Lecture 14 — Gravitational radiation and the beginning of
+%              cosmology
+% ──────────────────────────────────────────────────────────────
+
+\section{Gravitational radiation}%
+\label{sec:gravitational-radiation}
+
+In the previous two lectures we linearised Einstein's field equations
+around flat spacetime and showed that in the Lorenz
+gauge~\eqref{eq:lorenz-gauge} they reduce to the wave
+equation~\eqref{eq:linearised-wave},
+$\dalem\,\bar\gamma_{ab} = -16\pi\, T_{ab}$.
+We then studied the \emph{static} Newtonian limit, where time
+derivatives are negligible, and recovered Newton's law of gravitation.
+
+In general relativity, however, the gravitational field is a
+\emph{dynamical} entity: unlike in Newtonian theory, the geometry
+itself can change with time.  This opens the possibility of
+\textbf{gravitational radiation}---wave-like solutions of the
+linearised vacuum Einstein equations that propagate at the speed
+of light, analogous to electromagnetic radiation in Maxwell's theory.
+
+\begin{intuition}[Gravitational waves as ripples in spacetime]
+  In electrodynamics, accelerating charges produce electromagnetic
+  waves.  In general relativity, accelerating masses produce
+  gravitational waves: ripples in the spacetime metric that propagate
+  outward at speed~$c$.  Just as electromagnetic waves carry energy
+  and momentum, gravitational waves carry energy away from their
+  source, causing (for instance) binary star systems to spiral
+  inward.  The key difference is that gravitational waves are
+  perturbations of the \emph{metric itself}, not of a field
+  propagating \emph{on} a fixed background.
+\end{intuition}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Residual gauge freedom}%
+\label{sec:residual-gauge}
+
+Recall from \S\ref{sec:gauge-lorenz} that in the Lorenz gauge we
+have:
+\begin{align}
+  &\text{Gauge condition:} &
+    \partial^a \bar\gamma_{ab} &= 0\,,
+      \label{eq:lorenz-recall}\\[4pt]
+  &\text{Field equation:} &
+    \partial^c \partial_c\, \bar\gamma_{ab} &= -16\pi\, T_{ab}\,.
+      \label{eq:wave-recall}
+\end{align}
+The Lorenz condition does \emph{not} completely fix the gauge.  We
+are still free to perform gauge transformations
+\begin{equation}\label{eq:residual-gauge}
+  \gamma_{ab} \;\longrightarrow\;
+    \gamma_{ab} + \partial_a \xi_b + \partial_b \xi_a
+\end{equation}
+provided the vector field $\xi^a$ satisfies
+\begin{equation}\label{eq:residual-condition}
+  \partial^b \partial_b\, \xi^a = 0\,.
+\end{equation}
+This is precisely the condition that ensures the new perturbation
+still satisfies the Lorenz gauge~\eqref{eq:lorenz-recall}.
+
+\begin{remark}
+  The situation is directly analogous to electrodynamics in the
+  Lorenz gauge $\partial_\mu A^\mu = 0$: one may still perform gauge
+  transformations $A_\mu \to A_\mu + \partial_\mu \Lambda$ provided
+  $\dalem\, \Lambda = 0$.  The residual gauge freedom allows us to
+  impose additional simplifying conditions on the perturbation.
+\end{remark}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{The radiation gauge (transverse-traceless gauge)}%
+\label{sec:radiation-gauge}
+
+We exploit the residual freedom~\eqref{eq:residual-condition} to
+impose the \textbf{radiation gauge} conditions:
+\begin{equation}\label{eq:radiation-gauge}
+  \gamma = 0\,,\qquad
+  \gamma_{0j} = 0\,,
+  \qquad j = 1, 2, 3\,,
+\end{equation}
+where $\gamma = \gamma^a{}_a = \eta^{ab}\,\gamma_{ab}$ is the trace.
+The condition $\gamma = 0$ implies $\bar\gamma_{ab} = \gamma_{ab}$
+(the trace-reversal is trivial when the trace vanishes), and the
+Lorenz condition $\partial^a \bar\gamma_{ab} = 0$ then further
+constrains the spatial components.
+
+The radiation gauge is achieved by solving an initial-value problem
+for~$\xi^\mu$ on a fixed initial surface~$t = t_0$.  One solves:
+\begin{alignat}{2}
+  2\Bigl(-\pd{\xi_0}{t} + \nabla\cdot\boldsymbol{\xi}\Bigr)
+    &= -\gamma\,,
+    &\qquad&\text{(fixes trace)}
+    \label{eq:rad-gauge-trace}\\[4pt]
+  \pd{\xi_\mu}{t} + \pd{\xi_0}{x^\mu}
+    &= -\gamma_{0\mu}\,,
+    &\qquad&\mu = 1, 2, 3\,,
+    \label{eq:rad-gauge-0j}\\[4pt]
+  \nabla^2 \xi_\mu
+    + \pd{}{x^\mu}\Bigl(\pd{\xi_0}{t}\Bigr)
+    &= -\pd{\gamma_{0\mu}}{t}\,,
+    &\qquad&\mu = 1, 2, 3\,.
+    \label{eq:rad-gauge-deriv}
+\end{alignat}
+Given initial data $\xi_\mu$ and $\partial_t \xi_\mu$ on
+$t = t_0$, one solves the wave equation $\dalem\,\xi^a = 0$
+to propagate the gauge transformation throughout spacetime.  One
+then verifies (exercise) that the radiation gauge conditions hold
+not just on the initial surface, but at all times.
+
+\begin{keyresult}[Complete gauge fixing in vacuum]
+  If $T_{ab} = 0$ \textbf{everywhere} (not just in a region), then
+  one can further achieve
+  \begin{equation}\label{eq:gamma00-vanish}
+    \gamma_{00} = 0\,.
+  \end{equation}
+  This follows because $\gamma = 0$ implies
+  $\bar\gamma_{0b} = \gamma_{0b}$, and the Lorenz
+  condition~\eqref{eq:lorenz-recall} then gives
+  $\partial_t \gamma_{00} = 0$.  The field
+  equation~\eqref{eq:wave-recall} with $T_{00} = 0$ reduces to
+  $\nabla^2 \gamma_{00} = 0$, whose unique bounded solution is
+  $\gamma_{00} = \text{const}$.  A constant shift of $\gamma_{00}$
+  is always permissible, so we set $\gamma_{00} = 0$.
+  In this \textbf{transverse-traceless (TT) gauge}, the only
+  non-vanishing components of $\gamma_{ab}$ are the purely spatial
+  ones $\gamma_{ij}$, which are traceless and transverse
+  ($\partial^i \gamma_{ij} = 0$).
+\end{keyresult}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Plane wave solutions}%
+\label{sec:plane-waves}
+
+We now seek wave-like solutions of the vacuum equation
+$\dalem\,\gamma_{ab} = 0$ (recall $\bar\gamma = \gamma$ in the
+radiation gauge).  We make the standard plane-wave ansatz:
+\begin{equation}\label{eq:plane-wave-ansatz}
+  \gamma_{ab} = H_{ab}\, e^{i\, k_\mu x^\mu}\,,
+\end{equation}
+where $H_{ab}$ is a constant symmetric tensor (the
+\textbf{polarization tensor}) and $k_\mu$ is the wave four-vector.
+
+Substituting into the wave equation $\dalem\,\gamma_{ab} = 0$:
+\begin{equation}\label{eq:null-wavevector}
+  \eqbox{k^\mu k_\mu = 0}
+\end{equation}
+---the wave vector is \textbf{null}.  Gravitational waves propagate
+at the speed of light.
+
+The gauge conditions~\eqref{eq:lorenz-recall}
+and~\eqref{eq:radiation-gauge} impose the following constraints on
+the polarization tensor:
+\begin{alignat}{2}
+  &\text{(a)}\quad k^\mu\, H_{\mu\nu} = 0\,,
+    &\qquad&\text{(Lorenz gauge)}
+    \label{eq:pol-lorenz}\\[3pt]
+  &\text{(b)}\quad H_{0\nu} = 0\,,
+    &\qquad&\text{(radiation gauge)}
+    \label{eq:pol-0nu}\\[3pt]
+  &\text{(c)}\quad H^\mu{}_\mu = 0\,.
+    &\qquad&\text{(tracelessness)}
+    \label{eq:pol-traceless}
+\end{alignat}
+
+% ──────────────────────────────────────────────────────────────
+\subsubsection{Counting the degrees of freedom}%
+\label{sec:polarization-count}
+
+A symmetric $(0,2)$ tensor in four dimensions has $10$ independent
+components.  How many survive the gauge and transversality
+conditions?
+
+\begin{itemize}
+  \item Condition~(a): $4$ equations (one for each value of~$\nu$).
+  \item Condition~(b): $4$ equations ($\nu = 0, 1, 2, 3$).
+  \item Condition~(c): $1$ equation.
+  \item Total: $9$ equations, but (a) and~(b) together imply
+    $H_{0\nu}\, k^\nu = 0$, so only $\mathbf{8}$ are independent.
+\end{itemize}
+
+\begin{keyresult}[Two polarizations]
+  A plane gravitational wave has
+  \begin{equation}\label{eq:two-polarizations}
+    10 - 8 = 2
+  \end{equation}
+  linearly independent polarization states.  These are the
+  $+$ (``plus'') and $\times$ (``cross'') polarizations.
+\end{keyresult}
+
+\begin{exercise}\label{ex:verify-dep}
+  Show that conditions~(a) and~(b) are not independent by verifying
+  that both imply $H_{0\nu}\, k^\nu = 0$.
+\end{exercise}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{No gravitational waves in $(2{+}1)$ dimensions}%
+\label{sec:no-waves-2+1}
+
+The degree-of-freedom count is dimension-dependent.  In
+$(2{+}1)$-dimensional spacetime:
+\begin{itemize}
+  \item A symmetric $(0,2)$ tensor has $6$ independent components.
+  \item The gauge conditions impose $6$ independent constraints.
+  \item Result: $6 - 6 = 0$ degrees of freedom---\textbf{no
+    gravitational waves} in $(2{+}1)$~dimensions.
+\end{itemize}
+
+This can also be understood from the structure of the curvature
+tensor.  In $(2{+}1)$ dimensions, the Riemann tensor is completely
+determined by the Ricci tensor and scalar:
+\begin{equation}\label{eq:riemann-2+1}
+  R_{abcd} = g_{ac}\, R_{bd} + g_{bd}\, R_{ac}
+    - g_{bc}\, R_{ad} - g_{ad}\, R_{bc}
+    - \tfrac{1}{2}\,(g_{ac}\, g_{bd} - g_{ad}\, g_{bc})\, R\,.
+\end{equation}
+This identity holds because the \textbf{Weyl tensor}~$C_{abcd}$
+(the completely trace-free part of the Riemann tensor) vanishes
+identically in three dimensions.
+
+\begin{intuition}[Why the Weyl tensor matters]
+  The Riemann tensor can be decomposed into a part determined by the
+  Ricci tensor (and hence, via Einstein's equations, by the local
+  matter content) and a trace-free part---the Weyl tensor---that
+  encodes the ``free'' gravitational field.  In four dimensions, the
+  Weyl tensor has $10$ independent components, which carry the two
+  polarization degrees of freedom of gravitational waves.  In three
+  dimensions, the Weyl tensor has $0$ components: there is no room
+  for freely propagating gravitational degrees of freedom.
+
+  The vacuum Einstein equations in $(2{+}1)$ dimensions give
+  $R_{ab} = 0$ and hence $R = 0$;
+  equation~\eqref{eq:riemann-2+1} then forces
+  $R_{abcd} = 0$---the spacetime is \emph{flat}.  Gravity in
+  $(2{+}1)$ dimensions has no local degrees of freedom whatsoever.
+\end{intuition}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Experimental detection}%
+\label{sec:gw-detection}
+
+\begin{historical}[LIGO and the first direct detection]
+  Gravitational waves were predicted by Einstein in 1916 and
+  indirectly confirmed by the Hulse--Taylor binary pulsar
+  observations (Nobel Prize 1993), which showed the orbital decay
+  rate matching the energy loss to gravitational radiation predicted
+  by general relativity.
+
+  The first \emph{direct} detection of gravitational waves was
+  announced on 11~February 2016 by the LIGO and Virgo
+  collaborations.  The signal, designated GW150914, was detected on
+  14~September 2015 and matched the waveform predicted for the
+  inspiral and merger of two black holes of approximately $36$ and
+  $29$ solar masses.  The detection was made possible by a laser
+  interferometer with arm lengths of $4\,\text{km}$, capable of
+  measuring displacements of order $10^{-18}\,\text{m}$---roughly
+  one-thousandth the diameter of a proton.  The 2017 Nobel Prize in
+  Physics was awarded to Rainer Weiss, Barry Barish, and Kip Thorne
+  for this discovery.
+\end{historical}
+
+% ══════════════════════════════════════════════════════════════
+%  Part 2: Beginning of cosmology
+% ══════════════════════════════════════════════════════════════
+
+\section{Homogeneous isotropic cosmology}%
+\label{sec:cosmology}
+
+We now turn from perturbative solutions to the ambitious programme
+of finding \emph{exact} solutions of Einstein's field equations that
+describe the large-scale structure of the entire universe.
+
+An arbitrary matter distribution makes Einstein's equations
+hopelessly complicated.  Progress requires symmetry assumptions.
+The key observational fact is that, on sufficiently large scales
+(hundreds of megaparsecs), the distribution of matter in the
+universe appears remarkably uniform: there is no preferred location
+and no preferred direction.  We formalise these observations as the
+assumptions of \textbf{homogeneity} and \textbf{isotropy}.
+
+\begin{intuition}[Why we can model the universe]
+  Obviously the universe is \emph{not} homogeneous and isotropic on
+  small scales---galaxies, stars, and planets manifestly break the
+  symmetry.  But on scales much larger than the typical separation
+  between galaxies ($\sim 1\,\text{Mpc}$), the matter distribution
+  averages out and looks very nearly uniform.  The most compelling
+  evidence for isotropy is the cosmic microwave background radiation,
+  which is uniform to one part in $10^5$ across the sky.  We will
+  exploit this large-scale uniformity to reduce Einstein's ten
+  coupled PDEs to a small number of ordinary differential equations.
+\end{intuition}
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Homogeneity}%
+\label{sec:homogeneity}
+
+\begin{definition}[Homogeneous spacetime]\label{def:homogeneous}
+  A spacetime $(\M, g_{ab})$ is \textbf{homogeneous} if there exists
+  a one-parameter foliation of~$\M$ by spacelike
+  hypersurfaces~$\Sigma_t$ such that, for each~$t$ and any two
+  points $p, q \in \Sigma_t$, there exists an isometry
+  of~$g_{ab}$ that maps $p$ to~$q$.
+\end{definition}
+
+\begin{center}
+\begin{tikzpicture}[>=Stealth, thick, scale=0.85]
+  % Leaves
+  \foreach \y/\lab in {0/$\Sigma_{t_1}$, 1.6/$\Sigma_{t_2}$,
+    3.2/$\Sigma_{t_3}$} {
+    \draw[spacecadet!60, fill=cgblue!4]
+      (0,\y) -- (6,\y) -- (6.8,\y+0.6) -- (0.8,\y+0.6) -- cycle;
+    \node[font=\scriptsize, text=spacecadet] at (-0.4,\y+0.3) {\lab};
+  }
+  % Points p, q on bottom leaf
+  \node[circle, fill=banana, inner sep=1.5pt,
+    label={below:\scriptsize $p$}] (p) at (2.0,0.25) {};
+  \node[circle, fill=banana, inner sep=1.5pt,
+    label={below:\scriptsize $q$}] (q) at (4.8,0.35) {};
+  \draw[->, cgblue, thick] (p) to[out=20,in=160]
+    node[above, font=\scriptsize]{$\phi$} (q);
+  % Timeline curves
+  \foreach \x in {1.5, 3.0, 4.5} {
+    \draw[munsell!50, thick, ->]
+      (\x,0.1) -- (\x+0.6,3.7);
+  }
+  \node[font=\scriptsize, text=munsell] at (5.8,3.5) {$u^a$};
+\end{tikzpicture}
+\end{center}
+
+Physically, homogeneity says: \emph{we do not occupy a privileged
+position in the universe}.  At any given cosmological time~$t$, the
+geometry of the spatial slice $\Sigma_t$ looks the same at every
+point.
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Isotropy}%
+\label{sec:isotropy}
+
+Before defining isotropy, we note an important subtlety: if one
+observer at a point~$p$ sees an isotropic universe, a
+\emph{boosted} observer at the same point generally does not.  The
+boost introduces a preferred direction (the velocity of the boosted
+observer relative to the matter), and length contraction distorts
+the matter distribution along the direction of motion.  Therefore,
+isotropy is a condition tied to a \emph{specific family of
+observers}.
+
+\begin{definition}[Spatially isotropic spacetime]%
+  \label{def:isotropic}
+  A spacetime $(\M, g_{ab})$ is \textbf{spatially isotropic at each
+  point} if there exists a congruence of timelike curves filling~$\M$
+  with tangent vector field~$u^a$ such that, for all $p \in \M$ and
+  any two unit spacelike vectors $s_1^a, s_2^a \in T_p\M$ orthogonal
+  to~$u^a$ (i.e.\ $u^a s_{1\,a} = u^a s_{2\,a} = 0$), there exists
+  an isometry of~$g_{ab}$ that leaves $p$ and $u^a$ fixed but
+  maps $s_1^a \mapsto s_2^a$.
+\end{definition}
+
+Isotropy says: \emph{there is no preferred spatial direction}.  No
+matter which way the preferred observer looks, the universe appears
+the same.
+
+% ──────────────────────────────────────────────────────────────
+\subsection{Combining homogeneity and isotropy}%
+\label{sec:hom-iso-combined}
+
+\begin{keyresult}[Orthogonality of foliation and observers]
+  For a spacetime that is both homogeneous and isotropic, the
+  hypersurfaces $\Sigma_t$ of the homogeneity foliation must be
+  everywhere orthogonal to the tangent vectors~$u^a$ of the
+  isotropic observers.
+
+  If this were not the case, the component of~$u^a$ tangent to
+  $\Sigma_t$ would define a geometrically preferred spatial direction
+  at each point, violating isotropy.
+\end{keyresult}
+
+\begin{center}
+\begin{tikzpicture}[>=Stealth, thick, scale=0.85]
+  % Leaves
+  \foreach \y/\lab in {0/$\Sigma_t$, 2.2/} {
+    \draw[spacecadet!60, fill=cgblue!4]
+      (0,\y) -- (6,\y) -- (6.8,\y+0.6) -- (0.8,\y+0.6) -- cycle;
+  }
+  \node[font=\scriptsize, text=spacecadet] at (-0.4,0.3) {$\Sigma_t$};
+  % Observer at p
+  \node[circle, fill=banana, inner sep=1.5pt,
+    label={below:\scriptsize $p$}] (p) at (3.0,0.25) {};
+  % u^a (vertical)
+  \draw[->, munsell, very thick] (3.0,0.25) -- (3.4,2.2)
+    node[right, font=\scriptsize]{$u^a$};
+  % Spatial vectors
+  \draw[->, cgblue] (3.0,0.25) -- (4.5,0.45)
+    node[right, font=\scriptsize]{$s_1^a$};
+  \draw[->, cgblue] (3.0,0.25) -- (2.8,0.9)
+    node[left, font=\scriptsize]{$s_2^a$};
+  % Isometry arc
+  \draw[->, spacecadet!60, dashed] (4.2,0.6)
+    to[out=90,in=0] (3.0,1.1)
+    to[out=180,in=90] (2.6,0.75);
+  \node[font=\scriptsize, text=spacecadet!60] at (4.6,1.0) {isometry};
+  % Points p, q on bottom leaf
+  \node[circle, fill=banana, inner sep=1.5pt,
+    label={below:\scriptsize $q$}] (q) at (5.2,0.35) {};
+  \draw[->, cgblue!50, thick] (p) to[out=10,in=170]
+    node[above, font=\scriptsize]{$\phi$} (q);
+\end{tikzpicture}
+\end{center}
+
+\medskip
+The combination of homogeneity and isotropy is extraordinarily
+powerful.  It implies that the spatial geometry of each
+slice~$\Sigma_t$ is a \emph{maximally symmetric} three-dimensional
+Riemannian manifold---and there are only three possibilities:
+flat space ($\mathbb{R}^3$), the three-sphere ($S^3$), or hyperbolic
+space ($H^3$).  In the next lecture, we will exploit this to derive
+the Friedmann--Lema\^itre--Robertson--Walker metric and the
+Friedmann equations that govern the expansion of the universe.
