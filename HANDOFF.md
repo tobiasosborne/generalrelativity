@@ -7,7 +7,7 @@ Public: https://github.com/tobiasosborne/generalrelativity (Apache 2.0)
 
 ## Status
 
-**Course complete.** All 23 lectures converted (+ 1 supplementary note). 102 pages total, zero errors.
+**Course complete.** All 23 lectures converted (+ 1 supplementary note + 1 addendum). 108 pages total, zero errors.
 
 - Lectures 1–11: enriched with transcript material from earlier conversion pass.
 - Lectures 12–23: created via full workflow (handwritten PDF + auto-generated transcript).
@@ -43,6 +43,7 @@ Public: https://github.com/tobiasosborne/generalrelativity (Apache 2.0)
 | 22 | Null geodesics: photon sphere r=3M, capture cross section σ=27πM², light deflection δφ=4M/b (Sun 1.75″), 1919 eclipse | ✓ |
 | 23 | Retrospective: 4 axioms, 3 solution strategies, experimental pillars table, advanced topics, closing meditation | ✓ |
 | Note | ∂_a as covariant derivative (supplementary) | |
+| A1 | Addendum: energy-momentum tensor from microscopics — rigorous distributional construction via coarea formula (Federer) | ✓ |
 
 ## PDF-to-tex mapping
 
@@ -72,6 +73,7 @@ Transcript-to-tex mapping for lectures 12–22:
 
 - **Primary**: Wald, *General Relativity* (1984) — notes follow Wald closely
 - **Differential geometry**: Warner, *Foundations of Differentiable Manifolds and Lie Groups* (1971)
+- **Geometric measure theory**: Federer, *Geometric Measure Theory* (1969) — coarea formula, slicing theorem (Addendum A1)
 - MTW and others are supplementary, NOT primary sources of truth
 
 ## Project structure
@@ -82,9 +84,10 @@ latex/
   gr-style.sty                # Formatting: fonts, colors, theorem envs, tcolorbox
   gr-macros.sty               # GR macro library + TikZ presets
   gr-tikz-templates.sty       # pgfplots styles, colormaps, standard dims, \pic defs
-  references.bib              # Bibliography (Wald, MTW, Weinberg, TLL73)
+  references.bib              # Bibliography (Wald, MTW, Weinberg, TLL73, Federer)
   lectures/
     lec01.tex – lec23.tex     # All 23 lectures
+    lecA1.tex                 # Addendum: EMT from microscopics (coarea formula)
   notes/
     note_da_covariant_derivative.tex
   figures/
