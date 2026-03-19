@@ -1,0 +1,94 @@
+% ──────────────────────────────────────────────────────────────
+\subsection{Slicing by an arbitrary spacelike hypersurface}%
+\label{sec:general-slicing}
+
+The equivalence of the covariant and $3{+}1$ forms does not depend
+on the particular choice of time coordinate~$x^0$.  We now state
+the general result, which applies to arbitrary spacelike
+hypersurfaces and extends naturally to curved spacetimes.
+
+\begin{theorem}[General slicing theorem]%
+\label{thm:general-slicing}
+  Let $\Sigma = f^{-1}(0)$ be a smooth spacelike Cauchy surface
+  in~$(\Rn{4},\eta)$, defined as a level set of a smooth function
+  $f\colon\Rn{4}\to\R$ with $\nabla f$ everywhere timelike
+  (that is, $\eta^{\alpha\beta}\partial_\alpha f\,\partial_\beta f < 0$).
+  Then each worldline~$\gamma_j$ intersects~$\Sigma$
+  transversally at a unique point
+  $\gamma_j(\tau_j^\ast)$, and the restriction (``slice'') of
+  $T^{\alpha\beta}$ to~$\Sigma$ satisfies
+  \begin{equation}\label{eq:general-slicing}
+    T^{\alpha\beta}\big|_\Sigma(\vb{y})
+      = \sum_{j=1}^{N}
+        \frac{p_j^\alpha(\tau_j^\ast)\,
+              \dot\gamma_j^\beta(\tau_j^\ast)}
+             {\bigl|\partial_\gamma f\,
+              \dot\gamma_j^\gamma(\tau_j^\ast)\bigr|}\,
+        \delta_\Sigma(\vb{y} - \vb{y}_j)\,,
+  \end{equation}
+  where $\vb{y}$ denotes coordinates on~$\Sigma$, $\vb{y}_j$ is
+  the location of the $j$-th crossing on~$\Sigma$, and
+  $\delta_\Sigma$ is the delta function with respect to the
+  Riemannian measure on~$\Sigma$ induced by the ambient Minkowski
+  metric; since $\Sigma$ is spacelike, this induced metric is
+  positive definite.  (This coincides with the $3$-dimensional
+  Hausdorff measure~$\mathcal{H}^3$ restricted to~$\Sigma$, up
+  to identification of~$\Sigma$ with~$\R^3$ via coordinates.)
+\end{theorem}
+
+\begin{proof}[Sketch of proof]
+  \emph{Transversality.}\enspace
+  The covector field $\partial_\alpha f$ satisfies
+  $\eta^{\alpha\beta}\partial_\alpha f\,\partial_\beta f < 0$
+  (timelike), and the tangent vector $\dot\gamma^\alpha$ is also
+  timelike.  By the reverse Cauchy--Schwarz inequality for
+  Lorentzian inner products (see, e.g.,
+  O'Neill~\cite[Prop.~5.30]{ONeill83}: if $u,v$ are both
+  timelike and in the same time-cone, decompose in an orthonormal
+  frame where $u = (u^0,0,0,0)$; then
+  $|g(u,v)| = |u^0||v^0| \ge |u||v|$ since
+  $|v^0| \ge |v_{\text{spatial}}|$), the contraction
+  $\partial_\gamma f \cdot \dot\gamma^\gamma \neq 0$.  This
+  establishes transversality.
+
+  \emph{Uniqueness of intersection.}\enspace
+  Consider the composition $h = f\circ\gamma\colon\R\to\R$.
+  Its derivative $h'(\tau) = \partial_\gamma f\bigl(\gamma(\tau)\bigr)
+  \,\dot\gamma^\gamma(\tau)$ is nonzero everywhere by
+  transversality, and has constant sign by continuity (since
+  $\R$ is connected).  Hence $h$ is strictly monotone, so
+  $h^{-1}(0)$ contains at most one point.  Existence of the
+  crossing follows from the Cauchy-surface hypothesis: by
+  definition, every inextendible timelike curve meets a Cauchy
+  surface, so each complete worldline~$\gamma_j$ intersects
+  $\Sigma = f^{-1}(0)$ at least---hence exactly---once.
+
+  \emph{Slicing and the coarea formula.}\enspace
+  The proof proceeds in two stages.  First, the coarea formula
+  applied to $h = f\circ\gamma\colon\R\to\R$---which in one
+  dimension is simply the classical change-of-variables
+  (substitution) formula---converts the proper-time integral into
+  an integral with respect to the level-set parameter of~$f$.
+  Second, the identification of the resulting object as a delta
+  function on~$\Sigma$ uses the theory of slicing of normal
+  $1$-currents (Federer~\cite[Theorem~4.3.2]{Federer69}), which
+  provides the natural framework when $\Sigma$ is not a
+  coordinate hyperplane.  The Jacobian factor
+  $|\partial_\gamma f \cdot \dot\gamma^\gamma|^{-1}$ arises from
+  the first stage.
+\end{proof}
+
+\begin{remark}
+  For the standard time function $f(x) = x^0 - t_0$, we have
+  $\partial_\gamma f = \delta_\gamma^0$, so
+  $|\partial_\gamma f\cdot\dot\gamma^\gamma| = |\dot\gamma^0|$.
+  Since $\gamma$ is future-directed
+  (Definition~\ref{def:timelike-worldline}),
+  $|\dot\gamma^0| = d\gamma^0/d\tau$, and the Jacobian factor
+  combines with $\dot\gamma^\beta$ to give
+  $d\gamma^\beta/dt$---recovering
+  Theorem~\ref{thm:equivalence}.  In curved spacetime one
+  replaces $f$ with a Cauchy time function and $\delta_\Sigma$
+  with the delta function defined by the induced Riemannian metric
+  on the Cauchy surface.
+\end{remark}

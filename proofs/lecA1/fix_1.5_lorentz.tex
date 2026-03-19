@@ -1,0 +1,71 @@
+% ──────────────────────────────────────────────────────────────
+\subsection{Lorentz covariance}\label{sec:lorentz-covariance-add}
+
+The covariant form~\eqref{eq:Tmunu-dist-def} immediately yields
+the transformation law, resolving
+Exercise~\ref{ex:Tmunu-tensor}:
+
+\begin{proposition}[Lorentz covariance]\label{prop:lorentz-cov}
+  Under a Lorentz transformation
+  $x'^\mu = \Lambda^\mu{}_\nu\, x^\nu$, the distributional
+  energy-momentum tensor transforms as
+  \begin{equation}\label{eq:Tmunu-lorentz}
+    T'^{\alpha\beta}(x')
+      = \Lambda^\alpha{}_\gamma\,
+        \Lambda^\beta{}_\delta\,
+        T^{\gamma\delta}(x)\,.
+  \end{equation}
+\end{proposition}
+
+\begin{proof}
+  Under $x' = \Lambda x$, the transformed worldline is
+  $\gamma'(\tau) = \Lambda\gamma(\tau)$ and the transformed
+  four-momentum is $p'^\alpha(\tau) = \Lambda^\alpha{}_\gamma\,
+  p^\gamma(\tau)$.  (Since $\tau$ is Lorentz-invariant and
+  $\gamma^\alpha$ transforms as a four-vector,
+  $\dot\gamma^\alpha = d\gamma^\alpha/d\tau$ transforms as a
+  four-vector, and hence
+  $p^\alpha = m\dot\gamma^\alpha$ does as well.)
+
+  We define the transformed distribution~$T'^{\alpha\beta}$ by
+  its action on test functions: for any
+  $\phi \in \mathcal{D}(\Rn{4})$,
+  \begin{align}
+    \langle T'^{\alpha\beta},\,\phi\rangle
+      &= \sum_j \int_{\R} p_j'^{\,\alpha}(\tau)\,
+        \dot\gamma_j'^{\,\beta}(\tau)\,
+        \phi\bigl(\gamma_j'(\tau)\bigr)\;\dd\tau
+      \notag\\
+      &= \sum_j \int_{\R}
+        \Lambda^\alpha{}_\gamma\, p_j^\gamma(\tau)\;\cdot\;
+        \Lambda^\beta{}_\delta\, \dot\gamma_j^\delta(\tau)\;\cdot\;
+        \phi\bigl(\Lambda\gamma_j(\tau)\bigr)\;\dd\tau
+      \notag\\
+      &= \Lambda^\alpha{}_\gamma\,\Lambda^\beta{}_\delta
+        \sum_j \int_{\R} p_j^\gamma(\tau)\,
+        \dot\gamma_j^\delta(\tau)\,
+        (\phi \circ \Lambda)\bigl(\gamma_j(\tau)\bigr)\;\dd\tau
+      \notag\\
+      &= \Lambda^\alpha{}_\gamma\,\Lambda^\beta{}_\delta\;
+        \bigl\langle T^{\gamma\delta},\;
+        \phi \circ \Lambda\bigr\rangle\,.
+      \label{eq:Tmunu-lorentz-dist}
+  \end{align}
+  This is the standard distributional transformation law
+  $T'^{\alpha\beta} = \Lambda^\alpha{}_\gamma\,
+  \Lambda^\beta{}_\delta\,(\Lambda^{-1})_\ast T^{\gamma\delta}$,
+  which is the distributional restatement
+  of~\eqref{eq:Tmunu-lorentz}.
+\end{proof}
+
+\begin{remark}
+  The $3{+}1$ form~\eqref{eq:Tmunu-dt} is \emph{not} manifestly
+  covariant: neither $\delta^{(3)}$ nor $d\gamma^\beta/dt$ is
+  Lorentz-invariant in isolation.  It is most naturally through
+  Theorem~\ref{thm:equivalence}---whose proof rests on the coarea
+  formula---that we can deduce that the combination
+  $p^\alpha\,(d\gamma^\beta/dt)\,\delta^{(3)}$ transforms as a
+  tensor.  The miracle is that the Jacobian factors conspire to
+  produce a Lorentz-invariant measure along the worldline; the
+  coarea formula explains \emph{why} they conspire.
+\end{remark}

@@ -1,0 +1,104 @@
+% ──────────────────────────────────────────────────────────────
+\subsection{Distributional conservation law}\label{sec:conservation-add}
+
+We now prove the conservation law entirely within the
+distributional framework, avoiding the somewhat formal manipulation
+of derivatives of delta functions that appears in
+Weinberg~\cite[\S2.8]{Weinberg72}.
+
+\begin{theorem}[Conservation of $T^{\alpha\beta}$]%
+\label{thm:conservation}
+  If each particle is free ($\dd p_j^\alpha/\dd\tau = 0$), then
+  \begin{equation}\label{eq:conservation}
+    \partial_\beta\, T^{\alpha\beta} = 0
+  \end{equation}
+  in the distributional sense.  More generally, in the presence of
+  external forces,
+  \begin{equation}\label{eq:conservation-force}
+    \partial_\beta\, T^{\alpha\beta}(x) = G^\alpha(x)\,,
+  \end{equation}
+  where the \textbf{force density}
+  \[
+    G^\alpha(x) = \sum_j \int\!\dd\tau\;
+      \frac{\dd p_j^\alpha}{\dd\tau}(\tau)\,
+      \delta^{(4)}\!\bigl(x - \gamma_j(\tau)\bigr)
+  \]
+  is the distributional pushforward of the equations of motion.
+\end{theorem}
+
+\begin{proof}
+  We prove~\eqref{eq:conservation};
+  equation~\eqref{eq:conservation-force} follows by the same
+  argument, now retaining the nonzero right-hand side
+  of~\eqref{eq:cons-ibp} when $\dd p_j^\alpha/\dd\tau \neq 0$.
+  For any $\phi \in \mathcal{D}(\Rn{4})$, the standard definition
+  of the distributional derivative (integration by parts with a
+  sign) gives:
+  \begin{align}
+    \langle \partial_\beta T^{\alpha\beta},\,\phi\rangle
+      &= -\langle T^{\alpha\beta},\,\partial_\beta\phi\rangle
+      \notag\\
+      &= -\sum_j \int_{\R} p_j^\alpha(\tau)\,
+        \dot\gamma_j^\beta(\tau)\,
+        \partial_\beta\phi\bigl(\gamma_j(\tau)\bigr)\;\dd\tau
+      \notag\\
+      &= -\sum_j \int_{\R} p_j^\alpha(\tau)\,
+        \frac{\dd}{\dd\tau}\bigl[\phi(\gamma_j(\tau))\bigr]
+        \;\dd\tau\,,
+        \label{eq:cons-chain}
+  \end{align}
+  where the last step uses the chain rule
+  $\frac{\dd}{\dd\tau}\phi(\gamma(\tau))
+  = \dot\gamma^\beta(\tau)\,\partial_\beta\phi(\gamma(\tau))$.
+  Since $p_j^\alpha = m_j\dot\gamma_j^\alpha$ and each~$\gamma_j$
+  is smooth (Definition~\ref{def:timelike-worldline}), the
+  four-momentum $p_j^\alpha(\tau)$ is smooth, so integration by
+  parts is justified.  Since $\gamma_j$ is proper
+  (Proposition~\ref{prop:Tmunu-well-defined}), the set
+  $\gamma_j^{-1}(\operatorname{spt}\phi)$ is compact, so the
+  function $\tau \mapsto \phi(\gamma_j(\tau))$ has compact support
+  in~$\R$.  The boundary terms therefore vanish, giving:
+  \begin{equation}\label{eq:cons-ibp}
+    \langle \partial_\beta T^{\alpha\beta},\,\phi\rangle
+      = \sum_j \int_{\R}
+        \frac{\dd p_j^\alpha}{\dd\tau}(\tau)\,
+        \phi\bigl(\gamma_j(\tau)\bigr)\;\dd\tau\,.
+  \end{equation}
+  For free particles, $\dd p_j^\alpha/\dd\tau = 0$, and the
+  right-hand side vanishes for all~$\phi$.
+\end{proof}
+
+\begin{remark}
+  The elegance of the distributional proof is worth
+  emphasising.  In the $3{+}1$ approach, the conservation law
+  requires computing
+  $\partial_i\bigl[p^\alpha\,(\dd\gamma^\beta/\dd t)\,
+  \delta^{(3)}(\vb{x} - \boldsymbol{\gamma}(t))\bigr]
+  + \partial_0\bigl[p^\alpha\,(\dd\gamma^0/\dd t)\,
+  \delta^{(3)}(\vb{x} - \boldsymbol{\gamma}(t))\bigr]$,
+  which involves the multivariable chain rule
+  \[
+    \frac{\dd}{\dd t}\,\delta^{(3)}\!\bigl(\vb{x}
+    - \boldsymbol{\gamma}(t)\bigr)
+    = -\frac{\dd\gamma^i}{\dd t}\,
+      \frac{\partial}{\partial x^i}\,
+      \delta^{(3)}\!\bigl(\vb{x}
+      - \boldsymbol{\gamma}(t)\bigr)
+  \]
+  to convert time derivatives into spatial derivatives.  The
+  distributional proof~\eqref{eq:cons-chain}--\eqref{eq:cons-ibp}
+  bypasses this entirely: the chain rule on test functions and
+  integration by parts do all the work.
+\end{remark}
+
+\begin{exercise}\label{ex:conservation-collision}
+  Extend Theorem~\ref{thm:conservation} to particles that undergo
+  strictly localised collisions (so that worldlines begin and end
+  at discrete spacetime events).  Show that $\partial_\beta
+  T^{\alpha\beta} = 0$ provided that four-momentum is conserved
+  at each collision vertex: $\sum_{n\in c} p_n^\alpha = 0$ for
+  each collision~$c$.
+  \emph{Hint:} integrate by parts on each worldline segment;
+  the boundary terms at each collision vertex sum to zero by
+  momentum conservation.
+\end{exercise}

@@ -1,0 +1,116 @@
+% ──────────────────────────────────────────────────────────────
+\subsection{From the covariant form to the spatial-slice form}%
+\label{sec:equivalence}
+
+We now prove the main result: the covariant
+definition~\eqref{eq:Tmunu-delta4-add} reproduces the $3{+}1$
+form~\eqref{eq:Tmunu-dt} of Lecture~6 upon slicing by a
+constant-time hyperplane.
+
+\begin{theorem}[Equivalence of forms]\label{thm:equivalence}
+  Let $T^{\alpha\beta}$ be the distribution defined
+  in~\eqref{eq:Tmunu-dist-def}.  Then, in the sense of
+  distributions on~$\Rn{4}$,
+  \begin{equation}\label{eq:equivalence}
+    T^{\alpha\beta}(x) = \sum_{j=1}^{N} p_j^\alpha(t)\,
+      \frac{d\gamma_j^\beta}{dt}(t)\,
+      \delta^{(3)}\!\bigl(\vb{x} - \boldsymbol{\gamma}_j(t)\bigr)\,,
+  \end{equation}
+  where $t = x^0$ and $\boldsymbol{\gamma}_j(t) =
+  \bigl(\gamma_j^1(t),\gamma_j^2(t),\gamma_j^3(t)\bigr)$ is the
+  spatial position of the $j$-th particle at coordinate time~$t$.
+\end{theorem}
+
+\begin{proof}
+  It suffices to prove the identity for a single worldline; the
+  sum over~$j$ follows by linearity.  Drop the subscript~$j$ and
+  let $\gamma\colon \R \to \Rn{4}$ be a timelike worldline
+  carrying momentum~$p^\alpha$.
+
+  \medskip\noindent
+  \textbf{Step~1: Factor out the time velocity.}\;
+  Define the \emph{time function along the worldline}
+  $f\colon \R \to \R$ by $f(\tau) = \gamma^0(\tau)$.
+  Since $\gamma$ is future-directed and timelike,
+  $f'(\tau) = d\gamma^0/d\tau > 0$, so $f$ is a smooth
+  diffeomorphism from~$\R$ onto~$\R$.
+
+  Decompose the four-velocity:
+  \[
+    \dot\gamma^\beta(\tau)
+      = \frac{d\gamma^\beta}{d\tau}
+      = \frac{d\gamma^\beta}{dt}\bigg|_{t=f(\tau)}\,f'(\tau)\,.
+  \]
+  Substituting into Definition~\ref{def:Tmunu-dist}:
+  \begin{equation}\label{eq:step1}
+    \langle T^{\alpha\beta},\phi\rangle
+      = \int_{\R} p^\alpha(\tau)\,
+        \frac{d\gamma^\beta}{dt}\bigg|_{t=f(\tau)}\,
+        \phi\bigl(\gamma(\tau)\bigr)\,f'(\tau)\;\dd\tau\,.
+  \end{equation}
+
+  \medskip\noindent
+  \textbf{Step~2: Change of variables.}\;
+  Since $f$ is a smooth diffeomorphism with $f' > 0$, the level
+  set $f^{-1}(t)$ is a singleton $\{\tau_\ast(t)\}$ for each~$t$,
+  and the classical change of variables (substitution) gives
+  \[
+    \int_{\R} g(\tau)\,f'(\tau)\;\dd\tau
+      = \int_{\R} g\bigl(f^{-1}(t)\bigr)\;\dd t
+  \]
+  for any integrable~$g$, without sign restriction on the
+  integrand.  (This is the diffeomorphism case of the
+  one-dimensional coarea formula; see
+  Remark~\ref{rem:delta-composition}.)  Applying this
+  to~\eqref{eq:step1}:
+  \begin{equation}\label{eq:step2}
+    \langle T^{\alpha\beta},\phi\rangle
+      = \int_{\R} p^\alpha\bigl(\tau_\ast(t)\bigr)\,
+        \frac{d\gamma^\beta}{dt}\bigg|_{t}\,
+        \phi\bigl(\gamma(\tau_\ast(t))\bigr)\;\dd t\,.
+  \end{equation}
+
+  \medskip\noindent
+  \textbf{Step~3: Identify the spatial delta function.}\;
+  By definition of $\tau_\ast(t)$, we have
+  $\gamma^0(\tau_\ast(t)) = t$, so
+  $\gamma(\tau_\ast(t)) = \bigl(t,\,\boldsymbol{\gamma}(t)\bigr)$.
+  Writing $p^\alpha(\tau_\ast(t)) = p^\alpha(t)$ and
+  $d\gamma^\beta/dt\,\big|_{\tau_\ast(t)} = d\gamma^\beta/dt\,(t)$
+  as functions of coordinate time, equation~\eqref{eq:step2}
+  becomes
+  \begin{align}
+    \langle T^{\alpha\beta},\phi\rangle
+      &= \int_{\R} p^\alpha(t)\,
+         \frac{d\gamma^\beta}{dt}(t)\,
+         \phi\bigl(t,\boldsymbol{\gamma}(t)\bigr)\;\dd t
+         \notag\\
+      &= \int_{\R}\dd t\int_{\Rn{3}}\dd^3\!\vb{x}\;\;
+         p^\alpha(t)\,\frac{d\gamma^\beta}{dt}(t)\,
+         \delta^{(3)}\!\bigl(\vb{x} - \boldsymbol{\gamma}(t)\bigr)\,
+         \phi(t,\vb{x})\,,
+         \label{eq:step3}
+  \end{align}
+  where the second line uses the sifting property of
+  $\delta^{(3)}$ in the reverse direction, and we apply Fubini's
+  theorem to pass to the iterated integral (the integrand is
+  in $L^1(\R\times\Rn{3})$ since $\phi$ has compact support).
+  Since~\eqref{eq:step3} holds for all
+  $\phi\in\mathcal{D}(\Rn{4})$, we conclude
+  that~\eqref{eq:equivalence} holds in the distributional sense.
+\end{proof}
+
+\begin{intuition}[Slicing worldlines by time]
+  The theorem says that the natural (covariant) definition of
+  $T^{\alpha\beta}$---as a measure spread along the worldline---can
+  be ``sliced'' by a constant-time hyperplane $\Sigma_t = \{x^0 = t\}$
+  to recover the $3{+}1$ expression.  The change of variables provides
+  exactly the right Jacobian factor ($1/f'(\tau_\ast)$) to convert
+  the proper-time line element~$\dd\tau$ along the worldline into
+  the transverse coordinate~$\dd t$.  This factor cancels the
+  $d\gamma^\beta/d\tau$ in the covariant integrand, producing
+  $d\gamma^\beta/dt$ in the sliced expression.
+
+  Weinberg's observation that ``the $dt'$ cancel'' is a compact
+  (if informal) summary of exactly this mechanism.
+\end{intuition}

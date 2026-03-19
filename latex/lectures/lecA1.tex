@@ -20,16 +20,19 @@ element~$d\tau$.  While physically convincing, this argument glosses
 over the distributional nature of the objects involved and leaves the
 equivalence of the two forms essentially unproved.
 
-In this addendum we supply the missing rigour.  The key tool turns
-out to be the \textbf{coarea formula} of geometric measure
-theory~\cite{Federer69}, which provides the natural framework for
-slicing distributional objects supported on submanifolds by level
-sets of smooth functions.  The one-dimensional specialisation of the
-coarea formula is nothing but the classical change-of-variables
-(substitution) formula, but recognising this connection places
-Weinberg's construction on a firm mathematical footing and
-generalises immediately to curved spacetimes and arbitrary Cauchy
-surfaces.
+In this addendum we supply the missing rigour.  For the equivalence
+theorem itself (\S\ref{sec:equivalence}), the key step is the
+classical \textbf{change-of-variables (substitution) formula} for a
+$C^1$ diffeomorphism---an elementary result that needs no heavy
+machinery.  However, the natural \emph{generalisation} to slicing by
+arbitrary Cauchy surfaces (\S\ref{sec:general-slicing}) requires the
+\textbf{coarea formula} of geometric measure
+theory~\cite{Federer69}, which provides the framework for
+decomposing integrals over level sets of Lipschitz maps.
+We therefore state the coarea formula in its general form and explain
+how the one-dimensional case used in the equivalence proof reduces to
+the classical substitution rule, while the full coarea/slicing
+machinery becomes essential for the general slicing theorem.
 
 % ──────────────────────────────────────────────────────────────
 \subsection{Distributions supported on worldlines}%
@@ -43,12 +46,18 @@ $\mathcal{D}'(\Rn{4})$ for the topological dual: the space of
 distributions (continuous linear functionals on~$\mathcal{D}$).
 
 \begin{definition}[Timelike worldline]\label{def:timelike-worldline}
-  A \textbf{timelike worldline} is a smooth embedding
-  $\gamma\colon I \to \Rn{4}$ (where $I\subseteq\R$ is an open
-  interval) such that
-  $\eta_{\alpha\beta}\,\dot\gamma^\alpha\dot\gamma^\beta < 0$
-  everywhere.  We take $\tau$ to be the proper-time parameter and
-  write $\dot\gamma^\alpha = d\gamma^\alpha/d\tau$.
+  A \textbf{timelike worldline} is a smooth, future-directed
+  embedding $\gamma\colon I \to \Rn{4}$ (where $I\subseteq\R$ is
+  an open interval) parametrised by proper time~$\tau$, so that
+  \begin{equation}\label{eq:timelike-condition}
+    \eta_{\alpha\beta}\,\dot\gamma^\alpha\dot\gamma^\beta = -1
+    \qquad\text{and}\qquad
+    \frac{d\gamma^0}{d\tau} > 0
+  \end{equation}
+  everywhere on~$I$.  Here
+  $\dot\gamma^\alpha = d\gamma^\alpha/d\tau$.  Throughout this
+  addendum we assume $I = \R$, i.e.\ the worldline is
+  inextendible.
 \end{definition}
 
 \noindent
@@ -83,20 +92,65 @@ it directly as a distribution.
 \end{proposition}
 
 \begin{proof}
-  For each~$j$, the worldline~$\gamma_j$ is timelike, so the
-  time component $\gamma_j^0(\tau)$ satisfies
-  $d\gamma_j^0/d\tau > 0$ (future-directed).  Hence the map
-  $\tau \mapsto \gamma_j^0(\tau)$ is a diffeomorphism
-  from~$I$ onto its image, and $\gamma_j$ is a proper map: the
-  preimage $\gamma_j^{-1}(K)$ of any compact set
-  $K \subset \Rn{4}$ is compact.
+  It suffices to treat a single worldline~$\gamma$; the sum
+  over~$j$ follows by linearity.
 
-  Now let $\phi \in \mathcal{D}(\Rn{4})$ have
-  support in~$K$.  The function
-  $\tau \mapsto p_j^\alpha(\tau)\,\dot\gamma_j^\beta(\tau)\,
-  \phi(\gamma_j(\tau))$ is smooth with support in the compact set
-  $\gamma_j^{-1}(K)$, so the integral converges absolutely.
-  Moreover,
+  \medskip\noindent
+  \textbf{Step~1: $\gamma^0$ is a diffeomorphism
+  $\R\to\R$.}\;
+  By Definition~\ref{def:timelike-worldline}, the worldline is
+  future-directed:
+  $\dot\gamma^0 > 0$.  The normalisation
+  $\eta_{\alpha\beta}\,\dot\gamma^\alpha\dot\gamma^\beta = -1$
+  with signature $(-,+,+,+)$ gives
+  $(\dot\gamma^0)^2 = 1 + \sum_{i=1}^{3}(\dot\gamma^i)^2 \geq 1$,
+  so $\dot\gamma^0 \geq 1$.  Hence $\gamma^0(\tau) \geq \gamma^0(0) + \tau$
+  for $\tau > 0$ and $\gamma^0(\tau) \leq \gamma^0(0) + \tau$ for
+  $\tau < 0$, which forces $\gamma^0 \to \pm\infty$ as
+  $\tau\to\pm\infty$.  Thus $f\colon \R\to\R$,
+  $f(\tau) = \gamma^0(\tau)$, is a strictly increasing smooth
+  surjection and therefore a diffeomorphism $\R\to\R$.
+
+  \medskip\noindent
+  \textbf{Step~2: $\gamma$ is proper.}\;
+  We must show that $\gamma^{-1}(K)$ is compact for every compact
+  $K\subset\Rn{4}$.
+  \begin{enumerate}
+    \item[(i)] \emph{Bounded $\tau$-range.}\;
+      Since $K$ is compact, its time projection
+      $\pi_0(K) \subset \R$ is a compact interval.  The
+      diffeomorphism~$f$ maps $\gamma^{-1}(K)$ into
+      $f^{-1}(\pi_0(K))$, which is a compact interval (as the
+      preimage of a compact interval under a diffeomorphism
+      $\R\to\R$).  Hence $\gamma^{-1}(K)$ is contained in a
+      bounded $\tau$-interval.
+    \item[(ii)] \emph{Bounded spatial coordinates.}\;
+      The normalisation
+      $\eta_{\alpha\beta}\,\dot\gamma^\alpha\dot\gamma^\beta = -1$
+      with signature $(-,+,+,+)$ gives
+      $\sum_{i=1}^{3}(\dot\gamma^i)^2 = (\dot\gamma^0)^2 - 1
+      < (\dot\gamma^0)^2$,
+      so $|\dot\gamma^i| < \dot\gamma^0$ for each spatial
+      component.  In particular, the spatial components of~$\gamma$
+      grow no faster than~$\gamma^0$, so they remain bounded on
+      the bounded $\tau$-interval from~(i).
+    \item[(iii)] \emph{Compactness.}\;
+      Since $\gamma$ is an embedding (hence a homeomorphism onto
+      its image), $\gamma^{-1}(K)$ is closed in~$\R$ (as the
+      preimage of a compact, hence closed, set under a continuous
+      map).  By~(i) and~(ii), it is also bounded.  Hence
+      $\gamma^{-1}(K)$ is compact by the Heine--Borel theorem.
+  \end{enumerate}
+
+  \medskip\noindent
+  \textbf{Step~3: The integral converges and yields
+  order-zero continuity.}\;
+  Let $\phi \in \mathcal{D}(\Rn{4})$ have
+  support in a compact set~$K$.  The function
+  $\tau \mapsto p^\alpha(\tau)\,\dot\gamma^\beta(\tau)\,
+  \phi(\gamma(\tau))$ is smooth with support in the compact set
+  $\gamma^{-1}(K)$, so the integral converges absolutely.
+  Linearity of the functional in~$\phi$ is immediate.  Moreover,
   \[
     |\langle T^{\alpha\beta}, \phi\rangle|
       \;\leq\; \sum_j \int_{\gamma_j^{-1}(K)}
@@ -104,18 +158,32 @@ it directly as a distribution.
         \cdot \|\phi\|_\infty
       \;\leq\; C_K\,\|\phi\|_\infty\,,
   \]
-  so $T^{\alpha\beta}$ is continuous in the $C^0$-topology and
-  hence is a distribution of order zero.
+  where, for fixed $\alpha,\beta$,
+  $C_K = \sum_j \int_{\gamma_j^{-1}(K)}
+  |p_j^\alpha|\,|\dot\gamma_j^\beta|\,\dd\tau < \infty$ depends
+  only on~$K$ (not on~$\phi$).  Thus $T^{\alpha\beta}$ is
+  continuous in the $C^0$-topology and hence is a distribution of
+  order zero.  (By the Riesz representation theorem, every
+  distribution of order zero corresponds to a Radon measure,
+  so $T^{\alpha\beta}$ is indeed a tensor-valued Radon measure
+  on~$\Rn{4}$.)
 \end{proof}
 
 \begin{remark}
   Definition~\ref{def:Tmunu-dist} is the \emph{pushforward} of a
   measure on the worldline to a distribution on spacetime.  In the
-  language of de~Rham's theory of currents, it defines a
-  $1$-current on~$\Rn{4}$---the integration current of
-  the worldline, weighted by the tensor
-  $p^\alpha\,\dd\gamma^\beta$.
-  See Federer~\cite[\S4.1]{Federer69}.
+  language of de~Rham's theory of currents, the functional
+  $\phi \mapsto \int \phi(\gamma(\tau))\,\dd\tau$ defines a
+  $0$-current on~$\Rn{4}$ (it acts on $0$-forms, i.e.\ test
+  functions).  The \emph{integration current} of the worldline,
+  which acts on $1$-forms via
+  $\omega \mapsto \int \omega_\alpha(\gamma(\tau))\,
+  \dot\gamma^\alpha(\tau)\,\dd\tau$, is a $1$-current.
+  Each component $T^{\alpha\beta}$ (for fixed
+  $\alpha,\beta$) is obtained from the $0$-current by
+  weighting the integrand with
+  $p^\alpha\,\dot\gamma^\beta$.  See
+  Federer~\cite[\S4.1]{Federer69}.
 \end{remark}
 
 \noindent
@@ -134,19 +202,22 @@ form~\eqref{eq:Tmunu-dt} upon slicing by a constant-time
 hyperplane.
 
 % ──────────────────────────────────────────────────────────────
-\subsection{The coarea formula}\label{sec:coarea}
+\subsection{The coarea formula and the substitution rule}%
+\label{sec:coarea}
 
 The bridge between the covariant
 form~\eqref{eq:Tmunu-delta4-add} and the $3{+}1$
-splitting~\eqref{eq:Tmunu-dt} is provided by the
-\textbf{coarea formula}.  We state the general result and then
-specialise to the one-dimensional case that we need.
+splitting~\eqref{eq:Tmunu-dt} is ultimately the classical
+\emph{change-of-variables formula} for a diffeomorphism.  To place
+this in its proper context---and to prepare for the general slicing
+theorem of \S\ref{sec:general-slicing}---we state the coarea formula
+of Federer and then discuss the one-dimensional case separately.
 
 \begin{theorem}[Coarea formula {\cite[Theorem~3.2.12]{Federer69}}]%
 \label{thm:coarea}
   Let $f\colon \Rn{n} \to \Rn{m}$ be a Lipschitz map with
-  $m \leq n$.  Then for any nonnegative Borel function
-  $g\colon \Rn{n} \to [0,\infty]$,
+  $m < n$ (strict inequality).  Then for any nonnegative Borel
+  function $g\colon \Rn{n} \to [0,\infty]$,
   \begin{equation}\label{eq:coarea-general}
     \int_{\Rn{n}} g(x)\,J_m f(x)\;\dd\mathcal{H}^n(x)
       = \int_{\Rn{m}}
@@ -155,39 +226,60 @@ specialise to the one-dimensional case that we need.
         \dd\mathcal{H}^m(y)\,,
   \end{equation}
   where $J_m f$ denotes the $m$-dimensional Jacobian of~$f$
-  and $\mathcal{H}^k$ the $k$-dimensional Hausdorff measure.
+  and $\mathcal{H}^k$ the $k$-dimensional Hausdorff measure
+  (which coincides with the Lebesgue measure on~$\Rn{k}$;
+  see~\cite[2.10.35]{Federer69}).
 \end{theorem}
 
 \noindent
-When $n = m = 1$, the Hausdorff measures reduce to Lebesgue
-measure, the $1$-dimensional Jacobian is simply $|f'|$, and the
-level set $f^{-1}(t)$ is discrete.  The coarea formula becomes:
+\textbf{The one-dimensional case ($n = m = 1$).}\enspace
+When domain and codomain have the same dimension, the strict
+inequality $m < n$ is \emph{not} satisfied, so
+Theorem~\ref{thm:coarea} does not apply.  The relevant result is
+instead the \textbf{area formula}
+\cite[Theorem~3.2.3]{Federer69}: for $f\colon \R \to \R$
+Lipschitz and $g\colon \R \to [0,\infty]$ Borel,
+\begin{equation}\label{eq:area-1d}
+  \eqbox{
+  \int_{\R} g(\tau)\,|f'(\tau)|\;\dd\tau
+    = \int_{\R}
+      \sum_{\tau\in f^{-1}(t)} g(\tau)\;\dd t}\,.
+\end{equation}
+When $f$ is injective (in particular, a diffeomorphism), each level
+set $f^{-1}(t)$ is at most a singleton and the sum is trivial: one
+recovers the classical \textbf{substitution (change-of-variables)
+formula}
+\begin{equation}\label{eq:substitution}
+  \int_{\R} g(\tau)\,|f'(\tau)|\;\dd\tau
+    = \int_{\R} g\bigl(\tau_\ast(t)\bigr)\;\dd t\,,
+\end{equation}
+where $\tau_\ast(t) = f^{-1}(t)$ is the unique preimage.  This is
+the identity that drives the proof of
+Theorem~\ref{thm:equivalence}; the full coarea machinery is not
+needed for that argument but becomes essential in
+\S\ref{sec:general-slicing}.
 
-\begin{corollary}
-  Let $f\colon \R \to \R$ be Lipschitz and
-  $g\colon \R \to [0,\infty]$ Borel.  Then
-  \begin{equation}\label{eq:coarea-1d}
-    \eqbox{
-    \int_{\R} g(\tau)\,|f'(\tau)|\;\dd\tau
-      = \int_{\R}
-        \sum_{\tau\in f^{-1}(t)} g(\tau)\;\dd t}\,.
-  \end{equation}
-\end{corollary}
-
-\begin{remark}\label{rem:delta-composition}
-  When $f$ is a diffeomorphism---as will be the case for the time
-  coordinate along a timelike worldline---each level set
-  $f^{-1}(t)$ contains exactly one point~$\tau_\ast(t)$, and
-  \eqref{eq:coarea-1d} reduces to the elementary substitution
-  $g(\tau)\,|f'(\tau)|\,\dd\tau = g(\tau_\ast(t))\,\dd t$.
-  This is equivalent to the distributional identity
+\begin{remark}[Delta-function composition rule]%
+\label{rem:delta-composition}
+  The substitution formula~\eqref{eq:substitution} is equivalent to
+  the distributional identity
   \begin{equation}\label{eq:delta-composition}
     \delta\bigl(f(\tau) - t\bigr)
-      = \frac{\delta(\tau - \tau_\ast)}{|f'(\tau_\ast)|}\,,
+      = \frac{\delta(\tau - \tau_\ast)}{|f'(\tau_\ast)|}\,.
   \end{equation}
-  so the coarea formula provides the rigorous foundation for the
-  ``delta function composition rule'' that is often invoked without
-  proof in physics texts.
+  To see this, note that \eqref{eq:substitution} states that
+  the pushforward of the measure $|f'(\tau)|\,\dd\tau$ under~$f$
+  equals Lebesgue measure~$\dd t$ (by the Riesz representation
+  theorem, since the identity holds for all nonneg.\ Borel~$g$).
+  Testing against a Dirac mass at~$t$ then
+  yields~\eqref{eq:delta-composition}.  More generally, when $f$ has
+  finitely many roots $\{\tau_k\}$ of $f(\tau) = t$, the area
+  formula~\eqref{eq:area-1d} gives the standard multi-root identity
+  $\delta(f(\tau) - t) = \sum_k
+  \delta(\tau - \tau_k)/|f'(\tau_k)|$.  The substitution formula
+  thus provides the rigorous foundation for the ``delta-function
+  composition rule'' that is often invoked without proof in physics
+  texts.
 \end{remark}
 
 % ──────────────────────────────────────────────────────────────
@@ -231,28 +323,34 @@ constant-time hyperplane.
   \[
     \dot\gamma^\beta(\tau)
       = \frac{d\gamma^\beta}{d\tau}
-      = \frac{d\gamma^\beta}{dt}\,\frac{dt}{d\tau}
-      = \frac{d\gamma^\beta}{dt}\,f'(\tau)\,.
+      = \frac{d\gamma^\beta}{dt}\bigg|_{t=f(\tau)}\,f'(\tau)\,.
   \]
   Substituting into Definition~\ref{def:Tmunu-dist}:
   \begin{equation}\label{eq:step1}
     \langle T^{\alpha\beta},\phi\rangle
       = \int_{\R} p^\alpha(\tau)\,
-        \frac{d\gamma^\beta}{dt}(\tau)\,
+        \frac{d\gamma^\beta}{dt}\bigg|_{t=f(\tau)}\,
         \phi\bigl(\gamma(\tau)\bigr)\,f'(\tau)\;\dd\tau\,.
   \end{equation}
 
   \medskip\noindent
-  \textbf{Step~2: Apply the coarea formula.}\;
-  The integrand in~\eqref{eq:step1} has the form
-  $g(\tau)\,|f'(\tau)|\;\dd\tau$ with $|f'| = f'$ (since
-  $f' > 0$).  By the one-dimensional coarea
-  formula~\eqref{eq:coarea-1d}, the level set
-  $f^{-1}(t) = \{\tau_\ast(t)\}$ is a singleton for each~$t$, and
+  \textbf{Step~2: Change of variables.}\;
+  Since $f$ is a smooth diffeomorphism with $f' > 0$, the level
+  set $f^{-1}(t)$ is a singleton $\{\tau_\ast(t)\}$ for each~$t$,
+  and the classical change of variables (substitution) gives
+  \[
+    \int_{\R} g(\tau)\,f'(\tau)\;\dd\tau
+      = \int_{\R} g\bigl(f^{-1}(t)\bigr)\;\dd t
+  \]
+  for any integrable~$g$, without sign restriction on the
+  integrand.  (This is the diffeomorphism case of the
+  one-dimensional area formula; see
+  Remark~\ref{rem:delta-composition}.)  Applying this
+  to~\eqref{eq:step1}:
   \begin{equation}\label{eq:step2}
     \langle T^{\alpha\beta},\phi\rangle
       = \int_{\R} p^\alpha\bigl(\tau_\ast(t)\bigr)\,
-        \frac{d\gamma^\beta}{dt}\bigl(\tau_\ast(t)\bigr)\,
+        \frac{d\gamma^\beta}{dt}\bigg|_{t}\,
         \phi\bigl(\gamma(\tau_\ast(t))\bigr)\;\dd t\,.
   \end{equation}
 
@@ -277,6 +375,10 @@ constant-time hyperplane.
          \phi(t,\vb{x})\,.
          \label{eq:step3}
   \end{align}
+  where the second line uses the sifting property of
+  $\delta^{(3)}$ in the reverse direction, and we apply Fubini's
+  theorem to pass to the iterated integral (the integrand is
+  in $L^1(\R\times\Rn{3})$ since $\phi$ has compact support).
   Since~\eqref{eq:step3} holds for all
   $\phi\in\mathcal{D}(\Rn{4})$, we conclude
   that~\eqref{eq:equivalence} holds in the distributional sense.
@@ -286,7 +388,7 @@ constant-time hyperplane.
   The theorem says that the natural (covariant) definition of
   $T^{\alpha\beta}$---as a measure spread along the worldline---can
   be ``sliced'' by a constant-time hyperplane $\Sigma_t = \{x^0 = t\}$
-  to recover the $3{+}1$ expression.  The coarea formula provides
+  to recover the $3{+}1$ expression.  The change of variables provides
   exactly the right Jacobian factor ($1/f'(\tau_\ast)$) to convert
   the proper-time line element~$\dd\tau$ along the worldline into
   the transverse coordinate~$\dd t$.  This factor cancels the
@@ -317,32 +419,56 @@ Exercise~\ref{ex:Tmunu-tensor}:
 \end{proposition}
 
 \begin{proof}
-  In the covariant form~\eqref{eq:Tmunu-dist-def}, the integrand
-  consists of:
-  \begin{itemize}
-    \item $p^\alpha(\tau)$: a four-vector,
-    \item $\dot\gamma^\beta(\tau) = d\gamma^\beta/d\tau$: a
-      four-vector,
-    \item $\phi(\gamma(\tau))$: a scalar,
-    \item $\dd\tau$: Lorentz-invariant.
-  \end{itemize}
-  Thus $\langle T^{\alpha\beta}, \phi\rangle$ carries two
-  contravariant Lorentz indices, and the transformation
-  law~\eqref{eq:Tmunu-lorentz} follows.  (One also uses
-  $|\det\Lambda| = 1$, which ensures that the four-dimensional
-  delta function $\delta^{(4)}$ is a Lorentz scalar.)
+  Under $x' = \Lambda x$, the transformed worldline is
+  $\gamma'(\tau) = \Lambda\gamma(\tau)$ and the transformed
+  four-momentum is $p'^\alpha(\tau) = \Lambda^\alpha{}_\gamma\,
+  p^\gamma(\tau)$.  (Since $\tau$ is Lorentz-invariant and
+  $\gamma^\alpha$ transforms as a four-vector,
+  $\dot\gamma^\alpha = d\gamma^\alpha/d\tau$ transforms as a
+  four-vector, and hence
+  $p^\alpha = m\dot\gamma^\alpha$ does as well.)
+
+  We define the transformed distribution~$T'^{\alpha\beta}$ by
+  its action on test functions: for any
+  $\phi \in \mathcal{D}(\Rn{4})$,
+  \begin{align}
+    \langle T'^{\alpha\beta},\,\phi\rangle
+      &= \sum_j \int_{\R} p_j'^{\,\alpha}(\tau)\,
+        \dot\gamma_j'^{\,\beta}(\tau)\,
+        \phi\bigl(\gamma_j'(\tau)\bigr)\;\dd\tau
+      \notag\\
+      &= \sum_j \int_{\R}
+        \Lambda^\alpha{}_\gamma\, p_j^\gamma(\tau)\;\cdot\;
+        \Lambda^\beta{}_\delta\, \dot\gamma_j^\delta(\tau)\;\cdot\;
+        \phi\bigl(\Lambda\gamma_j(\tau)\bigr)\;\dd\tau
+      \notag\\
+      &= \Lambda^\alpha{}_\gamma\,\Lambda^\beta{}_\delta
+        \sum_j \int_{\R} p_j^\gamma(\tau)\,
+        \dot\gamma_j^\delta(\tau)\,
+        (\phi \circ \Lambda)\bigl(\gamma_j(\tau)\bigr)\;\dd\tau
+      \notag\\
+      &= \Lambda^\alpha{}_\gamma\,\Lambda^\beta{}_\delta\;
+        \bigl\langle T^{\gamma\delta},\;
+        \phi \circ \Lambda\bigr\rangle\,.
+      \label{eq:Tmunu-lorentz-dist}
+  \end{align}
+  This is the standard distributional transformation law
+  $T'^{\alpha\beta} = \Lambda^\alpha{}_\gamma\,
+  \Lambda^\beta{}_\delta\,(\Lambda^{-1})_\ast T^{\gamma\delta}$,
+  which is the distributional restatement
+  of~\eqref{eq:Tmunu-lorentz}.
 \end{proof}
 
 \begin{remark}
   The $3{+}1$ form~\eqref{eq:Tmunu-dt} is \emph{not} manifestly
   covariant: neither $\delta^{(3)}$ nor $d\gamma^\beta/dt$ is
-  Lorentz-invariant in isolation.  It is only through
-  Theorem~\ref{thm:equivalence}---whose proof rests on the coarea
-  formula---that we can deduce that the combination
+  Lorentz-invariant in isolation.  It is most naturally through
+  Theorem~\ref{thm:equivalence}---whose proof rests on the
+  substitution formula---that we can deduce that the combination
   $p^\alpha\,(d\gamma^\beta/dt)\,\delta^{(3)}$ transforms as a
   tensor.  The miracle is that the Jacobian factors conspire to
   produce a Lorentz-invariant measure along the worldline; the
-  coarea formula explains \emph{why} they conspire.
+  change of variables explains \emph{why} they conspire.
 \end{remark}
 
 % ──────────────────────────────────────────────────────────────
@@ -376,8 +502,11 @@ Weinberg~\cite[\S2.8]{Weinberg72}.
 \begin{proof}
   We prove~\eqref{eq:conservation};
   equation~\eqref{eq:conservation-force} follows by the same
-  argument without discarding the boundary term.  For any
-  $\phi \in \mathcal{D}(\Rn{4})$:
+  argument, now retaining the nonzero right-hand side
+  of~\eqref{eq:cons-ibp} when $\dd p_j^\alpha/\dd\tau \neq 0$.
+  For any $\phi \in \mathcal{D}(\Rn{4})$, the standard definition
+  of the distributional derivative (integration by parts with a
+  sign) gives:
   \begin{align}
     \langle \partial_\beta T^{\alpha\beta},\,\phi\rangle
       &= -\langle T^{\alpha\beta},\,\partial_\beta\phi\rangle
@@ -394,9 +523,14 @@ Weinberg~\cite[\S2.8]{Weinberg72}.
   where the last step uses the chain rule
   $\frac{\dd}{\dd\tau}\phi(\gamma(\tau))
   = \dot\gamma^\beta(\tau)\,\partial_\beta\phi(\gamma(\tau))$.
-  Integrating by parts (the boundary terms vanish since $\phi$
-  has compact support and the worldline eventually leaves any
-  compact set):
+  Since $p_j^\alpha = m_j\dot\gamma_j^\alpha$ and each~$\gamma_j$
+  is smooth (Definition~\ref{def:timelike-worldline}), the
+  four-momentum $p_j^\alpha(\tau)$ is smooth, so integration by
+  parts is justified.  Since $\gamma_j$ is proper
+  (Proposition~\ref{prop:Tmunu-well-defined}), the set
+  $\gamma_j^{-1}(\operatorname{spt}\phi)$ is compact, so the
+  function $\tau \mapsto \phi(\gamma_j(\tau))$ has compact support
+  in~$\R$.  The boundary terms therefore vanish, giving:
   \begin{equation}\label{eq:cons-ibp}
     \langle \partial_\beta T^{\alpha\beta},\,\phi\rangle
       = \sum_j \int_{\R}
@@ -410,14 +544,21 @@ Weinberg~\cite[\S2.8]{Weinberg72}.
 \begin{remark}
   The elegance of the distributional proof is worth
   emphasising.  In the $3{+}1$ approach, the conservation law
-  requires differentiating $\delta^{(3)}\!\bigl(\vb{x} -
-  \boldsymbol{\gamma}(t)\bigr)$ with respect to~$\vb{x}$ and
-  then using the chain rule
-  $\frac{\partial}{\partial x^i}\,\delta^{(3)}
-  = -\frac{\partial}{\partial \gamma^i}\,\delta^{(3)}
-  = -\frac{1}{\dot\gamma^i}\,\frac{\partial}{\partial t}\,
-  \delta^{(3)}$
-  to convert spatial derivatives into time derivatives.  The
+  requires computing
+  $\partial_i\bigl[p^\alpha\,(\dd\gamma^\beta/\dd t)\,
+  \delta^{(3)}(\vb{x} - \boldsymbol{\gamma}(t))\bigr]
+  + \partial_0\bigl[p^\alpha\,(\dd\gamma^0/\dd t)\,
+  \delta^{(3)}(\vb{x} - \boldsymbol{\gamma}(t))\bigr]$,
+  which involves the multivariable chain rule
+  \[
+    \frac{\dd}{\dd t}\,\delta^{(3)}\!\bigl(\vb{x}
+    - \boldsymbol{\gamma}(t)\bigr)
+    = -\frac{\dd\gamma^i}{\dd t}\,
+      \frac{\partial}{\partial x^i}\,
+      \delta^{(3)}\!\bigl(\vb{x}
+      - \boldsymbol{\gamma}(t)\bigr)
+  \]
+  to convert time derivatives into spatial derivatives.  The
   distributional proof~\eqref{eq:cons-chain}--\eqref{eq:cons-ibp}
   bypasses this entirely: the chain rule on test functions and
   integration by parts do all the work.
@@ -446,9 +587,10 @@ hypersurfaces and extends naturally to curved spacetimes.
 
 \begin{theorem}[General slicing theorem]%
 \label{thm:general-slicing}
-  Let $\Sigma = f^{-1}(0)$ be a smooth spacelike hypersurface
-  in~$\Rn{4}$ defined as a level set of a smooth function
-  $f\colon\Rn{4}\to\R$ with $\nabla f$ everywhere timelike.
+  Let $\Sigma = f^{-1}(0)$ be a smooth spacelike Cauchy surface
+  in~$(\Rn{4},\eta)$, defined as a level set of a smooth function
+  $f\colon\Rn{4}\to\R$ with $\nabla f$ everywhere timelike
+  (that is, $\eta^{\alpha\beta}\partial_\alpha f\,\partial_\beta f < 0$).
   Then each worldline~$\gamma_j$ intersects~$\Sigma$
   transversally at a unique point
   $\gamma_j(\tau_j^\ast)$, and the restriction (``slice'') of
@@ -464,30 +606,60 @@ hypersurfaces and extends naturally to curved spacetimes.
   \end{equation}
   where $\vb{y}$ denotes coordinates on~$\Sigma$, $\vb{y}_j$ is
   the location of the $j$-th crossing on~$\Sigma$, and
-  $\delta_\Sigma$ is the delta function with respect to the induced
-  measure on~$\Sigma$.
+  $\delta_\Sigma$ is the delta function with respect to the
+  Riemannian measure on~$\Sigma$ induced by the ambient Minkowski
+  metric; since $\Sigma$ is spacelike, this induced metric is
+  positive definite.  (This coincides with the $3$-dimensional
+  Hausdorff measure~$\mathcal{H}^3$ restricted to~$\Sigma$, up
+  to identification of~$\Sigma$ with~$\R^3$ via coordinates.)
 \end{theorem}
 
 \begin{proof}[Sketch of proof]
-  Apply the slicing theorem for normal $1$-currents
-  (Federer~\cite[Theorem~4.3.2]{Federer69}) to the integration
-  current associated with each worldline, with slicing
-  function~$f$.  The transversality condition
-  $\partial_\gamma f \cdot \dot\gamma^\gamma \neq 0$ is guaranteed
-  because $\nabla f$ is timelike and $\dot\gamma$ is timelike,
-  so their Lorentzian inner product is nonzero by the reverse
-  Cauchy--Schwarz inequality.  The Jacobian factor
-  $|\partial_\gamma f \cdot \dot\gamma^\gamma|^{-1}$ arises from
-  the coarea formula applied to the composition
-  $f\circ\gamma\colon\R\to\R$.
+  \emph{Transversality.}\enspace
+  The covector field $\partial_\alpha f$ satisfies
+  $\eta^{\alpha\beta}\partial_\alpha f\,\partial_\beta f < 0$
+  (timelike), and the tangent vector $\dot\gamma^\alpha$ is also
+  timelike.  By the reverse Cauchy--Schwarz inequality for
+  Lorentzian inner products (if $u,v$ are both
+  timelike and in the same time-cone, then
+  $|g(u,v)| \ge |u|\,|v| > 0$), the contraction
+  $\partial_\gamma f \cdot \dot\gamma^\gamma \neq 0$.
+
+  \emph{Uniqueness of intersection.}\enspace
+  Consider the composition $h = f\circ\gamma\colon\R\to\R$.
+  Its derivative $h'(\tau) = \partial_\gamma f\bigl(\gamma(\tau)\bigr)
+  \,\dot\gamma^\gamma(\tau)$ is nonzero everywhere by
+  transversality, and has constant sign by continuity (since
+  $\R$ is connected).  Hence $h$ is strictly monotone, so
+  $h^{-1}(0)$ contains at most one point.  Existence of the
+  crossing follows from the Cauchy-surface hypothesis: by
+  definition, every inextendible timelike curve meets a Cauchy
+  surface, so each complete worldline~$\gamma_j$ intersects
+  $\Sigma = f^{-1}(0)$ at least---hence exactly---once.
+
+  \emph{Slicing and the substitution formula.}\enspace
+  The proof proceeds in two stages.  First, the classical
+  change-of-variables formula applied to
+  $h = f\circ\gamma\colon\R\to\R$ converts the proper-time
+  integral into an integral with respect to the level-set
+  parameter of~$f$, producing the Jacobian factor
+  $|\partial_\gamma f \cdot \dot\gamma^\gamma|^{-1}$.
+  Second, the identification of the resulting object as a delta
+  function on~$\Sigma$ uses the theory of slicing of normal
+  $1$-currents (Federer~\cite[Theorem~4.3.2]{Federer69}), which
+  provides the natural framework when $\Sigma$ is not a
+  coordinate hyperplane.
 \end{proof}
 
 \begin{remark}
   For the standard time function $f(x) = x^0 - t_0$, we have
   $\partial_\gamma f = \delta_\gamma^0$, so
-  $|\partial_\gamma f\cdot\dot\gamma^\gamma| = |\dot\gamma^0|
-  = d\gamma^0/d\tau$, and the Jacobian factor combines with
-  $\dot\gamma^\beta$ to give $d\gamma^\beta/dt$---recovering
+  $|\partial_\gamma f\cdot\dot\gamma^\gamma| = |\dot\gamma^0|$.
+  Since $\gamma$ is future-directed
+  (Definition~\ref{def:timelike-worldline}),
+  $|\dot\gamma^0| = d\gamma^0/d\tau$, and the Jacobian factor
+  combines with $\dot\gamma^\beta$ to give
+  $d\gamma^\beta/dt$---recovering
   Theorem~\ref{thm:equivalence}.  In curved spacetime one
   replaces $f$ with a Cauchy time function and $\delta_\Sigma$
   with the delta function defined by the induced Riemannian metric
@@ -507,7 +679,7 @@ charges~$q_j$, define the distributional four-current by
       \dot\gamma_j^\alpha(\tau)\,
       \phi\bigl(\gamma_j(\tau)\bigr)\;\dd\tau\,.
 \end{equation}
-The coarea argument of Theorem~\ref{thm:equivalence} shows that
+The change-of-variables argument of Theorem~\ref{thm:equivalence} shows that
 \begin{equation}\label{eq:Jmu-31}
   J^\alpha(x) = \sum_{j=1}^{N} q_j\,
     \frac{d\gamma_j^\alpha}{dt}(t)\,
@@ -533,8 +705,8 @@ along each worldline ($\dd q_j/\dd\tau = 0$).
       tensor by construction
       (Proposition~\ref{prop:lorentz-cov}).
     \item[\textup{(ii)}] The $3{+}1$ form~\eqref{eq:Tmunu-dt} is
-      derived from the covariant form by \emph{slicing with the
-      coarea formula} (Theorem~\ref{thm:equivalence}).
+      derived from the covariant form by \emph{change of variables
+      along the worldline} (Theorem~\ref{thm:equivalence}).
     \item[\textup{(iii)}] Conservation
       $\partial_\beta T^{\alpha\beta} = 0$ follows from the
       equations of motion by a distributional
@@ -552,9 +724,9 @@ along each worldline ($\dd q_j/\dd\tau = 0$).
 Thus Weinberg's beautiful microscopic picture of the
 energy-momentum tensor---as the density and flux of four-momentum
 carried by point particles---rests on a rigorous distributional
-foundation.  The coarea formula, far from being an exotic tool of
-geometric measure theory, is the elementary mechanism (change of
-variables along the worldline) that makes the entire construction
-work.  Recognising this clarifies what would otherwise appear to
+foundation.  The change-of-variables formula along the worldline is the
+elementary mechanism that makes the equivalence work; the full
+coarea/slicing framework of geometric measure theory becomes
+essential for the generalisation to arbitrary Cauchy surfaces.  Recognising this clarifies what would otherwise appear to
 be a sleight of hand in the passage from coordinate-time
 expressions to manifestly covariant ones.

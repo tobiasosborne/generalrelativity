@@ -1,0 +1,148 @@
+% ──────────────────────────────────────────────────────────────
+% CORRECTED SECTION: Distributions supported on worldlines
+% Resolves challenges on af node 1.2:
+%   ch-6497c1c1: future-directedness gap
+%   ch-4a5301c9: properness argument gap
+%   ch-2359648d: domain inconsistency I vs R
+%   ch-0c285e49: current interpretation
+%   ch-c26139fa: linearity and Riesz
+% ──────────────────────────────────────────────────────────────
+
+\subsection{Distributions supported on worldlines}%
+\label{sec:dist-worldlines}
+
+Throughout this addendum, $(\Rn{4}, \eta_{\alpha\beta})$ denotes
+Minkowski spacetime with signature~$(-,+,+,+)$, and
+$\mathcal{D}(\Rn{4}) = C_c^\infty(\Rn{4})$ is the space of
+compactly supported smooth test functions.  We write
+$\mathcal{D}'(\Rn{4})$ for the topological dual: the space of
+distributions (continuous linear functionals on~$\mathcal{D}$).
+
+\begin{definition}[Timelike worldline]\label{def:timelike-worldline}
+  A \textbf{timelike worldline} is a smooth, future-directed
+  embedding $\gamma\colon I \to \Rn{4}$ (where $I\subseteq\R$ is
+  an open interval) such that
+  \begin{equation}\label{eq:timelike-condition}
+    \eta_{\alpha\beta}\,\dot\gamma^\alpha\dot\gamma^\beta < 0
+    \qquad\text{and}\qquad
+    \frac{d\gamma^0}{d\tau} > 0
+  \end{equation}
+  everywhere on~$I$.  We take $\tau$ to be the proper-time
+  parameter and write
+  $\dot\gamma^\alpha = d\gamma^\alpha/d\tau$.  Throughout this
+  addendum we assume $I = \R$, i.e.\ the worldline is
+  inextendible.
+\end{definition}
+
+\noindent
+For a massive particle of rest mass~$m$, the
+\textbf{four-momentum} along~$\gamma$ is
+$p^\alpha(\tau) = m\,\dot\gamma^\alpha(\tau)$.
+
+The microscopic energy-momentum tensor is built from delta
+functions localised on worldlines.  To make this precise, we define
+it directly as a distribution.
+
+\begin{definition}[Distributional energy-momentum tensor]%
+\label{def:Tmunu-dist}
+  Given $N$ timelike worldlines $\gamma_j\colon \R \to \Rn{4}$
+  carrying four-momenta $p_j^\alpha(\tau)$, the
+  \textbf{(distributional) energy-momentum tensor}
+  $T^{\alpha\beta} \in \mathcal{D}'(\Rn{4})$ is defined by its
+  action on test functions:
+  \begin{equation}\label{eq:Tmunu-dist-def}
+    \eqbox{\langle T^{\alpha\beta},\, \phi\rangle
+      \;=\; \sum_{j=1}^{N} \int_{\R} p_j^\alpha(\tau)\,
+        \dot\gamma_j^\beta(\tau)\,
+        \phi\bigl(\gamma_j(\tau)\bigr)\;\dd\tau}
+  \end{equation}
+  for every $\phi \in \mathcal{D}(\Rn{4})$.
+\end{definition}
+
+\begin{proposition}[Well-definedness]\label{prop:Tmunu-well-defined}
+  The functional~\eqref{eq:Tmunu-dist-def} defines a distribution
+  of order zero, that is, a tensor-valued Radon measure
+  on~$\Rn{4}$.
+\end{proposition}
+
+\begin{proof}
+  It suffices to treat a single worldline~$\gamma$; the sum
+  over~$j$ follows by linearity.
+
+  \medskip\noindent
+  \textbf{Step~1: $\gamma^0$ is a diffeomorphism.}\;
+  By Definition~\ref{def:timelike-worldline}, the worldline is
+  future-directed:
+  $d\gamma^0/d\tau > 0$.  Hence the time projection
+  $f\colon \R\to\R$, $f(\tau) = \gamma^0(\tau)$, is a strictly
+  increasing smooth function, and therefore a diffeomorphism
+  from~$\R$ onto its image~$f(\R)$.
+
+  \medskip\noindent
+  \textbf{Step~2: $\gamma$ is proper.}\;
+  We must show that $\gamma^{-1}(K)$ is compact for every compact
+  $K\subset\Rn{4}$.
+  \begin{enumerate}
+    \item[(i)] \emph{Bounded $\tau$-range.}\;
+      Since $K$ is compact, its time projection
+      $\pi_0(K) \subset \R$ is a compact interval.  The
+      diffeomorphism~$f$ maps $\gamma^{-1}(K)$ into
+      $f^{-1}(\pi_0(K))$, which is a compact interval (as the
+      preimage of a compact interval under a diffeomorphism
+      $\R\to f(\R)$).  Hence $\gamma^{-1}(K)$ is contained in a
+      bounded $\tau$-interval.
+    \item[(ii)] \emph{Bounded spatial coordinates.}\;
+      The timelike condition
+      $\eta_{\alpha\beta}\,\dot\gamma^\alpha\dot\gamma^\beta < 0$
+      with signature $(-,+,+,+)$ gives
+      $\sum_{i=1}^{3}(\dot\gamma^i)^2 < (\dot\gamma^0)^2$,
+      so $|\dot\gamma^i| < |\dot\gamma^0|$ for each spatial
+      component.  In particular, the spatial components of~$\gamma$
+      grow no faster than~$\gamma^0$, so they remain bounded on
+      the bounded $\tau$-interval from~(i).
+    \item[(iii)] \emph{Compactness.}\;
+      Since $\gamma$ is an embedding (hence a homeomorphism onto
+      its image), $\gamma^{-1}(K)$ is closed in~$\R$ (as the
+      preimage of a compact, hence closed, set under a continuous
+      map).  By~(i) and~(ii), it is also bounded.  Hence
+      $\gamma^{-1}(K)$ is compact by the Heine--Borel theorem.
+  \end{enumerate}
+
+  \medskip\noindent
+  \textbf{Step~3: The integral converges and yields
+  order-zero continuity.}\;
+  Let $\phi \in \mathcal{D}(\Rn{4})$ have
+  support in a compact set~$K$.  The function
+  $\tau \mapsto p^\alpha(\tau)\,\dot\gamma^\beta(\tau)\,
+  \phi(\gamma(\tau))$ is smooth with support in the compact set
+  $\gamma^{-1}(K)$, so the integral converges absolutely.
+  Linearity of the functional in~$\phi$ is immediate.  Moreover,
+  \[
+    |\langle T^{\alpha\beta}, \phi\rangle|
+      \;\leq\; \sum_j \int_{\gamma_j^{-1}(K)}
+        |p_j^\alpha|\,|\dot\gamma_j^\beta|\;\dd\tau
+        \cdot \|\phi\|_\infty
+      \;\leq\; C_K\,\|\phi\|_\infty\,,
+  \]
+  where $C_K = \sum_j \int_{\gamma_j^{-1}(K)}
+  |p_j^\alpha|\,|\dot\gamma_j^\beta|\,\dd\tau < \infty$ depends
+  only on~$K$ (not on~$\phi$).  Thus $T^{\alpha\beta}$ is
+  continuous in the $C^0$-topology and hence is a distribution of
+  order zero.  (By the Riesz representation theorem, every
+  distribution of order zero corresponds to a Radon measure,
+  so $T^{\alpha\beta}$ is indeed a tensor-valued Radon measure
+  on~$\Rn{4}$.)
+\end{proof}
+
+\begin{remark}
+  Definition~\ref{def:Tmunu-dist} is the \emph{pushforward} of a
+  measure on the worldline to a distribution on spacetime.  In the
+  language of de~Rham's theory of currents, the functional
+  $\phi \mapsto \int \phi(\gamma(\tau))\,\dd\tau$ defines a
+  $1$-current on~$\Rn{4}$---the integration current of the
+  worldline.  Each component $T^{\alpha\beta}$ (for fixed
+  $\alpha,\beta$) is obtained from this $1$-current by
+  contracting the integrand with the tensor weight
+  $p^\alpha\,\dd\gamma^\beta$.  See
+  Federer~\cite[\S4.1]{Federer69}.
+\end{remark}
