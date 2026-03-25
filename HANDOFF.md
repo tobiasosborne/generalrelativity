@@ -82,7 +82,7 @@ Transcript-to-tex mapping for lectures 12–22:
 ```
 latex/
   GeneralRelativity.tex       # Master document (amsart class, xelatex)
-  gr-style.sty                # Formatting: fonts, colors, theorem envs, tcolorbox
+  gr-style.sty                # Formatting: fonts, colors, theorem envs, tcolorbox (synced with qnd-style.sty)
   gr-macros.sty               # GR macro library + TikZ presets
   gr-tikz-templates.sty       # pgfplots styles, colormaps, standard dims, \pic defs
   references.bib              # Bibliography (Wald, MTW, Weinberg, TLL73, Federer)

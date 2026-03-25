@@ -68,7 +68,7 @@
 % ── TikZ & pgfplots ──────────────────────────────────────────
 \RequirePackage{tikz}
 \usetikzlibrary{calc,arrows.meta,decorations.markings,patterns,
-  positioning,shapes.geometric,backgrounds}
+  positioning,shapes.geometric,backgrounds,matrix,fit}
 \RequirePackage{pgfplots}
 \pgfplotsset{compat=1.18}
 \usepgfplotslibrary{patchplots,fillbetween}
@@ -76,6 +76,9 @@
 % ── Lists ─────────────────────────────────────────────────────
 \RequirePackage{enumerate}
 \RequirePackage{booktabs}
+
+% ── Hyperlinks ────────────────────────────────────────────────
+\RequirePackage[colorlinks=true,linkcolor=cgblue,citecolor=munsell,urlcolor=cgblue]{hyperref}
 
 % ── Section formatting ────────────────────────────────────────
 \makeatletter
@@ -121,31 +124,56 @@
 % ── Highlighted boxes ─────────────────────────────────────────
 % Key equation box (banana highlight)
 \def\eqbox#1{\tcboxmath[colback=banana,arc=0cm,frame hidden,enhanced]{#1}}
-% Important result box
+
+% Two box types:
+%   (1) Standard grey — grey background, no border, title inside
+%   (2) Highlight yellow+blue — yellow background, blue border, title inside
+
+% --- Standard grey box (no border) ---
+\newtcolorbox{greybox}[1][]{%
+  enhanced, breakable,
+  colback=isabelline, frame hidden,
+  arc=3pt,
+  left=8pt, right=8pt, top=8pt, bottom=6pt,
+  detach title, before upper={\textbf{\textsf{\color{spacecadet}#1}}\par\smallskip}}
+
+% --- Highlight box (yellow background, blue border) ---
+\newtcolorbox{highlightbox}[1][]{%
+  enhanced, breakable,
+  colback=banana!15, colframe=cgblue,
+  arc=3pt, boxrule=0.8pt,
+  left=8pt, right=8pt, top=8pt, bottom=6pt,
+  detach title, before upper={\textbf{\textsf{\color{cgblue}#1}}\par\smallskip}}
+
+% Map semantic environments to the two box types
+% keyresult → highlight (important results deserve emphasis)
 \newtcolorbox{keyresult}[1][]{%
-  colback=banana!20, colframe=cgblue, arc=2pt,
-  fonttitle=\sf\bfseries\color{cgblue},
-  title={#1}}
-% Physical intuition box
+  enhanced, breakable,
+  colback=banana!15, colframe=cgblue,
+  arc=3pt, boxrule=0.8pt,
+  left=8pt, right=8pt, top=8pt, bottom=6pt,
+  detach title, before upper={\textbf{\textsf{\color{cgblue}#1}}\par\smallskip}}
+% intuition → grey
 \newtcolorbox{intuition}[1][Physical intuition]{%
   enhanced, breakable,
-  colback=munsell!8, colframe=munsell!60!black,
-  arc=3pt, boxrule=0.8pt,
-  left=8pt, right=8pt, top=6pt, bottom=6pt,
-  fonttitle=\sf\bfseries\color{munsell!80!black},
-  attach boxed title to top left={yshift=-2mm, xshift=4mm},
-  boxed title style={colback=munsell!8, frame hidden, arc=2pt},
-  title={#1}}
-% Historical note box
+  colback=isabelline, frame hidden,
+  arc=3pt,
+  left=8pt, right=8pt, top=8pt, bottom=6pt,
+  detach title, before upper={\textbf{\textsf{\color{spacecadet}#1}}\par\smallskip}}
+% historical → grey
 \newtcolorbox{historical}[1][Historical note]{%
   enhanced, breakable,
-  colback=isabelline, colframe=spacecadet!40,
-  arc=3pt, boxrule=0.6pt,
-  left=8pt, right=8pt, top=6pt, bottom=6pt,
-  fonttitle=\sf\bfseries\color{spacecadet},
-  attach boxed title to top left={yshift=-2mm, xshift=4mm},
-  boxed title style={colback=isabelline, frame hidden, arc=2pt},
-  title={#1}}
+  colback=isabelline, frame hidden,
+  arc=3pt,
+  left=8pt, right=8pt, top=8pt, bottom=6pt,
+  detach title, before upper={\textbf{\textsf{\color{spacecadet}#1}}\par\smallskip}}
+% algorithmbox → grey
+\newtcolorbox{algorithmbox}[1][Algorithm]{%
+  enhanced, breakable,
+  colback=isabelline, frame hidden,
+  arc=3pt,
+  left=8pt, right=8pt, top=8pt, bottom=6pt,
+  detach title, before upper={\textbf{\textsf{\color{spacecadet}#1}}\par\smallskip}}
 % Figure placeholder
 \def\figbox{\begin{center}\tcboxmath[colback=isabelline,frame hidden,enhanced,sharp corners]{\parbox[c][3cm][c]{10cm}{\ }}\end{center}}
 
