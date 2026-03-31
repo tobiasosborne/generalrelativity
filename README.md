@@ -55,10 +55,6 @@ Requires XeLaTeX with Times LT Std, Whitney, MTPro2, and LucimaTX fonts.
 ./build.sh --cmfonts    # Computer Modern fallback (no proprietary fonts)
 ```
 
-## Colour scheme
-
-The notes use a colour palette derived from Faber Birren's industrial safety colour theory (1944), designed to reduce visual fatigue during sustained reading. See `birren-colour-schemes.md` for the full palette specification.
-
 ## License
 
 Apache 2.0
