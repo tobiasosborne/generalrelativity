@@ -26,12 +26,12 @@
 %  COLOR CYCLE (matches the GR palette)
 % ================================================================
 \pgfplotscreateplotcyclelist{grcolors}{
-  {cgblue,   line width=1.0pt},
-  {munsell,  line width=1.0pt},
-  {banana!80!black, line width=1.0pt},
+  {munsell,    line width=1.0pt},
+  {birrenred,  line width=1.0pt},
   {spacecadet, line width=1.0pt},
-  {cgblue,   line width=1.0pt, dashed},
-  {munsell,  line width=1.0pt, dashed},
+  {birrenorange, line width=1.0pt},
+  {munsell,    line width=1.0pt, dashed},
+  {birrenred,  line width=1.0pt, dashed},
 }
 
 % ================================================================
@@ -40,14 +40,14 @@
 % Potential: deep blue → teal → light → gold
 \pgfplotsset{
   colormap={grpotential}{
-    rgb255(0cm)=(13,40,76)
-    rgb255(2cm)=(0,124,165)
-    rgb255(4cm)=(234,237,234)
-    rgb255(5cm)=(255,217,50)
+    rgb255(0cm)=(255,255,255)
+    rgb255(2cm)=(212,201,168)
+    rgb255(5cm)=(140,140,132)
   },
   colormap={grsurface}{
-    rgb255(0cm)=(0,143,168)
-    rgb255(3cm)=(234,237,234)
+    rgb255(0cm)=(255,255,255)
+    rgb255(2cm)=(212,201,168)
+    rgb255(5cm)=(140,140,132)
   },
 }
 
@@ -66,9 +66,9 @@
     every axis y label/.style={at={(ticklabel* cs:1.0)}, anchor=south,
       font=\small},
     every axis title/.style={at={(0.5,1.05)}, anchor=south,
-      font=\sf\small\bfseries, text=cgblue},
+      font=\sf\small\bfseries, text=munsell},
     tick label style={font=\footnotesize, text=spacecadet},
-    axis line style={spacecadet, line width=0.6pt},
+    axis line style={birrenorange, line width=0.6pt},
     major grid style={light-gray, very thin},
     grid=major,
     cycle list name=grcolors,
@@ -99,9 +99,9 @@
     every axis z label/.style={at={(ticklabel* cs:1.0)}, anchor=south,
       font=\small},
     every axis title/.style={at={(0.5,1.05)}, anchor=south,
-      font=\sf\small\bfseries, text=cgblue},
+      font=\sf\small\bfseries, text=munsell},
     tick label style={font=\tiny, text=spacecadet},
-    axis line style={spacecadet, line width=0.6pt},
+    axis line style={birrenorange, line width=0.6pt},
     cycle list name=grcolors,
     colormap name=grsurface,
   },
@@ -128,19 +128,19 @@
 % Manifold blob: \pic at (x,y) {manifold blob={$\M$}};
 \tikzset{
   manifold blob/.pic={
-    \draw[thick, spacecadet]
+    \draw[thick, munsell]
       (0,0) .. controls (0.4,0.7) and (1.2,0.8) .. (1.8,0.5)
       .. controls (2.2,0.3) and (2.3,-0.2) .. (2.0,-0.6)
       .. controls (1.6,-0.9) and (0.6,-0.8) .. (0.2,-0.5)
       .. controls (-0.1,-0.3) and (-0.2,0.2) .. (0,0);
-    \node[font=\sf\small, text=cgblue] at (1.0,0.9) {#1};
+    \node[font=\sf\small, text=spacecadet] at (1.0,0.9) {#1};
   },
 }
 
 % Chart region: \pic[chart color=cgblue] at (x,y) {chart region={O_\alpha}};
 \tikzset{
   chart color/.store in=\grchartcolor,
-  chart color=cgblue,
+  chart color=munsell,
   chart region/.pic={
     \draw[thick, \grchartcolor, fill=\grchartcolor!8]
       (0,0) .. controls (0.2,0.35) and (0.7,0.4) .. (1.1,0.25)
@@ -153,15 +153,15 @@
 % Coordinate axes: \pic at (x,y) {coord axes={$\Rn{n}$}};
 \tikzset{
   coord axes/.pic={
-    \draw[axisstyle, spacecadet] (0,-0.8) -- (0,0.8);
-    \draw[axisstyle, spacecadet] (-0.2,0) -- (2.0,0);
-    \node[font=\sf\small, text=spacecadet] at (1.8,0.8) {#1};
+    \draw[axisstyle, birrenorange] (0,-0.8) -- (0,0.8);
+    \draw[axisstyle, birrenorange] (-0.2,0) -- (2.0,0);
+    \node[font=\sf\small, text=birrenorange] at (1.8,0.8) {#1};
   },
 }
 
 % Map arrow style
 \tikzset{
-  map arrow/.style={thick, -{Stealth[length=6pt]}, cgblue},
+  map arrow/.style={thick, -{Stealth[length=6pt]}, munsell},
 }
 
 % Tangent plane: \pic at (x,y) {tangent plane};
