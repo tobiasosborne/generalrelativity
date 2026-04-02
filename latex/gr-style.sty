@@ -103,6 +103,14 @@
 \def\subsubsection{\@startsection{subsubsection}{3}%
   \z@{.5\linespacing\@plus.7\linespacing}{-.5em}%
   {\color{munsell}\normalfont\sf\itshape}}
+% ── Title formatting (sans, same colour as headings) ─────────
+\def\@settitle{\begin{center}%
+  \baselineskip14\p@\relax
+    \bfseries\sffamily\color{munsell}%
+  \uppercasenonmath\@title
+  \@title
+  \end{center}%
+}
 \makeatother
 
 % ── Theorem environments ──────────────────────────────────────

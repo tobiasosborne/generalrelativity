@@ -172,6 +172,9 @@ build_pdf() {
         info "$data_errors missing data file warning(s) — run ./build.sh --simdata to fix"
     fi
 
+    # Copy PDF to repo root
+    cp "$JOB_NAME.pdf" "$PROJ_ROOT/$JOB_NAME.pdf" 2>/dev/null || true
+
     ok "Built ${BOLD}$JOB_NAME.pdf${NC} ($pages pages)"
     cd "$PROJ_ROOT"
 }
