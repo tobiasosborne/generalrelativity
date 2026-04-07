@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lecture 1: Prerelativity
+Gravitation — Introduction to General Relativity</title>
+
+<!-- MathJax 3 with custom macros -->
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    displayMath: [['\\[','\\]']],
+    macros: {
+      // Derivatives
+      pd: ['{\\frac{\\partial^{#1} #2}{\\partial {#3}^{#1}}}', 3, ''],
+      td: ['{\\frac{d #1}{d #2}}', 2],
+      dd: '{\\mathrm{d}}',
+      covd: '{\\nabla}',
+      Lie: '{\\mathcal{L}}',
+      dalem: '{\\Box}',
+      lap: '{\\Delta}',
+      // Vectors
+      vb: ['{\\boldsymbol{#1}}', 1],
+      uv: ['{\\hat{\\boldsymbol{#1}}}', 1],
+      dt: ['{\\dot{#1}}', 1],
+      ddt: ['{\\ddot{#1}}', 1],
+      norm: ['{\\lVert #1 \\rVert}', 1],
+      // Tensor calculus
+      chris: ['{\\Gamma^{#1}{}_{#2}}', 2],
+      Riem: '{R}',
+      Ric: '{R}',
+      Ein: '{G}',
+      Weyl: '{C}',
+      metric: '{g}',
+      ttype: ['{\\mathcal{T}(#1,#2)}', 2],
+      tp: '{\\otimes}',
+      // Spaces
+      M: '{\\mathcal{M}}',
+      Tp: '{T_p\\mathcal{M}}',
+      Tps: '{T_p^*\\mathcal{M}}',
+      R: '{\\mathbb{R}}',
+      Rn: ['{\\mathbb{R}^{#1}}', 1],
+      // Operators
+      supp: '{\\operatorname{supp}}',
+      tr: '{\\operatorname{tr}}',
+      id: '{\\operatorname{id}}',
+      diag: '{\\operatorname{diag}}',
+      sgn: '{\\operatorname{sgn}}',
+      grad: '{\\operatorname{grad}}',
+      Div: '{\\operatorname{div}}',
+      curl: '{\\operatorname{curl}}',
+      grav: '{G}',
+      textbf: ['{\\mathbf{#1}}', 1],
+    },
+    tags: 'ams',
+    tagSide: 'right',
+  },
+  options: {
+    renderActions: {
+      // Ensure equations render before details are opened
+      addMenu: [0, '', '']
+    }
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+
+<style>
+/* ── Base ─────────────────────────────────────── */
+:root {
+  --spacecadet: #3D7A55;
+  --munsell: #5B8C6F;
+  --banana: #E8B630;
+  --cgblue: #4A7FB5;
+  --isabelline: #A8D5BA;
+  --birrenred: #C4392F;
+  --birrenorange: #D97A2B;
+  --birrengray: #8C8C84;
+  --lightgray: #D4C9A8;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  max-width: 48em;
+  margin: 2em auto;
+  padding: 0 1.5em;
+  font-family: 'Times New Roman', 'Georgia', serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--spacecadet);
+  background: #fcfcfc;
+}
+
+h1, h2, h3, h4 {
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color: var(--cgblue);
+}
+
+h1 { font-size: 1.8em; text-align: center; border-bottom: 2px solid var(--cgblue); padding-bottom: 0.3em; }
+h2 { font-size: 1.35em; margin-top: 2em; }
+h3 { font-size: 1.15em; margin-top: 1.5em; }
+
+a { color: var(--munsell); }
+
+/* ── Nav ──────────────────────────────────────── */
+nav.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 0;
+  border-bottom: 1px solid var(--isabelline);
+  margin-bottom: 1.5em;
+  font-family: system-ui, sans-serif;
+  font-size: 0.85em;
+}
+nav.top-nav a { text-decoration: none; color: var(--cgblue); }
+nav.top-nav a:hover { text-decoration: underline; }
+
+/* ── Fold/unfold controls ─────────────────────── */
+.fold-controls {
+  text-align: right;
+  margin-bottom: 1em;
+  font-family: system-ui, sans-serif;
+  font-size: 0.8em;
+}
+.fold-controls button {
+  background: var(--isabelline);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 3px 10px;
+  cursor: pointer;
+  font-size: 0.85em;
+  margin-left: 4px;
+}
+.fold-controls button:hover { background: var(--banana); }
+
+/* ── Foldable boxes (details/summary) ─────────── */
+details {
+  margin: 1em 0;
+  border-radius: 6px;
+  padding: 0;
+  overflow: hidden;
+}
+
+details > summary {
+  cursor: pointer;
+  padding: 0.5em 0.8em;
+  font-family: system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.95em;
+  list-style: none;
+  user-select: none;
+}
+details > summary::-webkit-details-marker { display: none; }
+details > summary::before {
+  content: '▸ ';
+  display: inline-block;
+  transition: transform 0.15s;
+}
+details[open] > summary::before {
+  content: '▾ ';
+}
+
+details > :not(summary) { padding: 0 0.8em; }
+
+/* Box variants */
+.box-intuition { background: rgba(91,140,111,0.08); border-left: 4px solid var(--munsell); }
+.box-intuition > summary { color: var(--munsell); }
+
+.box-historical { background: var(--isabelline); border-left: 4px solid #888; }
+.box-historical > summary { color: #555; }
+
+.box-keyresult { background: rgba(232,182,48,0.12); border-left: 4px solid var(--banana); }
+.box-keyresult > summary { color: #8a7000; }
+
+.box-solution { background: #f5f5f5; border-left: 4px solid #aaa; }
+.box-solution > summary { color: #666; }
+
+/* Non-foldable boxes */
+.box-exercise {
+  margin: 1em 0;
+  padding: 0.5em 0.8em;
+  background: rgba(74,127,181,0.04);
+  border-left: 4px solid var(--cgblue);
+  border-radius: 6px;
+}
+.box-exercise strong { color: var(--cgblue); font-family: system-ui, sans-serif; }
+
+.box-example {
+  margin: 1em 0;
+  padding: 0.5em 0.8em;
+  background: rgba(74,127,181,0.03);
+  border-left: 4px solid var(--cgblue);
+  border-radius: 6px;
+}
+.box-example strong { color: var(--cgblue); font-family: system-ui, sans-serif; }
+
+.box-remark {
+  margin: 1em 0;
+  padding: 0.5em 0.8em;
+  background: #f9f9f9;
+  border-left: 3px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95em;
+}
+
+.box-notation {
+  margin: 1em 0;
+  padding: 0.5em 0.8em;
+  background: #f9f9f9;
+  border-left: 3px solid var(--cgblue);
+  border-radius: 4px;
+}
+
+/* ── Highlighted equation box ─────────────────── */
+.eqbox-display {
+  background: rgba(232,182,48,0.15);
+  padding: 0.3em 0.5em;
+  border-radius: 4px;
+  margin: 0.8em 0;
+}
+
+span.eqbox {
+  background: rgba(232,182,48,0.2);
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+/* ── TikZ placeholder ─────────────────────────── */
+.tikz-placeholder {
+  margin: 1.5em auto;
+  padding: 2em;
+  background: var(--isabelline);
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  text-align: center;
+  color: #888;
+  font-family: system-ui, sans-serif;
+  font-style: italic;
+  max-width: 24em;
+}
+
+/* ── Interactive figure container ──────────────── */
+.interactive-figure {
+  margin: 2em 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+}
+.interactive-figure .fig-header {
+  background: var(--isabelline);
+  padding: 0.5em 1em;
+  font-family: system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.9em;
+  color: var(--cgblue);
+}
+.interactive-figure canvas {
+  display: block;
+  width: 100%;
+  cursor: grab;
+}
+.interactive-figure .fig-controls {
+  padding: 0.8em 1em;
+  background: #fafafa;
+  border-top: 1px solid #eee;
+  font-family: system-ui, sans-serif;
+  font-size: 0.85em;
+}
+.interactive-figure .fig-controls label {
+  margin-right: 1em;
+  color: var(--spacecadet);
+}
+.interactive-figure .fig-controls input[type=range] {
+  vertical-align: middle;
+  width: 180px;
+}
+
+/* ── Responsive ───────────────────────────────── */
+@media (max-width: 600px) {
+  body { font-size: 16px; padding: 0 0.8em; }
+  h1 { font-size: 1.4em; }
+}
+
+/* ── Definition lists (for footnotes) ─────────── */
+.footnotes { font-size: 0.85em; border-top: 1px solid #ddd; margin-top: 3em; padding-top: 1em; }
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <a href="index.html">← All Lectures</a>
+  <span><strong>Introduction to General Relativity</strong></span>
+  <span></span>
+</nav>
+
+<div class="fold-controls">
+  <button onclick="document.querySelectorAll('details').forEach(d=>d.open=true)">Unfold all</button>
+  <button onclick="document.querySelectorAll('details').forEach(d=>d.open=false)">Fold all</button>
+</div>
+
+<h1 id="sec:prerelativity">Prerelativity gravitation</h1>
+<h2 id="course-overview">Course overview</h2>
+<p>General relativity is, by wide consensus among physicists, one of the
+most beautiful and elegant physical theories we possess. The connection
+it draws between the curvature of spacetime and the motion of freely
+falling bodies has an almost miraculous quality: there is something
+deeply compelling, perhaps even inevitable, about the way the theory
+holds together.</p>
+<p>That said, general relativity is also <em>wrong</em>, or at least
+incomplete: as far as we know, it is not compatible with quantum
+mechanics in any fully satisfactory way. A deeper, more fundamental
+theory must underlie both. Nonetheless, the predictions of general
+relativity have been confirmed to extraordinary accuracy across an
+enormous range of cosmological and astrophysical phenomena, and it
+remains the indispensable framework for understanding gravity.</p>
+<p><strong>Text.</strong> Wald, <em>General Relativity</em> <span
+class="citation" data-cites="Wald84"></span>. We follow Wald closely,
+though we deviate where other sources offer clearer treatments.<br />
+<strong>Other sources:</strong></p>
+<ul>
+<li><p>Misner, Thorne &amp; Wheeler <span class="citation"
+data-cites="MTW73"></span>: the “telephone book,” a comprehensive and
+physically rich discussion of general relativity.</p></li>
+<li><p>Weinberg <span class="citation" data-cites="Weinberg72"></span>:
+an excellent resource for explicit calculations.</p></li>
+</ul>
+<p><strong>Structure.</strong> The course proceeds from mathematical
+methods to the physics of gravitation. The emphasis falls deliberately
+on the mathematical side: in particular, on differential geometry. While
+it is perfectly possible to do general relativity concretely, working in
+a single coordinate patch and never invoking coordinate-free notation, a
+command of the underlying differential geometry is indispensable for
+further studies in theoretical physics. Anytime one wishes to do serious
+work in quantum gravity or string theory, fluency in differential
+geometry is a prerequisite; the investment made here will pay dividends
+well beyond this course.</p>
+<div class="center">
+<p><em>[TikZ diagram — see PDF]</em></p>
+</div>
+<p><strong>Videos.</strong> Lenny Susskind’s lecture series on general
+relativity offers an absolutely different, and completely complementary,
+perspective to the one presented here.</p>
+<p><strong>Prerequisites:</strong></p>
+<ul>
+<li><p>Special relativity</p></li>
+<li><p>Calculus</p></li>
+<li><p>Linear algebra</p></li>
+<li><p>Combinatorics</p></li>
+</ul>
+<h2 id="newtonian-mechanics-and-inertial-frames">Newtonian mechanics and
+inertial frames</h2>
+<p><strong>Assumption:</strong> Newtonian physics presupposes the
+existence of a preferred reference system and clocks. This is the core
+assumption that will be broken in the transition from pre-relativity to
+relativity physics: a common thread in the development of physics is
+that one makes (often implicit) assumptions in a physical theory, and as
+one learns more about the universe one is forced to re-evaluate and
+potentially discard them.</p>
+<div class="center">
+<p><em>[TikZ diagram — see PDF]</em></p>
+</div>
+<p>A free test mass (i.e. no force acts) moves along a straight
+trajectory at a constant rate, uniformly in time: constant displacement
+per unit time. This defines an <em>inertial reference frame</em>. There
+is one preferred reference frame, but one can obtain others by
+performing Galilean boosts: an observer moving at constant velocity with
+respect to the preferred frame will also see free test masses moving
+along straight trajectories at constant rates.</p>
+<p>Newton’s second law is written with respect to an inertial reference
+system: <span class="math display">\[\label{eq:newton2}
+  \boxed{\boldsymbol{F}(\boldsymbol{x}(t),\, t) \;=\; m_I\,
+\ddot{\boldsymbol{x}}(t)\,,}\]</span> where <span
+class="math inline">\(\boldsymbol{F}\)</span> is the force, <span
+class="math inline">\(m_I\)</span> is the <em>inertial mass</em>, and
+<span class="math inline">\(\ddot{\boldsymbol{x}}\)</span> is the
+acceleration.</p>
+<h3 id="non-inertial-reference-frames">Non-inertial reference
+frames</h3>
+<p>With respect to a non-inertial reference frame, define three
+(time-dependent) unit vectors <span
+class="math inline">\(\hat{\boldsymbol{x}}&#39;(t)\)</span>, <span
+class="math inline">\(\hat{\boldsymbol{y}}&#39;(t)\)</span>, <span
+class="math inline">\(\hat{\boldsymbol{z}}&#39;(t)\)</span>. A
+trajectory can be expressed in either basis: <span
+class="math display">\[\begin{aligned}
+  \boldsymbol{w}(t) &amp;= w_x(t)\,\hat{\boldsymbol{x}} +
+w_y(t)\,\hat{\boldsymbol{y}} + w_z(t)\,\hat{\boldsymbol{z}}
+  \label{eq:traj-inertial}\\
+  &amp;= w_{x&#39;}(t)\,\hat{\boldsymbol{x}}&#39;(t) +
+w_{y&#39;}(t)\,\hat{\boldsymbol{y}}&#39;(t) +
+w_{z&#39;}(t)\,\hat{\boldsymbol{z}}&#39;(t).
+  \label{eq:traj-noninertial}
+\end{aligned}\]</span></p>
+<p><strong>Index notation.</strong> For a vector <span
+class="math inline">\(\boldsymbol{a}\)</span> and a matrix <span
+class="math inline">\(M\)</span>: <span
+class="math display">\[[\boldsymbol{a}]_x = a_x\,,\qquad
+  [M]_{xy} = M_{xy}\,.\]</span></p>
+<p>Physics in non-inertial frames (as captured by Newton’s second law)
+gives rise to additional <em>inertial force</em> terms,
+e.g. centrifugal, Coriolis, Euler forces, etc.</p>
+<div class="box-exercise">
+<div class="box-title">Exercise</div>
+<p>Distinguish “true forces” from apparent (inertial) forces.</p>
+</div>
+<details class="box-intuition" open>
+<summary>Physical intuition</summary>
+<div class="box-body">
+<p>In a rotating reference frame, a ball thrown in a straight line
+<em>appears</em> to curve (Coriolis effect). The “force” causing this
+curve is not due to any physical interaction: it is an artefact of the
+non-inertial frame. In Newtonian physics, gravity is classified as a
+<em>true</em> force. A central insight of general relativity is that
+gravity, too, can be understood as an artefact of geometry, effectively
+reclassifying it alongside the inertial forces.</p>
+</div>
+</details>
+<h2 id="mass-three-conceptually-distinct-quantities">Mass: three
+conceptually distinct quantities</h2>
+<ol type="i">
+<li><p><strong>Inertial mass</strong> <span
+class="math inline">\(m_I\)</span>: the constant of proportionality in
+Newton’s second law, <span
+class="math display">\[\label{eq:newton2-abstract}
+      F = m_I\, a\,.\]</span></p></li>
+<li><p><strong>Active gravitational mass</strong> <span
+class="math inline">\(m_g^{(a)}\)</span>: the mass that
+<em>produces</em> the gravitational field that other masses respond to.
+The gravitational field of a point source at position <span
+class="math inline">\(\boldsymbol{x}&#39;\)</span> is <span
+class="math display">\[\label{eq:grav-field-point}
+      \boldsymbol{g}(\boldsymbol{x})
+        = -G\, m_g^{(a)}\,
+          \frac{\boldsymbol{x} - \boldsymbol{x}&#39;}{\lVert
+\boldsymbol{x} - \boldsymbol{x}&#39; \rVert^3}\,,\]</span> where <span
+class="math inline">\(G\)</span> is the gravitational constant, <span
+class="math display">\[G = 6.674\,30(15) \times 10^{-11}\;\mathrm{m}^3\,
+              \mathrm{kg}^{-1}\,\mathrm{s}^{-2}\,.\]</span></p></li>
+<li><p><strong>Passive gravitational mass</strong> <span
+class="math inline">\(m_g^{(p)}\)</span>: the mass that
+<em>responds</em> to an external gravitational field by accelerating,
+<span class="math display">\[\label{eq:grav-force}
+      \boldsymbol{F}_g = m_g^{(p)}\,\boldsymbol{g}\,.\]</span></p></li>
+</ol>
+<p>It is assumed that <span class="math inline">\(m_I,\, m_g^{(a)},\,
+m_g^{(p)} \geq 0\)</span>. This non-negativity is an assumption, not a
+theorem: one <em>cannot</em> deduce it from the other laws of Newtonian
+physics.</p>
+<div class="box-remark">
+<div class="box-title">Remark</div>
+<p>It is possible to build a consistent Newtonian physics with negative
+masses. The consequences are exotic: negative masses behave somewhat
+like negative charges, and all manner of counterintuitive phenomena
+arise, but the theory does not immediately break down. The
+non-negativity of mass is supported by extensive experimental evidence,
+not by logical necessity.</p>
+</div>
+<div class="box-exercise">
+<div class="box-title">Exercise</div>
+<p>Using Newton’s third law, argue that <span
+class="math inline"><em>m</em><sub><em>g</em></sub><sup>(<em>a</em>)</sup>/<em>m</em><sub><em>g</em></sub><sup>(<em>p</em>)</sup></span>
+is a universal constant.</p>
+</div>
+<p>Choosing units: <span class="math inline">\(m_g^{(a)} = m_g^{(p)}
+\equiv m_g\)</span>.</p>
+<details class="box-intuition" open>
+<summary>Physical intuition</summary>
+<div class="box-body">
+<p>Every massive body carries <em>three</em> logically independent
+numbers: how much it resists acceleration (<span
+class="math inline"><em>m</em><sub><em>I</em></sub></span>), how
+strongly it sources a gravitational field (<span
+class="math inline"><em>m</em><sub><em>g</em></sub><sup>(<em>a</em>)</sup></span>),
+and how strongly it responds to one (<span
+class="math inline"><em>m</em><sub><em>g</em></sub><sup>(<em>p</em>)</sup></span>).
+That nature chooses to make all three equal is not obvious: it is a deep
+empirical fact that general relativity elevates to a geometric
+principle.</p>
+</div>
+</details>
+<h2 id="sec:UFF">The universality of free fall</h2>
+<p>Extensive experimental evidence suggests <span
+class="math inline">\(m_g = m_I\)</span>.</p>
+<div class="box-definition">
+<div class="box-title">Definition</div>
+<p><span id="def:UFF" label="def:UFF"></span> In a gravitational field
+<span class="math inline"><strong>g</strong></span>, the orbit <span
+class="math inline"><strong>x</strong>(<em>t</em>)</span> of a test mass
+depends <em>only</em> on the initial conditions. That is, identical
+initial conditions produce identical trajectories regardless of the
+composition or internal structure of the test mass.</p>
+</div>
+<p>Consider a test mass in a gravitational field:</p>
+<div class="center">
+<p><em>[TikZ diagram — see PDF]</em></p>
+</div>
+<p>The equation of motion reads <span
+class="math display">\[\label{eq:eom-grav}
+  m_g\,\boldsymbol{g}(\boldsymbol{x}(t)) =
+m_I\,\ddot{\boldsymbol{x}}(t)\,,\]</span> or equivalently, <span
+class="math display">\[\label{eq:eom-UFF}
+  \boxed{\ddot{\boldsymbol{x}}(t) =
+\frac{m_g}{m_I}\,\boldsymbol{g}(\boldsymbol{x}(t))\,.}\]</span> Since
+<span class="math inline">\(m_g/m_I\)</span> is a universal constant, we
+may choose units such that <span class="math inline">\(m_g =
+m_I\)</span>.</p>
+<div class="box-remark">
+<div class="box-title">Remark</div>
+<ol type="1">
+<li><p>The universality of free fall is <em>not</em> a consequence of
+Newtonian theory: it is a falsifiable hypothesis. That <span
+class="math inline"><em>m</em><sub><em>g</em></sub> = <em>m</em><sub><em>I</em></sub></span>
+cannot be proved from Newton’s laws; it is an empirical statement that
+could, in principle, be refuted by experiment. Experiments testing this
+relationship continue to this day.</p></li>
+<li><p>UFF applies specifically to <em>test masses</em>. A test mass is
+an idealised notion: one should visualise it as a “point” particle. The
+concept is already subtle in Newtonian physics: a finite mass
+concentrated into an arbitrarily small volume would, in general
+relativity, form a black hole, and it becomes more so when test masses
+are numerous enough to generate their own gravitational fields. These
+subtleties will be resolved once we have the full apparatus of general
+relativity.</p></li>
+</ol>
+</div>
+<div class="interactive-figure">
+  <div class="fig-header">
+    <a href="mass-ratio.html">Interactive: Orbits with varying m<sub>g</sub>/m<sub>I</sub></a>
+    &mdash; drag the slider to see how orbits change when the universality of free fall is violated
+  </div>
+  <div style="text-align:center; padding: 1.5em;">
+    <a href="mass-ratio.html" style="display:inline-block; padding: 0.8em 1.5em; background: var(--cgblue); color: white; border-radius: 6px; text-decoration: none; font-weight: 600;">
+      Open interactive demo &rarr;
+    </a>
+    <p style="font-size: 0.85em; color: var(--birrengray); margin-top: 0.5em;">
+      Five test particles in a Kepler field with \(\eta = m_g/m_I\) ranging from 0.85 to 1.15.
+      If \(\eta = 1\), all orbits coincide. No deviation has ever been observed.
+    </p>
+  </div>
+</div>
+<details class="box-historical" open>
+<summary>Historical note</summary>
+<div class="box-body">
+<p>The equality <span
+class="math inline"><em>m</em><sub><em>g</em></sub> = <em>m</em><sub><em>I</em></sub></span>
+has been tested with extraordinary precision:</p>
+<div class="center">
+<p><em>[TikZ diagram — see PDF]</em></p>
+</div>
+<p>The Eötvös experiment <span class="citation"
+data-cites="Eotvos1922"></span> uses a <em>torsion balance</em>: two
+masses of different composition are suspended at opposite ends of a bar.
+If <span
+class="math inline"><em>m</em><sub><em>g</em></sub>/<em>m</em><sub><em>I</em></sub></span>
+differed between materials, the bar would rotate. No such rotation has
+ever been observed <span class="citation"
+data-cites="Roll1964 Adelberger2009"></span>. Lunar laser ranging <span
+class="citation" data-cites="Williams2012"></span> exploits the Apollo
+retroreflectors to compare the free-fall accelerations of the Earth and
+Moon toward the Sun. The <span class="smallcaps">microscope</span>
+satellite (2016–2018; final results published 2022) <span
+class="citation" data-cites="Touboul2022"></span> achieved the most
+stringent test to date, constraining the Eötvös parameter to <span
+class="math inline">|<em>η</em>| ≡ |(<em>m</em><sub><em>g</em></sub>/<em>m</em><sub><em>I</em></sub>)<sub><em>A</em></sub>−(<em>m</em><sub><em>g</em></sub>/<em>m</em><sub><em>I</em></sub>)<sub><em>B</em></sub>| &lt; 10<sup>−15</sup></span>.</p>
+</div>
+</details>
+<h2 id="from-newtonian-gravity-to-general-relativity">From Newtonian
+gravity to general relativity</h2>
+<p>We now reformulate Newton’s gravity as a <em>field theory</em>,
+drawing on the analogy between Newtonian gravity and electrostatics. The
+motivation is direct: electrodynamics is compatible with special
+relativity: Lorentz transformations leave Maxwell’s equations invariant
+and information propagates at the speed of light. If Newtonian gravity
+looks structurally like electrostatics (and it does), then perhaps we
+can add dynamics in the same way and arrive at a relativistic theory of
+gravity. As we shall see, this hope is partially fulfilled: the approach
+does lead somewhere, but the destination is more radical than a simple
+gravitational analog of Maxwell’s equations.</p>
+<h3 id="coulomb-vs.-newton-a-detailed-comparison">Coulomb vs. Newton: a
+detailed comparison</h3>
+<div class="center">
+<p><em>[TikZ diagram — see PDF]</em></p>
+</div>
+<div class="center">
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: center;"><strong>Electrostatics</strong></th>
+<th style="text-align: center;"><strong>Newtonian gravity</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Force law</td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle\boldsymbol{F} = k_e\frac{q_1
+q_2}{r^2}\,\hat{\boldsymbol{r}}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\displaystyle\boldsymbol{F} = -G\frac{m_1
+m_2}{r^2}\,\hat{\boldsymbol{r}}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Field</td>
+<td style="text-align: center;"><span
+class="math inline">\(\boldsymbol{E}\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\boldsymbol{g}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Source</td>
+<td style="text-align: center;">charge density <span
+class="math inline">\(\rho_e\)</span></td>
+<td style="text-align: center;">mass density <span
+class="math inline">\(\rho\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Source sign</td>
+<td style="text-align: center;">both signs</td>
+<td style="text-align: center;"><span class="math inline">\(\rho \geq
+0\)</span> only</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Potential</td>
+<td style="text-align: center;"><span
+class="math inline">\(V\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\phi\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Field from potential</td>
+<td style="text-align: center;"><span
+class="math inline">\(\boldsymbol{E} = -\nabla V\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\boldsymbol{g} = -\nabla\phi\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Gauss’s law</td>
+<td style="text-align: center;"><span
+class="math inline">\(\nabla\cdot\boldsymbol{E} =
+\rho_e/\varepsilon_0\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(\nabla\cdot\boldsymbol{g} =
+-4\piG\rho\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Poisson equation</td>
+<td style="text-align: center;"><span class="math inline">\(\Delta V =
+-\rho_e/\varepsilon_0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\Delta\phi =
+4\piG\rho\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<details class="box-intuition" open>
+<summary>Physical intuition</summary>
+<div class="box-body">
+<p>The structural parallel is almost perfect: both are <span
+class="math inline">1/<em>r</em><sup>2</sup></span> force laws sourced
+by a density and governed by a Poisson equation. The crucial difference
+is that electric charge comes in two signs (allowing shielding and
+cancellation), while mass is always positive. This means gravity cannot
+be screened, every mass in the universe contributes, which is ultimately
+why a geometric description (curved spacetime) becomes necessary.</p>
+</div>
+</details>
+<h3 id="gravitational-field">Gravitational field</h3>
+<p>The gravitational field is a map <span
+class="math display">\[\boldsymbol{g}: \mathbb{R}\times\mathbb{R}^{3}
+\to \mathbb{R}^{3}\,,\qquad
+  (t,\,\boldsymbol{x}) \mapsto
+\boldsymbol{g}(t,\,\boldsymbol{x})\,.\]</span></p>
+<h3 id="sources">Sources</h3>
+<p>The (gravitational) mass density is <span
+class="math display">\[\rho: \mathbb{R}\times\mathbb{R}^{3} \to
+\mathbb{R}^+\,,\]</span> and the field equation reads <span
+class="math display">\[\label{eq:gauss-grav}
+  \boxed{\nabla\cdot\boldsymbol{g} = -4\piG\,\rho\,.}\]</span></p>
+<h3 id="gravitational-potential">Gravitational potential</h3>
+<p>Since <span class="math inline">\(\nabla\times\boldsymbol{g} =
+0\)</span>, the field <span
+class="math inline">\(\boldsymbol{g}\)</span> is conservative. By
+Poincaré’s lemma there exists a scalar potential <span
+class="math inline">\(\phi:
+\mathbb{R}\times\mathbb{R}^{3}\to\mathbb{R}\)</span> such that <span
+class="math display">\[\label{eq:g-from-phi}
+  \boxed{\boldsymbol{g} = -\nabla\phi}
+  \qquad\text{(sign convention).}\]</span> Substituting into <a
+href="#eq:gauss-grav" data-reference-type="eqref"
+data-reference="eq:gauss-grav">[eq:gauss-grav]</a>: <span
+class="math display">\[\label{eq:poisson}
+  \boxed{\Delta\phi = 4\piG\,\rho}
+  \qquad\text{(Poisson&#39;s equation).}\]</span></p>
+<h3 id="equation-of-motion-for-test-masses">Equation of motion for test
+masses</h3>
+<p><span class="math display">\[\label{eq:eom-potential}
+  \boxed{\ddot{\boldsymbol{x}}(t) =
+-\nabla\phi\big(t,\,\boldsymbol{x}(t)\big)\,.}\]</span></p>
+<h3 id="boundary-conditions-and-uniqueness">Boundary conditions and
+uniqueness</h3>
+<p>Assume <span class="math inline">\(\supp(\rho)\)</span> is compact
+(closed and bounded by the Heine–Borel theorem), with <span
+class="math display">\[\phi(t,\,\boldsymbol{x}) \to 0
+\quad\text{as}\quad \lVert \boldsymbol{x} \rVert\to\infty\,.\]</span>
+Then the unique solution to Poisson’s equation is <span
+class="math display">\[\label{eq:poisson-solution}
+  \boxed{\phi(t,\,\boldsymbol{x})
+    = -G\!\int_{\mathbb{R}^{3}}\!\mathrm{d}^3 x&#39;\;
+      \frac{\rho(t,\,\boldsymbol{x}&#39;)}{\lVert \boldsymbol{x} -
+\boldsymbol{x}&#39; \rVert}\,.}\]</span> This gives the “gravitostatic”
+formulation of Newtonian gravity: symbol for symbol, it mirrors
+electrostatics. Just as in electrostatics, the field equation,
+potential, and integral solution form a self-contained package. The key
+difference, as always, is that <span class="math inline">\(\rho \geq
+0\)</span>: gravity has only one sign of “charge.”</p>
+<h2 id="adding-dynamics-routes-to-general-relativity">Adding dynamics:
+routes to general relativity</h2>
+<p>How do we add dynamics to the gravitational field? At present, the
+gravitational field in our formulation is static: the Poisson equation
+determines <span class="math inline">\(\phi\)</span> from the
+instantaneous mass distribution. But what happens when the sources move?
+Several approaches suggest themselves, with very different outcomes:</p>
+<div class="center">
+<p><em>[TikZ diagram — see PDF]</em></p>
+</div>
+<p>See Misner, Thorne &amp; Wheeler <span class="citation"
+data-cites="MTW73"></span>, Chapter 7, for a detailed and beautiful
+discussion of all four routes.</p>
+<p>Route (0) has obvious causality problems: by rearranging masses one
+could signal faster than light, violating special relativity. Route (1),
+promoting the Poisson equation to a scalar wave equation, is
+mathematically consistent but predicts no bending of light by gravity,
+which has been observed. Route (2), completing <span
+class="math inline">\(\phi\)</span> to a 4-vector, as one does for the
+electromagnetic potential, suffers from negative-energy wave solutions
+and fails to reproduce the observed perihelion precession of Mercury.
+Only route (3), completing <span class="math inline">\(\phi\)</span> to
+a symmetric rank-2 tensor, survives all experimental tests. Remarkably,
+the dynamics one is forced to write down turn out to be precisely the
+linearised form of Einstein’s field equations, from which the full
+nonlinear theory of general relativity can be recovered.</p>
+<p>We will <em>not</em> follow this route to discover general
+relativity; it is not the path Einstein took (at least not as far as the
+historical record reveals). Instead, we will arrive at the theory from a
+completely different direction, starting from the equivalence principle
+in the next lecture.</p>
+<details class="box-intuition" open>
+<summary>Physical intuition</summary>
+<div class="box-body">
+<p>A scalar field <span class="math inline"><em>ϕ</em></span> has one
+component: not enough to encode the geometry of a 4-dimensional
+spacetime. A 4-vector has four components, but leads to unphysical
+negative-energy solutions. A symmetric rank-2 tensor <span
+class="math inline"><em>g</em><sub><em>μ</em><em>ν</em></sub></span> has
+ten independent components in four dimensions: exactly the right number
+to describe a metric on spacetime. This is the gravitational field of
+general relativity.</p>
+</div>
+</details>
+<h2 id="example-lagrange-points-in-a-two-body-system">Example: Lagrange
+points in a two-body system</h2>
+<p>The Newtonian gravitational potential for a system of two bodies in
+the <em>co-rotating frame</em> illustrates the interplay between gravity
+and inertial (centrifugal/Coriolis) forces. The <strong>effective
+potential</strong> is <span
+class="math display">\[\label{eq:Phi-eff-cr3bp}
+  \boxed{\Phi_{\mathrm{eff}}(x,y)
+    = -\frac{1-\mu}{r_1} - \frac{\mu}{r_2}
+      - \tfrac{1}{2}(x^2 + y^2)\,,}\]</span> where <span
+class="math inline">\(\mu = M_2/(M_1+M_2)\)</span> is the mass ratio,
+and <span class="math inline">\(r_{1,2}\)</span> are the distances to
+the two masses. This potential has five critical points: the
+<strong>Lagrange points</strong> <span
+class="math inline">\(L_1\)</span>–<span
+class="math inline">\(L_5\)</span>. The collinear points <span
+class="math inline">\(L_1\)</span>, <span
+class="math inline">\(L_2\)</span>, <span
+class="math inline">\(L_3\)</span> are saddle points (unstable), while
+<span class="math inline">\(L_4\)</span> and <span
+class="math inline">\(L_5\)</span> form equilateral triangles with the
+two masses and are linearly stable for <span class="math inline">\(\mu
+&lt; \mu_{\mathrm{crit}} \approx 0.0385\)</span>.</p>
+<p><em>[Figure: Top: pseudo-colour plot of the effective potential <span
+class="math inline">\(\Phi_{\mathrm{eff}}\)</span> in the co-rotating
+frame (<span class="math inline">\(\mu = 0.01\)</span>), with the five
+Lagrange points marked. Bottom: tadpole orbit of a test particle
+released near <span class="math inline">\(L_4\)</span> with a small
+perturbation, exhibiting the characteristic epicyclic motion.]</em></p>
+
+<script>
+// Re-typeset MathJax when a details element is opened
+document.querySelectorAll('details').forEach(d => {
+  d.addEventListener('toggle', () => {
+    if (d.open && window.MathJax) MathJax.typeset([d]);
+  });
+});
+</script>
+
+</body>
+</html>

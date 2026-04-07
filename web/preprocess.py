@@ -31,15 +31,30 @@ def preprocess(tex: str) -> str:
     )
 
     # Handle \\begin{figure}...\\end{figure} with \\input{figures/...}
+    def extract_braced(text, start):
+        """Extract brace-balanced content starting at the { at position start."""
+        if start >= len(text) or text[start] != '{':
+            return ''
+        depth, i = 0, start
+        while i < len(text):
+            if text[i] == '{':
+                depth += 1
+            elif text[i] == '}':
+                depth -= 1
+                if depth == 0:
+                    return text[start+1:i]
+            i += 1
+        return text[start+1:]
+
     def figure_replacer(m):
         caption = ''
-        cap_match = re.search(r'\\caption\{(.*?)\}', m.group(0), re.DOTALL)
-        if cap_match:
-            caption = cap_match.group(1)
+        fig_text = m.group(0)
+        cap_idx = fig_text.find('\\caption{')
+        if cap_idx >= 0:
+            caption = extract_braced(fig_text, cap_idx + len('\\caption'))
             caption = re.sub(r'\\label\{[^}]*\}', '', caption).strip()
-            # Clean up LaTeX formatting in caption for display
             caption = caption.replace('~', ' ')
-        fig_match = re.search(r'\\input\{figures/([^}]*)\}', m.group(0))
+        fig_match = re.search(r'\\input\{figures/([^}]*)\}', fig_text)
         fig_id = fig_match.group(1) if fig_match else 'figure'
         return f'\n\n\\textit{{[Figure: {caption}]}}\n\n'
     tex = re.sub(r'\\begin\{figure\}.*?\\end\{figure\}', figure_replacer, tex, flags=re.DOTALL)
@@ -87,8 +102,11 @@ def preprocess(tex: str) -> str:
     tex = re.sub(r'\\lap\b', '\\\\Delta', tex)
     tex = re.sub(r'\\grav\b', 'G', tex)
 
-    # Convert \\eqbox{...} to \\boxed{...}
-    tex = re.sub(r'\\eqbox\{([^}]+)\}', r'\\boxed{\\1}', tex)
+    # Convert \\eqbox{...} to \\boxed{...} (nested-brace-safe)
+    tex = re.sub(r'\\eqbox\{' + nb + r'\}', lambda m: '\\boxed{' + m.group(1) + '}', tex)
+
+    # \colon → : (pandoc chokes on \colon in math)
+    tex = tex.replace('\\colon', ':')
 
     # Strip \\leavevmode
     tex = tex.replace('\\leavevmode', '')

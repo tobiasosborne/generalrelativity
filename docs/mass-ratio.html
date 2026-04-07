@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Interactive: Inertial vs Gravitational Mass</title>
+
+<!-- MathJax for inline equations -->
+<script>
+MathJax = { tex: { inlineMath: [['\\(','\\)']], displayMath: [['\\[','\\]']] } };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+
+<style>
+:root {
+  --spacecadet: #3D7A55;
+  --munsell: #5B8C6F;
+  --banana: #E8B630;
+  --cgblue: #4A7FB5;
+  --isabelline: #A8D5BA;
+  --birrenred: #C4392F;
+  --birrenorange: #D97A2B;
+  --birrengray: #8C8C84;
+  --lightgray: #D4C9A8;
+}
+* { box-sizing: border-box; }
+body {
+  max-width: 62em; margin: 0 auto; padding: 1em 1.5em;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: var(--spacecadet); background: #fcfcfc;
+}
+h1 { color: var(--cgblue); font-size: 1.5em; text-align: center; margin-bottom: 0.2em; }
+.subtitle { text-align: center; color: var(--birrengray); font-size: 0.95em; margin-bottom: 1.5em; }
+nav.top-nav {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 0.5em 0; border-bottom: 1px solid var(--isabelline);
+  margin-bottom: 1em; font-size: 0.85em;
+}
+nav.top-nav a { text-decoration: none; color: var(--cgblue); }
+
+/* Layout */
+.app { display: flex; gap: 1.5em; flex-wrap: wrap; justify-content: center; }
+.canvas-panel { flex: 1 1 500px; max-width: 600px; }
+.controls-panel { flex: 0 0 280px; }
+
+/* Canvas */
+canvas {
+  display: block; width: 100%; border: 1px solid #ddd;
+  border-radius: 8px; background: white;
+}
+
+/* Controls */
+.control-group {
+  margin-bottom: 1.2em; padding: 0.8em;
+  background: var(--isabelline); border-radius: 8px;
+}
+.control-group h3 {
+  margin: 0 0 0.5em 0; font-size: 0.85em;
+  color: var(--cgblue); text-transform: uppercase; letter-spacing: 0.05em;
+}
+.control-row {
+  display: flex; align-items: center; gap: 0.5em; margin: 0.4em 0;
+  font-size: 0.85em;
+}
+.control-row label { flex: 0 0 110px; color: #444; }
+.control-row input[type=range] { flex: 1; min-width: 80px; }
+.control-row .val {
+  flex: 0 0 50px; text-align: right;
+  font-variant-numeric: tabular-nums; color: var(--spacecadet); font-weight: 600;
+}
+
+.toggle-row { display: flex; align-items: center; gap: 0.5em; margin: 0.3em 0; font-size: 0.85em; }
+.toggle-row input { margin: 0; }
+
+button.action-btn {
+  display: inline-block; margin: 2px; padding: 5px 12px;
+  border: 1px solid #ccc; border-radius: 4px;
+  background: white; cursor: pointer; font-size: 0.8em;
+}
+button.action-btn:hover { background: var(--banana); border-color: var(--banana); }
+
+/* Eta readout */
+.eta-display {
+  text-align: center; padding: 0.6em;
+  background: rgba(74,127,181,0.08); border-radius: 6px;
+  margin-bottom: 1em;
+}
+.eta-display .eta-big {
+  font-size: 1.8em; font-weight: 700; color: var(--cgblue);
+  font-variant-numeric: tabular-nums;
+}
+.eta-display .eta-label { font-size: 0.8em; color: var(--birrengray); }
+
+/* Info box */
+.info-box {
+  margin-top: 1.5em; padding: 1em;
+  background: rgba(91,140,111,0.08); border-left: 4px solid var(--munsell);
+  border-radius: 6px; font-size: 0.9em; line-height: 1.5;
+  font-family: Georgia, serif;
+}
+.info-box strong { color: var(--munsell); }
+
+/* Experiment table */
+.exp-table {
+  width: 100%; border-collapse: collapse; font-size: 0.82em; margin-top: 0.5em;
+}
+.exp-table th {
+  text-align: left; padding: 3px 8px; border-bottom: 2px solid var(--cgblue);
+  color: var(--cgblue); font-weight: 600;
+}
+.exp-table td { padding: 3px 8px; border-bottom: 1px solid #eee; }
+.exp-table .precision { font-variant-numeric: tabular-nums; font-weight: 600; }
+
+/* Stats */
+.stats {
+  margin-top: 0.8em; padding: 0.6em 0.8em;
+  background: #f5f5f5; border-radius: 6px;
+  font-size: 0.78em; font-variant-numeric: tabular-nums;
+  color: #555; line-height: 1.6;
+}
+.stats .label { color: var(--birrengray); }
+
+@media (max-width: 700px) {
+  .app { flex-direction: column; }
+  .controls-panel { flex: 1 1 auto; }
+}
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <a href="lec01.html">&larr; Lecture 1</a>
+  <span><strong>Interactive Figure</strong></span>
+  <a href="index.html">All Lectures &rarr;</a>
+</nav>
+
+<h1>Inertial vs Gravitational Mass</h1>
+<p class="subtitle">How orbits change when \(\eta = m_g / m_I \neq 1\) &mdash; the universality of free fall</p>
+
+<div class="app">
+  <div class="canvas-panel">
+    <canvas id="canvas" width="600" height="600"></canvas>
+  </div>
+
+  <div class="controls-panel">
+    <div class="eta-display">
+      <div class="eta-label">Your particle's mass ratio</div>
+      <div class="eta-big" id="eta-readout">1.00</div>
+      <div class="eta-label">\(\eta = m_g / m_I\)</div>
+    </div>
+
+    <div class="control-group">
+      <h3>Your particle</h3>
+      <div class="control-row">
+        <label>\(\eta = m_g/m_I\)</label>
+        <input type="range" id="eta" min="0.50" max="1.50" step="0.01" value="1.00">
+        <span class="val" id="eta-val">1.00</span>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <h3>Launch</h3>
+      <div class="control-row">
+        <label>Speed / \(v_{\rm circ}\)</label>
+        <input type="range" id="speed" min="0.50" max="1.20" step="0.01" value="0.85">
+        <span class="val" id="speed-val">0.85</span>
+      </div>
+      <div class="control-row">
+        <label>Orbits shown</label>
+        <input type="range" id="norbits" min="1" max="5" step="0.5" value="2.0">
+        <span class="val" id="norbits-val">2.0</span>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <h3>Display</h3>
+      <div class="toggle-row">
+        <input type="checkbox" id="show-ref" checked>
+        <label for="show-ref">Reference orbits (\(\eta\) = 0.85, 0.93, 1.07, 1.15)</label>
+      </div>
+      <div class="toggle-row">
+        <input type="checkbox" id="show-anim" checked>
+        <label for="show-anim">Animate particles</label>
+      </div>
+      <div class="toggle-row">
+        <input type="checkbox" id="show-trail">
+        <label for="show-trail">Velocity vectors</label>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <button class="action-btn" onclick="setEta(1.00)">Reset \(\eta=1\)</button>
+      <button class="action-btn" onclick="setEta(0.85)">0.85</button>
+      <button class="action-btn" onclick="setEta(1.15)">1.15</button>
+      <button class="action-btn" onclick="setEta(1+1e-9)">1 + 10<sup>-9</sup></button>
+    </div>
+
+    <div class="stats" id="stats"></div>
+  </div>
+</div>
+
+<div class="info-box">
+  <strong>What you're seeing:</strong> Test particles in a Kepler field
+  \(\ddot{\boldsymbol{x}} = -\eta\, GM\, \boldsymbol{x}/r^3\),
+  all launched from the same point with the same tangential velocity.
+  The parameter \(\eta = m_g/m_I\) is the ratio of gravitational to inertial mass.
+  <br><br>
+  If the <em>universality of free fall</em> (UFF) holds, then \(\eta = 1\) for all matter
+  and all particles follow the same orbit &mdash; regardless of their composition.
+  Drag the slider to see what would happen if \(\eta \neq 1\): the orbits immediately diverge.
+  <br><br>
+  <strong>Experimental precision:</strong> No deviation has ever been observed.
+  <table class="exp-table">
+    <tr><th>Experiment</th><th>Year</th><th>Precision \(|\Delta\eta|\)</th></tr>
+    <tr><td>Newton (pendulum)</td><td>1687</td><td class="precision">&lt; 10<sup>&minus;3</sup></td></tr>
+    <tr><td>E&ouml;tv&ouml;s torsion balance</td><td>1922</td><td class="precision">&lt; 10<sup>&minus;9</sup></td></tr>
+    <tr><td>Lunar laser ranging</td><td>1969&ndash;</td><td class="precision">&lt; 10<sup>&minus;13</sup></td></tr>
+    <tr><td>MICROSCOPE satellite</td><td>2022</td><td class="precision">&lt; 10<sup>&minus;15</sup></td></tr>
+  </table>
+</div>
+
+<script>
+// ===============================================================
+//  Interactive Kepler orbits with varying m_g/m_I
+// ===============================================================
+
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+// Birren palette
+const COL = {
+  spacecadet: '#3D7A55',
+  munsell:    '#5B8C6F',
+  banana:     '#E8B630',
+  cgblue:     '#4A7FB5',
+  isabelline: '#A8D5BA',
+  red:        '#C4392F',
+  orange:     '#D97A2B',
+  gray:       '#8C8C84',
+};
+
+// Reference orbit etas
+const REF_ETAS = [0.85, 0.93, 1.07, 1.15];
+const REF_COLORS = [COL.red, COL.orange, COL.munsell, COL.spacecadet];
+const USER_COLOR = COL.cgblue;
+const UNITY_COLOR = COL.banana;
+
+// Physics
+const GM = 1.0;
+const r0 = 1.0;
+
+// Hi-DPI
+function setupCanvas() {
+  const dpr = window.devicePixelRatio || 1;
+  const rect = canvas.getBoundingClientRect();
+  canvas.width = rect.width * dpr;
+  canvas.height = rect.height * dpr;
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  return { w: rect.width, h: rect.height };
+}
+
+// ── Kepler integration (RK4) ─────────────────────────────────
+function keplerRHS(x, y, vx, vy, eta) {
+  const r = Math.sqrt(x*x + y*y);
+  const r3 = r*r*r;
+  return [vx, vy, -eta * GM * x / r3, -eta * GM * y / r3];
+}
+
+function rk4Step(x, y, vx, vy, eta, dt) {
+  const k1 = keplerRHS(x, y, vx, vy, eta);
+  const k2 = keplerRHS(
+    x + 0.5*dt*k1[0], y + 0.5*dt*k1[1],
+    vx + 0.5*dt*k1[2], vy + 0.5*dt*k1[3], eta);
+  const k3 = keplerRHS(
+    x + 0.5*dt*k2[0], y + 0.5*dt*k2[1],
+    vx + 0.5*dt*k2[2], vy + 0.5*dt*k2[3], eta);
+  const k4 = keplerRHS(
+    x + dt*k3[0], y + dt*k3[1],
+    vx + dt*k3[2], vy + dt*k3[3], eta);
+  return [
+    x  + dt/6*(k1[0] + 2*k2[0] + 2*k3[0] + k4[0]),
+    y  + dt/6*(k1[1] + 2*k2[1] + 2*k3[1] + k4[1]),
+    vx + dt/6*(k1[2] + 2*k2[2] + 2*k3[2] + k4[2]),
+    vy + dt/6*(k1[3] + 2*k2[3] + 2*k3[3] + k4[3]),
+  ];
+}
+
+function integrateOrbit(eta, v0frac, nOrbits) {
+  const vCirc = Math.sqrt(GM / r0);
+  const v0 = v0frac * vCirc;
+  const E0 = 0.5*v0*v0 - GM/r0;
+  const a0 = -GM / (2 * E0);
+  const T0 = 2 * Math.PI * Math.sqrt(a0*a0*a0 / GM);
+  const tMax = nOrbits * T0;
+  const dt = 0.005;
+  const nSteps = Math.min(Math.ceil(tMax / dt), 20000);
+
+  const path = new Float64Array(nSteps * 4); // x, y, vx, vy
+  let x = r0, y = 0, vx = 0, vy = v0;
+  path[0] = x; path[1] = y; path[2] = vx; path[3] = vy;
+
+  for (let i = 1; i < nSteps; i++) {
+    [x, y, vx, vy] = rk4Step(x, y, vx, vy, eta, dt);
+    path[i*4]   = x;
+    path[i*4+1] = y;
+    path[i*4+2] = vx;
+    path[i*4+3] = vy;
+  }
+  return { path, nSteps, T0, dt };
+}
+
+// ── Coordinate mapping ────────────────────────────────────────
+let DOMAIN = 2.0;
+
+function coordToCanvas(x, y, w, h) {
+  return [
+    (x / DOMAIN + 1) * 0.5 * w,
+    (1 - y / DOMAIN) * 0.5 * h,
+  ];
+}
+
+// ── Drawing ───────────────────────────────────────────────────
+function drawGrid(w, h) {
+  ctx.strokeStyle = 'rgba(0,0,0,0.06)';
+  ctx.lineWidth = 0.5;
+  for (let v = -Math.floor(DOMAIN); v <= Math.floor(DOMAIN); v++) {
+    const [x1, y1] = coordToCanvas(v, -DOMAIN, w, h);
+    const [x2, y2] = coordToCanvas(v, DOMAIN, w, h);
+    ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); ctx.stroke();
+    const [x3, y3] = coordToCanvas(-DOMAIN, v, w, h);
+    const [x4, y4] = coordToCanvas(DOMAIN, v, w, h);
+    ctx.beginPath(); ctx.moveTo(x3, y3); ctx.lineTo(x4, y4); ctx.stroke();
+  }
+}
+
+function drawOrbit(orbit, w, h, color, lineWidth, alpha) {
+  if (orbit.nSteps < 2) return;
+  ctx.strokeStyle = color;
+  ctx.lineWidth = lineWidth;
+  ctx.globalAlpha = alpha;
+  ctx.beginPath();
+  const [sx, sy] = coordToCanvas(orbit.path[0], orbit.path[1], w, h);
+  ctx.moveTo(sx, sy);
+  for (let i = 1; i < orbit.nSteps; i++) {
+    const [px, py] = coordToCanvas(orbit.path[i*4], orbit.path[i*4+1], w, h);
+    ctx.lineTo(px, py);
+  }
+  ctx.stroke();
+  ctx.globalAlpha = 1;
+}
+
+function drawDot(x, y, w, h, color, radius) {
+  const [cx, cy] = coordToCanvas(x, y, w, h);
+  ctx.fillStyle = color;
+  ctx.beginPath();
+  ctx.arc(cx, cy, radius, 0, 2*Math.PI);
+  ctx.fill();
+}
+
+function drawTriangle(x, y, w, h, color, size) {
+  const [cx, cy] = coordToCanvas(x, y, w, h);
+  ctx.fillStyle = color;
+  ctx.strokeStyle = COL.spacecadet;
+  ctx.lineWidth = 1.5;
+  ctx.beginPath();
+  ctx.moveTo(cx, cy - size);
+  ctx.lineTo(cx - size*0.866, cy + size*0.5);
+  ctx.lineTo(cx + size*0.866, cy + size*0.5);
+  ctx.closePath();
+  ctx.fill();
+  ctx.stroke();
+}
+
+function drawVelocity(x, y, vx, vy, w, h, color) {
+  const scale = 0.15;
+  const [cx, cy] = coordToCanvas(x, y, w, h);
+  const [ex, ey] = coordToCanvas(x + vx*scale, y + vy*scale, w, h);
+  ctx.strokeStyle = color;
+  ctx.lineWidth = 1.5;
+  ctx.beginPath();
+  ctx.moveTo(cx, cy);
+  ctx.lineTo(ex, ey);
+  ctx.stroke();
+  // Arrowhead
+  const dx = ex - cx, dy = ey - cy;
+  const len = Math.sqrt(dx*dx + dy*dy);
+  if (len < 3) return;
+  const ux = dx/len, uy = dy/len;
+  ctx.fillStyle = color;
+  ctx.beginPath();
+  ctx.moveTo(ex, ey);
+  ctx.lineTo(ex - 6*ux + 3*uy, ey - 6*uy - 3*ux);
+  ctx.lineTo(ex - 6*ux - 3*uy, ey - 6*uy + 3*ux);
+  ctx.closePath();
+  ctx.fill();
+}
+
+function drawLabel(text, x, y, w, h, color, anchor) {
+  const [cx, cy] = coordToCanvas(x, y, w, h);
+  ctx.fillStyle = color;
+  ctx.font = '12px system-ui';
+  ctx.textAlign = anchor || 'left';
+  ctx.fillText(text, cx, cy);
+}
+
+// ── Animation state ───────────────────────────────────────────
+let animFrame = 0;
+let animRunning = true;
+let cachedOrbits = null;
+let needsRecompute = true;
+
+function getParams() {
+  return {
+    eta: parseFloat(document.getElementById('eta').value),
+    speed: parseFloat(document.getElementById('speed').value),
+    norbits: parseFloat(document.getElementById('norbits').value),
+    showRef: document.getElementById('show-ref').checked,
+    showAnim: document.getElementById('show-anim').checked,
+    showVel: document.getElementById('show-trail').checked,
+  };
+}
+
+function computeOrbits(params) {
+  // Auto-scale domain based on orbits
+  const unityOrbit = integrateOrbit(1.0, params.speed, params.norbits);
+  let maxR = 0;
+  for (let i = 0; i < unityOrbit.nSteps; i++) {
+    const x = unityOrbit.path[i*4], y = unityOrbit.path[i*4+1];
+    maxR = Math.max(maxR, Math.sqrt(x*x + y*y));
+  }
+  DOMAIN = Math.max(1.5, maxR * 1.3);
+
+  const orbits = {
+    unity: unityOrbit,
+    user: integrateOrbit(params.eta, params.speed, params.norbits),
+    refs: [],
+    T0: unityOrbit.T0,
+  };
+  if (params.showRef) {
+    for (const eta of REF_ETAS) {
+      orbits.refs.push(integrateOrbit(eta, params.speed, params.norbits));
+    }
+  }
+  return orbits;
+}
+
+function render() {
+  const { w, h } = setupCanvas();
+  const params = getParams();
+
+  // Update displays
+  document.getElementById('eta-val').textContent = params.eta.toFixed(2);
+  document.getElementById('eta-readout').textContent = params.eta.toFixed(2);
+  document.getElementById('speed-val').textContent = params.speed.toFixed(2);
+  document.getElementById('norbits-val').textContent = params.norbits.toFixed(1);
+
+  // Recompute if needed
+  if (needsRecompute) {
+    cachedOrbits = computeOrbits(params);
+    needsRecompute = false;
+  }
+  const orbits = cachedOrbits;
+
+  // Clear
+  ctx.fillStyle = 'white';
+  ctx.fillRect(0, 0, w, h);
+  drawGrid(w, h);
+
+  // Draw reference orbits
+  for (let i = 0; i < orbits.refs.length; i++) {
+    drawOrbit(orbits.refs[i], w, h, REF_COLORS[i], 1.0, 0.35);
+  }
+
+  // Draw unity orbit (eta=1)
+  drawOrbit(orbits.unity, w, h, UNITY_COLOR, 1.5, 0.6);
+
+  // Draw user orbit
+  const isUnity = Math.abs(params.eta - 1.0) < 0.001;
+  drawOrbit(orbits.user, w, h, USER_COLOR, 2.5, 1.0);
+
+  // Central mass
+  drawDot(0, 0, w, h, COL.spacecadet, 6);
+  drawLabel('M', -0.06, -0.08, w, h, COL.spacecadet, 'right');
+
+  // Start marker
+  drawTriangle(r0, 0, w, h, COL.banana, 7);
+  drawLabel('start', r0 + 0.06, 0.08, w, h, COL.spacecadet, 'left');
+
+  // Animated particles
+  if (params.showAnim) {
+    const step = animFrame % orbits.user.nSteps;
+
+    // User particle
+    const ux = orbits.user.path[step*4];
+    const uy = orbits.user.path[step*4+1];
+    drawDot(ux, uy, w, h, USER_COLOR, 5);
+    if (params.showVel) {
+      drawVelocity(ux, uy, orbits.user.path[step*4+2], orbits.user.path[step*4+3], w, h, USER_COLOR);
+    }
+
+    // Unity particle
+    if (!isUnity) {
+      const us = step % orbits.unity.nSteps;
+      const rx = orbits.unity.path[us*4];
+      const ry = orbits.unity.path[us*4+1];
+      drawDot(rx, ry, w, h, UNITY_COLOR, 4);
+      if (params.showVel) {
+        drawVelocity(rx, ry, orbits.unity.path[us*4+2], orbits.unity.path[us*4+3], w, h, UNITY_COLOR);
+      }
+    }
+
+    // Reference particles
+    if (params.showRef) {
+      for (let i = 0; i < orbits.refs.length; i++) {
+        const rs = step % orbits.refs[i].nSteps;
+        const rx = orbits.refs[i].path[rs*4];
+        const ry = orbits.refs[i].path[rs*4+1];
+        drawDot(rx, ry, w, h, REF_COLORS[i], 3);
+      }
+    }
+  }
+
+  // Legend
+  const lx = 10, ly = 20;
+  ctx.font = '12px system-ui';
+  ctx.textAlign = 'left';
+
+  ctx.fillStyle = USER_COLOR;
+  ctx.fillRect(lx, ly, 12, 3);
+  ctx.fillStyle = COL.spacecadet;
+  ctx.fillText(`Your particle (\u03B7 = ${params.eta.toFixed(2)})`, lx + 18, ly + 5);
+
+  if (!isUnity) {
+    ctx.fillStyle = UNITY_COLOR;
+    ctx.fillRect(lx, ly + 18, 12, 3);
+    ctx.fillStyle = COL.spacecadet;
+    ctx.fillText('\u03B7 = 1.00 (UFF)', lx + 18, ly + 23);
+  }
+
+  if (params.showRef) {
+    for (let i = 0; i < REF_ETAS.length; i++) {
+      ctx.globalAlpha = 0.5;
+      ctx.fillStyle = REF_COLORS[i];
+      ctx.fillRect(lx, ly + 36 + i*16, 12, 3);
+      ctx.globalAlpha = 1;
+      ctx.fillStyle = COL.spacecadet;
+      ctx.fillText(`\u03B7 = ${REF_ETAS[i].toFixed(2)}`, lx + 18, ly + 41 + i*16);
+    }
+  }
+
+  // Stats
+  const statsEl = document.getElementById('stats');
+  const deltaEta = Math.abs(params.eta - 1.0);
+  let statsHTML = `<span class="label">|\u0394\u03B7|:</span> ${deltaEta.toExponential(2)}`;
+  statsHTML += ` &middot; <span class="label">Period:</span> ${orbits.T0.toFixed(3)}`;
+  statsHTML += ` &middot; <span class="label">Steps:</span> ${orbits.user.nSteps}`;
+  if (deltaEta > 0 && deltaEta < 1e-3) {
+    statsHTML += `<br><span class="label">Precision comparable to:</span> `;
+    if (deltaEta >= 1e-3) statsHTML += 'Newton (1687)';
+    else if (deltaEta >= 1e-9) statsHTML += 'E\u00f6tv\u00f6s (1922)';
+    else if (deltaEta >= 1e-13) statsHTML += 'Lunar laser ranging';
+    else statsHTML += 'MICROSCOPE (2022)';
+  }
+  statsEl.innerHTML = statsHTML;
+}
+
+// ── Controls ──────────────────────────────────────────────────
+function markDirty() { needsRecompute = true; }
+
+document.getElementById('eta').addEventListener('input', markDirty);
+document.getElementById('speed').addEventListener('input', markDirty);
+document.getElementById('norbits').addEventListener('input', markDirty);
+document.getElementById('show-ref').addEventListener('change', markDirty);
+document.getElementById('show-anim').addEventListener('change', () => {});
+document.getElementById('show-trail').addEventListener('change', () => {});
+
+function setEta(val) {
+  document.getElementById('eta').value = val;
+  markDirty();
+}
+
+// ── Animation loop ────────────────────────────────────────────
+function animate() {
+  const showAnim = document.getElementById('show-anim').checked;
+  if (showAnim) animFrame += 2;
+  render();
+  requestAnimationFrame(animate);
+}
+
+window.addEventListener('resize', markDirty);
+animate();
+</script>
+
+</body>
+</html>

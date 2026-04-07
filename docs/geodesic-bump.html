@@ -6,11 +6,15 @@
 <title>Interactive Geodesics on a Gaussian Bump</title>
 <style>
 :root {
-  --spacecadet: #0D284C;
-  --munsell: #008FA8;
-  --banana: #FFD932;
-  --cgblue: #007CA5;
-  --isabelline: #EAEDEA;
+  --spacecadet: #3D7A55;
+  --munsell: #5B8C6F;
+  --banana: #E8B630;
+  --cgblue: #4A7FB5;
+  --isabelline: #A8D5BA;
+  --birrenred: #C4392F;
+  --birrenorange: #D97A2B;
+  --birrengray: #8C8C84;
+  --lightgray: #D4C9A8;
 }
 * { box-sizing: border-box; }
 body {
@@ -69,7 +73,7 @@ button.preset.active { background: var(--cgblue); color: white; border-color: va
 /* Info box */
 .info-box {
   margin-top: 1.5em; padding: 1em;
-  background: rgba(0,143,168,0.06); border-left: 4px solid var(--munsell);
+  background: rgba(91,140,111,0.08); border-left: 4px solid var(--munsell);
   border-radius: 6px; font-size: 0.9em; line-height: 1.5;
   font-family: Georgia, serif;
 }
@@ -321,11 +325,11 @@ function drawHeatmap(w, hh, A, sigma) {
       const x = (px / w) * 2*DOMAIN - DOMAIN;
       const y = DOMAIN - (py / hh) * 2*DOMAIN;
       const z = h(x, y, A, s2);
-      // Map height to colour: transparent at 0, light blue at peak
+      // Map height to colour: transparent at 0, green tint at peak (Birren)
       const t = Math.min(z / Math.max(A, 0.01), 1);
-      const r = Math.round(0 + t * 80);
-      const g = Math.round(143 + t * (-43));
-      const b = Math.round(168 + t * (-68));
+      const r = Math.round(61 + t * 30);
+      const g = Math.round(122 + t * 50);
+      const b = Math.round(85 + t * 40);
       const a = Math.round(t * 50);
       for (let dx = 0; dx < step && px+dx < w; dx++) {
         for (let dy = 0; dy < step && py+dy < hh; dy++) {
@@ -355,7 +359,7 @@ function drawContours(w, hh, A, sigma) {
     if (r > DOMAIN) continue;
     const [cx, cy] = coordToCanvas(0, 0, w, hh);
     const rPx = r / (2*DOMAIN) * w;
-    ctx.strokeStyle = `rgba(13,40,76,${0.06 + level*0.08})`;
+    ctx.strokeStyle = `rgba(61,122,85,${0.06 + level*0.08})`;
     ctx.beginPath();
     ctx.arc(cx, cy, rPx, 0, 2*Math.PI);
     ctx.stroke();
@@ -384,11 +388,11 @@ function drawGrid(w, hh) {
 }
 
 function pathColor(i, n) {
-  // Gradient: outer = spacecadet-ish, middle = munsell
+  // Gradient: outer = spacecadet green, middle = cgblue (Birren)
   const t = n > 1 ? Math.abs(2*i/(n-1) - 1) : 0;  // 0 at center, 1 at edges
-  const r = Math.round(0 + t * 13);
-  const g = Math.round(143 - t * 103);
-  const b = Math.round(168 - t * 92);
+  const r = Math.round(74 - t * 13);
+  const g = Math.round(127 - t * 5);
+  const b = Math.round(181 - t * 96);
   return `rgb(${r},${g},${b})`;
 }
 
@@ -439,7 +443,7 @@ function render() {
 
   // Bump center marker
   const [cx, cy] = coordToCanvas(0, 0, w, hh);
-  ctx.strokeStyle = 'rgba(13,40,76,0.2)';
+  ctx.strokeStyle = 'rgba(61,122,85,0.2)';
   ctx.lineWidth = 1.5;
   ctx.beginPath();
   ctx.moveTo(cx-6, cy); ctx.lineTo(cx+6, cy);
@@ -464,7 +468,7 @@ function render() {
     // Undeflected straight line
     if (showStraight) {
       const straight = [[xstart, y0], [3.2, y0]];
-      drawPath(straight, w, hh, 'rgba(13,40,76,0.12)', 0.8, [4, 4]);
+      drawPath(straight, w, hh, 'rgba(61,122,85,0.12)', 0.8, [4, 4]);
     }
 
     // Geodesic
