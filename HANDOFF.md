@@ -13,9 +13,10 @@ Public: https://github.com/tobiasosborne/generalrelativity (Apache 2.0)
 - Lectures 12–23: created via full workflow (handwritten PDF + auto-generated transcript).
 - Lecture 23: original closing chapter (retrospective, experimental pillars, outlook) — not a transcription of the summary PDF.
 - Julia simulation pipeline: 4 scripts generating data-driven pgfplots figures.
-- Interactive web version: deployed at https://tobiasosborne.github.io/generalrelativity/ (Lecture 3 + interactive Gaussian bump geodesic figure).
+- Interactive web version: deployed at https://tobiasosborne.github.io/generalrelativity/ (Lectures 1–3 + interactive geodesic bump and mass-ratio demos).
 - **Addendum A1 adversarially verified** (2026-03-19): 3 rounds of adversarial proof verification using `af` CLI (21 subagents: 7 verifiers + 6 provers + 6 R2-verifiers + 2 R2-provers + 2 R3-verifiers). 41 challenges filed, all blocking issues resolved. 7/9 proof nodes validated. See `proofs/lecA1/` for full ledger.
 - **Lecture 1 ground-truth verified** (2026-04-02): All precision values and formulas in the equivalence-principle discussion cross-checked against 5 source papers (Eötvös 1922, Roll-Dicke 1964, Williams LLR 2012, MICROSCOPE 2022, Adelberger 2009). MICROSCOPE dates corrected (2016–2018), Eötvös parameter formulation tightened, citations added. Papers stored in `literature/equiv-principle/` (gitignored).
+- **Web version expanded** (2026-04-09): Lecture 2 web page created. Lagrange-point figure in lec01 replaced with TikZ-compiled SVGs from simulation data (was hand-drawn schematic). Coordinate-grid figure in lec02 now data-driven (Julia script computing dipole tidal field level sets via Newton's method, replacing spline approximations). Interactive geodesic demo moved from lec03 to lec02 (where the geodesic equation is derived). `\piG` rendering bug fixed in preprocessor (`\grav` → `{G}` instead of bare `G`). Smart-quote bug diagnosed via Playwright (pandoc converted `"` to `"..."` in widget HTML attributes, breaking `getElementById`).
 
 ## Lecture contents
 
@@ -108,6 +109,7 @@ scripts/
   sim_lec01.jl                # CR3BP: effective potential, Lagrange points, trajectory
   sim_lec01_mass_ratio.jl     # Kepler orbits with varying m_g/m_I
   sim_lec02.jl                # Parallel geodesics on Gaussian bump: metric, Christoffels, ODE
+  sim_lec02_coords.jl         # Coordinate-grid level sets: dipole tidal field, Newton solve
   sim_lec03.jl                # Ellipsoid geodesics + parallel transport
   fetch_equiv_papers.mjs      # Playwright downloader for equiv-principle papers (TIB network)
   tikz-preview.sh             # Standalone TikZ snippet → PNG preview
@@ -117,9 +119,16 @@ web/
   gr-filter.lua               # Pandoc Lua filter: custom envs → foldable HTML
   template.html               # HTML template with MathJax + CSS
 docs/                         # GitHub Pages (served from master:/docs)
-  index.html                  # Lecture index
-  lec03.html                  # Lecture 3: Manifolds (with embedded interactive figure)
+  index.html                  # Lecture index (lectures 1–3 live)
+  lec01.html                  # Lecture 1: Prerelativity gravitation
+  lec02.html                  # Lecture 2: Equivalence principle (with interactive geodesic demo)
+  lec03.html                  # Lecture 3: Manifolds
   geodesic-bump.html          # Standalone interactive geodesic figure
+  mass-ratio.html             # Standalone interactive m_g/m_I demo
+  fig_lec01_potential.svg     # TikZ-compiled: CR3BP effective potential
+  fig_lec01_tadpole.svg       # TikZ-compiled: tadpole orbit near L4
+  fig_lec02_coords.svg        # TikZ-compiled: coordinate grid (dipole tidal data)
+  fig_lec02_matter.svg        # TikZ-compiled: stress-energy ↔ curvature diagram
 build.sh                      # Build tool (--cmfonts, --draft, --simdata, --full, --clean, --watch)
                               #   PDF output copied to repo root (GeneralRelativity.pdf)
 literature/
@@ -147,7 +156,7 @@ Font maps registered with `updmap-user` (mtpro2.map, lucida.map).
 
 ## Possible future work
 
-- **Web version**: convert remaining 22 lectures to HTML (pipeline exists in `web/`), add more interactive figures
+- **Web version**: convert remaining 20 lectures to HTML (pipeline exists in `web/`), add more interactive figures
 - **Interactive figures**: Schwarzschild effective potential, FLRW scale factor evolution, perihelion precession visualization
 - **TikZ figures**: add diagrams for lectures 14–23 (currently text-only)
 - **Lyr.jl integration** (`~/Projects/Lyr.jl`): Schwarzschild/Kerr geodesic raytracing for gravitational lensing visualizations
