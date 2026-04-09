@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lecture 2: The Equivalence
+Principle — Introduction to General Relativity</title>
+
+<!-- MathJax 3 with custom macros -->
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    displayMath: [['\\[','\\]']],
+    macros: {
+      // Derivatives
+      pd: ['{\\frac{\\partial^{#1} #2}{\\partial {#3}^{#1}}}', 3, ''],
+      td: ['{\\frac{d #1}{d #2}}', 2],
+      dd: '{\\mathrm{d}}',
+      covd: '{\\nabla}',
+      Lie: '{\\mathcal{L}}',
+      dalem: '{\\Box}',
+      lap: '{\\Delta}',
+      // Vectors
+      vb: ['{\\boldsymbol{#1}}', 1],
+      uv: ['{\\hat{\\boldsymbol{#1}}}', 1],
+      dt: ['{\\dot{#1}}', 1],
+      ddt: ['{\\ddot{#1}}', 1],
+      norm: ['{\\lVert #1 \\rVert}', 1],
+      // Tensor calculus
+      chris: ['{\\Gamma^{#1}{}_{#2}}', 2],
+      Riem: '{R}',
+      Ric: '{R}',
+      Ein: '{G}',
+      Weyl: '{C}',
+      metric: '{g}',
+      ttype: ['{\\mathcal{T}(#1,#2)}', 2],
+      tp: '{\\otimes}',
+      // Spaces
+      M: '{\\mathcal{M}}',
+      Tp: '{T_p\\mathcal{M}}',
+      Tps: '{T_p^*\\mathcal{M}}',
+      R: '{\\mathbb{R}}',
+      Rn: ['{\\mathbb{R}^{#1}}', 1],
+      // Operators
+      supp: '{\\operatorname{supp}}',
+      tr: '{\\operatorname{tr}}',
+      id: '{\\operatorname{id}}',
+      diag: '{\\operatorname{diag}}',
+      sgn: '{\\operatorname{sgn}}',
+      grad: '{\\operatorname{grad}}',
+      Div: '{\\operatorname{div}}',
+      curl: '{\\operatorname{curl}}',
+      grav: '{G}',
+      textbf: ['{\\mathbf{#1}}', 1],
+    },
+    tags: 'ams',
+    tagSide: 'right',
+  },
+  options: {
+    renderActions: {
+      // Ensure equations render before details are opened
+      addMenu: [0, '', '']
+    }
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+
+<style>
+/* ── Base ─────────────────────────────────────── */
+:root {
+  --spacecadet: #3D7A55;
+  --munsell: #5B8C6F;
+  --banana: #E8B630;
+  --cgblue: #4A7FB5;
+  --isabelline: #A8D5BA;
+  --birrenred: #C4392F;
+  --birrenorange: #D97A2B;
+  --birrengray: #8C8C84;
+  --lightgray: #D4C9A8;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  max-width: 48em;
+  margin: 2em auto;
+  padding: 0 1.5em;
+  font-family: 'Times New Roman', 'Georgia', serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--spacecadet);
+  background: #fcfcfc;
+}
+
+h1, h2, h3, h4 {
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color: var(--munsell);
+}
+
+h1 { font-size: 1.8em; text-align: center; border-bottom: 2px solid var(--munsell); padding-bottom: 0.3em; }
+h2 { font-size: 1.35em; margin-top: 2em; }
+h3 { font-size: 1.15em; margin-top: 1.5em; }
+
+a { color: var(--munsell); }
+
+/* ── Nav ──────────────────────────────────────── */
+nav.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 0;
+  border-bottom: 1px solid var(--isabelline);
+  margin-bottom: 1.5em;
+  font-family: system-ui, sans-serif;
+  font-size: 0.85em;
+}
+nav.top-nav a { text-decoration: none; color: var(--munsell); }
+nav.top-nav a:hover { text-decoration: underline; }
+
+/* ── Fold/unfold controls ─────────────────────── */
+.fold-controls {
+  text-align: right;
+  margin-bottom: 1em;
+  font-family: system-ui, sans-serif;
+  font-size: 0.8em;
+}
+.fold-controls button {
+  background: var(--isabelline);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 3px 10px;
+  cursor: pointer;
+  font-size: 0.85em;
+  margin-left: 4px;
+}
+.fold-controls button:hover { background: var(--banana); }
+
+/* ── Foldable boxes (details/summary) ─────────── */
+details {
+  margin: 1em 0;
+  border-radius: 6px;
+  padding: 0;
+  overflow: hidden;
+}
+
+details > summary {
+  cursor: pointer;
+  padding: 0.5em 0.8em;
+  font-family: system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.95em;
+  list-style: none;
+  user-select: none;
+}
+details > summary::-webkit-details-marker { display: none; }
+details > summary::before {
+  content: '▸ ';
+  display: inline-block;
+  transition: transform 0.15s;
+}
+details[open] > summary::before {
+  content: '▾ ';
+}
+
+details > :not(summary) { padding: 0 0.8em; }
+
+/* Box variants */
+.box-intuition { background: rgba(91,140,111,0.08); border-left: 4px solid var(--munsell); }
+.box-intuition > summary { color: var(--munsell); }
+
+.box-historical { background: var(--isabelline); border-left: 4px solid #888; }
+.box-historical > summary { color: #555; }
+
+.box-keyresult { background: rgba(232,182,48,0.12); border-left: 4px solid var(--banana); }
+.box-keyresult > summary { color: #8a7000; }
+
+.box-solution { background: #f5f5f5; border-left: 4px solid #aaa; }
+.box-solution > summary { color: #666; }
+
+/* Non-foldable boxes */
+.box-exercise {
+  margin: 1em 0;
+  padding: 0.5em 0.8em;
+  background: rgba(91,140,111,0.04);
+  border-left: 4px solid var(--munsell);
+  border-radius: 6px;
+}
+.box-exercise strong { color: var(--munsell); font-family: system-ui, sans-serif; }
+
+.box-example {
+  margin: 1em 0;
+  padding: 0.5em 0.8em;
+  background: rgba(91,140,111,0.04);
+  border-left: 4px solid var(--munsell);
+  border-radius: 6px;
+}
+.box-example strong { color: var(--munsell); font-family: system-ui, sans-serif; }
+
+.box-remark {
+  margin: 1em 0;
+  padding: 0.5em 0.8em;
+  background: #f9f9f9;
+  border-left: 3px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95em;
+}
+
+.box-notation {
+  margin: 1em 0;
+  padding: 0.5em 0.8em;
+  background: #f9f9f9;
+  border-left: 3px solid var(--munsell);
+  border-radius: 4px;
+}
+
+/* ── Highlighted equation box ─────────────────── */
+.eqbox-display {
+  background: rgba(232,182,48,0.15);
+  padding: 0.3em 0.5em;
+  border-radius: 4px;
+  margin: 0.8em 0;
+}
+
+span.eqbox {
+  background: rgba(232,182,48,0.2);
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+/* ── TikZ placeholder ─────────────────────────── */
+.tikz-placeholder {
+  margin: 1.5em auto;
+  padding: 2em;
+  background: var(--isabelline);
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  text-align: center;
+  color: #888;
+  font-family: system-ui, sans-serif;
+  font-style: italic;
+  max-width: 24em;
+}
+
+/* ── Interactive figure container ──────────────── */
+.interactive-figure {
+  margin: 2em 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+}
+.interactive-figure .fig-header {
+  background: var(--isabelline);
+  padding: 0.5em 1em;
+  font-family: system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.9em;
+  color: var(--munsell);
+}
+.interactive-figure canvas {
+  display: block;
+  width: 100%;
+  cursor: grab;
+}
+.interactive-figure .fig-controls {
+  padding: 0.8em 1em;
+  background: #fafafa;
+  border-top: 1px solid #eee;
+  font-family: system-ui, sans-serif;
+  font-size: 0.85em;
+}
+.interactive-figure .fig-controls label {
+  margin-right: 1em;
+  color: var(--spacecadet);
+}
+.interactive-figure .fig-controls input[type=range] {
+  vertical-align: middle;
+  width: 180px;
+}
+
+/* ── Responsive ───────────────────────────────── */
+@media (max-width: 600px) {
+  body { font-size: 16px; padding: 0 0.8em; }
+  h1 { font-size: 1.4em; }
+}
+
+/* ── Definition lists (for footnotes) ─────────── */
+.footnotes { font-size: 0.85em; border-top: 1px solid #ddd; margin-top: 3em; padding-top: 1em; }
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <a href="index.html">← All Lectures</a>
+  <span><strong>Introduction to General Relativity</strong></span>
+  <span><a href="lec01.html">← Lec 1</a> · <a href="lec03.html">Lec 3 →</a></span>
+</nav>
+
+<div class="fold-controls">
+  <button onclick="document.querySelectorAll('details').forEach(d=>d.open=true)">Unfold all</button>
+  <button onclick="document.querySelectorAll('details').forEach(d=>d.open=false)">Fold all</button>
+</div>
+
+<h1 id="sec:equivalence-principle">The equivalence principle and Mach’s
+principle</h1>
+<p>In the previous lecture we reviewed the fundamental assumptions of
+Newtonian physics—in particular, the preferred reference frame and the
+three conceptually distinct notions of mass. We now turn to the two big
+principles that motivated Einstein to formulate general relativity: the
+<em>equivalence principle</em> and <em>Mach’s principle</em>.</p>
+<h2 id="einsteins-equivalence-principle-eep">Einstein’s equivalence
+principle (EEP)</h2>
+<p>The first, and arguably most important, principle underlying the
+formulation of general relativity is the Einstein equivalence principle.
+In its modern form, EEP consists of three parts:</p>
+<ol>
+<li><p><strong>Universality of free fall (UFF)</strong> (also known as
+the <em>weak equivalence principle</em>, WEP).<br />
+Not rejected (a key distinction: in physics we cannot <em>confirm</em> a
+hypothesis, only fail to reject it) e.g. in torsion balance experiments
+(cf. §<a href="#sec:UFF" data-reference-type="ref"
+data-reference="sec:UFF">[sec:UFF]</a>).</p></li>
+<li><p><strong>Local Lorentz invariance (LLI).</strong><br />
+In a freely falling reference frame, the laws of non-gravitational
+physics are those of special relativity—there is no preferred reference
+frame. Recall that the existence of a preferred frame was a fundamental
+assumption of Newtonian physics (§<a href="#sec:prerelativity"
+data-reference-type="ref"
+data-reference="sec:prerelativity">[sec:prerelativity]</a>); this is one
+of the assumptions one must already abandon in the transition to special
+relativity. In particular, the laws of physics do not depend on the
+orientation or velocity of the observer.</p>
+<p>Best bounds from Michelson–Morley–type experiments: <span
+class="math display">\[\label{eq:LLI-bound}
+      \frac{\Delta c}{c} &lt; 5 \times 10^{-17}\,.\]</span></p></li>
+<li><p><strong>Local position invariance (LPI).</strong><br />
+Special relativity holds independent of spacetime position (no
+“preferred” location).</p></li>
+</ol>
+<details class="box-intuition" open>
+<summary>Physical intuition</summary>
+<div class="box-body">
+<p>UFF says <em>all bodies fall the same way</em>. LLI says <em>physics
+looks the same regardless of your velocity</em>. LPI says <em>physics
+looks the same regardless of where you are</em>. Together, they force
+gravity to be a property of spacetime geometry rather than an ordinary
+force.</p>
+</div>
+</details>
+<h3 id="lpi-and-gravitational-redshift">LPI and gravitational
+redshift</h3>
+<p>LPI is equivalent (exercise) to the <em>universality of gravitational
+redshift</em> (UGR): clock rates are universally affected by the
+gravitational field.</p>
+<div class="box-exercise">
+<div class="box-title">Exercise</div>
+<p><span id="ex:grav-redshift" label="ex:grav-redshift"></span> Show
+that for small velocities and weak gravitational fields, the fractional
+change in clock rate between two positions <span
+class="math inline"><strong>x</strong><sub>1</sub></span> and <span
+class="math inline"><strong>x</strong><sub>2</sub></span> is <span
+class="math display">$$\label{eq:grav-redshift}
+    \boxed{\frac{\Delta\nu}{\nu}
+      = \frac{\Delta\phi}{c^2}}\,,$$</span> where <span
+class="math inline"><em>ν</em>(<strong>x</strong><sub>1</sub>)</span>,
+<span
+class="math inline"><em>ν</em>(<strong>x</strong><sub>2</sub>)</span>
+are the clock rates at positions <span class="math inline">1, 2</span>
+and <span
+class="math inline"><em>Δ</em><em>ϕ</em> = <em>ϕ</em>(<strong>x</strong><sub>1</sub>) − <em>ϕ</em>(<strong>x</strong><sub>2</sub>)</span>.
+<em>Hint:</em> There are (at least) two approaches—a Doppler-shift
+argument, or an argument using the quantum expression <span
+class="math inline"><em>E</em> = <em>h</em><em>ν</em></span> for the
+energy of a photon and tracking how it changes at different points in
+the gravitational field.</p>
+</div>
+<p><strong>Estimate:</strong> On Earth’s surface, for a height
+difference <span class="math inline">\(\lVert \boldsymbol{x}_1 -
+\boldsymbol{x}_2 \rVert \sim 30\;\mathrm{cm}\)</span>, this effect is
+<span class="math inline">\(\Delta\phi/c^2 \sim 10^{-17}\)</span>—and
+has been measured! Modern atomic clocks are sensitive enough that
+gravitational redshift is now routinely measurable over laboratory-scale
+height differences.</p>
+<details class="box-intuition" open>
+<summary>Physical intuition</summary>
+<div class="box-body">
+<p>A clock at the bottom of a gravitational potential well runs slower
+than a clock at the top. GPS satellites must correct for this: their
+clocks run faster (by <span
+class="math inline"> ∼ 45 <em>μ</em>s/day</span>) than ground-based
+clocks. Without this correction, GPS positions would drift by <span
+class="math inline"> ∼ 10 km/day</span>.</p>
+</div>
+</details>
+<h2 id="from-eep-to-geometry">From EEP to geometry</h2>
+<p><strong>Observation:</strong> Using EEP, it is possible to “derive”
+(or at least argue convincingly) that gravity should be described
+<em>geometrically</em> (K. Thorne, D. Lee, &amp; A. Lightman,
+<em>Phys. Rev. D</em>, <strong>7</strong>, 3563–3578, 1973).</p>
+<p>One should be careful here: formulating a physical theory in
+geometric language is, by itself, no particular magic. Newton’s
+mechanics can be formulated geometrically (via symplectic geometry), as
+can thermodynamics, statistical mechanics, and quantum mechanics (via
+Kähler manifolds). If you are willing to work hard enough, just about
+<em>any</em> physical theory admits a geometric formulation.</p>
+<p>What makes general relativity special is not merely that it
+<em>has</em> a geometric formulation, but what that geometry
+<em>means</em> physically:</p>
+<details class="box-keyresult" open>
+<summary>Key result</summary>
+<div class="box-body">
+<p>All matter—electrons, protons, gluons, the Higgs field—couples to the
+<em>same geometry</em>, namely that of spacetime. A single metric
+suffices to describe all of these couplings simultaneously. This
+universal coupling is what distinguishes general relativity from any
+other theory that happens to admit a geometric formulation.</p>
+</div>
+</details>
+<h2 id="calculations-with-eep">Calculations with EEP</h2>
+<p><strong>Statement:</strong> No external, static, homogeneous
+gravitational field can be detected in a freely falling elevator.</p>
+<p>This is one of Einstein’s classic thought experiments—“Einstein’s
+elevator.” Note the qualifiers <em>static</em> and <em>homogeneous</em>:
+if the gravitational field varies in space (is not
+translation-invariant), then tidal forces arise, and these <em>can</em>
+be detected even in a freely falling frame. This distinction will become
+important when we discuss curvature.</p>
+<p>Suppose we have <span class="math inline">\(N\)</span>
+(non-relativistic) particles moving in a pair force field <span
+class="math inline">\(\boldsymbol{F}(\boldsymbol{x}_j -
+\boldsymbol{x}_k)\)</span> and an external gravitational field <span
+class="math inline">\(\boldsymbol{g}(\boldsymbol{x}) =
+\boldsymbol{g}\)</span> (constant), with <span
+class="math inline">\(\boldsymbol{F}(\boldsymbol{0}) =
+\boldsymbol{0}\)</span>.</p>
+<p>Equations of motion: <span
+class="math display">\[\label{eq:eom-N-particles}
+  m_j\,\frac{d^2\boldsymbol{x}_j}{dt^2}
+    = m_j\,\boldsymbol{g}
+      + \sum_{k=1}^{N} \boldsymbol{F}(\boldsymbol{x}_j -
+\boldsymbol{x}_k)\,.\]</span></p>
+<p>We now make a non-Galilean change to an <em>accelerating (freely
+falling) frame</em>: <span
+class="math display">\[\label{eq:accelerating-frame}
+  \boldsymbol{x}&#39; = \boldsymbol{x} -
+\tfrac{1}{2}\,\boldsymbol{g}\,t^2\,,\qquad
+  t&#39; = t\,.\]</span></p>
+<p>Then the equations of motion become (exercise): <span
+class="math display">\[\label{eq:eom-freefall}
+  \boxed{m_j\,\frac{d^2\boldsymbol{x}&#39;_j}{dt&#39;^2}
+    = \sum_{k} \boldsymbol{F}(\boldsymbol{x}&#39;_j -
+\boldsymbol{x}&#39;_k)}\,.\]</span> The gravitational field has been
+<em>eliminated</em>—the freely falling frame sees only the
+inter-particle forces. This is a first concrete demonstration of EEP
+within Newtonian physics.</p>
+<h2
+id="gravitational-forces-and-freely-falling-coordinates">Gravitational
+forces and freely falling coordinates</h2>
+<p>We now tell essentially the same story, but within special
+relativity—a more demanding calculation, and a good check on one’s
+special-relativistic mechanics. These calculations are meant to give
+facility with non-Galilean, non-Lorentzian coordinate changes; along the
+way, many of the symbols of differential geometry will already start to
+appear in this quite elementary setting.</p>
+<p>According to EEP, for <em>any</em> particle moving purely under the
+influence of a gravitational field, there exists a freely falling
+coordinate system <span
+class="math inline">\((\xi^0,\,\xi^1,\,\xi^2,\,\xi^3)\)</span> such that
+<span class="math display">\[\label{eq:force-free}
+  \boxed{\frac{d^2\xi^\alpha}{d\tau^2} = 0}
+  \qquad (\equiv\;\text{force-free motion})\,,\]</span> where <span
+class="math inline">\(\tau\)</span> is the <em>proper time</em>, defined
+by <span class="math display">\[\label{eq:proper-time-flat}
+  d\tau^2 = -\eta_{\alpha\beta}\,d\xi^\alpha\,d\xi^\beta\,,\]</span> or
+equivalently, <span class="math display">\[\label{eq:4vel-normalisation}
+  -1 = \eta_{\alpha\beta}\,
+    \frac{d\xi^\alpha}{d\tau}\,\frac{d\xi^\beta}{d\tau}\,.\]</span></p>
+<p>Here <span class="math inline">\(\eta_{\alpha\beta}\)</span> is the
+<em>Minkowski metric</em>: <span
+class="math display">\[\label{eq:minkowski}
+  \eta_{\alpha\beta}
+  = \diag(-1,\,+1,\,+1,\,+1)\,.\]</span></p>
+<p><strong>Einstein’s summation convention:</strong> <span
+class="math display">\[u_\alpha\,\xi^\alpha
+  \;\equiv\; \sum_{\alpha=0}^{3} u_\alpha\,\xi^\alpha\,.\]</span>
+Repeated indices (one “upstairs,” one “downstairs”) are summed over.</p>
+<h2 id="the-geodesic-equation">The geodesic equation</h2>
+<p>Suppose <span class="math inline">\(x^\mu\)</span> denotes some
+other—completely general—set of coordinates: a lab frame, a rotating
+frame, a frame “jumping up and down on a trampoline”—anything at
+all:</p>
+<figure style="text-align:center; margin:1.5em 0;">
+  <img src="fig_lec02_coords.svg" alt="Coordinate grid: straight grid in freely falling frame mapped to curved level sets in lab frame via dipole tidal field" style="max-width:100%; height:auto;">
+  <figcaption style="font-size:0.85em; color:var(--birrengray); margin-top:0.5em;">
+    Left: regular coordinate grid in the freely falling frame \((\xi^0, \xi^1)\).
+    Right: the same coordinate lines mapped to the lab frame \((x^0, x^1)\) —
+    level sets computed from a gravitational dipole tidal field.
+  </figcaption>
+</figure>
+<p>The freely falling coordinates are functions of the lab coordinates:
+<span class="math display">\[\xi^\alpha =
+\xi^\alpha(x^0,\,x^1,\,x^2,\,x^3)\,.\]</span></p>
+<p>The force-free equation <a href="#eq:force-free"
+data-reference-type="eqref"
+data-reference="eq:force-free">[eq:force-free]</a> becomes <span
+class="math display">\[0 = \frac{d^2\xi^\alpha}{d\tau^2}
+    = \frac{d}{d\tau}\!\left(
+        \frac{\partial \xi^\alpha}{\partial x^\mu}\,\frac{dx^\mu}{d\tau}
+      \right)
+    = \frac{\partial \xi^\alpha}{\partial x^\mu}\,\frac{d^2
+x^\mu}{d\tau^2}
+      + \frac{\partial^2\xi^\alpha}{\partial x^\mu\,\partial x^\nu}\,
+        \frac{dx^\mu}{d\tau}\,\frac{dx^\nu}{d\tau}\,.\]</span></p>
+<p>Multiplying by <span class="math inline">\(\frac{\partial
+x^\lambda}{\partial \xi^\alpha}\)</span> and using <span
+class="math inline">\(\frac{\partial \xi^\alpha}{\partial
+x^\mu}\frac{\partial x^\lambda}{\partial \xi^\alpha} =
+\delta^\lambda{}_\mu\)</span>, we obtain the <strong>geodesic
+equation</strong>: <span class="math display">\[\label{eq:geodesic}
+  \boxed{
+    \frac{d^2 x^\lambda}{d\tau^2}
+    + \Gamma^{\lambda}{}_{\mu\nu}\,
+      \frac{dx^\mu}{d\tau}\,\frac{dx^\nu}{d\tau}
+    = 0}\,,\]</span> where the <em>affine connection</em> (Christoffel
+symbol) is <span class="math display">\[\label{eq:christoffel-def}
+  \Gamma^{\lambda}{}_{\mu\nu}
+    = \frac{\partial x^\lambda}{\partial \xi^\alpha}\,
+      \frac{\partial^2\xi^\alpha}{\partial x^\mu\,\partial
+x^\nu}\,.\]</span> The affine connection encodes how the freely falling
+coordinates depend on our (possibly wild) lab coordinates, together with
+a Jacobian factor. When we come to formulate differential geometry
+properly (starting in lecture 3), we will encounter the geodesic
+equation and affine connections in much greater generality—but they
+already appear here, in this entirely elementary calculation.</p>
+<details class="box-intuition" open>
+<summary>Physical intuition</summary>
+<div class="box-body">
+<p>To build intuition for the geodesic equation, consider a 2D surface
+embedded in <span class="math inline">ℝ<sup>3</sup></span>. The shortest
+paths on the surface—the geodesics—are <em>not</em> straight lines in
+the ambient space; they bend to stay on the surface. The deviation from
+a straight line is governed by the Christoffel symbols, which encode the
+surface’s curvature.</p>
+</div>
+</details>
+<!-- ═══ Interactive Gaussian bump geodesic figure ═══ -->
+<div class=”interactive-figure” id=”geodesic-widget”>
+<div class=”fig-header”>Interactive: Geodesics on a Gaussian bump — parallel paths deflected by curvature</div>
+<canvas id=”geo-canvas” style=”width:100%;aspect-ratio:1/1;display:block;cursor:crosshair;background:white”></canvas>
+<div class=”fig-controls” style=”padding:0.8em 1em;background:#fafafa;border-top:1px solid #eee;font-size:0.82em;display:flex;flex-wrap:wrap;gap:0.6em 1.5em;align-items:center”>
+  <label>Amplitude <em>A</em> <input type=”range” id=”g-amp” min=”0” max=”3” step=”0.05” value=”1.0” style=”width:100px;vertical-align:middle”> <span id=”g-amp-v” style=”font-variant-numeric:tabular-nums”>1.00</span></label>
+  <label>Width &sigma; <input type=”range” id=”g-sig” min=”0.3” max=”2.5” step=”0.05” value=”1.0” style=”width:100px;vertical-align:middle”> <span id=”g-sig-v” style=”font-variant-numeric:tabular-nums”>1.00</span></label>
+  <label>Rays <input type=”range” id=”g-n” min=”1” max=”21” step=”2” value=”9” style=”width:80px;vertical-align:middle”> <span id=”g-n-v”>9</span></label>
+  <label>Spread <input type=”range” id=”g-sp” min=”0.2” max=”2.5” step=”0.05” value=”1.2” style=”width:80px;vertical-align:middle”> <span id=”g-sp-v” style=”font-variant-numeric:tabular-nums”>1.20</span></label>
+  <label style=”font-size:0.9em”><input type=”checkbox” id=”g-str” checked style=”vertical-align:middle”> Undeflected</label>
+</div>
+<div style=”padding:0.4em 1em 0.6em;font-size:0.75em;color:#888;font-variant-numeric:tabular-nums” id=”g-stats”></div>
+</div>
+<p style=”font-size:0.9em;text-align:center;margin-top:0.3em;color:#666”>
+  <em>Initially parallel geodesics on a Gaussian-bump surface \(z = e^{-(x^2+y^2)/2}\) —
+  curvature causes the paths to converge, cross, and diverge (geodesic deviation).
+  <a href=”geodesic-bump.html”>Open full interactive version</a> with more controls.</em>
+</p>
+
+<script>
+// ─── Embedded geodesic solver (RK4 on Gaussian-bump metric) ──
+(function(){
+const cv = document.getElementById('geo-canvas');
+const cx = cv.getContext('2d');
+const DOM = 3.2;
+
+function setup(){
+  const dpr = window.devicePixelRatio||1;
+  const r = cv.getBoundingClientRect();
+  cv.width = r.width*dpr; cv.height = r.height*dpr;
+  cx.setTransform(dpr,0,0,dpr,0,0);
+  return {w:r.width, h:r.height};
+}
+
+function hf(x,y,A,s2){return A*Math.exp(-(x*x+y*y)/(2*s2));}
+function hfx(x,y,A,s2){return -x/s2*hf(x,y,A,s2);}
+function hfy(x,y,A,s2){return -y/s2*hf(x,y,A,s2);}
+function hfxx(x,y,A,s2){return(-1/s2+x*x/(s2*s2))*hf(x,y,A,s2);}
+function hfxy(x,y,A,s2){return x*y/(s2*s2)*hf(x,y,A,s2);}
+function hfyy(x,y,A,s2){return(-1/s2+y*y/(s2*s2))*hf(x,y,A,s2);}
+
+function chrst(x,y,A,s2){
+  const fx=hfx(x,y,A,s2),fy=hfy(x,y,A,s2);
+  const fxx=hfxx(x,y,A,s2),fxy=hfxy(x,y,A,s2),fyy=hfyy(x,y,A,s2);
+  const g11=1+fx*fx,g12=fx*fy,g22=1+fy*fy;
+  const det=g11*g22-g12*g12;
+  const gi11=g22/det,gi12=-g12/det,gi22=g11/det;
+  const dg=[[2*fx*fxx,fxx*fy+fx*fxy,fxx*fy+fx*fxy,2*fy*fxy],
+            [2*fx*fxy,fxy*fy+fx*fyy,fxy*fy+fx*fyy,2*fy*fyy]];
+  function dv(k,i,j){return dg[k][i*2+j];}
+  function gi(i,j){return i===0?(j===0?gi11:gi12):(j===0?gi12:gi22);}
+  const G=new Float64Array(8);
+  for(let l=0;l<2;l++)for(let m=0;m<2;m++)for(let n=0;n<2;n++){
+    let s=0;for(let sg=0;sg<2;sg++)s+=gi(l,sg)*(dv(n,sg,m)+dv(m,sg,n)-dv(sg,m,n));
+    G[l*4+m*2+n]=0.5*s;}
+  return G;
+}
+
+function rhs(st,A,s2){
+  const[x,y,vx,vy]=st;const G=chrst(x,y,A,s2);
+  return[vx,vy,-(G[0]*vx*vx+2*G[1]*vx*vy+G[3]*vy*vy),-(G[4]*vx*vx+2*G[5]*vx*vy+G[7]*vy*vy)];
+}
+
+function rk4(st,ds,A,s2){
+  const k1=rhs(st,A,s2);
+  const s2_=[0,0,0,0];for(let i=0;i<4;i++)s2_[i]=st[i]+.5*ds*k1[i];
+  const k2=rhs(s2_,A,s2);
+  const s3=[0,0,0,0];for(let i=0;i<4;i++)s3[i]=st[i]+.5*ds*k2[i];
+  const k3=rhs(s3,A,s2);
+  const s4=[0,0,0,0];for(let i=0;i<4;i++)s4[i]=st[i]+ds*k3[i];
+  const k4=rhs(s4,A,s2);
+  const out=[0,0,0,0];for(let i=0;i<4;i++)out[i]=st[i]+ds/6*(k1[i]+2*k2[i]+2*k3[i]+k4[i]);
+  return out;
+}
+
+function integrate(x0,y0,vx0,vy0,A,sigma){
+  const s2=sigma*sigma,ds=0.008,sMax=8;
+  const fx=hfx(x0,y0,A,s2),fy=hfy(x0,y0,A,s2);
+  const sp=Math.sqrt((1+fx*fx)*vx0*vx0+2*fx*fy*vx0*vy0+(1+fy*fy)*vy0*vy0);
+  vx0/=sp;vy0/=sp;
+  const path=[[x0,y0]];let st=[x0,y0,vx0,vy0];
+  for(let i=0;i<Math.floor(sMax/ds);i++){
+    st=rk4(st,ds,A,s2);
+    if(Math.abs(st[0])>3.5||Math.abs(st[1])>3.5)break;
+    path.push([st[0],st[1]]);
+  }
+  return path;
+}
+
+function c2c(x,y,w,h){return[(x+DOM)/(2*DOM)*w,(DOM-y)/(2*DOM)*h];}
+
+function drawPath(path,w,h,color,lw,dash){
+  if(path.length<2)return;cx.strokeStyle=color;cx.lineWidth=lw;cx.setLineDash(dash||[]);
+  cx.beginPath();const[sx,sy]=c2c(path[0][0],path[0][1],w,h);cx.moveTo(sx,sy);
+  for(let i=1;i<path.length;i++){const[px,py]=c2c(path[i][0],path[i][1],w,h);cx.lineTo(px,py);}
+  cx.stroke();cx.setLineDash([]);
+}
+
+function pcolor(i,n){
+  const t=n>1?Math.abs(2*i/(n-1)-1):0;
+  return`rgb(${Math.round(t*13)},${Math.round(143-t*103)},${Math.round(168-t*92)})`;
+}
+
+function render(){
+  const{w,h}=setup();
+  const A=parseFloat(document.getElementById('g-amp').value);
+  const sigma=parseFloat(document.getElementById('g-sig').value);
+  const ngeo=parseInt(document.getElementById('g-n').value);
+  const spread=parseFloat(document.getElementById('g-sp').value);
+  const showStr=document.getElementById('g-str').checked;
+  const s2=sigma*sigma, xs=-2.5;
+  document.getElementById('g-amp-v').textContent=A.toFixed(2);
+  document.getElementById('g-sig-v').textContent=sigma.toFixed(2);
+  document.getElementById('g-n-v').textContent=ngeo;
+  document.getElementById('g-sp-v').textContent=spread.toFixed(2);
+  cx.fillStyle='white';cx.fillRect(0,0,w,h);
+  const step=3;
+  const imgD=cx.createImageData(Math.ceil(w),Math.ceil(h));
+  for(let px=0;px<w;px+=step)for(let py=0;py<h;py+=step){
+    const x=(px/w)*2*DOM-DOM,y=DOM-(py/h)*2*DOM;
+    const t=Math.min(hf(x,y,A,s2)/Math.max(A,.01),1);
+    const a=Math.round(t*45);
+    for(let dx=0;dx<step&&px+dx<w;dx++)for(let dy=0;dy<step&&py+dy<h;dy++){
+      const idx=((py+dy)*Math.ceil(w)+(px+dx))*4;
+      imgD.data[idx]=0;imgD.data[idx+1]=Math.round(143-t*40);imgD.data[idx+2]=Math.round(168-t*60);imgD.data[idx+3]=a;
+    }
+  }
+  cx.putImageData(imgD,0,0);
+  cx.strokeStyle='rgba(0,0,0,0.06)';cx.lineWidth=0.5;
+  for(let v=-3;v<=3;v++){
+    let[x1,y1]=c2c(v,-DOM,w,h),[x2,y2]=c2c(v,DOM,w,h);
+    cx.beginPath();cx.moveTo(x1,y1);cx.lineTo(x2,y2);cx.stroke();
+    [x1,y1]=c2c(-DOM,v,w,h);[x2,y2]=c2c(DOM,v,w,h);
+    cx.beginPath();cx.moveTo(x1,y1);cx.lineTo(x2,y2);cx.stroke();
+  }
+  cx.lineWidth=0.5;
+  for(const lev of[.1,.2,.4,.6,.8]){
+    const zt=lev*A;if(zt<=0)continue;
+    const ratio=zt/A;if(ratio<=0||ratio>=1)continue;
+    const r=sigma*Math.sqrt(-2*Math.log(ratio));if(r>DOM)continue;
+    const[ccx,ccy]=c2c(0,0,w,h);const rPx=r/(2*DOM)*w;
+    cx.strokeStyle=`rgba(13,40,76,${0.06+lev*0.08})`;
+    cx.beginPath();cx.arc(ccx,ccy,rPx,0,2*Math.PI);cx.stroke();
+  }
+  const[ccx,ccy]=c2c(0,0,w,h);
+  cx.strokeStyle='rgba(13,40,76,0.2)';cx.lineWidth=1.5;
+  cx.beginPath();cx.moveTo(ccx-6,ccy);cx.lineTo(ccx+6,ccy);cx.moveTo(ccx,ccy-6);cx.lineTo(ccx,ccy+6);cx.stroke();
+  const t0=performance.now();let maxD=0;
+  for(let i=0;i<ngeo;i++){
+    const y0=ngeo===1?0:-spread+2*spread*i/(ngeo-1);
+    if(showStr) drawPath([[xs,y0],[3.2,y0]],w,h,'rgba(13,40,76,0.12)',0.8,[4,4]);
+    const path=integrate(xs,y0,1,0,A,sigma);
+    const lw=(ngeo===1||i===Math.floor(ngeo/2))?2.2:1.5;
+    drawPath(path,w,h,pcolor(i,ngeo),lw);
+    const[sx,sy]=c2c(path[0][0],path[0][1],w,h);
+    cx.fillStyle=pcolor(i,ngeo);cx.beginPath();cx.arc(sx,sy,3,0,2*Math.PI);cx.fill();
+    const d=Math.abs(path[path.length-1][1]-y0);if(d>maxD)maxD=d;
+  }
+  const ms=(performance.now()-t0).toFixed(1);
+  document.getElementById('g-stats').innerHTML=`${ms} ms · max deflection: ${maxD.toFixed(3)}`;
+}
+
+for(const id of['g-amp','g-sig','g-n','g-sp'])document.getElementById(id).addEventListener('input',render);
+document.getElementById('g-str').addEventListener('change',render);
+window.addEventListener('resize',render);
+render();
+})();
+</script>
+<!-- ═══ End interactive figure ═══ -->
+<h2 id="sec:metric-from-EEP">The metric</h2>
+<p>The proper time <a href="#eq:proper-time-flat"
+data-reference-type="eqref"
+data-reference="eq:proper-time-flat">[eq:proper-time-flat]</a> expressed
+in the lab coordinates becomes <span
+class="math display">\[\begin{aligned}
+  d\tau^2
+    &amp;= -\eta_{\alpha\beta}\,d\xi^\alpha\,d\xi^\beta
+     = -\eta_{\alpha\beta}\,
+        \frac{\partial \xi^\alpha}{\partial x^\mu}\,\frac{\partial
+\xi^\beta}{\partial x^\nu}\,
+        dx^\mu\,dx^\nu \notag\\
+    &amp;= -g_{\mu\nu}\,dx^\mu\,dx^\nu\,,
+    \label{eq:proper-time-general}
+\end{aligned}\]</span> where <span
+class="math display">\[\label{eq:metric-def}
+  \boxed{g_{\mu\nu}
+    = \frac{\partial \xi^\alpha}{\partial x^\mu}\,\frac{\partial
+\xi^\beta}{\partial x^\nu}\,
+      \eta_{\alpha\beta}}\]</span> is the <strong>metric</strong>. The
+metric collects all the information that appeared when we changed to the
+new coordinate system; it is the object that allows us to compute proper
+time (and hence distances and clock rates) without having to transform
+back to freely falling coordinates every time.</p>
+<details class="box-intuition" open>
+<summary>Physical intuition</summary>
+<div class="box-body">
+<p>The metric <span
+class="math inline"><em>g</em><sub><em>μ</em><em>ν</em></sub></span>
+tells you how to measure distances and time intervals in arbitrary
+coordinates. In freely falling coordinates it reduces to the flat
+Minkowski metric <span
+class="math inline"><em>η</em><sub><em>α</em><em>β</em></sub></span>.
+The deviation of <span
+class="math inline"><em>g</em><sub><em>μ</em><em>ν</em></sub></span>
+from <span
+class="math inline"><em>η</em><sub><em>α</em><em>β</em></sub></span>
+encodes the gravitational field. Ultimately, <span
+class="math inline"><em>g</em><sub><em>μ</em><em>ν</em></sub></span> is
+all one needs to describe the geometry of spacetime.</p>
+</div>
+</details>
+<p>So far we have seen only one half of the story: the geometry of
+spacetime tells freely falling particles how to move (via the geodesic
+equation). The other half—that matter tells spacetime how to
+curve—requires Mach’s principle and, eventually, Einstein’s field
+equations.</p>
+<h2 id="machs-principle">Mach’s principle</h2>
+<p>Mach’s principle is the second key set of ideas—really a
+<em>circle</em> of ideas, less precise than EEP and harder to make
+mathematically sharp, but profoundly influential on Einstein’s
+thinking.</p>
+<details class="box-keyresult" open>
+<summary>Key result</summary>
+<div class="box-body">
+<p>All matter in the universe should contribute to the local definition
+of “non-accelerating” and “non-rotating.” In a universe devoid of
+matter, these concepts should have no meaning.</p>
+</div>
+</details>
+<p>This is a deep statement: the very notions of acceleration and
+rotation are not absolute but are determined by the matter content of
+the universe. Without matter, there is nothing with respect to which one
+could be “accelerating” or “rotating.”</p>
+<h2 id="general-relativity-the-synthesis">General relativity: the
+synthesis</h2>
+<p>General relativity is the following statement:</p>
+<details class="box-keyresult" open>
+<summary>Key result</summary>
+<div class="box-body">
+<p>The observer-independent properties of spacetime are described by a
+<em>spacetime metric</em> <span
+class="math inline"><em>g</em><sub><em>μ</em><em>ν</em></sub></span>—a
+symmetric rank-2 tensor field assigning four numbers to each spacetime
+event—which need not have the flat form <span
+class="math inline"><em>η</em><sub><em>μ</em><em>ν</em></sub></span> of
+special relativity. <em>Curvature</em> is that property of the metric
+that accounts for the physical effects of gravitation. Furthermore,
+curvature is determined by the distribution of stress-energy and
+momentum, and vice versa.</p>
+</div>
+</details>
+<p>The “vice versa” is crucial: stress-energy tells spacetime how to
+curve, and curvature tells matter how to move. This self-referential,
+nonlinear interplay between geometry and matter is what makes general
+relativity so remarkable. The extraordinary—one might say almost
+miraculous—thing is that this all holds together: the theory does not
+collapse into inconsistency, but instead forms a beautifully
+self-contained whole.</p>
+<figure style="text-align:center; margin:1.5em 0;">
+  <img src="fig_lec02_matter.svg" alt="Stress-energy tells spacetime how to curve; curvature tells matter how to move" style="max-width:90%; height:auto;">
+</figure>
+<p>Actually implementing the physical content of this
+formulation—computing curvature, writing down Einstein’s field
+equations, extracting predictions—requires the mathematics of spacetime
+manifolds that are not flat. That is the work we commence in the next
+lecture, beginning with the theory of differentiable manifolds.</p>
+
+<script>
+// Re-typeset MathJax when a details element is opened
+document.querySelectorAll('details').forEach(d => {
+  d.addEventListener('toggle', () => {
+    if (d.open && window.MathJax) MathJax.typeset([d]);
+  });
+});
+</script>
+
+</body>
+</html>
