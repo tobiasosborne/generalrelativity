@@ -710,7 +710,10 @@ function render(){
 for(const id of['g-amp','g-sig','g-n','g-sp'])document.getElementById(id).addEventListener('input',render);
 document.getElementById('g-str').addEventListener('change',render);
 window.addEventListener('resize',render);
-render();
+// Defer initial render: script runs mid-page before layout is complete,
+// so getBoundingClientRect() would return zero dimensions.
+if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',render);
+else requestAnimationFrame(render);
 })();
 </script>
 <!-- ═══ End interactive figure ═══ -->
