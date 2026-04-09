@@ -337,7 +337,7 @@ class="math display">\[\label{eq:LLI-bound}
       \frac{\Delta c}{c} &lt; 5 \times 10^{-17}\,.\]</span></p></li>
 <li><p><strong>Local position invariance (LPI).</strong><br />
 Special relativity holds independent of spacetime position (no
-“preferred” location).</p></li>
+"preferred" location).</p></li>
 </ol>
 <details class="box-intuition" open>
 <summary>Physical intuition</summary>
@@ -395,7 +395,7 @@ class="math inline"> ∼ 10 km/day</span>.</p>
 </div>
 </details>
 <h2 id="from-eep-to-geometry">From EEP to geometry</h2>
-<p><strong>Observation:</strong> Using EEP, it is possible to “derive”
+<p><strong>Observation:</strong> Using EEP, it is possible to "derive"
 (or at least argue convincingly) that gravity should be described
 <em>geometrically</em> (K. Thorne, D. Lee, &amp; A. Lightman,
 <em>Phys. Rev. D</em>, <strong>7</strong>, 3563–3578, 1973).</p>
@@ -421,8 +421,8 @@ other theory that happens to admit a geometric formulation.</p>
 <h2 id="calculations-with-eep">Calculations with EEP</h2>
 <p><strong>Statement:</strong> No external, static, homogeneous
 gravitational field can be detected in a freely falling elevator.</p>
-<p>This is one of Einstein’s classic thought experiments—“Einstein’s
-elevator.” Note the qualifiers <em>static</em> and <em>homogeneous</em>:
+<p>This is one of Einstein’s classic thought experiments—"Einstein’s
+elevator." Note the qualifiers <em>static</em> and <em>homogeneous</em>:
 if the gravitational field varies in space (is not
 translation-invariant), then tidal forces arise, and these <em>can</em>
 be detected even in a freely falling frame. This distinction will become
@@ -485,11 +485,11 @@ class="math display">\[\label{eq:minkowski}
 <p><strong>Einstein’s summation convention:</strong> <span
 class="math display">\[u_\alpha\,\xi^\alpha
   \;\equiv\; \sum_{\alpha=0}^{3} u_\alpha\,\xi^\alpha\,.\]</span>
-Repeated indices (one “upstairs,” one “downstairs”) are summed over.</p>
+Repeated indices (one "upstairs," one "downstairs") are summed over.</p>
 <h2 id="the-geodesic-equation">The geodesic equation</h2>
 <p>Suppose <span class="math inline">\(x^\mu\)</span> denotes some
 other—completely general—set of coordinates: a lab frame, a rotating
-frame, a frame “jumping up and down on a trampoline”—anything at
+frame, a frame "jumping up and down on a trampoline"—anything at
 all:</p>
 <figure style="text-align:center; margin:1.5em 0;">
   <img src="fig_lec02_coords.svg" alt="Coordinate grid: straight grid in freely falling frame mapped to curved level sets in lab frame via dipole tidal field" style="max-width:100%; height:auto;">
@@ -546,22 +546,22 @@ surface’s curvature.</p>
 </div>
 </details>
 <!-- ═══ Interactive Gaussian bump geodesic figure ═══ -->
-<div class=”interactive-figure” id=”geodesic-widget”>
-<div class=”fig-header”>Interactive: Geodesics on a Gaussian bump — parallel paths deflected by curvature</div>
-<canvas id=”geo-canvas” style=”width:100%;aspect-ratio:1/1;display:block;cursor:crosshair;background:white”></canvas>
-<div class=”fig-controls” style=”padding:0.8em 1em;background:#fafafa;border-top:1px solid #eee;font-size:0.82em;display:flex;flex-wrap:wrap;gap:0.6em 1.5em;align-items:center”>
-  <label>Amplitude <em>A</em> <input type=”range” id=”g-amp” min=”0” max=”3” step=”0.05” value=”1.0” style=”width:100px;vertical-align:middle”> <span id=”g-amp-v” style=”font-variant-numeric:tabular-nums”>1.00</span></label>
-  <label>Width &sigma; <input type=”range” id=”g-sig” min=”0.3” max=”2.5” step=”0.05” value=”1.0” style=”width:100px;vertical-align:middle”> <span id=”g-sig-v” style=”font-variant-numeric:tabular-nums”>1.00</span></label>
-  <label>Rays <input type=”range” id=”g-n” min=”1” max=”21” step=”2” value=”9” style=”width:80px;vertical-align:middle”> <span id=”g-n-v”>9</span></label>
-  <label>Spread <input type=”range” id=”g-sp” min=”0.2” max=”2.5” step=”0.05” value=”1.2” style=”width:80px;vertical-align:middle”> <span id=”g-sp-v” style=”font-variant-numeric:tabular-nums”>1.20</span></label>
-  <label style=”font-size:0.9em”><input type=”checkbox” id=”g-str” checked style=”vertical-align:middle”> Undeflected</label>
+<div class="interactive-figure" id="geodesic-widget">
+<div class="fig-header">Interactive: Geodesics on a Gaussian bump — parallel paths deflected by curvature</div>
+<canvas id="geo-canvas" style="width:100%;aspect-ratio:1/1;display:block;cursor:crosshair;background:white"></canvas>
+<div class="fig-controls" style="padding:0.8em 1em;background:#fafafa;border-top:1px solid #eee;font-size:0.82em;display:flex;flex-wrap:wrap;gap:0.6em 1.5em;align-items:center">
+  <label>Amplitude <em>A</em> <input type="range" id="g-amp" min="0" max="3" step="0.05" value="1.0" style="width:100px;vertical-align:middle"> <span id="g-amp-v" style="font-variant-numeric:tabular-nums">1.00</span></label>
+  <label>Width &sigma; <input type="range" id="g-sig" min="0.3" max="2.5" step="0.05" value="1.0" style="width:100px;vertical-align:middle"> <span id="g-sig-v" style="font-variant-numeric:tabular-nums">1.00</span></label>
+  <label>Rays <input type="range" id="g-n" min="1" max="21" step="2" value="9" style="width:80px;vertical-align:middle"> <span id="g-n-v">9</span></label>
+  <label>Spread <input type="range" id="g-sp" min="0.2" max="2.5" step="0.05" value="1.2" style="width:80px;vertical-align:middle"> <span id="g-sp-v" style="font-variant-numeric:tabular-nums">1.20</span></label>
+  <label style="font-size:0.9em"><input type="checkbox" id="g-str" checked style="vertical-align:middle"> Undeflected</label>
 </div>
-<div style=”padding:0.4em 1em 0.6em;font-size:0.75em;color:#888;font-variant-numeric:tabular-nums” id=”g-stats”></div>
+<div style="padding:0.4em 1em 0.6em;font-size:0.75em;color:#888;font-variant-numeric:tabular-nums" id="g-stats"></div>
 </div>
-<p style=”font-size:0.9em;text-align:center;margin-top:0.3em;color:#666”>
+<p style="font-size:0.9em;text-align:center;margin-top:0.3em;color:#666">
   <em>Initially parallel geodesics on a Gaussian-bump surface \(z = e^{-(x^2+y^2)/2}\) —
   curvature causes the paths to converge, cross, and diverge (geodesic deviation).
-  <a href=”geodesic-bump.html”>Open full interactive version</a> with more controls.</em>
+  <a href="geodesic-bump.html">Open full interactive version</a> with more controls.</em>
 </p>
 
 <script>
@@ -773,14 +773,14 @@ thinking.</p>
 <summary>Key result</summary>
 <div class="box-body">
 <p>All matter in the universe should contribute to the local definition
-of “non-accelerating” and “non-rotating.” In a universe devoid of
+of "non-accelerating" and "non-rotating." In a universe devoid of
 matter, these concepts should have no meaning.</p>
 </div>
 </details>
 <p>This is a deep statement: the very notions of acceleration and
 rotation are not absolute but are determined by the matter content of
 the universe. Without matter, there is nothing with respect to which one
-could be “accelerating” or “rotating.”</p>
+could be "accelerating" or "rotating."</p>
 <h2 id="general-relativity-the-synthesis">General relativity: the
 synthesis</h2>
 <p>General relativity is the following statement:</p>
@@ -799,7 +799,7 @@ curvature is determined by the distribution of stress-energy and
 momentum, and vice versa.</p>
 </div>
 </details>
-<p>The “vice versa” is crucial: stress-energy tells spacetime how to
+<p>The "vice versa" is crucial: stress-energy tells spacetime how to
 curve, and curvature tells matter how to move. This self-referential,
 nonlinear interplay between geometry and matter is what makes general
 relativity so remarkable. The extraordinary—one might say almost
