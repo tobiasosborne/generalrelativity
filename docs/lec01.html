@@ -784,14 +784,14 @@ class="math inline">\(\nabla\cdot\boldsymbol{E} =
 \rho_e/\varepsilon_0\)</span></td>
 <td style="text-align: center;"><span
 class="math inline">\(\nabla\cdot\boldsymbol{g} =
--4\piG\rho\)</span></td>
+-4\pi G\rho\)</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Poisson equation</td>
 <td style="text-align: center;"><span class="math inline">\(\Delta V =
 -\rho_e/\varepsilon_0\)</span></td>
 <td style="text-align: center;"><span class="math inline">\(\Delta\phi =
-4\piG\rho\)</span></td>
+4\pi G\rho\)</td>
 </tr>
 </tbody>
 </table>
@@ -819,7 +819,7 @@ class="math display">\[\boldsymbol{g}: \mathbb{R}\times\mathbb{R}^{3}
 class="math display">\[\rho: \mathbb{R}\times\mathbb{R}^{3} \to
 \mathbb{R}^+\,,\]</span> and the field equation reads <span
 class="math display">\[\label{eq:gauss-grav}
-  \boxed{\nabla\cdot\boldsymbol{g} = -4\piG\,\rho\,.}\]</span></p>
+  \boxed{\nabla\cdot\boldsymbol{g} = -4\pi G\,\rho\,.}\]</span></p>
 <h3 id="gravitational-potential">Gravitational potential</h3>
 <p>Since <span class="math inline">\(\nabla\times\boldsymbol{g} =
 0\)</span>, the field <span
@@ -833,7 +833,7 @@ class="math display">\[\label{eq:g-from-phi}
 href="#eq:gauss-grav" data-reference-type="eqref"
 data-reference="eq:gauss-grav">[eq:gauss-grav]</a>: <span
 class="math display">\[\label{eq:poisson}
-  \boxed{\Delta\phi = 4\piG\,\rho}
+  \boxed{\Delta\phi = 4\pi G\,\rho}
   \qquad\text{(Poisson&#39;s equation).}\]</span></p>
 <h3 id="equation-of-motion-for-test-masses">Equation of motion for test
 masses</h3>
@@ -955,49 +955,21 @@ class="math inline">\(L_3\)</span> are saddle points (unstable), while
 class="math inline">\(L_5\)</span> form equilateral triangles with the
 two masses and are linearly stable for <span class="math inline">\(\mu
 &lt; \mu_{\mathrm{crit}} \approx 0.0385\)</span>.</p>
-<div class="center">
-<svg viewBox="0 0 400 350" xmlns="http://www.w3.org/2000/svg" style="max-width:380px; margin:1em auto; display:block;">
-  <defs>
-    <radialGradient id="pot" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#A8D5BA" stop-opacity="0.5"/>
-      <stop offset="100%" stop-color="white" stop-opacity="0"/>
-    </radialGradient>
-  </defs>
-  <!-- Background potential hint -->
-  <circle cx="160" cy="175" r="140" fill="url(#pot)"/>
-  <circle cx="280" cy="175" r="60" fill="url(#pot)"/>
-  <!-- Masses -->
-  <circle cx="140" cy="175" r="10" fill="#3D7A55"/>
-  <text x="140" y="205" text-anchor="middle" font-family="serif" font-style="italic" font-size="12" fill="#3D7A55">M&#x2081;</text>
-  <circle cx="280" cy="175" r="6" fill="#5B8C6F"/>
-  <text x="280" y="205" text-anchor="middle" font-family="serif" font-style="italic" font-size="12" fill="#3D7A55">M&#x2082;</text>
-  <!-- Centre of mass -->
-  <line x1="140" y1="175" x2="280" y2="175" stroke="#D4C9A8" stroke-width="1" stroke-dasharray="4,3"/>
-  <!-- Collinear Lagrange points -->
-  <circle cx="90" cy="175" r="4" fill="#C4392F"/>
-  <text x="90" y="163" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#C4392F" font-weight="600">L&#x2083;</text>
-  <circle cx="248" cy="175" r="4" fill="#C4392F"/>
-  <text x="248" y="163" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#C4392F" font-weight="600">L&#x2081;</text>
-  <circle cx="310" cy="175" r="4" fill="#C4392F"/>
-  <text x="310" y="163" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#C4392F" font-weight="600">L&#x2082;</text>
-  <!-- Triangular Lagrange points (equilateral triangles) -->
-  <circle cx="210" cy="54" r="5" fill="#4A7FB5"/>
-  <text x="225" y="50" font-family="system-ui,sans-serif" font-size="11" fill="#4A7FB5" font-weight="600">L&#x2084;</text>
-  <circle cx="210" cy="296" r="5" fill="#4A7FB5"/>
-  <text x="225" y="300" font-family="system-ui,sans-serif" font-size="11" fill="#4A7FB5" font-weight="600">L&#x2085;</text>
-  <!-- Equilateral triangle dashes -->
-  <line x1="140" y1="175" x2="210" y2="54" stroke="#4A7FB5" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.4"/>
-  <line x1="280" y1="175" x2="210" y2="54" stroke="#4A7FB5" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.4"/>
-  <line x1="140" y1="175" x2="210" y2="296" stroke="#4A7FB5" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.4"/>
-  <line x1="280" y1="175" x2="210" y2="296" stroke="#4A7FB5" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.4"/>
-  <!-- Tadpole orbit hint near L4 -->
-  <ellipse cx="210" cy="62" rx="25" ry="12" fill="none" stroke="#E8B630" stroke-width="1.5" transform="rotate(-15,210,62)" opacity="0.7"/>
-  <!-- Caption -->
-  <text x="200" y="340" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#8C8C84">
-    L&#x2081;,L&#x2082;,L&#x2083; unstable (saddle); L&#x2084;,L&#x2085; stable for &#x3BC; &lt; 0.0385 &#x2014; see PDF for full potential plot
-  </text>
-</svg>
-</div>
+<figure style="text-align:center; margin:1.5em 0;">
+  <img src="fig_lec01_potential.svg" alt="Pseudo-colour plot of the effective potential in the co-rotating frame (mu=0.01), with Lagrange points L1-L5 marked" style="max-width:100%; height:auto;">
+  <figcaption style="font-size:0.85em; color:var(--birrengray); margin-top:0.5em;">
+    Top: pseudo-colour plot of the effective potential
+    \(\Phi_{\mathrm{eff}}\) in the co-rotating frame (\(\mu = 0.01\)),
+    with the five Lagrange points marked.
+  </figcaption>
+</figure>
+<figure style="text-align:center; margin:1.5em 0;">
+  <img src="fig_lec01_tadpole.svg" alt="Tadpole orbit of a test particle near L4" style="max-width:60%; height:auto;">
+  <figcaption style="font-size:0.85em; color:var(--birrengray); margin-top:0.5em;">
+    Bottom: tadpole orbit of a test particle released near \(L_4\)
+    with a small perturbation, exhibiting the characteristic epicyclic motion.
+  </figcaption>
+</figure>
 
 <script>
 // Re-typeset MathJax when a details element is opened

@@ -100,7 +100,7 @@ def preprocess(tex: str) -> str:
     tex = re.sub(r'\\ddt\{([^}]*)\}', lambda m: '\\ddot{' + m.group(1) + '}', tex)
     tex = re.sub(r'\\dalem\b', '\\\\Box', tex)
     tex = re.sub(r'\\lap\b', '\\\\Delta', tex)
-    tex = re.sub(r'\\grav\b', 'G', tex)
+    tex = re.sub(r'\\grav\b', '{G}', tex)
 
     # Convert \\eqbox{...} to \\boxed{...} (nested-brace-safe)
     tex = re.sub(r'\\eqbox\{' + nb + r'\}', lambda m: '\\boxed{' + m.group(1) + '}', tex)
