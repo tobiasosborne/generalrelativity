@@ -18,6 +18,7 @@ latex/*.pdf
 *~
 *.swp
 *.swo
+.claude/
 
 # Template file (not part of GR project)
 latex/TheoretischePhysikC.tex

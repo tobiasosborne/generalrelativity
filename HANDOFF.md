@@ -17,6 +17,7 @@ Public: https://github.com/tobiasosborne/generalrelativity (Apache 2.0)
 - **Addendum A1 adversarially verified** (2026-03-19): 3 rounds of adversarial proof verification using `af` CLI (21 subagents: 7 verifiers + 6 provers + 6 R2-verifiers + 2 R2-provers + 2 R3-verifiers). 41 challenges filed, all blocking issues resolved. 7/9 proof nodes validated. See `proofs/lecA1/` for full ledger.
 - **Lecture 1 ground-truth verified** (2026-04-02): All precision values and formulas in the equivalence-principle discussion cross-checked against 5 source papers (Eötvös 1922, Roll-Dicke 1964, Williams LLR 2012, MICROSCOPE 2022, Adelberger 2009). MICROSCOPE dates corrected (2016–2018), Eötvös parameter formulation tightened, citations added. Papers stored in `literature/equiv-principle/` (gitignored).
 - **Web version expanded** (2026-04-09): Lecture 2 web page created. Lagrange-point figure in lec01 replaced with TikZ-compiled SVGs from simulation data (was hand-drawn schematic). Coordinate-grid figure in lec02 now data-driven (Julia script computing dipole tidal field level sets via Newton's method, replacing spline approximations). Interactive geodesic demo moved from lec03 to lec02 (where the geodesic equation is derived). `\piG` rendering bug fixed in preprocessor (`\grav` → `{G}` instead of bare `G`). Smart-quote bug diagnosed via Playwright (pandoc converted `"` to `"..."` in widget HTML attributes, breaking `getElementById`).
+- **Lecture 3+4 chart diagrams rebuilt from equations** (2026-04-15): six hallucinated-spline TikZ blobs in `lec03.tex` (Def 3.2 single-chart, transition map, smooth map) and `lec04.tex` (coord basis, tangent basis, curve) replaced by data-driven pgfplots figures. All geometry is derived from the graph surface $z = 0.5\cos(0.9x)+0.35\sin(0.6y)$ and two rotated-ellipse chart images; transition map is a rigid 30° rotation; tangent basis vectors are the literal Jacobian columns $\partial_u\Phi, \partial_v\Phi$; curve is $C(t)=(t,\,0.7\sin 0.9t,\,h)$ with $T=dC/dt|_{t=0}$. Pipeline: `scripts/sim_lec03_charts.jl` → `latex/data/lec03_charts_*.dat` → `latex/figures/fig_lec0{3,4}_*.tex`. Also: `grsurface` colormap switched from gradient to flat `light-gray` (#D4C9A8) for a uniform manifold tint.
 
 ## Lecture contents
 
@@ -100,10 +101,16 @@ latex/
   notes/
     note_da_covariant_derivative.tex
   figures/
-    fig_lec01_lagrange.tex    # Effective potential + L4 tadpole orbit
-    fig_lec01_mass_ratio.tex  # Orbits with varying m_g/m_I (UFF violation)
-    fig_lec02_geodesic_bump.tex  # 9 parallel geodesics on Gaussian bump (3D + top-down)
-    fig_lec03_ellipsoid.tex   # Ellipsoid geodesics + parallel transport
+    fig_lec01_lagrange.tex         # Effective potential + L4 tadpole orbit
+    fig_lec01_mass_ratio.tex       # Orbits with varying m_g/m_I (UFF violation)
+    fig_lec02_geodesic_bump.tex    # 9 parallel geodesics on Gaussian bump (3D + top-down)
+    fig_lec03_chart_single.tex     # Def 3.2 single chart ψ_α : O_α → U_α
+    fig_lec03_chart_overlap.tex    # Def 3.2 transition map ψ_β ∘ ψ_α⁻¹
+    fig_lec03_smoothmap.tex        # Smooth map f : M → M' + composite f̂
+    fig_lec03_ellipsoid.tex        # Ellipsoid geodesics + parallel transport
+    fig_lec04_coord_basis.tex      # f : M → R, ψ : M → U, composite f ∘ ψ⁻¹
+    fig_lec04_tangent_basis.tex    # ∂/∂x^μ|_p as Jacobian columns at p ∈ M
+    fig_lec04_curve.tex            # Smooth curve C : R → M with tangent T
   data/                       # Julia-generated .dat files (gitignored, regenerable)
 scripts/
   sim_lec01.jl                # CR3BP: effective potential, Lagrange points, trajectory
@@ -111,6 +118,8 @@ scripts/
   sim_lec02.jl                # Parallel geodesics on Gaussian bump: metric, Christoffels, ODE
   sim_lec02_coords.jl         # Coordinate-grid level sets: dipole tidal field, Newton solve
   sim_lec03.jl                # Ellipsoid geodesics + parallel transport
+  sim_lec03_charts.jl         # Wavy-surface chart diagrams for lec03/04 (Def 3.2, smooth
+                              #   maps, coord basis, tangent vectors, smooth curve)
   fetch_equiv_papers.mjs      # Playwright downloader for equiv-principle papers (TIB network)
   tikz-preview.sh             # Standalone TikZ snippet → PNG preview
   Project.toml                # Julia env (DifferentialEquations, StaticArrays)

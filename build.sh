@@ -75,7 +75,7 @@ run_simulations() {
     info "Installing Julia dependencies..."
     julia --project="$SCRIPTS_DIR" -e 'using Pkg; Pkg.instantiate()' 2>&1
 
-    local scripts=("sim_lec01.jl" "sim_lec02.jl" "sim_lec03.jl")
+    local scripts=("sim_lec01.jl" "sim_lec01_mass_ratio.jl" "sim_lec02.jl" "sim_lec03.jl" "sim_lec03_charts.jl")
     for script in "${scripts[@]}"; do
         if [[ -f "$SCRIPTS_DIR/$script" ]]; then
             info "Running $script..."
