@@ -82,6 +82,25 @@ Note that $(\vb{v}\cdot\nabla)_p$ satisfies two properties:
   scalar multiplication of the maps $v$).
 \end{exercise}
 
+\begin{lemma}[Locality of tangent vectors]\label{lem:locality}
+  If $v\in V_p$ and $f,g\in\mathscr{F}(\M)$ agree on some neighbourhood
+  of $p$, then $v(f) = v(g)$.
+\end{lemma}
+
+\begin{proof}
+  Let $h = f-g$; by assumption $h$ vanishes on some neighbourhood
+  $U$ of~$p$.  By paracompactness (axiom~(0) of
+  Def.~\ref{def:manifold}) there exists a bump function
+  $\phi\in\mathscr{F}(\M)$ with $\phi(p) = 0$ and $\phi\equiv 1$ on
+  $\M\setminus U$.  Then $h = \phi h$ pointwise, so by the Leibniz rule
+  $v(h) = \phi(p)\,v(h) + h(p)\,v(\phi) = 0$.
+\end{proof}
+
+In particular, a tangent vector depends only on the \emph{germ} of its
+argument at $p$, so we may freely apply $v$ to a function defined only
+on a neighbourhood of $p$ by smoothly extending it to all of $\M$
+(any two such extensions give the same value).
+
 Have we created a monster?  By demanding only linearity and the
 Leibniz rule, we might inadvertently have produced a huge---even
 infinite-dimensional---vector space that has nothing to do with
@@ -112,14 +131,25 @@ $f\circ\psi^{-1}\colon U\to\R$ is $C^\infty$.
 \noindent\textbf{Claim.} The $X_\mu$ so defined are tangent vectors
 (i.e.\ elements of $V_p$).
 
+\smallskip\noindent\textit{Verification.}\;
+Linearity of $X_\mu$ is inherited from that of $\partial/\partial x^\mu$.
+For the Leibniz rule, use
+$(fg)\circ\psi^{-1} = (f\circ\psi^{-1})\,(g\circ\psi^{-1})$
+together with the ordinary product rule in $\Rn{n}$:
+\[
+  X_\mu(fg)
+    = \pd{\bigl((f\circ\psi^{-1})(g\circ\psi^{-1})\bigr)}{x^\mu}\bigg|_{\psi(p)}
+    = f(p)\,X_\mu(g) + g(p)\,X_\mu(f)\,.
+\]
+
 \begin{proof}[Proof that $\{X_\mu\}$ is a basis for $V_p$]
   We use the following lemma.
 
   \smallskip\noindent
   \textbf{Lemma.}\;
-  Suppose $F\colon\Rn{n}\to\R$ is $C^\infty$.  Then for all
-  $\vb{a} = (a^1,\dots,a^n)\in\Rn{n}$, there exist $C^\infty$
-  functions $H_\mu\colon\Rn{n}\to\R$ such that
+  Let $V\subset\Rn{n}$ be a \emph{convex} open neighbourhood of
+  $\vb{a} = (a^1,\dots,a^n)$, and let $F\colon V\to\R$ be $C^\infty$.
+  Then there exist $C^\infty$ functions $H_\mu\colon V\to\R$ such that
   \begin{equation}\label{eq:taylor-lemma}
     F(\vb{x}) = F(\vb{a})
       + \sum_{\mu=1}^{n}(x^\mu - a^\mu)\,H_\mu(\vb{x})\,,
@@ -128,11 +158,14 @@ $f\circ\psi^{-1}\colon U\to\R$ is $C^\infty$.
   \(
     H_\mu(\vb{a}) = \dfrac{\partial F}{\partial x^\mu}\Big|_{\vb{x}=\vb{a}}
   \).
-  (See the homework for a proof.)
+  (Convexity ensures
+  $H_\mu(\vb{x}) = \int_0^1 (\partial F/\partial x^\mu)(\vb{a}+t(\vb{x}-\vb{a}))\,dt$
+  is well-defined; see the homework.)
 
   \smallskip
-  Let $F = f\circ\psi^{-1}$ and $\vb{a} = \psi(p)$.  Then
-  by~\eqref{eq:taylor-lemma}, for all $q\in O$,
+  Let $F = f\circ\psi^{-1}$ and $\vb{a} = \psi(p)$, and fix a convex open
+  neighbourhood $V\subset U_\alpha$ of $\vb{a}$ (e.g.\ an open ball).
+  Then by~\eqref{eq:taylor-lemma}, for all $q\in\psi^{-1}(V)\subset O$,
   \begin{equation}\label{eq:taylor-on-M}
     f(q) = f(p)
       + \sum_{\mu=1}^{n}
@@ -140,7 +173,10 @@ $f\circ\psi^{-1}\colon U\to\R$ is $C^\infty$.
         H_\mu(\psi(q))\,.
   \end{equation}
 
-  Now suppose $v\in V_p$.  Apply $v$ to $f$:
+  The functions $x^\mu\circ\psi$ and $H_\mu\circ\psi$ on $\psi^{-1}(V)$
+  are extended smoothly to all of $\M$ via a bump function; by
+  Lemma~\ref{lem:locality}, $v$ gives the same value on any such
+  extension.  Now suppose $v\in V_p$.  Apply $v$ to $f$:
   \begin{align}
     v(f)
       &\stackrel{\eqref{eq:taylor-on-M}}{=}
@@ -225,7 +261,8 @@ For $f\in\mathscr{F}(\M)$:
       \,\td{x^\mu}{t}
     = \sum_{\mu} \td{x^\mu}{t}\, X_\mu(f)\,,
 \end{equation}
-where $x^\mu = x^\mu(\psi\circ C) \equiv x^\mu(t)$.
+where $x^\mu(t) \equiv (x^\mu\circ\psi\circ C)(t)$ denotes the
+$\mu$-th component of $\psi(C(t))\in\Rn{n}$.
 
 This expansion works for \emph{any} coordinate basis.  The components
 of $T$ in the basis $\{X_\mu\}$ are

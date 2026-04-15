@@ -64,8 +64,9 @@ of different dimensions, so it is wise not to hard-code $n=4$.
   \item A subset $U\subseteq\Rn{n}$ is \emph{open} if
     for every $\vb{x}\in U$ there exists $\varepsilon > 0$ such that
     $B_\varepsilon(\vb{x})\subset U$.
-  \item $C^n$ denotes the set of $n$-times differentiable functions
-    (from $\Rn{n}$ to $\R$, or between open subsets thereof).
+  \item $C^k$ denotes the set of $k$-times continuously differentiable
+    functions (from $\Rn{n}$ to $\R$, or between open subsets thereof):
+    all partial derivatives of order $\le k$ exist and are continuous.
   \item $C^0 = {}$continuous functions,\quad
     $C^\infty = {}$smooth (infinitely differentiable) functions.
 \end{itemize}
@@ -78,15 +79,15 @@ of different dimensions, so it is wise not to hard-code $n=4$.
   together with a collection $\{O_\alpha\}$ of subsets satisfying:
   \begin{enumerate}
     \item[\textup{(0)}] $\M$ is a topological space (Hausdorff and
-      paracompact).\footnote{The Hausdorff and paracompact conditions
-      exclude pathological examples; they ensure, e.g., the existence
-      of partitions of unity.}
+      second-countable).\footnote{The Hausdorff and second-countability
+      conditions exclude pathological examples; together they imply
+      paracompactness and hence the existence of partitions of unity.}
     \item[\textup{(1)}] The subsets $\{O_\alpha\}$ \textbf{cover} $\M$,
       i.e.\ $\bigcup_\alpha O_\alpha = \M$.
       Equivalently: for every $p\in\M$ there exists at least one
       $\alpha$ with $p\in O_\alpha$.
-    \item[\textup{(2)}] For each $\alpha$ there is a \textbf{one-to-one
-      and onto} map
+    \item[\textup{(2)}] For each $\alpha$ there is a
+      \textbf{homeomorphism}
       \[
         \psi_\alpha \colon O_\alpha \to U_\alpha\,,
         \qquad U_\alpha \subset \Rn{n}\;\text{(open)}\,,
@@ -185,7 +186,8 @@ determined by the choice of $O_k^\pm$).
 \noindent\textbf{Special case: $S^2$.}\quad
 Consider the charts $\psi_x^+$ (drop $x$, restricted to $x>0$)
 and $\psi_y^-$ (drop $y$, restricted to $y<0$).
-On the overlap, the transition function is
+On the overlap $\{(y,z)\in\Rn{2} \mid y<0,\; y^2+z^2<1\}$, the
+transition function is
 \[
   (\psi_y^-\circ(\psi_x^+)^{-1})(y,z)
     = \bigl(\sqrt{1-y^2-z^2},\; z\bigr).
