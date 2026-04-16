@@ -59,6 +59,23 @@ def preprocess(tex: str) -> str:
         return f'\n\n\\textit{{[Figure: {caption}]}}\n\n'
     tex = re.sub(r'\\begin\{figure\}.*?\\end\{figure\}', figure_replacer, tex, flags=re.DOTALL)
 
+    # Bare \input{figures/NAME} (outside a figure env): emit a marker that
+    # gets picked up by the post-processor and swapped for an <img> tag.
+    # Extension (.svg or .png) is resolved by postprocess.py from docs/.
+    tex = re.sub(
+        r'\\input\{figures/([a-zA-Z0-9_]+)\}',
+        r'\n\n\\par\\noindent\\textit{GRWEBFIGURE:\1}\\par\n\n',
+        tex
+    )
+
+    # %%WEB-WIDGET:name directive → marker for postprocess.py.
+    # Invisible to the LaTeX build (plain comment).
+    tex = re.sub(
+        r'%%WEB-WIDGET:([a-z0-9_-]+)',
+        r'\n\n\\par\\noindent\\textit{GRWEBWIDGET:\1}\\par\n\n',
+        tex
+    )
+
     # Expand custom macros that pandoc's LaTeX math parser can't handle.
     # MathJax would handle them, but pandoc chokes on them before MathJax
     # gets a chance.  Expand to standard LaTeX equivalents.
@@ -86,11 +103,11 @@ def preprocess(tex: str) -> str:
         # Find matching brace from position after \norm{
         return '\\lVert ' + m.group(1) + ' \\rVert'
     tex = re.sub(r'\\norm\{((?:[^{}]|\{[^{}]*\})*)\}', expand_norm, tex)
-    tex = re.sub(r'\\pd\[([^\]]*)\]\{([^}]*)\}\{([^}]*)\}',
+    tex = re.sub(r'\\pd\[([^\]]*)\]\{' + nb + r'\}\{' + nb + r'\}',
                  lambda m: '\\frac{\\partial^{' + m.group(1) + '} ' + m.group(2) + '}{\\partial {' + m.group(3) + '}^{' + m.group(1) + '}}', tex)
-    tex = re.sub(r'\\pd\{([^}]*)\}\{([^}]*)\}',
+    tex = re.sub(r'\\pd\{' + nb + r'\}\{' + nb + r'\}',
                  lambda m: '\\frac{\\partial ' + m.group(1) + '}{\\partial ' + m.group(2) + '}', tex)
-    tex = re.sub(r'\\td\{([^}]*)\}\{([^}]*)\}',
+    tex = re.sub(r'\\td\{' + nb + r'\}\{' + nb + r'\}',
                  lambda m: '\\frac{d ' + m.group(1) + '}{d ' + m.group(2) + '}', tex)
     tex = re.sub(r'\\dd\b', '\\\\mathrm{d}', tex)
     tex = re.sub(r'\\tp\b', '\\\\otimes', tex)

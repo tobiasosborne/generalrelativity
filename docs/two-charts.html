@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Interactive: Two Intersecting Charts on a Manifold</title>
+<style>
+:root {
+  --spacecadet: #3D7A55;
+  --munsell: #5B8C6F;
+  --banana: #E8B630;
+  --cgblue: #4A7FB5;
+  --isabelline: #A8D5BA;
+  --birrenred: #C4392F;
+  --birrenorange: #D97A2B;
+  --birrengray: #8C8C84;
+  --lightgray: #D4C9A8;
+}
+* { box-sizing: border-box; }
+body {
+  max-width: 60em; margin: 0 auto; padding: 1em 1.5em;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: var(--spacecadet); background: #fcfcfc;
+}
+h1 { color: var(--munsell); font-size: 1.5em; text-align: center; margin-bottom: 0.2em; }
+.subtitle { text-align: center; color: #666; font-size: 0.95em; margin-bottom: 1.5em; }
+nav.top-nav {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 0.5em 0; border-bottom: 1px solid var(--isabelline);
+  margin-bottom: 1em; font-size: 0.85em;
+}
+nav.top-nav a { text-decoration: none; color: var(--munsell); }
+
+canvas {
+  display: block; width: 100%; border: 1px solid #ddd;
+  border-radius: 8px; background: white; cursor: grab;
+  touch-action: none;
+}
+canvas.grabbing { cursor: grabbing; }
+
+.status {
+  display: flex; flex-wrap: wrap; gap: 0.8em 1.6em;
+  margin-top: 0.8em; padding: 0.7em 1em;
+  background: #fafafa; border: 1px solid #eee; border-radius: 6px;
+  font-size: 0.88em; font-variant-numeric: tabular-nums;
+}
+.status .tag {
+  display: inline-flex; align-items: center; gap: 0.4em;
+  padding: 2px 8px; border-radius: 4px; font-size: 0.82em;
+}
+.status .tag.in  { background: rgba(61,122,85,0.15); color: var(--spacecadet); }
+.status .tag.out { background: #f0f0f0; color: #888; }
+.status .dot {
+  display: inline-block; width: 10px; height: 10px; border-radius: 50%;
+}
+
+.info-box {
+  margin-top: 1.5em; padding: 1em;
+  background: rgba(91,140,111,0.08); border-left: 4px solid var(--munsell);
+  border-radius: 6px; font-size: 0.92em; line-height: 1.55;
+  font-family: Georgia, serif;
+}
+.info-box strong { color: var(--munsell); }
+.info-box code { background: #fff; padding: 1px 5px; border-radius: 3px; font-size: 0.92em; }
+
+footer { margin-top: 2em; padding-top: 1em; border-top: 1px solid #ddd; font-size: 0.8em; color: #888; text-align: center; }
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <a href="index.html">← All Lectures</a>
+  <span><strong>Two intersecting charts</strong></span>
+  <span></span>
+</nav>
+
+<h1>Two Intersecting Charts on a Manifold</h1>
+<p class="subtitle">
+  Drag the gold point around the manifold and watch it appear in and disappear from each chart.
+</p>
+
+<canvas id="tc-canvas" style="aspect-ratio: 2.4 / 1;"></canvas>
+
+<div class="status">
+  <span>Point <strong>p</strong> position on ℳ: <span id="tc-p-xy">(0.00, 0.00)</span></span>
+  <span class="tag" id="tc-tag-alpha"><span class="dot" style="background:var(--cgblue)"></span> O<sub>α</sub></span>
+  <span class="tag" id="tc-tag-beta"><span class="dot" style="background:var(--munsell)"></span> O<sub>β</sub></span>
+  <span class="tag" id="tc-tag-both"><span class="dot" style="background:var(--birrenred)"></span> O<sub>α</sub>∩O<sub>β</sub></span>
+</div>
+
+<div class="info-box">
+  <p><strong>What to try.</strong> Drag the gold point <em>p</em> inside the blue region, then into the green region, then into the overlap, then outside both.</p>
+  <ul>
+    <li>When <em>p</em> is in O<sub>α</sub> (blue), the chart ψ<sub>α</sub>(p) appears in the left ℝ² panel.</li>
+    <li>When <em>p</em> is in O<sub>β</sub> (green), the chart ψ<sub>β</sub>(p) appears in the right ℝ² panel.</li>
+    <li>In the overlap O<sub>α</sub>∩O<sub>β</sub> (red), both charts describe the same point with <em>different</em> coordinates — that is what the transition map ψ<sub>β</sub>∘ψ<sub>α</sub><sup>−1</sup> relates.</li>
+    <li>Outside both open sets, <em>p</em> still lives on the manifold but has no chart representation here: the maps ψ<sub>α</sub>, ψ<sub>β</sub> are undefined there. A proper atlas would supply additional charts covering the remaining regions.</li>
+  </ul>
+</div>
+
+<footer>
+  <a href="index.html">Back to index</a> ·
+  Source: <a href="https://github.com/tobiasosborne/generalrelativity">github.com/tobiasosborne/generalrelativity</a>
+</footer>
+
+<script>
+(function(){
+  const cv = document.getElementById('tc-canvas');
+  const cx = cv.getContext('2d');
+
+  // ── Geometry (mirrors the lec03 PDF figure) ──────────────────
+  // Open sets on M (⊂ ℝ² for this visualisation).  O_α and O_β are ellipses;
+  // their intersection is automatically convex, so membership tests are simple.
+  const α = { cx:-0.30, cy: 0.15, a: 1.10, b: 0.75, phi:  0.35 };
+  const β = { cx: 0.55, cy:-0.20, a: 1.10, b: 0.75, phi: -0.30 };
+  const θβ = Math.PI / 6;   // rotation applied by ψ_β
+  // Domain of M shown on screen
+  const DOM = { xmin:-2.6, xmax:2.6, ymin:-1.8, ymax:1.8 };
+  // Chart panels: each shows a square of side CHART_RANGE centred on origin
+  const CHART_RANGE = 2.8;
+
+  // Draggable point p
+  let p = { x: 0.10, y: 0.00 };
+  let dragging = false;
+
+  function inEllipse(pt, e) {
+    const c = Math.cos(e.phi), s = Math.sin(e.phi);
+    const dx = pt.x - e.cx, dy = pt.y - e.cy;
+    const u =  dx*c + dy*s;
+    const v = -dx*s + dy*c;
+    return (u*u)/(e.a*e.a) + (v*v)/(e.b*e.b) < 1;
+  }
+
+  // Chart α: translate so the ellipse centre → origin of U_α.
+  function ψα(pt) { return { x: pt.x - α.cx, y: pt.y - α.cy }; }
+  // Chart β: translate centre to origin, then rotate by θβ.
+  function ψβ(pt) {
+    const dx = pt.x - β.cx, dy = pt.y - β.cy;
+    const c = Math.cos(θβ), s = Math.sin(θβ);
+    return { x: c*dx - s*dy, y: s*dx + c*dy };
+  }
+
+  // Precompute the chart-image ellipses U_α, U_β (in each chart's own ℝ²).
+  // U_α = ψ_α(O_α): ellipse with the same shape, centred at origin.
+  const Uα = { cx:0, cy:0, a:α.a, b:α.b, phi:α.phi };
+  // U_β = ψ_β(O_β): ellipse with same shape, centred at origin, rotated extra θβ.
+  const Uβ = { cx:0, cy:0, a:β.a, b:β.b, phi:β.phi + θβ };
+
+  // ── Canvas setup ─────────────────────────────────────────────
+  function setup() {
+    const dpr = window.devicePixelRatio || 1;
+    const r = cv.getBoundingClientRect();
+    cv.width  = Math.round(r.width * dpr);
+    cv.height = Math.round(r.height * dpr);
+    cx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    return { w: r.width, h: r.height };
+  }
+
+  function layout(w, h) {
+    // Main manifold panel on the left (wider), two chart panels on the right.
+    const gap = 8;
+    const mw = Math.round(w * 0.52);
+    const cw = Math.round((w - mw - 2*gap) / 2);
+    return {
+      M:  { x: 0,           y: 0, w: mw, h: h },
+      Uα: { x: mw + gap,    y: 0, w: cw, h: h },
+      Uβ: { x: mw + gap + cw + gap, y: 0, w: cw, h: h },
+    };
+  }
+
+  // Coordinate-space → pixel helpers
+  function m2px(pt, panel) {
+    const xr = DOM.xmax - DOM.xmin, yr = DOM.ymax - DOM.ymin;
+    return [
+      panel.x + (pt.x - DOM.xmin) / xr * panel.w,
+      panel.y + (DOM.ymax - pt.y) / yr * panel.h,
+    ];
+  }
+  function c2px(pt, panel) {
+    // Chart panels: square, centred, with equal aspect.  Fit CHART_RANGE
+    // into min(panel.w, panel.h).
+    const side = Math.min(panel.w, panel.h);
+    const cxp = panel.x + panel.w/2, cyp = panel.y + panel.h/2;
+    const s = side / CHART_RANGE;
+    return [ cxp + pt.x * s, cyp - pt.y * s ];
+  }
+  function px2m(px, py, panel) {
+    const xr = DOM.xmax - DOM.xmin, yr = DOM.ymax - DOM.ymin;
+    return {
+      x: DOM.xmin + (px - panel.x) / panel.w * xr,
+      y: DOM.ymax - (py - panel.y) / panel.h * yr,
+    };
+  }
+
+  // ── Drawing primitives ───────────────────────────────────────
+  function fillEllipseM(e, panel, fill) {
+    const N = 96;
+    cx.beginPath();
+    for (let i = 0; i <= N; i++) {
+      const t = i/N * 2*Math.PI;
+      const xa = e.a*Math.cos(t), ya = e.b*Math.sin(t);
+      const c = Math.cos(e.phi), s = Math.sin(e.phi);
+      const wx = e.cx + xa*c - ya*s, wy = e.cy + xa*s + ya*c;
+      const [ux, uy] = m2px({x:wx, y:wy}, panel);
+      if (i === 0) cx.moveTo(ux, uy); else cx.lineTo(ux, uy);
+    }
+    cx.closePath();
+    cx.fillStyle = fill; cx.fill();
+  }
+
+  function fillEllipseChart(e, panel, fill) {
+    const N = 96;
+    cx.beginPath();
+    for (let i = 0; i <= N; i++) {
+      const t = i/N * 2*Math.PI;
+      const xa = e.a*Math.cos(t), ya = e.b*Math.sin(t);
+      const c = Math.cos(e.phi), s = Math.sin(e.phi);
+      const wx = e.cx + xa*c - ya*s, wy = e.cy + xa*s + ya*c;
+      const [ux, uy] = c2px({x:wx, y:wy}, panel);
+      if (i === 0) cx.moveTo(ux, uy); else cx.lineTo(ux, uy);
+    }
+    cx.closePath();
+    cx.fillStyle = fill; cx.fill();
+  }
+
+  // Rasterised intersection-of-two-ellipses: simple image approach (fast
+  // enough at this resolution, and correct for any convex shapes).
+  function fillIntersectionM(panel, fill) {
+    const step = 2;
+    cx.fillStyle = fill;
+    for (let py = panel.y; py < panel.y + panel.h; py += step) {
+      for (let px = panel.x; px < panel.x + panel.w; px += step) {
+        const m = px2m(px + step/2, py + step/2, panel);
+        if (inEllipse(m, α) && inEllipse(m, β)) {
+          cx.fillRect(px, py, step, step);
+        }
+      }
+    }
+  }
+
+  function drawPoint(pt, panel, colour, radius, inCanvas) {
+    const [ux, uy] = inCanvas === 'M' ? m2px(pt, panel) : c2px(pt, panel);
+    cx.fillStyle = colour; cx.strokeStyle = 'white'; cx.lineWidth = 2;
+    cx.beginPath(); cx.arc(ux, uy, radius, 0, 2*Math.PI);
+    cx.fill(); cx.stroke();
+  }
+
+  function drawPanelFrame(panel, label, labelColour) {
+    cx.strokeStyle = '#e4e4e4'; cx.lineWidth = 1;
+    cx.strokeRect(panel.x+0.5, panel.y+0.5, panel.w-1, panel.h-1);
+    cx.fillStyle = labelColour || 'var(--birrengray)';
+    cx.font = '600 13px system-ui, sans-serif';
+    cx.textBaseline = 'top';
+    cx.fillText(label, panel.x + 10, panel.y + 8);
+  }
+
+  function drawChartAxes(panel) {
+    // light crosshair at origin of chart coords
+    const [cxp, cyp] = c2px({x:0,y:0}, panel);
+    const side = Math.min(panel.w, panel.h);
+    cx.strokeStyle = 'rgba(217,122,43,0.35)';
+    cx.lineWidth = 1;
+    cx.beginPath();
+    cx.moveTo(panel.x + panel.w/2 - side/2 + 18, cyp);
+    cx.lineTo(panel.x + panel.w/2 + side/2 - 18, cyp);
+    cx.moveTo(cxp, panel.y + panel.h/2 - side/2 + 18);
+    cx.lineTo(cxp, panel.y + panel.h/2 + side/2 - 18);
+    cx.stroke();
+    // arrowheads
+    const ax = panel.x + panel.w/2 + side/2 - 18;
+    const ay = panel.y + panel.h/2 - side/2 + 18;
+    cx.beginPath();
+    cx.moveTo(ax, cyp); cx.lineTo(ax-6, cyp-4); cx.moveTo(ax, cyp); cx.lineTo(ax-6, cyp+4);
+    cx.moveTo(cxp, ay); cx.lineTo(cxp-4, ay+6); cx.moveTo(cxp, ay); cx.lineTo(cxp+4, ay+6);
+    cx.stroke();
+  }
+
+  function drawLabel(text, x, y, colour, font, align) {
+    cx.fillStyle = colour;
+    cx.font = font || '13px system-ui, sans-serif';
+    cx.textAlign = align || 'left';
+    cx.textBaseline = 'middle';
+    cx.fillText(text, x, y);
+    cx.textAlign = 'start';
+  }
+
+  function drawArrow(x1,y1,x2,y2,colour,label) {
+    cx.strokeStyle = colour; cx.fillStyle = colour; cx.lineWidth = 1.5;
+    cx.beginPath(); cx.moveTo(x1,y1); cx.lineTo(x2,y2); cx.stroke();
+    const ang = Math.atan2(y2-y1, x2-x1);
+    const ah = 8;
+    cx.beginPath();
+    cx.moveTo(x2, y2);
+    cx.lineTo(x2 - ah*Math.cos(ang-0.3), y2 - ah*Math.sin(ang-0.3));
+    cx.lineTo(x2 - ah*Math.cos(ang+0.3), y2 - ah*Math.sin(ang+0.3));
+    cx.closePath(); cx.fill();
+    if (label) {
+      cx.font = '600 12px system-ui, sans-serif';
+      cx.textAlign = 'center'; cx.textBaseline = 'bottom';
+      cx.fillText(label, (x1+x2)/2, Math.min(y1,y2) - 4);
+      cx.textAlign = 'start';
+    }
+  }
+
+  // ── Main render ──────────────────────────────────────────────
+  function render() {
+    const { w, h } = setup();
+    const L = layout(w, h);
+    cx.clearRect(0, 0, w, h);
+
+    // Background for M
+    cx.fillStyle = '#f7fbf9';
+    cx.fillRect(L.M.x, L.M.y, L.M.w, L.M.h);
+    // Subtle grid on M
+    cx.strokeStyle = 'rgba(0,0,0,0.05)'; cx.lineWidth = 1;
+    for (let xv = Math.ceil(DOM.xmin); xv <= DOM.xmax; xv++) {
+      const [px,] = m2px({x:xv, y:0}, L.M);
+      cx.beginPath(); cx.moveTo(px, L.M.y); cx.lineTo(px, L.M.y + L.M.h); cx.stroke();
+    }
+    for (let yv = Math.ceil(DOM.ymin); yv <= DOM.ymax; yv++) {
+      const [,py] = m2px({x:0, y:yv}, L.M);
+      cx.beginPath(); cx.moveTo(L.M.x, py); cx.lineTo(L.M.x + L.M.w, py); cx.stroke();
+    }
+
+    // Two open sets + their intersection
+    fillEllipseM(α, L.M, 'rgba(74,127,181,0.25)');
+    fillEllipseM(β, L.M, 'rgba(91,140,111,0.30)');
+    fillIntersectionM(L.M, 'rgba(196,57,47,0.55)');
+
+    // Panel frames / labels
+    drawPanelFrame(L.M,  'ℳ  (the manifold)', 'var(--spacecadet)');
+    drawLabel('O_α',        L.M.x +  90, L.M.y + 60, '#2c4c77', 'italic 14px Georgia, serif');
+    drawLabel('O_β',        L.M.x + L.M.w - 100, L.M.y + L.M.h - 60, '#365a46', 'italic 14px Georgia, serif');
+    drawLabel('O_α ∩ O_β',  L.M.x + L.M.w/2 - 10, L.M.y + L.M.h/2 + 50, '#8a1e15', 'italic 13px Georgia, serif', 'center');
+
+    // Panel U_α
+    cx.fillStyle = '#fcfcfc';
+    cx.fillRect(L.Uα.x, L.Uα.y, L.Uα.w, L.Uα.h);
+    drawChartAxes(L.Uα);
+    fillEllipseChart(Uα, L.Uα, 'rgba(74,127,181,0.22)');
+    drawPanelFrame(L.Uα, 'U_α ⊂ ℝ²', '#2c4c77');
+    drawLabel('ψ_α', L.Uα.x + L.Uα.w/2, L.Uα.y + 28, '#2c4c77',
+              '600 12px system-ui, sans-serif', 'center');
+
+    // Panel U_β
+    cx.fillStyle = '#fcfcfc';
+    cx.fillRect(L.Uβ.x, L.Uβ.y, L.Uβ.w, L.Uβ.h);
+    drawChartAxes(L.Uβ);
+    fillEllipseChart(Uβ, L.Uβ, 'rgba(91,140,111,0.25)');
+    drawPanelFrame(L.Uβ, 'U_β ⊂ ℝ²', '#365a46');
+    drawLabel('ψ_β', L.Uβ.x + L.Uβ.w/2, L.Uβ.y + 28, '#365a46',
+              '600 12px system-ui, sans-serif', 'center');
+
+    // Point p on M (always drawn)
+    drawPoint(p, L.M, '#E8B630', 7, 'M');
+    // Small "p" label next to the point
+    const [ppx, ppy] = m2px(p, L.M);
+    drawLabel('p', ppx + 11, ppy - 11, '#8a7a00',
+              '700 14px Georgia, serif');
+
+    // Images in charts (only if in corresponding open set)
+    const inα = inEllipse(p, α);
+    const inβ = inEllipse(p, β);
+
+    if (inα) {
+      drawPoint(ψα(p), L.Uα, '#E8B630', 6, 'chart');
+      const [qx, qy] = c2px(ψα(p), L.Uα);
+      drawLabel('ψ_α(p)', qx + 10, qy - 10, '#8a7a00',
+                '600 12px Georgia, serif');
+    } else {
+      drawLabel('p ∉ O_α — chart undefined',
+                L.Uα.x + L.Uα.w/2, L.Uα.y + L.Uα.h - 18,
+                '#aaa', 'italic 12px Georgia, serif', 'center');
+    }
+
+    if (inβ) {
+      drawPoint(ψβ(p), L.Uβ, '#E8B630', 6, 'chart');
+      const [qx, qy] = c2px(ψβ(p), L.Uβ);
+      drawLabel('ψ_β(p)', qx + 10, qy - 10, '#8a7a00',
+                '600 12px Georgia, serif');
+    } else {
+      drawLabel('p ∉ O_β — chart undefined',
+                L.Uβ.x + L.Uβ.w/2, L.Uβ.y + L.Uβ.h - 18,
+                '#aaa', 'italic 12px Georgia, serif', 'center');
+    }
+
+    // Status panel update
+    document.getElementById('tc-p-xy').textContent =
+      `(${p.x.toFixed(2)}, ${p.y.toFixed(2)})`;
+    document.getElementById('tc-tag-alpha').className =
+      'tag ' + (inα ? 'in' : 'out');
+    document.getElementById('tc-tag-beta').className =
+      'tag ' + (inβ ? 'in' : 'out');
+    document.getElementById('tc-tag-both').className =
+      'tag ' + ((inα && inβ) ? 'in' : 'out');
+  }
+
+  // ── Drag handling ────────────────────────────────────────────
+  function eventToM(ev) {
+    const r = cv.getBoundingClientRect();
+    const px = ev.clientX - r.left;
+    const py = ev.clientY - r.top;
+    const L = layout(r.width, r.height);
+    // Only act on the M panel
+    if (px < L.M.x || px > L.M.x + L.M.w) return null;
+    return px2m(px, py, L.M);
+  }
+
+  function pointerDown(ev) {
+    const m = eventToM(ev);
+    if (!m) return;
+    dragging = true;
+    cv.classList.add('grabbing');
+    p = clampToM(m);
+    render();
+    ev.preventDefault();
+  }
+  function pointerMove(ev) {
+    if (!dragging) return;
+    const m = eventToM(ev);
+    if (!m) return;
+    p = clampToM(m);
+    render();
+  }
+  function pointerUp() {
+    dragging = false;
+    cv.classList.remove('grabbing');
+  }
+  function clampToM(pt) {
+    const pad = 0.05;
+    return {
+      x: Math.max(DOM.xmin+pad, Math.min(DOM.xmax-pad, pt.x)),
+      y: Math.max(DOM.ymin+pad, Math.min(DOM.ymax-pad, pt.y)),
+    };
+  }
+
+  cv.addEventListener('pointerdown', pointerDown);
+  window.addEventListener('pointermove', pointerMove);
+  window.addEventListener('pointerup', pointerUp);
+  window.addEventListener('resize', render);
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', render);
+  } else {
+    requestAnimationFrame(render);
+  }
+})();
+</script>
+
+</body>
+</html>

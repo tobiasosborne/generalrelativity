@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lecture 4: Tangent
+Space — Introduction to General Relativity</title>
+
+<!-- MathJax 3 with custom macros -->
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    displayMath: [['\\[','\\]'], ['$$','$$']],
+    macros: {
+      // Derivatives
+      pd: ['{\\frac{\\partial^{#1} #2}{\\partial {#3}^{#1}}}', 3, ''],
+      td: ['{\\frac{d #1}{d #2}}', 2],
+      dd: '{\\mathrm{d}}',
+      covd: '{\\nabla}',
+      Lie: '{\\mathcal{L}}',
+      dalem: '{\\Box}',
+      lap: '{\\Delta}',
+      // Vectors
+      vb: ['{\\boldsymbol{#1}}', 1],
+      uv: ['{\\hat{\\boldsymbol{#1}}}', 1],
+      dt: ['{\\dot{#1}}', 1],
+      ddt: ['{\\ddot{#1}}', 1],
+      norm: ['{\\lVert #1 \\rVert}', 1],
+      // Tensor calculus
+      chris: ['{\\Gamma^{#1}{}_{#2}}', 2],
+      Riem: '{R}',
+      Ric: '{R}',
+      Ein: '{G}',
+      Weyl: '{C}',
+      metric: '{g}',
+      ttype: ['{\\mathcal{T}(#1,#2)}', 2],
+      tp: '{\\otimes}',
+      // Spaces
+      M: '{\\mathcal{M}}',
+      Tp: '{T_p\\mathcal{M}}',
+      Tps: '{T_p^*\\mathcal{M}}',
+      R: '{\\mathbb{R}}',
+      Rn: ['{\\mathbb{R}^{#1}}', 1],
+      // Operators
+      supp: '{\\operatorname{supp}}',
+      tr: '{\\operatorname{tr}}',
+      id: '{\\operatorname{id}}',
+      diag: '{\\operatorname{diag}}',
+      sgn: '{\\operatorname{sgn}}',
+      grad: '{\\operatorname{grad}}',
+      Div: '{\\operatorname{div}}',
+      curl: '{\\operatorname{curl}}',
+      grav: '{G}',
+      textbf: ['{\\mathbf{#1}}', 1],
+    },
+    tags: 'ams',
+    tagSide: 'right',
+  },
+  options: {
+    renderActions: {
+      // Ensure equations render before details are opened
+      addMenu: [0, '', '']
+    }
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+
+<style>
+/* ── Base ─────────────────────────────────────── */
+:root {
+  --spacecadet: #3D7A55;
+  --munsell: #5B8C6F;
+  --banana: #E8B630;
+  --cgblue: #4A7FB5;
+  --isabelline: #A8D5BA;
+  --birrenred: #C4392F;
+  --birrenorange: #D97A2B;
+  --birrengray: #8C8C84;
+  --lightgray: #D4C9A8;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  max-width: 48em;
+  margin: 2em auto;
+  padding: 0 1.5em;
+  font-family: 'Times New Roman', 'Georgia', serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--spacecadet);
+  background: #fcfcfc;
+}
+
+h1, h2, h3, h4 {
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color: var(--munsell);
+}
+
+h1 { font-size: 1.8em; text-align: center; border-bottom: 2px solid var(--munsell); padding-bottom: 0.3em; }
+h2 { font-size: 1.35em; margin-top: 2em; }
+h3 { font-size: 1.15em; margin-top: 1.5em; }
+
+a { color: var(--munsell); }
+
+/* ── Nav ──────────────────────────────────────── */
+nav.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 0;
+  border-bottom: 1px solid var(--isabelline);
+  margin-bottom: 1.5em;
+  font-family: system-ui, sans-serif;
+  font-size: 0.85em;
+}
+nav.top-nav a { text-decoration: none; color: var(--munsell); }
+nav.top-nav a:hover { text-decoration: underline; }
+
+/* ── Fold/unfold controls ─────────────────────── */
+.fold-controls {
+  text-align: right;
+  margin-bottom: 1em;
+  font-family: system-ui, sans-serif;
+  font-size: 0.8em;
+}
+.fold-controls button {
+  background: var(--isabelline);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 3px 10px;
+  cursor: pointer;
+  font-size: 0.85em;
+  margin-left: 4px;
+}
+.fold-controls button:hover { background: var(--banana); }
+
+/* ── Foldable boxes (details/summary) ─────────── */
+details {
+  margin: 1em 0;
+  border-radius: 6px;
+  padding: 0;
+  overflow: hidden;
+}
+
+details > summary {
+  cursor: pointer;
+  padding: 0.5em 0.8em;
+  font-family: system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.95em;
+  list-style: none;
+  user-select: none;
+}
+details > summary::-webkit-details-marker { display: none; }
+details > summary::before {
+  content: '▸ ';
+  display: inline-block;
+  transition: transform 0.15s;
+}
+details[open] > summary::before {
+  content: '▾ ';
+}
+
+details > :not(summary) { padding: 0 0.8em; }
+
+/* Box variants */
+.box-intuition { background: rgba(91,140,111,0.08); border-left: 4px solid var(--munsell); }
+.box-intuition > summary { color: var(--munsell); }
+
+.box-historical { background: var(--isabelline); border-left: 4px solid #888; }
+.box-historical > summary { color: #555; }
+
+.box-keyresult { background: rgba(232,182,48,0.12); border-left: 4px solid var(--banana); }
+.box-keyresult > summary { color: #8a7000; }
+
+.box-solution { background: #f5f5f5; border-left: 4px solid #aaa; }
+.box-solution > summary { color: #666; }
+
+/* Non-foldable boxes */
+.box-exercise {
+  margin: 1em 0;
+  padding: 0.5em 0.8em;
+  background: rgba(91,140,111,0.04);
+  border-left: 4px solid var(--munsell);
+  border-radius: 6px;
+}
+.box-exercise strong { color: var(--munsell); font-family: system-ui, sans-serif; }
+
+.box-example {
+  margin: 1em 0;
+  padding: 0.5em 0.8em;
+  background: rgba(91,140,111,0.04);
+  border-left: 4px solid var(--munsell);
+  border-radius: 6px;
+}
+.box-example strong { color: var(--munsell); font-family: system-ui, sans-serif; }
+
+.box-remark {
+  margin: 1em 0;
+  padding: 0.5em 0.8em;
+  background: #f9f9f9;
+  border-left: 3px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95em;
+}
+
+.box-notation {
+  margin: 1em 0;
+  padding: 0.5em 0.8em;
+  background: #f9f9f9;
+  border-left: 3px solid var(--munsell);
+  border-radius: 4px;
+}
+
+/* ── Highlighted equation box ─────────────────── */
+.eqbox-display {
+  background: rgba(232,182,48,0.15);
+  padding: 0.3em 0.5em;
+  border-radius: 4px;
+  margin: 0.8em 0;
+}
+
+span.eqbox {
+  background: rgba(232,182,48,0.2);
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+/* ── TikZ placeholder ─────────────────────────── */
+.tikz-placeholder {
+  margin: 1.5em auto;
+  padding: 2em;
+  background: var(--isabelline);
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  text-align: center;
+  color: #888;
+  font-family: system-ui, sans-serif;
+  font-style: italic;
+  max-width: 24em;
+}
+
+/* ── Interactive figure container ──────────────── */
+.interactive-figure {
+  margin: 2em 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+}
+.interactive-figure .fig-header {
+  background: var(--isabelline);
+  padding: 0.5em 1em;
+  font-family: system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.9em;
+  color: var(--munsell);
+}
+.interactive-figure canvas {
+  display: block;
+  width: 100%;
+  cursor: grab;
+}
+.interactive-figure .fig-controls {
+  padding: 0.8em 1em;
+  background: #fafafa;
+  border-top: 1px solid #eee;
+  font-family: system-ui, sans-serif;
+  font-size: 0.85em;
+}
+.interactive-figure .fig-controls label {
+  margin-right: 1em;
+  color: var(--spacecadet);
+}
+.interactive-figure .fig-controls input[type=range] {
+  vertical-align: middle;
+  width: 180px;
+}
+
+/* ── Responsive ───────────────────────────────── */
+@media (max-width: 600px) {
+  body { font-size: 16px; padding: 0 0.8em; }
+  h1 { font-size: 1.4em; }
+}
+
+/* ── Definition lists (for footnotes) ─────────── */
+.footnotes { font-size: 0.85em; border-top: 1px solid #ddd; margin-top: 3em; padding-top: 1em; }
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <a href="index.html">← All Lectures</a>
+  <span><strong>Introduction to General Relativity</strong></span>
+  <span></span>
+</nav>
+
+<div class="fold-controls">
+  <button onclick="document.querySelectorAll('details').forEach(d=>d.open=true)">Unfold all</button>
+  <button onclick="document.querySelectorAll('details').forEach(d=>d.open=false)">Fold all</button>
+</div>
+
+<h1 id="sec:tangent-space">Tangent space</h1>
+<p>In the previous lecture we saw that a general manifold <span
+class="math inline">\(\mathcal{M}\)</span> does not carry a natural
+vector space structure. Nevertheless, we showed that one can
+<em>visualise</em> a tangent plane at each point when the manifold is
+embedded in some ambient <span
+class="math inline">\(\mathbb{R}^{m}\)</span>, and we identified a
+strategy: replace tangent vectors by directional derivatives, which
+<em>can</em> be defined intrinsically. The goal of this lecture is to
+carry out that programme—giving a purely <em>intrinsic</em> definition
+of the tangent space that makes no reference to any embedding.</p>
+<h2 id="sec:dir-deriv">Directional derivatives as vectors</h2>
+<p>The key idea is to <strong>identify tangent vectors with directional
+derivatives</strong>.</p>
+<p>Let <span class="math inline">\(\boldsymbol{v} =
+(v^1,\dots,v^n)\in\mathbb{R}^{n}\)</span>. At a point <span
+class="math inline">\(p\in\mathbb{R}^{n}\)</span>, define the
+<em>directional derivative</em> along <span
+class="math inline">\(\boldsymbol{v}\)</span> as follows. Suppose <span
+class="math inline">\(f\)</span> is a <span
+class="math inline">\(C^1\)</span> function from <span
+class="math inline">\(\mathbb{R}^{n}\to\mathbb{R}\)</span>, and define
+<span class="math display">\[\label{eq:dir-deriv-Rn}
+  \boldsymbol{v}\cdot\nabla
+    = \sum_{\mu=1}^{n} v^\mu \frac{\partial }{\partial {x^\mu}}\,,
+  \qquad
+  v(f) \;\equiv\; (\boldsymbol{v}\cdot\nabla)
+f(\boldsymbol{x})\Big|_{\boldsymbol{x}=p}
+    = \sum_{\mu=1}^{n} v^\mu \frac{\partial f}{\partial
+x^\mu}(p)\,.\]</span> This is the <em>directional derivative of <span
+class="math inline">\(f\)</span> at <span
+class="math inline">\(p\)</span></em> along <span
+class="math inline">\(\boldsymbol{v}\)</span>.</p>
+<p>Conversely, given the directional derivative operator <span
+class="math inline">\((\boldsymbol{v}\cdot\nabla)_p\)</span>, we can
+recover the vector <span
+class="math inline">\(\boldsymbol{v}\in\mathbb{R}^{n}\)</span> (apply it
+to each coordinate function). Furthermore, directional derivatives at
+<span class="math inline">\(p\)</span> form a <strong>vector
+space</strong>:</p>
+<details class="box-intuition" open>
+<summary>Physical intuition</summary>
+<div class="box-body">
+<p>In <span class="math inline">ℝ<sup><em>n</em></sup></span>, there is
+a one-to-one correspondence between vectors and directional derivative
+operators. On a general manifold, where there is no ambient space, we
+<em>define</em> tangent vectors to be directional derivative
+operators.</p>
+</div>
+</details>
+<h2 id="sec:Vp-def">The tangent space <span
+class="math inline">\(V_p\)</span></h2>
+<div class="box-notation">
+<div class="box-title">Notation</div>
+<p>Write <span class="math inline">ℱ(ℳ)</span> for the set of all <span
+class="math inline"><em>C</em><sup>∞</sup></span> functions <span
+class="math inline"><em>f</em> : ℳ → ℝ</span>.</p>
+</div>
+<p>Note that <span
+class="math inline">\((\boldsymbol{v}\cdot\nabla)_p\)</span> satisfies
+two properties:</p>
+<ol>
+<li><p><strong>Linearity:</strong> <span class="math inline">\(v(af +
+bg) = a\,v(f) + b\,v(g)\)</span> for all <span
+class="math inline">\(f,g\in\mathscr{F}(\mathcal{M})\)</span> and all
+<span class="math inline">\(a,b\in\mathbb{R}\)</span>.</p></li>
+<li><p><strong>Leibniz rule:</strong> <span class="math inline">\(v(fg)
+= f(p)\,v(g) + g(p)\,v(f)\)</span> (the product rule).</p></li>
+</ol>
+<div class="box-definition">
+<div class="box-title">Definition</div>
+<p><span id="def:tangent-space" label="def:tangent-space"></span> Let
+<span class="math inline">ℳ</span> be a smooth manifold and <span
+class="math inline"><em>p</em> ∈ ℳ</span>. The <strong>tangent
+space</strong> <span
+class="math inline"><em>V</em><sub><em>p</em></sub></span> at <span
+class="math inline"><em>p</em></span> is the set of all maps <span
+class="math inline"><em>v</em> : ℱ(ℳ) → ℝ</span> satisfying (1) and (2)
+above.</p>
+</div>
+<div class="box-exercise">
+<div class="box-title">Exercise</div>
+<p><span id="ex:const-zero" label="ex:const-zero"></span> Using only
+properties (1) and (2), show that if <span
+class="math inline"><em>h</em> ∈ ℱ(ℳ)</span> is constant then <span
+class="math inline"><em>v</em>(<em>h</em>) = 0</span> for every <span
+class="math inline"><em>v</em> ∈ <em>V</em><sub><em>p</em></sub></span>.</p>
+</div>
+<div class="box-exercise">
+<div class="box-title">Exercise</div>
+<p><span id="ex:Vp-vector-space" label="ex:Vp-vector-space"></span>
+Prove that <span
+class="math inline"><em>V</em><sub><em>p</em></sub></span> is a vector
+space (under pointwise addition and scalar multiplication of the maps
+<span class="math inline"><em>v</em></span>).</p>
+</div>
+<div class="box-theorem">
+<div class="box-title">Lemma</div>
+<p><span id="lem:locality" label="lem:locality"></span> If <span
+class="math inline"><em>v</em> ∈ <em>V</em><sub><em>p</em></sub></span>
+and <span class="math inline"><em>f</em>, <em>g</em> ∈ ℱ(ℳ)</span> agree
+on some neighbourhood of <span class="math inline"><em>p</em></span>,
+then <span
+class="math inline"><em>v</em>(<em>f</em>) = <em>v</em>(<em>g</em>)</span>.</p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Let <span class="math inline">\(h = f-g\)</span>; by
+assumption <span class="math inline">\(h\)</span> vanishes on some
+neighbourhood <span class="math inline">\(U\)</span> of <span
+class="math inline">\(p\)</span>. By paracompactness (axiom (0) of
+Def. <a href="#def:manifold" data-reference-type="ref"
+data-reference="def:manifold">[def:manifold]</a>) there exists a bump
+function <span
+class="math inline">\(\phi\in\mathscr{F}(\mathcal{M})\)</span> with
+<span class="math inline">\(\phi(p) = 0\)</span> and <span
+class="math inline">\(\phi\equiv 1\)</span> on <span
+class="math inline">\(\mathcal{M}\setminus U\)</span>. Then <span
+class="math inline">\(h = \phi h\)</span> pointwise, so by the Leibniz
+rule <span class="math inline">\(v(h) = \phi(p)\,v(h) + h(p)\,v(\phi) =
+0\)</span>. ◻</p>
+</div>
+<p>In particular, a tangent vector depends only on the <em>germ</em> of
+its argument at <span class="math inline">\(p\)</span>, so we may freely
+apply <span class="math inline">\(v\)</span> to a function defined only
+on a neighbourhood of <span class="math inline">\(p\)</span> by smoothly
+extending it to all of <span class="math inline">\(\mathcal{M}\)</span>
+(any two such extensions give the same value).</p>
+<p>Have we created a monster? By demanding only linearity and the
+Leibniz rule, we might inadvertently have produced a huge—even
+infinite-dimensional—vector space that has nothing to do with tangent
+vectors. Fortunately, this is not the case:</p>
+<div class="box-theorem">
+<div class="box-title">Theorem</div>
+<p><span id="thm:dim-Vp" label="thm:dim-Vp"></span> Let <span
+class="math inline">ℳ</span> be an <span
+class="math inline"><em>n</em></span>-dimensional smooth manifold and
+let <span class="math inline"><em>p</em> ∈ ℳ</span>. Then <span
+class="math inline">dim (<em>V</em><sub><em>p</em></sub>) = <em>n</em></span>.</p>
+</div>
+<h2 id="sec:coord-basis">Coordinate basis</h2>
+<p>Let <span class="math inline">\(\psi: O\to
+U\subset\mathbb{R}^{n}\)</span> be a chart with <span
+class="math inline">\(p\in O\)</span>. If <span
+class="math inline">\(f\in\mathscr{F}(\mathcal{M})\)</span>, then the
+composite <span class="math inline">\(f\circ\psi^{-1}:
+U\to\mathbb{R}\)</span> is <span
+class="math inline">\(C^\infty\)</span>.</p>
+<figure style="text-align:center; margin:1.5em 0;">
+  <img src="fig_lec04_coord_basis.png" alt="For a chart ψ : O → U ⊂ ℝⁿ and a function f : ℳ → ℝ, the composite f ∘ ψ<sup>−1</sup> : U → ℝ is an ordinary Euclidean-space function, whose partial derivatives at ψ(p) define the coordinate-basis tangent vectors." style="max-width:100%; height:auto;">
+  <figcaption style="font-size:0.85em; color:var(--birrengray); margin-top:0.4em;"><strong>Coordinate-basis construction.</strong> For a chart ψ : O → U ⊂ ℝⁿ and a function f : ℳ → ℝ, the composite f ∘ ψ<sup>−1</sup> : U → ℝ is an ordinary Euclidean-space function, whose partial derivatives at ψ(p) define the coordinate-basis tangent vectors.</figcaption>
+</figure>
+<div class="box-definition">
+<div class="box-title">Definition</div>
+<p><span id="def:coord-basis" label="def:coord-basis"></span> For <span
+class="math inline"><em>μ</em> = 1, …, <em>n</em></span>, define <span
+class="math display">$$\label{eq:coord-basis}
+    X_\mu(f) = \frac{\partial (f\circ\psi^{-1})}{\partial
+x^\mu}\bigg|_{\psi(p)}\,,$$</span> where <span
+class="math inline">(<em>x</em><sup>1</sup>,…,<em>x</em><sup><em>n</em></sup>)</span>
+are the coordinates of <span
+class="math inline">ℝ<sup><em>n</em></sup></span>.</p>
+</div>
+<p><strong>Claim.</strong> The <span
+class="math inline">\(X_\mu\)</span> so defined are tangent vectors
+(i.e. elements of <span class="math inline">\(V_p\)</span>).</p>
+<p><em>Verification.</em> Linearity of <span
+class="math inline">\(X_\mu\)</span> is inherited from that of <span
+class="math inline">\(\partial/\partial x^\mu\)</span>. For the Leibniz
+rule, use <span class="math inline">\((fg)\circ\psi^{-1} =
+(f\circ\psi^{-1})\,(g\circ\psi^{-1})\)</span> together with the ordinary
+product rule in <span class="math inline">\(\mathbb{R}^{n}\)</span>:
+<span class="math display">\[X_\mu(fg)
+    = \frac{\partial
+\bigl((f\circ\psi^{-1})(g\circ\psi^{-1})\bigr)}{\partial
+x^\mu}\bigg|_{\psi(p)}
+    = f(p)\,X_\mu(g) + g(p)\,X_\mu(f)\,.\]</span></p>
+<div class="proof">
+<p><em>Proof that <span class="math inline">\(\{X_\mu\}\)</span> is a
+basis for <span class="math inline">\(V_p\)</span>.</em> We use the
+following lemma.</p>
+<p><strong>Lemma.</strong> Let <span
+class="math inline">\(V\subset\mathbb{R}^{n}\)</span> be a
+<em>convex</em> open neighbourhood of <span
+class="math inline">\(\boldsymbol{a} = (a^1,\dots,a^n)\)</span>, and let
+<span class="math inline">\(F: V\to\mathbb{R}\)</span> be <span
+class="math inline">\(C^\infty\)</span>. Then there exist <span
+class="math inline">\(C^\infty\)</span> functions <span
+class="math inline">\(H_\mu: V\to\mathbb{R}\)</span> such that <span
+class="math display">\[\label{eq:taylor-lemma}
+    F(\boldsymbol{x}) = F(\boldsymbol{a})
+      + \sum_{\mu=1}^{n}(x^\mu -
+a^\mu)\,H_\mu(\boldsymbol{x})\,,\]</span> with <span
+class="math inline">\(H_\mu(\boldsymbol{a}) = \dfrac{\partial
+F}{\partial x^\mu}\Big|_{\boldsymbol{x}=\boldsymbol{a}}\)</span>.
+(Convexity ensures <span class="math inline">\(H_\mu(\boldsymbol{x}) =
+\int_0^1 (\partial F/\partial
+x^\mu)(\boldsymbol{a}+t(\boldsymbol{x}-\boldsymbol{a}))\,dt\)</span> is
+well-defined; see the homework.)</p>
+<p>Let <span class="math inline">\(F = f\circ\psi^{-1}\)</span> and
+<span class="math inline">\(\boldsymbol{a} = \psi(p)\)</span>, and fix a
+convex open neighbourhood <span class="math inline">\(V\subset
+U_\alpha\)</span> of <span class="math inline">\(\boldsymbol{a}\)</span>
+(e.g. an open ball). Then by <a href="#eq:taylor-lemma"
+data-reference-type="eqref"
+data-reference="eq:taylor-lemma">[eq:taylor-lemma]</a>, for all <span
+class="math inline">\(q\in\psi^{-1}(V)\subset O\)</span>, <span
+class="math display">\[\label{eq:taylor-on-M}
+    f(q) = f(p)
+      + \sum_{\mu=1}^{n}
+        \bigl((x^\mu\circ\psi)(q) - (x^\mu\circ\psi)(p)\bigr)\,
+        H_\mu(\psi(q))\,.\]</span></p>
+<p>The functions <span class="math inline">\(x^\mu\circ\psi\)</span> and
+<span class="math inline">\(H_\mu\circ\psi\)</span> on <span
+class="math inline">\(\psi^{-1}(V)\)</span> are extended smoothly to all
+of <span class="math inline">\(\mathcal{M}\)</span> via a bump function;
+by Lemma <a href="#lem:locality" data-reference-type="ref"
+data-reference="lem:locality">[lem:locality]</a>, <span
+class="math inline">\(v\)</span> gives the same value on any such
+extension. Now suppose <span class="math inline">\(v\in V_p\)</span>.
+Apply <span class="math inline">\(v\)</span> to <span
+class="math inline">\(f\)</span>: <span
+class="math display">\[\begin{aligned}
+    v(f)
+      &amp;\stackrel{\eqref{eq:taylor-on-M}}{=}
+        v\!\Bigl(f(p)
+          + \textstyle\sum_{\mu} (\cdots)\,H_\mu(\psi(\cdot))\Bigr)
+        \notag\\
+      &amp;= \underbrace{v(f(p))}_{=\,0}
+        + \sum_{\mu=1}^{n}
+          \Bigl[
+            \underbrace{(H_\mu\circ\psi)(p)}_{\partial F/\partial
+x^\mu|_{\psi(p)}}
+            \cdot v(x^\mu\circ\psi)
+          + \underbrace{\bigl((x^\mu\circ\psi)(p) -
+(x^\mu\circ\psi)(p)\bigr)}_{=\,0}
+            \cdot v(H_\mu\circ\psi)
+          \Bigr]
+        \notag\\
+      &amp;= \sum_{\mu=1}^{n}
+          \underbrace{v(x^\mu\circ\psi)}_{=:\,v^\mu}
+          \;\frac{\partial (f\circ\psi^{-1})}{\partial
+x^\mu}\bigg|_{\psi(p)}\,.
+        \label{eq:v-expansion}
+  
+\end{aligned}\]</span> Therefore <span
+class="math display">\[\label{eq:v-in-basis}
+    \boxed{v(f) = \sum_{\mu=1}^{n} v^\mu\, X_\mu(f)}\,,\]</span> and the
+<span class="math inline">\(\{X_\mu \mid \mu = 1,\dots,n\}\)</span> form
+a basis for <span class="math inline">\(V_p\)</span>. ◻</p>
+</div>
+<p>The basis <span class="math inline">\(\{X_\mu\}\)</span> is called
+the <strong>coordinate basis</strong>. It is often denoted <span
+class="math display">\[\label{eq:coord-basis-notation}
+  X_\mu \;\equiv\; \frac{\partial }{\partial x^\mu}\bigg|_p\,,
+  \qquad\text{or}\qquad
+  \partial_\mu\big|_p\,,
+  \qquad\text{or}\qquad
+  e_\mu\,.\]</span></p>
+<figure style="text-align:center; margin:1.5em 0;">
+  <img src="fig_lec04_tangent_basis.png" alt="The vectors ∂/∂x¹|p and ∂/∂x²|p are the push-forward of the standard basis on ℝ² under Φ = ψ<sup>−1</sup>; they are genuine tangent vectors to the surface at p." style="max-width:100%; height:auto;">
+  <figcaption style="font-size:0.85em; color:var(--birrengray); margin-top:0.4em;"><strong>Coordinate-basis tangent vectors.</strong> The vectors ∂/∂x¹|<sub>p</sub> and ∂/∂x²|<sub>p</sub> are the push-forward of the standard basis on ℝ² under Φ = ψ<sup>−1</sup>; they are genuine tangent vectors to the surface at p.</figcaption>
+</figure>
+<h2 id="sec:change-basis">Change of basis</h2>
+<p>Suppose we choose a different chart <span
+class="math inline">\(\psi&#39;\)</span>, giving a coordinate basis
+<span class="math inline">\(\{X&#39;_\nu\}\)</span>. By the chain rule:
+<span class="math display">\[\label{eq:change-basis}
+  X_\mu = \sum_{\nu=1}^{n}
+    \frac{\partial x&#39;^\nu}{\partial x^\mu}\bigg|_{\psi(p)}\,
+X&#39;_\nu\,.\]</span></p>
+<p>Given a tangent vector <span class="math inline">\(v = \sum_\mu v^\mu
+X_\mu\)</span>, the components in the new basis are <span
+class="math display">\[\label{eq:vector-transform}
+  \boxed{v&#39;^\nu = \sum_{\mu=1}^{n} v^\mu\,
+    \frac{\partial x&#39;^\nu}{\partial x^\mu}\bigg|_{\psi(p)}}\]</span>
+This is the <strong>(contravariant) vector transformation
+law</strong>.</p>
+<h2 id="sec:curves">Curves on manifolds</h2>
+<p>To do mechanics on a manifold we need the notion of a trajectory—a
+smooth path that a test particle might follow.</p>
+<div class="box-definition">
+<div class="box-title">Definition</div>
+<p><span id="def:smooth-curve" label="def:smooth-curve"></span> A
+<strong>smooth curve</strong> <span
+class="math inline"><em>C</em></span> on a manifold <span
+class="math inline">ℳ</span> is a <span
+class="math inline"><em>C</em><sup>∞</sup></span> map <span
+class="math display"><em>C</em> : ℝ → ℳ   (or from an interval
+<em>I</em>⊂ℝ) ,   <em>t</em> ↦ <em>C</em>(<em>t</em>) .</span></p>
+</div>
+<figure style="text-align:center; margin:1.5em 0;">
+  <img src="fig_lec04_curve.png" alt="C : ℝ → ℳ is a smooth curve; at each point p = C(t0) it defines a tangent vector T ∈ Vp via T(f) = d/dt (f ∘ C) |t=t0." style="max-width:100%; height:auto;">
+  <figcaption style="font-size:0.85em; color:var(--birrengray); margin-top:0.4em;"><strong>A smooth curve on a manifold and its tangent vector.</strong> C : ℝ → ℳ is a smooth curve; at each point p = C(t<sub>0</sub>) it defines a tangent vector T ∈ V<sub>p</sub> via T(f) = d/dt (f ∘ C) |<sub>t=t<sub>0</sub></sub>.</figcaption>
+</figure>
+<p>To each point <span class="math inline">\(p\in\mathcal{M}\)</span> on
+the curve <span class="math inline">\(C\)</span> (say <span
+class="math inline">\(p = C(t_0)\)</span>), we associate a tangent
+vector <span class="math inline">\(T\in V_p\)</span> as follows. For
+<span class="math inline">\(f\in\mathscr{F}(\mathcal{M})\)</span>: <span
+class="math display">\[\label{eq:tangent-from-curve}
+  T(f) = \frac{d }{d t}(f\circ C)\bigg|_{p}
+    = \sum_{\mu} \frac{\partial (f\circ\psi^{-1})}{\partial
+x^\mu}\bigg|_{\psi(p)}
+      \,\frac{d x^\mu}{d t}
+    = \sum_{\mu} \frac{d x^\mu}{d t}\, X_\mu(f)\,,\]</span> where <span
+class="math inline">\(x^\mu(t) \equiv (x^\mu\circ\psi\circ
+C)(t)\)</span> denotes the <span class="math inline">\(\mu\)</span>-th
+component of <span
+class="math inline">\(\psi(C(t))\in\mathbb{R}^{n}\)</span>.</p>
+<p>This expansion works for <em>any</em> coordinate basis. The
+components of <span class="math inline">\(T\)</span> in the basis <span
+class="math inline">\(\{X_\mu\}\)</span> are <span
+class="math display">\[\label{eq:tangent-components}
+  T^\mu = \frac{d x^\mu}{d t}\,.\]</span></p>
+<h2 id="sec:tangent-bundle">The tangent bundle</h2>
+<p>We call <span class="math inline">\(V_p\)</span> the <strong>tangent
+space at <span class="math inline">\(p\)</span></strong>. The
+<strong>tangent bundle</strong> is the disjoint union of all tangent
+spaces: <span class="math display">\[\label{eq:tangent-bundle}
+  T\mathcal{M} = \bigcup_{p\in\mathcal{M}} V_p\,.\]</span></p>
+<div class="box-remark">
+<div class="box-title">Remark</div>
+<p>Although <span
+class="math inline">dim (<em>V</em><sub><em>p</em></sub>) = dim (<em>V</em><sub><em>q</em></sub>) = <em>n</em></span>
+for all <span class="math inline"><em>p</em>, <em>q</em> ∈ ℳ</span>, and
+thus <span
+class="math inline"><em>V</em><sub><em>p</em></sub> ≅ <em>V</em><sub><em>q</em></sub></span>
+as vector spaces, the isomorphisms are <strong>not natural</strong>.
+There is no canonical way to identify a tangent vector at <span
+class="math inline"><em>p</em></span> with one at <span
+class="math inline"><em>q</em></span>; the identification can even vary
+wildly as one moves around <span class="math inline">ℳ</span>. To obtain
+a “good” (smooth, geometrically meaningful) identification one needs
+extra data—a <em>connection</em>, which we introduce in Lecture <a
+href="#sec:derivative-operators" data-reference-type="ref"
+data-reference="sec:derivative-operators">[sec:derivative-operators]</a>.</p>
+</div>
+<h2 id="sec:vector-fields">Tangent vector fields</h2>
+<div class="box-definition">
+<div class="box-title">Definition</div>
+<p><span id="def:vector-field" label="def:vector-field"></span> A
+<strong>tangent vector field</strong> <span
+class="math inline"><em>v</em></span> on a manifold <span
+class="math inline">ℳ</span> is a smooth assignment of a tangent vector
+<span
+class="math inline"><em>v</em>|<sub><em>p</em></sub> ∈ <em>V</em><sub><em>p</em></sub></span>
+to each point <span class="math inline"><em>p</em> ∈ ℳ</span>. We say
+<span class="math inline"><em>v</em></span> is <em>smooth</em> if for
+every <span class="math inline"><em>f</em> ∈ ℱ(ℳ)</span>, the function
+<span class="math inline"><em>v</em>(<em>f</em>) : ℳ → ℝ</span> defined
+by <span
+class="math inline"><em>p</em> ↦ <em>v</em>|<sub><em>p</em></sub>(<em>f</em>)</span>
+is <span class="math inline"><em>C</em><sup>∞</sup></span>.</p>
+</div>
+<p>Note that smoothness of a vector field is defined purely in terms of
+the manifold structure—no metric is required. This is perhaps
+surprising: we cannot yet compare tangent vectors at different points,
+yet we can still say whether a vector field varies smoothly.</p>
+<div class="box-theorem">
+<div class="box-title">Lemma</div>
+<p><span id="lem:coord-basis-smooth"
+label="lem:coord-basis-smooth"></span> The coordinate basis fields <span
+class="math inline"><em>X</em><sub><em>μ</em></sub></span> are smooth:
+<span
+class="math inline"><em>X</em><sub><em>μ</em></sub>(<em>f</em>)(<em>p</em>) = ∂(<em>f</em>∘<em>ψ</em><sup>−1</sup>)/∂<em>x</em><sup><em>μ</em></sup>|<sub><em>ψ</em>(<em>p</em>)</sub></span>
+is a <span class="math inline"><em>C</em><sup>∞</sup></span> function of
+<span class="math inline"><em>p</em></span>.</p>
+</div>
+<p>Since an arbitrary tangent vector <span
+class="math inline">\(v\)</span> is a linear combination of the <span
+class="math inline">\(X_\mu\)</span> with components <span
+class="math inline">\(v^\mu\)</span>, smoothness of <span
+class="math inline">\(v\)</span> is equivalent to smoothness of its
+component functions <span
+class="math inline">\(v^\mu\in\mathscr{F}(\mathcal{M})\)</span>.</p>
+<details class="box-intuition" open>
+<summary>Physical intuition</summary>
+<div class="box-body">
+<p>A <em>velocity field</em> <span class="math inline"><em>v</em></span>
+is a tangent vector field. If <span
+class="math inline"><em>C</em></span> is a smooth curve solving the
+equation of motion, then <span
+class="math inline"><em>T</em>(<em>f</em>) = <em>v</em>(<em>f</em>)</span>
+along <span class="math inline"><em>C</em></span>—i.e. the tangent to
+the solution curve equals the velocity field.</p>
+</div>
+</details>
+
+<script>
+// Re-typeset MathJax when a details element is opened
+document.querySelectorAll('details').forEach(d => {
+  d.addEventListener('toggle', () => {
+    if (d.open && window.MathJax) MathJax.typeset([d]);
+  });
+});
+</script>
+
+</body>
+</html>
