@@ -1,0 +1,22 @@
+% fig_lec03_tangent_plane.tex — S² ⊂ ℝ³ with a tangent plane at p
+\begin{center}
+\begin{tikzpicture}[scale=0.9]
+  % Sphere
+  \shade[ball color=cgblue!12, opacity=0.5] (0,0) circle (1.4);
+  \draw[thick, spacecadet] (0,0) circle (1.4);
+  % Equator
+  \draw[thick, spacecadet, dashed]
+    (-1.4,0) arc (180:360:1.4 and 0.45);
+  \draw[thick, spacecadet]
+    (-1.4,0) arc (180:0:1.4 and 0.45);
+  % Point p
+  \node[circle, fill=banana, inner sep=1.8pt] (P) at (0.4,1.2) {};
+  \node[font=\small, above right] at (P) {$p$};
+  % Tangent plane
+  \draw[thick, munsell, fill=munsell!8, opacity=0.7]
+    (-1.0,1.8) -- (1.8,1.8) -- (2.2,0.8) -- (-0.6,0.8) -- cycle;
+  \node[font=\sf\small, text=munsell] at (2.5,1.4) {$\Tp$};
+  % Label
+  \node[font=\sf\small, text=cgblue] at (-1.8,0.8) {$S^2\subset\Rn{3}$};
+\end{tikzpicture}
+\end{center}

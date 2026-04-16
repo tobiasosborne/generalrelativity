@@ -195,25 +195,7 @@ transition function is
     = \bigl(\sqrt{1-y^2-z^2},\; z\bigr).
 \]
 
-\begin{center}
-\begin{tikzpicture}[scale=0.9]
-  % Sphere
-  \shade[ball color=cgblue!15, opacity=0.6] (0,0) circle (1.4);
-  \draw[thick, spacecadet] (0,0) circle (1.4);
-  % Equator
-  \draw[thick, spacecadet, dashed]
-    (-1.4,0) arc (180:360:1.4 and 0.45);
-  \draw[thick, spacecadet]
-    (-1.4,0) arc (180:0:1.4 and 0.45);
-  % Axes
-  \draw[axisstyle, spacecadet!60] (0,-1.8) -- (0,1.8) node[right]{$y$};
-  \draw[axisstyle, spacecadet!60] (-1.8,0) -- (1.8,0) node[below]{$z$};
-  \draw[axisstyle, spacecadet!60] (0.7,-0.7) -- (-0.9,0.9) node[left]{$x$};
-  % Labels
-  \node[font=\sf\small, text=cgblue] at (1.9,1.2) {$S^2$};
-  \node[font=\scriptsize, text=munsell] at (1.6,-0.6) {$O_x^+$};
-\end{tikzpicture}
-\end{center}
+\input{figures/fig_lec03_sphere}
 
 \begin{exercise}\label{ex:Sn-transitions}
   Find the remaining transition functions for the atlas
@@ -328,27 +310,7 @@ point of a manifold.  For a manifold $\M$ embedded in $\Rn{m}$
 (such as $S^2\subset\Rn{3}$), one can visualise the
 \textbf{tangent plane} at a point~$p$:
 
-\begin{center}
-\begin{tikzpicture}[scale=0.9]
-  % Sphere
-  \shade[ball color=cgblue!12, opacity=0.5] (0,0) circle (1.4);
-  \draw[thick, spacecadet] (0,0) circle (1.4);
-  % Equator
-  \draw[thick, spacecadet, dashed]
-    (-1.4,0) arc (180:360:1.4 and 0.45);
-  \draw[thick, spacecadet]
-    (-1.4,0) arc (180:0:1.4 and 0.45);
-  % Point p
-  \node[circle, fill=banana, inner sep=1.8pt] (P) at (0.4,1.2) {};
-  \node[font=\small, above right] at (P) {$p$};
-  % Tangent plane
-  \draw[thick, munsell, fill=munsell!8, opacity=0.7]
-    (-1.0,1.8) -- (1.8,1.8) -- (2.2,0.8) -- (-0.6,0.8) -- cycle;
-  \node[font=\sf\small, text=munsell] at (2.5,1.4) {$\Tp$};
-  % Label
-  \node[font=\sf\small, text=cgblue] at (-1.8,0.8) {$S^2\subset\Rn{3}$};
-\end{tikzpicture}
-\end{center}
+\input{figures/fig_lec03_tangent_plane}
 
 But we want an \emph{intrinsic} definition, independent of any
 embedding.

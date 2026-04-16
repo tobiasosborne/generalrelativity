@@ -47,15 +47,18 @@ def preprocess(tex: str) -> str:
         return text[start+1:]
 
     def figure_replacer(m):
-        caption = ''
         fig_text = m.group(0)
+        caption = ''
         cap_idx = fig_text.find('\\caption{')
         if cap_idx >= 0:
             caption = extract_braced(fig_text, cap_idx + len('\\caption'))
             caption = re.sub(r'\\label\{[^}]*\}', '', caption).strip()
             caption = caption.replace('~', ' ')
         fig_match = re.search(r'\\input\{figures/([^}]*)\}', fig_text)
-        fig_id = fig_match.group(1) if fig_match else 'figure'
+        if fig_match:
+            # Figure env wrapping an \input — emit a GRWEBFIGURE marker so
+            # the post-processor can swap in the actual <figure><img>.
+            return f'\n\n\\par\\noindent\\textit{{GRWEBFIGURE:{fig_match.group(1)}}}\\par\n\n'
         return f'\n\n\\textit{{[Figure: {caption}]}}\n\n'
     tex = re.sub(r'\\begin\{figure\}.*?\\end\{figure\}', figure_replacer, tex, flags=re.DOTALL)
 

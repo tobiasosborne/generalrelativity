@@ -59,6 +59,27 @@ CAPTIONS = {
         "defines a tangent vector T ∈ V<sub>p</sub> via "
         "T(f) = d/dt (f ∘ C) |<sub>t=t<sub>0</sub></sub>.",
     ),
+    "fig_lec03_sphere.svg": (
+        "The 2-sphere S² with chart patch O<sub>x</sub><sup>+</sup>.",
+        "Stereographic-style axes in ℝ³ and the open upper-x hemisphere "
+        "O<sub>x</sub><sup>+</sup> = {(x,y,z)∈S² : x > 0}, one of the six "
+        "coordinate-halving charts of S².",
+    ),
+    "fig_lec03_tangent_plane.svg": (
+        "Tangent plane to the 2-sphere at a point.",
+        "Visualising T<sub>p</sub>ℳ for S² ⊂ ℝ³.  The plane is what one "
+        "reaches for when the manifold sits inside an ambient space — but "
+        "this picture relies on the embedding, so the next lecture gives "
+        "an intrinsic definition.",
+    ),
+    "fig_lec03_ellipsoid.svg": (
+        "Geodesics on a triaxial ellipsoid with parallel transport.",
+        "Top: geodesics (shortest paths intrinsic to the surface) on a "
+        "triaxial ellipsoid (a=1.5, b=1.0, c=0.7).  Bottom: tangent "
+        "vectors (gold) and a parallel-transported vector (teal) along a "
+        "geodesic — parallel transport preserves inner products but the "
+        "transported vector rotates relative to the tangent direction.",
+    ),
 }
 
 
