@@ -1,0 +1,33 @@
+{
+  "topic": "Mercury perihelion shift + solar quadrupole moment",
+  "used_by": ["sheet_02"],
+  "papers": [
+    {
+      "id": "MSQ01",
+      "file": "MSQ01_Pijpers_MNRAS_1998.pdf",
+      "citation": "F. P. Pijpers, MNRAS 297, L76 (1998) — helioseismic J2",
+      "doi": "10.1046/j.1365-8711.1998.01801.x",
+      "url": "https://academic.oup.com/mnras/article-pdf/297/3/L76/3025024/297-3-L76.pdf",
+      "triggerUrl": "https://academic.oup.com/mnras/article/297/3/L76/979957",
+      "publisher": "OUP"
+    },
+    {
+      "id": "MSQ02",
+      "file": "MSQ02_Dicke_Goldenberg_PRL_1967.pdf",
+      "citation": "R. H. Dicke & H. M. Goldenberg, PRL 18, 313 (1967) — solar oblateness and GR",
+      "doi": "10.1103/PhysRevLett.18.313",
+      "url": "https://journals.aps.org/prl/pdf/10.1103/PhysRevLett.18.313",
+      "triggerUrl": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.18.313",
+      "publisher": "APS"
+    },
+    {
+      "id": "MSQ03",
+      "file": "MSQ03_Park_MESSENGER_AJ_2017.pdf",
+      "citation": "R. S. Park et al., AJ 153, 121 (2017) — Mercury perihelion from MESSENGER ranging",
+      "doi": "10.3847/1538-3881/aa5be2",
+      "url": "https://iopscience.iop.org/article/10.3847/1538-3881/aa5be2/pdf",
+      "triggerUrl": "https://iopscience.iop.org/article/10.3847/1538-3881/aa5be2",
+      "publisher": "IOP"
+    }
+  ]
+}

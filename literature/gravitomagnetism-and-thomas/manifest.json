@@ -1,0 +1,33 @@
+{
+  "topic": "Gravitomagnetism, Lense-Thirring, Thomas precession",
+  "used_by": ["sheet_06"],
+  "papers": [
+    {
+      "id": "GMT01",
+      "file": "GMT01_Planck2018_VI_cosmological_params.pdf",
+      "citation": "Planck Collaboration, A&A 641, A6 (2020) — cosmological parameters, H0, Omega_m, critical density",
+      "doi": "10.1051/0004-6361/201833910",
+      "url": "https://www.aanda.org/articles/aa/pdf/2020/09/aa33910-18.pdf",
+      "triggerUrl": "https://www.aanda.org/articles/aa/full_html/2020/09/aa33910-18/aa33910-18.html",
+      "publisher": "AA"
+    },
+    {
+      "id": "GMT02",
+      "file": "GMT02_Schreiber_Wells_RSI_2013_ring_lasers.pdf",
+      "citation": "K. U. Schreiber and J-P. R. Wells, Rev. Sci. Instrum. 84, 041101 (2013) — large ring lasers for rotation sensing",
+      "doi": "10.1063/1.4798216",
+      "url": "https://pubs.aip.org/aip/rsi/article-pdf/doi/10.1063/1.4798216/16043569/041101_1_online.pdf",
+      "triggerUrl": "https://pubs.aip.org/rsi/article/84/4/041101/358246/Invited-Review-Article-Large-ring-lasers-for",
+      "publisher": "AIP"
+    },
+    {
+      "id": "GMT03",
+      "file": "GMT03_GravityProbeB_Everitt_PRL_2011.pdf",
+      "citation": "C. W. F. Everitt et al., PRL 106, 221101 (2011) — Gravity Probe B Lense-Thirring measurement",
+      "doi": "10.1103/PhysRevLett.106.221101",
+      "url": "https://journals.aps.org/prl/pdf/10.1103/PhysRevLett.106.221101",
+      "triggerUrl": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.106.221101",
+      "publisher": "APS"
+    }
+  ]
+}

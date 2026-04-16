@@ -26,6 +26,12 @@ latex/TheoretischePhysikC.tex
 # Copyrighted literature (not for distribution)
 Literature/
 literature/equiv-principle/
+literature/mercury-sun-quadrupole/*
+literature/gravitomagnetism-and-thomas/*
+literature/schwarzschild-and-sgrA/*
+literature/.browser-profile/
+# Allow the per-topic manifest.json files to be tracked (metadata only)
+!literature/*/manifest.json
 
 # Handwritten lecture source PDFs
 Lecture Notes/
@@ -38,3 +44,7 @@ scripts/Manifest.toml
 
 # TikZ preview PNGs
 latex/figures/*.png
+
+# Internal problem/solution sheets (never distributed to students)
+temp/
+

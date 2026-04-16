@@ -1,0 +1,15 @@
+{
+  "topic": "Schwarzschild geometry, Sgr A* mass, spaghettification",
+  "used_by": ["sheet_11"],
+  "papers": [
+    {
+      "id": "SGR01",
+      "file": "SGR01_GRAVITY_SgrA_2019.pdf",
+      "citation": "GRAVITY Collaboration, A&A 625, L10 (2019) — Sgr A* mass from orbit of S2",
+      "doi": "10.1051/0004-6361/201935656",
+      "url": "https://www.aanda.org/articles/aa/pdf/2019/05/aa35656-19.pdf",
+      "triggerUrl": "https://www.aanda.org/articles/aa/full_html/2019/05/aa35656-19/aa35656-19.html",
+      "publisher": "AA"
+    }
+  ]
+}
