@@ -1,0 +1,328 @@
+<!-- ═══ Interactive: Coordinate-basis tangent vectors ∂_μ|_p ═══ -->
+<div class="interactive-figure" id="tb-widget">
+<div class="fig-header">Interactive: Coordinate-basis tangent vectors as you move p around ℳ</div>
+<canvas id="tb-canvas" style="width:100%;aspect-ratio:2.2/1;display:block;cursor:grab;background:white;touch-action:none"></canvas>
+<div class="fig-controls" style="padding:0.6em 1em;background:#fafafa;border-top:1px solid #eee;font-size:0.82em;display:flex;flex-wrap:wrap;gap:0.5em 1.4em;align-items:center;font-variant-numeric:tabular-nums">
+  <span>Drag <strong>p</strong> (in either panel).</span>
+  <span>ψ(p) = <span id="tb-uv">(0.40, 0.30)</span></span>
+  <span>∂h/∂x|<sub>p</sub> = <span id="tb-hu">-0.00</span></span>
+  <span>∂h/∂y|<sub>p</sub> = <span id="tb-hv">-0.00</span></span>
+  <a href="tangent-basis.html" style="margin-left:auto;font-size:0.9em;color:var(--munsell)">Open full page →</a>
+</div>
+</div>
+<style>
+#tb-widget canvas.grabbing { cursor: grabbing; }
+</style>
+<script>
+(function(){
+  const cv = document.getElementById('tb-canvas');
+  if (!cv) return;
+  const cx = cv.getContext('2d');
+
+  // Surface ℳ = graph of z = h(x,y), h chosen to match the lec03/04 PDF figures.
+  function h  (x, y) { return 0.5*Math.cos(0.9*x) + 0.35*Math.sin(0.6*y); }
+  function hx (x, y) { return -0.5*0.9*Math.sin(0.9*x); }   // ∂h/∂x
+  function hy (x, y) { return  0.35*0.6*Math.cos(0.6*y); }  // ∂h/∂y
+
+  const DOM = { umin:-2.2, umax:2.2, vmin:-2.2, vmax:2.2 };
+  const U_RANGE = 5.0;                 // extent of U panel in chart coords
+  const VEC_SCALE = 0.9;               // visual length of basis arrows
+
+  // Draggable point in chart coords
+  let p = { u: 0.40, v: 0.30 };
+  let dragging = null;                 // 'M' | 'U' | null
+
+  const view = { yaw: Math.PI * 0.20, pitch: Math.PI * 0.22 };
+
+  // ── 3D → 2D projection (yaw around z, then pitch around x) ──
+  function proj(x, y, z) {
+    const cy = Math.cos(view.yaw),  sy = Math.sin(view.yaw);
+    const cp = Math.cos(view.pitch), sp = Math.sin(view.pitch);
+    const x1 = x*cy - y*sy;
+    const y1 = x*sy + y*cy;
+    const y2 = y1*cp - z*sp;
+    const z2 = y1*sp + z*cp;
+    return [x1, z2, y2];               // (screenX unscaled, screenY unscaled, depth)
+  }
+
+  function setup() {
+    const dpr = window.devicePixelRatio || 1;
+    const r = cv.getBoundingClientRect();
+    cv.width  = Math.round(r.width  * dpr);
+    cv.height = Math.round(r.height * dpr);
+    cx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    return { w: r.width, h: r.height };
+  }
+  function layout(w, h) {
+    const gap = 8;
+    const mw = Math.round(w * 0.60);
+    const uw = w - mw - gap;
+    return {
+      M: { x: 0,          y: 0, w: mw, h: h },
+      U: { x: mw + gap,   y: 0, w: uw, h: h },
+    };
+  }
+  function toMpx(X, Y, panel) {
+    const s = Math.min(panel.w, panel.h) * 0.19;
+    return [ panel.x + panel.w/2 + s*X, panel.y + panel.h*0.62 - s*Y ];
+  }
+  function toUpx(u, v, panel) {
+    const side = Math.min(panel.w, panel.h) * 0.80;
+    const s = side / U_RANGE;
+    return [ panel.x + panel.w/2 + s*u, panel.y + panel.h/2 - s*v ];
+  }
+  function fromUpx(px, py, panel) {
+    const side = Math.min(panel.w, panel.h) * 0.80;
+    const s = side / U_RANGE;
+    return { u: (px - (panel.x + panel.w/2)) / s,
+             v: ((panel.y + panel.h/2) - py) / s };
+  }
+
+  // ── Surface rendering: tile the (u,v) grid and paint back-to-front ──
+  function drawSurface(panel) {
+    const N = 28;
+    const du = (DOM.umax - DOM.umin) / N;
+    const dv = (DOM.vmax - DOM.vmin) / N;
+    const quads = [];
+    for (let i = 0; i < N; i++) {
+      const u0 = DOM.umin + i*du, u1 = u0 + du;
+      for (let j = 0; j < N; j++) {
+        const v0 = DOM.vmin + j*dv, v1 = v0 + dv;
+        const z00 = h(u0,v0), z10 = h(u1,v0), z11 = h(u1,v1), z01 = h(u0,v1);
+        const P00 = proj(u0, v0, z00);
+        const P10 = proj(u1, v0, z10);
+        const P11 = proj(u1, v1, z11);
+        const P01 = proj(u0, v1, z01);
+        quads.push({
+          pts: [ toMpx(P00[0], P00[1], panel), toMpx(P10[0], P10[1], panel),
+                 toMpx(P11[0], P11[1], panel), toMpx(P01[0], P01[1], panel) ],
+          depth: (P00[2] + P10[2] + P11[2] + P01[2]) / 4,
+          z: (z00 + z10 + z11 + z01) / 4,
+        });
+      }
+    }
+    quads.sort((a,b) => a.depth - b.depth);
+    for (const q of quads) {
+      const t = Math.max(0, Math.min(1, (q.z + 0.85) / 1.7));
+      const r = Math.round(232 - 40*t);
+      const g = Math.round(237 - 25*t);
+      const b = Math.round(234 - 35*t);
+      cx.fillStyle  = `rgb(${r},${g},${b})`;
+      cx.strokeStyle = `rgba(90,110,95,0.28)`;
+      cx.lineWidth = 0.5;
+      cx.beginPath();
+      cx.moveTo(q.pts[0][0], q.pts[0][1]);
+      for (let k = 1; k < 4; k++) cx.lineTo(q.pts[k][0], q.pts[k][1]);
+      cx.closePath(); cx.fill(); cx.stroke();
+    }
+  }
+
+  // Coordinate curves through p on M
+  function drawCoordCurves(panel) {
+    cx.lineWidth = 1.2;
+    // u-curve: (t, p.v, h(t,p.v))
+    cx.strokeStyle = 'rgba(74,127,181,0.65)';
+    cx.beginPath();
+    for (let i = 0; i <= 80; i++) {
+      const t = DOM.umin + i/80 * (DOM.umax - DOM.umin);
+      const P = proj(t, p.v, h(t, p.v));
+      const [sx, sy] = toMpx(P[0], P[1], panel);
+      if (i === 0) cx.moveTo(sx, sy); else cx.lineTo(sx, sy);
+    }
+    cx.stroke();
+    // v-curve: (p.u, t, h(p.u,t))
+    cx.strokeStyle = 'rgba(91,140,111,0.65)';
+    cx.beginPath();
+    for (let i = 0; i <= 80; i++) {
+      const t = DOM.vmin + i/80 * (DOM.vmax - DOM.vmin);
+      const P = proj(p.u, t, h(p.u, t));
+      const [sx, sy] = toMpx(P[0], P[1], panel);
+      if (i === 0) cx.moveTo(sx, sy); else cx.lineTo(sx, sy);
+    }
+    cx.stroke();
+  }
+
+  function drawArrow(x1, y1, x2, y2, colour, label, labelOff) {
+    cx.strokeStyle = colour; cx.fillStyle = colour; cx.lineWidth = 2.2;
+    cx.beginPath(); cx.moveTo(x1, y1); cx.lineTo(x2, y2); cx.stroke();
+    const ang = Math.atan2(y2-y1, x2-x1);
+    const ah = 9;
+    cx.beginPath();
+    cx.moveTo(x2, y2);
+    cx.lineTo(x2 - ah*Math.cos(ang - 0.32), y2 - ah*Math.sin(ang - 0.32));
+    cx.lineTo(x2 - ah*Math.cos(ang + 0.32), y2 - ah*Math.sin(ang + 0.32));
+    cx.closePath(); cx.fill();
+    if (label) {
+      cx.font = '600 12px Georgia, serif';
+      cx.textBaseline = 'middle'; cx.textAlign = 'left';
+      const off = labelOff || [6, -6];
+      cx.fillText(label, x2 + off[0], y2 + off[1]);
+    }
+  }
+
+  function drawChartAxes(panel) {
+    const [ox, oy] = toUpx(0, 0, panel);
+    const side = Math.min(panel.w, panel.h) * 0.80;
+    cx.strokeStyle = 'rgba(217,122,43,0.45)'; cx.lineWidth = 1;
+    const xs0 = panel.x + panel.w/2 - side/2 + 12;
+    const xs1 = panel.x + panel.w/2 + side/2 - 12;
+    const ys0 = panel.y + panel.h/2 - side/2 + 12;
+    const ys1 = panel.y + panel.h/2 + side/2 - 12;
+    cx.beginPath();
+    cx.moveTo(xs0, oy); cx.lineTo(xs1, oy);
+    cx.moveTo(ox, ys1); cx.lineTo(ox, ys0);
+    cx.stroke();
+    // arrowheads
+    cx.fillStyle = 'rgba(217,122,43,0.7)';
+    cx.beginPath();
+    cx.moveTo(xs1, oy); cx.lineTo(xs1-7, oy-4); cx.lineTo(xs1-7, oy+4); cx.closePath();
+    cx.moveTo(ox, ys0); cx.lineTo(ox-4, ys0+7); cx.lineTo(ox+4, ys0+7); cx.closePath();
+    cx.fill();
+    // Axis labels
+    cx.fillStyle = '#b2631e';
+    cx.font = 'italic 12px Georgia, serif';
+    cx.textBaseline = 'middle'; cx.textAlign = 'left';
+    cx.fillText('x¹', xs1 + 4, oy + 2);
+    cx.textAlign = 'center'; cx.textBaseline = 'bottom';
+    cx.fillText('x²', ox, ys0 - 4);
+  }
+
+  function drawPanelFrame(panel, label, colour) {
+    cx.strokeStyle = '#e4e4e4'; cx.lineWidth = 1;
+    cx.strokeRect(panel.x+0.5, panel.y+0.5, panel.w-1, panel.h-1);
+    cx.fillStyle = colour;
+    cx.font = '600 12px system-ui, sans-serif';
+    cx.textBaseline = 'top'; cx.textAlign = 'left';
+    cx.fillText(label, panel.x + 8, panel.y + 6);
+  }
+
+  function render() {
+    const { w, h: H } = setup();
+    const L = layout(w, H);
+    cx.clearRect(0, 0, w, H);
+
+    // ── M panel: surface + coord curves + point + tangent vectors ──
+    cx.fillStyle = '#f7fbf9'; cx.fillRect(L.M.x, L.M.y, L.M.w, L.M.h);
+    drawSurface(L.M);
+    drawCoordCurves(L.M);
+
+    const hxp = hx(p.u, p.v), hyp = hy(p.u, p.v);
+    const Pbase = proj(p.u, p.v, h(p.u, p.v));
+    const [pmx, pmy] = toMpx(Pbase[0], Pbase[1], L.M);
+
+    // ∂₁|_p = (1, 0, h_x)
+    const Pu = proj(p.u + VEC_SCALE, p.v, h(p.u, p.v) + VEC_SCALE * hxp);
+    const [uex, uey] = toMpx(Pu[0], Pu[1], L.M);
+    drawArrow(pmx, pmy, uex, uey, '#4A7FB5', '∂₁|_p');
+
+    // ∂₂|_p = (0, 1, h_y)
+    const Pv = proj(p.u, p.v + VEC_SCALE, h(p.u, p.v) + VEC_SCALE * hyp);
+    const [vex, vey] = toMpx(Pv[0], Pv[1], L.M);
+    drawArrow(pmx, pmy, vex, vey, '#5B8C6F', '∂₂|_p', [6, 8]);
+
+    // Point p on M
+    cx.fillStyle = '#E8B630'; cx.strokeStyle = 'white'; cx.lineWidth = 2;
+    cx.beginPath(); cx.arc(pmx, pmy, 6, 0, 2*Math.PI); cx.fill(); cx.stroke();
+    cx.fillStyle = '#8a7a00';
+    cx.font = '700 13px Georgia, serif';
+    cx.textBaseline = 'middle'; cx.textAlign = 'left';
+    cx.fillText('p', pmx + 10, pmy - 10);
+
+    drawPanelFrame(L.M, 'ℳ  (surface z = 0.5 cos(0.9x) + 0.35 sin(0.6y))', '#3D7A55');
+
+    // ── U panel: chart ℝ² with ψ(p) and standard basis e₁, e₂ ──
+    cx.fillStyle = '#fcfcfc'; cx.fillRect(L.U.x, L.U.y, L.U.w, L.U.h);
+    drawChartAxes(L.U);
+
+    // Domain rectangle (the image of the drawn surface region)
+    const [ux0, uy0] = toUpx(DOM.umin, DOM.vmin, L.U);
+    const [ux1, uy1] = toUpx(DOM.umax, DOM.vmax, L.U);
+    cx.fillStyle = 'rgba(74,127,181,0.08)';
+    cx.fillRect(Math.min(ux0,ux1), Math.min(uy0,uy1),
+                Math.abs(ux1-ux0), Math.abs(uy1-uy0));
+
+    // ψ(p)
+    const [upx, upy] = toUpx(p.u, p.v, L.U);
+    cx.fillStyle = '#E8B630'; cx.strokeStyle = 'white'; cx.lineWidth = 2;
+    cx.beginPath(); cx.arc(upx, upy, 5, 0, 2*Math.PI); cx.fill(); cx.stroke();
+
+    // Standard basis at ψ(p): (1, 0) and (0, 1) — the images of ∂₁, ∂₂ under ψ
+    const [e1x, e1y] = toUpx(p.u + 1, p.v, L.U);
+    drawArrow(upx, upy, e1x, e1y, '#4A7FB5', 'e₁');
+    const [e2x, e2y] = toUpx(p.u, p.v + 1, L.U);
+    drawArrow(upx, upy, e2x, e2y, '#5B8C6F', 'e₂', [6, 8]);
+
+    cx.fillStyle = '#8a7a00';
+    cx.font = '600 11px Georgia, serif';
+    cx.textBaseline = 'middle'; cx.textAlign = 'left';
+    cx.fillText('ψ(p)', upx + 8, upy - 10);
+
+    drawPanelFrame(L.U, 'U ⊂ ℝ²  (chart)', '#2c4c77');
+
+    // Status strip
+    const uv = document.getElementById('tb-uv');
+    const uh = document.getElementById('tb-hu');
+    const vh = document.getElementById('tb-hv');
+    if (uv) uv.textContent = `(${p.u.toFixed(2)}, ${p.v.toFixed(2)})`;
+    if (uh) uh.textContent = hxp.toFixed(3);
+    if (vh) vh.textContent = hyp.toFixed(3);
+  }
+
+  // ── Drag interaction ───────────────────────────────────────
+  function pointerToChart(ev) {
+    const r = cv.getBoundingClientRect();
+    const px = ev.clientX - r.left, py = ev.clientY - r.top;
+    const L = layout(r.width, r.height);
+    if (px >= L.U.x && px <= L.U.x + L.U.w) {
+      return { panel:'U', ...fromUpx(px, py, L.U) };
+    }
+    // M panel: find nearest (u,v) by sampling a coarse grid then refining.
+    // Surface is a graph over (u,v), so search for (u,v) whose projection is
+    // closest to (px,py).
+    if (px >= L.M.x && px <= L.M.x + L.M.w) {
+      let best = { d2: Infinity, u: 0, v: 0 };
+      const N = 40;
+      for (let i = 0; i <= N; i++) {
+        for (let j = 0; j <= N; j++) {
+          const u = DOM.umin + i/N * (DOM.umax - DOM.umin);
+          const v = DOM.vmin + j/N * (DOM.vmax - DOM.vmin);
+          const P = proj(u, v, h(u, v));
+          const [sx, sy] = toMpx(P[0], P[1], L.M);
+          const d2 = (sx - px)**2 + (sy - py)**2;
+          if (d2 < best.d2) best = { d2, u, v };
+        }
+      }
+      return { panel:'M', u: best.u, v: best.v };
+    }
+    return null;
+  }
+  function clamp(pt) {
+    const pad = 0.05;
+    return {
+      u: Math.max(DOM.umin+pad, Math.min(DOM.umax-pad, pt.u)),
+      v: Math.max(DOM.vmin+pad, Math.min(DOM.vmax-pad, pt.v)),
+    };
+  }
+  cv.addEventListener('pointerdown', ev => {
+    const t = pointerToChart(ev); if (!t) return;
+    dragging = t.panel; cv.classList.add('grabbing');
+    p = clamp(t); render(); ev.preventDefault();
+  });
+  window.addEventListener('pointermove', ev => {
+    if (!dragging) return;
+    const t = pointerToChart(ev); if (!t) return;
+    p = clamp(t); render();
+  });
+  window.addEventListener('pointerup', () => {
+    dragging = null; cv.classList.remove('grabbing');
+  });
+  window.addEventListener('resize', render);
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', render);
+  } else {
+    requestAnimationFrame(render);
+  }
+})();
+</script>
+<!-- ═══ End interactive ═══ -->
