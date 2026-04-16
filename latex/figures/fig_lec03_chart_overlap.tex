@@ -10,6 +10,7 @@
   \pgfplotsset{
     colormap={cgbluetint}{rgb255(0cm)=(210,224,240) rgb255(1cm)=(112,156,200)},
     colormap={munselltint}{rgb255(0cm)=(216,232,224) rgb255(1cm)=(120,160,138)},
+    colormap={birrenredtint}{rgb255(0cm)=(245,215,210) rgb255(1cm)=(196,80,60)},
   }
 
   % ── TOP: M with O_α and O_β ────────────────────────────────
@@ -27,21 +28,23 @@
         colormap name=grsurface, mesh/rows=55, forget plot,
     ] table {data/lec03_charts_surface.dat};
 
-    % O_α patch
+    % O_α patch (no border)
     \addplot3[
         surf, opacity=0.55, shader=interp,
         colormap name=cgbluetint, mesh/rows=18, forget plot,
     ] table {data/lec03_charts_Oalpha_patch.dat};
-    \addplot3[cgblue, line width=1.2pt, no markers, forget plot]
-        table {data/lec03_charts_Oalpha_boundary.dat};
 
-    % O_β patch
+    % O_β patch (no border)
     \addplot3[
         surf, opacity=0.55, shader=interp,
         colormap name=munselltint, mesh/rows=18, forget plot,
     ] table {data/lec03_charts_Obeta_patch.dat};
-    \addplot3[munsell, line width=1.2pt, no markers, forget plot]
-        table {data/lec03_charts_Obeta_boundary.dat};
+
+    % O_α ∩ O_β overlap patch (drawn on top)
+    \addplot3[
+        surf, opacity=0.85, shader=interp,
+        colormap name=birrenredtint, mesh/rows=14, forget plot,
+    ] table {data/lec03_charts_intersect_patch_M.dat};
 
     % Shared point p
     \addplot3[only marks, mark=*, mark size=1.8pt, banana!90!black, forget plot]
@@ -53,6 +56,8 @@
         at (axis cs:-0.35,0.9,0.75) {$O_\alpha$};
     \node[font=\small, text=munsell]
         at (axis cs:2.5,-0.55,0.55) {$O_\beta$};
+    \node[font=\scriptsize, text=birrenred]
+        at (axis cs:0.95,-0.9,0.4) {$O_\alpha\cap O_\beta$};
     \node[font=\small, text=banana!60!black]
         at (axis cs:1.0,-0.1,0.32) {$p$};
   \end{axis}
@@ -69,14 +74,16 @@
       xtick=\empty, ytick=\empty,
       clip=false,
   ]
-    \addplot[fill=cgblue!15, draw=cgblue, line width=1.0pt, forget plot]
+    \addplot[fill=cgblue!15, draw=none, forget plot]
         table {data/lec03_charts_Ualpha_boundary.dat} \closedcycle;
+    \addplot[fill=birrenred!45, draw=none, forget plot]
+        table {data/lec03_charts_intersect_Ualpha.dat} \closedcycle;
     \addplot[only marks, mark=*, mark size=1.6pt, banana!90!black, forget plot]
         table {data/lec03_charts_point_p_alpha.dat};
     \node[font=\sf\small, text=birrenorange]
         at (axis cs:2.4,1.6) {$\Rn{2}$};
     \node[font=\small, text=cgblue]
-        at (axis cs:0.5,0.3) {$U_\alpha$};
+        at (axis cs:0.0,0.9) {$U_\alpha$};
     \node[font=\scriptsize, text=banana!60!black, anchor=north]
         at (axis cs:0.95,-0.14) {$\psi_\alpha(p)$};
   \end{axis}
@@ -93,14 +100,16 @@
       xtick=\empty, ytick=\empty,
       clip=false,
   ]
-    \addplot[fill=munsell!15, draw=munsell, line width=1.0pt, forget plot]
+    \addplot[fill=munsell!18, draw=none, forget plot]
         table {data/lec03_charts_Ubeta_boundary.dat} \closedcycle;
+    \addplot[fill=birrenred!45, draw=none, forget plot]
+        table {data/lec03_charts_intersect_Ubeta.dat} \closedcycle;
     \addplot[only marks, mark=*, mark size=1.6pt, banana!90!black, forget plot]
         table {data/lec03_charts_point_p_beta.dat};
     \node[font=\sf\small, text=birrenorange]
         at (axis cs:2.4,1.6) {$\Rn{2}$};
     \node[font=\small, text=munsell]
-        at (axis cs:1.0,0.6) {$U_\beta$};
+        at (axis cs:-0.4,1.25) {$U_\beta$};
     \node[font=\scriptsize, text=banana!60!black, anchor=north west]
         at (axis cs:0.88,0.38) {$\psi_\beta(p)$};
   \end{axis}

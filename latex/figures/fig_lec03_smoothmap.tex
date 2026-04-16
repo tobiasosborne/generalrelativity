@@ -29,8 +29,6 @@
     \addplot3[surf, opacity=0.55, shader=interp,
               colormap name=cgbluetint, mesh/rows=18, forget plot]
       table {data/lec03_charts_Oalpha_patch.dat};
-    \addplot3[cgblue, line width=1.2pt, no markers, forget plot]
-      table {data/lec03_charts_Oalpha_boundary.dat};
     \addplot3[only marks, mark=*, mark size=1.6pt, banana!90!black, forget plot]
       table {data/lec03_charts_point_p_M.dat};
     \node[font=\sf\small, text=spacecadet] at (axis cs:-2.4,-2.8,1.0) {$\M$};
@@ -53,8 +51,6 @@
     \addplot3[surf, opacity=0.55, shader=interp,
               colormap name=munselltint, mesh/rows=18, forget plot]
       table {data/lec03_charts_fOalpha_patch.dat};
-    \addplot3[munsell, line width=1.2pt, no markers, forget plot]
-      table {data/lec03_charts_fOalpha_boundary.dat};
     \addplot3[only marks, mark=*, mark size=1.6pt, banana!90!black, forget plot]
       table {data/lec03_charts_fp_M.dat};
     \node[font=\sf\small, text=spacecadet] at (axis cs:-2.4,-2.8,1.0) {$\M'$};
@@ -73,7 +69,7 @@
       xmin=-1.4, xmax=2.6, ymin=-1.1, ymax=1.8,
       xtick=\empty, ytick=\empty, clip=false,
   ]
-    \addplot[fill=cgblue!15, draw=cgblue, line width=1.0pt, forget plot]
+    \addplot[fill=cgblue!15, draw=none, forget plot]
       table {data/lec03_charts_Ualpha_boundary.dat} \closedcycle;
     \addplot[only marks, mark=*, mark size=1.5pt, banana!90!black, forget plot]
       table {data/lec03_charts_point_p_alpha.dat};
@@ -92,7 +88,7 @@
       xmin=-1.4, xmax=2.6, ymin=-1.1, ymax=1.8,
       xtick=\empty, ytick=\empty, clip=false,
   ]
-    \addplot[fill=munsell!15, draw=munsell, line width=1.0pt, forget plot]
+    \addplot[fill=munsell!18, draw=none, forget plot]
       table {data/lec03_charts_fUalpha_boundary.dat} \closedcycle;
     \addplot[only marks, mark=*, mark size=1.5pt, banana!90!black, forget plot]
       table {data/lec03_charts_fp_alpha.dat};

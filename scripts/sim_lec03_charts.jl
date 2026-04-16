@@ -207,6 +207,78 @@ const p_z = h(p_x, p_y)
 @assert in_ellipse(p_x, p_y, α_u₀, α_v₀, α_a, α_b, α_φ)      "p not in E_α"
 @assert in_ellipse(p_x, p_y, β_x₀, β_y₀, β_a, β_b, β_φ_raw)  "p not in E_β"
 
+# ── Intersection region U_α ∩ E_β  (for fig_lec03_chart_overlap) ──
+# Both ellipses are convex ⇒ intersection is convex ⇒ star-shaped from
+# any interior point.  Use p as the polar centre; for each angle ψ, the
+# intersection boundary lies at r(ψ) = min(r_α(ψ), r_β(ψ)) where r_*(ψ)
+# is the positive hit distance of the ray p + r(cosψ, sinψ) with each
+# ellipse boundary.
+
+function ray_to_ellipse(cx, cy, dx, dy, u₀, v₀, a, b, φ)
+    cφ, sφ = cos(φ), sin(φ)
+    ox, oy = cx - u₀, cy - v₀
+    # Rotate offset and direction into ellipse-axis frame
+    ox′ =  cφ*ox + sφ*oy
+    oy′ = -sφ*ox + cφ*oy
+    dx′ =  cφ*dx + sφ*dy
+    dy′ = -sφ*dx + cφ*dy
+    # Solve ((ox′ + r·dx′)/a)² + ((oy′ + r·dy′)/b)² = 1
+    A = (dx′/a)^2 + (dy′/b)^2
+    B = 2.0*(ox′*dx′/a^2 + oy′*dy′/b^2)
+    C = (ox′/a)^2 + (oy′/b)^2 - 1.0
+    disc = B^2 - 4.0*A*C
+    disc < 0 && return NaN
+    sqrtd = sqrt(disc)
+    r1 = (-B + sqrtd)/(2.0*A)
+    r2 = (-B - sqrtd)/(2.0*A)
+    # Positive root; interior centre ⇒ exactly one positive root per ellipse.
+    return max(r1, r2)
+end
+
+intersect_r(ψ) = min(
+    ray_to_ellipse(p_x, p_y, cos(ψ), sin(ψ), α_u₀, α_v₀, α_a, α_b, α_φ),
+    ray_to_ellipse(p_x, p_y, cos(ψ), sin(ψ), β_x₀, β_y₀, β_a, β_b, β_φ_raw),
+)
+
+# Smooth-curve boundary resolution (2D polygon fill only — cheap).
+const ψ_bdry_range = range(0.0, 2π, length=240)
+# Coarser surf-mesh resolution for the 3D patch (pgfplots TeX memory limit).
+const ψ_surf_range = range(0.0, 2π, length=48)
+const Nr_int       = 14
+
+# Boundary in α-chart (x,y) coords
+open(joinpath(DATADIR, "lec03_charts_intersect_Ualpha.dat"), "w") do io
+    @printf(io, "# u  v\n")
+    for ψ in ψ_bdry_range
+        r = intersect_r(ψ)
+        @printf(io, "%.6f  %.6f\n", p_x + r*cos(ψ), p_y + r*sin(ψ))
+    end
+end
+
+# Boundary in β-chart coords (rotate α-coords by θ_β)
+open(joinpath(DATADIR, "lec03_charts_intersect_Ubeta.dat"), "w") do io
+    @printf(io, "# u  v\n")
+    cθ, sθ = cos(θ_β), sin(θ_β)
+    for ψ in ψ_bdry_range
+        r = intersect_r(ψ)
+        x = p_x + r*cos(ψ); y = p_y + r*sin(ψ)
+        @printf(io, "%.6f  %.6f\n", cθ*x - sθ*y, sθ*x + cθ*y)
+    end
+end
+
+# Surf patch on M: coarser polar mesh sized to respect pgfplots memory.
+open(joinpath(DATADIR, "lec03_charts_intersect_patch_M.dat"), "w") do io
+    @printf(io, "# x  y  z\n")
+    for rt in range(0.0, 1.0, length=Nr_int)
+        for ψ in ψ_surf_range
+            r = intersect_r(ψ) * rt
+            x = p_x + r*cos(ψ); y = p_y + r*sin(ψ)
+            @printf(io, "%.6f  %.6f  %.6f\n", x, y, h(x, y))
+        end
+        println(io)
+    end
+end
+
 # ψ_α(p) = (p_x, p_y)
 # ψ_β(p) = R_{θ_β}(p_x, p_y)
 let (cθ, sθ) = (cos(θ_β), sin(θ_β))

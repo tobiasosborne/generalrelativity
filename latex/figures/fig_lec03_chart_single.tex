@@ -34,10 +34,6 @@
         colormap name=cgbluetint, mesh/rows=18, forget plot,
     ] table {data/lec03_charts_Oalpha_patch.dat};
 
-    % O_α boundary curve (lifted ellipse)
-    \addplot3[cgblue, line width=1.2pt, no markers, forget plot]
-        table {data/lec03_charts_Oalpha_boundary.dat};
-
     % Point p on M
     \addplot3[only marks, mark=*, mark size=1.6pt, banana!90!black, forget plot]
         table {data/lec03_charts_point_p_M.dat};
@@ -64,8 +60,8 @@
       xlabel={}, ylabel={},
       clip=false,
   ]
-    % U_α : filled ellipse
-    \addplot[fill=cgblue!15, draw=cgblue, line width=1.0pt, forget plot]
+    % U_α : filled ellipse (no border)
+    \addplot[fill=cgblue!15, draw=none, forget plot]
         table {data/lec03_charts_Ualpha_boundary.dat} \closedcycle;
 
     % ψ_α(p)
