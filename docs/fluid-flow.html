@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fluid flow on a manifold — many particles, one field</title>
+<style>
+:root {
+  --spacecadet: #3D7A55;
+  --munsell: #5B8C6F;
+  --banana: #E8B630;
+  --cgblue: #4A7FB5;
+  --isabelline: #A8D5BA;
+  --birrenred: #C4392F;
+  --birrenorange: #D97A2B;
+  --birrengray: #8C8C84;
+  --lightgray: #D4C9A8;
+}
+* { box-sizing: border-box; }
+body {
+  max-width: 56em; margin: 0 auto; padding: 1em 1.5em;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: var(--spacecadet); background: #fcfcfc;
+}
+h1 { color: var(--munsell); font-size: 1.5em; text-align: center; margin-bottom: 0.2em; }
+.subtitle { text-align: center; color: #666; font-size: 0.95em; margin-bottom: 1.5em; }
+nav.top-nav {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 0.5em 0; border-bottom: 1px solid var(--isabelline);
+  margin-bottom: 1em; font-size: 0.85em;
+}
+nav.top-nav a { text-decoration: none; color: var(--munsell); }
+.app { display: flex; gap: 1.5em; flex-wrap: wrap; justify-content: center; }
+.canvas-panel { flex: 1 1 500px; max-width: 600px; }
+.controls-panel { flex: 0 0 270px; }
+canvas {
+  display: block; width: 100%; aspect-ratio: 1 / 1; border: 1px solid #ddd;
+  border-radius: 8px; background: white;
+}
+.control-group {
+  margin-bottom: 1.2em; padding: 0.8em;
+  background: var(--isabelline); border-radius: 8px;
+}
+.control-group h3 {
+  margin: 0 0 0.5em 0; font-size: 0.85em;
+  color: var(--munsell); text-transform: uppercase; letter-spacing: 0.05em;
+}
+.control-row {
+  display: flex; align-items: center; gap: 0.5em; margin: 0.4em 0;
+  font-size: 0.85em;
+}
+.control-row label { flex: 0 0 80px; color: #444; }
+.control-row input[type=range] { flex: 1; min-width: 80px; }
+.control-row .val { flex: 0 0 50px; text-align: right; font-variant-numeric: tabular-nums; color: var(--spacecadet); font-weight: 600; }
+button {
+  display: inline-block; margin: 2px; padding: 6px 12px;
+  border: 1px solid #ccc; border-radius: 4px;
+  background: white; cursor: pointer; font-size: 0.82em; font-family: system-ui;
+}
+button:hover { background: var(--banana); border-color: var(--banana); }
+button.active { background: var(--munsell); color: white; border-color: var(--munsell); }
+.toggle-row { display: flex; align-items: center; gap: 0.5em; margin: 0.3em 0; font-size: 0.85em; }
+.toggle-row input { margin: 0; }
+.info-box {
+  margin-top: 1.5em; padding: 1em;
+  background: rgba(91,140,111,0.08); border-left: 4px solid var(--munsell);
+  border-radius: 6px; font-size: 0.9em; line-height: 1.55;
+  font-family: Georgia, serif;
+}
+.info-box strong { color: var(--munsell); }
+.stats {
+  margin-top: 0.8em; padding: 0.6em 0.8em;
+  background: #f5f5f5; border-radius: 6px;
+  font-size: 0.78em; font-variant-numeric: tabular-nums;
+  color: #555; line-height: 1.6;
+}
+.stats .label { color: #888; }
+@media (max-width: 700px) {
+  .app { flex-direction: column; }
+  .controls-panel { flex: 1 1 auto; }
+}
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <a href="index.html">&larr; All Lectures</a>
+  <span><strong>Interactive Figure</strong></span>
+  <a href="lec05.html">Lecture 5 &rarr;</a>
+</nav>
+
+<h1>Fluid flow on a manifold</h1>
+<p class="subtitle">200 particles, one vector field &mdash; the field <em>is</em> the velocity</p>
+
+<div class="app">
+  <div class="canvas-panel">
+    <canvas id="canvas" width="600" height="600"></canvas>
+  </div>
+  <div class="controls-panel">
+    <div class="control-group">
+      <h3>Time</h3>
+      <div class="control-row">
+        <label>Speed</label>
+        <input type="range" id="speed" min="0.1" max="3" step="0.1" value="1.0">
+        <span class="val" id="speed-val">1.0</span>
+      </div>
+      <div>
+        <button id="play-btn" class="active">Pause</button>
+        <button id="reset-btn">Reset</button>
+      </div>
+    </div>
+    <div class="control-group">
+      <h3>Particles</h3>
+      <div class="control-row">
+        <label>Count</label>
+        <input type="range" id="count" min="20" max="600" step="20" value="200">
+        <span class="val" id="count-val">200</span>
+      </div>
+      <div class="toggle-row">
+        <input type="checkbox" id="trails" checked>
+        <label for="trails">Trails</label>
+      </div>
+      <div class="toggle-row">
+        <input type="checkbox" id="show-field">
+        <label for="show-field">Show field arrows</label>
+      </div>
+    </div>
+    <div class="control-group">
+      <h3>Field</h3>
+      <div id="presets-host"></div>
+    </div>
+    <div class="stats" id="stats"></div>
+  </div>
+</div>
+
+<div class="info-box">
+  <strong>Read the field as fluid velocity.</strong> Each dot follows
+  the integral curve through its initial position; the entire dot
+  cloud is the &ldquo;flow&rdquo; &Phi;<sub><em>t</em></sub> applied to
+  every starting point at once.  Try the presets:
+  <em>rigid rotation</em> spins the cloud; the <em>saddle</em>
+  stretches it along one diagonal and compresses along the other;
+  the <em>source</em> and <em>sink</em> reveal divergence; the
+  <em>shear</em> distorts the cloud without changing area.  The
+  Lecture-5 default field is a gentle non-uniform drift.
+</div>
+
+<script type="module">
+import { seed, advance, presets } from './demos/swarm.mjs';
+
+const cv = document.getElementById('canvas');
+const ctx = cv.getContext('2d');
+
+const DOM = { umin: -3, umax: 3, vmin: -3, vmax: 3 };
+const SEED = 42;
+let particles = [];
+let presetIdx = 0;
+let playing = true;
+let lastT = performance.now();
+
+function setupCanvas() {
+  const dpr = window.devicePixelRatio || 1;
+  const r = cv.getBoundingClientRect();
+  cv.width = r.width * dpr;
+  cv.height = r.height * dpr;
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  return { w: r.width, h: r.height };
+}
+
+function toPx(u, v, w, h) {
+  return [
+    (u - DOM.umin) / (DOM.umax - DOM.umin) * w,
+    (DOM.vmax - v) / (DOM.vmax - DOM.vmin) * h,
+  ];
+}
+
+function reset() {
+  const N = parseInt(document.getElementById('count').value);
+  particles = seed(N, { umin: -2.5, umax: 2.5, vmin: -2.5, vmax: 2.5 }, SEED);
+  paint(true);  // force opaque background to wipe trails
+}
+
+function drawArrow(x0, y0, x1, y1, headLen) {
+  ctx.beginPath(); ctx.moveTo(x0, y0); ctx.lineTo(x1, y1); ctx.stroke();
+  const ang = Math.atan2(y1 - y0, x1 - x0);
+  ctx.beginPath();
+  ctx.moveTo(x1, y1);
+  ctx.lineTo(x1 - headLen * Math.cos(ang - 0.45),
+             y1 - headLen * Math.sin(ang - 0.45));
+  ctx.lineTo(x1 - headLen * Math.cos(ang + 0.45),
+             y1 - headLen * Math.sin(ang + 0.45));
+  ctx.closePath(); ctx.fill();
+}
+
+function drawField(field, w, h) {
+  const N = 13;
+  const scale = 0.30;
+  ctx.strokeStyle = 'rgba(74, 127, 181, 0.30)';
+  ctx.fillStyle = 'rgba(74, 127, 181, 0.30)';
+  ctx.lineWidth = 0.6;
+  for (let i = 0; i < N; i++) {
+    for (let j = 0; j < N; j++) {
+      const u = -2.7 + (5.4 * i) / (N - 1);
+      const v = -2.7 + (5.4 * j) / (N - 1);
+      const fu = field.Vu(u, v), fv = field.Vv(u, v);
+      const m = Math.hypot(fu, fv) || 1e-9;
+      const cap = 1.4;
+      const k = Math.min(m, cap) / m;
+      const [x0, y0] = toPx(u, v, w, h);
+      const [x1, y1] = toPx(u + scale * k * fu, v + scale * k * fv, w, h);
+      drawArrow(x0, y0, x1, y1, 3);
+    }
+  }
+}
+
+function drawGrid(w, h) {
+  ctx.strokeStyle = 'rgba(0,0,0,0.05)';
+  ctx.lineWidth = 0.5;
+  for (let k = -3; k <= 3; k++) {
+    const [x1, y1] = toPx(k, -3, w, h);
+    const [x2, y2] = toPx(k, 3, w, h);
+    ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); ctx.stroke();
+    const [x3, y3] = toPx(-3, k, w, h);
+    const [x4, y4] = toPx(3, k, w, h);
+    ctx.beginPath(); ctx.moveTo(x3, y3); ctx.lineTo(x4, y4); ctx.stroke();
+  }
+}
+
+function paint(forceClear) {
+  const { w, h } = setupCanvas();
+  const trails = document.getElementById('trails').checked && !forceClear;
+  if (trails) {
+    ctx.fillStyle = 'rgba(255,255,255,0.16)';
+    ctx.fillRect(0, 0, w, h);
+  } else {
+    ctx.fillStyle = 'white';
+    ctx.fillRect(0, 0, w, h);
+    drawGrid(w, h);
+    if (document.getElementById('show-field').checked) {
+      drawField(presets[presetIdx].field, w, h);
+    }
+  }
+  // Particles
+  ctx.fillStyle = 'rgba(91,140,111,0.85)';
+  for (const p of particles) {
+    const [px, py] = toPx(p[0], p[1], w, h);
+    ctx.beginPath(); ctx.arc(px, py, 1.7, 0, 2 * Math.PI); ctx.fill();
+  }
+  // Stats
+  let outOfBox = 0;
+  for (const p of particles) {
+    if (p[0] < DOM.umin || p[0] > DOM.umax || p[1] < DOM.vmin || p[1] > DOM.vmax) outOfBox++;
+  }
+  document.getElementById('stats').innerHTML =
+    `<span class="label">Particles:</span> ${particles.length}<br>` +
+    `<span class="label">Out of view:</span> ${outOfBox}`;
+}
+
+function frame(now) {
+  const dt = Math.min(0.05, (now - lastT) / 1000);
+  lastT = now;
+  if (playing) {
+    const speed = parseFloat(document.getElementById('speed').value);
+    const step = speed * dt;
+    particles = advance(particles, presets[presetIdx].field, step, 2);
+    paint(false);
+  }
+  requestAnimationFrame(frame);
+}
+
+function buildPresetsUI() {
+  const host = document.getElementById('presets-host');
+  host.innerHTML = '';
+  presets.forEach((ps, i) => {
+    const b = document.createElement('button');
+    b.textContent = ps.name;
+    b.className = i === presetIdx ? 'active' : '';
+    b.onclick = () => {
+      presetIdx = i;
+      buildPresetsUI();
+      reset();
+    };
+    host.appendChild(b);
+  });
+}
+
+document.getElementById('play-btn').onclick = (e) => {
+  playing = !playing;
+  e.target.textContent = playing ? 'Pause' : 'Play';
+  e.target.classList.toggle('active', playing);
+  if (playing) lastT = performance.now();
+};
+document.getElementById('reset-btn').onclick = reset;
+document.getElementById('count').addEventListener('input', (e) => {
+  document.getElementById('count-val').textContent = e.target.value;
+  reset();
+});
+document.getElementById('speed').addEventListener('input', (e) => {
+  document.getElementById('speed-val').textContent = parseFloat(e.target.value).toFixed(1);
+});
+document.getElementById('show-field').addEventListener('change', () => paint(true));
+document.getElementById('trails').addEventListener('change', () => paint(true));
+
+buildPresetsUI();
+reset();
+requestAnimationFrame((now) => { lastT = now; frame(now); });
+</script>
+
+</body>
+</html>
