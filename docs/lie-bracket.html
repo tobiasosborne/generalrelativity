@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Lie bracket — Φ_v ∘ Φ_w vs Φ_w ∘ Φ_v</title>
+<style>
+:root {
+  --spacecadet: #3D7A55;
+  --munsell: #5B8C6F;
+  --banana: #E8B630;
+  --cgblue: #4A7FB5;
+  --isabelline: #A8D5BA;
+  --birrenred: #C4392F;
+  --birrenorange: #D97A2B;
+  --birrengray: #8C8C84;
+  --lightgray: #D4C9A8;
+}
+* { box-sizing: border-box; }
+body {
+  max-width: 56em; margin: 0 auto; padding: 1em 1.5em;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: var(--spacecadet); background: #fcfcfc;
+}
+h1 { color: var(--munsell); font-size: 1.5em; text-align: center; margin-bottom: 0.2em; }
+.subtitle { text-align: center; color: #666; font-size: 0.95em; margin-bottom: 1.5em; }
+nav.top-nav {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 0.5em 0; border-bottom: 1px solid var(--isabelline);
+  margin-bottom: 1em; font-size: 0.85em;
+}
+nav.top-nav a { text-decoration: none; color: var(--munsell); }
+.app { display: flex; gap: 1.5em; flex-wrap: wrap; justify-content: center; }
+.canvas-panel { flex: 1 1 500px; max-width: 600px; }
+.controls-panel { flex: 0 0 280px; }
+canvas {
+  display: block; width: 100%; aspect-ratio: 1 / 1; border: 1px solid #ddd;
+  border-radius: 8px; background: white; cursor: crosshair;
+  touch-action: none;
+}
+canvas.grabbing { cursor: grabbing; }
+.control-group {
+  margin-bottom: 1.2em; padding: 0.8em;
+  background: var(--isabelline); border-radius: 8px;
+}
+.control-group h3 {
+  margin: 0 0 0.5em 0; font-size: 0.85em;
+  color: var(--munsell); text-transform: uppercase; letter-spacing: 0.05em;
+}
+.control-row {
+  display: flex; align-items: center; gap: 0.5em; margin: 0.4em 0;
+  font-size: 0.85em;
+}
+.control-row label { flex: 0 0 70px; color: #444; }
+.control-row input[type=range] { flex: 1; min-width: 80px; }
+.control-row .val { flex: 0 0 60px; text-align: right; font-variant-numeric: tabular-nums; color: var(--spacecadet); font-weight: 600; }
+button.preset {
+  display: block; width: 100%; margin: 4px 0; padding: 6px 10px;
+  border: 1px solid #ccc; border-radius: 4px;
+  background: white; cursor: pointer; font-size: 0.82em; text-align: left;
+  font-family: system-ui;
+}
+button.preset:hover { background: var(--banana); border-color: var(--banana); }
+button.preset.active { background: var(--munsell); color: white; border-color: var(--munsell); }
+.preset .desc { display: block; font-size: 0.78em; color: #777; margin-top: 2px; font-family: Georgia, serif; font-style: italic; }
+button.preset.active .desc { color: rgba(255,255,255,0.85); }
+.toggle-row { display: flex; align-items: center; gap: 0.5em; margin: 0.3em 0; font-size: 0.85em; }
+.toggle-row input { margin: 0; }
+.info-box {
+  margin-top: 1.5em; padding: 1em;
+  background: rgba(91,140,111,0.08); border-left: 4px solid var(--munsell);
+  border-radius: 6px; font-size: 0.9em; line-height: 1.55;
+  font-family: Georgia, serif;
+}
+.info-box strong { color: var(--munsell); }
+.stats {
+  margin-top: 0.8em; padding: 0.6em 0.8em;
+  background: #f5f5f5; border-radius: 6px;
+  font-size: 0.78em; font-variant-numeric: tabular-nums;
+  color: #555; line-height: 1.7;
+}
+.stats .label { color: #888; }
+.legend { font-size: 0.78em; line-height: 1.5; padding: 0.5em 0.8em; }
+.legend .swatch {
+  display: inline-block; width: 14px; height: 3px; vertical-align: middle;
+  margin: 0 4px 2px 0;
+}
+@media (max-width: 700px) {
+  .app { flex-direction: column; }
+  .controls-panel { flex: 1 1 auto; }
+}
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <a href="index.html">&larr; All Lectures</a>
+  <span><strong>Interactive Figure</strong></span>
+  <a href="lec05.html">Lecture 5 &rarr;</a>
+</nav>
+
+<h1>The Lie bracket as a parallelogram defect</h1>
+<p class="subtitle">Walk &epsilon; along <em>v</em> then <em>w</em> &mdash; vs <em>w</em> then <em>v</em>.
+The gap closes to &epsilon;<sup>2</sup>&middot;[<em>v</em>,<em>w</em>] as &epsilon; &rarr; 0.</p>
+
+<div class="app">
+  <div class="canvas-panel">
+    <canvas id="canvas" width="600" height="600"></canvas>
+    <div class="legend">
+      <span class="swatch" style="background:#5B8C6F"></span> <em>v</em> then <em>w</em> (endpoint A)
+      &nbsp;&nbsp;
+      <span class="swatch" style="background:#4A7FB5"></span> <em>w</em> then <em>v</em> (endpoint B)
+      &nbsp;&nbsp;
+      <span class="swatch" style="background:#C4392F"></span> gap A &minus; B
+    </div>
+  </div>
+  <div class="controls-panel">
+    <div class="control-group">
+      <h3>Step size</h3>
+      <div class="control-row">
+        <label>&epsilon;</label>
+        <input type="range" id="eps" min="0.02" max="0.8" step="0.01" value="0.4">
+        <span class="val" id="eps-val">0.40</span>
+      </div>
+      <div class="toggle-row">
+        <input type="checkbox" id="rescale">
+        <label for="rescale">Rescale gap by 1/&epsilon;<sup>2</sup> (reveal the limit)</label>
+      </div>
+      <div class="toggle-row">
+        <input type="checkbox" id="show-fields" checked>
+        <label for="show-fields">Show fields <em>v</em>, <em>w</em></label>
+      </div>
+    </div>
+    <div class="control-group">
+      <h3>Field pair</h3>
+      <div id="presets-host"></div>
+    </div>
+    <div class="stats" id="stats"></div>
+  </div>
+</div>
+
+<div class="info-box">
+  <strong>Two paths, one starting point.</strong> Pick a base point <em>p</em>
+  (drag it on the canvas) and a step size &epsilon;.  The
+  <span style="color:#5B8C6F">green path</span> walks &epsilon; along
+  <em>v</em>, then &epsilon; along <em>w</em>; the
+  <span style="color:#4A7FB5">blue path</span> walks &epsilon; along
+  <em>w</em>, then &epsilon; along <em>v</em>.  In a flat space with
+  <em>v</em>, <em>w</em> commuting, both paths land at the same point.
+  In general the endpoints differ by
+  <br><br>
+  <em>A</em> &minus; <em>B</em> = &epsilon;<sup>2</sup> [<em>v</em>, <em>w</em>]|<sub><em>p</em></sub> + O(&epsilon;<sup>3</sup>),
+  <br><br>
+  with the Lie bracket
+  [<em>v</em>,<em>w</em>]<sup><em>j</em></sup> = <em>v</em><sup><em>i</em></sup> &part;<sub><em>i</em></sub><em>w</em><sup><em>j</em></sup> &minus; <em>w</em><sup><em>i</em></sup> &part;<sub><em>i</em></sub><em>v</em><sup><em>j</em></sup>.
+  Drag the &epsilon; slider down: the gap shrinks like &epsilon;<sup>2</sup>.
+  Now turn on <em>Rescale by 1/&epsilon;<sup>2</sup></em>: the rescaled
+  gap arrow stops shrinking and locks onto the
+  <span style="color:#D97A2B">analytic [<em>v</em>,<em>w</em>] vector</span>
+  &mdash; the bracket emerges as the &epsilon; &rarr; 0 limit of the
+  parallelogram defect.
+</div>
+
+<script type="module">
+import { legPaths, lieBracket, presets } from './demos/lie_bracket.mjs';
+
+const cv = document.getElementById('canvas');
+const ctx = cv.getContext('2d');
+const DOM = { xmin: -3, xmax: 3, ymin: -3, ymax: 3 };
+let p = { u: 0.0, v: 0.0 };
+let presetIdx = 0;
+
+function setupCanvas() {
+  const dpr = window.devicePixelRatio || 1;
+  const r = cv.getBoundingClientRect();
+  cv.width = r.width * dpr;
+  cv.height = r.height * dpr;
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  return { w: r.width, h: r.height };
+}
+
+function toPx(u, vv, w, h) {
+  return [
+    (u - DOM.xmin) / (DOM.xmax - DOM.xmin) * w,
+    (DOM.ymax - vv) / (DOM.ymax - DOM.ymin) * h,
+  ];
+}
+function pxTo(px, py, w, h) {
+  return {
+    u: DOM.xmin + (px / w) * (DOM.xmax - DOM.xmin),
+    v: DOM.ymax - (py / h) * (DOM.ymax - DOM.ymin),
+  };
+}
+
+function drawGrid(w, h) {
+  ctx.strokeStyle = 'rgba(0,0,0,0.06)';
+  ctx.lineWidth = 0.5;
+  for (let k = -3; k <= 3; k++) {
+    const [x1, y1] = toPx(k, -3, w, h);
+    const [x2, y2] = toPx(k, 3, w, h);
+    ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); ctx.stroke();
+    const [x3, y3] = toPx(-3, k, w, h);
+    const [x4, y4] = toPx(3, k, w, h);
+    ctx.beginPath(); ctx.moveTo(x3, y3); ctx.lineTo(x4, y4); ctx.stroke();
+  }
+}
+
+function drawArrow(x0, y0, x1, y1, headLen) {
+  ctx.beginPath(); ctx.moveTo(x0, y0); ctx.lineTo(x1, y1); ctx.stroke();
+  const ang = Math.atan2(y1 - y0, x1 - x0);
+  ctx.beginPath();
+  ctx.moveTo(x1, y1);
+  ctx.lineTo(x1 - headLen * Math.cos(ang - 0.45),
+             y1 - headLen * Math.sin(ang - 0.45));
+  ctx.lineTo(x1 - headLen * Math.cos(ang + 0.45),
+             y1 - headLen * Math.sin(ang + 0.45));
+  ctx.closePath(); ctx.fill();
+}
+
+function drawField(field, color, w, h) {
+  const N = 11;
+  const scale = 0.30;
+  ctx.strokeStyle = color;
+  ctx.fillStyle = color;
+  ctx.lineWidth = 0.7;
+  for (let i = 0; i < N; i++) {
+    for (let j = 0; j < N; j++) {
+      const u = -2.6 + (5.2 * i) / (N - 1);
+      const vv = -2.6 + (5.2 * j) / (N - 1);
+      const fu = field.Vu(u, vv), fv = field.Vv(u, vv);
+      const m = Math.hypot(fu, fv) || 1e-9;
+      const cap = 1.4;  // clamp arrow length so swirling fields don't dominate
+      const m2 = Math.min(m, cap);
+      const k = m2 / m;
+      const [x0, y0] = toPx(u, vv, w, h);
+      const [x1, y1] = toPx(u + scale * k * fu, vv + scale * k * fv, w, h);
+      drawArrow(x0, y0, x1, y1, 3.5);
+    }
+  }
+}
+
+function drawPath(path, w, h, color, lw) {
+  if (path.length < 2) return;
+  ctx.strokeStyle = color;
+  ctx.lineWidth = lw;
+  ctx.beginPath();
+  const [sx, sy] = toPx(path[0][0], path[0][1], w, h);
+  ctx.moveTo(sx, sy);
+  for (let i = 1; i < path.length; i++) {
+    const [px, py] = toPx(path[i][0], path[i][1], w, h);
+    ctx.lineTo(px, py);
+  }
+  ctx.stroke();
+}
+
+function fmt(x) { return (x >= 0 ? '+' : '') + x.toFixed(3); }
+
+function render() {
+  const { w, h } = setupCanvas();
+  ctx.fillStyle = 'white'; ctx.fillRect(0, 0, w, h);
+  drawGrid(w, h);
+
+  const ps = presets[presetIdx];
+  const eps = parseFloat(document.getElementById('eps').value);
+  document.getElementById('eps-val').textContent = eps.toFixed(2);
+
+  if (document.getElementById('show-fields').checked) {
+    drawField(ps.v, 'rgba(91,140,111,0.45)', w, h);
+    drawField(ps.w, 'rgba(74,127,181,0.45)', w, h);
+  }
+
+  const legs = legPaths(ps.v, ps.w, p, eps, 32);
+  drawPath(legs.path1a, w, h, '#5B8C6F', 2.0);
+  drawPath(legs.path1b, w, h, '#5B8C6F', 2.0);
+  drawPath(legs.path2a, w, h, '#4A7FB5', 2.0);
+  drawPath(legs.path2b, w, h, '#4A7FB5', 2.0);
+
+  // p marker
+  const [px0, py0] = toPx(p.u, p.v, w, h);
+  ctx.fillStyle = '#E8B630';
+  ctx.beginPath(); ctx.arc(px0, py0, 5.5, 0, 2 * Math.PI); ctx.fill();
+  ctx.strokeStyle = 'rgba(0,0,0,0.45)'; ctx.lineWidth = 1; ctx.stroke();
+  ctx.fillStyle = '#444'; ctx.font = '12px system-ui'; ctx.textAlign = 'left';
+  ctx.fillText('p', px0 + 8, py0 - 6);
+
+  // A and B markers
+  const [ax, ay] = toPx(legs.A[0], legs.A[1], w, h);
+  ctx.fillStyle = '#5B8C6F';
+  ctx.beginPath(); ctx.arc(ax, ay, 4.5, 0, 2 * Math.PI); ctx.fill();
+  ctx.fillStyle = '#444';
+  ctx.fillText('A', ax + 6, ay - 4);
+
+  const [bx, by] = toPx(legs.B[0], legs.B[1], w, h);
+  ctx.fillStyle = '#4A7FB5';
+  ctx.beginPath(); ctx.arc(bx, by, 4.5, 0, 2 * Math.PI); ctx.fill();
+  ctx.fillStyle = '#444';
+  ctx.fillText('B', bx + 6, by + 12);
+
+  // gap A − B at p (drawn at p with optional 1/ε² rescaling)
+  const dU = legs.A[0] - legs.B[0];
+  const dV = legs.A[1] - legs.B[1];
+  const rescale = document.getElementById('rescale').checked;
+  const k = rescale ? 1 / (eps * eps) : 1;
+  const gx = dU * k, gy = dV * k;
+
+  // analytic [v,w] at p drawn dashed in orange, for comparison
+  const bAtP = lieBracket(ps.v, ps.w, p);
+  ctx.strokeStyle = '#D97A2B';
+  ctx.fillStyle = '#D97A2B';
+  ctx.lineWidth = 1.8;
+  ctx.setLineDash([5, 4]);
+  const [bx1, by1] = toPx(p.u + bAtP[0], p.v + bAtP[1], w, h);
+  drawArrow(px0, py0, bx1, by1, 6);
+  ctx.setLineDash([]);
+  ctx.fillText('[v,w]', bx1 + 4, by1 + 12);
+
+  // Measured gap (or rescaled)
+  ctx.strokeStyle = '#C4392F';
+  ctx.fillStyle = '#C4392F';
+  ctx.lineWidth = 1.8;
+  const [gx1, gy1] = toPx(p.u + gx, p.v + gy, w, h);
+  drawArrow(px0, py0, gx1, gy1, 6);
+
+  // Stats
+  const st = document.getElementById('stats');
+  st.innerHTML =
+    `<span class="label">p =</span> (${p.u.toFixed(2)}, ${p.v.toFixed(2)})<br>` +
+    `<span class="label">A =</span> (${legs.A[0].toFixed(3)}, ${legs.A[1].toFixed(3)})<br>` +
+    `<span class="label">B =</span> (${legs.B[0].toFixed(3)}, ${legs.B[1].toFixed(3)})<br>` +
+    `<span class="label">gap =</span> (${fmt(dU)}, ${fmt(dV)})<br>` +
+    `<span class="label">gap/ε² =</span> (${fmt(dU / (eps*eps))}, ${fmt(dV / (eps*eps))})<br>` +
+    `<span class="label">[v,w]|<sub>p</sub> =</span> (${fmt(bAtP[0])}, ${fmt(bAtP[1])})`;
+}
+
+function buildPresetsUI() {
+  const host = document.getElementById('presets-host');
+  host.innerHTML = '';
+  presets.forEach((ps, i) => {
+    const b = document.createElement('button');
+    b.className = 'preset' + (i === presetIdx ? ' active' : '');
+    b.innerHTML = `${ps.name}<span class="desc">${ps.desc}</span>`;
+    b.onclick = () => {
+      presetIdx = i;
+      buildPresetsUI();
+      render();
+    };
+    host.appendChild(b);
+  });
+}
+
+// Drag p on the canvas
+function eventToCoord(ev) {
+  const r = cv.getBoundingClientRect();
+  return pxTo(ev.clientX - r.left, ev.clientY - r.top, r.width, r.height);
+}
+function clamp(c) {
+  return {
+    u: Math.max(DOM.xmin + 0.4, Math.min(DOM.xmax - 0.4, c.u)),
+    v: Math.max(DOM.ymin + 0.4, Math.min(DOM.ymax - 0.4, c.v)),
+  };
+}
+let dragging = false;
+cv.addEventListener('pointerdown', (ev) => {
+  dragging = true;
+  cv.classList.add('grabbing');
+  p = clamp(eventToCoord(ev));
+  render();
+  ev.preventDefault();
+});
+window.addEventListener('pointermove', (ev) => {
+  if (!dragging) return;
+  p = clamp(eventToCoord(ev));
+  render();
+});
+window.addEventListener('pointerup', () => {
+  dragging = false;
+  cv.classList.remove('grabbing');
+});
+window.addEventListener('resize', render);
+document.getElementById('eps').addEventListener('input', render);
+document.getElementById('rescale').addEventListener('change', render);
+document.getElementById('show-fields').addEventListener('change', render);
+
+buildPresetsUI();
+render();
+</script>
+
+</body>
+</html>
