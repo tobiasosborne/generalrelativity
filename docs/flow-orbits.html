@@ -18,7 +18,7 @@
 }
 * { box-sizing: border-box; }
 body {
-  max-width: 56em; margin: 0 auto; padding: 1em 1.5em;
+  max-width: 64em; margin: 0 auto; padding: 1em 1.5em;
   font-family: system-ui, -apple-system, sans-serif;
   color: var(--spacecadet); background: #fcfcfc;
 }
@@ -31,10 +31,10 @@ nav.top-nav {
 }
 nav.top-nav a { text-decoration: none; color: var(--munsell); }
 .app { display: flex; gap: 1.5em; flex-wrap: wrap; justify-content: center; }
-.canvas-panel { flex: 1 1 500px; max-width: 600px; }
-.controls-panel { flex: 0 0 260px; }
+.canvas-panel { flex: 1 1 720px; max-width: 880px; }
+.controls-panel { flex: 0 0 240px; }
 canvas {
-  display: block; width: 100%; aspect-ratio: 1 / 1; border: 1px solid #ddd;
+  display: block; width: 100%; aspect-ratio: 2 / 1; border: 1px solid #ddd;
   border-radius: 8px; background: white; cursor: crosshair;
   touch-action: none;
 }
@@ -79,6 +79,7 @@ button.preset:hover { background: var(--banana); border-color: var(--banana); }
 @media (max-width: 700px) {
   .app { flex-direction: column; }
   .controls-panel { flex: 1 1 auto; }
+  canvas { aspect-ratio: 1 / 1; }  /* stack panels vertically on phones */
 }
 </style>
 </head>
@@ -91,12 +92,11 @@ button.preset:hover { background: var(--banana); border-color: var(--banana); }
 </nav>
 
 <h1>Flows on a manifold</h1>
-<p class="subtitle">Click anywhere to set <em>p</em> &mdash; watch its orbit
-&Phi;<sub><em>t</em></sub>(<em>p</em>) under the same vector field</p>
+<p class="subtitle">Drag <em>p</em> on either panel &mdash; chart view (left) and lifted manifold view (right) stay in lockstep.</p>
 
 <div class="app">
   <div class="canvas-panel">
-    <canvas id="canvas" width="600" height="600"></canvas>
+    <canvas id="canvas"></canvas>
   </div>
   <div class="controls-panel">
     <div class="control-group">
@@ -132,101 +132,86 @@ button.preset:hover { background: var(--banana); border-color: var(--banana); }
 </div>
 
 <div class="info-box">
-  <strong>What you're seeing:</strong> a single vector field
-  <em>v</em> on the chart with components
+  <strong>What you're seeing.</strong> Two views of the same one-parameter
+  group of diffeomorphisms.  On the <strong>left</strong> is the chart
+  picture: the vector field <em>v</em> with components
   <em>V</em><sup><em>u</em></sup> = 0.85 + 0.15·<em>v</em>,
-  <em>V</em><sup><em>v</em></sup> = 0.55·cos(0.7·<em>u</em>).
-  Click anywhere to set the starting point <em>p</em>; the green curve
-  is the orbit <em>C<sub>p</sub></em>(<em>t</em>) =
-  &Phi;<sub><em>t</em></sub>(<em>p</em>) obtained by solving
-  d<em>u</em>/d<em>t</em> = <em>V</em><sup><em>u</em></sup>,
-  d<em>v</em>/d<em>t</em> = <em>V</em><sup><em>v</em></sup>.
-  The gold dot is &Phi;<sub><em>t</em></sub>(<em>p</em>) at the
-  current time; the gold arrow at <em>p</em> is the tangent vector
-  <em>v</em>|<sub><em>p</em></sub> &mdash; literally the field value
-  at <em>p</em>, and equivalently <em>dC<sub>p</sub>/dt</em> at <em>t</em>=0.
+  <em>V</em><sup><em>v</em></sup> = 0.55·cos(0.7·<em>u</em>) on a flat
+  plane &mdash; this is the <em>(u, v)</em>-coordinate representation.
+  On the <strong>right</strong> the same data is lifted to the surface
+  &Mscr; = { (<em>u</em>, <em>v</em>, <em>z</em>) : <em>z</em> = 0.5 cos 0.9<em>u</em> + 0.35 sin 0.6<em>v</em> }
+  via &Phi;(<em>u</em>, <em>v</em>) = (<em>u</em>, <em>v</em>, <em>h</em>(<em>u</em>, <em>v</em>)).
+  Field arrows on &Mscr; are pushforwards under d&Phi;; the orbit is
+  the lifted integral curve; the gold tangent is
+  <em>v</em>|<sub><em>p</em></sub> = <em>V</em><sup><em>u</em></sup>&part;<sub><em>u</em></sub>&Phi; +
+  <em>V</em><sup><em>v</em></sup>&part;<sub><em>v</em></sub>&Phi;.
   <br><br>
-  Different starting points give different orbits, but they all
-  share <em>the same field</em>: that is what
-  &Phi;<sub><em>s</em></sub> &compfn; &Phi;<sub><em>t</em></sub> =
-  &Phi;<sub><em>t</em>+<em>s</em></sub> says &mdash; flowing for time
-  <em>t</em> then for time <em>s</em> is the same as flowing for time
-  <em>t</em>+<em>s</em>, regardless of where you started.
+  Drag <em>p</em> on either panel: clicks on the manifold panel snap to
+  the closest <em>(u, v)</em> via projection.  The two views always show
+  the same point.
 </div>
 
 <script type="module">
 import { defaultField, integrate, sampleAt } from './demos/flow.mjs';
+import { surface, liftField, makeProjector } from './demos/manifold.mjs';
 
 const cv = document.getElementById('canvas');
 const ctx = cv.getContext('2d');
+const DOM = { umin: -3, umax: 3, vmin: -3, vmax: 3 };
 
-const DOM = { xmin: -3, xmax: 3, ymin: -3, ymax: 3 };
 let p = { u: -2.0, v: -0.3 };
 let tCurrent = 3.0;
-const T_END = 6.0;        // orbit integrated forward to t = 6
-const STEP = 0.01;        // RK4 step
+const T_END = 6.0;
+const STEP  = 0.01;
+const view  = { yaw: Math.PI * 0.20, pitch: Math.PI * 0.22 };
+const projector = makeProjector(view);
 
 function setupCanvas() {
   const dpr = window.devicePixelRatio || 1;
   const r = cv.getBoundingClientRect();
-  cv.width = r.width * dpr;
-  cv.height = r.height * dpr;
+  cv.width  = Math.round(r.width * dpr);
+  cv.height = Math.round(r.height * dpr);
   ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   return { w: r.width, h: r.height };
 }
 
-function toPx(u, v, w, h) {
-  return [
-    (u - DOM.xmin) / (DOM.xmax - DOM.xmin) * w,
-    (DOM.ymax - v) / (DOM.ymax - DOM.ymin) * h,
-  ];
-}
-function pxTo(px, py, w, h) {
+function layout(w, h) {
+  const gap = 8;
+  const half = (w - gap) / 2;
   return {
-    u: DOM.xmin + (px / w) * (DOM.xmax - DOM.xmin),
-    v: DOM.ymax - (py / h) * (DOM.ymax - DOM.ymin),
+    U: { x: 0,           y: 0, w: half, h: h },
+    M: { x: half + gap,  y: 0, w: half, h: h },
   };
 }
 
-function drawGrid(w, h) {
-  ctx.strokeStyle = 'rgba(0,0,0,0.06)';
-  ctx.lineWidth = 0.5;
-  for (let k = -3; k <= 3; k++) {
-    const [x1, y1] = toPx(k, -3, w, h);
-    const [x2, y2] = toPx(k, 3, w, h);
-    ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); ctx.stroke();
-    const [x3, y3] = toPx(-3, k, w, h);
-    const [x4, y4] = toPx(3, k, w, h);
-    ctx.beginPath(); ctx.moveTo(x3, y3); ctx.lineTo(x4, y4); ctx.stroke();
-  }
-  ctx.fillStyle = 'rgba(0,0,0,0.3)';
-  ctx.font = '12px system-ui';
-  ctx.textAlign = 'center';
-  const [lx, ly] = toPx(2.85, -0.18, w, h);
-  ctx.fillText('u', lx, ly);
-  const [lx2, ly2] = toPx(0.18, 2.85, w, h);
-  ctx.fillText('v', lx2, ly2);
+// ── Chart-panel mapping ───────────────────────────────────────────
+function toUpx(u, v, panel) {
+  const side = Math.min(panel.w, panel.h) * 0.86;
+  const s = side / (DOM.umax - DOM.umin);
+  return [
+    panel.x + panel.w / 2 + s * u,
+    panel.y + panel.h / 2 - s * v,
+  ];
+}
+function fromUpx(px, py, panel) {
+  const side = Math.min(panel.w, panel.h) * 0.86;
+  const s = side / (DOM.umax - DOM.umin);
+  return {
+    u: (px - (panel.x + panel.w / 2)) / s,
+    v: ((panel.y + panel.h / 2) - py) / s,
+  };
 }
 
-function drawField(w, h) {
-  const N = 13;
-  const scale = 0.32;
-  ctx.strokeStyle = 'rgba(74, 127, 181, 0.55)';
-  ctx.fillStyle = 'rgba(74, 127, 181, 0.55)';
-  ctx.lineWidth = 0.8;
-  for (let i = 0; i < N; i++) {
-    for (let j = 0; j < N; j++) {
-      const u = -2.6 + (5.2 * i) / (N - 1);
-      const v = -2.6 + (5.2 * j) / (N - 1);
-      const vu = defaultField.Vu(u, v);
-      const vv = defaultField.Vv(u, v);
-      const [x0, y0] = toPx(u, v, w, h);
-      const [x1, y1] = toPx(u + scale * vu, v + scale * vv, w, h);
-      drawArrow(x0, y0, x1, y1, 4);
-    }
-  }
+// ── Manifold-panel mapping ───────────────────────────────────────
+function toMpx(X, Y, panel) {
+  const s = Math.min(panel.w, panel.h) * 0.18;
+  return [
+    panel.x + panel.w / 2 + s * X,
+    panel.y + panel.h * 0.62 - s * Y,
+  ];
 }
 
+// ── Drawing primitives ───────────────────────────────────────────
 function drawArrow(x0, y0, x1, y1, headLen) {
   ctx.beginPath(); ctx.moveTo(x0, y0); ctx.lineTo(x1, y1); ctx.stroke();
   const ang = Math.atan2(y1 - y0, x1 - x0);
@@ -236,26 +221,249 @@ function drawArrow(x0, y0, x1, y1, headLen) {
              y1 - headLen * Math.sin(ang - 0.45));
   ctx.lineTo(x1 - headLen * Math.cos(ang + 0.45),
              y1 - headLen * Math.sin(ang + 0.45));
-  ctx.closePath();
-  ctx.fill();
+  ctx.closePath(); ctx.fill();
 }
 
-function drawOrbit(path, w, h, color, lw) {
-  ctx.strokeStyle = color;
-  ctx.lineWidth = lw;
+function drawPanelFrame(panel, label, colour) {
+  ctx.strokeStyle = '#e4e4e4'; ctx.lineWidth = 1;
+  ctx.strokeRect(panel.x + 0.5, panel.y + 0.5, panel.w - 1, panel.h - 1);
+  ctx.fillStyle = colour;
+  ctx.font = '600 12px system-ui, sans-serif';
+  ctx.textBaseline = 'top'; ctx.textAlign = 'left';
+  ctx.fillText(label, panel.x + 8, panel.y + 6);
+}
+
+// ── Chart panel ──────────────────────────────────────────────────
+function drawGridU(panel) {
+  ctx.strokeStyle = 'rgba(0,0,0,0.06)';
+  ctx.lineWidth = 0.5;
+  for (let k = -3; k <= 3; k++) {
+    const [x1, y1] = toUpx(k, -3, panel);
+    const [x2, y2] = toUpx(k, 3, panel);
+    ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); ctx.stroke();
+    const [x3, y3] = toUpx(-3, k, panel);
+    const [x4, y4] = toUpx(3, k, panel);
+    ctx.beginPath(); ctx.moveTo(x3, y3); ctx.lineTo(x4, y4); ctx.stroke();
+  }
+  ctx.fillStyle = 'rgba(0,0,0,0.3)';
+  ctx.font = '12px system-ui'; ctx.textAlign = 'center';
+  const [lx, ly] = toUpx(2.85, -0.18, panel);
+  ctx.fillText('u', lx, ly);
+  const [lx2, ly2] = toUpx(0.18, 2.85, panel);
+  ctx.fillText('v', lx2, ly2);
+}
+
+function drawFieldU(panel) {
+  const N = 13;
+  const scale = 0.32;
+  ctx.strokeStyle = 'rgba(74, 127, 181, 0.55)';
+  ctx.fillStyle  = 'rgba(74, 127, 181, 0.55)';
+  ctx.lineWidth = 0.8;
+  for (let i = 0; i < N; i++) {
+    for (let j = 0; j < N; j++) {
+      const u = -2.6 + (5.2 * i) / (N - 1);
+      const v = -2.6 + (5.2 * j) / (N - 1);
+      const vu = defaultField.Vu(u, v);
+      const vv = defaultField.Vv(u, v);
+      const [x0, y0] = toUpx(u, v, panel);
+      const [x1, y1] = toUpx(u + scale * vu, v + scale * vv, panel);
+      drawArrow(x0, y0, x1, y1, 4);
+    }
+  }
+}
+
+function drawOrbitU(panel, path, color, lw) {
+  if (path.length < 2) return;
+  ctx.strokeStyle = color; ctx.lineWidth = lw;
   ctx.beginPath();
-  const [sx, sy] = toPx(path[0][0], path[0][1], w, h);
+  const [sx, sy] = toUpx(path[0][0], path[0][1], panel);
   ctx.moveTo(sx, sy);
   for (let i = 1; i < path.length; i++) {
-    const [px, py] = toPx(path[i][0], path[i][1], w, h);
+    const [px, py] = toUpx(path[i][0], path[i][1], panel);
     ctx.lineTo(px, py);
   }
   ctx.stroke();
 }
 
-let cachedOrbit = null;
-let cachedKey = '';
+function renderUPanel(panel, orbit, phi) {
+  ctx.fillStyle = '#fcfcfc';
+  ctx.fillRect(panel.x, panel.y, panel.w, panel.h);
+  drawGridU(panel);
 
+  if (document.getElementById('show-field').checked) drawFieldU(panel);
+
+  // full orbit faint, traversed-so-far stronger
+  drawOrbitU(panel, orbit, 'rgba(91,140,111,0.25)', 1.2);
+  const i = Math.max(1, Math.floor((tCurrent / T_END) * (orbit.length - 1)));
+  drawOrbitU(panel, orbit.slice(0, i + 1), 'rgb(91,140,111)', 2.0);
+
+  // tangent v|_p
+  if (document.getElementById('show-tangent').checked) {
+    const vu = defaultField.Vu(p.u, p.v);
+    const vv = defaultField.Vv(p.u, p.v);
+    const s = 0.5;
+    const [x0, y0] = toUpx(p.u, p.v, panel);
+    const [x1, y1] = toUpx(p.u + s * vu, p.v + s * vv, panel);
+    ctx.strokeStyle = 'rgb(180,130,30)'; ctx.fillStyle = 'rgb(180,130,30)';
+    ctx.lineWidth = 1.6;
+    drawArrow(x0, y0, x1, y1, 6);
+  }
+
+  // p marker
+  const [px0, py0] = toUpx(p.u, p.v, panel);
+  ctx.fillStyle = '#E8B630';
+  ctx.beginPath(); ctx.arc(px0, py0, 5.5, 0, 2 * Math.PI); ctx.fill();
+  ctx.strokeStyle = 'rgba(0,0,0,0.4)'; ctx.lineWidth = 1; ctx.stroke();
+  ctx.fillStyle = '#444';
+  ctx.font = '12px system-ui'; ctx.textAlign = 'left';
+  ctx.fillText('p', px0 + 8, py0 - 6);
+
+  // Φ_t(p) marker
+  const [tx, ty] = toUpx(phi[0], phi[1], panel);
+  ctx.fillStyle = '#E8B630';
+  ctx.beginPath(); ctx.arc(tx, ty, 5, 0, 2 * Math.PI); ctx.fill();
+  ctx.strokeStyle = 'rgba(0,0,0,0.4)'; ctx.lineWidth = 1; ctx.stroke();
+  ctx.fillStyle = '#444';
+  ctx.fillText('Φ_t(p)', tx + 8, ty - 6);
+
+  drawPanelFrame(panel, 'U ⊂ ℝ²  (chart)', '#2c4c77');
+}
+
+// ── Manifold panel ───────────────────────────────────────────────
+function drawSurfaceM(panel) {
+  const N = 26;
+  const du = (DOM.umax - DOM.umin) / N;
+  const dv = (DOM.vmax - DOM.vmin) / N;
+  const quads = [];
+  for (let i = 0; i < N; i++) {
+    const u0 = DOM.umin + i * du, u1 = u0 + du;
+    for (let j = 0; j < N; j++) {
+      const v0 = DOM.vmin + j * dv, v1 = v0 + dv;
+      const z00 = surface.h(u0, v0), z10 = surface.h(u1, v0);
+      const z11 = surface.h(u1, v1), z01 = surface.h(u0, v1);
+      const P00 = projector(u0, v0, z00);
+      const P10 = projector(u1, v0, z10);
+      const P11 = projector(u1, v1, z11);
+      const P01 = projector(u0, v1, z01);
+      quads.push({
+        pts: [
+          toMpx(P00[0], P00[1], panel), toMpx(P10[0], P10[1], panel),
+          toMpx(P11[0], P11[1], panel), toMpx(P01[0], P01[1], panel),
+        ],
+        depth: (P00[2] + P10[2] + P11[2] + P01[2]) / 4,
+        z: (z00 + z10 + z11 + z01) / 4,
+      });
+    }
+  }
+  quads.sort((a, b) => a.depth - b.depth);
+  for (const q of quads) {
+    const t = Math.max(0, Math.min(1, (q.z + 0.85) / 1.7));
+    const r = Math.round(232 - 40 * t);
+    const g = Math.round(237 - 25 * t);
+    const b = Math.round(234 - 35 * t);
+    ctx.fillStyle = `rgb(${r},${g},${b})`;
+    ctx.strokeStyle = 'rgba(90,110,95,0.28)'; ctx.lineWidth = 0.5;
+    ctx.beginPath();
+    ctx.moveTo(q.pts[0][0], q.pts[0][1]);
+    for (let k = 1; k < 4; k++) ctx.lineTo(q.pts[k][0], q.pts[k][1]);
+    ctx.closePath(); ctx.fill(); ctx.stroke();
+  }
+}
+
+function drawFieldM(panel) {
+  const N = 9;  // sparser on M to avoid clutter
+  const scale = 0.30;
+  ctx.strokeStyle = 'rgba(74, 127, 181, 0.65)';
+  ctx.fillStyle  = 'rgba(74, 127, 181, 0.65)';
+  ctx.lineWidth = 0.8;
+  for (let i = 0; i < N; i++) {
+    for (let j = 0; j < N; j++) {
+      const u = -2.5 + (5 * i) / (N - 1);
+      const v = -2.5 + (5 * j) / (N - 1);
+      const Vlift = liftField(defaultField, u, v);
+      const base = projector(u, v, surface.h(u, v));
+      const tip  = projector(
+        u + scale * Vlift[0],
+        v + scale * Vlift[1],
+        surface.h(u, v) + scale * Vlift[2],
+      );
+      const [x0, y0] = toMpx(base[0], base[1], panel);
+      const [x1, y1] = toMpx(tip[0],  tip[1],  panel);
+      drawArrow(x0, y0, x1, y1, 4);
+    }
+  }
+}
+
+function drawOrbitM(panel, chartPath, color, lw) {
+  if (chartPath.length < 2) return;
+  ctx.strokeStyle = color; ctx.lineWidth = lw;
+  ctx.beginPath();
+  for (let i = 0; i < chartPath.length; i++) {
+    const [u, v] = chartPath[i];
+    const P = projector(u, v, surface.h(u, v));
+    const [px, py] = toMpx(P[0], P[1], panel);
+    if (i === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+  }
+  ctx.stroke();
+}
+
+function projAndPx(u, v, panel, z) {
+  const zz = (z === undefined) ? surface.h(u, v) : z;
+  const P = projector(u, v, zz);
+  return toMpx(P[0], P[1], panel);
+}
+
+function renderMPanel(panel, orbit, phi) {
+  ctx.fillStyle = '#f7fbf9';
+  ctx.fillRect(panel.x, panel.y, panel.w, panel.h);
+  drawSurfaceM(panel);
+
+  if (document.getElementById('show-field').checked) drawFieldM(panel);
+
+  // full orbit faint
+  drawOrbitM(panel, orbit, 'rgba(91,140,111,0.30)', 1.4);
+  // traversed segment stronger
+  const i = Math.max(1, Math.floor((tCurrent / T_END) * (orbit.length - 1)));
+  drawOrbitM(panel, orbit.slice(0, i + 1), 'rgb(74,120,90)', 2.4);
+
+  // tangent v|_p (lifted)
+  if (document.getElementById('show-tangent').checked) {
+    const Vlift = liftField(defaultField, p.u, p.v);
+    const s = 0.6;
+    const baseP = projAndPx(p.u, p.v, panel);
+    const tipP  = (() => {
+      const P = projector(
+        p.u + s * Vlift[0],
+        p.v + s * Vlift[1],
+        surface.h(p.u, p.v) + s * Vlift[2],
+      );
+      return toMpx(P[0], P[1], panel);
+    })();
+    ctx.strokeStyle = 'rgb(180,130,30)'; ctx.fillStyle = 'rgb(180,130,30)';
+    ctx.lineWidth = 1.8;
+    drawArrow(baseP[0], baseP[1], tipP[0], tipP[1], 7);
+  }
+
+  // p
+  const [pmx, pmy] = projAndPx(p.u, p.v, panel);
+  ctx.fillStyle = '#E8B630'; ctx.strokeStyle = 'white'; ctx.lineWidth = 2;
+  ctx.beginPath(); ctx.arc(pmx, pmy, 6, 0, 2 * Math.PI); ctx.fill(); ctx.stroke();
+  ctx.fillStyle = '#8a7a00';
+  ctx.font = '700 12px Georgia, serif'; ctx.textAlign = 'left';
+  ctx.fillText('p', pmx + 9, pmy - 8);
+
+  // Φ_t(p)
+  const [tmx, tmy] = projAndPx(phi[0], phi[1], panel);
+  ctx.fillStyle = '#E8B630'; ctx.strokeStyle = 'white'; ctx.lineWidth = 2;
+  ctx.beginPath(); ctx.arc(tmx, tmy, 5, 0, 2 * Math.PI); ctx.fill(); ctx.stroke();
+  ctx.fillStyle = '#8a7a00';
+  ctx.fillText('Φ_t(p)', tmx + 9, tmy - 8);
+
+  drawPanelFrame(panel, 'ℳ  (lifted to z = h(u, v))', '#3D7A55');
+}
+
+// ── Orbit cache ──────────────────────────────────────────────────
+let cachedOrbit = null, cachedKey = '';
 function getOrbit() {
   const k = `${p.u.toFixed(4)},${p.v.toFixed(4)}`;
   if (k !== cachedKey) {
@@ -268,65 +476,26 @@ function getOrbit() {
 
 function render() {
   const { w, h } = setupCanvas();
+  const L = layout(w, h);
+  ctx.clearRect(0, 0, w, h);
+
+  const orbit = getOrbit();
+  const phi = sampleAt(orbit, T_END, tCurrent);
 
   document.getElementById('t-val').textContent = tCurrent.toFixed(2);
   document.getElementById('t-slider').value = tCurrent;
 
-  ctx.fillStyle = 'white';
-  ctx.fillRect(0, 0, w, h);
-  drawGrid(w, h);
-
-  if (document.getElementById('show-field').checked) drawField(w, h);
-
-  const orbit = getOrbit();
-
-  // Draw full orbit faint
-  drawOrbit(orbit, w, h, 'rgba(91,140,111,0.25)', 1.2);
-  // Draw "traversed so far" stronger
-  const idxF = (tCurrent / T_END) * (orbit.length - 1);
-  const i = Math.max(1, Math.floor(idxF));
-  const traversed = orbit.slice(0, i + 1);
-  drawOrbit(traversed, w, h, 'rgb(91,140,111)', 2.0);
-
-  // Tangent v|_p at p
-  if (document.getElementById('show-tangent').checked) {
-    const vu = defaultField.Vu(p.u, p.v);
-    const vv = defaultField.Vv(p.u, p.v);
-    const s = 0.5;
-    const [x0, y0] = toPx(p.u, p.v, w, h);
-    const [x1, y1] = toPx(p.u + s * vu, p.v + s * vv, w, h);
-    ctx.strokeStyle = 'rgb(180, 130, 30)';
-    ctx.fillStyle = 'rgb(180, 130, 30)';
-    ctx.lineWidth = 1.6;
-    drawArrow(x0, y0, x1, y1, 6);
-  }
-
-  // p marker
-  const [px0, py0] = toPx(p.u, p.v, w, h);
-  ctx.fillStyle = 'rgb(232, 182, 48)';
-  ctx.beginPath(); ctx.arc(px0, py0, 5.5, 0, 2 * Math.PI); ctx.fill();
-  ctx.strokeStyle = 'rgba(0,0,0,0.4)'; ctx.lineWidth = 1; ctx.stroke();
-  ctx.fillStyle = '#444'; ctx.font = '12px system-ui'; ctx.textAlign = 'left';
-  ctx.fillText('p', px0 + 8, py0 - 6);
-
-  // Φ_t(p) marker
-  const phi = sampleAt(orbit, T_END, tCurrent);
-  const [tx, ty] = toPx(phi[0], phi[1], w, h);
-  ctx.fillStyle = 'rgb(232, 182, 48)';
-  ctx.beginPath(); ctx.arc(tx, ty, 5, 0, 2 * Math.PI); ctx.fill();
-  ctx.strokeStyle = 'rgba(0,0,0,0.4)'; ctx.lineWidth = 1; ctx.stroke();
-  ctx.fillStyle = '#444';
-  ctx.fillText('Φ_t(p)', tx + 8, ty - 6);
+  renderUPanel(L.U, orbit, phi);
+  renderMPanel(L.M, orbit, phi);
 
   // Stats
-  const st = document.getElementById('stats');
-  st.innerHTML =
+  document.getElementById('stats').innerHTML =
     `<span class="label">p =</span> (${p.u.toFixed(2)}, ${p.v.toFixed(2)})<br>` +
     `<span class="label">Φ_t(p) =</span> (${phi[0].toFixed(2)}, ${phi[1].toFixed(2)})<br>` +
     `<span class="label">v|<sub>p</sub> =</span> (${defaultField.Vu(p.u,p.v).toFixed(3)}, ${defaultField.Vv(p.u,p.v).toFixed(3)})`;
 }
 
-// Animation loop
+// ── Animation loop ───────────────────────────────────────────────
 let last = performance.now();
 function frame(now) {
   const dt = (now - last) / 1000;
@@ -338,38 +507,58 @@ function frame(now) {
   requestAnimationFrame(frame);
 }
 
-// Drag handling
-function eventToCoord(ev) {
+// ── Drag interaction (works on either panel) ─────────────────────
+function pointerToChart(ev) {
   const r = cv.getBoundingClientRect();
-  const px = ev.clientX - r.left;
-  const py = ev.clientY - r.top;
-  return pxTo(px, py, r.width, r.height);
+  const px = ev.clientX - r.left, py = ev.clientY - r.top;
+  const L = layout(r.width, r.height);
+  if (px >= L.U.x && px <= L.U.x + L.U.w) {
+    return { panel: 'U', ...fromUpx(px, py, L.U) };
+  }
+  if (px >= L.M.x && px <= L.M.x + L.M.w) {
+    // Brute-force grid search for the nearest visible (u, v).
+    let best = { d2: Infinity, u: 0, v: 0 };
+    const N = 36;
+    for (let i = 0; i <= N; i++) {
+      for (let j = 0; j <= N; j++) {
+        const u = DOM.umin + (i / N) * (DOM.umax - DOM.umin);
+        const v = DOM.vmin + (j / N) * (DOM.vmax - DOM.vmin);
+        const P = projector(u, v, surface.h(u, v));
+        const [sx, sy] = toMpx(P[0], P[1], L.M);
+        const d2 = (sx - px) ** 2 + (sy - py) ** 2;
+        if (d2 < best.d2) best = { d2, u, v };
+      }
+    }
+    return { panel: 'M', u: best.u, v: best.v };
+  }
+  return null;
 }
 function clamp(c) {
   return {
-    u: Math.max(DOM.xmin + 0.05, Math.min(DOM.xmax - 0.05, c.u)),
-    v: Math.max(DOM.ymin + 0.05, Math.min(DOM.ymax - 0.05, c.v)),
+    u: Math.max(DOM.umin + 0.05, Math.min(DOM.umax - 0.05, c.u)),
+    v: Math.max(DOM.vmin + 0.05, Math.min(DOM.vmax - 0.05, c.v)),
   };
 }
 let dragging = false;
 cv.addEventListener('pointerdown', (ev) => {
+  const t = pointerToChart(ev); if (!t) return;
   dragging = true;
   cv.classList.add('grabbing');
-  p = clamp(eventToCoord(ev));
+  p = clamp(t);
   cachedKey = '';
-  tCurrent = 0;  // restart orbit from t=0 so user sees it grow
+  tCurrent = 0;
   render();
   ev.preventDefault();
 });
 window.addEventListener('pointermove', (ev) => {
   if (!dragging) return;
-  p = clamp(eventToCoord(ev));
+  const t = pointerToChart(ev); if (!t) return;
+  p = clamp(t);
   cachedKey = '';
   render();
 });
 window.addEventListener('pointerup', () => {
-  dragging = false;
-  cv.classList.remove('grabbing');
+  dragging = false; cv.classList.remove('grabbing');
 });
 window.addEventListener('resize', render);
 
