@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Covectors as level sets — ω(v) by counting line crossings</title>
+<style>
+:root {
+  --spacecadet: #3D7A55;
+  --munsell: #5B8C6F;
+  --banana: #E8B630;
+  --cgblue: #4A7FB5;
+  --isabelline: #A8D5BA;
+  --birrenred: #C4392F;
+  --birrenorange: #D97A2B;
+  --birrengray: #8C8C84;
+  --lightgray: #D4C9A8;
+}
+* { box-sizing: border-box; }
+body {
+  max-width: 56em; margin: 0 auto; padding: 1em 1.5em;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: var(--spacecadet); background: #fcfcfc;
+}
+h1 { color: var(--munsell); font-size: 1.5em; text-align: center; margin-bottom: 0.2em; }
+.subtitle { text-align: center; color: #666; font-size: 0.95em; margin-bottom: 1.5em; }
+nav.top-nav {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 0.5em 0; border-bottom: 1px solid var(--isabelline);
+  margin-bottom: 1em; font-size: 0.85em;
+}
+nav.top-nav a { text-decoration: none; color: var(--munsell); }
+.app { display: flex; gap: 1.5em; flex-wrap: wrap; justify-content: center; }
+.canvas-panel { flex: 1 1 500px; max-width: 600px; }
+.controls-panel { flex: 0 0 270px; }
+canvas {
+  display: block; width: 100%; aspect-ratio: 1 / 1; border: 1px solid #ddd;
+  border-radius: 8px; background: white; cursor: grab;
+  touch-action: none;
+}
+canvas.grabbing { cursor: grabbing; }
+.control-group {
+  margin-bottom: 1.2em; padding: 0.8em;
+  background: var(--isabelline); border-radius: 8px;
+}
+.control-group h3 {
+  margin: 0 0 0.5em 0; font-size: 0.85em;
+  color: var(--munsell); text-transform: uppercase; letter-spacing: 0.05em;
+}
+.control-row {
+  display: flex; align-items: center; gap: 0.5em; margin: 0.4em 0;
+  font-size: 0.85em;
+}
+.control-row label { flex: 0 0 70px; color: #444; }
+.control-row input[type=range] { flex: 1; min-width: 80px; }
+.control-row .val { flex: 0 0 60px; text-align: right; font-variant-numeric: tabular-nums; color: var(--spacecadet); font-weight: 600; }
+.info-box {
+  margin-top: 1.5em; padding: 1em;
+  background: rgba(91,140,111,0.08); border-left: 4px solid var(--munsell);
+  border-radius: 6px; font-size: 0.9em; line-height: 1.55;
+  font-family: Georgia, serif;
+}
+.info-box strong { color: var(--munsell); }
+.stats {
+  margin-top: 0.8em; padding: 0.6em 0.8em;
+  background: #f5f5f5; border-radius: 6px;
+  font-size: 0.78em; font-variant-numeric: tabular-nums;
+  color: #555; line-height: 1.7;
+}
+.stats .label { color: #888; }
+.legend { font-size: 0.78em; line-height: 1.5; padding: 0.5em 0.8em; }
+.legend .swatch { display: inline-block; width: 14px; height: 3px; vertical-align: middle; margin: 0 4px 2px 0; }
+@media (max-width: 700px) { .app { flex-direction: column; } .controls-panel { flex: 1 1 auto; } }
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <a href="index.html">&larr; All Lectures</a>
+  <span><strong>Interactive Figure</strong></span>
+  <a href="lec06.html">Lecture 6 &rarr;</a>
+</nav>
+
+<h1>Covectors as level sets</h1>
+<p class="subtitle">A covector &omega; is a stack of parallel lines.  &omega;(<em>v</em>) is the (signed) number of lines you cross going from 0 to <em>v</em>.</p>
+
+<div class="app">
+  <div class="canvas-panel">
+    <canvas id="canvas" width="600" height="600"></canvas>
+    <div class="legend">
+      <span class="swatch" style="background:#5B8C6F"></span> vector <em>v</em>
+      &nbsp;&nbsp;
+      <span class="swatch" style="background:#4A7FB5"></span> covector &omega; (gradient direction)
+      &nbsp;&nbsp;
+      <span style="color:#4A7FB5; font-weight:600">|||</span> level lines &omega;&middot;<em>x</em> = <em>k</em>
+    </div>
+  </div>
+  <div class="controls-panel">
+    <div class="control-group">
+      <h3>Covector &omega;</h3>
+      <div class="control-row">
+        <label>&omega;<sub>1</sub></label>
+        <input type="range" id="w1" min="-3" max="3" step="0.05" value="1.0">
+        <span class="val" id="w1-val">1.00</span>
+      </div>
+      <div class="control-row">
+        <label>&omega;<sub>2</sub></label>
+        <input type="range" id="w2" min="-3" max="3" step="0.05" value="0.5">
+        <span class="val" id="w2-val">0.50</span>
+      </div>
+    </div>
+    <div class="control-group">
+      <h3>Vector <em>v</em> (drag tip)</h3>
+      <div class="control-row">
+        <label><em>v</em><sup>1</sup></label>
+        <input type="range" id="v1" min="-2.5" max="2.5" step="0.05" value="1.4">
+        <span class="val" id="v1-val">1.40</span>
+      </div>
+      <div class="control-row">
+        <label><em>v</em><sup>2</sup></label>
+        <input type="range" id="v2" min="-2.5" max="2.5" step="0.05" value="0.8">
+        <span class="val" id="v2-val">0.80</span>
+      </div>
+    </div>
+    <div class="stats" id="stats"></div>
+  </div>
+</div>
+
+<div class="info-box">
+  <strong>The classical picture of a covector.</strong> A vector is an
+  arrow.  A covector is a <em>stack of equally spaced parallel lines</em>:
+  the kernel &omega;&middot;<em>x</em> = 0 plus its integer translates.
+  Acting on a vector means <em>counting</em>: &omega;(<em>v</em>) is the
+  signed number of lines that the segment 0 &rarr; <em>v</em> crosses.
+  Drag <em>v</em>'s tip on the canvas: the integer-valued counter under
+  &ldquo;crossings&rdquo; jumps as the arrow tip sweeps past each line.
+  <br><br>
+  When &omega; rotates (slide &omega;<sub>1</sub>, &omega;<sub>2</sub>),
+  the level-line stack rotates too, and the spacing &ndash; equal to
+  1/|&omega;| in the plane &ndash; tightens as |&omega;| grows.  The
+  numeric value &omega;(<em>v</em>) = &omega;<sub>1</sub><em>v</em><sup>1</sup>
+  + &omega;<sub>2</sub><em>v</em><sup>2</sup> is just the algebra
+  underneath this picture.
+</div>
+
+<script type="module">
+import { apply, levelSets, crossingsCount } from './demos/covector.mjs';
+
+const cv = document.getElementById('canvas');
+const ctx = cv.getContext('2d');
+const DOM = { umin: -2.5, umax: 2.5, vmin: -2.5, vmax: 2.5 };
+
+let omega = [1.0, 0.5];
+let v = [1.4, 0.8];
+
+function setupCanvas() {
+  const dpr = window.devicePixelRatio || 1;
+  const r = cv.getBoundingClientRect();
+  cv.width = r.width * dpr;
+  cv.height = r.height * dpr;
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  return { w: r.width, h: r.height };
+}
+function toPx(u, vv, w, h) {
+  return [
+    (u - DOM.umin) / (DOM.umax - DOM.umin) * w,
+    (DOM.vmax - vv) / (DOM.vmax - DOM.vmin) * h,
+  ];
+}
+function pxTo(px, py, w, h) {
+  return [
+    DOM.umin + (px / w) * (DOM.umax - DOM.umin),
+    DOM.vmax - (py / h) * (DOM.vmax - DOM.vmin),
+  ];
+}
+
+function drawAxes(w, h) {
+  ctx.strokeStyle = 'rgba(0,0,0,0.06)'; ctx.lineWidth = 0.5;
+  for (let k = -2; k <= 2; k++) {
+    const [x1, y1] = toPx(k, -2.5, w, h);
+    const [x2, y2] = toPx(k, 2.5, w, h);
+    ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); ctx.stroke();
+    const [x3, y3] = toPx(-2.5, k, w, h);
+    const [x4, y4] = toPx(2.5, k, w, h);
+    ctx.beginPath(); ctx.moveTo(x3, y3); ctx.lineTo(x4, y4); ctx.stroke();
+  }
+  // Bold axes
+  ctx.strokeStyle = 'rgba(0,0,0,0.18)'; ctx.lineWidth = 1;
+  const [zx, zy] = toPx(0, 0, w, h);
+  const [_, top] = toPx(0, 2.5, w, h);
+  const [__, bot] = toPx(0, -2.5, w, h);
+  const [lft, ___] = toPx(-2.5, 0, w, h);
+  const [rgt, ____] = toPx(2.5, 0, w, h);
+  ctx.beginPath(); ctx.moveTo(lft, zy); ctx.lineTo(rgt, zy); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(zx, top); ctx.lineTo(zx, bot); ctx.stroke();
+}
+
+function drawLevelLines(w, h) {
+  const sets = levelSets(omega, DOM, 8);
+  ctx.strokeStyle = 'rgba(74, 127, 181, 0.55)';
+  ctx.fillStyle  = 'rgba(74, 127, 181, 0.85)';
+  ctx.font = '10px system-ui'; ctx.textAlign = 'left';
+  for (const { k, points } of sets) {
+    const [a, b] = points;
+    const [ax, ay] = toPx(a[0], a[1], w, h);
+    const [bx, by] = toPx(b[0], b[1], w, h);
+    ctx.lineWidth = (k === 0) ? 1.6 : 0.9;
+    ctx.setLineDash(k === 0 ? [] : [4, 4]);
+    ctx.beginPath(); ctx.moveTo(ax, ay); ctx.lineTo(bx, by); ctx.stroke();
+    // Label k near (a)
+    if (k !== 0) {
+      ctx.fillText(`${k}`, ax + 4, ay - 2);
+    } else {
+      ctx.fillText('ker ω', ax + 4, ay - 2);
+    }
+  }
+  ctx.setLineDash([]);
+}
+
+function drawArrow(x0, y0, x1, y1, headLen, lw) {
+  ctx.lineWidth = lw;
+  ctx.beginPath(); ctx.moveTo(x0, y0); ctx.lineTo(x1, y1); ctx.stroke();
+  const ang = Math.atan2(y1 - y0, x1 - x0);
+  ctx.beginPath();
+  ctx.moveTo(x1, y1);
+  ctx.lineTo(x1 - headLen * Math.cos(ang - 0.45),
+             y1 - headLen * Math.sin(ang - 0.45));
+  ctx.lineTo(x1 - headLen * Math.cos(ang + 0.45),
+             y1 - headLen * Math.sin(ang + 0.45));
+  ctx.closePath(); ctx.fill();
+}
+
+function render() {
+  const { w, h } = setupCanvas();
+  ctx.fillStyle = 'white'; ctx.fillRect(0, 0, w, h);
+  drawAxes(w, h);
+  drawLevelLines(w, h);
+
+  // ω as a small arrow at origin pointing in its gradient direction.
+  const norm = Math.hypot(omega[0], omega[1]) || 1e-9;
+  const omScaled = [omega[0] / norm * 0.7, omega[1] / norm * 0.7];
+  const [zx, zy] = toPx(0, 0, w, h);
+  const [omx, omy] = toPx(omScaled[0], omScaled[1], w, h);
+  ctx.strokeStyle = '#4A7FB5'; ctx.fillStyle = '#4A7FB5';
+  drawArrow(zx, zy, omx, omy, 7, 1.7);
+  ctx.fillText('ω', omx + 6, omy - 4);
+
+  // v arrow
+  const [vx, vy] = toPx(v[0], v[1], w, h);
+  ctx.strokeStyle = '#5B8C6F'; ctx.fillStyle = '#5B8C6F';
+  drawArrow(zx, zy, vx, vy, 8, 2.2);
+  ctx.fillText('v', vx + 8, vy - 4);
+
+  // Crossings: highlight integer points along 0→v where ω·x = integer
+  const val = apply(omega, v);
+  const crossings = crossingsCount(omega, v);
+  // Mark each crossing as a small orange dot at parameter t = k/val
+  if (val !== 0) {
+    ctx.fillStyle = '#D97A2B';
+    const sign = val > 0 ? 1 : -1;
+    const limit = sign * crossings;  // |crossings|
+    for (let n = 1; n <= Math.abs(crossings); n++) {
+      const k = n * sign;
+      const t = k / val;  // along segment 0 → v
+      const [px, py] = toPx(t * v[0], t * v[1], w, h);
+      ctx.beginPath(); ctx.arc(px, py, 4, 0, 2 * Math.PI); ctx.fill();
+    }
+  }
+
+  // v drag tip indicator
+  ctx.strokeStyle = 'rgba(91,140,111,0.6)';
+  ctx.lineWidth = 1; ctx.setLineDash([2, 3]);
+  ctx.beginPath(); ctx.arc(vx, vy, 8, 0, 2 * Math.PI); ctx.stroke();
+  ctx.setLineDash([]);
+
+  // Stats
+  document.getElementById('stats').innerHTML =
+    `<span class="label">ω =</span> (${omega[0].toFixed(2)}, ${omega[1].toFixed(2)})<br>` +
+    `<span class="label">v =</span> (${v[0].toFixed(2)}, ${v[1].toFixed(2)})<br>` +
+    `<span class="label">ω(v) =</span> <strong>${val.toFixed(3)}</strong><br>` +
+    `<span class="label">crossings:</span> <strong>${crossings >= 0 ? '+' : ''}${crossings}</strong>`;
+}
+
+// Sliders
+function syncFromSliders() {
+  omega[0] = parseFloat(document.getElementById('w1').value);
+  omega[1] = parseFloat(document.getElementById('w2').value);
+  v[0]     = parseFloat(document.getElementById('v1').value);
+  v[1]     = parseFloat(document.getElementById('v2').value);
+  document.getElementById('w1-val').textContent = omega[0].toFixed(2);
+  document.getElementById('w2-val').textContent = omega[1].toFixed(2);
+  document.getElementById('v1-val').textContent = v[0].toFixed(2);
+  document.getElementById('v2-val').textContent = v[1].toFixed(2);
+  render();
+}
+function syncToSliders() {
+  document.getElementById('v1').value = v[0];
+  document.getElementById('v2').value = v[1];
+  document.getElementById('v1-val').textContent = v[0].toFixed(2);
+  document.getElementById('v2-val').textContent = v[1].toFixed(2);
+}
+
+for (const id of ['w1','w2','v1','v2']) {
+  document.getElementById(id).addEventListener('input', syncFromSliders);
+}
+
+// Drag the tip of v on the canvas
+let dragging = false;
+function eventToVec(ev) {
+  const r = cv.getBoundingClientRect();
+  return pxTo(ev.clientX - r.left, ev.clientY - r.top, r.width, r.height);
+}
+function clampVec(p) {
+  return [
+    Math.max(DOM.umin + 0.05, Math.min(DOM.umax - 0.05, p[0])),
+    Math.max(DOM.vmin + 0.05, Math.min(DOM.vmax - 0.05, p[1])),
+  ];
+}
+cv.addEventListener('pointerdown', (ev) => {
+  dragging = true;
+  cv.classList.add('grabbing');
+  v = clampVec(eventToVec(ev));
+  syncToSliders();
+  render();
+  ev.preventDefault();
+});
+window.addEventListener('pointermove', (ev) => {
+  if (!dragging) return;
+  v = clampVec(eventToVec(ev));
+  syncToSliders();
+  render();
+});
+window.addEventListener('pointerup', () => {
+  dragging = false; cv.classList.remove('grabbing');
+});
+window.addEventListener('resize', render);
+
+render();
+</script>
+
+</body>
+</html>
