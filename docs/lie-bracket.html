@@ -18,7 +18,7 @@
 }
 * { box-sizing: border-box; }
 body {
-  max-width: 56em; margin: 0 auto; padding: 1em 1.5em;
+  max-width: 64em; margin: 0 auto; padding: 1em 1.5em;
   font-family: system-ui, -apple-system, sans-serif;
   color: var(--spacecadet); background: #fcfcfc;
 }
@@ -31,10 +31,10 @@ nav.top-nav {
 }
 nav.top-nav a { text-decoration: none; color: var(--munsell); }
 .app { display: flex; gap: 1.5em; flex-wrap: wrap; justify-content: center; }
-.canvas-panel { flex: 1 1 500px; max-width: 600px; }
-.controls-panel { flex: 0 0 280px; }
+.canvas-panel { flex: 1 1 720px; max-width: 880px; }
+.controls-panel { flex: 0 0 240px; }
 canvas {
-  display: block; width: 100%; aspect-ratio: 1 / 1; border: 1px solid #ddd;
+  display: block; width: 100%; aspect-ratio: 2 / 1; border: 1px solid #ddd;
   border-radius: 8px; background: white; cursor: crosshair;
   touch-action: none;
 }
@@ -88,6 +88,7 @@ button.preset.active .desc { color: rgba(255,255,255,0.85); }
 @media (max-width: 700px) {
   .app { flex-direction: column; }
   .controls-panel { flex: 1 1 auto; }
+  canvas { aspect-ratio: 1 / 1; }
 }
 </style>
 </head>
@@ -101,7 +102,8 @@ button.preset.active .desc { color: rgba(255,255,255,0.85); }
 
 <h1>The Lie bracket as a parallelogram defect</h1>
 <p class="subtitle">Walk &epsilon; along <em>v</em> then <em>w</em> &mdash; vs <em>w</em> then <em>v</em>.
-The gap closes to &epsilon;<sup>2</sup>&middot;[<em>v</em>,<em>w</em>] as &epsilon; &rarr; 0.</p>
+The gap closes to &epsilon;<sup>2</sup>&middot;[<em>v</em>,<em>w</em>] as &epsilon; &rarr; 0
+&mdash; shown both in the chart (left) and lifted to a curved manifold (right).</p>
 
 <div class="app">
   <div class="canvas-panel">
@@ -163,48 +165,63 @@ The gap closes to &epsilon;<sup>2</sup>&middot;[<em>v</em>,<em>w</em>] as &epsil
 
 <script type="module">
 import { legPaths, lieBracket, presets } from './demos/lie_bracket.mjs';
+import { surface, liftField, makeProjector } from './demos/manifold.mjs';
 
 const cv = document.getElementById('canvas');
 const ctx = cv.getContext('2d');
-const DOM = { xmin: -3, xmax: 3, ymin: -3, ymax: 3 };
+const DOM = { umin: -3, umax: 3, vmin: -3, vmax: 3 };
 let p = { u: 0.0, v: 0.0 };
 let presetIdx = 0;
+
+const view = { yaw: Math.PI * 0.20, pitch: Math.PI * 0.22 };
+const projector = makeProjector(view);
 
 function setupCanvas() {
   const dpr = window.devicePixelRatio || 1;
   const r = cv.getBoundingClientRect();
-  cv.width = r.width * dpr;
-  cv.height = r.height * dpr;
+  cv.width = Math.round(r.width * dpr);
+  cv.height = Math.round(r.height * dpr);
   ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   return { w: r.width, h: r.height };
 }
 
-function toPx(u, vv, w, h) {
-  return [
-    (u - DOM.xmin) / (DOM.xmax - DOM.xmin) * w,
-    (DOM.ymax - vv) / (DOM.ymax - DOM.ymin) * h,
-  ];
-}
-function pxTo(px, py, w, h) {
+function layout(w, h) {
+  const gap = 8;
+  const half = (w - gap) / 2;
   return {
-    u: DOM.xmin + (px / w) * (DOM.xmax - DOM.xmin),
-    v: DOM.ymax - (py / h) * (DOM.ymax - DOM.ymin),
+    U: { x: 0,           y: 0, w: half, h: h },
+    M: { x: half + gap,  y: 0, w: half, h: h },
   };
 }
 
-function drawGrid(w, h) {
-  ctx.strokeStyle = 'rgba(0,0,0,0.06)';
-  ctx.lineWidth = 0.5;
-  for (let k = -3; k <= 3; k++) {
-    const [x1, y1] = toPx(k, -3, w, h);
-    const [x2, y2] = toPx(k, 3, w, h);
-    ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); ctx.stroke();
-    const [x3, y3] = toPx(-3, k, w, h);
-    const [x4, y4] = toPx(3, k, w, h);
-    ctx.beginPath(); ctx.moveTo(x3, y3); ctx.lineTo(x4, y4); ctx.stroke();
-  }
+// ── Chart-panel mapping ───────────────────────────────────────────
+function toUpx(u, v, panel) {
+  const side = Math.min(panel.w, panel.h) * 0.86;
+  const s = side / (DOM.umax - DOM.umin);
+  return [
+    panel.x + panel.w / 2 + s * u,
+    panel.y + panel.h / 2 - s * v,
+  ];
+}
+function fromUpx(px, py, panel) {
+  const side = Math.min(panel.w, panel.h) * 0.86;
+  const s = side / (DOM.umax - DOM.umin);
+  return {
+    u: (px - (panel.x + panel.w / 2)) / s,
+    v: ((panel.y + panel.h / 2) - py) / s,
+  };
 }
 
+// ── Manifold-panel mapping ───────────────────────────────────────
+function toMpx(X, Y, panel) {
+  const s = Math.min(panel.w, panel.h) * 0.18;
+  return [
+    panel.x + panel.w / 2 + s * X,
+    panel.y + panel.h * 0.62 - s * Y,
+  ];
+}
+
+// ── Drawing primitives ───────────────────────────────────────────
 function drawArrow(x0, y0, x1, y1, headLen) {
   ctx.beginPath(); ctx.moveTo(x0, y0); ctx.lineTo(x1, y1); ctx.stroke();
   const ang = Math.atan2(y1 - y0, x1 - x0);
@@ -217,11 +234,33 @@ function drawArrow(x0, y0, x1, y1, headLen) {
   ctx.closePath(); ctx.fill();
 }
 
-function drawField(field, color, w, h) {
+function drawPanelFrame(panel, label, colour) {
+  ctx.strokeStyle = '#e4e4e4'; ctx.lineWidth = 1;
+  ctx.strokeRect(panel.x + 0.5, panel.y + 0.5, panel.w - 1, panel.h - 1);
+  ctx.fillStyle = colour;
+  ctx.font = '600 12px system-ui, sans-serif';
+  ctx.textBaseline = 'top'; ctx.textAlign = 'left';
+  ctx.fillText(label, panel.x + 8, panel.y + 6);
+}
+
+// ── Chart panel ──────────────────────────────────────────────────
+function drawGridU(panel) {
+  ctx.strokeStyle = 'rgba(0,0,0,0.06)';
+  ctx.lineWidth = 0.5;
+  for (let k = -3; k <= 3; k++) {
+    const [x1, y1] = toUpx(k, -3, panel);
+    const [x2, y2] = toUpx(k, 3, panel);
+    ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); ctx.stroke();
+    const [x3, y3] = toUpx(-3, k, panel);
+    const [x4, y4] = toUpx(3, k, panel);
+    ctx.beginPath(); ctx.moveTo(x3, y3); ctx.lineTo(x4, y4); ctx.stroke();
+  }
+}
+
+function drawFieldU(field, color, panel) {
   const N = 11;
   const scale = 0.30;
-  ctx.strokeStyle = color;
-  ctx.fillStyle = color;
+  ctx.strokeStyle = color; ctx.fillStyle = color;
   ctx.lineWidth = 0.7;
   for (let i = 0; i < N; i++) {
     for (let j = 0; j < N; j++) {
@@ -229,101 +268,263 @@ function drawField(field, color, w, h) {
       const vv = -2.6 + (5.2 * j) / (N - 1);
       const fu = field.Vu(u, vv), fv = field.Vv(u, vv);
       const m = Math.hypot(fu, fv) || 1e-9;
-      const cap = 1.4;  // clamp arrow length so swirling fields don't dominate
-      const m2 = Math.min(m, cap);
-      const k = m2 / m;
-      const [x0, y0] = toPx(u, vv, w, h);
-      const [x1, y1] = toPx(u + scale * k * fu, vv + scale * k * fv, w, h);
+      const cap = 1.4;
+      const k = Math.min(m, cap) / m;
+      const [x0, y0] = toUpx(u, vv, panel);
+      const [x1, y1] = toUpx(u + scale * k * fu, vv + scale * k * fv, panel);
       drawArrow(x0, y0, x1, y1, 3.5);
     }
   }
 }
 
-function drawPath(path, w, h, color, lw) {
+function drawPathU(path, panel, color, lw) {
   if (path.length < 2) return;
-  ctx.strokeStyle = color;
-  ctx.lineWidth = lw;
+  ctx.strokeStyle = color; ctx.lineWidth = lw;
   ctx.beginPath();
-  const [sx, sy] = toPx(path[0][0], path[0][1], w, h);
+  const [sx, sy] = toUpx(path[0][0], path[0][1], panel);
   ctx.moveTo(sx, sy);
   for (let i = 1; i < path.length; i++) {
-    const [px, py] = toPx(path[i][0], path[i][1], w, h);
+    const [px, py] = toUpx(path[i][0], path[i][1], panel);
     ctx.lineTo(px, py);
   }
   ctx.stroke();
 }
 
-function fmt(x) { return (x >= 0 ? '+' : '') + x.toFixed(3); }
-
-function render() {
-  const { w, h } = setupCanvas();
-  ctx.fillStyle = 'white'; ctx.fillRect(0, 0, w, h);
-  drawGrid(w, h);
-
-  const ps = presets[presetIdx];
-  const eps = parseFloat(document.getElementById('eps').value);
-  document.getElementById('eps-val').textContent = eps.toFixed(2);
+function renderUPanel(panel, ps, legs, eps) {
+  ctx.fillStyle = '#fcfcfc';
+  ctx.fillRect(panel.x, panel.y, panel.w, panel.h);
+  drawGridU(panel);
 
   if (document.getElementById('show-fields').checked) {
-    drawField(ps.v, 'rgba(91,140,111,0.45)', w, h);
-    drawField(ps.w, 'rgba(74,127,181,0.45)', w, h);
+    drawFieldU(ps.v, 'rgba(91,140,111,0.45)', panel);
+    drawFieldU(ps.w, 'rgba(74,127,181,0.45)', panel);
   }
 
-  const legs = legPaths(ps.v, ps.w, p, eps, 32);
-  drawPath(legs.path1a, w, h, '#5B8C6F', 2.0);
-  drawPath(legs.path1b, w, h, '#5B8C6F', 2.0);
-  drawPath(legs.path2a, w, h, '#4A7FB5', 2.0);
-  drawPath(legs.path2b, w, h, '#4A7FB5', 2.0);
+  drawPathU(legs.path1a, panel, '#5B8C6F', 2.0);
+  drawPathU(legs.path1b, panel, '#5B8C6F', 2.0);
+  drawPathU(legs.path2a, panel, '#4A7FB5', 2.0);
+  drawPathU(legs.path2b, panel, '#4A7FB5', 2.0);
 
   // p marker
-  const [px0, py0] = toPx(p.u, p.v, w, h);
+  const [px0, py0] = toUpx(p.u, p.v, panel);
   ctx.fillStyle = '#E8B630';
   ctx.beginPath(); ctx.arc(px0, py0, 5.5, 0, 2 * Math.PI); ctx.fill();
   ctx.strokeStyle = 'rgba(0,0,0,0.45)'; ctx.lineWidth = 1; ctx.stroke();
   ctx.fillStyle = '#444'; ctx.font = '12px system-ui'; ctx.textAlign = 'left';
   ctx.fillText('p', px0 + 8, py0 - 6);
 
-  // A and B markers
-  const [ax, ay] = toPx(legs.A[0], legs.A[1], w, h);
+  // A & B
+  const [ax, ay] = toUpx(legs.A[0], legs.A[1], panel);
   ctx.fillStyle = '#5B8C6F';
   ctx.beginPath(); ctx.arc(ax, ay, 4.5, 0, 2 * Math.PI); ctx.fill();
-  ctx.fillStyle = '#444';
-  ctx.fillText('A', ax + 6, ay - 4);
+  ctx.fillStyle = '#444'; ctx.fillText('A', ax + 6, ay - 4);
 
-  const [bx, by] = toPx(legs.B[0], legs.B[1], w, h);
+  const [bx, by] = toUpx(legs.B[0], legs.B[1], panel);
   ctx.fillStyle = '#4A7FB5';
   ctx.beginPath(); ctx.arc(bx, by, 4.5, 0, 2 * Math.PI); ctx.fill();
-  ctx.fillStyle = '#444';
-  ctx.fillText('B', bx + 6, by + 12);
+  ctx.fillStyle = '#444'; ctx.fillText('B', bx + 6, by + 12);
 
-  // gap A − B at p (drawn at p with optional 1/ε² rescaling)
+  // gap (red)
   const dU = legs.A[0] - legs.B[0];
   const dV = legs.A[1] - legs.B[1];
   const rescale = document.getElementById('rescale').checked;
   const k = rescale ? 1 / (eps * eps) : 1;
   const gx = dU * k, gy = dV * k;
 
-  // analytic [v,w] at p drawn dashed in orange, for comparison
+  // analytic [v,w] (orange dashed)
   const bAtP = lieBracket(ps.v, ps.w, p);
-  ctx.strokeStyle = '#D97A2B';
-  ctx.fillStyle = '#D97A2B';
-  ctx.lineWidth = 1.8;
-  ctx.setLineDash([5, 4]);
-  const [bx1, by1] = toPx(p.u + bAtP[0], p.v + bAtP[1], w, h);
+  ctx.strokeStyle = '#D97A2B'; ctx.fillStyle = '#D97A2B';
+  ctx.lineWidth = 1.8; ctx.setLineDash([5, 4]);
+  const [bx1, by1] = toUpx(p.u + bAtP[0], p.v + bAtP[1], panel);
   drawArrow(px0, py0, bx1, by1, 6);
   ctx.setLineDash([]);
   ctx.fillText('[v,w]', bx1 + 4, by1 + 12);
 
-  // Measured gap (or rescaled)
-  ctx.strokeStyle = '#C4392F';
-  ctx.fillStyle = '#C4392F';
+  // measured gap (red)
+  ctx.strokeStyle = '#C4392F'; ctx.fillStyle = '#C4392F';
   ctx.lineWidth = 1.8;
-  const [gx1, gy1] = toPx(p.u + gx, p.v + gy, w, h);
+  const [gx1, gy1] = toUpx(p.u + gx, p.v + gy, panel);
   drawArrow(px0, py0, gx1, gy1, 6);
 
+  drawPanelFrame(panel, 'U ⊂ ℝ²  (chart)', '#2c4c77');
+}
+
+// ── Manifold panel ───────────────────────────────────────────────
+function drawSurfaceM(panel) {
+  const N = 26;
+  const du = (DOM.umax - DOM.umin) / N;
+  const dv = (DOM.vmax - DOM.vmin) / N;
+  const quads = [];
+  for (let i = 0; i < N; i++) {
+    const u0 = DOM.umin + i * du, u1 = u0 + du;
+    for (let j = 0; j < N; j++) {
+      const v0 = DOM.vmin + j * dv, v1 = v0 + dv;
+      const z00 = surface.h(u0, v0), z10 = surface.h(u1, v0);
+      const z11 = surface.h(u1, v1), z01 = surface.h(u0, v1);
+      const P00 = projector(u0, v0, z00);
+      const P10 = projector(u1, v0, z10);
+      const P11 = projector(u1, v1, z11);
+      const P01 = projector(u0, v1, z01);
+      quads.push({
+        pts: [
+          toMpx(P00[0], P00[1], panel), toMpx(P10[0], P10[1], panel),
+          toMpx(P11[0], P11[1], panel), toMpx(P01[0], P01[1], panel),
+        ],
+        depth: (P00[2] + P10[2] + P11[2] + P01[2]) / 4,
+        z: (z00 + z10 + z11 + z01) / 4,
+      });
+    }
+  }
+  quads.sort((a, b) => a.depth - b.depth);
+  for (const q of quads) {
+    const t = Math.max(0, Math.min(1, (q.z + 0.85) / 1.7));
+    const r = Math.round(232 - 40 * t);
+    const g = Math.round(237 - 25 * t);
+    const b = Math.round(234 - 35 * t);
+    ctx.fillStyle = `rgb(${r},${g},${b})`;
+    ctx.strokeStyle = 'rgba(90,110,95,0.28)'; ctx.lineWidth = 0.5;
+    ctx.beginPath();
+    ctx.moveTo(q.pts[0][0], q.pts[0][1]);
+    for (let k = 1; k < 4; k++) ctx.lineTo(q.pts[k][0], q.pts[k][1]);
+    ctx.closePath(); ctx.fill(); ctx.stroke();
+  }
+}
+
+function drawFieldM(field, color, panel) {
+  const N = 8;
+  const scale = 0.30;
+  ctx.strokeStyle = color; ctx.fillStyle = color;
+  ctx.lineWidth = 0.7;
+  for (let i = 0; i < N; i++) {
+    for (let j = 0; j < N; j++) {
+      const u = -2.5 + (5 * i) / (N - 1);
+      const v = -2.5 + (5 * j) / (N - 1);
+      const Vlift = liftField(field, u, v);
+      const m = Math.hypot(Vlift[0], Vlift[1]) || 1e-9;
+      const cap = 1.4;
+      const k = Math.min(m, cap) / m;
+      const base = projector(u, v, surface.h(u, v));
+      const tip  = projector(
+        u + scale * k * Vlift[0],
+        v + scale * k * Vlift[1],
+        surface.h(u, v) + scale * k * Vlift[2],
+      );
+      const [x0, y0] = toMpx(base[0], base[1], panel);
+      const [x1, y1] = toMpx(tip[0],  tip[1],  panel);
+      drawArrow(x0, y0, x1, y1, 3.5);
+    }
+  }
+}
+
+function projAndPx(u, v, panel) {
+  const P = projector(u, v, surface.h(u, v));
+  return toMpx(P[0], P[1], panel);
+}
+
+function drawPathM(path, panel, color, lw) {
+  if (path.length < 2) return;
+  ctx.strokeStyle = color; ctx.lineWidth = lw;
+  ctx.beginPath();
+  for (let i = 0; i < path.length; i++) {
+    const [u, v] = path[i];
+    const [px, py] = projAndPx(u, v, panel);
+    if (i === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+  }
+  ctx.stroke();
+}
+
+// Tangent-vector arrow at chart-point base, with chart components
+// (a, b), drawn on the manifold panel (lifted via Jacobian).
+function drawTangentArrowM(base, a, b, panel, color, headLen, label) {
+  ctx.strokeStyle = color; ctx.fillStyle = color; ctx.lineWidth = 1.8;
+  const [u0, v0] = base;
+  const baseP = projAndPx(u0, v0, panel);
+  // Lift the displacement (a, b) at base via the Jacobian:
+  const tipZ = surface.h(u0, v0) + a * surface.hu(u0, v0) + b * surface.hv(u0, v0);
+  const tipP = projector(u0 + a, v0 + b, tipZ);
+  const [tx, ty] = toMpx(tipP[0], tipP[1], panel);
+  drawArrow(baseP[0], baseP[1], tx, ty, headLen);
+  if (label) {
+    ctx.font = '12px system-ui'; ctx.textAlign = 'left';
+    ctx.fillText(label, tx + 4, ty + 12);
+  }
+}
+
+function renderMPanel(panel, ps, legs, eps) {
+  ctx.fillStyle = '#f7fbf9';
+  ctx.fillRect(panel.x, panel.y, panel.w, panel.h);
+  drawSurfaceM(panel);
+
+  if (document.getElementById('show-fields').checked) {
+    drawFieldM(ps.v, 'rgba(91,140,111,0.55)', panel);
+    drawFieldM(ps.w, 'rgba(74,127,181,0.55)', panel);
+  }
+
+  // Both legs lifted to M
+  drawPathM(legs.path1a, panel, '#5B8C6F', 2.4);
+  drawPathM(legs.path1b, panel, '#5B8C6F', 2.4);
+  drawPathM(legs.path2a, panel, '#4A7FB5', 2.4);
+  drawPathM(legs.path2b, panel, '#4A7FB5', 2.4);
+
+  // p marker
+  const [pmx, pmy] = projAndPx(p.u, p.v, panel);
+  ctx.fillStyle = '#E8B630'; ctx.strokeStyle = 'white'; ctx.lineWidth = 2;
+  ctx.beginPath(); ctx.arc(pmx, pmy, 6, 0, 2 * Math.PI); ctx.fill(); ctx.stroke();
+  ctx.fillStyle = '#8a7a00';
+  ctx.font = '700 12px Georgia, serif'; ctx.textAlign = 'left';
+  ctx.fillText('p', pmx + 9, pmy - 8);
+
+  // A and B (lifted)
+  const [amx, amy] = projAndPx(legs.A[0], legs.A[1], panel);
+  ctx.fillStyle = '#5B8C6F'; ctx.strokeStyle = 'white'; ctx.lineWidth = 1.5;
+  ctx.beginPath(); ctx.arc(amx, amy, 5, 0, 2 * Math.PI); ctx.fill(); ctx.stroke();
+  ctx.fillStyle = '#444'; ctx.font = '12px system-ui';
+  ctx.fillText('A', amx + 7, amy - 5);
+
+  const [bmx, bmy] = projAndPx(legs.B[0], legs.B[1], panel);
+  ctx.fillStyle = '#4A7FB5'; ctx.strokeStyle = 'white'; ctx.lineWidth = 1.5;
+  ctx.beginPath(); ctx.arc(bmx, bmy, 5, 0, 2 * Math.PI); ctx.fill(); ctx.stroke();
+  ctx.fillStyle = '#444';
+  ctx.fillText('B', bmx + 7, bmy + 12);
+
+  // gap (lifted) — drawn at p with optional 1/ε² rescaling
+  const dU = legs.A[0] - legs.B[0];
+  const dV = legs.A[1] - legs.B[1];
+  const rescale = document.getElementById('rescale').checked;
+  const k = rescale ? 1 / (eps * eps) : 1;
+
+  // analytic [v,w] (orange dashed) lifted via Jacobian at p
+  const bAtP = lieBracket(ps.v, ps.w, p);
+  ctx.setLineDash([5, 4]);
+  drawTangentArrowM([p.u, p.v], bAtP[0], bAtP[1], panel, '#D97A2B', 6, '[v,w]');
+  ctx.setLineDash([]);
+
+  // measured gap (red), rescaled if requested
+  drawTangentArrowM([p.u, p.v], dU * k, dV * k, panel, '#C4392F', 6);
+
+  drawPanelFrame(panel, 'ℳ  (lifted to z = h(u, v))', '#3D7A55');
+}
+
+function fmt(x) { return (x >= 0 ? '+' : '') + x.toFixed(3); }
+
+function render() {
+  const { w, h } = setupCanvas();
+  const L = layout(w, h);
+  ctx.clearRect(0, 0, w, h);
+
+  const ps = presets[presetIdx];
+  const eps = parseFloat(document.getElementById('eps').value);
+  document.getElementById('eps-val').textContent = eps.toFixed(2);
+  const legs = legPaths(ps.v, ps.w, p, eps, 32);
+
+  renderUPanel(L.U, ps, legs, eps);
+  renderMPanel(L.M, ps, legs, eps);
+
   // Stats
-  const st = document.getElementById('stats');
-  st.innerHTML =
+  const dU = legs.A[0] - legs.B[0];
+  const dV = legs.A[1] - legs.B[1];
+  const bAtP = lieBracket(ps.v, ps.w, p);
+  document.getElementById('stats').innerHTML =
     `<span class="label">p =</span> (${p.u.toFixed(2)}, ${p.v.toFixed(2)})<br>` +
     `<span class="label">A =</span> (${legs.A[0].toFixed(3)}, ${legs.A[1].toFixed(3)})<br>` +
     `<span class="label">B =</span> (${legs.B[0].toFixed(3)}, ${legs.B[1].toFixed(3)})<br>` +
@@ -348,33 +549,54 @@ function buildPresetsUI() {
   });
 }
 
-// Drag p on the canvas
-function eventToCoord(ev) {
+// Drag p — works on either panel.
+function pointerToChart(ev) {
   const r = cv.getBoundingClientRect();
-  return pxTo(ev.clientX - r.left, ev.clientY - r.top, r.width, r.height);
+  const px = ev.clientX - r.left, py = ev.clientY - r.top;
+  const L = layout(r.width, r.height);
+  if (px >= L.U.x && px <= L.U.x + L.U.w) {
+    return { panel: 'U', ...fromUpx(px, py, L.U) };
+  }
+  if (px >= L.M.x && px <= L.M.x + L.M.w) {
+    let best = { d2: Infinity, u: 0, v: 0 };
+    const N = 36;
+    for (let i = 0; i <= N; i++) {
+      for (let j = 0; j <= N; j++) {
+        const u = DOM.umin + (i / N) * (DOM.umax - DOM.umin);
+        const v = DOM.vmin + (j / N) * (DOM.vmax - DOM.vmin);
+        const P = projector(u, v, surface.h(u, v));
+        const [sx, sy] = toMpx(P[0], P[1], L.M);
+        const d2 = (sx - px) ** 2 + (sy - py) ** 2;
+        if (d2 < best.d2) best = { d2, u, v };
+      }
+    }
+    return { panel: 'M', u: best.u, v: best.v };
+  }
+  return null;
 }
 function clamp(c) {
   return {
-    u: Math.max(DOM.xmin + 0.4, Math.min(DOM.xmax - 0.4, c.u)),
-    v: Math.max(DOM.ymin + 0.4, Math.min(DOM.ymax - 0.4, c.v)),
+    u: Math.max(DOM.umin + 0.4, Math.min(DOM.umax - 0.4, c.u)),
+    v: Math.max(DOM.vmin + 0.4, Math.min(DOM.vmax - 0.4, c.v)),
   };
 }
 let dragging = false;
 cv.addEventListener('pointerdown', (ev) => {
+  const t = pointerToChart(ev); if (!t) return;
   dragging = true;
   cv.classList.add('grabbing');
-  p = clamp(eventToCoord(ev));
+  p = clamp(t);
   render();
   ev.preventDefault();
 });
 window.addEventListener('pointermove', (ev) => {
   if (!dragging) return;
-  p = clamp(eventToCoord(ev));
+  const t = pointerToChart(ev); if (!t) return;
+  p = clamp(t);
   render();
 });
 window.addEventListener('pointerup', () => {
-  dragging = false;
-  cv.classList.remove('grabbing');
+  dragging = false; cv.classList.remove('grabbing');
 });
 window.addEventListener('resize', render);
 document.getElementById('eps').addEventListener('input', render);
