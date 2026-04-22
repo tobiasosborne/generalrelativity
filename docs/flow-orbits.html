@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flows on a manifold — Click and watch the orbit</title>
+<style>
+:root {
+  --spacecadet: #3D7A55;
+  --munsell: #5B8C6F;
+  --banana: #E8B630;
+  --cgblue: #4A7FB5;
+  --isabelline: #A8D5BA;
+  --birrenred: #C4392F;
+  --birrenorange: #D97A2B;
+  --birrengray: #8C8C84;
+  --lightgray: #D4C9A8;
+}
+* { box-sizing: border-box; }
+body {
+  max-width: 56em; margin: 0 auto; padding: 1em 1.5em;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: var(--spacecadet); background: #fcfcfc;
+}
+h1 { color: var(--munsell); font-size: 1.5em; text-align: center; margin-bottom: 0.2em; }
+.subtitle { text-align: center; color: #666; font-size: 0.95em; margin-bottom: 1.5em; }
+nav.top-nav {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 0.5em 0; border-bottom: 1px solid var(--isabelline);
+  margin-bottom: 1em; font-size: 0.85em;
+}
+nav.top-nav a { text-decoration: none; color: var(--munsell); }
+.app { display: flex; gap: 1.5em; flex-wrap: wrap; justify-content: center; }
+.canvas-panel { flex: 1 1 500px; max-width: 600px; }
+.controls-panel { flex: 0 0 260px; }
+canvas {
+  display: block; width: 100%; aspect-ratio: 1 / 1; border: 1px solid #ddd;
+  border-radius: 8px; background: white; cursor: crosshair;
+  touch-action: none;
+}
+canvas.grabbing { cursor: grabbing; }
+.control-group {
+  margin-bottom: 1.2em; padding: 0.8em;
+  background: var(--isabelline); border-radius: 8px;
+}
+.control-group h3 {
+  margin: 0 0 0.5em 0; font-size: 0.85em;
+  color: var(--munsell); text-transform: uppercase; letter-spacing: 0.05em;
+}
+.control-row {
+  display: flex; align-items: center; gap: 0.5em; margin: 0.4em 0;
+  font-size: 0.85em;
+}
+.control-row label { flex: 0 0 90px; color: #444; }
+.control-row input[type=range] { flex: 1; min-width: 80px; }
+.control-row .val { flex: 0 0 50px; text-align: right; font-variant-numeric: tabular-nums; color: var(--spacecadet); font-weight: 600; }
+button.preset {
+  display: inline-block; margin: 2px; padding: 4px 10px;
+  border: 1px solid #ccc; border-radius: 4px;
+  background: white; cursor: pointer; font-size: 0.8em;
+}
+button.preset:hover { background: var(--banana); border-color: var(--banana); }
+.toggle-row { display: flex; align-items: center; gap: 0.5em; margin: 0.3em 0; font-size: 0.85em; }
+.toggle-row input { margin: 0; }
+.info-box {
+  margin-top: 1.5em; padding: 1em;
+  background: rgba(91,140,111,0.08); border-left: 4px solid var(--munsell);
+  border-radius: 6px; font-size: 0.9em; line-height: 1.55;
+  font-family: Georgia, serif;
+}
+.info-box strong { color: var(--munsell); }
+.stats {
+  margin-top: 0.8em; padding: 0.6em 0.8em;
+  background: #f5f5f5; border-radius: 6px;
+  font-size: 0.78em; font-variant-numeric: tabular-nums;
+  color: #555; line-height: 1.6;
+}
+.stats .label { color: #888; }
+@media (max-width: 700px) {
+  .app { flex-direction: column; }
+  .controls-panel { flex: 1 1 auto; }
+}
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <a href="index.html">&larr; All Lectures</a>
+  <span><strong>Interactive Figure</strong></span>
+  <a href="lec05.html">Lecture 5 &rarr;</a>
+</nav>
+
+<h1>Flows on a manifold</h1>
+<p class="subtitle">Click anywhere to set <em>p</em> &mdash; watch its orbit
+&Phi;<sub><em>t</em></sub>(<em>p</em>) under the same vector field</p>
+
+<div class="app">
+  <div class="canvas-panel">
+    <canvas id="canvas" width="600" height="600"></canvas>
+  </div>
+  <div class="controls-panel">
+    <div class="control-group">
+      <h3>Time</h3>
+      <div class="control-row">
+        <label><em>t</em></label>
+        <input type="range" id="t-slider" min="0" max="6" step="0.01" value="3">
+        <span class="val" id="t-val">3.00</span>
+      </div>
+      <div class="toggle-row">
+        <input type="checkbox" id="play" checked>
+        <label for="play">Animate (advance <em>t</em>)</label>
+      </div>
+      <div class="toggle-row">
+        <input type="checkbox" id="show-field" checked>
+        <label for="show-field">Vector field</label>
+      </div>
+      <div class="toggle-row">
+        <input type="checkbox" id="show-tangent" checked>
+        <label for="show-tangent">Tangent at <em>p</em> (=<em>v</em>|<sub><em>p</em></sub>)</label>
+      </div>
+    </div>
+    <div class="control-group">
+      <h3>Starting points</h3>
+      <button class="preset" onclick="setStart(-2.0,-0.3)">Default</button>
+      <button class="preset" onclick="setStart(0.0, 1.5)">North</button>
+      <button class="preset" onclick="setStart(-2.5, 1.5)">NW corner</button>
+      <button class="preset" onclick="setStart(-1.0,-2.0)">South</button>
+      <button class="preset" onclick="setStart(1.5, 0.0)">East</button>
+    </div>
+    <div class="stats" id="stats"></div>
+  </div>
+</div>
+
+<div class="info-box">
+  <strong>What you're seeing:</strong> a single vector field
+  <em>v</em> on the chart with components
+  <em>V</em><sup><em>u</em></sup> = 0.85 + 0.15·<em>v</em>,
+  <em>V</em><sup><em>v</em></sup> = 0.55·cos(0.7·<em>u</em>).
+  Click anywhere to set the starting point <em>p</em>; the green curve
+  is the orbit <em>C<sub>p</sub></em>(<em>t</em>) =
+  &Phi;<sub><em>t</em></sub>(<em>p</em>) obtained by solving
+  d<em>u</em>/d<em>t</em> = <em>V</em><sup><em>u</em></sup>,
+  d<em>v</em>/d<em>t</em> = <em>V</em><sup><em>v</em></sup>.
+  The gold dot is &Phi;<sub><em>t</em></sub>(<em>p</em>) at the
+  current time; the gold arrow at <em>p</em> is the tangent vector
+  <em>v</em>|<sub><em>p</em></sub> &mdash; literally the field value
+  at <em>p</em>, and equivalently <em>dC<sub>p</sub>/dt</em> at <em>t</em>=0.
+  <br><br>
+  Different starting points give different orbits, but they all
+  share <em>the same field</em>: that is what
+  &Phi;<sub><em>s</em></sub> &compfn; &Phi;<sub><em>t</em></sub> =
+  &Phi;<sub><em>t</em>+<em>s</em></sub> says &mdash; flowing for time
+  <em>t</em> then for time <em>s</em> is the same as flowing for time
+  <em>t</em>+<em>s</em>, regardless of where you started.
+</div>
+
+<script type="module">
+import { defaultField, integrate, sampleAt } from './demos/flow.mjs';
+
+const cv = document.getElementById('canvas');
+const ctx = cv.getContext('2d');
+
+const DOM = { xmin: -3, xmax: 3, ymin: -3, ymax: 3 };
+let p = { u: -2.0, v: -0.3 };
+let tCurrent = 3.0;
+const T_END = 6.0;        // orbit integrated forward to t = 6
+const STEP = 0.01;        // RK4 step
+
+function setupCanvas() {
+  const dpr = window.devicePixelRatio || 1;
+  const r = cv.getBoundingClientRect();
+  cv.width = r.width * dpr;
+  cv.height = r.height * dpr;
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  return { w: r.width, h: r.height };
+}
+
+function toPx(u, v, w, h) {
+  return [
+    (u - DOM.xmin) / (DOM.xmax - DOM.xmin) * w,
+    (DOM.ymax - v) / (DOM.ymax - DOM.ymin) * h,
+  ];
+}
+function pxTo(px, py, w, h) {
+  return {
+    u: DOM.xmin + (px / w) * (DOM.xmax - DOM.xmin),
+    v: DOM.ymax - (py / h) * (DOM.ymax - DOM.ymin),
+  };
+}
+
+function drawGrid(w, h) {
+  ctx.strokeStyle = 'rgba(0,0,0,0.06)';
+  ctx.lineWidth = 0.5;
+  for (let k = -3; k <= 3; k++) {
+    const [x1, y1] = toPx(k, -3, w, h);
+    const [x2, y2] = toPx(k, 3, w, h);
+    ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); ctx.stroke();
+    const [x3, y3] = toPx(-3, k, w, h);
+    const [x4, y4] = toPx(3, k, w, h);
+    ctx.beginPath(); ctx.moveTo(x3, y3); ctx.lineTo(x4, y4); ctx.stroke();
+  }
+  ctx.fillStyle = 'rgba(0,0,0,0.3)';
+  ctx.font = '12px system-ui';
+  ctx.textAlign = 'center';
+  const [lx, ly] = toPx(2.85, -0.18, w, h);
+  ctx.fillText('u', lx, ly);
+  const [lx2, ly2] = toPx(0.18, 2.85, w, h);
+  ctx.fillText('v', lx2, ly2);
+}
+
+function drawField(w, h) {
+  const N = 13;
+  const scale = 0.32;
+  ctx.strokeStyle = 'rgba(74, 127, 181, 0.55)';
+  ctx.fillStyle = 'rgba(74, 127, 181, 0.55)';
+  ctx.lineWidth = 0.8;
+  for (let i = 0; i < N; i++) {
+    for (let j = 0; j < N; j++) {
+      const u = -2.6 + (5.2 * i) / (N - 1);
+      const v = -2.6 + (5.2 * j) / (N - 1);
+      const vu = defaultField.Vu(u, v);
+      const vv = defaultField.Vv(u, v);
+      const [x0, y0] = toPx(u, v, w, h);
+      const [x1, y1] = toPx(u + scale * vu, v + scale * vv, w, h);
+      drawArrow(x0, y0, x1, y1, 4);
+    }
+  }
+}
+
+function drawArrow(x0, y0, x1, y1, headLen) {
+  ctx.beginPath(); ctx.moveTo(x0, y0); ctx.lineTo(x1, y1); ctx.stroke();
+  const ang = Math.atan2(y1 - y0, x1 - x0);
+  ctx.beginPath();
+  ctx.moveTo(x1, y1);
+  ctx.lineTo(x1 - headLen * Math.cos(ang - 0.45),
+             y1 - headLen * Math.sin(ang - 0.45));
+  ctx.lineTo(x1 - headLen * Math.cos(ang + 0.45),
+             y1 - headLen * Math.sin(ang + 0.45));
+  ctx.closePath();
+  ctx.fill();
+}
+
+function drawOrbit(path, w, h, color, lw) {
+  ctx.strokeStyle = color;
+  ctx.lineWidth = lw;
+  ctx.beginPath();
+  const [sx, sy] = toPx(path[0][0], path[0][1], w, h);
+  ctx.moveTo(sx, sy);
+  for (let i = 1; i < path.length; i++) {
+    const [px, py] = toPx(path[i][0], path[i][1], w, h);
+    ctx.lineTo(px, py);
+  }
+  ctx.stroke();
+}
+
+let cachedOrbit = null;
+let cachedKey = '';
+
+function getOrbit() {
+  const k = `${p.u.toFixed(4)},${p.v.toFixed(4)}`;
+  if (k !== cachedKey) {
+    cachedOrbit = integrate(p.u, p.v, T_END, STEP,
+                            defaultField.Vu, defaultField.Vv);
+    cachedKey = k;
+  }
+  return cachedOrbit;
+}
+
+function render() {
+  const { w, h } = setupCanvas();
+
+  document.getElementById('t-val').textContent = tCurrent.toFixed(2);
+  document.getElementById('t-slider').value = tCurrent;
+
+  ctx.fillStyle = 'white';
+  ctx.fillRect(0, 0, w, h);
+  drawGrid(w, h);
+
+  if (document.getElementById('show-field').checked) drawField(w, h);
+
+  const orbit = getOrbit();
+
+  // Draw full orbit faint
+  drawOrbit(orbit, w, h, 'rgba(91,140,111,0.25)', 1.2);
+  // Draw "traversed so far" stronger
+  const idxF = (tCurrent / T_END) * (orbit.length - 1);
+  const i = Math.max(1, Math.floor(idxF));
+  const traversed = orbit.slice(0, i + 1);
+  drawOrbit(traversed, w, h, 'rgb(91,140,111)', 2.0);
+
+  // Tangent v|_p at p
+  if (document.getElementById('show-tangent').checked) {
+    const vu = defaultField.Vu(p.u, p.v);
+    const vv = defaultField.Vv(p.u, p.v);
+    const s = 0.5;
+    const [x0, y0] = toPx(p.u, p.v, w, h);
+    const [x1, y1] = toPx(p.u + s * vu, p.v + s * vv, w, h);
+    ctx.strokeStyle = 'rgb(180, 130, 30)';
+    ctx.fillStyle = 'rgb(180, 130, 30)';
+    ctx.lineWidth = 1.6;
+    drawArrow(x0, y0, x1, y1, 6);
+  }
+
+  // p marker
+  const [px0, py0] = toPx(p.u, p.v, w, h);
+  ctx.fillStyle = 'rgb(232, 182, 48)';
+  ctx.beginPath(); ctx.arc(px0, py0, 5.5, 0, 2 * Math.PI); ctx.fill();
+  ctx.strokeStyle = 'rgba(0,0,0,0.4)'; ctx.lineWidth = 1; ctx.stroke();
+  ctx.fillStyle = '#444'; ctx.font = '12px system-ui'; ctx.textAlign = 'left';
+  ctx.fillText('p', px0 + 8, py0 - 6);
+
+  // Φ_t(p) marker
+  const phi = sampleAt(orbit, T_END, tCurrent);
+  const [tx, ty] = toPx(phi[0], phi[1], w, h);
+  ctx.fillStyle = 'rgb(232, 182, 48)';
+  ctx.beginPath(); ctx.arc(tx, ty, 5, 0, 2 * Math.PI); ctx.fill();
+  ctx.strokeStyle = 'rgba(0,0,0,0.4)'; ctx.lineWidth = 1; ctx.stroke();
+  ctx.fillStyle = '#444';
+  ctx.fillText('Φ_t(p)', tx + 8, ty - 6);
+
+  // Stats
+  const st = document.getElementById('stats');
+  st.innerHTML =
+    `<span class="label">p =</span> (${p.u.toFixed(2)}, ${p.v.toFixed(2)})<br>` +
+    `<span class="label">Φ_t(p) =</span> (${phi[0].toFixed(2)}, ${phi[1].toFixed(2)})<br>` +
+    `<span class="label">v|<sub>p</sub> =</span> (${defaultField.Vu(p.u,p.v).toFixed(3)}, ${defaultField.Vv(p.u,p.v).toFixed(3)})`;
+}
+
+// Animation loop
+let last = performance.now();
+function frame(now) {
+  const dt = (now - last) / 1000;
+  last = now;
+  if (document.getElementById('play').checked) {
+    tCurrent = (tCurrent + 0.4 * dt) % T_END;
+    render();
+  }
+  requestAnimationFrame(frame);
+}
+
+// Drag handling
+function eventToCoord(ev) {
+  const r = cv.getBoundingClientRect();
+  const px = ev.clientX - r.left;
+  const py = ev.clientY - r.top;
+  return pxTo(px, py, r.width, r.height);
+}
+function clamp(c) {
+  return {
+    u: Math.max(DOM.xmin + 0.05, Math.min(DOM.xmax - 0.05, c.u)),
+    v: Math.max(DOM.ymin + 0.05, Math.min(DOM.ymax - 0.05, c.v)),
+  };
+}
+let dragging = false;
+cv.addEventListener('pointerdown', (ev) => {
+  dragging = true;
+  cv.classList.add('grabbing');
+  p = clamp(eventToCoord(ev));
+  cachedKey = '';
+  tCurrent = 0;  // restart orbit from t=0 so user sees it grow
+  render();
+  ev.preventDefault();
+});
+window.addEventListener('pointermove', (ev) => {
+  if (!dragging) return;
+  p = clamp(eventToCoord(ev));
+  cachedKey = '';
+  render();
+});
+window.addEventListener('pointerup', () => {
+  dragging = false;
+  cv.classList.remove('grabbing');
+});
+window.addEventListener('resize', render);
+
+document.getElementById('t-slider').addEventListener('input', (e) => {
+  tCurrent = parseFloat(e.target.value);
+  document.getElementById('play').checked = false;
+  render();
+});
+document.getElementById('show-field').addEventListener('change', render);
+document.getElementById('show-tangent').addEventListener('change', render);
+document.getElementById('play').addEventListener('change', () => { last = performance.now(); });
+
+window.setStart = function (u, v) {
+  p = { u, v };
+  cachedKey = '';
+  tCurrent = 0;
+  render();
+};
+
+render();
+requestAnimationFrame(frame);
+</script>
+
+</body>
+</html>
