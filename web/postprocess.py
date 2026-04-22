@@ -72,6 +72,15 @@ CAPTIONS = {
         "this picture relies on the embedding, so the next lecture gives "
         "an intrinsic definition.",
     ),
+    "fig_lec05_flow.svg": (
+        "A one-parameter group of diffeomorphisms.",
+        "Vector field v on ℳ (blue arrows) with the integral curve "
+        "C<sub>p</sub>(t) = Φ<sub>t</sub>(p) (green) through three points "
+        "p, Φ<sub>t</sub>(p), Φ<sub>t+s</sub>(p); the gold arrow at p is "
+        "v|<sub>p</sub>, the field value, which is also the tangent to the "
+        "orbit at t=0.  Reading the curve left-to-right is the group law "
+        "Φ<sub>s</sub> ∘ Φ<sub>t</sub> = Φ<sub>t+s</sub>.",
+    ),
     "fig_lec03_ellipsoid.svg": (
         "Geodesics on a triaxial ellipsoid with parallel transport.",
         "Top: geodesics (shortest paths intrinsic to the surface) on a "

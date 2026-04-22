@@ -1,0 +1,925 @@
+[WARNING] Could not convert TeX math \label{eq:group-law}
+          \boxed{\Phi_s \circ \Phi_t = \Phi_{t+s}}\,., rendering as TeX
+[WARNING] Could not convert TeX math \label{eq:commutator}
+      \boxed{u(f) = v\bigl(w(f)\bigr) - w\bigl(v(f)\bigr)}
+      \qquad\text{for all } f\in\mathscr{F}(\mathcal{M})\,., rendering as TeX
+[WARNING] Could not convert TeX math T: \underbrace{V_p^*\times\cdots\times V_p^*}_{k}
+        \;\times\;
+        \underbrace{V_p\times\cdots\times V_p}_{l}
+        \;\longrightarrow\; \mathbb{R}\,., rendering as TeX
+[WARNING] Could not convert TeX math \label{eq:contraction}
+      (C_{j,j'}\, T)(\dots) =
+      \sum_{\sigma=1}^{n}
+        T\bigl(\dots,\underbrace{(v^\sigma)^*}_{j\text{-th slot}},
+               \dots;\;
+               \underbrace{v_\sigma}_{j'\text{-th slot}},\dots\bigr)\,,, rendering as TeX
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lecture 5: Flows and
+Tensors — Introduction to General Relativity</title>
+
+<!-- MathJax 3 with custom macros -->
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    displayMath: [['\\[','\\]'], ['$$','$$']],
+    macros: {
+      // Derivatives
+      pd: ['{\\frac{\\partial^{#1} #2}{\\partial {#3}^{#1}}}', 3, ''],
+      td: ['{\\frac{d #1}{d #2}}', 2],
+      dd: '{\\mathrm{d}}',
+      covd: '{\\nabla}',
+      Lie: '{\\mathcal{L}}',
+      dalem: '{\\Box}',
+      lap: '{\\Delta}',
+      // Vectors
+      vb: ['{\\boldsymbol{#1}}', 1],
+      uv: ['{\\hat{\\boldsymbol{#1}}}', 1],
+      dt: ['{\\dot{#1}}', 1],
+      ddt: ['{\\ddot{#1}}', 1],
+      norm: ['{\\lVert #1 \\rVert}', 1],
+      // Tensor calculus
+      chris: ['{\\Gamma^{#1}{}_{#2}}', 2],
+      Riem: '{R}',
+      Ric: '{R}',
+      Ein: '{G}',
+      Weyl: '{C}',
+      metric: '{g}',
+      ttype: ['{\\mathcal{T}(#1,#2)}', 2],
+      tp: '{\\otimes}',
+      // Spaces
+      M: '{\\mathcal{M}}',
+      Tp: '{T_p\\mathcal{M}}',
+      Tps: '{T_p^*\\mathcal{M}}',
+      R: '{\\mathbb{R}}',
+      Rn: ['{\\mathbb{R}^{#1}}', 1],
+      // Operators
+      supp: '{\\operatorname{supp}}',
+      tr: '{\\operatorname{tr}}',
+      id: '{\\operatorname{id}}',
+      diag: '{\\operatorname{diag}}',
+      sgn: '{\\operatorname{sgn}}',
+      grad: '{\\operatorname{grad}}',
+      Div: '{\\operatorname{div}}',
+      curl: '{\\operatorname{curl}}',
+      grav: '{G}',
+      textbf: ['{\\mathbf{#1}}', 1],
+    },
+    tags: 'ams',
+    tagSide: 'right',
+  },
+  options: {
+    renderActions: {
+      // Ensure equations render before details are opened
+      addMenu: [0, '', '']
+    }
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+
+<style>
+/* ── Base ─────────────────────────────────────── */
+:root {
+  --spacecadet: #3D7A55;
+  --munsell: #5B8C6F;
+  --banana: #E8B630;
+  --cgblue: #4A7FB5;
+  --isabelline: #A8D5BA;
+  --birrenred: #C4392F;
+  --birrenorange: #D97A2B;
+  --birrengray: #8C8C84;
+  --lightgray: #D4C9A8;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  max-width: 48em;
+  margin: 2em auto;
+  padding: 0 1.5em;
+  font-family: 'Times New Roman', 'Georgia', serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--spacecadet);
+  background: #fcfcfc;
+}
+
+h1, h2, h3, h4 {
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color: var(--munsell);
+}
+
+h1 { font-size: 1.8em; text-align: center; border-bottom: 2px solid var(--munsell); padding-bottom: 0.3em; }
+h2 { font-size: 1.35em; margin-top: 2em; }
+h3 { font-size: 1.15em; margin-top: 1.5em; }
+
+a { color: var(--munsell); }
+
+/* ── Nav ──────────────────────────────────────── */
+nav.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 0;
+  border-bottom: 1px solid var(--isabelline);
+  margin-bottom: 1.5em;
+  font-family: system-ui, sans-serif;
+  font-size: 0.85em;
+}
+nav.top-nav a { text-decoration: none; color: var(--munsell); }
+nav.top-nav a:hover { text-decoration: underline; }
+
+/* ── Fold/unfold controls ─────────────────────── */
+.fold-controls {
+  text-align: right;
+  margin-bottom: 1em;
+  font-family: system-ui, sans-serif;
+  font-size: 0.8em;
+}
+.fold-controls button {
+  background: var(--isabelline);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 3px 10px;
+  cursor: pointer;
+  font-size: 0.85em;
+  margin-left: 4px;
+}
+.fold-controls button:hover { background: var(--banana); }
+
+/* ── Foldable boxes (details/summary) ─────────── */
+details {
+  margin: 1em 0;
+  border-radius: 6px;
+  padding: 0;
+  overflow: hidden;
+}
+
+details > summary {
+  cursor: pointer;
+  padding: 0.5em 0.8em;
+  font-family: system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.95em;
+  list-style: none;
+  user-select: none;
+}
+details > summary::-webkit-details-marker { display: none; }
+details > summary::before {
+  content: '▸ ';
+  display: inline-block;
+  transition: transform 0.15s;
+}
+details[open] > summary::before {
+  content: '▾ ';
+}
+
+details > :not(summary) { padding: 0 0.8em; }
+
+/* Box variants */
+.box-intuition { background: rgba(91,140,111,0.08); border-left: 4px solid var(--munsell); }
+.box-intuition > summary { color: var(--munsell); }
+
+.box-historical { background: var(--isabelline); border-left: 4px solid #888; }
+.box-historical > summary { color: #555; }
+
+.box-keyresult { background: rgba(232,182,48,0.12); border-left: 4px solid var(--banana); }
+.box-keyresult > summary { color: #8a7000; }
+
+.box-solution { background: #f5f5f5; border-left: 4px solid #aaa; }
+.box-solution > summary { color: #666; }
+
+/* Non-foldable boxes */
+.box-exercise {
+  margin: 1em 0;
+  padding: 0.5em 0.8em;
+  background: rgba(91,140,111,0.04);
+  border-left: 4px solid var(--munsell);
+  border-radius: 6px;
+}
+.box-exercise strong { color: var(--munsell); font-family: system-ui, sans-serif; }
+
+.box-example {
+  margin: 1em 0;
+  padding: 0.5em 0.8em;
+  background: rgba(91,140,111,0.04);
+  border-left: 4px solid var(--munsell);
+  border-radius: 6px;
+}
+.box-example strong { color: var(--munsell); font-family: system-ui, sans-serif; }
+
+.box-remark {
+  margin: 1em 0;
+  padding: 0.5em 0.8em;
+  background: #f9f9f9;
+  border-left: 3px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95em;
+}
+
+.box-notation {
+  margin: 1em 0;
+  padding: 0.5em 0.8em;
+  background: #f9f9f9;
+  border-left: 3px solid var(--munsell);
+  border-radius: 4px;
+}
+
+/* ── Highlighted equation box ─────────────────── */
+.eqbox-display {
+  background: rgba(232,182,48,0.15);
+  padding: 0.3em 0.5em;
+  border-radius: 4px;
+  margin: 0.8em 0;
+}
+
+span.eqbox {
+  background: rgba(232,182,48,0.2);
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+/* ── TikZ placeholder ─────────────────────────── */
+.tikz-placeholder {
+  margin: 1.5em auto;
+  padding: 2em;
+  background: var(--isabelline);
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  text-align: center;
+  color: #888;
+  font-family: system-ui, sans-serif;
+  font-style: italic;
+  max-width: 24em;
+}
+
+/* ── Interactive figure container ──────────────── */
+.interactive-figure {
+  margin: 2em 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+}
+.interactive-figure .fig-header {
+  background: var(--isabelline);
+  padding: 0.5em 1em;
+  font-family: system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.9em;
+  color: var(--munsell);
+}
+.interactive-figure canvas {
+  display: block;
+  width: 100%;
+  cursor: grab;
+}
+.interactive-figure .fig-controls {
+  padding: 0.8em 1em;
+  background: #fafafa;
+  border-top: 1px solid #eee;
+  font-family: system-ui, sans-serif;
+  font-size: 0.85em;
+}
+.interactive-figure .fig-controls label {
+  margin-right: 1em;
+  color: var(--spacecadet);
+}
+.interactive-figure .fig-controls input[type=range] {
+  vertical-align: middle;
+  width: 180px;
+}
+
+/* ── Responsive ───────────────────────────────── */
+@media (max-width: 600px) {
+  body { font-size: 16px; padding: 0 0.8em; }
+  h1 { font-size: 1.4em; }
+}
+
+/* ── Definition lists (for footnotes) ─────────── */
+.footnotes { font-size: 0.85em; border-top: 1px solid #ddd; margin-top: 3em; padding-top: 1em; }
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <a href="index.html">← All Lectures</a>
+  <span><strong>Introduction to General Relativity</strong></span>
+  <span></span>
+</nav>
+
+<div class="fold-controls">
+  <button onclick="document.querySelectorAll('details').forEach(d=>d.open=true)">Unfold all</button>
+  <button onclick="document.querySelectorAll('details').forEach(d=>d.open=false)">Fold all</button>
+</div>
+
+<h1 id="sec:flows-tensors">Flows and tensors</h1>
+<p>In the previous lecture we defined the tangent space <span
+class="math inline">\(V_p\)</span> at a point <span
+class="math inline">\(p\in\mathcal{M}\)</span>, coordinate bases,
+curves, and tangent vector fields. We now study how vector fields
+generate <em>flows</em> (one-parameter groups of diffeomorphisms), how
+to form new vector fields from old ones via the <em>commutator</em>, and
+the algebraic machinery of <em>tensors</em> that lies at the heart of
+general relativity.</p>
+<h2 id="sec:flows">Flows (one-parameter groups of diffeomorphisms)</h2>
+<div class="box-definition">
+<div class="box-title">Definition</div>
+<p><span id="def:one-param-group" label="def:one-param-group"></span>
+Let <span class="math inline">ℳ</span> be a smooth manifold. A
+<strong>one-parameter group of diffeomorphisms</strong> is a <span
+class="math inline"><em>C</em><sup>∞</sup></span> map <span
+class="math display"><em>Φ</em> : ℝ × ℳ → ℳ ,   (<em>t</em>,<em>p</em>) ↦ <em>Φ</em><sub><em>t</em></sub>(<em>p</em>) ,</span>
+such that</p>
+<ol>
+<li><p>for each fixed <span class="math inline"><em>t</em> ∈ ℝ</span>,
+the map <span
+class="math inline"><em>Φ</em><sub><em>t</em></sub> : ℳ → ℳ</span> is a
+diffeomorphism, and</p></li>
+<li><p>for all <span
+class="math inline"><em>s</em>, <em>t</em> ∈ ℝ</span>, <span
+class="math display">$$\label{eq:group-law}
+        \boxed{\Phi_s \circ \Phi_t = \Phi_{t+s}}\,.$$</span></p></li>
+</ol>
+</div>
+<p>Choosing <span class="math inline">\(s = -t\)</span> in <a
+href="#eq:group-law" data-reference-type="eqref"
+data-reference="eq:group-law">[eq:group-law]</a> immediately gives <span
+class="math inline">\(\Phi_0 = \id\)</span> (the identity map on <span
+class="math inline">\(\mathcal{M}\)</span>).</p>
+<figure style="text-align:center; margin:1.5em 0;">
+  <img src="fig_lec05_flow.png" alt="Vector field v on ℳ (blue arrows) with the integral curve Cp(t) = Φt(p) (green) through three points p, Φt(p), Φt+s(p); the gold arrow at p is v|p, the field value, which is also the tangent to the orbit at t=0.  Reading the curve left-to-right is the group law Φs ∘ Φt = Φt+s." style="max-width:100%; height:auto;">
+  <figcaption style="font-size:0.85em; color:var(--birrengray); margin-top:0.4em;"><strong>A one-parameter group of diffeomorphisms.</strong> Vector field v on ℳ (blue arrows) with the integral curve C<sub>p</sub>(t) = Φ<sub>t</sub>(p) (green) through three points p, Φ<sub>t</sub>(p), Φ<sub>t+s</sub>(p); the gold arrow at p is v|<sub>p</sub>, the field value, which is also the tangent to the orbit at t=0.  Reading the curve left-to-right is the group law Φ<sub>s</sub> ∘ Φ<sub>t</sub> = Φ<sub>t+s</sub>.</figcaption>
+</figure>
+<h3 id="from-flows-to-vector-fields">From flows to vector fields</h3>
+<p>Given a one-parameter group <span
+class="math inline">\(\Phi_t\)</span>, we obtain a tangent vector field
+<span class="math inline">\(v\)</span> on <span
+class="math inline">\(\mathcal{M}\)</span> as follows. For a fixed <span
+class="math inline">\(p\in\mathcal{M}\)</span>, the map <span
+class="math display">\[C_p: \mathbb{R}\to\mathcal{M}\,,\qquad t\mapsto
+\Phi_t(p)\,,\]</span> is a smooth curve through <span
+class="math inline">\(p\)</span> (with <span
+class="math inline">\(C_p(0)=p\)</span>), called the
+<strong>orbit</strong> of <span class="math inline">\(p\)</span> under
+<span class="math inline">\(\Phi_t\)</span>. Define <span
+class="math inline">\(v|_p\)</span> to be the tangent vector to <span
+class="math inline">\(C_p\)</span> at <span
+class="math inline">\(t=0\)</span>: <span
+class="math display">\[\label{eq:flow-to-field}
+  v|_p(f) = \frac{d }{d t}(f\circ\Phi_t(p))\bigg|_{t=0}\,,
+  \qquad f\in\mathscr{F}(\mathcal{M})\,.\]</span> Repeating this for
+every <span class="math inline">\(p\in\mathcal{M}\)</span> yields a
+smooth vector field <span class="math inline">\(v\)</span>.</p>
+<h3 id="from-vector-fields-to-flows-integral-curves">From vector fields
+to flows (integral curves)</h3>
+<p>Conversely, given a smooth vector field <span
+class="math inline">\(v\)</span> on <span
+class="math inline">\(\mathcal{M}\)</span>, we seek <strong>integral
+curves</strong> of <span class="math inline">\(v\)</span>: a family of
+curves in <span class="math inline">\(\mathcal{M}\)</span>, one through
+each point <span class="math inline">\(p\)</span>, such that the tangent
+vector to the curve at <span class="math inline">\(p\)</span> equals
+<span class="math inline">\(v|_p\)</span>.</p>
+<p>Let <span class="math inline">\(C\)</span> be such an integral curve
+through <span class="math inline">\(p\)</span>, and let <span
+class="math inline">\((x^1,\dots,x^n)\)</span> be local coordinates.
+Then the tangent vector to <span class="math inline">\(C\)</span> acts
+on <span class="math inline">\(f\in\mathscr{F}(\mathcal{M})\)</span> by
+<span class="math display">\[\label{eq:tangent-to-C}
+  T(f) = \frac{d }{d t}(f\circ C)
+       = \sum_{\mu=1}^{n} \frac{d x^\mu}{d t}\, X_\mu(f)\,,\]</span>
+where <span class="math inline">\(X_\mu = \partial/\partial
+x^\mu|_p\)</span> is the coordinate basis. Meanwhile, the vector field
+gives <span class="math display">\[\label{eq:field-at-p}
+  v(f) = \sum_{\mu=1}^{n} v^\mu\, X_\mu(f)\,.\]</span> Setting <a
+href="#eq:tangent-to-C" data-reference-type="eqref"
+data-reference="eq:tangent-to-C">[eq:tangent-to-C]</a> equal to <a
+href="#eq:field-at-p" data-reference-type="eqref"
+data-reference="eq:field-at-p">[eq:field-at-p]</a>, we must solve the
+system of coupled ordinary differential equations <span
+class="math display">\[\label{eq:integral-curve-ode}
+  \boxed{\frac{d x^\mu}{d t} = v^\mu(x^1,\dots,x^n)}
+  \qquad \mu = 1,\dots,n\,.\]</span></p>
+<p>By the standard existence and uniqueness theorem for ODEs (proved via
+fixed-point arguments; see, e.g., Coddington and Levinson <span
+class="citation" data-cites="CL55"></span>), there exists <span
+class="math inline">\(\varepsilon &gt; 0\)</span> such that a unique
+solution exists for all <span
+class="math inline">\(t\in(-\varepsilon,\varepsilon)\)</span>.</p>
+<div class="box-remark">
+<div class="box-title">Remark</div>
+<p>If <span class="math inline">ℳ</span> is compact, the integral curves
+exist for all <span class="math inline"><em>t</em> ∈ ℝ</span>, and the
+family of integral curves defines a genuine one-parameter group of
+diffeomorphisms.</p>
+</div>
+<details class="box-intuition" open>
+<summary>Physical intuition</summary>
+<div class="box-body">
+<p>Think of <span class="math inline"><em>v</em></span> as a velocity
+field describing steady fluid flow on <span
+class="math inline">ℳ</span>. The integral curves are the streamlines:
+each fluid particle follows the integral curve through its initial
+position. The map <span
+class="math inline"><em>Φ</em><sub><em>t</em></sub></span> advances
+every particle by time <span class="math inline"><em>t</em></span>.</p>
+</div>
+</details>
+<p>With flows and integral curves in hand, we have assembled the basic
+toolkit for describing “mechanics on manifolds”—how points move under
+smooth evolution. Notice, however, that nothing in our discussion so far
+has involved special or general relativity: we are still working with
+bare manifolds, without any notion of distance, angle, or causal
+structure. The machinery we develop next—the commutator of vector
+fields, and especially the algebraic theory of tensors—will supply
+precisely the additional structure needed to formulate physics on curved
+spacetimes.</p>
+<h2 id="sec:commutator">New vector fields from old: the commutator</h2>
+<div class="box-definition">
+<div class="box-title">Definition</div>
+<p><span id="def:commutator" label="def:commutator"></span> Let <span
+class="math inline"><em>v</em></span> and <span
+class="math inline"><em>w</em></span> be smooth vector fields on a
+manifold <span class="math inline">ℳ</span>. Define a new map <span
+class="math inline"><em>u</em> : ℱ(ℳ) → ℱ(ℳ)</span> by <span
+class="math display">$$\label{eq:commutator}
+    \boxed{u(f) = v\bigl(w(f)\bigr) - w\bigl(v(f)\bigr)}
+    \qquad\text{for all } f\in\mathscr{F}(\mathcal{M})\,.$$</span> This
+map <span class="math inline"><em>u</em></span> is called the
+<strong>commutator</strong> (or <strong>Lie bracket</strong>) of <span
+class="math inline"><em>v</em></span> and <span
+class="math inline"><em>w</em></span>, and is written <span
+class="math inline"><em>u</em> = [<em>v</em>,<em>w</em>]</span>.</p>
+</div>
+<div class="box-exercise">
+<div class="box-title">Exercise</div>
+<p><span id="ex:commutator-vf" label="ex:commutator-vf"></span> Show
+that <span class="math inline">[<em>v</em>,<em>w</em>]</span> as defined
+in <a href="#eq:commutator" data-reference-type="eqref"
+data-reference="eq:commutator">[eq:commutator]</a> is indeed a vector
+field, i.e. it satisfies linearity and the Leibniz rule at every
+point.</p>
+</div>
+<div class="box-remark">
+<div class="box-title">Remark</div>
+<p>Although <span class="math inline"><em>v</em></span> and <span
+class="math inline"><em>w</em></span> each involve first-order
+derivatives, the second-order terms cancel in the combination <span
+class="math inline"><em>v</em>(<em>w</em>(<em>f</em>)) − <em>w</em>(<em>v</em>(<em>f</em>))</span>,
+leaving <span class="math inline">[<em>v</em>,<em>w</em>]</span> a
+first-order operator—hence a genuine vector field. The commutator plays
+a central role in the theory of Lie groups and will reappear when we
+study Lie derivatives and the curvature of connections.</p>
+</div>
+<h2 id="sec:new-spaces">New vector spaces from old</h2>
+<p>Before defining tensors on manifolds, we review the key algebraic
+constructions that build new vector spaces from given ones. The guiding
+observation is this: our manifold <span
+class="math inline">\(\mathcal{M}\)</span> canonically provides a single
+“atomic” vector space at each point—the tangent space <span
+class="math inline">\(V_p\)</span>. Every other geometric object we need
+(the metric, the curvature tensor, differential forms, …) lives not in
+<span class="math inline">\(V_p\)</span> itself but in some vector space
+<em>built from</em> <span class="math inline">\(V_p\)</span> via
+elementary algebraic operations.</p>
+<p>One should assess the value of each construction by whether it
+produces quantities with a clear physical interpretation. Just because
+an operation is available does not mean physics requires it.</p>
+<p>Let <span class="math inline">\(V\)</span> and <span
+class="math inline">\(W\)</span> be finite-dimensional real vector
+spaces. The principal operations are:</p>
+<ol type="i">
+<li><p><strong>Taking duals:</strong> <span class="math inline">\(V
+\mapsto V^*\)</span>.</p></li>
+<li><p><strong>Taking direct sums:</strong> <span
+class="math inline">\(V,\, W \mapsto V\oplus W\)</span>.</p></li>
+<li><p><strong>Taking tensor products:</strong> <span
+class="math inline">\(V,\, W \mapsto V\otimes W\)</span>.</p></li>
+<li><p><strong>Taking subspaces:</strong> <span
+class="math inline">\(U\subset V\)</span>.</p></li>
+<li><p><strong>Taking exterior (wedge) products:</strong> <span
+class="math inline">\(V,\, W \mapsto V\wedge W\)</span>.</p></li>
+<li><p><strong>Taking joins:</strong> <span class="math inline">\(V,\, W
+\mapsto V\vee W\)</span>.</p></li>
+</ol>
+<p>In general relativity, <em>duals</em> and <em>tensor products</em>
+are by far the most important: the metric, for instance, naturally lives
+in a tensor product of two copies of <span
+class="math inline">\(V_p^*\)</span>. Direct sums play a role in
+fiber-bundle theory but rarely appear in our treatment; wedge products
+feature in the theory of differential forms; joins and intersections are
+more prominent in quantum information theory. We develop the first three
+in detail below.</p>
+<h2 id="sec:dual-space">The dual space <span
+class="math inline">\(V^*\)</span></h2>
+<div class="box-definition">
+<div class="box-title">Definition</div>
+<p><span id="def:dual-space" label="def:dual-space"></span> Let <span
+class="math inline"><em>V</em></span> be a real vector space. The
+<strong>dual space</strong> <span
+class="math inline"><em>V</em><sup>*</sup></span> is the vector space of
+all linear functions <span
+class="math inline"><em>f</em> : <em>V</em> → ℝ</span>. Elements of
+<span class="math inline"><em>V</em><sup>*</sup></span> are called
+<strong>dual vectors</strong> (or <strong>covectors</strong>, or
+<strong>one-forms</strong>).</p>
+</div>
+<div class="box-exercise">
+<div class="box-title">Exercise</div>
+<p><span id="ex:dual-vs" label="ex:dual-vs"></span> Show that <span
+class="math inline"><em>V</em><sup>*</sup></span> is a real vector space
+under pointwise addition and scalar multiplication.</p>
+</div>
+<div class="box-remark">
+<div class="box-title">Remark</div>
+<p>Let <span
+class="math inline">{<em>v</em><sub>1</sub>, …, <em>v</em><sub><em>n</em></sub>}</span>
+be a basis for <span class="math inline"><em>V</em></span>. We obtain a
+<strong>dual basis</strong> <span
+class="math inline">{(<em>v</em><sup><em>μ</em></sup>)<sup>*</sup> ∣ <em>μ</em> = 1, …, <em>n</em>}</span>
+for <span class="math inline"><em>V</em><sup>*</sup></span> defined by
+<span
+class="math display">(<em>v</em><sup><em>μ</em></sup>)<sup>*</sup>(<em>v</em><sub><em>ν</em></sub>) = <em>δ</em><sup><em>μ</em></sup><sub><em>ν</em></sub> ,</span>
+where <span
+class="math inline"><em>δ</em><sup><em>μ</em></sup><sub><em>ν</em></sub></span>
+is the Kronecker delta.</p>
+</div>
+<p>Notice the placement of indices: elements of <span
+class="math inline">\(V\)</span> carry a subscript (lower index), while
+elements of <span class="math inline">\(V^*\)</span> carry a superscript
+(upper index) in their labelling. This convention will become essential
+when we work with tensor components on manifolds.</p>
+<div class="box-exercise">
+<div class="box-title">Exercise</div>
+<p><span id="ex:double-dual" label="ex:double-dual"></span> Show that
+<span
+class="math inline">(<em>V</em><sup>*</sup>)<sup>*</sup> ≅ <em>V</em></span>
+(the double dual is canonically isomorphic to <span
+class="math inline"><em>V</em></span>). This result will be used
+frequently and without further comment throughout the course.</p>
+</div>
+<div class="box-exercise">
+<div class="box-title">Exercise</div>
+<p><span id="ex:dim-dual" label="ex:dim-dual"></span> Show that <span
+class="math inline">dim (<em>V</em><sup>*</sup>) = dim (<em>V</em>)</span>.</p>
+</div>
+<div class="box-remark">
+<div class="box-title">Remark</div>
+<p>The map <span
+class="math inline"><em>v</em><sub><em>μ</em></sub> ↦ (<em>v</em><sup><em>μ</em></sup>)<sup>*</sup></span>
+gives an isomorphism between <span class="math inline"><em>V</em></span>
+and <span class="math inline"><em>V</em><sup>*</sup></span>, but this
+isomorphism <strong>depends on the choice of basis</strong>—it is
+<em>non-canonical</em>. Had we chosen a different basis for <span
+class="math inline"><em>V</em></span>, we would obtain a different
+identification between <span class="math inline"><em>V</em></span> and
+<span class="math inline"><em>V</em><sup>*</sup></span>. In physics we
+seek statements that are independent of any particular coordinate system
+chosen by the observer. A <em>canonical</em> (basis-free) isomorphism
+<span
+class="math inline"><em>V</em><sub><em>p</em></sub> → <em>V</em><sub><em>p</em></sub><sup>*</sup></span>
+arises only once we equip the manifold with a metric; this is the
+operation of “lowering an index” that we shall meet shortly.</p>
+</div>
+<h2 id="sec:tensor-product">The tensor product</h2>
+<p>The tensor product is one of the most versatile constructions in all
+of mathematical physics. Beyond its central role in general relativity,
+it appears whenever one deals with multi-particle systems: the state
+space of <span class="math inline">\(N\)</span> quantum-mechanical
+particles is the tensor product of the individual Hilbert spaces, and
+tensor products of qubit spaces underpin quantum information theory and
+quantum computing. We give three perspectives on the construction—an
+informal definition, a formal quotient-space definition, and the dual
+(multilinear-map) characterisation used in most relativity texts—so that
+you can make reference to whichever viewpoint is most convenient in your
+future studies.</p>
+<h3 id="informal-definition">Informal definition</h3>
+<div class="box-definition">
+<div class="box-title">Definition</div>
+<p><span id="def:tp-informal" label="def:tp-informal"></span> Let <span
+class="math inline"><em>V</em></span> and <span
+class="math inline"><em>W</em></span> be finite-dimensional real vector
+spaces. The <strong>tensor product</strong> <span
+class="math inline"><em>V</em> ⊗ <em>W</em></span> consists of elements
+of the form <span class="math inline"><em>v</em> ⊗ <em>w</em></span>
+(for <span class="math inline"><em>v</em> ∈ <em>V</em></span>, <span
+class="math inline"><em>w</em> ∈ <em>W</em></span>) together with all
+their linear combinations, subject to the <strong>bilinearity
+condition</strong>: <span
+class="math display">(<em>a</em><sub>1</sub><em>v</em><sub>1</sub>+<em>a</em><sub>2</sub><em>v</em><sub>2</sub>) ⊗ (<em>b</em><sub>1</sub><em>w</em><sub>1</sub>+<em>b</em><sub>2</sub><em>w</em><sub>2</sub>) = <em>a</em><sub>1</sub><em>b</em><sub>1</sub> <em>v</em><sub>1</sub> ⊗ <em>w</em><sub>1</sub> + <em>a</em><sub>1</sub><em>b</em><sub>2</sub> <em>v</em><sub>1</sub> ⊗ <em>w</em><sub>2</sub> + <em>a</em><sub>2</sub><em>b</em><sub>1</sub> <em>v</em><sub>2</sub> ⊗ <em>w</em><sub>1</sub> + <em>a</em><sub>2</sub><em>b</em><sub>2</sub> <em>v</em><sub>2</sub> ⊗ <em>w</em><sub>2</sub> .</span></p>
+</div>
+<div class="box-example">
+<div class="box-title">Example</div>
+<p><span id="ex:R2-tensor-R2" label="ex:R2-tensor-R2"></span> Let <span
+class="math inline"><em>V</em> = ℝ<sup>2</sup></span>, <span
+class="math inline"><em>W</em> = ℝ<sup>2</sup></span>. Then <span
+class="math inline"><em>V</em> ⊗ <em>W</em> = ℝ<sup>2</sup> ⊗ ℝ<sup>2</sup> ≅ ℝ<sup>4</sup></span>.</p>
+</div>
+<h3 id="formal-construction">Formal construction</h3>
+<p><em>(This subsection may be skipped on a first reading without loss
+of continuity.)</em></p>
+<p>More precisely, one defines <span
+class="math display">\[\label{eq:tp-formal}
+  V\otimes W \;\equiv\; F(V\times W)\big/{\sim}\,,\]</span> where <span
+class="math inline">\(F(V\times W)\)</span> is the free vector space on
+the set <span class="math inline">\(V\times W\)</span> (formal linear
+combinations of ordered pairs <span
+class="math inline">\((v,w)\)</span>). Since <span
+class="math inline">\(V\times W\)</span> is an infinite set, <span
+class="math inline">\(F(V\times W)\)</span> is infinite-dimensional and
+far too large; the equivalence relation <span
+class="math inline">\(\sim\)</span> collapses it to the correct
+finite-dimensional space. The relation <span
+class="math inline">\(\sim\)</span> is generated by:</p>
+<ol>
+<li><p>identity, symmetry, and transitivity (equivalence relation
+axioms),</p></li>
+<li><p>distributivity: <span class="math inline">\((v_1+v_2,\,w) \sim
+(v_1,w) + (v_2,w)\)</span> and <span class="math inline">\((v,\,w_1+w_2)
+\sim (v,w_1) + (v,w_2)\)</span>,</p></li>
+<li><p>scalar multiples: <span class="math inline">\(c(v,w) \sim
+(cv,\,w) \sim (v,\,cw)\)</span> for all <span
+class="math inline">\(c\in\mathbb{R}\)</span>.</p></li>
+</ol>
+<p>The equivalence class of <span class="math inline">\((v,w)\)</span>
+is written <span class="math inline">\(v\otimes w\)</span>. Elements of
+<span class="math inline">\(V\otimes W\)</span> are linear combinations
+of <strong>simple tensors</strong> <span
+class="math inline">\(v_j\otimes w_k\)</span>.</p>
+<details class="box-keyresult" open>
+<summary>Key result</summary>
+<div class="box-body">
+<p><strong>Warning:</strong> given <span
+class="math inline"><em>u</em> ∈ <em>V</em> ⊗ <em>W</em></span>, it is
+<em>not</em> always true that <span
+class="math inline"><em>u</em> = <em>v</em> ⊗ <em>w</em></span> for some
+<span class="math inline"><em>v</em> ∈ <em>V</em></span>, <span
+class="math inline"><em>w</em> ∈ <em>W</em></span>. Generically, <span
+class="math inline"><em>u</em></span> is a sum of simple tensors that
+cannot be factored.</p>
+</div>
+</details>
+<div class="box-exercise">
+<div class="box-title">Exercise</div>
+<p><span id="ex:dim-tp" label="ex:dim-tp"></span> Show that <span
+class="math inline">dim (<em>V</em>⊗<em>W</em>) = dim (<em>V</em>) ⋅ dim (<em>W</em>)</span>.
+<em>Hint:</em> If <span
+class="math inline">{<em>v</em><sub><em>μ</em></sub>}</span> is a basis
+for <span class="math inline"><em>V</em></span> and <span
+class="math inline">{<em>w</em><sub><em>ν</em></sub>}</span> is a basis
+for <span class="math inline"><em>W</em></span>, show that <span
+class="math inline">{<em>v</em><sub><em>μ</em></sub> ⊗ <em>w</em><sub><em>ν</em></sub>}</span>
+is a basis for <span
+class="math inline"><em>V</em> ⊗ <em>W</em></span>.</p>
+</div>
+<p>The tensor product is associative: <span
+class="math display">\[\label{eq:tp-assoc}
+  U\otimes(V\otimes W) \;\cong\; (U\otimes V)\otimes W\,,\]</span> so we
+may write <span class="math inline">\(U\otimes V\otimes W\)</span>
+without ambiguity.</p>
+<h3 id="the-dual-characterisation-of-tensors">The dual characterisation
+of tensors</h3>
+<div class="box-definition">
+<div class="box-title">Definition</div>
+<p><span id="def:tensor-multilinear"
+label="def:tensor-multilinear"></span> Let <span
+class="math inline"><em>V</em></span> and <span
+class="math inline"><em>W</em></span> be real vector spaces. A
+<strong>tensor</strong> (in the dual sense) is a multilinear map <span
+class="math inline"><em>T</em> : <em>V</em> × <em>W</em> → ℝ</span>,
+i.e. <span
+class="math display"><em>T</em>(<em>a</em><sub>1</sub><em>v</em><sub>1</sub>+<em>a</em><sub>2</sub><em>v</em><sub>2</sub>, <em>b</em><sub>1</sub><em>w</em><sub>1</sub>+<em>b</em><sub>2</sub><em>w</em><sub>2</sub>) = <em>a</em><sub>1</sub><em>b</em><sub>1</sub> <em>T</em>(<em>v</em><sub>1</sub>,<em>w</em><sub>1</sub>) + <em>a</em><sub>1</sub><em>b</em><sub>2</sub> <em>T</em>(<em>v</em><sub>1</sub>,<em>w</em><sub>2</sub>) + <em>a</em><sub>2</sub><em>b</em><sub>1</sub> <em>T</em>(<em>v</em><sub>2</sub>,<em>w</em><sub>1</sub>) + <em>a</em><sub>2</sub><em>b</em><sub>2</sub> <em>T</em>(<em>v</em><sub>2</sub>,<em>w</em><sub>2</sub>) .</span></p>
+</div>
+<p>This is the “classical” approach to tensor products, and the one most
+commonly seen in general relativity textbooks (including Wald <span
+class="citation" data-cites="Wald84"></span>). It is related to the
+informal definition by <span
+class="math display">\[\label{eq:tp-dual-relation}
+  (V\otimes W)^* \;\cong\;
+  \{T: V\times W \to \mathbb{R} \mid T \text{
+multilinear}\}\,.\]</span></p>
+<div class="box-exercise">
+<div class="box-title">Exercise</div>
+<p><span id="ex:tp-dual-iso" label="ex:tp-dual-iso"></span> Show that
+<span
+class="math inline">(<em>V</em>⊗<em>W</em>)<sup>*</sup> ≅ <em>V</em><sup>*</sup> ⊗ <em>W</em><sup>*</sup></span>.</p>
+</div>
+<h2 id="sec:tensors-manifolds">Tensors on manifolds</h2>
+<p>We now apply these algebraic constructions to the tangent space <span
+class="math inline">\(V_p\)</span> at a point <span
+class="math inline">\(p\in\mathcal{M}\)</span>.</p>
+<p>From <span class="math inline">\(V_p\)</span> we build:</p>
+<ul>
+<li><p>the dual space <span class="math inline">\(V_p^*\)</span>
+(cotangent vectors),</p></li>
+<li><p>tensor products such as <span class="math inline">\(V_p\otimes
+V_p\)</span>, <span class="math inline">\(V_p^*\otimes V_p\)</span>,
+etc.,</p></li>
+<li><p>and more generally, the space <span
+class="math inline">\(\underbrace{V_p\otimes\cdots\otimes
+V_p}_{k}\,\otimes\,
+     \underbrace{V_p^*\otimes\cdots\otimes V_p^*}_{l}
+     \;\cong\; V_p^{\otimes k}\otimes (V_p^*)^{\otimes
+l}\)</span>.</p></li>
+</ul>
+<p>Since <span class="math inline">\((V_p^*)^* \cong V_p\)</span>, an
+element <span class="math inline">\(t\in V_p\)</span> can be viewed as a
+linear function on <span class="math inline">\(V_p^*\)</span> as
+well.</p>
+<p>One could also form “mixed” tensor products such as <span
+class="math inline">\(V_p\otimes V_p^*\otimes V_p\)</span>, where the
+factors are interleaved. In general relativity, however, the order of
+the individual <span class="math inline">\(V_p\)</span> and <span
+class="math inline">\(V_p^*\)</span> factors rarely matters (many of the
+tensors we encounter have symmetry properties that make the ordering
+irrelevant), so it is conventional to cluster all <span
+class="math inline">\(V_p\)</span> factors to the left and all <span
+class="math inline">\(V_p^*\)</span> factors to the right. In quantum
+information theory, by contrast, the ordering of tensor-product factors
+carries physical significance (each factor corresponds to a distinct
+subsystem), and one must keep careful track of it.</p>
+<h3 id="tensors-of-type-kl">Tensors of type <span
+class="math inline">\((k,l)\)</span></h3>
+<div class="box-definition">
+<div class="box-title">Definition</div>
+<p><span id="def:tensor-type" label="def:tensor-type"></span> A
+<strong>tensor of type <span
+class="math inline">(<em>k</em>,<em>l</em>)</span></strong> at <span
+class="math inline"><em>p</em></span> is an element <span
+class="math display"><em>T</em> ∈ <em>V</em><sub><em>p</em></sub><sup>⊗<em>k</em></sup> ⊗ (<em>V</em><sub><em>p</em></sub><sup>*</sup>)<sup>⊗<em>l</em></sup> .</span>
+Equivalently, <span class="math inline"><em>T</em></span> is a
+multilinear map <span class="math display">$$T:
+\underbrace{V_p^*\times\cdots\times V_p^*}_{k}
+      \;\times\;
+      \underbrace{V_p\times\cdots\times V_p}_{l}
+      \;\longrightarrow\; \mathbb{R}\,.$$</span> The vector space of all
+tensors of type <span class="math inline">(<em>k</em>,<em>l</em>)</span>
+at <span class="math inline"><em>p</em></span> is denoted <span
+class="math inline">𝒯(<em>k</em>,<em>l</em>)</span>.</p>
+</div>
+<p><span class="math display">\[\label{eq:dim-tensor-space}
+  \dim\bigl(\mathcal{T}(k,l)\bigr) = n^{k+l}\,,
+  \qquad\text{where } n = \dim(V_p)\,.\]</span></p>
+<div class="box-remark">
+<div class="box-title">Remark</div>
+<p>We adopt the convention <span
+class="math inline"><em>V</em><sup>⊗0</sup> ≅ ℝ</span>, so that <span
+class="math inline">𝒯(0,0) ≅ ℝ</span> (scalars).</p>
+</div>
+<h2 id="sec:tensor-examples">Examples of tensors</h2>
+<div class="box-example">
+<div class="box-title">Example</div>
+<p><span id="ex:type-01" label="ex:type-01"></span> A tensor of type
+<span class="math inline">(0,1)</span> is an element of <span
+class="math inline"><em>V</em><sub><em>p</em></sub><sup>⊗0</sup> ⊗ (<em>V</em><sub><em>p</em></sub><sup>*</sup>)<sup>⊗1</sup> ≅ ℝ ⊗ <em>V</em><sub><em>p</em></sub><sup>*</sup> ≅ <em>V</em><sub><em>p</em></sub><sup>*</sup></span>.
+It is simply a <strong>dual vector</strong> (covector).</p>
+</div>
+<div class="box-example">
+<div class="box-title">Example</div>
+<p><span id="ex:type-10" label="ex:type-10"></span> A tensor of type
+<span class="math inline">(1,0)</span> is an element of <span
+class="math inline"><em>V</em><sub><em>p</em></sub><sup>⊗1</sup> ⊗ (<em>V</em><sub><em>p</em></sub><sup>*</sup>)<sup>⊗0</sup> ≅ <em>V</em><sub><em>p</em></sub> ⊗ ℝ ≅ <em>V</em><sub><em>p</em></sub></span>.
+It is simply a <strong>vector</strong>.</p>
+</div>
+<div class="box-example">
+<div class="box-title">Example</div>
+<p><span id="ex:type-11" label="ex:type-11"></span> A tensor of type
+<span class="math inline">(1,1)</span> is an element of <span
+class="math inline"><em>V</em><sub><em>p</em></sub> ⊗ <em>V</em><sub><em>p</em></sub><sup>*</sup></span>.
+Such a tensor <span class="math inline"><em>T</em></span> can be
+interpreted in three equivalent ways:</p>
+<ol type="i">
+<li><p>as an element of <span
+class="math inline"><em>V</em><sub><em>p</em></sub> ⊗ <em>V</em><sub><em>p</em></sub><sup>*</sup></span>,</p></li>
+<li><p>as a multilinear map <span
+class="math inline"><em>V</em><sub><em>p</em></sub><sup>*</sup> × <em>V</em><sub><em>p</em></sub> → ℝ</span>
+(equivalently, a dual vector in <span
+class="math inline">(<em>V</em><sub><em>p</em></sub><sup>*</sup>⊗<em>V</em><sub><em>p</em></sub>)<sup>*</sup></span>),</p></li>
+<li><p>as a <strong>linear transformation</strong> <span
+class="math inline"><em>T</em> : <em>V</em><sub><em>p</em></sub> → <em>V</em><sub><em>p</em></sub></span>,
+i.e. a matrix.</p></li>
+</ol>
+</div>
+<h2 id="sec:tensor-components">Tensor components and the action of
+tensors</h2>
+<p>Choose a basis <span class="math inline">\(\{v_\mu\}\)</span> of
+<span class="math inline">\(V_p\)</span> with dual basis <span
+class="math inline">\(\{(v^\nu)^*\}\)</span> for <span
+class="math inline">\(V_p^*\)</span>. A type-<span
+class="math inline">\((1,1)\)</span> tensor <span
+class="math inline">\(T\)</span> can be expanded as <span
+class="math display">\[\label{eq:type11-expansion}
+  T = \sum_{\mu,\nu} t^\mu{}_\nu\; v_\mu \otimes (v^\nu)^*
+  \;\in\; V_p\otimes V_p^*\,.\]</span> The scalars <span
+class="math inline">\([T]^\mu{}_\nu = t^\mu{}_\nu\)</span> are called
+the <strong>components</strong> (or <strong>matrix elements</strong>) of
+<span class="math inline">\(T\)</span> in the basis <span
+class="math inline">\(\{v_\mu\}\)</span>.</p>
+<p><strong>Action on a vector.</strong> Let <span
+class="math inline">\(w\in V_p\)</span>, with <span
+class="math inline">\(w = \sum_\nu w^\nu\, v_\nu\)</span>. Then <span
+class="math display">\[\begin{aligned}
+  Tw &amp;= \biggl(\sum_{\mu,\nu} t^\mu{}_\nu\; v_\mu\otimes (v^\nu)^*
+        \biggr)(w)
+      = \sum_{\mu,\nu} t^\mu{}_\nu\; (v^\nu)^*(w)\; v_\mu
+        \notag\\
+     &amp;= \sum_{\mu,\nu} t^\mu{}_\nu\; w^\nu\; v_\mu\,.
+        \label{eq:tensor-action}
+\end{aligned}\]</span> Therefore the components of <span
+class="math inline">\(Tw\)</span> are <span
+class="math display">\[\label{eq:tensor-action-components}
+  \boxed{[Tw]^\mu = \sum_{\nu=1}^{n} t^\mu{}_\nu\, w^\nu}\,.\]</span>
+This is an example of <strong>tensor contraction</strong>.</p>
+<h2 id="sec:contraction">Tensor contraction</h2>
+<div class="box-definition">
+<div class="box-title">Definition</div>
+<p><span id="def:contraction" label="def:contraction"></span> Let <span
+class="math inline"><em>T</em> ∈ 𝒯(<em>k</em>,<em>l</em>)</span> with
+<span class="math inline"><em>k</em> ≥ 1</span> and <span
+class="math inline"><em>l</em> ≥ 1</span>. The
+<strong>contraction</strong> over the <span
+class="math inline"><em>j</em></span>-th contravariant and <span
+class="math inline"><em>j</em>′</span>-th covariant index is the map
+<span
+class="math display"><em>C</em><sub><em>j</em>, <em>j</em>′</sub> : 𝒯(<em>k</em>,<em>l</em>) → 𝒯(<em>k</em>−1,<em>l</em>−1)</span>
+defined (interpreting <span class="math inline"><em>T</em></span> as a
+multilinear map) by <span class="math display">$$\label{eq:contraction}
+    (C_{j,j'}\, T)(\dots) =
+    \sum_{\sigma=1}^{n}
+      T\bigl(\dots,\underbrace{(v^\sigma)^*}_{j\text{-th slot}},
+             \dots;\;
+             \underbrace{v_\sigma}_{j'\text{-th
+slot}},\dots\bigr)\,,$$</span> where <span
+class="math inline">{<em>v</em><sub><em>σ</em></sub>}</span> is any
+basis for <span
+class="math inline"><em>V</em><sub><em>p</em></sub></span> and <span
+class="math inline">{(<em>v</em><sup><em>σ</em></sup>)<sup>*</sup>}</span>
+is the dual basis.</p>
+</div>
+<p>In terms of components: <span
+class="math display">\[\label{eq:contraction-components}
+  \boxed{(C_{j,j&#39;}\,
+T)^{\mu_1\cdots\mu_{k-1}}{}_{\nu_1\cdots\nu_{l-1}}
+  = \sum_{\sigma=1}^{n}
+    T^{\mu_1\cdots\sigma\cdots\mu_{k-1}}{}_{\nu_1\cdots\sigma\cdots\nu_{l-1}}}\]</span>
+where <span class="math inline">\(\sigma\)</span> appears in the <span
+class="math inline">\(j\)</span>-th upper position and the <span
+class="math inline">\(j&#39;\)</span>-th lower position and is summed
+over.</p>
+<div class="box-exercise">
+<div class="box-title">Exercise</div>
+<p><span id="ex:contraction-basis-ind"
+label="ex:contraction-basis-ind"></span> Show that the contraction is
+independent of the choice of basis.</p>
+</div>
+<h2 id="sec:outer-product">The outer product</h2>
+<div class="box-definition">
+<div class="box-title">Definition</div>
+<p><span id="def:outer-product" label="def:outer-product"></span> Let
+<span class="math inline"><em>S</em> ∈ 𝒯(<em>k</em>,<em>l</em>)</span>
+and <span
+class="math inline"><em>T</em> ∈ 𝒯(<em>k</em>′,<em>l</em>′)</span>.
+Their <strong>outer product</strong> (or <strong>tensor
+product</strong>) <span
+class="math inline"><em>S</em> ⊗ <em>T</em> ∈ 𝒯(<em>k</em>+<em>k</em>′,<em>l</em>+<em>l</em>′)</span>
+is defined in components by <span
+class="math display">(<em>S</em>⊗<em>T</em>)<sup><em>μ</em><sub>1</sub>⋯<em>μ</em><sub><em>k</em></sub> <em>μ</em><sub><em>k</em> + 1</sub>⋯<em>μ</em><sub><em>k</em> + <em>k</em>′</sub></sup><sub><em>ν</em><sub>1</sub>⋯<em>ν</em><sub><em>l</em></sub> <em>ν</em><sub><em>l</em> + 1</sub>⋯<em>ν</em><sub><em>l</em> + <em>l</em>′</sub></sub> = <em>S</em><sup><em>μ</em><sub>1</sub>⋯<em>μ</em><sub><em>k</em></sub></sup><sub><em>ν</em><sub>1</sub>⋯<em>ν</em><sub><em>l</em></sub></sub> ⋅ <em>T</em><sup><em>μ</em><sub><em>k</em> + 1</sub>⋯<em>μ</em><sub><em>k</em> + <em>k</em>′</sub></sup><sub><em>ν</em><sub><em>l</em> + 1</sub>⋯<em>ν</em><sub><em>l</em> + <em>l</em>′</sub></sub> .</span></p>
+</div>
+<p>Intrinsically, <span class="math inline">\(S\otimes T\)</span> lives
+in <span class="math display">\[\bigl(V_p^{\otimes k}\otimes
+(V_p^*)^{\otimes l}\bigr)
+  \otimes
+  \bigl(V_p^{\otimes k&#39;}\otimes (V_p^*)^{\otimes
+l&#39;}\bigr)\,,\]</span> which is rearranged (collecting all <span
+class="math inline">\(V_p\)</span> factors to the left and all <span
+class="math inline">\(V_p^*\)</span> factors to the right) to give an
+element of <span class="math inline">\(V_p^{\otimes(k+k&#39;)}\otimes
+(V_p^*)^{\otimes(l+l&#39;)}\)</span>.</p>
+<details class="box-intuition" open>
+<summary>Physical intuition</summary>
+<div class="box-body">
+<p>Every tensor can be built from vectors and dual vectors using the
+outer product, and then contracted. The outer product increases the
+type, while contraction decreases it. Together, these two operations
+generate the full algebra of tensor manipulations used throughout
+general relativity.</p>
+</div>
+</details>
+
+<script>
+// Re-typeset MathJax when a details element is opened
+document.querySelectorAll('details').forEach(d => {
+  d.addEventListener('toggle', () => {
+    if (d.open && window.MathJax) MathJax.typeset([d]);
+  });
+});
+</script>
+
+</body>
+</html>

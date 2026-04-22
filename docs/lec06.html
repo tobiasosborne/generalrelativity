@@ -1,0 +1,871 @@
+[WARNING] Could not convert TeX math \label{eq:charge-density}
+      \varepsilon(\boldsymbol{x},t)
+        = \sum_{j=1}^{N} q_j\,
+          \delta^{(3)}\!\bigl(\boldsymbol{x} - \boldsymbol{x}_j(t)\bigr)\,,, rendering as TeX
+[WARNING] Could not convert TeX math \label{eq:current-density}
+      \boldsymbol{J}(\boldsymbol{x},t)
+        = \sum_{j=1}^{N} q_j\,
+          \delta^{(3)}\!\bigl(\boldsymbol{x} - \boldsymbol{x}_j(t)\bigr)\,
+          \frac{d\boldsymbol{x}_j(t)}{dt}\,., rendering as TeX
+[WARNING] Could not convert TeX math \metric, rendering as TeX:
+  \metric
+         ^
+  unexpected control sequence \metric
+  expecting "%", "\\label", "\\tag", "\\nonumber" or whitespace
+[WARNING] Could not convert TeX math \metric(v_1,v_2) = \metric(v_2,v_1), rendering as TeX:
+  \metric(v_1,v_2) = \metric(v_2,v_1)
+         ^
+  unexpected control sequence \metric
+  expecting "%", "\\label", "\\tag", "\\nonumber" or whitespace
+[WARNING] Could not convert TeX math \metric(v,w) = 0, rendering as TeX:
+  \metric(v,w) = 0
+         ^
+  unexpected control sequence \metric
+  expecting "%", "\\label", "\\tag", "\\nonumber" or whitespace
+[WARNING] Could not convert TeX math \metric(v,v), rendering as TeX:
+  \metric(v,v)
+         ^
+  unexpected control sequence \metric
+  expecting "%", "\\label", "\\tag", "\\nonumber" or whitespace
+[WARNING] Could not convert TeX math \metric, rendering as TeX:
+  \metric
+         ^
+  unexpected control sequence \metric
+  expecting "%", "\\label", "\\tag", "\\nonumber" or whitespace
+[WARNING] Could not convert TeX math \metric, rendering as TeX:
+  \metric
+         ^
+  unexpected control sequence \metric
+  expecting "%", "\\label", "\\tag", "\\nonumber" or whitespace
+[WARNING] Could not convert TeX math V_p\xrightarrow{\;\sim\;} V_p^*, rendering as TeX
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lecture 6: Tensors
+continued — Introduction to General Relativity</title>
+
+<!-- MathJax 3 with custom macros -->
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    displayMath: [['\\[','\\]'], ['$$','$$']],
+    macros: {
+      // Derivatives
+      pd: ['{\\frac{\\partial^{#1} #2}{\\partial {#3}^{#1}}}', 3, ''],
+      td: ['{\\frac{d #1}{d #2}}', 2],
+      dd: '{\\mathrm{d}}',
+      covd: '{\\nabla}',
+      Lie: '{\\mathcal{L}}',
+      dalem: '{\\Box}',
+      lap: '{\\Delta}',
+      // Vectors
+      vb: ['{\\boldsymbol{#1}}', 1],
+      uv: ['{\\hat{\\boldsymbol{#1}}}', 1],
+      dt: ['{\\dot{#1}}', 1],
+      ddt: ['{\\ddot{#1}}', 1],
+      norm: ['{\\lVert #1 \\rVert}', 1],
+      // Tensor calculus
+      chris: ['{\\Gamma^{#1}{}_{#2}}', 2],
+      Riem: '{R}',
+      Ric: '{R}',
+      Ein: '{G}',
+      Weyl: '{C}',
+      metric: '{g}',
+      ttype: ['{\\mathcal{T}(#1,#2)}', 2],
+      tp: '{\\otimes}',
+      // Spaces
+      M: '{\\mathcal{M}}',
+      Tp: '{T_p\\mathcal{M}}',
+      Tps: '{T_p^*\\mathcal{M}}',
+      R: '{\\mathbb{R}}',
+      Rn: ['{\\mathbb{R}^{#1}}', 1],
+      // Operators
+      supp: '{\\operatorname{supp}}',
+      tr: '{\\operatorname{tr}}',
+      id: '{\\operatorname{id}}',
+      diag: '{\\operatorname{diag}}',
+      sgn: '{\\operatorname{sgn}}',
+      grad: '{\\operatorname{grad}}',
+      Div: '{\\operatorname{div}}',
+      curl: '{\\operatorname{curl}}',
+      grav: '{G}',
+      textbf: ['{\\mathbf{#1}}', 1],
+    },
+    tags: 'ams',
+    tagSide: 'right',
+  },
+  options: {
+    renderActions: {
+      // Ensure equations render before details are opened
+      addMenu: [0, '', '']
+    }
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+
+<style>
+/* ── Base ─────────────────────────────────────── */
+:root {
+  --spacecadet: #3D7A55;
+  --munsell: #5B8C6F;
+  --banana: #E8B630;
+  --cgblue: #4A7FB5;
+  --isabelline: #A8D5BA;
+  --birrenred: #C4392F;
+  --birrenorange: #D97A2B;
+  --birrengray: #8C8C84;
+  --lightgray: #D4C9A8;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  max-width: 48em;
+  margin: 2em auto;
+  padding: 0 1.5em;
+  font-family: 'Times New Roman', 'Georgia', serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--spacecadet);
+  background: #fcfcfc;
+}
+
+h1, h2, h3, h4 {
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color: var(--munsell);
+}
+
+h1 { font-size: 1.8em; text-align: center; border-bottom: 2px solid var(--munsell); padding-bottom: 0.3em; }
+h2 { font-size: 1.35em; margin-top: 2em; }
+h3 { font-size: 1.15em; margin-top: 1.5em; }
+
+a { color: var(--munsell); }
+
+/* ── Nav ──────────────────────────────────────── */
+nav.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 0;
+  border-bottom: 1px solid var(--isabelline);
+  margin-bottom: 1.5em;
+  font-family: system-ui, sans-serif;
+  font-size: 0.85em;
+}
+nav.top-nav a { text-decoration: none; color: var(--munsell); }
+nav.top-nav a:hover { text-decoration: underline; }
+
+/* ── Fold/unfold controls ─────────────────────── */
+.fold-controls {
+  text-align: right;
+  margin-bottom: 1em;
+  font-family: system-ui, sans-serif;
+  font-size: 0.8em;
+}
+.fold-controls button {
+  background: var(--isabelline);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 3px 10px;
+  cursor: pointer;
+  font-size: 0.85em;
+  margin-left: 4px;
+}
+.fold-controls button:hover { background: var(--banana); }
+
+/* ── Foldable boxes (details/summary) ─────────── */
+details {
+  margin: 1em 0;
+  border-radius: 6px;
+  padding: 0;
+  overflow: hidden;
+}
+
+details > summary {
+  cursor: pointer;
+  padding: 0.5em 0.8em;
+  font-family: system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.95em;
+  list-style: none;
+  user-select: none;
+}
+details > summary::-webkit-details-marker { display: none; }
+details > summary::before {
+  content: '▸ ';
+  display: inline-block;
+  transition: transform 0.15s;
+}
+details[open] > summary::before {
+  content: '▾ ';
+}
+
+details > :not(summary) { padding: 0 0.8em; }
+
+/* Box variants */
+.box-intuition { background: rgba(91,140,111,0.08); border-left: 4px solid var(--munsell); }
+.box-intuition > summary { color: var(--munsell); }
+
+.box-historical { background: var(--isabelline); border-left: 4px solid #888; }
+.box-historical > summary { color: #555; }
+
+.box-keyresult { background: rgba(232,182,48,0.12); border-left: 4px solid var(--banana); }
+.box-keyresult > summary { color: #8a7000; }
+
+.box-solution { background: #f5f5f5; border-left: 4px solid #aaa; }
+.box-solution > summary { color: #666; }
+
+/* Non-foldable boxes */
+.box-exercise {
+  margin: 1em 0;
+  padding: 0.5em 0.8em;
+  background: rgba(91,140,111,0.04);
+  border-left: 4px solid var(--munsell);
+  border-radius: 6px;
+}
+.box-exercise strong { color: var(--munsell); font-family: system-ui, sans-serif; }
+
+.box-example {
+  margin: 1em 0;
+  padding: 0.5em 0.8em;
+  background: rgba(91,140,111,0.04);
+  border-left: 4px solid var(--munsell);
+  border-radius: 6px;
+}
+.box-example strong { color: var(--munsell); font-family: system-ui, sans-serif; }
+
+.box-remark {
+  margin: 1em 0;
+  padding: 0.5em 0.8em;
+  background: #f9f9f9;
+  border-left: 3px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95em;
+}
+
+.box-notation {
+  margin: 1em 0;
+  padding: 0.5em 0.8em;
+  background: #f9f9f9;
+  border-left: 3px solid var(--munsell);
+  border-radius: 4px;
+}
+
+/* ── Highlighted equation box ─────────────────── */
+.eqbox-display {
+  background: rgba(232,182,48,0.15);
+  padding: 0.3em 0.5em;
+  border-radius: 4px;
+  margin: 0.8em 0;
+}
+
+span.eqbox {
+  background: rgba(232,182,48,0.2);
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+/* ── TikZ placeholder ─────────────────────────── */
+.tikz-placeholder {
+  margin: 1.5em auto;
+  padding: 2em;
+  background: var(--isabelline);
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  text-align: center;
+  color: #888;
+  font-family: system-ui, sans-serif;
+  font-style: italic;
+  max-width: 24em;
+}
+
+/* ── Interactive figure container ──────────────── */
+.interactive-figure {
+  margin: 2em 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+}
+.interactive-figure .fig-header {
+  background: var(--isabelline);
+  padding: 0.5em 1em;
+  font-family: system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.9em;
+  color: var(--munsell);
+}
+.interactive-figure canvas {
+  display: block;
+  width: 100%;
+  cursor: grab;
+}
+.interactive-figure .fig-controls {
+  padding: 0.8em 1em;
+  background: #fafafa;
+  border-top: 1px solid #eee;
+  font-family: system-ui, sans-serif;
+  font-size: 0.85em;
+}
+.interactive-figure .fig-controls label {
+  margin-right: 1em;
+  color: var(--spacecadet);
+}
+.interactive-figure .fig-controls input[type=range] {
+  vertical-align: middle;
+  width: 180px;
+}
+
+/* ── Responsive ───────────────────────────────── */
+@media (max-width: 600px) {
+  body { font-size: 16px; padding: 0 0.8em; }
+  h1 { font-size: 1.4em; }
+}
+
+/* ── Definition lists (for footnotes) ─────────── */
+.footnotes { font-size: 0.85em; border-top: 1px solid #ddd; margin-top: 3em; padding-top: 1em; }
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <a href="index.html">← All Lectures</a>
+  <span><strong>Introduction to General Relativity</strong></span>
+  <span></span>
+</nav>
+
+<div class="fold-controls">
+  <button onclick="document.querySelectorAll('details').forEach(d=>d.open=true)">Unfold all</button>
+  <button onclick="document.querySelectorAll('details').forEach(d=>d.open=false)">Fold all</button>
+</div>
+
+<h1 id="sec:tensors-continued">Tensors continued</h1>
+<p>Let <span class="math inline">\(p\in\mathcal{M}\)</span> be a point
+in a manifold <span class="math inline">\(\mathcal{M}\)</span>. We write
+<span class="math inline">\(V_p\)</span> for the tangent space at <span
+class="math inline">\(p\)</span>. In the previous lecture we constructed
+tensor products of <span class="math inline">\(V_p\)</span> purely
+algebraically, ignoring the manifold structure entirely. But a manifold
+provides <em>extra data</em>: not just one vector space but a whole
+field of vector spaces, one at each point, linked by coordinate charts.
+Our goal in this lecture is to study how vectors <span
+class="math inline">\(v\in V_p\)</span>, covectors <span
+class="math inline">\(\omega\in V_p^*\)</span>, and more general tensors
+transform under a change of coordinates on <span
+class="math inline">\(\mathcal{M}\)</span>.</p>
+<h2 id="sec:cotangent">The cotangent space (dual of <span
+class="math inline">\(V_p\)</span>)</h2>
+<div class="box-definition">
+<div class="box-title">Definition</div>
+<p><span id="def:cotangent" label="def:cotangent"></span> The
+<strong>cotangent space</strong> at <span
+class="math inline"><em>p</em></span> is the dual vector space <span
+class="math display"><em>V</em><sub><em>p</em></sub><sup>*</sup> ≡ <em>T</em><sub><em>p</em></sub><sup>*</sup>ℳ .</span>
+Elements of <span
+class="math inline"><em>V</em><sub><em>p</em></sub><sup>*</sup></span>
+are called <strong>covectors</strong> (or <em>one-forms</em>).</p>
+</div>
+<p>Recall that <span class="math inline">\(V_p\)</span> has a coordinate
+basis <span class="math inline">\(\{e_\mu\} = \{\partial/\partial
+x^\mu|_p\}\)</span>. We formally define the <strong>dual basis</strong>
+<span class="math inline">\(\{e^\mu\} = \{\mathrm{d} x^\mu\}\)</span> by
+the requirement <span class="math display">\[\label{eq:dual-basis-def}
+  e^\mu(e_\nu) = \delta^\mu{}_\nu\,.\]</span> In coordinate notation
+this reads <span class="math display">\[\label{eq:dual-basis-coord}
+  \boxed{\mathrm{d} x^\mu\!\left(\frac{\partial }{\partial
+x^\nu}\bigg|_p\right)
+    = \delta^\mu{}_\nu}\,.\]</span> Thus <span
+class="math inline">\(\mathrm{d} x^\mu\)</span> is a <em>linear function
+of tangent vectors</em>, fully determined by <a
+href="#eq:dual-basis-coord" data-reference-type="eqref"
+data-reference="eq:dual-basis-coord">[eq:dual-basis-coord]</a>.</p>
+<div class="box-remark">
+<div class="box-title">Remark</div>
+<p>At this stage, <span
+class="math inline">d<em>x</em><sup><em>μ</em></sup></span> is
+<strong>just a symbol</strong> for a particular covector—a linear
+function on tangent vectors defined by the Kronecker-delta condition <a
+href="#eq:dual-basis-coord" data-reference-type="eqref"
+data-reference="eq:dual-basis-coord">[eq:dual-basis-coord]</a>. It has
+nothing (yet) to do with derivatives or integration measures. Later,
+<span class="math inline">d<em>x</em><sup><em>μ</em></sup></span> will
+acquire an interpretation as a differential form and integration
+measure, but for now resist the temptation to read more into the
+notation than is given by the definition.</p>
+</div>
+<details class="box-intuition" open>
+<summary>Physical intuition</summary>
+<div class="box-body">
+<p>A tangent vector <span class="math inline"><em>v</em></span>
+specifies a direction and magnitude at <span
+class="math inline"><em>p</em></span>. A covector <span
+class="math inline"><em>ω</em></span> is a linear machine that
+“measures” tangent vectors: it eats a vector and returns a real number.
+The dual basis element <span
+class="math inline">d<em>x</em><sup><em>μ</em></sup></span> measures the
+<span class="math inline"><em>μ</em></span>-th component of a
+vector.</p>
+</div>
+</details>
+<h2 id="sec:covector-transform">Transformation law for covectors</h2>
+<p>Recall the <em>contravariant</em> vector transformation law
+(Lecture 4): <span
+class="math display">\[\label{eq:vector-transform-recall}
+  v&#39;^{\mu} = \sum_{\nu} v^\nu\,
+    \frac{\partial x&#39;^\mu}{\partial x^\nu}\,.\]</span></p>
+<p>Now let <span class="math inline">\(\omega\in V_p^*\)</span>. In the
+coordinate basis, <span class="math display">\[\omega = \sum_\mu
+\omega_\mu\,\mathrm{d} x^\mu\,.\]</span> We ask: how are the components
+<span class="math inline">\(\omega&#39;_{\mu&#39;}\)</span> in the new
+coordinate system <span class="math inline">\(x&#39;^\mu\)</span>
+related to the old components <span
+class="math inline">\(\omega_\mu\)</span>?</p>
+<p>Apply <span class="math inline">\(\omega\)</span> to an arbitrary
+vector <span class="math inline">\(v\in V_p\)</span>: <span
+class="math display">\[\begin{aligned}
+  \omega(v)
+    &amp;= \omega\!\left(\sum_\mu v^\mu\,\frac{\partial }{\partial
+x^\mu}\bigg|_p\right)
+     = \sum_\mu v^\mu\,
+       \omega\!\left(\frac{\partial }{\partial x^\mu}\bigg|_p\right)
+     = \sum_\mu \omega_\mu\, v^\mu\,.
+     \label{eq:omega-v-old}
+\end{aligned}\]</span> In the primed coordinates the same contraction
+gives <span class="math display">\[\begin{aligned}
+  \omega(v)
+    &amp;= \sum_{\mu&#39;} \omega&#39;_{\mu&#39;}\, v&#39;^{\mu&#39;}
+     = \sum_{\mu&#39;,\mu} \omega&#39;_{\mu&#39;}\,
+       \frac{\partial x&#39;^{\mu&#39;}}{\partial x^\mu}\, v^\mu\,.
+     \label{eq:omega-v-new}
+\end{aligned}\]</span> Since <a href="#eq:omega-v-old"
+data-reference-type="eqref"
+data-reference="eq:omega-v-old">[eq:omega-v-old]</a> and <a
+href="#eq:omega-v-new" data-reference-type="eqref"
+data-reference="eq:omega-v-new">[eq:omega-v-new]</a> must agree for
+<em>all</em> <span class="math inline">\(v^\mu\)</span>, we read off
+<span class="math display">\[\label{eq:covariant-transform}
+  \boxed{\omega_\mu
+    = \sum_{\mu&#39;} \omega&#39;_{\mu&#39;}\,
+      \frac{\partial x&#39;^{\mu&#39;}}{\partial x^\mu}}
+  \qquad\Longleftrightarrow\qquad
+  \boxed{\omega&#39;_{\mu&#39;}
+    = \sum_{\mu} \frac{\partial x^\mu}{\partial
+x&#39;^{\mu&#39;}}\,\omega_\mu}\,.\]</span> This is the
+<strong>covariant vector transformation law</strong>.</p>
+<div class="box-remark">
+<div class="box-title">Remark</div>
+<p>Compare the two transformation laws:</p>
+<ul>
+<li><p><strong>Contravariant</strong> (vectors): <span
+class="math inline"><em>v</em>′<sup><em>μ</em>′</sup> = (∂<em>x</em>′<sup><em>μ</em>′</sup>/∂<em>x</em><sup><em>μ</em></sup>) <em>v</em><sup><em>μ</em></sup></span>.</p></li>
+<li><p><strong>Covariant</strong> (covectors): <span
+class="math inline"><em>ω</em>′<sub><em>μ</em>′</sub> = (∂<em>x</em><sup><em>μ</em></sup>/∂<em>x</em>′<sup><em>μ</em>′</sup>) <em>ω</em><sub><em>μ</em></sub></span>.</p></li>
+</ul>
+<p>The Jacobian matrices that appear are <em>inverse transposes</em> of
+each other.</p>
+</div>
+<h2 id="sec:tensor-transform">General tensor transformation law</h2>
+<p>Let <span class="math inline">\(T\in\mathcal{T}(k,l)\)</span> be a
+tensor of type <span class="math inline">\((k,l)\)</span>. In a
+coordinate basis, <span class="math inline">\(T\)</span> is expanded as
+<span class="math display">\[\label{eq:tensor-expansion}
+  T = \sum T^{\mu_1\cdots\mu_k}{}_{\nu_1\cdots\nu_l}\;
+    e_{\mu_1}\otimes\cdots\otimes e_{\mu_k}
+    \otimes e^{\nu_1}\otimes\cdots\otimes e^{\nu_l}\,,\]</span> where
+<span class="math inline">\(e_\mu = \partial/\partial x^\mu|_p\)</span>
+and <span class="math inline">\(e^\nu = \mathrm{d} x^\nu\)</span>.</p>
+<p>Under a change of coordinates <span class="math inline">\(x^\mu\to
+x&#39;^{\mu&#39;}\)</span>, the components transform as <span
+class="math display">\[\label{eq:tensor-transform}
+  \boxed{T&#39;^{\mu&#39;_1\cdots\mu&#39;_k}{}_{\nu&#39;_1\cdots\nu&#39;_l}
+    = \sum
+      T^{\mu_1\cdots\mu_k}{}_{\nu_1\cdots\nu_l}\,
+      \frac{\partial x&#39;^{\mu&#39;_1}}{\partial x^{\mu_1}}\cdots
+      \frac{\partial x&#39;^{\mu&#39;_k}}{\partial x^{\mu_k}}\,
+      \frac{\partial x^{\nu_1}}{\partial x&#39;^{\nu&#39;_1}}\cdots
+      \frac{\partial x^{\nu_l}}{\partial x&#39;^{\nu&#39;_l}}}\]</span>
+This is the <strong>tensor transformation law</strong>.</p>
+<details class="box-keyresult" open>
+<summary>Key result</summary>
+<div class="box-body">
+<p>Classically, a <em>tensor of type <span
+class="math inline">(<em>k</em>,<em>l</em>)</span></em> at a point <span
+class="math inline"><em>p</em> ∈ ℳ</span> is a collection of numbers
+<span
+class="math inline"><em>T</em><sup><em>μ</em><sub>1</sub>⋯<em>μ</em><sub><em>k</em></sub></sup><sub><em>ν</em><sub>1</sub>⋯<em>ν</em><sub><em>l</em></sub></sub>(<em>p</em>)</span>
+that transforms under coordinate changes via <a
+href="#eq:tensor-transform" data-reference-type="eqref"
+data-reference="eq:tensor-transform">[eq:tensor-transform]</a>.</p>
+</div>
+</details>
+<div class="box-remark">
+<div class="box-title">Remark</div>
+<p>Not every collection of numbers indexed by coordinate labels is a
+tensor. One can associate <span
+class="math inline"><em>n</em><sup><em>k</em> + <em>l</em></sup></span>
+numbers to each point <span class="math inline"><em>p</em> ∈ ℳ</span>
+that do <em>not</em> obey <a href="#eq:tensor-transform"
+data-reference-type="eqref"
+data-reference="eq:tensor-transform">[eq:tensor-transform]</a> under
+coordinate changes (the Christoffel symbols, which we shall meet in
+Lecture 7, are a prominent example). Tensor fields are therefore quite
+special: they are the coordinate-indexed quantities whose transformation
+law is purely algebraic and involves only Jacobian factors.</p>
+</div>
+<h2 id="sec:smooth-tensor-field">Smooth tensor fields</h2>
+<div class="box-definition">
+<div class="box-title">Definition</div>
+<p><span id="def:smooth-tensor-field"
+label="def:smooth-tensor-field"></span> A <strong>smooth tensor
+field</strong> <span class="math inline"><em>T</em></span> of type <span
+class="math inline">(<em>k</em>,<em>l</em>)</span> on <span
+class="math inline">ℳ</span> is an assignment of a tensor <span
+class="math inline"><em>T</em>|<sub><em>p</em></sub> ∈ 𝒯(<em>k</em>,<em>l</em>)(<em>V</em><sub><em>p</em></sub>)</span>
+to each point <span class="math inline"><em>p</em> ∈ ℳ</span>, such that
+for all smooth covector fields <span
+class="math inline"><em>ω</em><sup>1</sup>, …, <em>ω</em><sup><em>k</em></sup></span>
+and all smooth vector fields <span
+class="math inline"><em>v</em><sub>1</sub>, …, <em>v</em><sub><em>l</em></sub></span>,
+the function <span
+class="math display"><em>p</em> ↦ <em>T</em>|<sub><em>p</em></sub>(<em>ω</em><sup>1</sup>|<sub><em>p</em></sub>,…,<em>ω</em><sup><em>k</em></sup>|<sub><em>p</em></sub>; <em>v</em><sub>1</sub>|<sub><em>p</em></sub>,…,<em>v</em><sub><em>l</em></sub>|<sub><em>p</em></sub>)</span>
+is <span class="math inline"><em>C</em><sup>∞</sup></span> on <span
+class="math inline">ℳ</span>.</p>
+</div>
+<div class="box-remark">
+<div class="box-title">Remark</div>
+<p>A covector field <span class="math inline"><em>ω</em></span> is
+<em>smooth</em> if and only if <span
+class="math inline"><em>ω</em>(<em>v</em>)</span> is a <span
+class="math inline"><em>C</em><sup>∞</sup></span> function on <span
+class="math inline">ℳ</span> for every smooth vector field <span
+class="math inline"><em>v</em></span>.</p>
+</div>
+<h2 id="sec:SR-examples">Examples from special relativity</h2>
+<p>The preceding lectures have built up an abstract formalism for
+multilinear objects on manifolds. We now put it to work by re-examining
+several familiar physical quantities—the four-current, the
+energy-momentum tensor, and the metric—through the lens of tensor
+analysis, all set in Minkowski spacetime <span
+class="math inline">\(\mathcal{M} = \mathbb{R}^{1,3}\)</span>.</p>
+<h3 id="sec:four-current">Currents and charge densities</h3>
+<p>Consider <span class="math inline">\(N\)</span> particles with
+worldlines <span class="math inline">\(x_j(t)\)</span> and charges <span
+class="math inline">\(q_j\)</span>, <span class="math inline">\(j =
+1,\dots,N\)</span>.</p>
+<div class="box-definition">
+<div class="box-title">Definition</div>
+<p><span id="def:charge-current" label="def:charge-current"></span> The
+<strong>charge density</strong> is <span
+class="math display">$$\label{eq:charge-density}
+    \varepsilon(\boldsymbol{x},t)
+      = \sum_{j=1}^{N} q_j\,
+        \delta^{(3)}\!\bigl(\boldsymbol{x} -
+\boldsymbol{x}_j(t)\bigr)\,,$$</span> and the <strong>current
+density</strong> is <span
+class="math display">$$\label{eq:current-density}
+    \boldsymbol{J}(\boldsymbol{x},t)
+      = \sum_{j=1}^{N} q_j\,
+        \delta^{(3)}\!\bigl(\boldsymbol{x} - \boldsymbol{x}_j(t)\bigr)\,
+        \frac{d\boldsymbol{x}_j(t)}{dt}\,.$$</span></p>
+</div>
+<p>Define a <strong>four-current</strong> <span
+class="math inline">\(J^\mu\)</span> by setting <span
+class="math display">\[\label{eq:four-current}
+  J^\mu = (\varepsilon,\;\boldsymbol{J})\,.\]</span></p>
+<div class="box-exercise">
+<div class="box-title">Exercise</div>
+<p><span id="ex:four-current-vector"
+label="ex:four-current-vector"></span> Argue that <span
+class="math inline"><em>J</em><sup><em>μ</em></sup></span> is a vector
+(i.e. an element of <span
+class="math inline"><em>V</em><sub><em>p</em></sub></span>) field under
+Lorentz transformations <span
+class="math inline"><em>x</em>′<sup><em>ν</em></sup> = <em>Λ</em><sup><em>ν</em></sup><sub><em>μ</em></sub> <em>x</em><sup><em>μ</em></sup></span>.</p>
+</div>
+<h3 id="sec:energy-momentum">The energy-momentum tensor</h3>
+<p>Consider <span class="math inline">\(N\)</span> particles with
+energy-momentum four-vectors <span
+class="math inline">\(p_j^\mu\)</span>, <span class="math inline">\(j =
+1,\dots,N\)</span>.</p>
+<p>The density of the <span class="math inline">\(\mu\)</span>-th
+component of four-momentum is <span
+class="math display">\[\label{eq:Tmu0}
+  T^{\mu 0}(\boldsymbol{x},t)
+    = \sum_{j=1}^{N} p_j^\mu(t)\,
+      \delta^{(3)}\!\bigl(\boldsymbol{x} -
+\boldsymbol{x}_j(t)\bigr)\,.\]</span> The corresponding current (the
+flux of <span class="math inline">\(p^\mu\)</span> in the <span
+class="math inline">\(x^k\)</span>-direction) is <span
+class="math display">\[\label{eq:Tmuk}
+  T^{\mu k}(\boldsymbol{x},t)
+    = \sum_{j=1}^{N} p_j^\mu(t)\,
+      \frac{dx_j^k(t)}{dt}\,
+      \delta^{(3)}\!\bigl(\boldsymbol{x} -
+\boldsymbol{x}_j(t)\bigr)\,.\]</span> Combining into a single formula
+(with <span class="math inline">\(x^0(t) = t\)</span>): <span
+class="math display">\[\label{eq:Tmunu-dt}
+  T^{\mu\nu}(x)
+    = \sum_{j=1}^{N} p_j^\mu\,
+      \frac{dx_j^\nu(t)}{dt}\,
+      \delta^{(3)}\!\bigl(\boldsymbol{x} -
+\boldsymbol{x}_j(t)\bigr)\,.\]</span></p>
+<p>Since <span class="math inline">\(p_j^\nu = E_j\,
+dx_j^\nu/dt\)</span>, this may be rewritten as <span
+class="math display">\[\label{eq:Tmunu-symmetric}
+  \boxed{T^{\mu\nu}(x)
+    = \sum_{j=1}^{N}
+      \frac{p_j^\mu\, p_j^\nu}{E_j}\,
+      \delta^{(3)}\!\bigl(\boldsymbol{x} -
+\boldsymbol{x}_j(t)\bigr)}\,.\]</span> Hence <span
+class="math inline">\(T^{\mu\nu}\)</span> is <strong>symmetric</strong>:
+<span class="math inline">\(T^{\mu\nu} = T^{\nu\mu}\)</span>.</p>
+<p>In covariant (proper-time) form: <span
+class="math display">\[\label{eq:Tmunu-covariant}
+  T^{\mu\nu}(x)
+    = \sum_{j=1}^{N} \int\!\mathrm{d}\tau\;
+      p_j^\mu\,\frac{dx_j^\nu}{d\tau}\,
+      \delta^{(4)}\!\bigl(x - x_j(\tau)\bigr)\,.\]</span></p>
+<div class="box-exercise">
+<div class="box-title">Exercise</div>
+<p><span id="ex:Tmunu-tensor" label="ex:Tmunu-tensor"></span> Under
+Lorentz transformations <span
+class="math inline"><em>x</em>′<sup><em>ν</em></sup> = <em>Λ</em><sup><em>ν</em></sup><sub><em>μ</em></sub> <em>x</em><sup><em>μ</em></sup></span>
+(with <span
+class="math inline"><em>Λ</em><sup><em>μ</em>′</sup><sub><em>μ</em></sub> = ∂<em>x</em>′<sup><em>μ</em>′</sup>/∂<em>x</em><sup><em>μ</em></sup></span>),
+show that <span
+class="math display"><em>T</em>′<sup><em>μ</em>′<em>ν</em>′</sup> = <em>Λ</em><sup><em>μ</em>′</sup><sub><em>μ</em></sub> <em>Λ</em><sup><em>ν</em>′</sup><sub><em>ν</em></sub> <em>T</em><sup><em>μ</em><em>ν</em></sup> .</span>
+Conclude that <span
+class="math inline"><em>T</em><sup><em>μ</em><em>ν</em></sup></span> is
+a tensor of type <span class="math inline">(2,0)</span>. <em>Hint:</em>
+the covariant form <a href="#eq:Tmunu-covariant"
+data-reference-type="eqref"
+data-reference="eq:Tmunu-covariant">[eq:Tmunu-covariant]</a> makes the
+argument more transparent, since the four-dimensional delta function and
+proper-time integral are manifestly Lorentz-invariant.</p>
+</div>
+<p>The energy-momentum tensor plays an extraordinarily important role in
+general relativity: it is the object that encodes the complete
+stress-energy content of matter and radiation, and will appear as the
+source term on the right-hand side of Einstein’s field equations.</p>
+<h3 id="sec:metric-tensor">The metric tensor</h3>
+<div class="box-definition">
+<div class="box-title">Definition</div>
+<p><span id="def:metric-tensor" label="def:metric-tensor"></span> A
+<strong>metric tensor</strong> <span
+class="math inline">$\metric$</span> on a manifold <span
+class="math inline">ℳ</span> is a smooth tensor field of type <span
+class="math inline">(0,2)</span> that is</p>
+<ol>
+<li><p><strong>symmetric:</strong> <span
+class="math inline">$\metric(v_1,v_2) = \metric(v_2,v_1)$</span> for all
+<span
+class="math inline"><em>v</em><sub>1</sub>, <em>v</em><sub>2</sub> ∈ <em>V</em><sub><em>p</em></sub></span>,
+and</p></li>
+<li><p><strong>nondegenerate:</strong> <span
+class="math inline">$\metric(v,w) = 0$</span> for all <span
+class="math inline"><em>w</em> ∈ <em>V</em><sub><em>p</em></sub></span>
+implies <span class="math inline"><em>v</em> = 0</span>.</p></li>
+</ol>
+</div>
+<details class="box-intuition" open>
+<summary>Physical intuition</summary>
+<div class="box-body">
+<p>A manifold by itself has no notion of distance or angle. A metric is
+the extra datum that supplies an <em>infinitesimal length</em>: an
+infinitesimal displacement is modelled by a tangent vector, and the
+“infinitesimal squared distance” is a quadratic function of that tangent
+vector—precisely what <span class="math inline">$\metric(v,v)$</span>
+provides.</p>
+</div>
+</details>
+<p>In a coordinate basis <span class="math inline">\(\{\partial/\partial
+x^\mu|_p\}\)</span>, expand the metric as <span
+class="math display">\[\label{eq:metric-components}
+  \metric = \sum_{\mu,\nu} g_{\mu\nu}\,
+    \mathrm{d} x^\mu\otimes\mathrm{d} x^\nu\,.\]</span> This is often
+written (omitting the tensor product sign) as the <strong>line
+element</strong> <span class="math display">\[\label{eq:line-element}
+  \boxed{\mathrm{d} s^2 = \sum_{\mu,\nu} g_{\mu\nu}\,
+    \mathrm{d} x^\mu\,\mathrm{d} x^\nu}\,.\]</span></p>
+<p>The metric defines an <strong>inner product</strong> on <span
+class="math inline">\(V_p\)</span> for each <span
+class="math inline">\(p\in\mathcal{M}\)</span>: <span
+class="math display">\[\begin{aligned}
+  (v,w)_p
+    &amp;= \sum_{\mu,\nu} g_{\mu\nu}\,
+       (\mathrm{d} x^\mu\otimes\mathrm{d} x^\nu)(v,w)
+     = \sum_{\mu,\nu} g_{\mu\nu}\,
+       \mathrm{d} x^\mu(v)\,\mathrm{d} x^\nu(w) \notag\\
+    &amp;= \sum_{\mu,\nu} g_{\mu\nu}\, v^\mu\, w^\nu\,.
+     \label{eq:inner-product}
+\end{aligned}\]</span></p>
+<h3 id="sec:signature">Signature</h3>
+<p>By the Gram–Schmidt procedure, there exists an orthonormal basis
+<span class="math inline">\(\{v_{\hat\mu}\}\)</span> for <span
+class="math inline">\(V_p\)</span> such that <span
+class="math display">\[\label{eq:orthonormal-basis}
+  \metric(v_{\hat\mu},\, v_{\hat\nu})
+    = s_\mu\,\delta_{\mu\nu}\,,
+  \qquad s_\mu \in \{+1,\,-1\}\,.\]</span></p>
+<div class="box-exercise">
+<div class="box-title">Exercise</div>
+<p><span id="ex:gram-schmidt" label="ex:gram-schmidt"></span> Prove that
+an orthonormal basis satisfying <a href="#eq:orthonormal-basis"
+data-reference-type="eqref"
+data-reference="eq:orthonormal-basis">[eq:orthonormal-basis]</a>
+exists.</p>
+</div>
+<p>The number of <span class="math inline">\(+1\)</span>’s and <span
+class="math inline">\(-1\)</span>’s is independent of the choice of
+orthonormal basis. This invariant is the <strong>signature</strong>
+of <span class="math inline">\(\metric\)</span>.</p>
+<div class="box-definition">
+<div class="box-title">Definition</div>
+<p><span id="def:riemannian-lorentzian"
+label="def:riemannian-lorentzian"></span></p>
+<ul>
+<li><p>A metric <span class="math inline">$\metric$</span> with <span
+class="math inline"><em>s</em><sub><em>μ</em></sub> =  + 1</span> for
+all <span class="math inline"><em>μ</em></span> is called
+<strong>Riemannian</strong> (positive definite).</p></li>
+<li><p>The metric of spacetime has signature <span
+class="math inline">(−1,+1,+1,+1)</span>—this is called a
+<strong>Lorentzian</strong> metric.</p></li>
+</ul>
+</div>
+<h2 id="sec:metric-isomorphism">The metric as a map <span
+class="math inline">\(V_p\to V_p^*\)</span></h2>
+<p>A metric tensor <span class="math inline">\(\metric\)</span> can be
+viewed simultaneously as:</p>
+<ol>
+<li><p>a <span class="math inline">\((0,2)\)</span> tensor,</p></li>
+<li><p>a bilinear map <span class="math inline">\(V_p\times
+V_p\to\mathbb{R}\)</span>, and</p></li>
+<li><p>a linear map <span class="math inline">\(V_p\to
+V_p^*\)</span>.</p></li>
+</ol>
+<p>The third interpretation is induced by the map <span
+class="math display">\[\label{eq:metric-map}
+  v \;\longmapsto\; \metric(\cdot\,,v) \;=:\; \omega\,.\]</span> Here
+<span class="math inline">\(\metric(\cdot\,,v):
+V_p\to\mathbb{R}\)</span>, so indeed <span
+class="math inline">\(\metric(\cdot\,,v)\in V_p^*\)</span>.</p>
+<div class="box-theorem">
+<div class="box-title">Theorem</div>
+<p><span id="thm:metric-iso" label="thm:metric-iso"></span> If <span
+class="math inline">$\metric$</span> is nondegenerate, then the map <a
+href="#eq:metric-map" data-reference-type="eqref"
+data-reference="eq:metric-map">[eq:metric-map]</a> is a linear
+isomorphism <span class="math inline">$V_p\xrightarrow{\;\sim\;}
+V_p^*$</span>.</p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> The map <span
+class="math inline">\(v\mapsto\metric(\cdot\,,v)\)</span> is linear by
+bilinearity of <span class="math inline">\(\metric\)</span>. Suppose
+<span class="math inline">\(\metric(\cdot\,,v) = 0\)</span>, i.e. <span
+class="math inline">\(\metric(w,v) = 0\)</span> for all <span
+class="math inline">\(w\in V_p\)</span>. By nondegeneracy, <span
+class="math inline">\(v = 0\)</span>. Hence the kernel is trivial and
+the map is injective. Since <span class="math inline">\(\dim V_p = \dim
+V_p^*\)</span>, it is also surjective. ◻</p>
+</div>
+<details class="box-keyresult" open>
+<summary>Key result</summary>
+<div class="box-body">
+<p>The metric provides a canonical, basis-independent correspondence
+between vectors and covectors. In components: <span
+class="math display"><em>v</em><sub><em>μ</em></sub> = ∑<sub><em>ν</em></sub><em>g</em><sub><em>μ</em><em>ν</em></sub> <em>v</em><sup><em>ν</em></sup>   (lowering) ,   <em>ω</em><sup><em>μ</em></sup> = ∑<sub><em>ν</em></sub><em>g</em><sup><em>μ</em><em>ν</em></sup> <em>ω</em><sub><em>ν</em></sub>   (raising) ,</span>
+where <span
+class="math inline"><em>g</em><sup><em>μ</em><em>ν</em></sup></span> is
+the matrix inverse of <span
+class="math inline"><em>g</em><sub><em>μ</em><em>ν</em></sub></span>.</p>
+</div>
+</details>
+<div class="box-remark">
+<div class="box-title">Remark</div>
+<p>This canonical isomorphism is so convenient that many authors
+identify vectors with covectors from the outset, never introducing the
+cotangent space as a separate object. We prefer to keep the distinction
+explicit: the metric is extra data that may not always be present
+(e.g. in symplectic geometry or contact geometry), and understanding the
+difference between <span
+class="math inline"><em>V</em><sub><em>p</em></sub></span> and <span
+class="math inline"><em>V</em><sub><em>p</em></sub><sup>*</sup></span>
+clarifies which structures depend on that extra data and which do
+not.</p>
+</div>
+<h2 id="sec:abstract-index">Abstract index notation</h2>
+<p>Suppose <span class="math inline">\(T\in\mathcal{T}(k,l)\)</span>.
+Think of <span class="math inline">\(T\)</span> as a multilinear map
+<span class="math display">\[T: \underbrace{V_p^*\otimes\cdots\otimes
+V_p^*}_{k}
+    \;\otimes\;
+    \underbrace{V_p\otimes\cdots\otimes V_p}_{l}
+    \;\longrightarrow\; \mathbb{R}\,.\]</span> One can specify <span
+class="math inline">\(T\)</span> by its components <span
+class="math inline">\(T^{\mu_1\cdots\mu_k}{}_{\nu_1\cdots\nu_l}\)</span>
+in some basis. However, it is often sufficient to know merely <em>which
+arguments of <span class="math inline">\(T\)</span> take vectors and
+which take covectors</em>, without committing to a particular basis.</p>
+<div class="box-definition">
+<div class="box-title">Definition</div>
+<p><span id="def:abstract-index" label="def:abstract-index"></span> In
+the <strong>abstract index notation</strong>, each argument of a tensor
+is labelled by a lower-case Latin letter.</p>
+<ul>
+<li><p>A <strong>superscript</strong> (upper) index labels a
+<em>contravariant</em> slot (takes a covector).</p></li>
+<li><p>A <strong>subscript</strong> (lower) index labels a
+<em>covariant</em> slot (takes a vector).</p></li>
+</ul>
+</div>
+<div class="box-example">
+<div class="box-title">Example</div>
+<p><span id="ex:abstract-index" label="ex:abstract-index"></span></p>
+<ul>
+<li><p>A vector is written <span
+class="math inline"><em>v</em><sup><em>a</em></sup></span>—one
+contravariant slot.</p></li>
+<li><p>A covector is written <span
+class="math inline"><em>ω</em><sub><em>a</em></sub></span>—one covariant
+slot.</p></li>
+<li><p><span
+class="math inline"><em>T</em><sup><em>a</em><em>b</em></sup><sub><em>c</em><em>d</em></sub></span>
+denotes a tensor of type <span
+class="math inline">(2,2)</span>.</p></li>
+</ul>
+<p>Here the lower-case Latin letters <span
+class="math inline"><em>a</em>, <em>b</em>, <em>c</em>, <em>d</em>, …</span>
+label <em>arguments and their type</em>, not components with respect to
+a basis (for which we use Greek indices <span
+class="math inline"><em>μ</em>, <em>ν</em>, <em>ρ</em>, …</span>).</p>
+</div>
+<div class="box-remark">
+<div class="box-title">Remark</div>
+<p>The abstract index notation (due to R. Penrose) is a compromise
+between the coordinate-free and component-based approaches. It carries
+the structural information of index placement (contravariant
+vs. covariant) without fixing a basis, yet retains the computational
+convenience of the index calculus. In practice, any physical calculation
+eventually requires choosing a basis—there is no such thing as doing
+physics entirely without coordinates. But one can, and should, carry out
+as many manipulations as possible in a basis-free manner; the abstract
+index notation is designed to facilitate exactly this.</p>
+</div>
+
+<script>
+// Re-typeset MathJax when a details element is opened
+document.querySelectorAll('details').forEach(d => {
+  d.addEventListener('toggle', () => {
+    if (d.open && window.MathJax) MathJax.typeset([d]);
+  });
+});
+</script>
+
+</body>
+</html>
