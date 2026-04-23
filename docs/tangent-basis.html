@@ -149,9 +149,16 @@ footer { margin-top: 2em; padding-top: 1em; border-top: 1px solid #ddd; font-siz
     };
   }
   function toMpx(X, Y, panel) {
-    const s = Math.min(panel.w, panel.h) * 0.19;
-    return [ panel.x + panel.w/2 + s*X, panel.y + panel.h*0.62 - s*Y ];
+    const s = Math.min(panel.w, panel.h) * 0.16;
+    return [ panel.x + panel.w/2 + s*X, panel.y + panel.h*0.56 - s*Y ];
   }
+  function clipToPanel(panel) {
+    cx.save();
+    cx.beginPath();
+    cx.rect(panel.x, panel.y, panel.w, panel.h);
+    cx.clip();
+  }
+  function unclip() { cx.restore(); }
   function toUpx(u, v, panel) {
     const side = Math.min(panel.w, panel.h) * 0.80;
     const s = side / U_RANGE;
@@ -289,6 +296,7 @@ footer { margin-top: 2em; padding-top: 1em; border-top: 1px solid #ddd; font-siz
 
     // ── M panel: surface + coord curves + point + tangent vectors ──
     cx.fillStyle = '#f7fbf9'; cx.fillRect(L.M.x, L.M.y, L.M.w, L.M.h);
+    clipToPanel(L.M);
     drawSurface(L.M);
     drawCoordCurves(L.M);
 
@@ -314,6 +322,7 @@ footer { margin-top: 2em; padding-top: 1em; border-top: 1px solid #ddd; font-siz
     cx.textBaseline = 'middle'; cx.textAlign = 'left';
     cx.fillText('p', pmx + 10, pmy - 10);
 
+    unclip();
     drawPanelFrame(L.M, 'ℳ  (surface z = 0.5 cos(0.9x) + 0.35 sin(0.6y))', '#3D7A55');
 
     // ── U panel: chart ℝ² with ψ(p) and standard basis e₁, e₂ ──

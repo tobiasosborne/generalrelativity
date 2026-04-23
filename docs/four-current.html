@@ -416,15 +416,16 @@ function drawSpacetimeGrid(panel, map) {
     ctx.beginPath(); ctx.moveTo(xp1, yp1); ctx.lineTo(xp2, yp2); ctx.stroke();
   }
 
-  // axis labels
+  // axis labels (placed inside the plot, away from the top-left panel
+  // title and the bottom-right stats)
   ctx.fillStyle = 'rgba(0,0,0,0.45)';
   ctx.font = '11px system-ui';
   ctx.textAlign = 'right'; ctx.textBaseline = 'bottom';
   const [lx, ly] = map.toPx(map.tMin, map.xMax);
-  ctx.fillText('x', lx - 4, ly - 3);
+  ctx.fillText('x', lx - 6, ly - 6);
   ctx.textAlign = 'left'; ctx.textBaseline = 'top';
   const [lx2, ly2] = map.toPx(map.tMax, map.xMin);
-  ctx.fillText('t', lx2 + 4, ly2 + 3);
+  ctx.fillText('t', lx2 + 6, ly2 + 26);  // push below panel title
 }
 
 function drawLightCone(panel, map, t0, x0) {
@@ -623,14 +624,23 @@ function drawPlot(panel, which /* 'S' or 'Sprime' */, boost) {
 
   ctx.restore();   // end clip
 
-  // legend (drawn after restore so it isn't clipped)
+  // Legend along the top-right of the plot, so it doesn't clash with
+  // the yMax label at the top-left. Right-aligned so the longest entry
+  // (Λ-ghost) anchors to the plot's right edge.
   ctx.font = '10px system-ui';
-  ctx.textAlign = 'left'; ctx.textBaseline = 'top';
-  ctx.fillStyle = '#5B8C6F'; ctx.fillText(which === 'S' ? 'ε̄' : "ε̄'", plotX0 + 6, plotY0 + 4);
-  ctx.fillStyle = '#4A7FB5'; ctx.fillText(which === 'S' ? 'J̄' : "J̄'", plotX0 + 26, plotY0 + 4);
+  ctx.textAlign = 'right'; ctx.textBaseline = 'top';
+  let tx = plotX0 + availW - 6;
   if (which === 'Sprime' && state.showGhost) {
-    ctx.fillStyle = '#D97A2B'; ctx.fillText('Λ(β)·(S)', plotX0 + 46, plotY0 + 4);
+    ctx.fillStyle = '#D97A2B';
+    ctx.fillText('Λ(β)·(S)', tx, plotY0 + 4);
+    tx -= ctx.measureText('Λ(β)·(S)').width + 10;
   }
+  ctx.fillStyle = '#4A7FB5';
+  const Jlabel = which === 'S' ? 'J̄' : "J̄'";
+  ctx.fillText(Jlabel, tx, plotY0 + 4);
+  tx -= ctx.measureText(Jlabel).width + 10;
+  ctx.fillStyle = '#5B8C6F';
+  ctx.fillText(which === 'S' ? 'ε̄' : "ε̄'", tx, plotY0 + 4);
 }
 
 // ══════════════════════════════════════════════════════════════
