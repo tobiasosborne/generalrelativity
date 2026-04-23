@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Four-current in two frames — Lorentz transformation of J<sup>μ</sup></title>
+<style>
+:root {
+  --spacecadet: #3D7A55;
+  --munsell: #5B8C6F;
+  --banana: #E8B630;
+  --cgblue: #4A7FB5;
+  --isabelline: #A8D5BA;
+  --birrenred: #C4392F;
+  --birrenorange: #D97A2B;
+  --birrengray: #8C8C84;
+  --lightgray: #D4C9A8;
+}
+* { box-sizing: border-box; }
+body {
+  max-width: 64em; margin: 0 auto; padding: 1em 1.5em;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: var(--spacecadet); background: #fcfcfc;
+}
+h1 { color: var(--munsell); font-size: 1.5em; text-align: center; margin-bottom: 0.2em; }
+.subtitle { text-align: center; color: #666; font-size: 0.95em; margin-bottom: 1.5em; }
+nav.top-nav {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 0.5em 0; border-bottom: 1px solid var(--isabelline);
+  margin-bottom: 1em; font-size: 0.85em;
+}
+nav.top-nav a { text-decoration: none; color: var(--munsell); }
+.app { display: flex; gap: 1.5em; flex-wrap: wrap; justify-content: center; }
+.canvas-panel { flex: 1 1 640px; max-width: 720px; min-width: 0; }
+.controls-panel { flex: 0 0 240px; }
+canvas {
+  display: block; width: 100%; aspect-ratio: 1 / 1; border: 1px solid #ddd;
+  border-radius: 8px; background: white; cursor: crosshair;
+  touch-action: none;
+}
+canvas.grabbing { cursor: grabbing; }
+.control-group {
+  margin-bottom: 1.2em; padding: 0.8em;
+  background: var(--isabelline); border-radius: 8px;
+}
+.control-group h3 {
+  margin: 0 0 0.5em 0; font-size: 0.85em;
+  color: var(--munsell); text-transform: uppercase; letter-spacing: 0.05em;
+}
+.control-row {
+  display: flex; align-items: center; gap: 0.5em; margin: 0.4em 0;
+  font-size: 0.85em;
+}
+.control-row label { flex: 0 0 68px; color: #444; }
+.control-row input[type=range] { flex: 1; min-width: 80px; }
+.control-row select { flex: 1; min-width: 80px; font-size: 0.85em; }
+.control-row .val { flex: 0 0 56px; text-align: right; font-variant-numeric: tabular-nums; color: var(--spacecadet); font-weight: 600; }
+button.preset, button.action {
+  display: inline-block; margin: 2px; padding: 4px 10px;
+  border: 1px solid #ccc; border-radius: 4px;
+  background: white; cursor: pointer; font-size: 0.8em;
+  color: var(--spacecadet);
+}
+button.preset:hover, button.action:hover { background: var(--banana); border-color: var(--banana); }
+button.action.primary { background: var(--munsell); color: white; border-color: var(--munsell); }
+button.action.primary:hover { background: var(--banana); color: var(--spacecadet); }
+.toggle-row { display: flex; align-items: center; gap: 0.5em; margin: 0.3em 0; font-size: 0.85em; }
+.toggle-row input { margin: 0; }
+.info-box {
+  margin-top: 1.5em; padding: 1em;
+  background: rgba(91,140,111,0.08); border-left: 4px solid var(--munsell);
+  border-radius: 6px; font-size: 0.9em; line-height: 1.55;
+  font-family: Georgia, serif;
+}
+.info-box strong { color: var(--munsell); }
+.stats {
+  margin-top: 0.8em; padding: 0.6em 0.8em;
+  background: #f5f5f5; border-radius: 6px;
+  font-size: 0.78em; font-variant-numeric: tabular-nums;
+  color: #555; line-height: 1.6;
+}
+.stats .label { color: #888; }
+.stats .row { display: flex; justify-content: space-between; }
+.stats .ok { color: var(--munsell); }
+.stats .warn { color: var(--birrenred); }
+@media (max-width: 700px) {
+  .app { flex-direction: column; }
+  .controls-panel { flex: 1 1 auto; }
+}
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <a href="index.html">&larr; All Lectures</a>
+  <span><strong>Interactive Figure</strong></span>
+  <a href="lec06.html">Lecture 6 &rarr;</a>
+</nav>
+
+<h1>Four-current in two frames</h1>
+<p class="subtitle">A cloud of charges flows along a timelike field. Two observers, two running averages, one tensor.</p>
+
+<div class="app">
+  <div class="canvas-panel">
+    <canvas id="canvas"></canvas>
+  </div>
+  <div class="controls-panel">
+
+    <div class="control-group">
+      <h3>Flow</h3>
+      <div class="control-row">
+        <label>Field</label>
+        <select id="field-select">
+          <option value="drift">drift (v=0.3)</option>
+          <option value="shear">shear</option>
+          <option value="wavy" selected>wavy</option>
+          <option value="fountain">fountain</option>
+          <option value="counterstream">counterstream</option>
+          <option value="still">still</option>
+        </select>
+      </div>
+      <div class="control-row">
+        <label>Charges</label>
+        <select id="charge-select">
+          <option value="plus">all +1</option>
+          <option value="pm1" selected>random ±1</option>
+          <option value="neutral">neutral ±1</option>
+        </select>
+      </div>
+      <div class="control-row">
+        <label><em>N</em></label>
+        <input type="range" id="n-slider" min="30" max="400" step="10" value="160">
+        <span class="val" id="n-val">160</span>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <h3>Boost to S&prime;</h3>
+      <div class="control-row">
+        <label>β</label>
+        <input type="range" id="beta-slider" min="-0.85" max="0.85" step="0.01" value="0.4">
+        <span class="val" id="beta-val">+0.40</span>
+      </div>
+      <div class="control-row">
+        <label>γ</label>
+        <span class="val" id="gamma-val" style="flex: 1; text-align: left;">1.091</span>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <h3>Region R</h3>
+      <div class="control-row">
+        <label><em>x<sub>a</sub></em></label>
+        <input type="range" id="xa-slider" min="-2.2" max="2.0" step="0.02" value="-0.6">
+        <span class="val" id="xa-val">-0.60</span>
+      </div>
+      <div class="control-row">
+        <label><em>x<sub>b</sub></em></label>
+        <input type="range" id="xb-slider" min="-2.0" max="2.2" step="0.02" value="0.6">
+        <span class="val" id="xb-val">+0.60</span>
+      </div>
+      <div class="toggle-row" style="margin-top: 0.5em;">
+        <span style="font-size: 0.78em; color: #666;">Drag on the S panel to move.</span>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <h3>Simulation</h3>
+      <div style="text-align: center;">
+        <button class="action primary" id="play-btn">Pause</button>
+        <button class="action" id="reset-btn">Reset</button>
+      </div>
+      <div class="toggle-row" style="margin-top: 0.5em;">
+        <input type="checkbox" id="show-ghost" checked>
+        <label for="show-ghost">Show Λ-predicted curve on S&prime;</label>
+      </div>
+    </div>
+
+    <div class="stats" id="stats">
+      <div class="row"><span class="label">τ</span><span id="stat-tau">0.00</span></div>
+      <div class="row"><span class="label">ε̄ (S)</span><span id="stat-e">—</span></div>
+      <div class="row"><span class="label">J̄ (S)</span><span id="stat-j">—</span></div>
+      <div class="row"><span class="label">ε̄&prime; (S&prime;)</span><span id="stat-ep">—</span></div>
+      <div class="row"><span class="label">J̄&prime; (S&prime;)</span><span id="stat-jp">—</span></div>
+      <div class="row"><span class="label">Λ&minus;residual</span><span id="stat-res">—</span></div>
+      <div class="row"><span class="label">∂<sub>μ</sub>J<sup>μ</sup></span><span id="stat-cons">0</span></div>
+    </div>
+
+  </div>
+</div>
+
+<div class="info-box">
+  <strong>What you're seeing.</strong> In the top row, the same particle worldlines are drawn in two inertial frames.
+  In S (left) the region <em>R</em> is a vertical strip
+  <em>x</em> &isin; [<em>x<sub>a</sub></em>, <em>x<sub>b</sub></em>]; in
+  S&prime; (right) the <em>same</em> spacetime worldtube appears as a tilted
+  parallelogram, because boost mixes <em>t</em> and <em>x</em>.
+  Positive charges are <span style="color: var(--munsell);"><strong>green</strong></span>,
+  negative <span style="color: var(--birrenred);"><strong>red</strong></span>.
+  <br><br>
+  The bottom row plots the running spacetime averages
+  <em>ε̄<sub>R</sub></em>(τ) = <sup>1</sup>⁄<sub>|R|</sub> &int;<sub>R</sub> <em>J</em><sup>0</sup> d<em>t</em> d<em>x</em>
+  and
+  <em>J̄<sub>R</sub></em>(τ) = <sup>1</sup>⁄<sub>|R|</sub> &int;<sub>R</sub> <em>J</em><sup>1</sup> d<em>t</em> d<em>x</em>,
+  one pair per frame.
+  On the S&prime; plot the dashed
+  <span style="color: var(--birrenorange);"><strong>orange</strong></span>
+  ghost is Λ(β) applied to the S curve; the solid lines are the
+  <em>direct</em> measurements inside the boosted parallelogram. They
+  agree because (ε, J) is a 2-vector.
+  <br><br>
+  The <em>∂<sub>μ</sub>J<sup>μ</sup></em> readout is a discrete conservation
+  check: the change in charge inside the spatial window [<em>x<sub>a</sub></em>,
+  <em>x<sub>b</sub></em>] at the current slice equals the signed count of
+  boundary crossings. Deviation from zero is a bug.
+</div>
+
+<script type="module">
+import {
+  lcg,
+  fieldPresets,
+  seedParticles,
+  rk4StepParticle,
+  lorentzBoost,
+  lorentzPredict,
+  boostedBox,
+  pointInParallelogram,
+  stepAndAccumulate,
+  addDelta,
+  newAccumulators,
+  runningAverage,
+} from './demos/four_current.mjs';
+
+// ══════════════════════════════════════════════════════════════
+// State
+
+const X_MIN = -2.5, X_MAX = 2.5;
+const T_MAX = 4.0;
+const SEED_PAD = 1.5;              // pad x-seed interval so box stays populated
+const TRAIL_MAX = 800;             // max points kept per worldline trail
+const HIST_MAX = 1200;             // max samples in observable plots
+
+const state = {
+  fieldName: 'wavy',
+  chargeLaw: 'pm1',
+  N: 160,
+  beta: 0.4,
+  box: { xA: -0.6, xB: 0.6, t0: 0, t1: 0.0001 },
+  tau: 0,
+  playing: true,
+  showGhost: true,
+  rngSeed: 7,
+  particles: [],
+  trails: [],                      // per-particle array of [t, x]
+  alive: [],                       // bool per particle (false if exited spatial padding)
+  acc: newAccumulators(),
+  hist: [],                        // [{tau, eps, J, epsP, JP}]
+  // Conservation running counters:
+  consQ: 0,                        // current charge inside [xA,xB] at current slice
+  consCross: 0,                    // running total of signed boundary crossings
+};
+
+function vxOf(name) { return fieldPresets[name]; }
+
+function resetAll() {
+  const rng = lcg(state.rngSeed);
+  state.particles = seedParticles(
+    state.N, X_MIN - SEED_PAD, X_MAX + SEED_PAD,
+    0, state.chargeLaw, rng);
+  state.trails = state.particles.map(p => [[p.t, p.x]]);
+  state.alive = state.particles.map(() => true);
+  state.acc = newAccumulators();
+  state.hist = [];
+  state.tau = 0;
+  state.box.t0 = 0;
+  state.box.t1 = 0.0001;
+  // initial Q_W
+  state.consQ = 0;
+  for (const p of state.particles) {
+    if (p.x >= state.box.xA && p.x <= state.box.xB) state.consQ += p.q;
+  }
+  state.consCross = 0;
+  state.consQ0 = state.consQ;      // baseline at τ=0
+}
+
+// ══════════════════════════════════════════════════════════════
+// Canvas setup and quadrant layout
+
+const cv = document.getElementById('canvas');
+const ctx = cv.getContext('2d');
+
+function setupCanvas() {
+  const dpr = window.devicePixelRatio || 1;
+  const r = cv.getBoundingClientRect();
+  cv.width  = Math.round(r.width * dpr);
+  cv.height = Math.round(r.height * dpr);
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  return { w: r.width, h: r.height };
+}
+
+// Four quadrants: Q1 top-left (rest spacetime), Q2 top-right (boosted),
+// Q3 bottom-left (rest observables), Q4 bottom-right (boosted).
+function layoutQuadrants(w, h) {
+  const gap = 10;
+  const halfW = (w - gap) / 2;
+  const halfH = (h - gap) / 2;
+  return {
+    Q1: { x: 0,           y: 0,           w: halfW, h: halfH, label: 'S: (t, x)' },
+    Q2: { x: halfW + gap, y: 0,           w: halfW, h: halfH, label: "S': (t', x')" },
+    Q3: { x: 0,           y: halfH + gap, w: halfW, h: halfH, label: 'running (ε̄, J̄) in S' },
+    Q4: { x: halfW + gap, y: halfH + gap, w: halfW, h: halfH, label: "running (ε̄', J̄') in S'" },
+  };
+}
+
+// ══════════════════════════════════════════════════════════════
+// Spacetime-panel mapping.
+// Rest panel (Q1): fixed view [X_MIN, X_MAX] × [0, T_MAX].
+// Boosted panel (Q2): auto-scaled to contain the boosted parallelogram
+// and the boosted image of the rest view box.
+
+function restMap(panel) {
+  const pad = 16;
+  const availW = panel.w - 2 * pad;
+  const availH = panel.h - 2 * pad;
+  const sX = availW / (X_MAX - X_MIN);
+  const sT = availH / T_MAX;
+  return {
+    toPx: (t, x) => [
+      panel.x + pad + (x - X_MIN) * sX,
+      panel.y + pad + availH - t * sT,       // t up
+    ],
+    fromPx: (px, py) => ({
+      x: X_MIN + (px - panel.x - pad) / sX,
+      t: (panel.y + pad + availH - py) / sT,
+    }),
+    tMin: 0, tMax: T_MAX, xMin: X_MIN, xMax: X_MAX,
+    pad,
+  };
+}
+
+function boostedMap(panel, boost) {
+  // Bounding box of: boosted image of rest view corners, plus boosted
+  // parallelogram of current box.
+  const corners = [
+    boost.apply(0,      X_MIN), boost.apply(0,      X_MAX),
+    boost.apply(T_MAX,  X_MIN), boost.apply(T_MAX,  X_MAX),
+    boost.apply(state.box.t0, state.box.xA),
+    boost.apply(state.box.t0, state.box.xB),
+    boost.apply(state.box.t1, state.box.xA),
+    boost.apply(state.box.t1, state.box.xB),
+  ];
+  let tMin =  Infinity, tMax = -Infinity, xMin =  Infinity, xMax = -Infinity;
+  for (const [t, x] of corners) {
+    if (t < tMin) tMin = t; if (t > tMax) tMax = t;
+    if (x < xMin) xMin = x; if (x > xMax) xMax = x;
+  }
+  // Pad so the view doesn't hug the edges.
+  const padFrac = 0.08;
+  const dT = (tMax - tMin) * padFrac, dX = (xMax - xMin) * padFrac;
+  tMin -= dT; tMax += dT; xMin -= dX; xMax += dX;
+
+  const pad = 16;
+  const availW = panel.w - 2 * pad;
+  const availH = panel.h - 2 * pad;
+  const spanX = xMax - xMin;
+  const spanT = tMax - tMin;
+  // Use uniform scale so angles are preserved and Lorentz geometry reads correctly.
+  const s = Math.min(availW / spanX, availH / spanT);
+  // Center.
+  const cX = (xMax + xMin) / 2;
+  const cT = (tMax + tMin) / 2;
+  const cxPx = panel.x + panel.w / 2;
+  const cyPx = panel.y + panel.h / 2;
+  return {
+    toPx: (t, x) => [
+      cxPx + (x - cX) * s,
+      cyPx - (t - cT) * s,
+    ],
+    tMin, tMax, xMin, xMax, pad,
+  };
+}
+
+// ══════════════════════════════════════════════════════════════
+// Drawing primitives
+
+function drawPanelFrame(panel) {
+  ctx.strokeStyle = '#e4e4e4'; ctx.lineWidth = 1;
+  ctx.strokeRect(panel.x + 0.5, panel.y + 0.5, panel.w - 1, panel.h - 1);
+  ctx.fillStyle = '#2c4c77';
+  ctx.font = '600 12px system-ui, sans-serif';
+  ctx.textBaseline = 'top'; ctx.textAlign = 'left';
+  ctx.fillText(panel.label, panel.x + 8, panel.y + 6);
+}
+
+function clipPanel(panel) {
+  ctx.save();
+  ctx.beginPath();
+  ctx.rect(panel.x + 1, panel.y + 1, panel.w - 2, panel.h - 2);
+  ctx.clip();
+}
+function unclip() { ctx.restore(); }
+
+// ── Spacetime diagram chrome ─────────────────────────────────────
+function drawSpacetimeGrid(panel, map) {
+  ctx.strokeStyle = 'rgba(0,0,0,0.05)';
+  ctx.lineWidth = 0.5;
+  // light vertical and horizontal gridlines
+  for (let x = Math.ceil(map.xMin); x <= Math.floor(map.xMax); x++) {
+    const [xp1, yp1] = map.toPx(map.tMin, x);
+    const [xp2, yp2] = map.toPx(map.tMax, x);
+    ctx.beginPath(); ctx.moveTo(xp1, yp1); ctx.lineTo(xp2, yp2); ctx.stroke();
+  }
+  for (let t = Math.ceil(map.tMin); t <= Math.floor(map.tMax); t++) {
+    const [xp1, yp1] = map.toPx(t, map.xMin);
+    const [xp2, yp2] = map.toPx(t, map.xMax);
+    ctx.beginPath(); ctx.moveTo(xp1, yp1); ctx.lineTo(xp2, yp2); ctx.stroke();
+  }
+
+  // axis labels
+  ctx.fillStyle = 'rgba(0,0,0,0.45)';
+  ctx.font = '11px system-ui';
+  ctx.textAlign = 'right'; ctx.textBaseline = 'bottom';
+  const [lx, ly] = map.toPx(map.tMin, map.xMax);
+  ctx.fillText('x', lx - 4, ly - 3);
+  ctx.textAlign = 'left'; ctx.textBaseline = 'top';
+  const [lx2, ly2] = map.toPx(map.tMax, map.xMin);
+  ctx.fillText('t', lx2 + 4, ly2 + 3);
+}
+
+function drawLightCone(panel, map, t0, x0) {
+  ctx.strokeStyle = 'rgba(0,0,0,0.18)';
+  ctx.setLineDash([3, 3]);
+  ctx.lineWidth = 0.8;
+  // c = 1 ⇒ lines are at 45° in (t, x). Draw through (t0, x0) until panel edges.
+  const far = 100;
+  for (const sx of [+1, -1]) {
+    const [p0x, p0y] = map.toPx(t0, x0);
+    const [p1x, p1y] = map.toPx(t0 + far, x0 + sx * far);
+    ctx.beginPath(); ctx.moveTo(p0x, p0y); ctx.lineTo(p1x, p1y); ctx.stroke();
+  }
+  ctx.setLineDash([]);
+}
+
+function drawWorldlines(panel, map, inFrame /* 'S' or 'Sprime' */, boost) {
+  const trails = state.trails;
+  for (let i = 0; i < trails.length; i++) {
+    const tr = trails[i];
+    if (tr.length < 2) continue;
+    const q = state.particles[i].q;
+    ctx.strokeStyle = q > 0 ? 'rgba(91,140,111,0.55)' : 'rgba(196,57,47,0.55)';
+    ctx.lineWidth = 1.2;
+    ctx.beginPath();
+    for (let k = 0; k < tr.length; k++) {
+      const [tt, xx] = tr[k];
+      let tp, xp;
+      if (inFrame === 'Sprime') {
+        [tp, xp] = boost.apply(tt, xx);
+      } else {
+        tp = tt; xp = xx;
+      }
+      const [px, py] = map.toPx(tp, xp);
+      if (k === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+    }
+    ctx.stroke();
+  }
+}
+
+function drawParticleDots(panel, map, inFrame, boost) {
+  const parts = state.particles;
+  for (let i = 0; i < parts.length; i++) {
+    if (!state.alive[i]) continue;
+    const p = parts[i];
+    let tp, xp;
+    if (inFrame === 'Sprime') [tp, xp] = boost.apply(p.t, p.x);
+    else { tp = p.t; xp = p.x; }
+    const [px, py] = map.toPx(tp, xp);
+    ctx.fillStyle = p.q > 0 ? '#5B8C6F' : '#C4392F';
+    ctx.beginPath(); ctx.arc(px, py, 2.5, 0, 2 * Math.PI); ctx.fill();
+  }
+}
+
+function drawBoxRest(panel, map) {
+  const b = state.box;
+  const [x1, y1] = map.toPx(b.t0, b.xA);
+  const [x2, y2] = map.toPx(b.t0, b.xB);
+  const [x3, y3] = map.toPx(b.t1, b.xB);
+  const [x4, y4] = map.toPx(b.t1, b.xA);
+  ctx.fillStyle = 'rgba(232,182,48,0.12)';
+  ctx.beginPath(); ctx.moveTo(x1,y1); ctx.lineTo(x2,y2); ctx.lineTo(x3,y3); ctx.lineTo(x4,y4); ctx.closePath(); ctx.fill();
+  ctx.strokeStyle = 'rgba(232,182,48,0.9)'; ctx.lineWidth = 1.5;
+  ctx.stroke();
+}
+
+function drawBoxBoosted(panel, map, boost) {
+  const corners = boostedBox(state.box, boost);
+  ctx.fillStyle = 'rgba(232,182,48,0.12)';
+  ctx.beginPath();
+  const [x1, y1] = map.toPx(corners[0][0], corners[0][1]);
+  ctx.moveTo(x1, y1);
+  for (let k = 1; k < 4; k++) {
+    const [px, py] = map.toPx(corners[k][0], corners[k][1]);
+    ctx.lineTo(px, py);
+  }
+  ctx.closePath(); ctx.fill();
+  ctx.strokeStyle = 'rgba(232,182,48,0.9)'; ctx.lineWidth = 1.5;
+  ctx.stroke();
+}
+
+// ── Observable plots ─────────────────────────────────────────────
+const HIST_WARMUP_TAU = 0.25;      // skip initial transient for y-range
+
+function drawPlot(panel, which /* 'S' or 'Sprime' */, boost) {
+  const pad = 26;
+  const availW = panel.w - 2 * pad;
+  const availH = panel.h - 2 * pad;
+  if (availW <= 0 || availH <= 0) return;
+  const tauMax = Math.max(0.5, state.tau);
+
+  // Determine y-range from hist (excluding the opening transient — the
+  // ratio A/|R| with tiny |R| is noisy for the first fraction of a second).
+  let yMin =  Infinity, yMax = -Infinity;
+  const tauWarm = (state.box.t0 || 0) + HIST_WARMUP_TAU;
+  for (const h of state.hist) {
+    if (h.tau < tauWarm) continue;
+    const eps = which === 'S' ? h.eps : h.epsP;
+    const J   = which === 'S' ? h.J   : h.JP;
+    if (eps < yMin) yMin = eps; if (eps > yMax) yMax = eps;
+    if (J < yMin) yMin = J; if (J > yMax) yMax = J;
+    if (which === 'Sprime' && state.showGhost) {
+      const pred = lorentzPredict(h.eps, h.J, state.beta);
+      if (pred.eps < yMin) yMin = pred.eps; if (pred.eps > yMax) yMax = pred.eps;
+      if (pred.J   < yMin) yMin = pred.J;   if (pred.J   > yMax) yMax = pred.J;
+    }
+  }
+  if (!isFinite(yMin) || !isFinite(yMax) || yMin === yMax) { yMin = -1; yMax = 1; }
+  const yPad = 0.15 * Math.max(1e-3, yMax - yMin);
+  yMin -= yPad; yMax += yPad;
+
+  // Plot frame and zero line.
+  const plotX0 = panel.x + pad, plotY0 = panel.y + pad;
+  ctx.strokeStyle = '#e4e4e4'; ctx.lineWidth = 1;
+  ctx.strokeRect(plotX0 + 0.5, plotY0 + 0.5, availW - 1, availH - 1);
+
+  const toPx = (tau, y) => [
+    plotX0 + (tau / tauMax) * availW,
+    plotY0 + availH - ((y - yMin) / (yMax - yMin)) * availH,
+  ];
+
+  // zero line
+  if (yMin < 0 && yMax > 0) {
+    ctx.strokeStyle = 'rgba(0,0,0,0.15)';
+    ctx.setLineDash([2, 3]);
+    const [, yz] = toPx(0, 0);
+    ctx.beginPath(); ctx.moveTo(plotX0, yz); ctx.lineTo(plotX0 + availW, yz); ctx.stroke();
+    ctx.setLineDash([]);
+  }
+
+  // axis labels
+  ctx.fillStyle = 'rgba(0,0,0,0.45)';
+  ctx.font = '11px system-ui';
+  ctx.textAlign = 'left'; ctx.textBaseline = 'top';
+  ctx.fillText('τ', plotX0 + availW - 12, plotY0 + availH + 4);
+  ctx.textAlign = 'right'; ctx.textBaseline = 'middle';
+  ctx.fillText(yMax.toFixed(2), plotX0 - 4, plotY0 + 6);
+  ctx.fillText(yMin.toFixed(2), plotX0 - 4, plotY0 + availH - 6);
+
+  if (state.hist.length < 2) return;
+
+  // Clip curves to the plot rectangle so early off-scale transients
+  // don't draw into the margins.
+  ctx.save();
+  ctx.beginPath();
+  ctx.rect(plotX0, plotY0, availW, availH);
+  ctx.clip();
+
+  // Ghost curves (Λ-predicted) on boosted plot.
+  if (which === 'Sprime' && state.showGhost) {
+    ctx.strokeStyle = 'rgba(217,122,43,0.9)';  // birrenorange
+    ctx.setLineDash([4, 3]);
+    ctx.lineWidth = 1.4;
+    // predicted ε̄'
+    ctx.beginPath();
+    for (let k = 0; k < state.hist.length; k++) {
+      const h = state.hist[k];
+      const pred = lorentzPredict(h.eps, h.J, state.beta);
+      const [px, py] = toPx(h.tau, pred.eps);
+      if (k === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+    }
+    ctx.stroke();
+    // predicted J̄'
+    ctx.beginPath();
+    for (let k = 0; k < state.hist.length; k++) {
+      const h = state.hist[k];
+      const pred = lorentzPredict(h.eps, h.J, state.beta);
+      const [px, py] = toPx(h.tau, pred.J);
+      if (k === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+    }
+    ctx.stroke();
+    ctx.setLineDash([]);
+  }
+
+  // ε̄ curve (munsell)
+  ctx.strokeStyle = '#5B8C6F'; ctx.lineWidth = 1.8;
+  ctx.beginPath();
+  for (let k = 0; k < state.hist.length; k++) {
+    const h = state.hist[k];
+    const y = which === 'S' ? h.eps : h.epsP;
+    const [px, py] = toPx(h.tau, y);
+    if (k === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+  }
+  ctx.stroke();
+
+  // J̄ curve (cgblue)
+  ctx.strokeStyle = '#4A7FB5'; ctx.lineWidth = 1.8;
+  ctx.beginPath();
+  for (let k = 0; k < state.hist.length; k++) {
+    const h = state.hist[k];
+    const y = which === 'S' ? h.J : h.JP;
+    const [px, py] = toPx(h.tau, y);
+    if (k === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+  }
+  ctx.stroke();
+
+  ctx.restore();   // end clip
+
+  // legend (drawn after restore so it isn't clipped)
+  ctx.font = '10px system-ui';
+  ctx.textAlign = 'left'; ctx.textBaseline = 'top';
+  ctx.fillStyle = '#5B8C6F'; ctx.fillText(which === 'S' ? 'ε̄' : "ε̄'", plotX0 + 6, plotY0 + 4);
+  ctx.fillStyle = '#4A7FB5'; ctx.fillText(which === 'S' ? 'J̄' : "J̄'", plotX0 + 26, plotY0 + 4);
+  if (which === 'Sprime' && state.showGhost) {
+    ctx.fillStyle = '#D97A2B'; ctx.fillText('Λ(β)·(S)', plotX0 + 46, plotY0 + 4);
+  }
+}
+
+// ══════════════════════════════════════════════════════════════
+// Render
+
+function render() {
+  const { w, h } = setupCanvas();
+  ctx.fillStyle = '#fcfcfc';
+  ctx.fillRect(0, 0, w, h);
+  const Q = layoutQuadrants(w, h);
+  const boost = lorentzBoost(state.beta);
+
+  // Top-left: rest spacetime
+  {
+    const p = Q.Q1;
+    const m = restMap(p);
+    clipPanel(p);
+    drawSpacetimeGrid(p, m);
+    drawLightCone(p, m, 0, 0);
+    drawWorldlines(p, m, 'S', boost);
+    drawBoxRest(p, m);
+    drawParticleDots(p, m, 'S', boost);
+    unclip();
+    drawPanelFrame(p);
+  }
+  // Top-right: boosted spacetime
+  {
+    const p = Q.Q2;
+    const m = boostedMap(p, boost);
+    clipPanel(p);
+    drawSpacetimeGrid(p, m);
+    drawLightCone(p, m, 0, 0);
+    drawWorldlines(p, m, 'Sprime', boost);
+    drawBoxBoosted(p, m, boost);
+    drawParticleDots(p, m, 'Sprime', boost);
+    unclip();
+    drawPanelFrame(p);
+  }
+  // Bottom-left: rest observables
+  {
+    const p = Q.Q3;
+    clipPanel(p);
+    drawPlot(p, 'S', boost);
+    unclip();
+    drawPanelFrame(p);
+  }
+  // Bottom-right: boosted observables
+  {
+    const p = Q.Q4;
+    clipPanel(p);
+    drawPlot(p, 'Sprime', boost);
+    unclip();
+    drawPanelFrame(p);
+  }
+
+  // Stats panel
+  updateStats();
+}
+
+function updateStats() {
+  const avg = runningAverage(state.acc, state.box);
+  const pred = lorentzPredict(avg.eps, avg.J, state.beta);
+  const res = Math.sqrt((pred.eps - avg.epsP) ** 2 + (pred.J - avg.JP) ** 2);
+  document.getElementById('stat-tau').textContent = state.tau.toFixed(2);
+  const fmt = v => (Number.isFinite(v) ? v.toFixed(3) : '—');
+  document.getElementById('stat-e').textContent  = fmt(avg.eps);
+  document.getElementById('stat-j').textContent  = fmt(avg.J);
+  document.getElementById('stat-ep').textContent = fmt(avg.epsP);
+  document.getElementById('stat-jp').textContent = fmt(avg.JP);
+  const resEl = document.getElementById('stat-res');
+  resEl.textContent = fmt(res);
+  resEl.className = res < 0.02 ? 'ok' : 'warn';
+  const consRes = state.consQ - state.consQ0 - state.consCross;
+  const consEl = document.getElementById('stat-cons');
+  consEl.textContent = (consRes === 0) ? '0 (exact)' : consRes.toString();
+  consEl.className = consRes === 0 ? 'ok' : 'warn';
+}
+
+// ══════════════════════════════════════════════════════════════
+// Simulation tick
+
+let lastWall = performance.now();
+const SIM_SPEED = 0.5;             // simulation τ per wall-clock second
+const MAX_SUBSTEPS = 6;
+const DT_SUB = 0.012;              // max dt per RK4 substep
+
+function tick(now) {
+  requestAnimationFrame(tick);
+  const wallDt = Math.min(0.05, (now - lastWall) / 1000);
+  lastWall = now;
+  if (!state.playing) { render(); return; }
+  if (state.tau >= T_MAX) {
+    state.playing = false;
+    document.getElementById('play-btn').textContent = 'Replay';
+    render(); return;
+  }
+
+  let dtTarget = wallDt * SIM_SPEED;
+  const subs = Math.min(MAX_SUBSTEPS, Math.max(1, Math.ceil(dtTarget / DT_SUB)));
+  const dt = dtTarget / subs;
+
+  const vx = vxOf(state.fieldName);
+  const boost = lorentzBoost(state.beta);
+
+  for (let s = 0; s < subs; s++) {
+    // Extend the rest-frame accumulator box up to current τ + dt.
+    state.box.t1 = state.tau + dt;
+    const corners = boostedBox(state.box, boost);
+
+    // Only advance alive particles; integrate all at once.
+    const alivePs = [];
+    const aliveIdx = [];
+    for (let i = 0; i < state.particles.length; i++) {
+      if (state.alive[i]) { alivePs.push(state.particles[i]); aliveIdx.push(i); }
+    }
+    const d = stepAndAccumulate(alivePs, vx, dt, state.box, boost, corners);
+    addDelta(state.acc, d);
+
+    // Write back, update trails, update conservation counters.
+    for (let k = 0; k < alivePs.length; k++) {
+      const i = aliveIdx[k];
+      const prev = state.particles[i];
+      const next = d.next[k];
+      state.particles[i] = next;
+      // trail
+      state.trails[i].push([next.t, next.x]);
+      if (state.trails[i].length > TRAIL_MAX) state.trails[i].shift();
+      // kill if outside spatial pad or past T_MAX
+      if (next.x < X_MIN - SEED_PAD || next.x > X_MAX + SEED_PAD || next.t > T_MAX) {
+        state.alive[i] = false;
+      }
+    }
+    state.consQ += d.dQ;
+    state.consCross += d.dCross;
+    state.tau += dt;
+  }
+
+  // Sample observable history (cap to HIST_MAX by decimation).
+  const avg = runningAverage(state.acc, state.box);
+  state.hist.push({ tau: state.tau, eps: avg.eps, J: avg.J, epsP: avg.epsP, JP: avg.JP });
+  if (state.hist.length > HIST_MAX) {
+    // decimate every other sample to keep size bounded
+    state.hist = state.hist.filter((_, i) => i % 2 === 0);
+  }
+
+  render();
+}
+
+// ══════════════════════════════════════════════════════════════
+// Interactions
+
+// Drag on rest panel to move the box.
+let drag = null;
+cv.addEventListener('pointerdown', e => {
+  const r = cv.getBoundingClientRect();
+  const px = e.clientX - r.left, py = e.clientY - r.top;
+  const Q = layoutQuadrants(r.width, r.height);
+  // Only interact with Q1 (rest spacetime).
+  if (px < Q.Q1.x || px > Q.Q1.x + Q.Q1.w || py < Q.Q1.y || py > Q.Q1.y + Q.Q1.h) return;
+  const m = restMap(Q.Q1);
+  const { x } = m.fromPx(px, py);
+  const b = state.box;
+  const midX = 0.5 * (b.xA + b.xB);
+  // If near box center → move; near edge → resize that edge.
+  const distA = Math.abs(x - b.xA);
+  const distB = Math.abs(x - b.xB);
+  const distMid = Math.abs(x - midX);
+  const tol = 0.12 * (b.xB - b.xA);
+  let mode = 'move';
+  if (distA < tol && distA < distMid) mode = 'edgeA';
+  else if (distB < tol && distB < distMid) mode = 'edgeB';
+  drag = { mode, startX: x, startA: b.xA, startB: b.xB };
+  cv.classList.add('grabbing');
+  cv.setPointerCapture(e.pointerId);
+});
+cv.addEventListener('pointermove', e => {
+  if (!drag) return;
+  const r = cv.getBoundingClientRect();
+  const px = e.clientX - r.left, py = e.clientY - r.top;
+  const Q = layoutQuadrants(r.width, r.height);
+  const m = restMap(Q.Q1);
+  const { x } = m.fromPx(px, py);
+  const dx = x - drag.startX;
+  if (drag.mode === 'move') {
+    const half = 0.5 * (drag.startB - drag.startA);
+    let mid = 0.5 * (drag.startA + drag.startB) + dx;
+    mid = Math.max(X_MIN + half + 0.05, Math.min(X_MAX - half - 0.05, mid));
+    state.box.xA = mid - half; state.box.xB = mid + half;
+  } else if (drag.mode === 'edgeA') {
+    state.box.xA = Math.min(drag.startB - 0.1, Math.max(X_MIN + 0.02, drag.startA + dx));
+  } else if (drag.mode === 'edgeB') {
+    state.box.xB = Math.max(drag.startA + 0.1, Math.min(X_MAX - 0.02, drag.startB + dx));
+  }
+  document.getElementById('xa-slider').value = state.box.xA;
+  document.getElementById('xb-slider').value = state.box.xB;
+  document.getElementById('xa-val').textContent = state.box.xA.toFixed(2);
+  document.getElementById('xb-val').textContent = state.box.xB.toFixed(2);
+  resetAccumOnly();
+  render();
+});
+cv.addEventListener('pointerup', e => {
+  drag = null;
+  cv.classList.remove('grabbing');
+  try { cv.releasePointerCapture(e.pointerId); } catch {}
+});
+
+function resetAccumOnly() {
+  state.acc = newAccumulators();
+  state.hist = [];
+  state.box.t0 = state.tau;          // start averaging from now
+  state.box.t1 = state.tau + 0.0001;
+  // re-initialise Q baseline
+  state.consQ = 0;
+  for (let i = 0; i < state.particles.length; i++) {
+    if (!state.alive[i]) continue;
+    const p = state.particles[i];
+    if (p.x >= state.box.xA && p.x <= state.box.xB) state.consQ += p.q;
+  }
+  state.consQ0 = state.consQ;
+  state.consCross = 0;
+}
+
+// Sliders
+document.getElementById('field-select').addEventListener('change', e => {
+  state.fieldName = e.target.value;
+  resetAll(); render();
+});
+document.getElementById('charge-select').addEventListener('change', e => {
+  state.chargeLaw = e.target.value;
+  resetAll(); render();
+});
+document.getElementById('n-slider').addEventListener('input', e => {
+  state.N = parseInt(e.target.value, 10);
+  document.getElementById('n-val').textContent = state.N;
+  resetAll(); render();
+});
+document.getElementById('beta-slider').addEventListener('input', e => {
+  state.beta = parseFloat(e.target.value);
+  document.getElementById('beta-val').textContent = (state.beta >= 0 ? '+' : '') + state.beta.toFixed(2);
+  document.getElementById('gamma-val').textContent = (1 / Math.sqrt(1 - state.beta ** 2)).toFixed(3);
+  resetAccumOnly(); render();
+});
+document.getElementById('xa-slider').addEventListener('input', e => {
+  const v = parseFloat(e.target.value);
+  state.box.xA = Math.min(v, state.box.xB - 0.1);
+  document.getElementById('xa-val').textContent = state.box.xA.toFixed(2);
+  resetAccumOnly(); render();
+});
+document.getElementById('xb-slider').addEventListener('input', e => {
+  const v = parseFloat(e.target.value);
+  state.box.xB = Math.max(v, state.box.xA + 0.1);
+  document.getElementById('xb-val').textContent = state.box.xB.toFixed(2);
+  resetAccumOnly(); render();
+});
+document.getElementById('show-ghost').addEventListener('change', e => {
+  state.showGhost = e.target.checked;
+  render();
+});
+document.getElementById('play-btn').addEventListener('click', () => {
+  if (state.tau >= T_MAX) { resetAll(); }
+  state.playing = !state.playing;
+  document.getElementById('play-btn').textContent = state.playing ? 'Pause' : 'Play';
+});
+document.getElementById('reset-btn').addEventListener('click', () => {
+  resetAll(); state.playing = true;
+  document.getElementById('play-btn').textContent = 'Pause';
+  render();
+});
+
+window.addEventListener('resize', () => render());
+
+// ══════════════════════════════════════════════════════════════
+// Boot
+
+if (typeof window !== 'undefined' && window.location && /debug=1/.test(window.location.search)) {
+  window.__state = state;
+}
+
+resetAll();
+requestAnimationFrame(tick);
+
+</script>
+
+</body>
+</html>
