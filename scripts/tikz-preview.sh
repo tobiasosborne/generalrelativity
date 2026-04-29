@@ -46,6 +46,8 @@ cat > "$TMPDIR/preview.tex" << HEREDOC
 \\definecolor{munsell}{HTML}{008FA8}
 \\definecolor{banana}{HTML}{FFD932}
 \\definecolor{cgblue}{HTML}{007CA5}
+\\definecolor{birrenred}{HTML}{C04D4D}
+\\definecolor{birrenorange}{HTML}{D89841}
 \\definecolor{isabelline}{HTML}{EAEDEA}
 \\definecolor{light-gray}{gray}{0.85}
 
@@ -58,6 +60,8 @@ cat > "$TMPDIR/preview.tex" << HEREDOC
 \\newcommand{\\norm}[1]{\\lVert #1 \\rVert}
 \\newcommand{\\chris}[2]{\\Gamma^{#1}{}_{#2}}
 \\newcommand{\\pd}[3][]{{\\frac{\\partial^{#1} #2}{\\partial #3^{#1}}}}
+\\newcommand{\\covd}{\\nabla}
+\\newcommand{\\ttype}[2]{\\mathcal{T}^{#1}_{#2}}
 
 % TikZ styles from gr-macros
 \\tikzset{
@@ -87,8 +91,8 @@ cat > "$TMPDIR/preview.tex" << HEREDOC
     rgb255(5cm)=(255,217,50)
   },
   colormap={grsurface}{
-    rgb255(0cm)=(0,143,168)
-    rgb255(3cm)=(234,237,234)
+    rgb255(0cm)=(212,201,168)
+    rgb255(1cm)=(212,201,168)
   },
   grplot/.style={
     width=7cm, height=5cm,
@@ -138,7 +142,9 @@ TEXINPUTS=".:$LATEX_DIR:" xelatex -interaction=nonstopmode preview.tex > /dev/nu
 
 # Convert to PNG (300 dpi)
 if command -v pdftoppm &> /dev/null; then
-  pdftoppm -png -r 300 -singlefile preview.pdf "$DIR/$BASENAME"
+  # Render the LAST page (the centered \begin{center} sometimes pushes onto p2)
+  num_pages=$(pdfinfo preview.pdf | awk '/^Pages:/ {print $2}')
+  pdftoppm -png -r 300 -singlefile -f "$num_pages" -l "$num_pages" preview.pdf "$DIR/$BASENAME"
   echo "Wrote $DIR/$BASENAME.png"
 elif command -v convert &> /dev/null; then
   convert -density 300 preview.pdf -quality 95 "$DIR/$BASENAME.png"

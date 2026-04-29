@@ -28,42 +28,7 @@ Let $\M$ be a manifold equipped with a derivative operator
 $\covd_a$.  Let $C$ be a smooth curve in~$\M$ with tangent
 vector~$t^a$.
 
-% Diagram: curve C from p to q with tangent and transported vectors
-\begin{center}
-\begin{tikzpicture}[scale=0.9]
-  % Manifold blob
-  \draw[thick, spacecadet, rounded corners=14pt]
-    (0,0.3) to[out=25,in=160] (6.5,0.6)
-    to[out=-20,in=50] (7.0,-1.0)
-    to[out=230,in=-10] (0.5,-1.2)
-    to[out=170,in=250] cycle;
-  \node[font=\sf\small, text=cgblue] at (6.8,0.9) {$\M$};
-  % Curve
-  \draw[thick, munsell]
-    (1.0,-0.3) to[out=15,in=200] (3.0,0.1)
-    to[out=20,in=190] (5.5,-0.1);
-  \node[font=\scriptsize, munsell, below] at (3.0,-0.2) {$C$};
-  % Point p
-  \node[circle, fill=banana, inner sep=1.8pt] (P) at (1.0,-0.3) {};
-  \node[font=\small, below left] at (P) {$p$};
-  % Point q
-  \node[circle, fill=banana, inner sep=1.8pt] (Q) at (5.5,-0.1) {};
-  \node[font=\small, below right] at (Q) {$q$};
-  % Tangent vector at midpoint
-  \node[circle, fill=banana, inner sep=1.2pt] (M) at (3.0,0.1) {};
-  \draw[vecstyle] (M) -- ++(0.7,0.15)
-    node[above, font=\small]{$t^a$};
-  % Transported vector at p
-  \draw[vecstyle, spacecadet] (P) -- ++(0.3,0.7)
-    node[above, font=\small]{$v^a$};
-  % Transported vector at midpoint
-  \draw[vecstyle, spacecadet] (M) -- ++(0.3,0.7)
-    node[above, font=\small]{$v^a$};
-  % Transported vector at q
-  \draw[vecstyle, spacecadet] (Q) -- ++(0.3,0.7)
-    node[above, font=\small]{$v^a$};
-\end{tikzpicture}
-\end{center}
+\input{figures/fig_lec08_parallel_transport}
 
 The curve $C$ connects a point~$p$ to a point~$q$.  We wish to
 define a linear map
@@ -142,6 +107,17 @@ $\dd v^\nu/\dd t$ along the curve.  Hence:
   which is a linear isomorphism (linearity follows from the
   linearity of the ODE).
 \end{remark}
+
+\noindent
+The transporter~$U_C$ depends on which connection $\covd_a$ we
+choose.  The figure below contrasts two transports of the same
+initial vector along the same curve: the chart-$\alpha$ partial
+derivative $\partial_a$ (which trivially keeps chart components
+constant) and the Levi-Civita connection of the surface metric.
+The two prescriptions agree at $p$ and diverge along~$C$ ---
+``parallel'' is not absolute, it is a choice of $\covd_a$.
+
+\input{figures/fig_lec08_naive_vs_lc}
 
 % ──────────────────────────────────────────────────────────────
 \subsection{The Levi-Civita connection}%
@@ -464,6 +440,16 @@ where $A$ is a constant determined by the initial conditions.
   correctly accounts for the variation of the basis.
 \end{remark}
 
+\input{figures/fig_lec08_polar_radial}
+
+\noindent
+The figure shows the radial transport explicitly for $\varphi_0 =
+\pi/6$.  Each arrow on the left is the same Cartesian vector
+$(1,0)$, drawn at successive radii along the ray.  On the right,
+$v^r = \cos\varphi_0$ is constant in $r$, while $v^\varphi$ has
+the hyperbolic profile $A/r$ predicted
+by~\eqref{eq:radial-vphi}.
+
 % ──────────────────────────────────────────────────────────────
 \subsection{Covariant derivative of one-forms and connection
   one-forms}\label{sec:covd-oneforms}
@@ -556,35 +542,7 @@ relativity.
   reduce to straight lines.
 \end{intuition}
 
-% Diagram: geodesic on a curved surface
-\begin{center}
-\begin{tikzpicture}[scale=0.85]
-  % Curved manifold
-  \draw[thick, spacecadet, rounded corners=14pt]
-    (0,0.5) to[out=20,in=160] (5.5,0.8)
-    to[out=-20,in=40] (6.0,-0.6)
-    to[out=220,in=-10] (0.5,-0.5)
-    to[out=170,in=250] cycle;
-  \node[font=\sf\small, text=cgblue] at (5.8,1.0) {$\M$};
-  % Geodesic curve
-  \draw[thick, munsell]
-    (1.0,0.1) to[out=10,in=190] (3.0,0.3)
-    to[out=10,in=200] (5.0,0.2);
-  % Points
-  \node[circle, fill=banana, inner sep=1.8pt] (P) at (1.0,0.1) {};
-  \node[font=\small, below left] at (P) {$p$};
-  \node[circle, fill=banana, inner sep=1.8pt] (Q) at (5.0,0.2) {};
-  \node[font=\small, below right] at (Q) {$q$};
-  % Tangent vectors
-  \draw[vecstyle] (P) -- ++(0.8,0.12)
-    node[above, font=\small]{$T^a$};
-  \node[circle, fill=banana, inner sep=1.2pt] (M) at (3.0,0.3) {};
-  \draw[vecstyle] (M) -- ++(0.8,0.08)
-    node[above, font=\small]{$T^a$};
-  \draw[vecstyle] (Q) -- ++(0.7,-0.05)
-    node[above, font=\small]{$T^a$};
-\end{tikzpicture}
-\end{center}
+\input{figures/fig_lec08_geodesic}
 
 \subsubsection{Geodesic equation in coordinates}%
 \label{sec:geodesic-coords}

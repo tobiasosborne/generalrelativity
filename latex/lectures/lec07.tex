@@ -232,6 +232,19 @@ derivative $\partial/\partial x^\sigma$ on these components.
   is chart-independent.
 \end{remark}
 
+\noindent
+The chart-$\alpha$ derivative differentiates the
+\emph{components} of a tensor field, but the basis itself varies
+from point to point.  The figure below illustrates this on the
+recurring example surface $\M = \{z = h(x,y)\}$: the coordinate
+basis $\partial/\partial x^\mu = \partial_\mu\Phi$ is sketched at
+four points along a curve.  Although each pair has the same chart
+components $(1,0)$ and $(0,1)$ in $\Rn{2}$, the lifted vectors on
+$\M$ tilt with the surface.  The Christoffel symbols introduced
+below in \S\ref{sec:christoffel} encode this twist.
+
+\input{figures/fig_lec07_chart_basis}
+
 % ──────────────────────────────────────────────────────────────
 \subsubsection{Difference of two derivative operators}%
 \label{sec:difference-operators}
@@ -331,6 +344,20 @@ $C^c{}_{ab}$ and record:
   \emph{difference} of two genuine covariant derivatives
   transforms tensorially.
 \end{remark}
+
+\input{figures/fig_lec07_difference}
+
+\noindent
+The figure illustrates the algebraic nature of $C^c{}_{ab}$ on
+the recurring example manifold (Lecture~\ref{sec:manifolds}).  The vector
+field $W$ has chart-$\alpha$ components $W^u\equiv 1$, $W^v\equiv
+0$, so it is constant in chart $\alpha$ and $\partial_a W^b = 0$
+identically.  The Levi-Civita connection
+(\S\ref{sec:levi-civita} below) of the induced metric gives a
+nonzero derivative $\covd_X W$ at the focal point~$p$;
+the entire vector shown is the $C$-tensor contribution
+$C^\sigma{}_{a\nu}\,X^a W^\nu$, which depends only on the value
+of~$W$ at~$p$.
 
 % ──────────────────────────────────────────────────────────────
 \subsubsection{Symmetry of $C^c{}_{ab}$}%
